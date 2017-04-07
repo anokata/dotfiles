@@ -1,0 +1,12 @@
+"dmenu_run -l 10 -nf '#fff' -sb '#ff0' -sf '#000' -p '>'"
+    m:0x8 + c:40
+    Alt + d
+"xbacklight -dec 10"
+    m:0xc + c:34
+    Control+Alt + bracketleft
+"xbacklight -inc 10"
+    m:0xc + c:35
+    Control+Alt + bracketright        
+"scrot"
+    m:0xc + c:39
+    Control+Alt + s

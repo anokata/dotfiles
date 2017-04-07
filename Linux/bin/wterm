@@ -1,0 +1,1 @@
+xterm -fn 7x13 -fa "DejaVu Sans Mono:size=12:antialias=true" -bd white -bg white -fg black

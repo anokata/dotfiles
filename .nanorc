@@ -1,0 +1,5 @@
+set autoindent
+set nowrap
+set tabsize 2
+set tabstospaces
+set const

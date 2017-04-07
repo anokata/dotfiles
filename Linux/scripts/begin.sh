@@ -1,0 +1,3 @@
+./startInetVpn.sh
+./startYandexDisk.sh
+

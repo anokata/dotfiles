@@ -1,0 +1,103 @@
+! выполнение внешней команды
+:w :w! :q :r :e :q (писать закрыть вчитать открыть закрыть)
+v V выделение(Строки целиком) o переход в начало\конец выделения
+    gv повтороне выделение
+    vip выделение параграфа(функции)
+Вставка:
+ o O  вставка ниже(выше)строкой,
+ r R перезапись одного(многих) символов
+ i I Вставка вкурсоре(начале строки)
+ a A вкурсоре(конце) строки
+Перемещение:
+e w W на конец(начало) слова вперед. b B назад (большие не учитывают пунктуацию)
+% парная скобка
+$ конец строки
+0 начало строки  ^ начало не считая пробелов
+G numG gg конец файла, номер строки, начало файла
+gi последняя вставка g, g; вперёд назад где был
+Ctrl O (I)  перейти в прошлое(след) положение
+Ctrl Space переход ???
+( ) в начало, конец предложения { } начало, конец абзаца
+f t поиск и переход в текущей строке символа (ct) удалить вставить до скобки) 
+* # поиск текущего слова вперед\назад
+
+y копирование yy стоку
+p вставка
+u undo  Ctrl-R redo U undo line
+/поиск n N след пред   ? поиск назад
+:s/old/new/(g)  подстановка замена(глобально) :%s файле
+ x удаить символ.  d удалить dd строку D=d$
+ c cc (c$ = C) удалить и редактировать
+ s S замена подстановка(заменить всю строку)
+ (c d r y p i a o x)
+ . повтор команды
+ctrlG текущее положение
+Окна:
+Ctrl W W перемещение CtrlW S(V) разделить(вертикаль)
+Ctrl - U(p) D(own) F(orward) B(ack) прокрутка
+Tab & Ctrl D автодополнение разное
+H M L переход в начало, середину, конец экрана
+J Объединить строки.
+ZZ Save&exit
+ctrl-[ = escape
+zz отцентровать по курсору
+**********
+best: S . D 
+как разбить строку?  
+как перемещаться по буферам быстрее (настроить с конфига C-hklj)
+leader NErdTree
+fuzzy search
+gf go to def
+
+**********NerdTree************
+C-\
+*****vimSurround****** 'asdf' ( adf )
+cs'( сменить '' на ()
+di< удалить внутри <>
+ds" удалить окружающие "
+ysiw( окружить ()
+yss( окружить строку
+
+****ctrlp********
+C-p
+C-t открыть в табе 
+
+zf Fold za unfold
+zM fold all
+zR unfold all
+
+gi вернуться дописывать!
+C-a повтор ввода во вставке.
+****Macros****
+q start(q[name char] ) and q is end
+@(name char) execute
+@@ exec last
+gd go to definition
+******Buffers******
+:ls list buffers
+:b go to name
+:bp :bn next pred
+:bd name del
+*** new to learn ***
+ciw change word
+ci" change inside ""
+ci( change inside ()
+gi go to last insert
+
+v% select (and inside)
+vib select inside ()
+viB select inside {}
+vi" vi'
+ggVG select all file
+:v/string/d  delete all lines without "string"
+:g/^$/d  delete all empty lines
+d/word delete to word
+Vu VU vEU  case upper lower
+gf open filename at cursor 
+
+:123,321s/foo/bar замена со строки до строки
+in insert:
+  C-R :  insert last command
+:Explore
+gg=G  indent all file
+** abbrevation **

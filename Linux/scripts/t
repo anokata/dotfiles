@@ -1,0 +1,7 @@
+#!/bin/bash
+A=`zenity --entry 2> /dev/null`
+#A=`exec "./getText"`
+B=`sdcv $A`
+sdcv $A > /var/tmp/a
+zenity --text-info --filename=/var/tmp/a --text="$B" 2>/dev/null
+#echo **$B**

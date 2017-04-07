@@ -1,0 +1,94 @@
+localepurge 
+lightdm
+ ?lightdm-gtk-greeter
+lynx
+youtube-dl 
+xbacklight 
+iostat
+meminfo
+mpstat
+nmon
+keyringer 
+vifm
+apt-get install android-tools-adb
+libxcb-render0
+dropbox 
+calcurse 
+libudev1
+libudev0
+lxc lxc-templates systemd-services cgroup-bin   bridge-utils debootstrap
+v4l-tools
+v4l-utils 
+streamer 
+sc 
+ddd
+pydb
+lm-sensors 
+hddtemp
+libcurl3
+libcurl3:i386
+ncdu
+uzbl 
+pm-utils
+cpufrequtils 
+cpufreqd
+unetbootin
+ctag
+ctags
+systemd
+wireshark
+aircrack-ng 
+kismet
+feh
+graphviz
+stardict 
+sdcv
+systemd-sysv 
+openvpn
+stardict-plugin
+screenfetch 
+pulseaudio
+bluez-libs bluez-utils bluez-firmware
+btsco
+fbreader 
+sysstat
+vrms
+mailutils
+mutt
+pass
+localepurge 
+libqt5gui5
+i3status
+libsdl2-dev 
+instead
+vmpk
+xscreensaver-data-extra
+build-essential qmlscene qt5-qmake qt5-default qtdeclarative5-dev qtdeclarative5-controls-plugin qtdeclarative5-qtquick2-plugin libqt5qml-graphicaleffects qtdeclarative5-dialogs-plugin qtdeclarative5-localstorage-plugin qtdeclarative5-window-plugin
+cmatrix
+lyx
+osd_cat
+xosd-bin
+rxvt-unicode
+st
+suckless-tools 
+xterm
+libglew
+libglew1.13 
+screen
+ffmpeg
+xdotool
+pip3 install pygame
+pip3 install --upgrade pip3
+pip3 install bottle
+pip3 install setuptools
+pip install pytest
+pip install virtualenv
+pip install pysdl2
+pip install PyOpenGL PyOpenGL_accelerate
+pip install numpy
+pip install PyOpenGL PyOpenGL_accelerate
+pip install Cython
+pip3 install pyyaml
+pip3 install django
+pip install requests
+pip install pyradio

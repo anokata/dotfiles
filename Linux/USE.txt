@@ -1,0 +1,7 @@
+ranger
+w3m or xlinks2 or...
+joe or ne or ....
+dpkg-reconfigure PKG
+localepurge
+gtkorphan
+xdiskusage
