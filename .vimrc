@@ -100,7 +100,7 @@ nnoremap <space> za
 "==== DEV ====
 "F used: 1 2 3 4 5 6 7 9 10 11 12 free: 8
 " substitute(expand("%:r"), "/", ".", "g")
-map <F8> :w<CR>:!ant compile dist install<CR>
+map <F8> :w<CR>:!ant clean compile dist remove install<CR>
 map <F9> :w<CR>:exe "make java JavaSource=" . expand("%") . " JavaClass=" . substitute(expand("%:r"), "/", ".", "g")<CR>
 "Shell
 map <F2> :w<CR>:!./%<CR> 
