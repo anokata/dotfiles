@@ -33,9 +33,9 @@ set imsearch=0
 set guioptions -=T
 "set hls
 set nu
-set expandtab
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set autochdir
 "set foldmethod=indent
 set foldmethod=syntax
@@ -198,3 +198,6 @@ function! Mak()
     endfor
 endfunction
 "echo '>^.^<'
+set tabstop=4
+set shiftwidth=4
+set expandtab
