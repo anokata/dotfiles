@@ -109,7 +109,7 @@ map <F2> :w<CR>:!./%<CR>
 map <F3> :w<CR>:!javac '%' && java '%:r'<CR>
 "Generic make by filename
 map <F5> :w<CR>:!make '%:t:r'<CR>
-map <F6> :w<CR>:!make '%:t:r'debug<CR>
+map <F6> :w<CR>:!make '%:t:r'_debug<CR>
 "C
 map <F7> :w<CR>:!gcc -Wall '%' -o a.out && ./a.out<CR>
 "C
@@ -118,7 +118,8 @@ map <F10> :w<CR>:!clang '%' -o a.out && ./a.out<CR>
 map <F11> :w<CR>:source %<CR>
 "C++
 map <F12> :w<CR>:!g++ -std=c++11 '%' -o a.out && ./a.out<CR>
-"map <F9> :w<CR>:!python3 '%:t'<CR>
+map <F9> :w<CR>:!python3 '%:t'<CR>
+map <F10> :w<CR>:!make test<CR>
 "map <F9> :w<CR> :!perl '%'<CR>
 "map <C-F8> :!dot -Tpng % -o%.png && feh %.png<CR>
 "map <C-F9> :!python3 -i '%:t'<CR>
