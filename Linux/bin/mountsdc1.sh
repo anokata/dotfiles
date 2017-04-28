@@ -1,1 +1,1 @@
-sudo mount /dev/sdc1 /media/ksi/data/
+sudo mount /dev/sdc1 /media/ksi/sd/
