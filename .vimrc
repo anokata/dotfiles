@@ -102,7 +102,8 @@ nnoremap <space> za
 " substitute(expand("%:r"), "/", ".", "g")
 "map <F8> :w<CR>:!ant clean compile dist remove install<CR>
 map <F8> :w<CR>:!make<CR>
-map <F9> :w<CR>:exe "make java JavaSource=" . expand("%") . " JavaClass=" . substitute(expand("%:r"), "/", ".", "g")<CR>
+map <F8> :w<CR>:exe "make default SRC=" . expand("%")<CR>
+"map <F9> :w<CR>:exe "make java JavaSource=" . expand("%") . " JavaClass=" . substitute(expand("%:r"), "/", ".", "g")<CR>
 "Shell
 map <F2> :w<CR>:!./%<CR> 
 "Java
