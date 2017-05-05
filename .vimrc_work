@@ -136,6 +136,7 @@ nmap <S-F5> :call LoadDefSession()<CR>
 "==== NERDTree ==== 
 nmap <leader>T :NERDTree<CR>
 nmap <leader>Y :NERDTreeClose<CR>
+nmap <leader>c :TlistToggle<CR>
 nmap <Leader>u ysiw_ysiw_
 noremap <Up> <nop>
 noremap <Down> <nop>
