@@ -50,7 +50,7 @@ set textwidth=90
 set autoread
 
 filetype off
-colorscheme desert
+colorscheme darkblue
 filetype plugin indent on
 syntax on
 highlight lCursor guifg=NONE guibg=Cyan
@@ -139,7 +139,8 @@ nmap <leader>T :NERDTreeToggle<CR>
 nmap <leader>Y :NERDTreeClose<CR>
 nmap <leader>c :TlistToggle<CR>
 nmap <Leader>u ysiw_ysiw_
-nmap <leader>C :!ctags -R .<cr>
+nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
+set tags=~/mytags
 noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
