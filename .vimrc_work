@@ -15,6 +15,7 @@ call plug#end()
 let g:rooter_change_directory_for_non_project_files = 'current'
 "let g:rooter_patterns = ['Makefile']
 let NERDTreeMapOpenInTab='\r'
+let g:NERDTreeWinPos = "right"
 " ================ Persistent Undo ==================
 if has('persistent_undo')
     silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -134,10 +135,11 @@ map <F12> :w<CR>:!gdc '%' -funittest -o /tmp/dout && /tmp/dout <CR>
 nmap <C-F5> :call MakeDefSession()<CR>
 nmap <S-F5> :call LoadDefSession()<CR>
 "==== NERDTree ==== 
-nmap <leader>T :NERDTree<CR>
+nmap <leader>T :NERDTreeToggle<CR>
 nmap <leader>Y :NERDTreeClose<CR>
 nmap <leader>c :TlistToggle<CR>
 nmap <Leader>u ysiw_ysiw_
+nmap <leader>C :!ctags -R .<cr>
 noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
