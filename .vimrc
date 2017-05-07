@@ -6,6 +6,7 @@ Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
+Plug 'vim-scripts/taglist.vim'
 "Plug 'leafgarland/typescript-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-rooter'
@@ -13,6 +14,7 @@ Plug 'airblade/vim-rooter'
 call plug#end()
 
 let g:rooter_patterns = ['Makefile']
+let g:NERDTreeWinPos = "right"
 " ================ Persistent Undo ==================
 if has('persistent_undo')
     silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -129,9 +131,12 @@ map <F10> :w<CR>:!make test<CR>
 nmap <C-F5> :call MakeDefSession()<CR>
 nmap <S-F5> :call LoadDefSession()<CR>
 "==== NERDTree ==== 
-nmap <leader>T :NERDTree<CR>
+nmap <leader>T :NERDTreeToggle<CR>
 nmap <leader>Y :NERDTreeClose<CR>
+nmap <leader>c :TlistToggle<CR>
 nmap <Leader>u ysiw_ysiw_
+nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
+set tags=~/mytags
 noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>

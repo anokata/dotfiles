@@ -60,10 +60,13 @@ def is_once_nowday_started():
     return is_new(log)
 
 def show_weather():
-    if not is_new(home+'avansert_meteogram.png'):
-        pogoda()
-        print('Смотри какая сегодня погода! :)')
-        exc('weather.sh')
+    try:
+        if not is_new(home+'avansert_meteogram.png'):
+            pogoda()
+            print('Смотри какая сегодня погода! :)')
+            exc('weather.sh')
+    except:
+        print('no')
 
 def pogoda():
     if (0,0,0) == weather.getWeather(weather.place):
