@@ -1,10 +1,8 @@
-xbindkeys
 yandex-disk start
 #disable PgDn
 #xmodmap -e 'keycode 117 =  NoSymbol'
 #qiv -z /usr/local/share/backgrounds/black-and-white-city-skyline-buildings.jpg 
-#lxterminal
-#/home/ksi/bin/zen1.sh
-xinput --disable 14
-xinput --disable 11
+#xinput --disable 14
+#xinput --disable 11
+xbindkeys
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'

@@ -1,0 +1,13 @@
+
+git clone https://github.com/anokata/dotfiles.git
+rm ~/.vimrc 
+ln ~/dotfiles/.vimrc ~/
+vim -c PlugInstall
+ln -s ~/dotfiles/Linux/bin ~/bin
+
+ln ~/dotfiles/.gitconfig ~/
+ln ~/dotfiles/.inputrc ~/
+ln ~/dotfiles/.tmux.conf ~/
+ln ~/dotfiles/.xprofile ~/
+ln ~/dotfiles/.xbindkeysrc ~/
+ln ~/dotfiles/Linux/configs/i3/config ~/.config/i3/config 
