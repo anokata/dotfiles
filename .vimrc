@@ -15,6 +15,12 @@ call plug#end()
 
 let g:rooter_patterns = ['Makefile']
 let g:NERDTreeWinPos = "right"
+let g:solarized_termcolors=256
+set t_Co=256
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+set background=dark
+set t_ut=
 " ================ Persistent Undo ==================
 if has('persistent_undo')
     silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -208,3 +214,4 @@ endfunction
 set tabstop=4
 set shiftwidth=4
 set expandtab
+colorscheme solarized
