@@ -1,0 +1,19 @@
+sudo apt install i3
+sudo apt install xbindkeys
+sudo apt install tmux
+sudo apt install xterm
+sudo apt install tmux
+sudo apt install python
+sudo apt install vim
+sudo apt install git
+sudo apt install dmenu
+sudo apt install vifm
+git clone http://github.com/anokata/dotfiles.git
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+cp -r dotfiles/Linux/bin/ ~/
+cp dotfiles/.tmux.conf ~/
+# i3/config xprofile .vimrc .bashrc .xbindkeys
+
+source .bashrc 
+xbindkeys
+tmux
