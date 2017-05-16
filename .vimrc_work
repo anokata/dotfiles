@@ -7,8 +7,10 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/taglist.vim'
-"Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'Raimondi/delimitMate'
+Plug 'altercation/vim-colors-solarized'
+"Plug 'vim-airline/vim-airline'
 "Plug 'airblade/vim-rooter'
 
 call plug#end()
@@ -16,6 +18,15 @@ let g:rooter_change_directory_for_non_project_files = 'current'
 "let g:rooter_patterns = ['Makefile']
 let NERDTreeMapOpenInTab='\r'
 let g:NERDTreeWinPos = "right"
+let g:solarized_termcolors=256
+set t_Co=256
+set background=dark
+colorscheme solarized
+set background=dark
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+set t_ut=
+colorscheme desert
 " ================ Persistent Undo ==================
 if has('persistent_undo')
     silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -50,7 +61,8 @@ set textwidth=90
 set autoread
 
 filetype off
-colorscheme darkblue
+"set t_Co=256
+"colorscheme darkblue
 filetype plugin indent on
 syntax on
 highlight lCursor guifg=NONE guibg=Cyan
@@ -212,3 +224,16 @@ endfunction
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+
+highlight String ctermbg=NONE ctermfg=107
+highlight Define ctermbg=NONE ctermfg=107
+highlight Comment ctermbg=NONE ctermfg=8 
+highlight Identifier ctermbg=NONE ctermfg=8 
+highlight Function ctermbg=NONE ctermfg=166 
+highlight Label ctermbg=NONE ctermfg=8 
+highlight Keyword ctermbg=NONE ctermfg=3 
+highlight PreProc ctermbg=NONE ctermfg=40 
+highlight Special ctermbg=NONE ctermfg=167
+
+
