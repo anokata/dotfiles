@@ -214,4 +214,6 @@ endfunction
 set tabstop=4
 set shiftwidth=4
 set expandtab
-colorscheme solarized
+"colorscheme solarized
+"highlight Normal ctermbg=NONE
+"highlight nonText ctermbg=NONE
