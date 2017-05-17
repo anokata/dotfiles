@@ -235,5 +235,6 @@ highlight Label ctermbg=NONE ctermfg=8
 highlight Keyword ctermbg=NONE ctermfg=3 
 highlight PreProc ctermbg=NONE ctermfg=40 
 highlight Special ctermbg=NONE ctermfg=167
-
+highlight LineNr ctermbg=NONE ctermfg=8
+highlight Title ctermbg=NONE ctermfg=32
 
