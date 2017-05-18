@@ -1,0 +1,3 @@
+URxvt.scrollBar: false
+XTerm*eightBitInput: false
+XTerm*metaSendsEscape: true
