@@ -19,13 +19,6 @@ let g:rooter_change_directory_for_non_project_files = 'current'
 let NERDTreeMapOpenInTab='\r'
 let g:NERDTreeWinPos = "right"
 let g:solarized_termcolors=256
-set t_Co=256
-set background=dark
-colorscheme solarized
-set background=dark
-highlight Normal ctermbg=NONE
-highlight nonText ctermbg=NONE
-set t_ut=
 colorscheme desert
 " ================ Persistent Undo ==================
 if has('persistent_undo')
@@ -51,8 +44,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set autochdir
-"set foldmethod=indent
-set foldmethod=syntax
+set foldmethod=indent
+"set foldmethod=syntax
 set foldenable
 syn region foldBraces start=/{/ end=/}/ transparent fold
 syn region foldJavadoc start=,/\*\*, end=,\*/, transparent fold keepend
@@ -225,7 +218,12 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-
+" Color scheme
+set t_Co=256
+set background=dark
+set t_ut=
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
 highlight String ctermbg=NONE ctermfg=107
 highlight Define ctermbg=NONE ctermfg=107
 highlight Comment ctermbg=NONE ctermfg=8 
