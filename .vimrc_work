@@ -86,9 +86,9 @@ set foldlevel=20
 " Paste from Clipboard
 nmap <leader>p "+p
 " Copy vim def " buffer to clipboard
-nmap <leader>s :let @+=@"<CR>
+nmap <leader>s :let @+=@"<CR>:let @*=@"<CR>
 
-map <leader>r :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+"map <leader>r :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 
 nmap ё `
 nmap Ж :
@@ -118,7 +118,8 @@ map <F2> :w<CR>:!./%<CR>
 "Java
 map <F3> :w<CR>:!javac '%' && java '%:r'<CR>
 "Generic make by filename
-map <F5> :w<CR>:!make '%:t:r'<CR>
+map <F3> :w<CR>:!make 'main'<CR>
+map <F6> :w<CR>:!make '%:t:r'<CR>
 "map <F6> :w<CR>:!make '%:t:r'_debug<CR>
 "C
 map <F7> :w<CR>:!gcc -Wall '%' -o a.out && ./a.out<CR>
@@ -140,7 +141,7 @@ map <F12> :w<CR>:!gdc '%' -funittest -o /tmp/dout && /tmp/dout <CR>
 nmap <C-F5> :call MakeDefSession()<CR>
 nmap <S-F5> :call LoadDefSession()<CR>
 "==== NERDTree ==== 
-nmap <leader>T :NERDTreeToggle<CR>
+nmap <leader>r :NERDTreeToggle<CR>
 nmap <leader>Y :NERDTreeClose<CR>
 nmap <leader>c :TlistToggle<CR>
 nmap <Leader>u ysiw_ysiw_
@@ -236,3 +237,4 @@ highlight Special ctermbg=NONE ctermfg=167
 highlight LineNr ctermbg=NONE ctermfg=8
 highlight Title ctermbg=NONE ctermfg=32
 
+filetype plugin indent on
