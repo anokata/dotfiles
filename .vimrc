@@ -21,7 +21,7 @@ set background=dark
 set t_ut=
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
-colorscheme solarized
+"colorscheme solarized
 " ================ Persistent Undo ==================
 if has('persistent_undo')
     silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -211,10 +211,28 @@ function! Mak()
         execute "sleep 1"
     endfor
 endfunction
-"echo '>^.^<'
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
 "colorscheme solarized
-"highlight Normal ctermbg=NONE
-"highlight nonText ctermbg=NONE
+"TODO make colorscheme file
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+set t_Co=256
+set background=dark
+set t_ut=
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+highlight String ctermbg=NONE ctermfg=107
+highlight Define ctermbg=NONE ctermfg=107
+highlight Comment ctermbg=NONE ctermfg=8 
+highlight Identifier ctermbg=NONE ctermfg=8 
+highlight Function ctermbg=NONE ctermfg=166 
+highlight Label ctermbg=NONE ctermfg=8 
+highlight Keyword ctermbg=NONE ctermfg=3 
+highlight PreProc ctermbg=NONE ctermfg=40 
+highlight Special ctermbg=NONE ctermfg=167
+highlight LineNr ctermbg=NONE ctermfg=8
+highlight Title ctermbg=NONE ctermfg=32
+
