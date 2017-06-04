@@ -149,14 +149,14 @@ echo "Every Hour!"
 
 #export PATH=$PATH;"~/bin"
 
-xinput --disable 11
+#xinput --disable 11
 #wallpaperText.py --file "/home/ksi/txthub/doings.txt" --bg "/home/ksi/Downloads/bg1.png" --fontsize 17 --fontcolor "(10,100,0)"
 
 shopt -s cdspell
 
 alias cterm='cool-retro-term -p ~/ksz.json'
 #tmux attach -t base || tmux new -s base
-_autostart.py
+#_autostart.py
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
