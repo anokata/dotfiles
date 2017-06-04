@@ -43,4 +43,3 @@ shopt -s cdspell
 
 export PATH="/home/`whoami`/bin/:$PATH"
 
-tmux attach -t base || tmux new -s base
