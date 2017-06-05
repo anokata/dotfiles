@@ -43,3 +43,6 @@ shopt -s cdspell
 
 export PATH="/home/`whoami`/bin/:$PATH"
 
+#if [[ ! $(pgrep -f xbindkeys) ]]; then
+	#xbindkeys&
+#fi

@@ -30,3 +30,4 @@ cp dotfiles/.tmux.conf ~/
 cp dotfiles/.xprofile ~/
 cp dotfiles/.xbindkeysrc ~/
 cp dotfiles/Linux/configs/i3/config ~/.config/i3/
+#xinit
