@@ -10,13 +10,15 @@ git config --global user.name "anokata"
 git config --global user.email "anokata8@mail.ru"
 
 git clone http://github.com/anokata/dotfiles.git
+#./dotfiles/vans/ansible.sh
+cp dotfiles/Linux/bin/ -r ~/
+
+cat dotfiles/bashadd >> ~/.bashrc 
 mkdir -p ~/.config/i3
 mkdir -p ~/.vim/autoload
 cp dotfiles/Linux/configs/.vim/autoload/plug.vim ~/.vim/autoload/
 cp dotfiles/.vimrc ~/
-cat dotfiles/bashadd >> ~/.bashrc 
 cp dotfiles/.tmux.conf ~/
 cp dotfiles/.xprofile ~/
 cp dotfiles/.xbindkeysrc ~/
 cp dotfiles/Linux/configs/i3/config ~/.config/i3/
-cp dotfiles/Linux/bin/ -r ~/
