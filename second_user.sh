@@ -1,9 +1,17 @@
+sudo pacman -S sudo tmux vim
 sudo pacman -S ctags
-sudo pacman -S dmenu
 sudo pacman -S git
+sudo pacman -S tree htop
+# X specific
+sudo pacman -S dmenu
 sudo pacman -S xbindkeys
 sudo pacman -S xorg-xmodmap
 sudo pacman -S ttf-dejavu
+sudo pacman -S i3 xorg-server xorg
+sudo pacman -S xorg-xdm
+sudo pacman -S xf86-video-intel
+sudo pacman -S xterm
+
 
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 git config --global user.name "anokata"
