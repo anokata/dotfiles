@@ -133,6 +133,7 @@ map <F9> :w<CR>:!python3 '%:t'<CR>
 map <F5> :w<CR>:!python '%:t'<CR>
 map <F10> :w<CR>:!gdc '%' -o /tmp/dout && /tmp/dout <CR>
 map <F12> :w<CR>:!gdc '%' -funittest -o /tmp/dout && /tmp/dout <CR>
+map <F12> :w<CR>:!bash %<CR>
 "map <F9> :w<CR> :!perl '%'<CR>
 "map <C-F8> :!dot -Tpng % -o%.png && feh %.png<CR>
 "map <C-F9> :!python3 -i '%:t'<CR>

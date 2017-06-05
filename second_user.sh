@@ -16,7 +16,7 @@ cp dotfiles/Linux/configs/.vim/autoload/plug.vim ~/.vim/autoload/
 cp dotfiles/.vimrc ~/
 cat dotfiles/bashadd >> ~/.bashrc 
 cp dotfiles/.tmux.conf ~/
-cp dotfiles/Linux/bin/ -r ~/
 cp dotfiles/.xprofile ~/
 cp dotfiles/.xbindkeysrc ~/
 cp dotfiles/Linux/configs/i3/config ~/.config/i3/
+cp dotfiles/Linux/bin/ -r ~/
