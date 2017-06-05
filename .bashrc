@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(3) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
+HISTSIZE=1000
+HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -37,9 +37,8 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 export TERM=xterm-256color
-#export TERM=xterm-8color
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm|xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -59,16 +58,20 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    if [[ ${EUID} == 0 ]] ; then
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
+    else
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w \$\[\033[00m\] '
+    fi
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h \w \$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -90,7 +93,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alFh'
+alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -118,7 +121,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# My ADD KSI IS COPY THAT!!!!!!
+if [ -x /usr/bin/mint-fortune ]; then
+     /usr/bin/mint-fortune
+fi
+
+# my config
+
+alias dush='du -sh'
+set -o vi
+
 RED='\[\033[01;31m\]'
 REDne='\033[01;31m'
 WHITE='\[\033[01;00m\]'
@@ -126,17 +137,11 @@ GREEN='\[\033[01;32m\]'
 GREENne='\033[01;32m'
 BLUE='\[\033[01;34m\]'
 MG='\033[01;33m'
+export PATH=$PATH:"/home/ksi/bin"
 export PS1="$GREEN\u$WHITE@$BLUE\A$WHITE\w\$ "
 alias youtube="youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'"
 alias nano='nano -u -x'
 alias sloc='cat *.c *.h | uniq | wc -l'
-#echo -ne "$REDne"
-#echo 'do traning'
-#echo -ne "$GREENne"
-#echo 'писать тесты. gtypist'
-#echo -ne "$MG"
-#echo 'Жить а не проживать.'
-
 alias lk='ll | grep / | grep " \."'
 alias dush='du -sh'
 alias dushgm='du -sh | grep M'
@@ -147,34 +152,16 @@ set -o vi
 echo -e "$REDne"Ядерная температура: `sensors | grep Core | cut -d+ -f 2 | cut -d" " -f 1 | tr "\n" " "`
 echo "Every Hour!"
 
-#export PATH=$PATH;"~/bin"
+export PATH=$PATH:"~/bin"
 
 #xinput --disable 11
-#wallpaperText.py --file "/home/ksi/txthub/doings.txt" --bg "/home/ksi/Downloads/bg1.png" --fontsize 17 --fontcolor "(10,100,0)"
 
 shopt -s cdspell
 
 alias cterm='cool-retro-term -p ~/ksz.json'
-#tmux attach -t base || tmux new -s base
 #_autostart.py
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f /home/ksi/gcloud/google-cloud-sdk/path.bash.inc ]; then
-  source '/home/ksi/gcloud/google-cloud-sdk/path.bash.inc'
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f /home/ksi/gcloud/google-cloud-sdk/completion.bash.inc ]; then
-  source '/home/ksi/gcloud/google-cloud-sdk/completion.bash.inc'
-fi
-
-# laravel (php)
-export PATH="/home/ksi/.config/composer/vendor/laravel/installer:$PATH"
-export CATALINA_HOME=/opt/tomcat
-export JETTY_HOME=/opt/jetty-9.3.18
 
 
-export PATH="/home/ksi/tst/nim/nim-0.16.0/bin:$PATH"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/work_rsa
