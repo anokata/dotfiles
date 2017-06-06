@@ -2,4 +2,4 @@
 localhost ansible_connection=local ansible_python_interpreter="/usr/bin/env python"
 
 [cent]
-cent ansible_ssh_host=127.0.0.1 ansible_ssh_port=2200 ansible_ssh_user='vagrant' ansible_ssh_private_key_file='/home/ksi/.vagrant.d/boxes/lod_web/0/virtualbox/vagrant_private_key'
+cent ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222 ansible_ssh_user='vagrant' ansible_ssh_private_key_file='/home/ksi/.vagrant.d/boxes/lod_web/0/virtualbox/vagrant_private_key'
