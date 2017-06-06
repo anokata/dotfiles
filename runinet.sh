@@ -1,9 +1,10 @@
-ip link set enp9s0 up
-systemctl start dhcpcd
+sudo ip link set enp9s0 up
+sudo systemctl start dhcpcd
 # 
 sleep 3
-pon atel
+sudo pon atel
+#check if exist ppp0, wait, try again
 sleep 3
-ip route add 192.168.10.0/24 dev ppp0
-ip route add default dev ppp0
+sudo ip route add 192.168.10.0/24 dev ppp0
+sudo ip route add default dev ppp0
 
