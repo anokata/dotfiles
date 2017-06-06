@@ -40,6 +40,7 @@ MG='\033[01;33m'
 export PS1="(\h)$GREEN\u$WHITE@$BLUE\A$WHITE\w\$ "
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 set -o vi
+shopt -s autocd
 shopt -s cdspell
 
 export PATH="/home/`whoami`/bin/:$PATH"

@@ -33,8 +33,10 @@ def qry():
     print('Поехали!')
 
 def atel_status():
-    status = exc('nmcli connection show atel | grep GENERAL.STATE | cut -d: -f2 | tr -d [:blank:]')
-    return status == 'activated'
+    # if os.path.exists("/var/run/ppp0.pid")
+    #status = exc('nmcli connection show atel | grep GENERAL.STATE | cut -d: -f2 | tr -d [:blank:]')
+    return os.path.exists("/var/run/ppp0.pid")
+    #return status == 'activated'
 
 def inet_on():
     if not atel_status():
