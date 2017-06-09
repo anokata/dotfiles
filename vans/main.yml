@@ -1,0 +1,47 @@
+- hosts: all
+  tasks:
+      - name: Install packages
+        yum: name={{ item }} state=present
+        become: true
+        with_items:
+            - sudo 
+            - tmux 
+            - vim
+            - ctags
+            - git
+            - tree 
+            - htop
+
+      # tag or role - config vim
+      - name: create vim autoload dir
+        file:
+            path: "{{ item }}"
+            state: directory
+            mode: 0755
+        with_items:
+            - "/home/{{ user }}/.vim/autoload"
+            - "/home/{{ user }}/.config/i3"
+
+      - name: copy configs
+        copy: src={{ item.src }} dest={{ item.dest }}
+        with_items:
+            - { src: '~/dotfiles/Linux/configs/.vim/autoload/plug.vim', dest: "/home/{{ user }}/.vim/autoload" }
+            - { src: '~/dotfiles/.tmux.conf', dest: "/home/{{ user }}/.tmux.conf" }
+            - { src: '~/dotfiles/.vimrc', dest: "/home/{{ user }}/.vimrc" }
+            - { src: '~/dotfiles/.xprofile', dest: "/home/{{ user }}/.xprofile" }
+            - { src: '~/dotfiles/.xbindkeysrc', dest: "/home/{{ user }}/.xbindkeysrc" }
+            - { src: '~/dotfiles/Linux/configs/i3/config', dest: "/home/{{ user }}/.config/i3/config" }
+
+
+      - name: config Bash rc
+        blockinfile:
+            dest: "{{home}}/.bashrc"
+            create: no
+            block: "{{ lookup('file', '~/dotfiles/bashadd') }}"
+
+
+  vars:
+    user: vagrant
+    dotfiles: "~/dotfiles"
+    home: "/home/{{user}}"
+
