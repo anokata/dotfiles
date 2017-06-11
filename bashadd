@@ -48,3 +48,10 @@ export PATH="/home/`whoami`/bin/:$PATH"
 #if [[ ! $(pgrep -f xbindkeys) ]]; then
 	#xbindkeys&
 #fi
+
+
+#if [ -f /usr/share/bash-completion/bash_completion ]; then
+    #. /usr/share/bash-completion/bash_completion
+#elif [ -f /etc/bash_completion ]; then
+    #. /etc/bash_completion
+#fi
