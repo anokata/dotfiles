@@ -101,3 +101,5 @@ in insert:
 :Explore
 gg=G  indent all file
 ** abbrevation **
+
+gx -Open link!!!
