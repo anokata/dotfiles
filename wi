@@ -1,7 +1,13 @@
 
+echo "unblock all by rfkill"
 sudo rfkill unblock all
-sleep 0.5
+sleep 1.5
+echo 'ok'
+echo 'link up'
 sudo ip link set wlp2s0 up
-sleep 0.5
+sleep 1.0
+echo 'ok'
+echo 'add default route via wifi'
 sudo ip ro add default via 192.168.1.1 dev wlp2s0
+echo 'ok'
 ping ya.ru
