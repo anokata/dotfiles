@@ -138,7 +138,7 @@ map <F10> :w<CR>:!make test<CR>
 nmap <C-F5> :call MakeDefSession()<CR>
 nmap <S-F5> :call LoadDefSession()<CR>
 "==== NERDTree ==== 
-nmap <leader>T :NERDTreeToggle<CR>
+nmap <leader>r :NERDTreeToggle<CR>
 nmap <leader>Y :NERDTreeClose<CR>
 nmap <leader>c :TlistToggle<CR>
 nmap <Leader>u ysiw_ysiw_
