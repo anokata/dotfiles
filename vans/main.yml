@@ -1,17 +1,5 @@
 - hosts: all
   tasks:
-      - name: Install packages
-        yum: name={{ item }} state=present
-        become: true
-        with_items:
-            - sudo 
-            - tmux 
-            - vim
-            - ctags
-            - git
-            - tree 
-            - htop
-
       # tag or role - config vim
       - name: create vim autoload dir
         file:

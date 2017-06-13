@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+      - name: Install packages
+        yum: name={{ item }} state=present
+        become: true
+        with_items:
+            - sudo 
+            - tmux 
+            - vim
+            - ctags
+            - git
+            - tree 
+            - htop
