@@ -55,3 +55,6 @@ export PATH="/home/`whoami`/bin/:$PATH"
 #elif [ -f /etc/bash_completion ]; then
     #. /etc/bash_completion
 #fi
+
+transset-df -p 0.8
+i3-msg "bar mode invisible"
