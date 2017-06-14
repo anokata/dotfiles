@@ -118,11 +118,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-    status_command ~/dotfiles/conky_run
+    #status_command ~/dotfiles/conky_run
+    status_command conky -d -c ~/.conkyrc
     #mode              hide
 }
 #for_window [class="Conky"] floating enable
-
 new_window none
 bindsym $mod+b exec "i3-msg border none"
 bindsym $mod+n exec "i3-msg border normal"
