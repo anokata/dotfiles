@@ -10,3 +10,6 @@
 "scrot"
     m:0xc + c:39
     Control+Alt + s
+"export DISPLAY=:0 && /home/ksi/dotfiles/xterm_trans"
+    m:0x51 + c:28
+    Shift+Mod2+Mod4 + t
