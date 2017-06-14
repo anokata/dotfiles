@@ -11,6 +11,8 @@ sudo pacman -S i3 xorg-server xorg
 sudo pacman -S xorg-xdm
 sudo pacman -S xf86-video-intel
 sudo pacman -S xterm
+sudo pacman -S xcompmgr
+sudo pacman -S transset-df
 
 
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'

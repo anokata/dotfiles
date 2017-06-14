@@ -1,0 +1,2 @@
+0 * * * * export DISPLAY=:0 && notify-send 'Hour pass!'
+

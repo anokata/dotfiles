@@ -1,0 +1,11 @@
+#!/bin/bash
+if which transset; then
+    transset -p 0.8
+elif [ -f /usr/bin/transset-df ]; then
+    transset-df -p 0.8
+fi
+if which feh; then
+    feh --bg-fill -s ~/wall.jpg 
+fi
+if which xcompmgr; then if ! pidof xcompmgr; then xcompmgr& fi fi #if not running
+i3-msg "bar mode invisible" 
