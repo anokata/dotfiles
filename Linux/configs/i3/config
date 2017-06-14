@@ -103,11 +103,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-msg exit"
 
-#bar {
-#        status_command i3status
-#        tray_output primary
-#}
-
 #exec --nostartup-id i3-msg 'workspace 2; exec lxterminal'
 #exec i3-msg "workspace 1; exec lxterminal -e htop"
 #exec i3-msg "workspace 2; exec lxterminal -e ~/log.sh"
@@ -118,3 +113,9 @@ bindsym $mod+Shift+e exec "i3-msg exit"
 bindsym $mod+b exec "i3-msg border none"
 bindsym $mod+n exec "i3-msg border normal"
 new_window none
+
+bar {
+    status_command conky -c ~/.config/conky/conky.conf
+    mode              hide
+}
+#for_window [class="Conky"] floating enable
