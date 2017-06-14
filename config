@@ -150,8 +150,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-    status_command conky -c ~/.config/conky/conky.conf
-    mode              hide
+    status_command conky -d -c ~/.config/conky/conky.conf
+    #mode              hide
 }
 #for_window [class="Conky"] floating enable
 

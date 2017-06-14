@@ -1,1 +1,4 @@
-transset-df -p 0.9
+transset-df -p 0.8
+feh --bg-fill -s ~/wall.jpg 
+xcompmgr &
+i3-msg "bar mode invisible"
