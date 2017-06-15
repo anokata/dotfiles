@@ -61,3 +61,4 @@ if [ -f ~/dotfiles/xterm_trans ]; then
 fi
 
 stty -ixon # for not stop draw at C-s (C-q restore)
+export CLICOLOR="YES"
