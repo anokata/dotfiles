@@ -7,3 +7,7 @@ if which conky; then
         conky -d -c ~/.conkyrc
     fi
 fi
+sleep 0.5
+if [ -f ~/dotfiles/xterm_trans ]; then
+   ~/dotfiles/xterm_trans > /dev/null
+fi

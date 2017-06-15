@@ -10,6 +10,7 @@ Plug 'vim-scripts/taglist.vim'
 "Plug 'leafgarland/typescript-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-rooter'
+Plug 'vim-scripts/utl.vim'
 
 call plug#end()
 
@@ -52,7 +53,9 @@ set foldenable
 syn region foldBraces start=/{/ end=/}/ transparent fold
 syn region foldJavadoc start=,/\*\*, end=,\*/, transparent fold keepend
 set wrap
-set textwidth=0
+"set textwidth=90
+set textwidth=0 
+set wrapmargin=0
 set autoread
 
 filetype off
@@ -66,10 +69,11 @@ if has("autocmd")
 endif
 
 let mapleader=","
+"let maplocalleader = ','
 let maplocalleader=";"
 " ## Edit .vimrc ##
-map ,v :vsp $MYVIMRC<CR>
-map ,V :source $MYVIMRC<CR>
+map <leader>v :vsp $MYVIMRC<CR>
+map <leader>V :source $MYVIMRC<CR>
 " ==== Tabs ====
 nmap <leader>t :tabnew<CR>
 nmap <leader>w :tabclose<CR>
@@ -86,10 +90,16 @@ set foldlevel=20
 " TODO from vim buffer to sys
 " Paste from Clipboard
 nmap <leader>p "+p
+nmap <leader>P o<ESC>"+P
+" paste link
+nmap <leader>l o<ESC>"+p0yss[
+" paste link
 " Copy vim def " buffer to clipboard
 nmap <leader>s :let @+=@"<CR>
 
-"map <leader>r :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+map <leader>r :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+nmap <leader>q :w<CR> 
+nmap <leader>e :q<CR> 
 
 nmap ё `
 nmap Ж :
@@ -110,7 +120,7 @@ nnoremap <space> za
 "F used: 1 2 3 4 5 6 7 9 10 11 12 free: 8
 " substitute(expand("%:r"), "/", ".", "g")
 "map <F8> :w<CR>:!ant clean compile dist remove install<CR>
-map <F8> :w<CR>:!make<CR>
+"map <F8> :w<CR>:!make<CR>
 map <F8> :w<CR>:exe "make default SRC=" . expand("%")<CR>
 "map <F9> :w<CR>:exe "make java JavaSource=" . expand("%") . " JavaClass=" . substitute(expand("%:r"), "/", ".", "g")<CR>
 "Shell
@@ -217,22 +227,22 @@ set shiftwidth=4
 set expandtab
 "colorscheme solarized
 "TODO make colorscheme file
-highlight Normal ctermbg=NONE
-highlight nonText ctermbg=NONE
+colorscheme my
 set t_Co=256
-set background=dark
 set t_ut=
-highlight Normal ctermbg=NONE
-highlight nonText ctermbg=NONE
-highlight String ctermbg=NONE ctermfg=107
-highlight Define ctermbg=NONE ctermfg=107
-highlight Comment ctermbg=NONE ctermfg=8 
-highlight Identifier ctermbg=NONE ctermfg=8 
-highlight Function ctermbg=NONE ctermfg=166 
-highlight Label ctermbg=NONE ctermfg=8 
-highlight Keyword ctermbg=NONE ctermfg=3 
-highlight PreProc ctermbg=NONE ctermfg=40 
-highlight Special ctermbg=NONE ctermfg=167
-highlight LineNr ctermbg=NONE ctermfg=8
-highlight Title ctermbg=NONE ctermfg=32
 
+hi User1 ctermbg=None ctermfg=107
+hi User2 ctermbg=None ctermfg=53
+hi User3 ctermbg=None ctermfg=17
+hi User4 ctermbg=None ctermfg=107
+hi User5 ctermbg=None ctermfg=107
+set statusline=
+"set statusline +=%1*\ %n\ %*            "buffer number
+"set statusline +=%3*%y%*                "file type
+set statusline +=%3*%=%*
+set statusline +=%1*\ %<%F\ %*            "full path
+"set statusline +=%3*%m%*                "modified flag
+"set statusline +=%3*/%L%*               "total lines
+"set statusline +=%1*%4v\ %*             "virtual column number
+"set statusline +=%2*0x%04B\ %*          "character under cursor
+set laststatus=2
