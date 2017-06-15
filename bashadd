@@ -56,5 +56,4 @@ export PATH="/home/`whoami`/bin/:$PATH"
     #. /etc/bash_completion
 #fi
 
-#transset-df -p 0.8
-#i3-msg "bar mode invisible"
+~/dotfiles/xterm_trans > /dev/null

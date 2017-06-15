@@ -1,1 +1,0 @@
-/home/ksi/pythonPetProjects/timeinterval.py
