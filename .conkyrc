@@ -48,6 +48,7 @@ conky.config = {
     extra_newline = false,
     stippled_borders = 0,
     update_interval = 1.0,
+	update_interval_on_battery = 1.0,
     uppercase = false,
     use_spacer = 'none',
     show_graph_scale = false,
