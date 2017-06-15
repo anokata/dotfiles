@@ -1,3 +1,3 @@
 #!/bin/bash
-ansible-playbook -i inventory --limit cent cent_yum.yml 
-ansible-playbook -i inventory --limit cent main.yml 
+ansible-playbook -i inventory --limit $1 cent_yum.yml 
+ansible-playbook -i inventory --limit $1 main.yml 

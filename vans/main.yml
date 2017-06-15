@@ -9,6 +9,7 @@
         with_items:
             - "/home/{{ user }}/.vim/autoload"
             - "/home/{{ user }}/.config/i3"
+            - "/home/{{ user }}/.vim/colors"
 
       - name: copy configs
         copy: src={{ item.src }} dest={{ item.dest }}
@@ -16,6 +17,7 @@
             - { src: '~/dotfiles/Linux/configs/.vim/autoload/plug.vim', dest: "/home/{{ user }}/.vim/autoload" }
             - { src: '~/dotfiles/.tmux.conf', dest: "/home/{{ user }}/.tmux.conf" }
             - { src: '~/dotfiles/.vimrc', dest: "/home/{{ user }}/.vimrc" }
+            - { src: '~/dotfiles/my.vim', dest: "/home/{{ user }}/.vim/colors/" }
             - { src: '~/dotfiles/.xprofile', dest: "/home/{{ user }}/.xprofile" }
             - { src: '~/dotfiles/.xbindkeysrc', dest: "/home/{{ user }}/.xbindkeysrc" }
             - { src: '~/dotfiles/Linux/configs/i3/config', dest: "/home/{{ user }}/.config/i3/config" }
