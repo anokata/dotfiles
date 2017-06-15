@@ -1,3 +1,5 @@
 URxvt.scrollBar: false
 XTerm*eightBitInput: false
 XTerm*metaSendsEscape: true
+XTerm*termName: xterm-256color
+URxvt*termName: rxvt-unicode-256color
