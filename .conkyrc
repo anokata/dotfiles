@@ -83,7 +83,8 @@ ${color lightyellow} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4} | ${to
 $hr
 Networking:
  Down:${color #8844ee} ${downspeed eth0} k/s${color lightgrey} ${offset 70}Up:${color #22ccff} ${upspeed eth0} k/s 	
-${color black}${color black}
+ Dn: ${totaldown enp4s0} ${offset 0} Ud: ${totalup enp4s0}
+${color black}
 $hr
 ${color #0077ff}Port(s)${alignr}#Connections
 $color Inbound: ${tcp_portmon 1 32767 count}  Outbound: ${tcp_portmon 32768 61000 count}${alignr}ALL: ${tcp_portmon 1 65535 count}
