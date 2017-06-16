@@ -27,3 +27,4 @@ vboxmanage modifyvm $NAME --natpf1 "guestssh,tcp,,2222,,22"
 
 #vboxheadless --startvm $NAME
 say "End"
+VBoxManage modifyvm $NAME --firmware efi

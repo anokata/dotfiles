@@ -82,8 +82,8 @@ ${color #FFFFEE} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3} | ${top_me
 ${color lightyellow} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4} | ${top_mem name 4} ${top_mem pid 4} ${top_mem cpu 4} ${top_mem mem 4}
 $hr
 Networking:
- Down:${color #8844ee} ${downspeed eth0} k/s${color lightgrey} ${offset 70}Up:${color #22ccff} ${upspeed eth0} k/s 	  Mem
-${color black}${downspeedgraph eth0 32,150 ff0000 0000ff} ${color black}${upspeedgraph eth0 32,150 0000ff ff0000}   ${memgraph 26,190 FFFFFF FFFFFF -l}
+ Down:${color #8844ee} ${downspeed eth0} k/s${color lightgrey} ${offset 70}Up:${color #22ccff} ${upspeed eth0} k/s 	
+${color black}${color black}
 $hr
 ${color #0077ff}Port(s)${alignr}#Connections
 $color Inbound: ${tcp_portmon 1 32767 count}  Outbound: ${tcp_portmon 32768 61000 count}${alignr}ALL: ${tcp_portmon 1 65535 count}
@@ -95,5 +95,7 @@ ${color #0077ff}Outbound Connection ${alignr} Remote Service/Port$color
  ${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
  ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
  ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
+
+${color #00ff77}TTYs ${execi 2 '/home/ksi/dotfiles/conky_users'}
 
 ]]
