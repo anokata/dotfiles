@@ -1,0 +1,8 @@
+forecast_file=/run/user/$(id -u)/forecast.xml
+curl -s https://www.yr.no/place/Russia/Yaroslavl/Rybinsk/forecast.xml > $forecast_file
+T=$(grep temperature $forecast_file -m 1  | cut -d\" -f 4)
+W=$(grep windSpeed $forecast_file -m 1  | cut -d\" -f 2)
+P=$(grep precipitation $forecast_file -m 1  | cut -d\" -f 2)
+H=$(grep pressure $forecast_file -m 1  | cut -d\" -f 4)
+
+echo "T: $T  Wind: $W  Rain: $P  Pres: $H"
