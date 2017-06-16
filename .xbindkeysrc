@@ -13,3 +13,6 @@
 "export DISPLAY=:0 && /home/ksi/dotfiles/xterm_trans"
     m:0x51 + c:28
     Shift+Mod2+Mod4 + t
+"export /home/ksi/dotfiles/pretty_off"
+    m:0x51 + c:29
+    Shift+Mod2+Mod4 + y

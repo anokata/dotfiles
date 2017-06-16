@@ -1,3 +1,4 @@
+#!/bin/bash
 NAME=ubuntu1604
 HDD=/home/ksi/tst/ubuntu1604.vdi
 DVD=/home/ksi/Downloads/ubuntu-17.04-desktop-amd64.iso

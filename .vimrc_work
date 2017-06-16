@@ -98,8 +98,8 @@ nmap <leader>l o<ESC>"+p0yss[
 nmap <leader>s :let @+=@"<CR>
 
 map <leader>r :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-nmap <leader>q :w<CR> 
-nmap <leader>e :q<CR> 
+nmap <leader>q :w<CR>
+nmap <leader>e :q<CR>
 
 nmap ё `
 nmap Ж :
