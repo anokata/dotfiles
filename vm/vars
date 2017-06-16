@@ -1,0 +1,5 @@
+DVD=~/vm/arch.iso
+HDD=~/vm/arch.vdi
+TYPE=ArchLinux_64
+NAME=arch_vbox_1
+VNC_PORT=3001

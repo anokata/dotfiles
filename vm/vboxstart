@@ -1,1 +1,2 @@
-vboxheadless --startvm arch&
+source vars
+vboxheadless --startvm $NAME&

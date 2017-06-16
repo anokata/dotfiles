@@ -1,0 +1,2 @@
+source vars
+vncviewer 127.0.0.1::$VNC_PORT
