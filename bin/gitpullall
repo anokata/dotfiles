@@ -1,0 +1,4 @@
+cd ~/dotfiles && git pull
+cd ~/doc && git pull
+cd ~/cppProjects && git pull
+cd ~/tst/cppProjects && git pull
