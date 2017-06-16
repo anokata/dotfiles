@@ -1,8 +1,8 @@
 #!/bin/bash
 if which transset; then
-    transset -p 0.8
+    transset -p 0.85
 elif [ -f /usr/bin/transset-df ]; then
-    transset-df -p 0.8
+    transset-df -p 0.85
 fi
 if which feh; then
     feh --bg-fill -s ~/wall.jpg 

@@ -1,0 +1,15 @@
+#!/bin/bash
+source lib.sh
+say "Config files coping..."
+#.bashrc
+#.config/i3/config
+#bin -r
+#.vim
+#vifmrc
+#.tmux.conf
+#.Xresources
+#.xprofile
+#.xinputrc
+#.xbindkeysrc
+#
+say "done"
