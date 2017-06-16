@@ -1,0 +1,2 @@
+source vars
+vboxmanage controlvm $NAME poweroff

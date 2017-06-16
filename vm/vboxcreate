@@ -3,10 +3,14 @@ HDD=/home/ksi/tst/ubuntu1604.vdi
 DVD=/home/ksi/Downloads/ubuntu-17.04-desktop-amd64.iso
 TYPE=Ubuntu_64
 source vars
+source ../lib.sh
 
+say "Creating $NAME"
 vboxmanage createvm --name $NAME --ostype $TYPE --register
 vboxmanage modifyvm $NAME --cpus 1 --memory 512 --audio none --usb off --acpi on --boot1 dvd --nic1 nat
+say "Creating HDD"
 vboxmanage createhd --filename $HDD --size 2000
+say "Configuring"
 vboxmanage storagectl $NAME --name ide-controller --add ide
 vboxmanage storageattach $NAME --storagectl ide-controller --port 0 --device 0 --type hdd --medium $HDD
 vboxmanage storageattach $NAME --storagectl ide-controller --port 0 --device 1 --type dvddrive --medium $DVD
@@ -16,6 +20,10 @@ vboxmanage modifyvm $NAME --vrdeaddress 127.0.0.1
 vboxmanage modifyvm $NAME --vrdeport $VNC_PORT
 vboxmanage modifyvm $NAME --vrdeproperty VNCPassword="asm"
 # 1.5sec
-#vboxheadless --startvm $NAME
-#how copy some file 
+
 #setup ssh
+vboxmanage modifyvm $NAME --natpf1 "guestssh,tcp,,2222,,22"
+#how copy some file 
+
+#vboxheadless --startvm $NAME
+say "End"
