@@ -7,9 +7,11 @@ highlight Define ctermbg=NONE ctermfg=107
 highlight Comment ctermbg=NONE ctermfg=8 
 highlight Identifier ctermbg=NONE ctermfg=8 
 highlight Function ctermbg=NONE ctermfg=166 
-highlight Label ctermbg=NONE ctermfg=8 
+highlight Label ctermbg=NONE ctermfg=3 
 highlight Keyword ctermbg=NONE ctermfg=3 
 highlight PreProc ctermbg=NONE ctermfg=40 
 highlight Special ctermbg=NONE ctermfg=167
 highlight LineNr ctermbg=NONE ctermfg=8
 highlight Title ctermbg=NONE ctermfg=32
+highlight Number ctermbg=NONE ctermfg=31
+highlight Constant ctermbg=NONE ctermfg=39
