@@ -19,8 +19,8 @@ echo "$i) Wait sec for ppp0..."
 sleep 1
 done
 
-#echo "Wait 5sec..."
-#sleep 5
+echo "Wait 5sec..."
+sleep 3
 echo "add default routes"
 ip route add 192.168.10.0/24 dev ppp0
 ip route add default dev ppp0
