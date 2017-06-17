@@ -1,14 +1,21 @@
 #!/bin/bash
-cat dotfiles/bashadd >> ~/.bashrc 
+
+#cat dotfiles/bashadd >> ~/.bashrc 
 mkdir -p ~/.config/i3
 mkdir -p ~/.vim/autoload
+mkdir ~/.vim/colors
+cp dotfiles/my.vim ~/.vim/colors
 cp dotfiles/Linux/configs/.vim/autoload/plug.vim ~/.vim/autoload/
 cp dotfiles/.vimrc ~/
+
 cp dotfiles/.tmux.conf ~/
 cp dotfiles/.xprofile ~/
 cp dotfiles/.xbindkeysrc ~/
+cp dotfiles/.Xresources ~/
+cp dotfiles/.xinputrc ~/
+cp dotfiles/.xinitrc ~/
+cp dotfiles/vifmrc ~/
 cp dotfiles/Linux/configs/i3/config ~/.config/i3/
+cp dotfiles/us-caps.map.gz /usr/share/kbd/keymaps/i386/qwerty/
 loadkeys us-caps
 #xinit
-cp dotfiles/us-caps.map.gz /usr/share/kbd/keymaps/i386/qwerty/
-mkdir .vim/color
