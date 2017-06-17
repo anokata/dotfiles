@@ -1,6 +1,5 @@
 ranger
-w3m or xlinks2 or...
-joe or ne or ....
+w3m or xlinks2 or...uzbl
 dpkg-reconfigure PKG
 localepurge
 gtkorphan

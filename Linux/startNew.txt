@@ -1,2 +1,0 @@
-install all in inatallAll.txt
-copy configs

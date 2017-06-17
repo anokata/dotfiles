@@ -1,4 +1,12 @@
 ip link set enp3s0 up
 dhcpcd 
 pon atel
-./route.sh 
+for i in 1 2 3 4 5; do
+if ip link show ppp0 >/dev/null 2>/dev/null ; then
+    break
+fi
+echo "$i) Wait sec for ppp0..."
+sleep 1
+done
+sleep 1
+dhcpcd 
