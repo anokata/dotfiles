@@ -23,4 +23,4 @@ pacman -S ncdu
 # zip unzip rar
 # viber yandexdisk/dropbox
 # xbacklight iostat meminfo mpstat nmon
-
+# pulseaudio

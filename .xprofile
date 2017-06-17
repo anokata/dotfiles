@@ -12,3 +12,4 @@ xrdb .Xresources
 if [ -f ~/dotfiles/xterm_trans ]; then
    ~/dotfiles/xterm_trans > /dev/null
 fi
+pulseaudio --daemonize
