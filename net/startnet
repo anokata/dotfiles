@@ -1,0 +1,4 @@
+ip link set enp3s0 up
+dhcpcd 
+pon atel
+./route.sh 

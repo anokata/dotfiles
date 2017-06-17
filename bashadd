@@ -68,3 +68,4 @@ function git_dirty {
 }
 
 export PS1="$GREEN\u$WHITE@$BLUE\A$WHITE\w$RED\$(git_dirty)$WHITE\$ "
+loadkeys us-caps

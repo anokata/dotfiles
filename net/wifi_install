@@ -1,0 +1,2 @@
+pacman -S rfkill
+pacman -S wpa_supplicant

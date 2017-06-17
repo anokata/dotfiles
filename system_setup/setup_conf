@@ -10,3 +10,5 @@ cp dotfiles/.xbindkeysrc ~/
 cp dotfiles/Linux/configs/i3/config ~/.config/i3/
 loadkeys us-caps
 #xinit
+cp dotfiles/us-caps.map.gz /usr/share/kbd/keymaps/i386/qwerty/
+mkdir .vim/color
