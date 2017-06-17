@@ -23,6 +23,7 @@ local BW="\[\033[1;37m\]"
 function say() {
     echo "$(tput setaf 0; tput setab 7;)$1$(tput sgr 0;)"
 }
+
 function git_dirty {
     status=$(git status --porcelain) 
     if [[ $status != "" ]]; then echo -e " $RED*$WHITE"; fi
