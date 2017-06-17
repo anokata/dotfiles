@@ -13,7 +13,7 @@ pacman -S openssh
 pacman -S wget
 pacman -S transmission-gtk
 pacman -S ncdu
-# netstat lsof tcpdump vifm tree
+# net-tools lsof tcpdump vifm tree
 # DEV gcc g++ libncurses libcurl gdb valgrind  freeglut3  lxc
 # lxc lxc-templates systemd-services cgroup-bin   bridge-utils debootstrap
 # aircrack-ng  TODO(arch crack? kali list)

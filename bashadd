@@ -28,6 +28,8 @@ alias dush='du -sh'
 alias dushgm='du -sh | grep M'
 alias dushgg='du -sh | grep G'
 alias lld='ll -d */'
+alias free='free -m'
+alias df='df -h'
 
 RED='\[\033[01;31m\]'
 REDne='\033[01;31m'
@@ -68,4 +70,4 @@ function git_dirty {
 }
 
 export PS1="$GREEN\u$WHITE@$BLUE\A$WHITE\w$RED\$(git_dirty)$WHITE\$ "
-loadkeys us-caps
+#loadkeys us-caps
