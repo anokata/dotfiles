@@ -11,3 +11,4 @@ systemctl enable xdm
 pacman -S coreutils
 sudo pacman -S openssh
 sudo pacman -S wget
+sudo pacman -S transmission-gtk
