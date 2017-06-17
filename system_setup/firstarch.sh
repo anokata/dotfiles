@@ -10,3 +10,4 @@ pacman -S xorg-server xorg xorg-xdm xf86-video-intel xterm dmenu xbindkeys xorg-
 systemctl enable xdm
 pacman -S coreutils
 sudo pacman -S openssh
+sudo pacman -S wget
