@@ -9,3 +9,4 @@ pacman -S ctags git tree htop
 pacman -S xorg-server xorg xorg-xdm xf86-video-intel xterm dmenu xbindkeys xorg-xmodmap ttf-dejavu i3 xcompmgr transset-df xorg-xinit xorg-xconsole
 systemctl enable xdm
 pacman -S coreutils
+sudo pacman -S openssh
