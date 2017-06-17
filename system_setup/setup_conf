@@ -13,7 +13,8 @@ cp dotfiles/.xprofile ~/
 cp dotfiles/.xbindkeysrc ~/
 cp dotfiles/.Xresources ~/
 cp dotfiles/.xinputrc ~/
-cp dotfiles/.xinitrc ~/
+cp dotfiles/xinitrc ~/.xinitrc
+chmod +x ~/.xinitrc
 cp dotfiles/vifmrc ~/
 cp dotfiles/Linux/configs/i3/config ~/.config/i3/
 cp dotfiles/us-caps.map.gz /usr/share/kbd/keymaps/i386/qwerty/
