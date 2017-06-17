@@ -1,0 +1,3 @@
+apt install wpasupplicant
+apt install pptp-linux
+apt install vim
