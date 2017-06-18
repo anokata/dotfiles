@@ -71,3 +71,6 @@ function git_dirty {
 
 export PS1="$GREEN\u$WHITE@$BLUE\A$WHITE\w$RED\$(git_dirty)$WHITE\$ "
 #loadkeys us-caps
+getlast() {
+    fc -ln "$1" "$1" | sed '1s/^[[:space:]]*//'
+}
