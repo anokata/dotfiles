@@ -10,4 +10,5 @@ sleep 1
 done
 sleep 1
 dhcpcd 
+sleep 1
 ip route add default dev ppp0
