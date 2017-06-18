@@ -8,3 +8,4 @@ sudo localectl --no-convert set-x11-keymap ru,us pc104 ,qwerty grp:alt_shift_tog
 setxkbmap -model pc104 -layout us,ru -variant ,winkeys -option grp:alt_shift_toggle
 sudo pacman -S --needed base-devel
 sudo pacman -S pwgen
+sudo pacman -S zathura xpdf
