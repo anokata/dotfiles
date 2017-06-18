@@ -6,3 +6,4 @@ cp dotfiles/bin/ -r ~/
 
 sudo localectl --no-convert set-x11-keymap ru,us pc104 ,qwerty grp:alt_shift_toggle
 setxkbmap -model pc104 -layout us,ru -variant ,winkeys -option grp:alt_shift_toggle
+sudo pacman -S --needed base-devel
