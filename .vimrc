@@ -37,7 +37,7 @@ set nowb
 set noswapfile
 set wildmenu
 set nocp
-set keymap=russian-jcukenwin
+"set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 "set guioptions -=T
@@ -98,8 +98,8 @@ nmap <leader>l o<ESC>"+p0yss[
 nmap <leader>s :let @+=@"<CR>
 
 map <leader>r :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-nmap <leader>q :w<CR> 
-nmap <leader>e :q<CR> 
+nmap <leader>q :w<CR>
+nmap <leader>e :q<CR>
 
 nmap ё `
 nmap Ж :
@@ -231,7 +231,6 @@ set shiftwidth=4
 set expandtab
 set t_Co=256
 set t_ut=
-colorscheme my
 
 hi User1 ctermbg=None ctermfg=107
 hi User2 ctermbg=None ctermfg=53
@@ -248,3 +247,12 @@ set statusline +=%1*\ %<%F\ %*            "full path
 "set statusline +=%1*%4v\ %*             "virtual column number
 "set statusline +=%2*0x%04B\ %*          "character under cursor
 set laststatus=2
+set clipboard=unnamed
+set clipboard=unnamedplus
+colorscheme my
+
+" AVOID SHIFT AND CTL
+" enter to cmd mode
+map <space> :
+" leva
+" gmap 
