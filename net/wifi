@@ -1,6 +1,8 @@
 sudo rfkill unblock all
 sudo ip link set wlp2s0 up
-sudo iwlist wlp2s0 scan | grep -e "ESSID" -e "Signal"
-sudo wpa_supplicant -B -iwlp2s0 -c/etc/wpa_supplicant.conf -Dnl80211
+sudo ip link set wlan0 up
+#sudo iwlist wlan0 scan | grep -e "ESSID" -e "Signal"
+sudo wpa_supplicant -B -iwlan0 -c/etc/wpa_supplicant.conf -Dnl80211
 sudo dhclient wlp2s0&
-sudo ip ro add default via 192.168.1.1 dev wlp2s0
+sudo dhclient wlan0&
+#sudo ip ro add default via 192.168.1.1 dev wlp2s0
