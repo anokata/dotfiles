@@ -6,7 +6,6 @@ source ~/dotfiles/bin/lib/alias.sh
 source ~/dotfiles/bin/lib/ssh.sh
 source ~/dotfiles/bin/lib/net.sh
 source ~/dotfiles/bin/lib/first_run.sh
-source ~/dotfiles/bin/lib/net.sh
 #source ~/dotfiles/bin/lib/*.sh #???
 
 function say() {
@@ -35,12 +34,12 @@ getlast() { # Need in shell, not rename with _
 function _arch_net_connect() {
     # https://wiki.archlinux.org/index.php/Getty#Virtual_console
     if ip link show ppp0 >/dev/null 2>/dev/null; then return; fi
-    if ! _is_first_run; then return; fi
+    #if ! _is_first_run; then return; fi
 
     echo -n "Up $ETH..."
-    ip link set $ETH up
+    sudo ip link set $ETH up
     sleep 0.1
-    dhcpcd
+    sudo dhcpcd 
     sleep 0.1
     echo 'ok'
 
@@ -60,3 +59,6 @@ function _dev() {
     esac
 }
 _dev
+
+###  end
+_first_lock # must be at end

@@ -3,7 +3,7 @@
 
 function _net_arch_pptp() {
     echo 'welcome home (ppp)'
-    pon atel
+    sudo pon atel
     for i in 1 2 3 4 5; do
     if ip link show ppp0 >/dev/null 2>/dev/null ; then
         break
@@ -12,11 +12,11 @@ function _net_arch_pptp() {
     sleep 1
     done
     sleep 1
-    dhcpcd 
+    sudo dhcpcd 
     sleep 1
-    ip route add default dev ppp0
+    sudo ip route add default dev ppp0
 }
 
 function _net_create_pptp() {
-
+    echo 'TODO'
 }
