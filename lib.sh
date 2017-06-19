@@ -32,9 +32,8 @@ getlast() { # Need in shell, not rename with _
 ### Develop zone ###
 
 function _arch_net_connect() {
-    # https://wiki.archlinux.org/index.php/Getty#Virtual_console
     if ip link show ppp0 >/dev/null 2>/dev/null; then return; fi
-    #if ! _is_first_run; then return; fi
+    if ! _is_first_run; then return; fi
 
     echo -n "Up $ETH..."
     sudo ip link set $ETH up
@@ -47,6 +46,7 @@ function _arch_net_connect() {
         _net_arch_pptp
     else
         echo 'try wifi'
+        # if exist
         #TODO
     fi
 }
@@ -58,7 +58,22 @@ function _dev() {
         U) echo 'ubuntu';;
     esac
 }
-_dev
 
+function _first_general() {
+    if _is_first_run; then 
+        echo "Hi at start"
+        (exec gnumeric&)
+        (exec ~/dotfiles/forecast&)
+    fi
+}
+
+
+#Other autostart need: 
+# - weather, show in con, write to stat
+# - currency
+# - open gnumeric if first
 ###  end
+_dev
+_first_general
+
 _first_lock # must be at end
