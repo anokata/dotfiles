@@ -6,6 +6,7 @@ oldIFS=$IFS
 export IFS=":"
 for dir in $PATHS; do
   echo "$dir"
+  echo '.-.'
 done
 export IFS=$oldIFS
 
