@@ -5,6 +5,8 @@ source ~/dotfiles/bin/lib/tmux.sh
 source ~/dotfiles/bin/lib/alias.sh
 source ~/dotfiles/bin/lib/ssh.sh
 source ~/dotfiles/bin/lib/net.sh
+source ~/dotfiles/bin/lib/first_run.sh
+source ~/dotfiles/bin/lib/net.sh
 #source ~/dotfiles/bin/lib/*.sh #???
 
 function say() {
@@ -31,30 +33,19 @@ getlast() { # Need in shell, not rename with _
 ### Develop zone ###
 
 function _arch_net_connect() {
-    #TODO if not ping ya.ru? or on first terminal
-    # if uptime < 5m?
     # https://wiki.archlinux.org/index.php/Getty#Virtual_console
+    if ip link show ppp0 >/dev/null 2>/dev/null; then return; fi
+    if ! _is_first_run; then return; fi
+
     echo -n "Up $ETH..."
-    sudo ip link set $ETH up
+    ip link set $ETH up
     sleep 0.1
-    echo 'ok'
     dhcpcd
     sleep 0.1
+    echo 'ok'
+
     if ping -c1 inet.atel.me >/dev/null 2>/dev/null; then
-        # JUST Call net.arch_pptp
-        echo 'welcome home (ppp)'
-        #pon atel
-        for i in 1 2 3 4 5; do
-        if ip link show ppp0 >/dev/null 2>/dev/null ; then
-            break
-        fi
-        echo "$i) Wait sec for ppp0..."
-        sleep 1
-        done
-        sleep 1
-        dhcpcd 
-        sleep 1
-        ip route add default dev ppp0
+        _net_arch_pptp
     else
         echo 'try wifi'
         #TODO
