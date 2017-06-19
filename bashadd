@@ -1,13 +1,5 @@
 source ~/dotfiles/lib.sh
 
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
 export TERM=xterm-256color
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
@@ -66,30 +58,17 @@ fi
 stty -ixon # for not stop draw at C-s (C-q restore)
 export CLICOLOR="YES"
 
-function git_dirty {
-    local status=$(git status --porcelain 2>/dev/null) 
-    if [[ $status != "" ]]; then echo -e "*"; fi
-}
+#export PS1="$GREEN\u$WHITE@$BLUE\A$WHITE\w$RED\$(git_dirty)$WHITE\$ "
+export PS1="${DIST_SHORT}$BC\u$WHITE@$BLUE\A$WHITE\w$RED\$(git_dirty)$WHITE\$ "
 
-export PS1="$GREEN\u$WHITE@$BLUE\A$WHITE\w$RED\$(git_dirty)$WHITE\$ "
 #loadkeys us-caps
-getlast() {
-    fc -ln "$1" "$1" | sed '1s/^[[:space:]]*//'
-}
 
-# TODO make function if_exist_and_not_running
 if which ssh-agent > /dev/null; then 
     if ! pidof ssh-agent > /dev/null; then 
         eval "$(ssh-agent -s)"
     fi 
 fi 
 
-if_which_and_not_run () {
-    if which $1 > /dev/null 2>/dev/null; then 
-        if ! pidof $1 > /dev/null 2>/dev/null; then 
-            $1
-        fi 
-    fi 
-}
-
 if_which_and_not_run "xbindkeys"
+
+_try_tmux_run

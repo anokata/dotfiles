@@ -47,7 +47,6 @@ GREEN='\[\033[01;32m\]'
 GREENne='\033[01;32m'
 BLUE='\[\033[01;34m\]'
 MG='\033[01;33m'
-#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 export PS1="$GREEN\u$WHITE@$BLUE\A$WHITE\w\$ "
 set -o vi
 shopt -s cdspell
