@@ -1,16 +1,14 @@
 #!/bin/bash
 
-cd ~/ydsk/doc/
-git add . && git commit -m "doc (autocommit)" 
-git push origin master 
-git push origin_bitbucket master
+PATHS=~/doc:~/dotfiles:~/ydsk/doc/:~/ydsk/dotfiles
 
-cd ~/ydsk/dotfiles/
-git add . && git commit -m "chg (autocommit)" 
-git push origin master 
-git push origin_bitbucket master
+oldIFS=$IFS
+export IFS=";"
+for dir in $PATHS; do
+  echo "$dir"
+done
+export IFS=$oldIFS
 
-PATHS=~/doc #how array
 if [ -d ~/doc ]; then
     cd ~/doc
     git add . && git commit -m "doc (autocommit)" 
