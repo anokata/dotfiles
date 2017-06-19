@@ -17,3 +17,15 @@ readonly BB="\[\033[1;34m\]"
 readonly BM="\[\033[1;35m\]"
 readonly BC="\[\033[1;36m\]"
 readonly BW="\[\033[1;37m\]"
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto -XF --group-directories-first'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
