@@ -1,6 +1,4 @@
 #!/bin/bash
-RED='\033[01;31m'
-WHITE='\033[01;00m'
 readonly RESET="\[\033[0;37m\]" 
 readonly K="\[\033[0;30m\]"    # black
 readonly R="\[\033[0;31m\]"    # red

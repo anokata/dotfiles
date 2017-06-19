@@ -2,7 +2,7 @@
 
 for o in $(git remote); do 
     if [ "$o" = "ssh" ]; then
-        echo 'ssh'
+        echo "*** push to $o" 
         git push $o master
     fi
 done
