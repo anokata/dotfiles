@@ -20,3 +20,4 @@ cp dotfiles/Linux/configs/i3/config ~/.config/i3/
 cp dotfiles/us-caps.map.gz /usr/share/kbd/keymaps/i386/qwerty/
 loadkeys us-caps
 #xinit
+sudo setcap "CAP_NET_ADMIN=+ep" /bin/ip
