@@ -21,6 +21,7 @@
             - { src: '~/dotfiles/.xprofile', dest: "/home/{{ user }}/.xprofile" }
             - { src: '~/dotfiles/.xbindkeysrc', dest: "/home/{{ user }}/.xbindkeysrc" }
             - { src: '~/dotfiles/Linux/configs/i3/config', dest: "/home/{{ user }}/.config/i3/config" }
+            - { src: '~/dotfiles/', dest: "/home/{{ user }}/" }
 
 
       - name: config Bash rc

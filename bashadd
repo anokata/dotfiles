@@ -1,4 +1,4 @@
-source lib.sh
+source ~/dotfiles/lib.sh
 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
