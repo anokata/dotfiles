@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd ~/ydsk/doc/
 git add . && git commit -m "doc (autocommit)" 
 git push origin master 
@@ -7,3 +9,14 @@ cd ~/ydsk/dotfiles/
 git add . && git commit -m "chg (autocommit)" 
 git push origin master 
 git push origin_bitbucket master
+
+PATHS=~/doc #how array
+if [ -d ~/doc ]; then
+    git add . && git commit -m "doc (autocommit)" 
+    gitpush
+fi
+
+if [ -d ~/dotfiles ]; then
+    git add . && git commit -m "(autocommit)" 
+    gitpush
+fi

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for o in $(git remote); do 
+    if [ "$o" = "ssh" ]; then
+        git push $o master
+    fi
+done
+for o in $(git remote); do 
+    echo "*** push to $o" 
+    git push $o master
+done

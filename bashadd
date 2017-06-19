@@ -85,11 +85,11 @@ if which ssh-agent > /dev/null; then
 fi 
 
 if_which_and_not_run () {
-    if which $1 > /dev/null; then 
-        if ! pidof $1 > /dev/null; then 
+    if which $1 > /dev/null 2>/dev/null; then 
+        if ! pidof $1 > /dev/null 2>/dev/null; then 
             $1
         fi 
     fi 
 }
 
-if_exist_and_not_running "xbindkeys"
+if_which_and_not_run "xbindkeys"
