@@ -18,6 +18,7 @@ if [ -d ~/doc ]; then
 fi
 
 if [ -d ~/dotfiles ]; then
+    cd ~/dotfiles
     git add . && git commit -m "(autocommit)" 
     gitpush
 fi
