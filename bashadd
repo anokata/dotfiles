@@ -1,3 +1,5 @@
+source lib.sh
+
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -73,4 +75,19 @@ export PS1="$GREEN\u$WHITE@$BLUE\A$WHITE\w$RED\$(git_dirty)$WHITE\$ "
 #loadkeys us-caps
 getlast() {
     fc -ln "$1" "$1" | sed '1s/^[[:space:]]*//'
+}
+
+# TODO make function if_exist_and_not_running
+if which ssh-agent > /dev/null; then 
+    if ! pidof ssh-agent > /dev/null; then 
+        eval "$(ssh-agent -s)"
+    fi 
+fi 
+
+if_which_and_not_run () {
+    if which $1 > /dev/null; then 
+        if ! pidof $1 > /dev/null; then 
+            $1
+        fi 
+    fi 
 }
