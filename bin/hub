@@ -12,6 +12,7 @@ git push origin_bitbucket master
 
 PATHS=~/doc #how array
 if [ -d ~/doc ]; then
+    cd ~/doc
     git add . && git commit -m "doc (autocommit)" 
     gitpush
 fi
