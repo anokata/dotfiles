@@ -2,22 +2,20 @@
 
 PATHS=~/doc:~/dotfiles:~/ydsk/doc/:~/ydsk/dotfiles
 
+_git_commit() {
+    if [ -d $1 ]; then
+        cd $1
+        git add . && git commit -m "(autocommit)" 
+        gitpush
+    fi
+}
+
+
 oldIFS=$IFS
 export IFS=:
 for dir in $PATHS; do
   echo "$dir"
-  echo '.-.'
+    _git_commit "$dir"
 done
 export IFS=$oldIFS
 
-if [ -d ~/doc ]; then
-    cd ~/doc
-    git add . && git commit -m "doc (autocommit)" 
-    gitpush
-fi
-
-if [ -d ~/dotfiles ]; then
-    cd ~/dotfiles
-    git add . && git commit -m "(autocommit)" 
-    gitpush
-fi
