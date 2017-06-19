@@ -3,7 +3,7 @@
 PATHS=~/doc:~/dotfiles:~/ydsk/doc/:~/ydsk/dotfiles
 
 oldIFS=$IFS
-export IFS=";"
+export IFS=":"
 for dir in $PATHS; do
   echo "$dir"
 done
