@@ -9,3 +9,6 @@ setxkbmap -model pc104 -layout us,ru -variant ,winkeys -option grp:alt_shift_tog
 sudo pacman -S --needed base-devel
 sudo pacman -S pwgen
 sudo pacman -S zathura xpdf
+sudo pacman -S unzip
+sudo pacman -S gvim
+sudo pacman -S sdcv
