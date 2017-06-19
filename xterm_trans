@@ -1,8 +1,9 @@
 #!/bin/bash
+OPAC=1
 if which transset; then
-    transset -p 0.85
+    transset -p $OPAC
 elif [ -f /usr/bin/transset-df ]; then
-    transset-df -p 0.85
+    transset-df -p $OPAC
 fi
 if which feh; then
     feh --bg-fill -s ~/wall.jpg 

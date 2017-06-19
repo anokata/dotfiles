@@ -53,11 +53,11 @@ export PATH="/home/`whoami`/bin/:$PATH"
 #fi
 
 
-#if [ -f /usr/share/bash-completion/bash_completion ]; then
-    #. /usr/share/bash-completion/bash_completion
-#elif [ -f /etc/bash_completion ]; then
-    #. /etc/bash_completion
-#fi
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
 
 if [ -f ~/dotfiles/xterm_trans ]; then
    ~/dotfiles/xterm_trans > /dev/null
@@ -91,3 +91,5 @@ if_which_and_not_run () {
         fi 
     fi 
 }
+
+if_exist_and_not_running "xbindkeys"
