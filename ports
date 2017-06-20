@@ -1,0 +1,1 @@
+netstat -tnl4 | sed '1d;2d;' | tr -s ' ' | cut -d' ' -f 4
