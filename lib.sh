@@ -65,6 +65,7 @@ function _dev() {
 }
 
 function _first_general() {
+    # TODO if @ home
     if _is_first_run; then 
         echo "Hi at start"
         (exec gnumeric&)
