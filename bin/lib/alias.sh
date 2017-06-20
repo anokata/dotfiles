@@ -23,3 +23,4 @@ alias tdl='tree -dL'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+alias end='systemctl poweroff'
