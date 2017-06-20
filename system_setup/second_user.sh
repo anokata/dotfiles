@@ -12,3 +12,4 @@ sudo pacman -S zathura xpdf
 sudo pacman -S unzip
 sudo pacman -S gvim
 sudo pacman -S sdcv
+sudo pacman -S scrot

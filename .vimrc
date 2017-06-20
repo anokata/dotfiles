@@ -54,7 +54,7 @@ syn region foldBraces start=/{/ end=/}/ transparent fold
 syn region foldJavadoc start=,/\*\*, end=,\*/, transparent fold keepend
 set wrap
 "set textwidth=90
-set textwidth=0 
+set textwidth=120
 set wrapmargin=0
 set autoread
 
