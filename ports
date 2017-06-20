@@ -1,1 +1,16 @@
-netstat -tnl4 | sed '1d;2d;' | tr -s ' ' | cut -d' ' -f 4
+#!/bin/bash
+# vim: filetype=sh
+# :help modeline
+#netstat -tnl4 | sed '1d;2d;' | tr -s ' ' | cut -d' ' -f 4
+
+# TODO sort
+for line in `netstat -tnl4 | sed '1d;2d;' | tr -s ' ' | cut -d' ' -f 4`; do 
+    IFS=: read addr port <<< $line
+    case $addr in 
+        127.0.0.1) echo "Local $port";;
+        0.0.0.0) echo "Global $port";;
+        *) echo "$addr $port";;
+    esac
+done
+sleep 2
+
