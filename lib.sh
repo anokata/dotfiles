@@ -75,6 +75,7 @@ function _first_general() {
 }
 
 
+# TODO simple scripts to aliases
 #Other autostart need: 
 # - weather, show in con, write to stat
 # - currency

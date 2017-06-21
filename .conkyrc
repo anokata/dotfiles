@@ -63,7 +63,7 @@ conky.config = {
 }
 
 conky.text = [[
-${color grey}$nodename - $sysname $kernel on $machine ${color lightyellow}Uptime:$color $uptime
+${color grey}$nodename - $sysname $kernel on $machine ${color lightyellow}Uptime:$color $uptime  $time
 ${color grey}$hr
 ${color lightyellow}Frequency:$color $freq_g GHz  
 ${color lightyellow}CPU (processes $processes/$running_processes):$color $cpu% ${cpubar 4}
