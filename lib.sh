@@ -66,6 +66,7 @@ function _dev() {
 
 function _first_general() {
     # TODO if @ home
+    # if_first_at_day
     if _is_first_run; then 
         echo "Hi at start"
         (exec gnumeric&)
