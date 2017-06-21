@@ -1,4 +1,5 @@
 #!/bin/bash
+# vim: filetype=sh
 source ~/dotfiles/bin/lib/color.sh
 source ~/dotfiles/bin/lib/distro.sh
 source ~/dotfiles/bin/lib/tmux.sh
