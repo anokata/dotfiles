@@ -1,1 +1,6 @@
 \x auto
+\setenv PAGER less
+\setenv LESS -IS
+\pset linestyle unicode
+\set PROMPT1 '%n@%/%R%x%# '
+\set PROMPT2 '%R%x%# '

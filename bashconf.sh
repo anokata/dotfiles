@@ -8,6 +8,8 @@ shopt -s histappend
 shopt -s checkwinsize
 stty -ixon # for not stop draw at C-s (C-q restore)
 export PATH=$PATH:"/home/ksi/bin"
+export PATH=$PATH:"/home/ksi/dotfiles/bin"
+export PATH=$PATH:"/home/ksi/dotfiles/work"
 export ANSIBLE_NOCOWS=1
 export CLICOLOR="YES"
 export TERM=xterm-256color

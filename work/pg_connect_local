@@ -1,0 +1,6 @@
+#!/bin/bash
+HOST=127.0.0.1
+PORT=5432
+USER=lod
+DB=mo_lod_log_db
+psql -h $HOST -p $PORT -U $USER $DB
