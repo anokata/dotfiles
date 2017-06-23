@@ -1,0 +1,5 @@
+#!/bin/bash
+# vim: filetype=sh
+source get_pg_config
+psql -h $HOST -p $PORT -U $USER $DB
+

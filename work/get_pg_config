@@ -1,0 +1,11 @@
+#!/bin/bash
+# vim: filetype=sh
+NAME=$1
+CONFIG=~/dotfiles/work/pg_hosts
+if [ "$NAME" = "" ]; then echo "Usage: $0 name"; exit 1; fi
+HOST=$(jq -r .$NAME.host $CONFIG)
+if [ "$HOST" = "null" ]; then echo "Not found $1"; exit 1; fi
+
+PORT=$(jq -r .$NAME.port $CONFIG)
+DB=$(jq -r .$NAME.db $CONFIG)
+USER=$(jq -r .$NAME.user $CONFIG)
