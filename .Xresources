@@ -3,6 +3,17 @@ XTerm*eightBitInput: false
 XTerm*metaSendsEscape: true
 XTerm*termName: xterm-256color
 URxvt*termName: rxvt-unicode-256color
+! underlinded 
+XTerm*colorULMode: true
+XTerm*colorUL: rgb:e4/e4/e4
+
+XTerm*scaleHeight: 1.05
+xterm*borderWidth: 0
+Xterm*saveLines: 4096
+XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+XTerm*utf8: 1
+XTerm*pointerColorBackground: black
+XTerm*cursorColor: yellow
 
 ! Blacks
 !xterm*color0:           #151515

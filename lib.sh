@@ -77,6 +77,7 @@ function _first_general() {
 
 
 # TODO simple scripts to aliases
+# TODO CONKY who, distro?
 #Other autostart need: 
 # - weather, show in con, write to stat
 # - currency

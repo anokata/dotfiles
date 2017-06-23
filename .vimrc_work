@@ -11,6 +11,7 @@ Plug 'vim-scripts/taglist.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/utl.vim'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
@@ -37,7 +38,7 @@ set nowb
 set noswapfile
 set wildmenu
 set nocp
-set keymap=russian-jcukenwin
+"set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 "set guioptions -=T
@@ -48,13 +49,13 @@ set shiftwidth=4
 set expandtab
 set autochdir
 "set foldmethod=indent
-set foldmethod=syntax
+"set foldmethod=syntax
 set foldenable
 syn region foldBraces start=/{/ end=/}/ transparent fold
 syn region foldJavadoc start=,/\*\*, end=,\*/, transparent fold keepend
 set wrap
 "set textwidth=90
-set textwidth=0 
+set textwidth=120
 set wrapmargin=0
 set autoread
 
@@ -98,8 +99,8 @@ nmap <leader>l o<ESC>"+p0yss[
 nmap <leader>s :let @+=@"<CR>
 
 map <leader>r :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-nmap <leader>q :w<CR> 
-nmap <leader>e :q<CR> 
+nmap <leader>q :w<CR>
+nmap <leader>e :q<CR>
 
 nmap ё `
 nmap Ж :
@@ -121,6 +122,7 @@ nnoremap <space> za
 "map <F10> :w<CR>:!make test<CR>
 "map <F9> :w<CR> :!perl '%'<CR>
 "map <C-F8> :!dot -Tpng % -o%.png && feh %.png<CR>
+map <F12> :w<CR>:silent !dot -Tpng % -o/tmp/%.png && feh /tmp/%.png<CR>
 "F used: 1 2 3 4 5 6 7 9 10 11 12 free: 8, best 589 12 23
 " substitute(expand("%:r"), "/", ".", "g")
 "map <F8> :w<CR>:exe "make default SRC=" . expand("%")<CR>
@@ -231,7 +233,6 @@ set shiftwidth=4
 set expandtab
 set t_Co=256
 set t_ut=
-colorscheme my
 
 hi User1 ctermbg=None ctermfg=107
 hi User2 ctermbg=None ctermfg=53
@@ -248,3 +249,20 @@ set statusline +=%1*\ %<%F\ %*            "full path
 "set statusline +=%1*%4v\ %*             "virtual column number
 "set statusline +=%2*0x%04B\ %*          "character under cursor
 set laststatus=2
+set clipboard=unnamed
+set clipboard=unnamedplus
+colorscheme my
+
+" AVOID SHIFT AND CTL
+" enter to cmd mode
+map <space> :
+" leva
+" gmap 
+"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+"let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0

@@ -99,5 +99,7 @@ ${color #0077ff}Outbound Connection ${alignr} Remote Service/Port$color
  ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
 
 ${color #00ff77}TTYs ${execi 2 '/home/ksi/dotfiles/conky_users'}
+${color #70ff17}Ports 
+${execi 10 '/home/ksi/dotfiles/ports'}
 
 ]]

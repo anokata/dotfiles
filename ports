@@ -3,18 +3,26 @@
 # :help modeline
 #netstat -tnl4 | sed '1d;2d;' | tr -s ' ' | cut -d' ' -f 4
 
+globals=''
+locals=''
+vpns=''
+loops=''
 for line in `netstat -tnl4 | sed '1d;2d;' | tr -s ' ' | cut -d' ' -f 4 | sort`; do 
     IFS=: read addr port <<< $line
     IFS=. read tet a b c <<< $addr
     case $tet in 
         #127.0.0.1) echo "Loop $port";;
         #0.0.0.0) echo "Global $port";;
-        127) echo "Loop $port";;
-        192) echo "Local $port";;
-        10) echo "Vpn $port";;
-        0) echo "Global $port";;
+        127) loops="$port $loops";;
+        192) locals="$port $locals";;
+        10) vpns="$port $vpns";;
+        0) globals="$port $globals" ;;
         *) echo "$addr $port";;
     esac
 done
-read
+#read
 
+echo "Global: $globals"
+echo "Local:  $locals"
+echo "lo:     $loops"
+echo "VPN:    $vpns"
