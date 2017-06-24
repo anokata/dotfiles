@@ -11,8 +11,36 @@ Plug 'vim-scripts/taglist.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/utl.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-syntastic/syntastic'
+Plug 'airblade/vim-gitgutter'
+Plug 'chrisbra/csv.vim'
+Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_splits = 0
+ let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#close_symbol = 'x'
+
+let g:airline_extensions = ['tabline']
+let g:airline_theme='minimalist'
+let g:airline_skip_empty_sections = 1
+"let g:airline_symbols.linenr = ''
+"let g:airline_section_b = '%-0.10{getcwd()}'
+"let g:airline_section_c = '%t'
+"let g:airline_section_a = ''
+let g:airline_section_y = ''
+let g:airline_section_x = ''
+let g:airline_section_z = '%3p%% %#__accent_bold#%{g:airline_symbols.linenr}%2l%#__restore__#%#__accent_bold#/%L%#__restore__# :%3v'
+let g:airline_section_b = ''
+let g:airline_section_c = '%<%f%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
+
 
 let g:rooter_patterns = ['Makefile']
 let g:NERDTreeWinPos = "right"
@@ -137,8 +165,7 @@ map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u
 " BARE C++
 map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 " SHELL
-map <F9> :w<CR>:!./%<CR> 
-
+map <F9> :w<CR>:!./%<CR>
 " MAKE
 map <F3> :w<CR>:!make<CR>
 
@@ -151,10 +178,11 @@ map <C-F9> :!python3 -i '%:t'<CR>
 "==== Session ====
 nmap <C-F5> :call MakeDefSession()<CR>
 nmap <S-F5> :call LoadDefSession()<CR>
-"==== NERDTree ==== 
+"==== NERDTree ====
 nmap <leader>r :NERDTreeToggle<CR>
 nmap <leader>Y :NERDTreeClose<CR>
 nmap <leader>c :TlistToggle<CR>
+nmap <leader>g :TableModeToggle<CR>
 nmap <Leader>u ysiw_ysiw_
 nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 set tags=~/mytags
@@ -174,8 +202,8 @@ imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 nnoremap K i<CR><Esc>
 
 iab ifmain if __name__=='__main__':<CR>
-iabbrev #i #include 
-iabbrev #d #define  
+iabbrev #i #include
+iabbrev #d #define
 
 function! MakeDefSession()
   let b:filename = $HOME . "/.vim/sessions" . "/pythonDefSession.vim"
@@ -219,9 +247,9 @@ function! Mak()
     echom "mak"
     let g:file=expand('%:t:r')
     "vnew
-    for i in [1, 2, 3] 
+    for i in [1, 2, 3]
         normal ggdG
-        execute "silent r! make " . g:file 
+        execute "silent r! make " . g:file
         execute "sleep 1"
     endfor
 endfunction
@@ -255,4 +283,4 @@ colorscheme my
 " enter to cmd mode
 map <space> :
 " leva
-" gmap 
+" gmap

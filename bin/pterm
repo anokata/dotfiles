@@ -1,0 +1,1 @@
+xterm -fn 7x12 -fa "DejaVu Sans Mono for Powerline:size=12:antialias=true" -bg "rgb:20/20/28" -bd black -fg white
