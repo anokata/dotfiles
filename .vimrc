@@ -1,5 +1,7 @@
 
 call plug#begin('~/.vim/plugged')
+"Plug 'leafgarland/typescript-vim'
+"tormaza Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
@@ -7,40 +9,36 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'vim-scripts/taglist.vim'
-"Plug 'leafgarland/typescript-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/utl.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'vim-syntastic/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/csv.vim'
-Plug 'dhruvasagar/vim-table-mode'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+"Plug 'vim-syntastic/syntastic'
+"Plug 'lervag/vimtex'
 
 call plug#end()
 
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_splits = 0
- let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#close_symbol = 'x'
-
 let g:airline_extensions = ['tabline']
 let g:airline_theme='minimalist'
 let g:airline_skip_empty_sections = 1
-"let g:airline_symbols.linenr = ''
-"let g:airline_section_b = '%-0.10{getcwd()}'
-"let g:airline_section_c = '%t'
-"let g:airline_section_a = ''
 let g:airline_section_y = ''
 let g:airline_section_x = ''
 let g:airline_section_z = '%3p%% %#__accent_bold#%{g:airline_symbols.linenr}%2l%#__restore__#%#__accent_bold#/%L%#__restore__# :%3v'
 let g:airline_section_b = ''
 let g:airline_section_c = '%<%f%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
+set hidden
 
 let g:rooter_patterns = ['Makefile']
 let g:NERDTreeWinPos = "right"
