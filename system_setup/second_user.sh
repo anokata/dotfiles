@@ -15,3 +15,4 @@ sudo pacman -S sdcv
 sudo pacman -S scrot
 pacman -S xclip
 #https://github.com/powerline/fonts
+sudo pacman -S gtypist
