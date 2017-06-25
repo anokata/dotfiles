@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/csv.vim'
 Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'majutsushi/tagbar'
 "Plug 'vim-syntastic/syntastic'
 "Plug 'lervag/vimtex'
 
@@ -181,6 +182,7 @@ nmap <leader>r :NERDTreeToggle<CR>
 nmap <leader>Y :NERDTreeClose<CR>
 nmap <leader>c :TlistToggle<CR>
 nmap <leader>g :TableModeToggle<CR>
+nmap <leader>x :TagbarToggle<CR>
 nmap <Leader>u ysiw_ysiw_
 nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 set tags=~/mytags
