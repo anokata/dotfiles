@@ -3,9 +3,9 @@
 Tasks=$(whiptail --title  "Select tasks to do" --checklist \
 "Select tasks" 15 60 4 \
 "Create box" "Create base image virtualbox centos" ON \
-"Install lod" "..." OFF \
-"Dump db" "..." OFF \
-"Restore db" "..." ON \
+"lod-web" "Install LOD" OFF \
+"pg-dump" "Dump db" OFF \
+"pg-restore" "Restore db" ON \
 3>&1 1>&2 2>&3)
  
 exitstatus=$?
