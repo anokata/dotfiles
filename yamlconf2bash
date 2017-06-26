@@ -1,0 +1,3 @@
+#!/bin/bash
+# vim: filetype=sh 
+sed -e 's/:[^:\/\/]/="/g;s/$/"/g;s/ *=/=/g' file.yaml > file.sh
