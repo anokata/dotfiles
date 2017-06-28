@@ -18,6 +18,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/csv.vim'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-repeat' 
+Plug 'tpope/vim-commentary'
 "Plug 'vim-syntastic/syntastic'
 "Plug 'lervag/vimtex'
 
@@ -284,3 +286,5 @@ colorscheme my
 map <space> :
 " leva
 " gmap
+set fillchars+=vert:\ 
+highlight VertSplit ctermbg=238  ctermfg=238

@@ -15,3 +15,6 @@ highlight LineNr ctermbg=NONE ctermfg=8
 highlight Title ctermbg=NONE ctermfg=32
 highlight Number ctermbg=NONE ctermfg=31
 highlight Constant ctermbg=NONE ctermfg=39
+highlight VertSplit ctermbg=39  ctermfg=39
+highlight VertSplit ctermbg=238  ctermfg=238
+
