@@ -3,7 +3,8 @@ call plug#begin('~/.vim/plugged')
 "Plug 'leafgarland/typescript-vim'
 "tormaza Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jceb/vim-orgmode'
@@ -44,7 +45,6 @@ let g:airline_section_c = '%<%f%m %#__accent_red#%{airline#util#wrap(airline#par
 set hidden
 
 let g:rooter_patterns = ['Makefile']
-let g:NERDTreeWinPos = "right"
 let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
@@ -59,7 +59,6 @@ if has('persistent_undo')
     set undofile
 endif
 
-let NERDTreeIgnore = ['\.pyc$']
 
 set nobackup
 set nowb
@@ -180,6 +179,8 @@ map <C-F9> :!python3 -i '%:t'<CR>
 nmap <C-F5> :call MakeDefSession()<CR>
 nmap <S-F5> :call LoadDefSession()<CR>
 "==== NERDTree ====
+let g:NERDTreeWinPos = "right"
+let NERDTreeIgnore = ['\.pyc$']
 nmap <leader>r :NERDTreeToggle<CR>
 nmap <leader>Y :NERDTreeClose<CR>
 nmap <leader>c :TlistToggle<CR>
@@ -286,5 +287,18 @@ colorscheme my
 map <space> :
 " leva
 " gmap
-set fillchars+=vert:\ 
-highlight VertSplit ctermbg=238  ctermfg=238
+"set fillchars+=vert:\ 
+"highlight VertSplit ctermbg=238  ctermfg=238
+let @d='f,lli'
+
+" === netrw config ===
+" bind :Vexplore
+"nmap <leader>y :Vex<CR>
+nmap <leader>r :Lexplore<CR>
+" i toggle style
+" s sort
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_browse_split = 2
+let g:netrw_winsize = 35
+let g:netrw_altv = 1
