@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'leafgarland/typescript-vim'
 "tormaza Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-surround'
-"Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -23,6 +23,12 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 "Plug 'vim-syntastic/syntastic'
 "Plug 'lervag/vimtex'
+Plug 'vim-scripts/DfrankUtil'
+"Plug 'vimplugin/project.vim'
+Plug 'vim-scripts/vimprj'
+Plug 'vim-scripts/code_complete'
+Plug 'vim-scripts/OmniCppComplete'
+Plug 'hoxnox/indexer.vim'
 
 call plug#end()
 
@@ -109,6 +115,7 @@ nmap <leader>, :tabnext<CR>
 nmap <leader>. :tabprev<CR>
 " ==== Folding ====
 nmap <leader>f zf)
+nmap <leader>f :set foldmethod=indent<CR>
 nmap <leader>a za
 " fold all
 " copy to system buffer
@@ -170,7 +177,7 @@ map <F9> :w<CR>:!./%<CR>
 map <F3> :w<CR>:!make<CR>
 
 " BARE Python
-map <F10> :w<CR>:!python3 '%:t'<CR>
+map <F10> :w<CR>:!python '%:t'<CR>
 "VimL
 map <F11> :w<CR>:source %<CR>
 
@@ -294,7 +301,7 @@ let @d='f,lli'
 " === netrw config ===
 " bind :Vexplore
 "nmap <leader>y :Vex<CR>
-nmap <leader>r :Lexplore<CR>
+"nmap <leader>r :Lexplore<CR>
 " i toggle style
 " s sort
 let g:netrw_liststyle = 3
@@ -304,3 +311,4 @@ let g:netrw_winsize = 35
 let g:netrw_altv = 1
 
 set wildmode=longest:list,full
+let g:indexer_disableCtagsWarning=1
