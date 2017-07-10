@@ -30,6 +30,10 @@ if [ -f ~/dotfiles/xterm_trans ]; then
 fi
 
 #loadkeys us-caps
+#TEST
+LINEOS_DIR=~/lineos
+export PATH="$LINEOS_DIR/bin:$PATH"
+#====
 
 _try_tmux_run
 
