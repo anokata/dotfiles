@@ -28,7 +28,7 @@ Plug 'vim-scripts/DfrankUtil'
 Plug 'vim-scripts/vimprj'
 Plug 'vim-scripts/code_complete'
 Plug 'vim-scripts/OmniCppComplete'
-Plug 'hoxnox/indexer.vim'
+"Plug 'hoxnox/indexer.vim'
 
 call plug#end()
 

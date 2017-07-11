@@ -9,6 +9,8 @@ function _tmux_run () {
         else
             echo 'create'
             tmux new -s $TMUX_SESSION_NAME
+            cd ~/dotfiles
+            tmux split-window -h -c ~/dotfiles/
         fi
     fi
 }

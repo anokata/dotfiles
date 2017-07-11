@@ -6,6 +6,7 @@ HISTFILESIZE=2000
 set -o vi
 shopt -s histappend
 shopt -s checkwinsize
+shopt -s autocd
 stty -ixon # for not stop draw at C-s (C-q restore)
 export PATH=$PATH:"/home/ksi/bin"
 export PATH=$PATH:"/home/ksi/dotfiles/bin"
@@ -30,10 +31,27 @@ if [ -f ~/dotfiles/xterm_trans ]; then
 fi
 
 #loadkeys us-caps
-#TEST
+#TEST ==========================
 LINEOS_DIR=~/lineos
 export PATH="$LINEOS_DIR/bin:$PATH"
-#====
+
+PROMPT_COMMAND='[[ ${__new_wd:=$PWD} != $PWD ]] && ls; __new_wd=$PWD' # ls after cding
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+shopt -s extglob
+shopt -s cmdhist 
+shopt -s dotglob     
+shopt -s histappend
+shopt -s cdspell
+# Git aliases
+alias gs='git status'
+alias ga='git add'
+alias gcm='git commit -m'
+alias gp='git push'
+# make open cmd with switch by ext 
+# if [ -f "$1" ] ; then
+#==============================
 
 _try_tmux_run
 
