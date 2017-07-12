@@ -16,3 +16,4 @@ sudo pacman -S scrot
 pacman -S xclip
 #https://github.com/powerline/fonts
 sudo pacman -S gtypist
+sudo pacman -S zathura
