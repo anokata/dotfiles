@@ -1,0 +1,10 @@
+#!/bin/sh
+NAME=$1
+SYSPATH=$(pm list packages -f | grep $NAME | cut -d: -f 2 | cut -d = -f 1)
+APKNAME=$(pm list packages -f | grep $NAME | cut -d: -f 2 | cut -d = -f 1 | )
+COMNAME=$(pm list packages -f | grep $NAME | cut -d: -f 2 | cut -d = -f 2)
+
+rm -r /data/app-lib/$COMNAME/
+rm -r /data/data/$COMNAME/
+rm $SYSPATH
+
