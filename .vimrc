@@ -292,6 +292,7 @@ colorscheme my
 " AVOID SHIFT AND CTL
 " enter to cmd mode
 map <space> :
+map q<space> q:
 " leva
 " gmap
 "set fillchars+=vert:\ 
