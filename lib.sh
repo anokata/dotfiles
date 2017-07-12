@@ -52,7 +52,15 @@ function _arch_net_connect() {
     fi
 }
 
-function _dev() {
+function _ubuntu() {
+    echo ''
+}
+
+function _debian() {
+    echo ''
+}
+
+function _distro_specific() {
     case $DIST_SYM in
         A) _arch_net_connect
             setxkbmap -model pc105 -layout us,ru -variant ,winkeys -option grp:alt_shift_toggle
@@ -60,22 +68,33 @@ function _dev() {
             xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
             # or loadkeys
             ;;
-        D) echo debian;;
-        U) echo 'ubuntu';;
+        D) _debian;;
+        U) _ubuntu;;
     esac
 }
 
 function _first_general() {
     # TODO if @ home
     # if_first_at_day
-    if _is_first_run; then 
-        echo "Hi at start"
-        (exec gnumeric&)
-        (exec ~/dotfiles/forecast&)
+    if [ -e ~/.work.sig ]; then
+        if _is_first_run; then 
+            echo "Welcome to work!"
+            #startone&
+        fi
+        export WORK_DIR=~/workprojects
+    else
+        echo "Hi at home!"
+        if _is_first_run; then 
+            echo "Hi new day!"
+            export WORK_DIR=~/doc
+            (exec gnumeric&)
+            (exec ~/dotfiles/forecast&)
+        fi
     fi
 }
 
 
+# TODO OWN Conky at bash in terminal
 # TODO simple scripts to aliases
 # TODO CONKY who, distro?
 #Other autostart need: 
@@ -83,7 +102,7 @@ function _first_general() {
 # - currency
 # - open gnumeric if first
 ###  end
-_dev
+_distro_specific
 _first_general
 
 _first_lock # must be at end

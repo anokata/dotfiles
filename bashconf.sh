@@ -12,6 +12,7 @@ export PATH=$PATH:"/home/ksi/bin"
 export PATH=$PATH:"/home/ksi/dotfiles/bin"
 export PATH=$PATH:"/home/ksi/dotfiles/work"
 export ANSIBLE_NOCOWS=1
+export WORK_DIR=~/
 export CLICOLOR="YES"
 export TERM=xterm-256color
 if [ -x ~/dotfiles/ ]; then
@@ -35,7 +36,7 @@ fi
 LINEOS_DIR=~/lineos
 export PATH="$LINEOS_DIR/bin:$PATH"
 
-PROMPT_COMMAND='[[ ${__new_wd:=$PWD} != $PWD ]] && ls; __new_wd=$PWD' # ls after cding
+#PROMPT_COMMAND='[[ ${__new_wd:=$PWD} != $PWD ]] && ls; __new_wd=$PWD' # ls after cding
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -44,11 +45,6 @@ shopt -s cmdhist
 shopt -s dotglob     
 shopt -s histappend
 shopt -s cdspell
-# Git aliases
-alias gs='git status'
-alias ga='git add'
-alias gcm='git commit -m'
-alias gp='git push'
 # make open cmd with switch by ext 
 # if [ -f "$1" ] ; then
 #==============================

@@ -24,3 +24,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 alias end='systemctl poweroff'
+# Git aliases
+alias gs='git status'
+alias ga='git add'
+alias gcm='git commit -m'
+alias gp='git push'

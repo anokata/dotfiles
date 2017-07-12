@@ -1,5 +1,5 @@
 #!/bin/bash
-TMUX_SESSION_NAME=base
+TMUX_SESSION_NAME=basea
 function _tmux_run () {
     if [ -z $TMUX ]; then
         echo 'not in tmux'
@@ -8,9 +8,11 @@ function _tmux_run () {
             tmux attach -t $TMUX_SESSION_NAME
         else
             echo 'create'
-            tmux new -s $TMUX_SESSION_NAME
-            cd ~/dotfiles
+            tmux new -s $TMUX_SESSION_NAME -d
             tmux split-window -h -c ~/dotfiles/
+            tmux select-pane -L
+            tmux new-window -c $WORK_DIR
+            tmux attach -t $TMUX_SESSION_NAME
         fi
     fi
 }

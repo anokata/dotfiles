@@ -1,0 +1,1 @@
+$(precmd)$USER@$HOSTNAME:${PWD:-?} $
