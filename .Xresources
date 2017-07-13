@@ -13,7 +13,7 @@ Xterm*saveLines: 4096
 XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 XTerm*utf8: 1
 XTerm*pointerColorBackground: black
-XTerm*cursorColor: yellow
+XTerm*cursorColor: #eecc90
 
 ! Blacks
 !xterm*color0:           #151515
