@@ -87,7 +87,7 @@ function _first_general() {
         if _is_first_run; then 
             echo "Hi new day!"
             export WORK_DIR=~/doc
-            (exec gnumeric&)
+            (gnumeric&)
             (exec ~/dotfiles/forecast&)
         fi
     fi
