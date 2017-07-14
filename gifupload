@@ -1,0 +1,28 @@
+#!/bin/bash
+# vi: filetype=sh
+
+GIF=/tmp/out.gif
+clientid='3e7a4deb7ac67da'
+apikey="b3625162d3418ac51a9ee805b1840452"
+apikey='Client-ID 34b90e75ab1c04b'
+uri="https://api.imgur.com/3/image"
+
+response=$(curl -F "key=$apikey" -H "$apikey" -F "image=@$GIF" $uri)
+echo $response
+url=$(echo $response | sed -r 's/.*<original_image>(.*)<\/original_image>.*/\1/')
+echo ok
+echo $url
+echo -n $url | xclip
+#echo -n $clip | xsel
+echo end
+exit
+
+echo 'start'
+res=$(curl -sH "Authorization: Client-ID $clientid" -F "image=@$GIF" "https://api.imgur.com/3/upload")
+echo "2 $res"
+
+echo $res | grep -qo '"status":200' && link=$(echo $res | sed -e 's/.*"link":"\([^"]*\).*/\1/' -e 's/\\//g')
+echo "test"
+test -n "$link" && (printf $link | xclip; printf "\a" && rm "$GIF") || echo "$res" > "$GIF.error"
+echo $link
+echo end

@@ -1,0 +1,7 @@
+#!/bin/bash
+# vi: filetype=sh
+DOTS=~/dotfiles
+cp $DOTS/bin/* ~/bin/
+cp $DOTS/.vimrc ~/
+cp $DOTS/.tmux.conf ~/
+cp $DOTS/.Xresources ~/

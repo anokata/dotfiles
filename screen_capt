@@ -1,0 +1,35 @@
+#!/bin/bash
+# vi: filetype=sh
+# -qscale 0
+FILE=/tmp/out.mpg
+SIZE=640
+PAL=/tmp/pallete.png
+GIF=/tmp/out.gif
+fps=24
+palette=/tmp/pallete.png
+stats_mode=full
+dither="sierra2_4a"
+
+rm $FILE
+rm $PAL
+rm $GIF
+Xaxis=$(xrandr -q | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
+Yaxis=$(xrandr -q | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
+filters="fps=15,scale=320:-1:flags=lanczos"
+echo $Xaxis:$Yaxis
+echo recording video
+ffmpeg -f x11grab -s $(($Xaxis))x$(($Yaxis)) -r 25 -i :0.0 $FILE
+echo generate palette
+ffmpeg -i "$FILE" -vf "fps=$fps,palettegen=stats_mode=$stats_mode" -y "$palette"
+echo make gif
+ffmpeg -i "$FILE" -i "$palette" -lavfi "fps=$fps [x]; [x][1:v] paletteuse=dither=$dither" -y "$GIF"
+
+ls -l $GIF
+#firefox $GIF
+
+#clientid='3e7a4deb7ac67da'
+
+#res=$(curl -sH "Authorization: Client-ID $clientid" -F "image=@$GIF" "https://api.imgur.com/3/upload")
+
+#echo $res | grep -qo '"status":200' && link=$(echo $res | sed -e 's/.*"link":"\([^"]*\).*/\1/' -e 's/\\//g')
+#test -n "$link" && (printf $link | xclip; printf "\a" && rm "$GIF") || echo "$res" > "$GIF.error"
