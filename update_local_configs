@@ -3,5 +3,6 @@
 DOTS=~/dotfiles
 cp $DOTS/bin/* ~/bin/
 cp $DOTS/.vimrc ~/
+cp $DOTS/my.vim ~/.vim/colors/
 cp $DOTS/.tmux.conf ~/
 cp $DOTS/.Xresources ~/

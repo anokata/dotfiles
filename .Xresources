@@ -15,9 +15,6 @@ XTerm*utf8: 1
 XTerm*pointerColorBackground: black
 XTerm*cursorColor: #eecc90
 
-! Blacks
-!xterm*color0:           #151515
-!xterm*color8:           #505450
 ! Reds
 xterm*color1:           #e65151
 xterm*color9:           #f99090
@@ -36,6 +33,16 @@ xterm*color13:          #d658aa
 ! Cyans
 xterm*color6:           #28dad0
 xterm*color14:          #74fff7
+
+! orange theme
+xterm*color255:         #5D4306
+xterm*color254:         #E2B956
+xterm*color253:         #DC9F0F
+xterm*color252:         #5D4714
+xterm*color251:         #A97A0C
 ! Whites
 !xterm*color7:           #bbbbbb
 !xterm*color15:          #ffffff
+! Blacks
+!xterm*color0:           #151515
+!xterm*color8:           #505450

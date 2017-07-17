@@ -18,6 +18,12 @@ readonly BM="\[\033[1;35m\]"
 readonly BC="\[\033[1;36m\]"
 readonly BW="\[\033[1;37m\]"
 
+_FORE="38;5"
+_BACK="48;5"
+readonly OX="\[\033[$_FORE;214m\]"
+readonly YX="\[\033[$_FORE;185m\]"
+readonly XX="\[\033[$_FORE;179m\]"
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
