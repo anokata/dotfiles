@@ -1,0 +1,2 @@
+#sfdp -Tsvg out -o/tmp/out.svg
+dot -Tsvg out -o/tmp/out.svg

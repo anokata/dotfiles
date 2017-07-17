@@ -1,0 +1,1 @@
+rm new_tables ; ./gen_all_graph > out && ./dot_gen && cat new_tables && cat new_tables >> tables && sort tables | uniq > new_tables; mv new_tables tables

@@ -1,0 +1,11 @@
+#!/bin/bash
+# vim: filetype=sh
+while true; do
+    kill $proc
+    dot -Tpng $1.dot -o/tmp/$1.png 
+    #feh /tmp/$1.png&
+    sxiv /tmp/$1.png& 
+    export proc=$!
+    sleep 1
+done
+

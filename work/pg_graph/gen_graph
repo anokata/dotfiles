@@ -1,0 +1,12 @@
+#!/bin/bash
+# vim: filetype=sh
+
+#TABLE=licprocesses_processtype
+TABLE=$1
+while read -r line ; do
+    IFS=: read id table <<< $line
+    echo "$table[shape=box]"
+    echo "$TABLE -> $table[label=\"$id\", fontsize=\"10\"]; "
+    echo "$table" >> new_tables
+done < <(./autoref $TABLE)
+#read
