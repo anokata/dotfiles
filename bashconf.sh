@@ -8,9 +8,9 @@ shopt -s histappend
 shopt -s checkwinsize
 shopt -s autocd
 stty -ixon # for not stop draw at C-s (C-q restore)
-export PATH=$PATH:"/home/ksi/bin"
-export PATH=$PATH:"/home/ksi/dotfiles/bin"
-export PATH=$PATH:"/home/ksi/dotfiles/work"
+export PATH=$PATH:"/home/$(whoami)/bin"
+export PATH=$PATH:"/home/$(whoami)/dotfiles/bin"
+export PATH=$PATH:"/home/$(whoami)/dotfiles/work"
 export ANSIBLE_NOCOWS=1
 export WORK_DIR=~/
 export CLICOLOR="YES"
