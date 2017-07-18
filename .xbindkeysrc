@@ -1,4 +1,4 @@
-"dmenu_run -l 10 -nf '#fff' -sb '#ff0' -sf '#000' -p '>'"
+"dmenu_run -l 10 -nf '#fff' -sb '#db3' -sf '#333' -p '>'"
     m:0x8 + c:40
     Alt + d
 "xbacklight -dec 10"
