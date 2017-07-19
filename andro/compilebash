@@ -1,0 +1,53 @@
+#!/bin/bash
+# vim: filetype=sh
+BUILD_DIR=~/tst/android/build
+BASH_VERSION="bash-4.4"
+AA=$BUILD_DIR/aarch64
+LINARO=gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu
+CCBIN=$AA/$LINARO/bin
+export CFLAGS="-static"
+export PATH=$PATH:$CCBIN
+ 
+mkdir $BUILD_DIR 
+mkdir $AA 
+
+#TODO check if exist
+if [ -e $AA/$LINARO.tar.xz ]; then
+    echo 'already downloaded'
+else
+    echo 'download...'
+    cd $AA
+    wget https://releases.linaro.org/components/toolchain/binaries/latest/aarch64-linux-gnu/$LINARO.tar.xz
+    tar xf $LINARO.tar.xz
+fi
+
+cd $BUILD_DIR
+
+if [ -e $BASH_VERSION ]; then 
+    echo 'already downloaded'
+else
+    echo "[INFO] Starting bash source code download"
+    wget http://ftp.gnu.org/gnu/bash/$BASH_VERSION.tar.gz
+    tar xvfz $BASH_VERSION.tar.gz
+fi
+
+cd $BASH_VERSION
+
+#CC=`which arm-linux-gnueabi-gcc`
+#./configure --host=arm-linux-gnueabi --enable-static-link --without-bash-malloc
+echo '[COMPILE]'
+./configure --host=aarch64-linux-gnu --enable-static-link --without-bash-malloc
+make clean
+make
+file bash | grep -q ARM
+if [ ! $? -eq 0 ]; then
+    echo "[ERROR] The resulting bash binary will not run on ARM, therefore aborting!"
+    exit
+fi
+#arm-linux-gnueabi-strip -o bash-stripped -s bash
+#cp ./bash-stripped ../bash
+cd ..
+
+$AA/$LINARO/bin/aarch64-linux-gnu-strip -s bash-4.4/bash -o bashs
+echo "[INFO] Your bash binary is finished (file 'bash' in current directory), happy autocompleting on ARM!"
+file bashs
