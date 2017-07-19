@@ -82,7 +82,7 @@ function _first_general() {
             #startone&
         fi
         export WORK_DIR=~/workprojects
-    else
+    elif [ -e ~/.home.sig ]; then
         echo "Hi at home!"
         if _is_first_run; then 
             echo "Hi new day!"
