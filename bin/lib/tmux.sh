@@ -12,6 +12,7 @@ function _tmux_run () {
             tmux split-window -h -c ~/dotfiles/
             tmux select-pane -L
             tmux new-window -c $WORK_DIR
+            tmux split-window -hp 30 -c $WORK_DIR
             tmux attach -t $TMUX_SESSION_NAME
         fi
     fi
