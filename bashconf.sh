@@ -8,6 +8,11 @@ shopt -s histappend
 shopt -s checkwinsize
 shopt -s autocd
 stty -ixon # for not stop draw at C-s (C-q restore)
+# for C-z do fg
+#stty susp undef
+#bind '"\C-z":"fg\015"'
+bind -x '"\C-o"':"fg"
+
 export PATH=$PATH:"/home/$(whoami)/bin"
 export PATH=$PATH:"/home/$(whoami)/dotfiles/bin"
 export PATH=$PATH:"/home/$(whoami)/dotfiles/work"
