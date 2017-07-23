@@ -1,0 +1,1 @@
+sudo iwlist $WIFI scan | grep -e "ESSID" -e "Signal"

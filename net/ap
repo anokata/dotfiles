@@ -1,1 +1,3 @@
-sudo create_ap wlp2s0 ppp0 ksinet kitten28Cat0
+#!/bin/bash
+source ~/dotfiles/bin/lib/net.sh 
+sudo create_ap $WIFI ppp0 ksinet kitten28Cat0
