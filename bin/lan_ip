@@ -1,0 +1,4 @@
+#!/bin/bash
+# vim: filetype=sh
+ifconfig $ETH | grep "inet addr" | awk -F: "{print $2}" | awk "{print $1}"
+

@@ -1,1 +1,3 @@
+#!/bin/bash
+# vim: filetype=sh
 grep $1 -r --include=*.py --color=auto -n $2 $3
