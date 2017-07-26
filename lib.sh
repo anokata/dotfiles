@@ -86,6 +86,8 @@ function _first_general() {
         echo "Hi at home!"
         if _is_first_run; then 
             echo "Hi new day!"
+            amixer sset Headphone unmute
+            amixer sset Headphone 100
             export WORK_DIR=~/doc
             (gnumeric&)
             (exec ~/dotfiles/forecast&)
