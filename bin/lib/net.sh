@@ -6,6 +6,7 @@ for d in $(/bin/ls -1 /sys/class/net); do
     if [[ $first = 'e' ]]; then
         ETH=$d
         LAN=$d
+        LAN_IP=$(~/dotfiles/bin/lan_ip)
     elif [[ $first = 'w' ]]; then
         WIFI=$d
     fi

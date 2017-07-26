@@ -74,8 +74,6 @@ function _distro_specific() {
 }
 
 function _first_general() {
-    # TODO if @ home
-    # if_first_at_day
     if [ -e ~/.work.sig ]; then
         if _is_first_run; then 
             echo "Welcome to work!"
@@ -84,6 +82,7 @@ function _first_general() {
         export WORK_DIR=~/workprojects
     elif [ -e ~/.home.sig ]; then
         echo "Hi at home!"
+        # TODO if_first_at_day
         if _is_first_run; then 
             echo "Hi new day!"
             amixer sset Headphone unmute
