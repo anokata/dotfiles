@@ -1,0 +1,18 @@
+#!/bin/bash
+# vim: filetype=sh
+sym=$1
+if [ -z $sym ]; then sym=gdk_seat_get_keyboard; fi
+libs=$2
+#if [ -z $lis ]; then libs=gtk+-3.0; fi
+if [ -z $lis ]; then libs=libgdk; fi
+
+pkg_libs=$(pkg-config --libs $libs)
+for lib in $pkg_libs; do 
+    libname=lib$(echo $lib | tail -c +3).so
+    #echo $libname
+    libpath=$(ldconfig -p | grep "$libname$" | cut -d">" -f 2)
+    echo "search in $libpath"
+    is_sym=$(readelf -Ws $libpath | grep $sym)
+    #echo $is_sym
+    if [ ! -z $is_sym ]; then echo "found in $libpath"; fi
+done

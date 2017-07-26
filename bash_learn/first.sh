@@ -22,10 +22,14 @@ max() {
         echo $y
     fi
 }
+
 assert "$(max 1 2) -eq 2" $LINENO
 assert "$(max 2 1) -eq 2" $LINENO
 #echo $(max 3 4)
 
+strlen() {
+
+}
 
 
 
