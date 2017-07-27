@@ -89,9 +89,9 @@ const char *colorname[] = {
 	"#dc322f", //"red3",
 	"#48ae35", //"green3",
 	"#ab6e03", //"yellow3",
-	"#5c5cff", //"blue2",
+	"#268bd2", //"blue2",
 	"#6c71c4", //"magenta3",
-	"#93a1a1", //"cyan3",
+	"#2ab1a8", //"cyan3",
 	"gray90",
 
 	/* 8 bright colors */
@@ -99,9 +99,9 @@ const char *colorname[] = {
 	"#cb4b16", //"red",
 	"#85c900", //"green",
 	"#fdd601", //"yellow",
-	"#268bd2",
+	"#5c5cff", //"blue
 	"#d33682", //"magenta",
-	"#2aa198", //"cyan",
+	"#40e0f0", //"cyan",
 	"white",
 
 	[255] = 0,
