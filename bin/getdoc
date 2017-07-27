@@ -1,4 +1,6 @@
-DIR=$(./mktempramdir.sh)
+#!/bin/bash
+# vim: filetype=sh
+DIR=$(mktempramdir)
 git clone https://anokata@bitbucket.org/anokata/doc.git $DIR/doc
 #cd $DIR
 #git remote add ssh git@bitbucket.org:anokata/doc.git

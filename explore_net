@@ -1,0 +1,9 @@
+#!/bin/bash
+# vim: filetype=sh
+if [ -z "$1" ]; then IP="10.4.126"; else IP=$1; fi
+if [ -z "$2" ]; then N=90; else N=$2; fi
+
+for i in $(seq $N); do 
+    ip="$IP.$i"
+    resolveip $ip
+done 2>/dev/null

@@ -1,0 +1,21 @@
+#!/bin/bash
+# vim: filetype=sh
+if [ -z "$1" ]; then IP="10"; else IP=$1; fi
+if [ -z "$2" ]; then N=5; else N=$2; fi
+HOSTDB=/tmp/ip
+declare -a hosts
+
+for a in $(seq $N); do 
+    for b in $(seq $N); do 
+        for c in $(seq $N); do 
+            ip="$IP.$a.$b.$c"
+            #${hosts[ip]}
+            # echo "check $ip"
+            resolveip $ip &
+            #hosts[ip]=$host
+        done
+    done
+done 2>/dev/null
+pkill resolveip >/dev/null 2>/dev/null
+# to file db ip=host; sort uniq
+cat $HOSTDB

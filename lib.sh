@@ -69,7 +69,10 @@ function _distro_specific() {
             # or loadkeys
             ;;
         D) _debian;;
-        U) _ubuntu;;
+        U) _ubuntu
+            
+            xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+            ;;
     esac
 }
 
