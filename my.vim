@@ -44,3 +44,5 @@ highlight VertSplit ctermbg=238  ctermfg=238
 " highlight Number ctermbg=NONE ctermfg=81
 " highlight Constant ctermbg=NONE ctermfg=81
 " highlight Underlined ctermbg=NONE ctermfg=81
+
+hi CtrlSpaceNormal ctermfg=4 ctermbg=NONE
