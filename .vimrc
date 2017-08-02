@@ -247,10 +247,10 @@ function! LoadSession()
 endfunction
 " А так же при закрытии открытии восстанавливает сессию
 " Adding automatons for when entering or leaving Vim
-if(argc() == 0)
-  au VimEnter * nested :call LoadSession()
-endif
-au VimLeave * :call MakeSession()
+"if(argc() == 0)
+  "au VimEnter * nested :call LoadSession()
+"endif
+"au VimLeave * :call MakeSession()
 " ---конец сессий---
 
 function! Mak()
@@ -313,3 +313,6 @@ let g:netrw_altv = 1
 
 set wildmode=longest:list,full
 let g:indexer_disableCtagsWarning=1
+
+let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
+let g:CtrlSpaceSaveWorkspaceOnExit = 1 
