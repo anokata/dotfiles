@@ -93,6 +93,7 @@ function _first_general() {
             export WORK_DIR=~/doc
             (gnumeric&)
             (exec ~/dotfiles/forecast&)
+            gitpullall
         fi
     fi
 }
