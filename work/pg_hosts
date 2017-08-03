@@ -10,5 +10,11 @@
         "port": 5432,
         "db":   "mo_lod_db",
         "user": "lod"
+    },
+    "mo": {
+        "host": "10.4.126.27",
+        "port": 5432,
+        "db":   "mo_lod_db",
+        "user": "lod"
     }
 }
