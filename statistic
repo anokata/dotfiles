@@ -1,0 +1,15 @@
+FILES=$(find -iname "*.py" | wc -l)
+echo -n '.'
+ULINES=$(find -iname "*.py" | xargs cat | sort | uniq | wc -l)
+echo -n '.'
+LINES=$(find -iname "*.py" | xargs cat | wc -l)
+echo -n '.'
+PRINTS=$(grep print --include=*.py . -R | wc -l)
+echo ''
+echo -e "Files:\t\t $FILES"
+echo -e "Lines:\t\t $LINES"
+echo -e "Unique lines:\t $ULINES"
+echo -e "Prints:\t\t $PRINTS"
+echo -e "Unique lines per file:\t $(expr $ULINES / $FILES)"
+echo -e "Lines per file:\t $(expr $LINES / $FILES)"
+grep -e "\sprint" . -R | wc -l
