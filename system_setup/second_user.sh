@@ -20,3 +20,4 @@ sudo pacman -S zathura
 sudo pacman -S zathura-pdf-poppler
 sudo pacman -S zathura-djvu
 sudo pacman -S aircrack-ng
+sudo pacman -S tig
