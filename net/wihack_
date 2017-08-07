@@ -1,0 +1,9 @@
+cd /tmp
+wget https://hashcat.net/files/hashcat-3.6.0.7z
+7zr x hashcat-3.6.0.7z
+
+aircrack-ng ~/Downloads/hs.cap -J ~/Downloads/hs.hccap
+~/Downloads/hashcat-3.6.0/hashcat64.bin -m 2500 -a 3 ~/Downloads/hs.hccap.hccap ?d?d?d?d?d?d?d?d
+sudo apt install ocl-icd-opencl-dev 
+25011989
+git clone http://git.kali.org/packages/wordlists.git
