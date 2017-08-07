@@ -7,3 +7,6 @@ aircrack-ng ~/Downloads/hs.cap -J ~/Downloads/hs.hccap
 sudo apt install ocl-icd-opencl-dev 
 25011989
 git clone http://git.kali.org/packages/wordlists.git
+curl -L -o rockyou.txt https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+
+see wifislax
