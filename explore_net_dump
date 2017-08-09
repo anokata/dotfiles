@@ -1,0 +1,1 @@
+sudo tcpdump 'ip host 10.10.30.232' -XX
