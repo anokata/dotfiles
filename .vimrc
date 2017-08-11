@@ -1,35 +1,31 @@
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat' 
+Plug 'tpope/vim-speeddating'
+Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jceb/vim-orgmode'
-Plug 'tpope/vim-speeddating'
-Plug 'vim-scripts/taglist.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'chrisbra/csv.vim'
+Plug 'majutsushi/tagbar'
 Plug 'Raimondi/delimitMate'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'vim-scripts/taglist.vim'
 Plug 'vim-scripts/utl.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
-Plug 'chrisbra/csv.vim'
-Plug 'vim-ctrlspace/vim-ctrlspace'
-Plug 'majutsushi/tagbar'
-Plug 'tpope/vim-repeat' 
-Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/DfrankUtil'
 Plug 'vim-scripts/vimprj'
 Plug 'vim-scripts/code_complete'
-Plug 'vim-scripts/OmniCppComplete'
+ Plug 'vim-scripts/OmniCppComplete'
 "Plug 'airblade/vim-rooter'
 "Plug 'vim-syntastic/syntastic'
-"Plug 'lervag/vimtex'
 "Plug 'vimplugin/project.vim'
 "Plug 'hoxnox/indexer.vim'
-"Plug 'leafgarland/typescript-vim'
 "tormaza Plug 'dhruvasagar/vim-table-mode'
-Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
 
@@ -216,66 +212,12 @@ iab ifmain if __name__=='__main__':<CR>
 iabbrev #i #include
 iabbrev #d #define
 
-function! MakeDefSession()
-  let b:filename = $HOME . "/.vim/sessions" . "/pythonDefSession.vim"
-  exe "mksession! " . b:filename
-endfunction
-function! LoadDefSession()
-  let b:filename = $HOME . "/.vim/sessions" . "/pythonDefSession.vim"
-  exe 'source ' b:filename
-endfunction
-
-" Сохраняет сессии для каждого каталога
-function! MakeSession()
-  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
-  if (filewritable(b:sessiondir) != 2)
-    exe 'silent !mkdir -p ' b:sessiondir
-    redraw!
-  endif
-  let b:filename = b:sessiondir . '/session.vim'
-  exe "mksession! " . b:filename
-  echo "session make." . b:filename
-endfunction
-
-function! LoadSession()
-  let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
-  let b:sessionfile = b:sessiondir . "/session.vim"
-  if (filereadable(b:sessionfile))
-    exe 'source ' b:sessionfile
-  else
-    echo "No session loaded."
-  endif
-endfunction
-" А так же при закрытии открытии восстанавливает сессию
-" Adding automatons for when entering or leaving Vim
-"if(argc() == 0)
-  "au VimEnter * nested :call LoadSession()
-"endif
-"au VimLeave * :call MakeSession()
-" ---конец сессий---
-
-function! Mak()
-    echom "mak"
-    let g:file=expand('%:t:r')
-    "vnew
-    for i in [1, 2, 3]
-        normal ggdG
-        execute "silent r! make " . g:file
-        execute "sleep 1"
-    endfor
-endfunction
-
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set t_Co=256
 set t_ut=
 
-hi User1 ctermbg=None ctermfg=107
-hi User2 ctermbg=None ctermfg=53
-hi User3 ctermbg=None ctermfg=17
-hi User4 ctermbg=None ctermfg=107
-hi User5 ctermbg=None ctermfg=107
 set statusline=
 "set statusline +=%1*\ %n\ %*            "buffer number
 "set statusline +=%3*%y%*                "file type
@@ -298,7 +240,9 @@ map q<space> q:
 " gmap
 "set fillchars+=vert:\ 
 "highlight VertSplit ctermbg=238  ctermfg=238
+"Macros
 let @d='f,lli'
+let @p='0fpcwlogger.debug(�kD�kDA)'
 
 " === netrw config ===
 " bind :Vexplore
