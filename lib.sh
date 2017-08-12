@@ -95,6 +95,8 @@ function _first_general() {
             (exec ~/dotfiles/forecast&)
             gitpullall
         fi
+    elif [ -e ~/.home.sig ]; then
+        echo "Welcome mobile!"
     fi
 }
 
