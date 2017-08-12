@@ -1,0 +1,2 @@
+# only console 
+pacman -S sudo tmux vim ctags git tree htop wget ncdu pwgen unzip aircrack-ng tig curlftpfs
