@@ -21,3 +21,4 @@ sudo pacman -S zathura-pdf-poppler
 sudo pacman -S zathura-djvu
 sudo pacman -S aircrack-ng
 sudo pacman -S tig
+sudo pacman -S curlftpfs
