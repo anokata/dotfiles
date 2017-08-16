@@ -64,14 +64,18 @@ function _distro_specific() {
     case $DIST_SYM in
         A) _arch_net_connect
             setxkbmap -model pc105 -layout us,ru -variant ,winkeys -option grp:alt_shift_toggle
-            # TODO if in X
-            xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-            # or loadkeys
+            if _is_first_run; then
+                # TODO if in X
+                xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+                # or loadkeys
+            fi
             ;;
         D) _debian;;
         U) _ubuntu
             
-            xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+            if _is_first_run; then
+                xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+            fi
             ;;
     esac
 }
