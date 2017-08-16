@@ -1,7 +1,12 @@
 #!/bin/bash
 # vim: filetype=sh
 
-FIRST_LOCK=/run/user/$(id -u)/first
+if [ -e /run/user/$(id -u) ]; then
+    FIRST_LOCK=/run/user/$(id -u)/first
+else
+    FIRST_LOCK=/tmp/$(id -u)first
+fi
+
 function _first_lock() {
     if [ ! -e $FIRST_LOCK ]; then
         echo first
