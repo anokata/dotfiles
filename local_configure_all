@@ -1,8 +1,8 @@
 #!/bin/bash
-source bashconf.sh
-say "Config files coping..."
+#source ~/dotfiles/bashconf.sh
+echo "Config files coping..."
 cp ~/dotfiles/.bashrc ~/
-cp ~/dotfiles/.vim ~/
+cp ~/dotfiles/.vimrc ~/
 mkdir -p ~/.vim/autoload/
 mkdir -p ~/.vim/colors/
 cp ~/dotfiles/my.vim ~/.vim/colors
@@ -16,4 +16,4 @@ cp ~/dotfiles/.tmux.conf ~/
 #.xinputrc
 #.xbindkeysrc
 #
-say "done"
+echo "done"
