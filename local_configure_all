@@ -1,15 +1,19 @@
 #!/bin/bash
-source lib.sh
-say "Config files coping..."
-#.bashrc
+#source ~/dotfiles/bashconf.sh
+echo "Config files coping..."
+cp ~/dotfiles/.bashrc ~/
+cp ~/dotfiles/.vimrc ~/
+mkdir -p ~/.vim/autoload/
+mkdir -p ~/.vim/colors/
+cp ~/dotfiles/my.vim ~/.vim/colors
+cp ~/dotfiles/Linux/configs/.vim/autoload/plug.vim ~/.vim/autoload
+cp ~/dotfiles/.tmux.conf ~/
 #.config/i3/config
 #bin -r
-#.vim
 #vifmrc
-#.tmux.conf
 #.Xresources
 #.xprofile
 #.xinputrc
 #.xbindkeysrc
 #
-say "done"
+echo "done"

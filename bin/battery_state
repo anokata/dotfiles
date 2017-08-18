@@ -1,0 +1,9 @@
+#!/bin/bash
+# vim: filetype=sh
+BAT_STATE=/proc/acpi/battery/BAT0/state
+if [ -e $BAT_STATE ]; then
+    echo "[$(cat $BAT_STATE)]"
+else
+    echo "|"
+fi
+

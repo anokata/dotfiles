@@ -22,3 +22,5 @@ sudo pacman -S zathura-djvu
 sudo pacman -S aircrack-ng
 sudo pacman -S tig
 sudo pacman -S curlftpfs
+gs
+sudo pacman -S tcpdump

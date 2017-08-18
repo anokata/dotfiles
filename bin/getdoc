@@ -2,6 +2,10 @@
 # vim: filetype=sh
 DIR=$(mktempramdir)
 git clone https://anokata@bitbucket.org/anokata/doc.git $DIR/doc
+if [ ! -e $DIR/doc ]; then
+    echo "Fail"
+    exit 1
+fi
 #cd $DIR
 #git remote add ssh git@bitbucket.org:anokata/doc.git
 echo "$DIR/doc exported as DOC"
