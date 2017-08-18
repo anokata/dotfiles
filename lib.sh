@@ -62,7 +62,11 @@ function _debian() {
 
 function _distro_specific() {
     case $DIST_SYM in
-        A) _arch_net_connect
+        A) 
+            if [ -e ~/.mobile.sig ]; then
+                return
+            fi
+            _arch_net_connect
             setxkbmap -model pc105 -layout us,ru -variant ,winkeys -option grp:alt_shift_toggle
             # TODO if in X
             xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
