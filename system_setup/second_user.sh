@@ -24,3 +24,4 @@ sudo pacman -S tig
 sudo pacman -S curlftpfs
 gs
 sudo pacman -S tcpdump
+sudo pacman -S xclip xsel
