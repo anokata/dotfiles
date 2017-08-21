@@ -20,6 +20,7 @@ export ANSIBLE_NOCOWS=1
 export WORK_DIR=~/
 export CLICOLOR="YES"
 export TERM=xterm-256color
+export JAVA_HOME=$(dirname $(dirname $(dirname $(readlink -f $(which java)))))
 if [ -x ~/dotfiles/ ]; then
     source ~/dotfiles/lib.sh
 fi
