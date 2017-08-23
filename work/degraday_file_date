@@ -1,0 +1,3 @@
+#!/bin/sh
+# vi: filetype=sh
+touch -d "$(date -R -r $1) - 2 days" $1
