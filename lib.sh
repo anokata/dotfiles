@@ -67,11 +67,10 @@ function _distro_specific() {
                 return
             fi
             _arch_net_connect
-            # TODO if console only
-            #setxkbmap -model pc105 -layout us,ru -variant ,winkeys -option grp:alt_shift_toggle
             if _is_first_run; then
                 # TODO if in X
                 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+                setxkbmap -model pc105 -layout us,ru -variant ,winkeys -option grp:alt_shift_toggle
                 # or loadkeys
             fi
             ;;
