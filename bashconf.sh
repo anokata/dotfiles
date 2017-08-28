@@ -16,6 +16,7 @@ bind -x '"\C-o"':"fg"
 export PATH=$PATH:"/home/$(whoami)/bin"
 export PATH=$PATH:"/home/$(whoami)/dotfiles/bin"
 export PATH=$PATH:"/home/$(whoami)/dotfiles/work"
+export PATH=~/.local/bin:$PATH
 export ANSIBLE_NOCOWS=1
 export WORK_DIR=~/
 export CLICOLOR="YES"
