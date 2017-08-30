@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+# vi: filetype=perl
+
+$pscmd = `ps -eo pid,cmd | grep tomcat | grep -v grep | grep -v perl`;
+@psarray = $pscmd;
+for (@psarray) {
+    s/^\s+//;
+    s/ +/ /g;
+    my $pid = substr $_, 0, (index $_, " ");
+    my $cmd = substr $_, (index $_, " ");
+    my @opts = split(/\-/, $cmd);
+    @a = grep(/bin/, @opts);
+    @a = grep(/home/, @a);
+    print "@opts[1], [@a] $pid, \n";
+    foreach $arg (@opts) {
+        #print "List item: $arg\n";
+    }
+}
+exit;
