@@ -30,5 +30,6 @@ alias ga='git add'
 alias gcm='git commit -m'
 alias gp='git push'
 alias gd='git diff'
+alias gst='git status -sb'
 
 alias clr='clear'

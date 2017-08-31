@@ -240,9 +240,13 @@ map q<space> q:
 " gmap
 "set fillchars+=vert:\ 
 "highlight VertSplit ctermbg=238  ctermfg=238
-"Macros
+" Macros
+" param on new line
 let @d='f,lli'
+" logger
 let @p='0fpcwlogger.debug(€kD€kDA)'
+" log
+let @l='0wdwilog.info(A)'
 
 " === netrw config ===
 " bind :Vexplore
