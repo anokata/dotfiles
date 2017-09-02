@@ -67,6 +67,7 @@ function _distro_specific() {
                 return
             fi
             _arch_net_connect
+            xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
             if _is_first_run; then
                 # TODO if in X
                 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'

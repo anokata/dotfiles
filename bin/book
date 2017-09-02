@@ -1,42 +1,66 @@
 #!/bin/bash
 # vi: filetype=sh
-BOOKSFILE=~/dotfiles/books
-source $BOOKSFILE
-CMD=$1
-NAME=$2
-if [ -z $NAME ]; then
-    echo 'Expected name'
-fi
-
-if [ -z $CMD ]; then
-    echo -e "Expected cmd some of"
-    echo -e "\t - add - add book to bookstore"
-    echo -e "\t - show - show book"
-fi
+# (c) 2017
 # 0. store book reader in first line in BOOKSFILE
 # 1. store books paths in BOOKSFILE
 #   books:
 #       READER=zathura
 #       name1=/home/ksi/1.pdf
 #       ...
-#   read: head -n 1 $BOOKSFILE
-#
 # 2. add books to that file by book add name BOOK.pdf - add $(pwd -p)/BOOK.pdf with name
 # 3. show by book show name
-#zathura Brian_Kernighan_Dennis_Ritchie-The_C_Programming_Language-RU.pdf
+
+BOOKSFILE=~/dotfiles/books
+CMD=$1
+NAME=$2
+BOOK=$3
+if [ -z $CMD ]; then
+    echo -e "Usage: book CMD NAME [BOOK]"
+    echo -e "\tbook NAME - for show"
+    echo -e "\tbook NAME BOOK - for add"
+    echo -e "Expected CMD some of:"
+    echo -e "\t - add NAME BOOK - add book to bookstore, from current path and file BOOK"
+    echo -e "\t - show NAME - show book"
+    echo "(c) Nisla 2017"
+    exit
+fi
 
 add_book() {
+    if [ -z $BOOK ]; then
+        echo 'Expected book name'
+        exit
+    fi
     echo Pushing book
+    echo "$NAME='$PWD/$BOOK'" >> $BOOKSFILE
 }
 
 show_book() {
-    echo show book
+    if [ -z $NAME ]; then
+        echo 'Expected name'
+        exit
+    fi
+
+    source $BOOKSFILE
+    path="${!NAME}"
+    if [ -z "$path" ]; then 
+        echo 'No such book'
+        exit
+    fi
+    exec $READER "$path"
 }
 
 case $CMD in
     add) add_book;;
-    a) add_book;;
     show) show_book;;
-    s) show_book;;
-    *) echo "(c) Nisla 2017";;
+    *) 
+        if [ ! -z $NAME ]; then
+            BOOK=$NAME
+            NAME=$CMD
+            add_book
+        elif [ ! -z $CMD ]; then
+            NAME=$CMD
+            show_book
+        fi
+        ;;
+       
 esac

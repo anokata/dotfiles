@@ -1,1 +1,3 @@
 READER=zathura
+cc='/home/ksi/ydsk/read book/progbook_mustread/Martin_-_Chisty_kod_2010.pdf'
+vim='/home/ksi/ydsk/read book/progbook_mustread/Neil_D._Prakticheskoe_ispolzovanie_Vim.pdf'
