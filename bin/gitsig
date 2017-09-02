@@ -1,0 +1,17 @@
+#!/bin/bash
+# vi: filetype=sh
+USERNAME=$1
+EMAIL=$2
+# input flag
+if [ -z $USERNAME ]; then
+    # TODO read with default
+    USERNAME=anokata
+fi
+
+if [ -z $EMAIL ]; then
+    EMAIL=anokata8@mail.ru
+fi
+
+# git config local user and mail from option name mail # or stdout
+git config --local user.name "$USERNAME"
+git config --local user.email "$EMAIL"
