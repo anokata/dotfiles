@@ -1,0 +1,42 @@
+#!/bin/bash
+# vi: filetype=sh
+BOOKSFILE=~/dotfiles/books
+source $BOOKSFILE
+CMD=$1
+NAME=$2
+if [ -z $NAME ]; then
+    echo 'Expected name'
+fi
+
+if [ -z $CMD ]; then
+    echo -e "Expected cmd some of"
+    echo -e "\t - add - add book to bookstore"
+    echo -e "\t - show - show book"
+fi
+# 0. store book reader in first line in BOOKSFILE
+# 1. store books paths in BOOKSFILE
+#   books:
+#       READER=zathura
+#       name1=/home/ksi/1.pdf
+#       ...
+#   read: head -n 1 $BOOKSFILE
+#
+# 2. add books to that file by book add name BOOK.pdf - add $(pwd -p)/BOOK.pdf with name
+# 3. show by book show name
+#zathura Brian_Kernighan_Dennis_Ritchie-The_C_Programming_Language-RU.pdf
+
+add_book() {
+    echo Pushing book
+}
+
+show_book() {
+    echo show book
+}
+
+case $CMD in
+    add) add_book;;
+    a) add_book;;
+    show) show_book;;
+    s) show_book;;
+    *) echo "(c) Nisla 2017";;
+esac
