@@ -1,3 +1,5 @@
 READER=zathura
 cc='/home/ksi/ydsk/read book/progbook_mustread/Martin_-_Chisty_kod_2010.pdf'
 vim='/home/ksi/ydsk/read book/progbook_mustread/Neil_D._Prakticheskoe_ispolzovanie_Vim.pdf'
+cpl='/home/ksi/ydsk/read book/progbook_mustread/C/Brian_Kernighan_Dennis_Ritchie-The_C_Programming_Language-RU.pdf'
+knm='/home/ksi/ydsk/read book/progbook_mustread/linux/knm.pdf'

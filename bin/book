@@ -9,6 +9,9 @@
 #       ...
 # 2. add books to that file by book add name BOOK.pdf - add $(pwd -p)/BOOK.pdf with name
 # 3. show by book show name
+# TODO 4. book list
+#      5. book rm
+# book file from .*.sig file: BOOKFILE=~/..
 
 BOOKSFILE=~/dotfiles/books
 CMD=$1
@@ -46,7 +49,7 @@ show_book() {
         echo 'No such book'
         exit
     fi
-    exec $READER "$path"
+    exec $READER "$path"&
 }
 
 case $CMD in
