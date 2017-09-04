@@ -2,10 +2,16 @@
 
 if which ssh-agent > /dev/null; then 
     if ! pidof ssh-agent > /dev/null; then 
-        eval "$(ssh-agent -s)"
+        #eval "$(ssh-agent -s)"
+        ssh-agent > /run/user/$(id -u)/.ssh-agent-thing
     fi 
-fi 
-ssh-add ~/.ssh/work_rsa > /dev/null 2>/dev/null
+    
+    if [[ "$SSH_AGENT_PID" == "" ]]; then
+        eval "$(</run/user/$(id -u)/.ssh-agent-thing)" > /dev/null
+    fi
 
-#B070L<Mf4j9O15G
+    ssh-add ~/.ssh/work_rsa > /dev/null 2>/dev/null
+fi 
+
+
 

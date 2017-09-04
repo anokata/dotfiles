@@ -1,0 +1,4 @@
+#!/bin/bash
+# vi: filetype=sh
+setxkbmap -query | grep layout
+#https://github.com/nonpop/xkblayout-state
