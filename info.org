@@ -1,9 +1,0 @@
-* boot
-загрузочные параметры ядра
-cat /proc/cmdline
-
-лог ядра
-dmesg
-
-* virt
-virsh list
