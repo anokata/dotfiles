@@ -247,6 +247,8 @@ let @d='f,lli'
 let @p='0fpcwlogger.debug(€kD€kDA)'
 " log
 let @l='0wdwilog.info(A)'
+let @j='A {'
+map <leader>j A {
 
 " === netrw config ===
 " bind :Vexplore
