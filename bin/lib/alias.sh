@@ -33,3 +33,4 @@ alias gs='git status -sb'
 alias gst='git status'
 
 alias clr='clear'
+alias gl='git log --pretty=oneline '
