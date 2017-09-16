@@ -1,22 +1,35 @@
 #!/usr/bin/env m4
-# vim: filetype=sh
+dnl# vim: filetype=m4
+divert(-1) # not output
 
-#changequote({,})
 
-len(123)
-some(11)
-define(x, 8)
-x
-x x 
-x()x
-some(x)
+define(`H2_COUNT', 0)
+define(`H2',
+	`define(`H2_COUNT', incr(H2_COUNT))<h2>H2_COUNT. $1</h2>')
+
 define(PATH, /usr/share)
+define(name, `syscmd(whoami)')
 
-some PATH here
+changequote({,})
+define(x, {len(12345)})
+changequote(`,')
+dnl sysval
 
-ifelse(PATH, /usr/share, T, F)
+define(`forloop',
+       `pushdef(`$1', `$2')_forloop(`$1', `$2', `$3', `$4')popdef(`$1')')
+define(`_forloop',
+       `$4`'ifelse($1, `$3', ,
+		   `define(`$1', incr($1))_forloop(`$1', `$2', `$3', `$4')')')
 
-define(name, "syscmd(whoami)")
+divert(1)dnl # out
+forloop(`i', 1, 100, `i ')
+dnl
+<html>
 name
-sysval
-
+x
+some(x)
+H2(hi)
+H2(PATH)
+ifelse(PATH, /usr/share, H2(T), F)
+ifelse(PATH, usr/share, H2(T), F)
+</html>
