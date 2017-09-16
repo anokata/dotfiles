@@ -21,10 +21,16 @@ define(`_forloop',
        `$4`'ifelse($1, `$3', ,
 		   `define(`$1', incr($1))_forloop(`$1', `$2', `$3', `$4')')')
 
+define(X, y)
+define(y, z)
+define(`z', a)
+
 divert(1)dnl # out
 forloop(`i', 1, 100, `i ')
 dnl
 <html>
+X
+`X'
 name
 x
 some(x)
