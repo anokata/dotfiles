@@ -1,0 +1,7 @@
+#!/bin/bash
+# vim: filetype=sh
+file=/tmp/speech.wav
+out=/tmp/all.ret 
+arecord -d 3 -q -f cd -r 16000 $file 
+sox $file $file.flac gain -n -5 silence 1 5 2% 
+wget -q -U "Mozilla/5.0" --post-file $file.flac --header="Content-Type: audio/x-flac; rate=16000" -O -"http://www.google.com/speech-api/v1/recognize?lang=ru-RU&client=chromium" | tee /tmp/debug | sed 's/.*utterance":"//' | sed 's/","confidence.*//' 
