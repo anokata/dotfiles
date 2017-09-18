@@ -1,17 +1,17 @@
 #!/bin/bash
 # vim: filetype=sh
-if  curl -s http://portal.support.mosreg.ru/login | grep password > /dev/null ; then
-    echo up
-else
-    echo down
-    notify-send -h int:x:500 -h int:y:500 -i hexchat -u critical Test "Portal DOWN"
-fi
-
 # watch N sec and check and notify if down
+check() {
+    URL=$1
+    WORD=$2
+    if  curl -s $URL | grep $WORD > /dev/null ; then
+        echo up
+    else
+        echo down
+        notify-send -h int:x:500 -h int:y:500 -i hexchat -u critical Test "Portal DOWN"
+    fi
+}
 
-if  curl -s http://feedback.mosreg.ru/ | grep mosreg > /dev/null ; then
-    echo up
-else
-    echo down
-    notify-send -h int:x:500 -h int:y:500 -i hexchat -u critical Test "Feedback DOWN"
-fi
+check http://portal.support.mosreg.ru/login password
+check http://feedback.mosreg.ru/ mosreg 
+check http://support.mosreg.ru/ mosreg
