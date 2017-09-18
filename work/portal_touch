@@ -1,0 +1,17 @@
+#!/bin/bash
+# vim: filetype=sh
+if  curl -s http://portal.support.mosreg.ru/login | grep password > /dev/null ; then
+    echo up
+else
+    echo down
+    notify-send -h int:x:500 -h int:y:500 -i hexchat -u critical Test "Portal DOWN"
+fi
+
+# watch N sec and check and notify if down
+
+if  curl -s http://feedback.mosreg.ru/ | grep mosreg > /dev/null ; then
+    echo up
+else
+    echo down
+    notify-send -h int:x:500 -h int:y:500 -i hexchat -u critical Test "Feedback DOWN"
+fi
