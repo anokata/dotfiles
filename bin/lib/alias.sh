@@ -34,3 +34,4 @@ alias gst='git status'
 
 alias clr='clear'
 alias gl='git log --pretty=oneline '
+alias wcl='wc -l'
