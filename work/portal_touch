@@ -4,14 +4,15 @@
 check() {
     URL=$1
     WORD=$2
-    if  curl -s $URL | grep $WORD > /dev/null ; then
-        echo up
+    if  curl -A "-- Monitoring" -s $URL | grep $WORD > /dev/null ; then
+        echo -e "up \t $URL"
     else
         echo down
-        notify-send -h int:x:500 -h int:y:500 -i hexchat -u critical Test "Portal DOWN"
+        notify-send -h int:x:500 -h int:y:500 -i hexchat -u critical Test "$URL Portal DOWN"
     fi
 }
 
 check http://portal.support.mosreg.ru/login password
 check http://feedback.mosreg.ru/ mosreg 
 check http://support.mosreg.ru/ mosreg
+check http://ext.support.mosreg.ru/ mosreg
