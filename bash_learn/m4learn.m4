@@ -39,3 +39,6 @@ H2(PATH)
 ifelse(PATH, /usr/share, H2(T), F)
 ifelse(PATH, usr/share, H2(T), F)
 </html>
+define(pwd_dir, `syscmd(pwd)')
+pwd_dir
+pwd_dir
