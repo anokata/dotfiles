@@ -1,8 +1,16 @@
 #!/bin/bash
 # vim: filetype=sh
-BACKUPDIR="/home/ksi/workprojects/backups"
+USER=$(whoami)
+BACKUPDIR="/home/$USER/workprojects/backups"
 echo backup:$BACKUPDIR
 mkdir -p "$BACKUPDIR" || true
-echo "scp ksi@qa:/home/ksi/backups/last/* $BACKUPDIR"
-scp ksi@qa:/home/ksi/backups/last/* $BACKUPDIR
+
+echo "scp ksi@qa:/home/$USER/backups/last/* $BACKUPDIR"
+scp ksi@qa:/home/$USER/backups/last/* $BACKUPDIR
+
+echo "scp tikhomirovs@feedback:/home/survey/backups/last/* $BACKUPDIR"
+scp tikhomirovs@feedback:/home/survey/backups/last/* $BACKUPDIR
+
 ls -la $BACKUPDIR
+
+
