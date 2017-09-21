@@ -1,0 +1,4 @@
+#!/bin/bash
+# vim: filetype=sh
+# need csrf
+curl --data "svc_id=2b4ac025-9096-11e7-80d1-005056ab4e5a&subj=Test_curl_big&summary=none" http://portal.support.mosreg.ru/compose_new/2b4ac028-9096-11e7-80d1-005056ab4e5a/2b4ac025-9096-11e7-80d1-005056ab4e5a

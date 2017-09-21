@@ -1,0 +1,17 @@
+#!/bin/bash
+# vim: filetype=sh
+name=$1
+name=support
+if [ -z $name ]; then exit 1; fi
+
+dir=$HOME/$name
+echo $dir
+
+#yum install git vim -y
+#yum install python34 python34-devel -y
+
+#mkdir $dir || true
+chmod a+rx $dir
+git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/self-support.git $dir
+(cd $dir; make init)
+

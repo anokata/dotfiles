@@ -1,0 +1,21 @@
+#!/bin/bash
+# vim: filetype=sh
+echo run with sudo
+name=$1
+if [ -z $name ]; then exit 1; fi
+
+#lxc-attach -n $name -- 
+project=support
+dir=/opt/$project
+sshcmd="lxc-attach -n $name -- " 
+
+eval "$sshcmd yum install git vim -y"
+
+eval "$sshcmd mkdir $dir || true"
+eval "$sshcmd chmod a+rx $dir"
+eval "$sshcmd git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/self-support.git $dir"
+
+
+
+
+#eval "$sshcmd -- chown prj"

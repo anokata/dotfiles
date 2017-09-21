@@ -1,0 +1,4 @@
+#!/bin/bash
+# vim: filetype=sh
+IP="$(lxc-ls -f $1 | tail -n1 | cut -d- -f 2 | tr -d [:space:])"
+echo $IP
