@@ -1,0 +1,2 @@
+ssh-copy-id -i ~/.ssh/backup.pub feedback 
+ssh-copy-id -i ~/.ssh/backup.pub qa
