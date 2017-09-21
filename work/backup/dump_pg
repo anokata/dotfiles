@@ -15,7 +15,8 @@ echo "DUMPING to  $DUMPNAME"
 #PGPASSFILE=./pgpass
 PGPASSWORD=
 echo DUMPING
-pg_dump -h $PGHOST -p $PGPORT -U $PGUSER -Ovx $DB | gzip --best > $DUMPNAME
+pg_dump -h $PGHOST -p $PGPORT -U $PGUSER -v $DB | gzip --best > $DUMPNAME
+#pg_dump -h $PGHOST -p $PGPORT -U $PGUSER -Ovx $DB | gzip --best > $DUMPNAME
 chown $USER:$USER $DUMPNAME
 chmod a+r $DUMPNAME
 chmod a+r $PREFIX/last

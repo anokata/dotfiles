@@ -1,17 +1,21 @@
 #!/bin/bash
 # vi: filetype=sh
 PREFIX=$HOME/backups
+mkdir $PREFIX || true
+
+name1=support
+
 qas=http://bitbucket.mosreg.ru/scm/sup/qasite.git
 sup=http://bitbucket.mosreg.ru/scm/sup/self-support.git
 fee=http://bitbucket.mosreg.ru/scm/sup/mosreg-survey.git
-qas=ssh://git@bitbucket.mosreg.ru:7999/sup/self-support.git
-sup=ssh://git@bitbucket.mosreg.ru:7999/sup/qasite.git
+sup=ssh://git@bitbucket.mosreg.ru:7999/sup/self-support.git
+qas=ssh://git@bitbucket.mosreg.ru:7999/sup/qasite.git
 fee=ssh://git@bitbucket.mosreg.ru:7999/sup/mosreg-survey.git
 
 git clone $qas /tmp/qas
-git clone $sup /tmp/sup
-git clone $fee /tmp/fee
+git clone $sup /tmp/support
+git clone $fee /tmp/feedback
 
-tar -cvzf $PREFIX/qa.tar.gz /tmp/qas
-tar -cvzf $PREFIX/sup.tar.gz /tmp/sup
-tar -cvzf $PREFIX/fee.tar.gz /tmp/fee
+(cd /tmp; tar -cvzf $PREFIX/qa.tar.gz qas)
+(cd /tmp; tar -cvzf $PREFIX/sup.tar.gz sup)
+(cd /tmp; tar -cvzf $PREFIX/fee.tar.gz fee)

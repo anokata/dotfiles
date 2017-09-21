@@ -1,0 +1,18 @@
+#!/bin/bash
+# vim: filetype=sh
+PREFIX=$HOME/backups
+name=$1
+name=feedback
+if [ -z $name ]; then exit 1; fi
+
+dir=$HOME
+echo $dir
+
+#git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/self-support.git $dir
+    cp $PREFIX/fee.tar.gz $dir
+    (cd $dir; tar xf fee.tar.gz)
+(cd $dir/fee; make init)
+cp ~/workprojects/backups/survey*.sql.gz $dir/fee/survey.sql.gz
+#zcat $1 | sudo -u postgres psql -d $2
+
+
