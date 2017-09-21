@@ -1,0 +1,3 @@
+#!/bin/bash
+# vim: filetype=sh
+./dump_pg qa qa

@@ -1,0 +1,8 @@
+#!/bin/bash
+# vim: filetype=sh
+BACKUPDIR="/home/ksi/workprojects/backups"
+echo backup:$BACKUPDIR
+mkdir -p "$BACKUPDIR" || true
+echo "scp ksi@qa:/home/ksi/backups/last/* $BACKUPDIR"
+scp ksi@qa:/home/ksi/backups/last/* $BACKUPDIR
+ls -la $BACKUPDIR

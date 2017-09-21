@@ -21,7 +21,7 @@ function _tmux_run () {
                 tmux split-window -hp 50 -c ~/tst/cprojects
                 tmux select-window -t 1
                 tmux select-pane -L
-                tmux split-window -vp30 portal_mon
+                tmux split-window -vp25 portal_mon
             fi
 
             tmux attach -t $TMUX_SESSION_NAME

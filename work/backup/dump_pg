@@ -1,0 +1,18 @@
+#!/bin/bash
+# vim: filetype=sh
+DATE=$(date +%Y.%m.%d-%H.%M)
+PGHOST=127.0.0.1
+PGPORT=5432
+PGUSER=$2
+DB=$1
+USER=ksi
+PREFIX=/home/$USER/backups
+mkdir -p $PREFIX || true
+DUMPNAME="$PREFIX/${DB}_$DATE.sql.gz"
+echo "DUMPING to  $DUMPNAME"
+#mkdir bkp_$DATE 
+#PGPASSFILE=./pgpass
+PGPASSWORD=
+pg_dump -h $PGHOST -p $PGPORT -U $PGUSER -Ovx $DB | gzip --best > $DUMPNAME
+chown $USER:$USER $DUMPNAME
+chmod a+r $DUMPNAME
