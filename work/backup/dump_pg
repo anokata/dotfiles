@@ -6,7 +6,7 @@ PGPORT=5432
 PGUSER=$2
 DB=$1
 USER=$(whoami)
-PREFIX=/home/$USER/backups
+PREFIX=$HOME/backups
 mkdir -p $PREFIX || true
 mkdir -p $PREFIX/last || true
 DUMPNAME="$PREFIX/${DB}_$DATE.sql.gz"
@@ -18,6 +18,7 @@ echo DUMPING
 pg_dump -h $PGHOST -p $PGPORT -U $PGUSER -Ovx $DB | gzip --best > $DUMPNAME
 chown $USER:$USER $DUMPNAME
 chmod a+r $DUMPNAME
+chmod a+r $PREFIX/last
 echo Copy to last
 rm $PREFIX/last/* || true
 #cp $DUMPNAME $PREFIX/last/${DB}.last.sql.gz

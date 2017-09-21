@@ -5,8 +5,8 @@ BACKUPDIR="/home/$USER/workprojects/backups"
 echo backup:$BACKUPDIR
 mkdir -p "$BACKUPDIR" || true
 
-echo "scp ksi@qa:/home/$USER/backups/last/* $BACKUPDIR"
-scp ksi@qa:/home/$USER/backups/last/* $BACKUPDIR
+echo "scp ksi@qa:/opt/qasite/backups/last/* $BACKUPDIR"
+scp ksi@qa:/opt/qasite/backups/last/* $BACKUPDIR
 
 echo "scp tikhomirovs@feedback:/home/survey/backups/last/* $BACKUPDIR"
 scp tikhomirovs@feedback:/home/survey/backups/last/* $BACKUPDIR
