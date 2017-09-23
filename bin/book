@@ -24,6 +24,7 @@ if [ -z $CMD ]; then
     echo -e "Expected CMD some of:"
     echo -e "\t - add NAME BOOK - add book to bookstore, from current path and file BOOK"
     echo -e "\t - show NAME - show book"
+    echo -e "\t ? list"
     echo "(c) Nisla 2017"
     exit
 fi
@@ -52,9 +53,14 @@ show_book() {
     exec $READER "$path"&
 }
 
+list_books() {
+    cat $BOOKSFILE 
+}
+
 case $CMD in
     add) add_book;;
     show) show_book;;
+    list) list_books;;
     *) 
         if [ ! -z $NAME ]; then
             BOOK=$NAME
@@ -65,5 +71,4 @@ case $CMD in
             show_book
         fi
         ;;
-       
 esac
