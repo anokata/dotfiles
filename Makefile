@@ -5,7 +5,6 @@ WORKDIR=~/workprojects
 
 deploy_common:
 	cp ./configs/.bashrc ~/
-	source ./bashconf.sh
 
 _work_first:
 	touch ~/.work.sig

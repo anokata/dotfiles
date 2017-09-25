@@ -7,6 +7,9 @@ source ~/dotfiles/bin/lib/alias.sh
 source ~/dotfiles/bin/lib/ssh.sh
 source ~/dotfiles/bin/lib/net.sh
 source ~/dotfiles/bin/lib/first_run.sh
+if [ -e ~/.work.sig ]; then
+    source ~/dotfiles/bin/lib/work.sh
+fi
 #source ~/dotfiles/bin/lib/*.sh #???
 
 function say() {
