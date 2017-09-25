@@ -1,1 +1,7 @@
-for i in {0..255}; do     printf "\x1b[38;5;${i}mcolour${i}\x1b[0m\n"; done
+#!/bin/bash
+for i in {0..255}; do printf "\x1b[38;5;${i}mcolour${i} void fun(int some) { for(;;);} \x1b[0m \n"; done
+
+i=8; printf "\x1b[38;5;${i}mcolour${i} void fun(int some) { for(;;);} \x1b[0m \n"
+i=7; printf "\x1b[38;5;${i}mcolour${i} void fun(int some) { for(;;);} \x1b[0m \n"
+i=15; printf "\x1b[38;5;${i}mcolour${i} void fun(int some) { for(;;);} \x1b[0m \n"
+i=250; printf "\x1b[38;5;${i}mcolour${i} void fun(int some) { for(;;);} \x1b[0m \n"
