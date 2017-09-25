@@ -1,0 +1,2 @@
+sudo /opt/cisco/anyconnect/bin/vpnagentd 
+/opt/cisco/anyconnect/bin/vpnui &
