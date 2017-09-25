@@ -7,11 +7,14 @@ deploy_common:
 	cp ./configs/.bashrc ~/
 	source ./bashconf.sh
 
-deploywork: deploy_common
+_work_first:
 	touch ~/.work.sig
 	cat ./work/backup/crontab | crontab -
 	mkdir $(WORKDIR) || true
 	mkdir ~/backups || true
+	mkdir ~/.ssh || true
+
+deploywork: deploy_common _work_first _work_portal
 
 # install arch/mint/cent packages
 # make list of packages: common to home/work and system, spec for home-work/systems
