@@ -94,7 +94,7 @@ function _first_general() {
             echo "Welcome to work!"
             #startone&
         fi
-        export WORK_DIR=~/workprojects
+        export WORK_DIR=~/workprojects/refactor_support_django
     elif [ -e ~/.home.sig ]; then
         echo "Hi at home!"
         # TODO if_first_at_day

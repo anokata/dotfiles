@@ -1,0 +1,12 @@
+#!/bin/bash
+# vim: filetype=sh
+BRANCH=$1 # = branch
+PORT=$(echo $BRANCH | tr -d '[:alpha:]')
+
+git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/self-support.git $BRANCH
+(cd $BRANCH; make init)
+(cd $BRANCH; git config --local user.name "anokata")
+(cd $BRANCH; git stash)
+(cd $BRANCH; git checkout $BRANCH)
+(cd $BRANCH; make prun PORT=$PORT)
+

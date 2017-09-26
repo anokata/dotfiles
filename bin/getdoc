@@ -1,10 +1,15 @@
 #!/bin/bash
 # vim: filetype=sh
 DIR=$(mktempramdir)
-git clone https://anokata@bitbucket.org/anokata/doc.git $DIR/doc
+git clone git@bitbucket.org:anokata/doc.git $DIR/doc
+
 if [ ! -e $DIR/doc ]; then
-    echo "Fail"
-    exit 1
+    echo "Fail ssh"
+    git clone https://anokata@bitbucket.org/anokata/doc.git $DIR/doc
+    if [ ! -e $DIR/doc ]; then
+        echo "Fail"
+        exit 1
+    fi
 fi
 #cd $DIR
 #git remote add ssh git@bitbucket.org:anokata/doc.git
