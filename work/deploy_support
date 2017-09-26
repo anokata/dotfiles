@@ -1,7 +1,7 @@
 #!/bin/bash
 # vim: filetype=sh
 BRANCH=$1 # = branch
-PORT=$(echo $BRANCH | tr -d '[:alpha:]')
+PORT="8$(echo $BRANCH | tr -d '[:alpha:]')"
 
 git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/self-support.git $BRANCH
 (cd $BRANCH; make init)
