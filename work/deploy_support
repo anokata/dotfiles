@@ -29,5 +29,5 @@ esac
 (cd $DIR; git config --local user.name "anokata")
 (cd $DIR; git stash)
 (cd $DIR; git checkout $BRANCH)
-(cd $DIR; make prun PORT=$PORT)
+(cd $DIR; make debug PORT=$PORT IP=10.10.30.90)
 
