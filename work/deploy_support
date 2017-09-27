@@ -2,8 +2,28 @@
 # vim: filetype=sh
 BRANCH=$1 # = branch
 PORT="8$(echo $BRANCH | tr -d '[:alpha:]')"
+NAME=$2
 
-git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/self-support.git $BRANCH
+if [ -z $NAME ];then 
+    NAME='support'
+fi
+
+case $NAME in
+    support)
+    echo deploy Support
+    git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/self-support.git "${BRANCH}_$NAME"
+        ;;
+    qa)
+    echo deploy qa site
+    git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/qasite.git "${BRANCH}_$NAME"
+        ;;
+    feed)
+    echo deploy feedback
+    git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/mosreg-survey.git "${BRANCH}_$NAME"
+    ;;
+esac
+
+
 (cd $BRANCH; make init)
 (cd $BRANCH; git config --local user.name "anokata")
 (cd $BRANCH; git stash)
