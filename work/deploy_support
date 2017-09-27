@@ -8,25 +8,26 @@ if [ -z $NAME ];then
     NAME='support'
 fi
 
+DIR="${BRANCH}_$NAME"
+
 case $NAME in
     support)
     echo deploy Support
-    git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/self-support.git "${BRANCH}_$NAME"
+    git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/self-support.git $DIR
         ;;
     qa)
     echo deploy qa site
-    git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/qasite.git "${BRANCH}_$NAME"
+    git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/qasite.git $DIR
         ;;
     feed)
     echo deploy feedback
-    git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/mosreg-survey.git "${BRANCH}_$NAME"
+    git clone http://TikhomirovSVl@bitbucket.mosreg.ru/scm/sup/mosreg-survey.git $DIR
     ;;
 esac
 
-
-(cd $BRANCH; make init)
-(cd $BRANCH; git config --local user.name "anokata")
-(cd $BRANCH; git stash)
-(cd $BRANCH; git checkout $BRANCH)
-(cd $BRANCH; make prun PORT=$PORT)
+(cd $DIR; make init)
+(cd $DIR; git config --local user.name "anokata")
+(cd $DIR; git stash)
+(cd $DIR; git checkout $BRANCH)
+(cd $DIR; make prun PORT=$PORT)
 
