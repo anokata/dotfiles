@@ -1,7 +1,8 @@
 #!/bin/bash
 # vim: filetype=sh
 DIR=$(mktempramdir)
-git clone git@bitbucket.org:anokata/doc.git $DIR/doc
+git clone https://anokata@bitbucket.org/anokata/doc.git $DIR/doc
+#git clone git@bitbucket.org:anokata/doc.git $DIR/doc
 
 if [ ! -e $DIR/doc ]; then
     echo "Fail ssh"
