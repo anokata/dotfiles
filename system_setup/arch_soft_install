@@ -5,3 +5,4 @@ pacman -S xbindkeys xorg-xdm dejavu-fonts xorg-xbacklight wpa_supplicant xorg-xr
 #work sudo pacman -S thunderbird
 # grub efibootmgr os-prober
 sudo pacman -S postgresql
+sudo pacman -S ncurses

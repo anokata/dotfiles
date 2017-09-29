@@ -1,2 +1,5 @@
 sudo pacman -S python-virtualenv
 sudo pacman -S python-pip
+sudo pacman -S libreoffice
+sudo pacman -S p7zip
+sudo pacman -S pangox-compat

@@ -60,5 +60,9 @@ shopt -s cdspell
 source /usr/share/git/completion/git-completion.bash
 #==============================
 
-_try_tmux_run
+if _is_console; then
+    echo 
+else
+    _try_tmux_run
+fi
 

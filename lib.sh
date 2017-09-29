@@ -12,6 +12,17 @@ if [ -e ~/.work.sig ]; then
 fi
 #source ~/dotfiles/bin/lib/*.sh #???
 
+function _is_console() {
+    echo $(tty) | grep tty
+}
+
+function _prompt() {
+    read -p "$1 [y/N]? " -n 1
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        echo ""
+    fi
+}
+
 function say() {
     echo "$(tput setaf 0; tput setab 7;)$1$(tput sgr 0;)"
 }
@@ -80,7 +91,9 @@ function _distro_specific() {
                 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
                 # or loadkeys
                 # in console only:
-                setterm -blength 0
+                if _is_console; then
+                    setterm -blength 0
+                fi
             fi
             ;;
         D) _debian;;
@@ -100,6 +113,10 @@ function _first_general() {
             mkdir /run/user/$(id -u)/Downloads || true
             rmdir ~/Downloads || true
             ln -s /run/user/$(id -u)/Downloads ~/ || true
+
+            xbacklight -set 20 || true
+
+            sudo ~/dotfiles/net/wistart
             #startone&
         fi
         export WORK_DIR=~/workprojects/refactor_support_django
