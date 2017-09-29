@@ -69,7 +69,9 @@ function _distro_specific() {
             if [ -e ~/.mobile.sig ]; then
                 return
             fi
-            _arch_net_connect
+            if [ -e ~/.home.sig ]; then
+                _arch_net_connect
+            fi
             xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
             if _is_first_run; then
                 # TODO if in X

@@ -22,3 +22,4 @@ loadkeys us-caps
 #xinit
 sudo setcap "CAP_NET_ADMIN=+ep" /bin/ip
 sudo setcap "CAP_NET_ADMIN=+ep" /usr/bin/dhcpcd 
+sudo rmmod pcspkr

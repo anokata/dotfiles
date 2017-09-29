@@ -1,0 +1,10 @@
+network={
+	ssid="MOSREG_RYB"
+	#psk="19NCKzXkBL85"
+	psk=f80434272b6794dd74e9739cb6cf5dc5cccf4b41d64ffb0b23d60e1d449e4954
+}
+network={
+	ssid="MOSREG_RYB"
+	#psk="74531141"
+	psk=6f8c98e2dfb4adc8a5ec0073e491a989315e907acbe4f2856f24d3940078a4d4
+}
