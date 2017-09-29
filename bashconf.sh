@@ -57,6 +57,7 @@ shopt -s histappend
 shopt -s cdspell
 # make open cmd with switch by ext 
 # if [ -f "$1" ] ; then
+source /usr/share/git/completion/git-completion.bash
 #==============================
 
 _try_tmux_run

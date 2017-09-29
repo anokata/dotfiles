@@ -72,12 +72,15 @@ function _distro_specific() {
             if [ -e ~/.home.sig ]; then
                 _arch_net_connect
             fi
+            setxkbmap -model pc105 -layout us,ru -variant ,winkeys -option grp:alt_shift_toggle
             xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
             if _is_first_run; then
                 # TODO if in X
-                xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
                 setxkbmap -model pc105 -layout us,ru -variant ,winkeys -option grp:alt_shift_toggle
+                xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
                 # or loadkeys
+                # in console only:
+                setterm -blength 0
             fi
             ;;
         D) _debian;;
@@ -94,6 +97,9 @@ function _first_general() {
     if [ -e ~/.work.sig ]; then
         if _is_first_run; then 
             echo "Welcome to work!"
+            mkdir /run/user/$(id -u)/Downloads || true
+            rmdir ~/Downloads || true
+            ln -s /run/user/$(id -u)/Downloads ~/ || true
             #startone&
         fi
         export WORK_DIR=~/workprojects/refactor_support_django

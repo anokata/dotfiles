@@ -1,3 +1,7 @@
 # only console 
 pacman -S sudo tmux vim ctags git tree htop wget ncdu pwgen unzip aircrack-ng tig curlftpfs
 pacman -S gcc pkg-config gnu-netcat make valgrind gdb
+pacman -S xbindkeys xorg-xdm dejavu-fonts xorg-xbacklight wpa_supplicant xorg-xrandr xorg-xmodmap xorg-xrdb firefox
+#work sudo pacman -S thunderbird
+# grub efibootmgr os-prober
+sudo pacman -S postgresql
