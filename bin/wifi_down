@@ -1,0 +1,4 @@
+#!/bin/bash
+source ~/dotfiles/bin/lib/net.sh
+set -x
+sudo ip link set $WIFI down
