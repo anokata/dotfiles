@@ -1,5 +1,6 @@
 #!/bin/bash
-source net_names
+#source net_names
+WIFI=$(net_wifiname)
 
 sudo rfkill unblock all
 sudo ip link set $WIFI up

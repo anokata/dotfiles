@@ -1,0 +1,1 @@
+basename $(file /sys/class/net/w* | cut -d: -f 1)
