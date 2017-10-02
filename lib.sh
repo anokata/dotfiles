@@ -119,7 +119,7 @@ function _first_general() {
             sudo ~/dotfiles/net/wistart
             #startone&
         fi
-        export WORK_DIR=~/workprojects/refactor_support_django
+        export WORK_DIR=~/work/master_support
     elif [ -e ~/.home.sig ]; then
         echo "Hi at home!"
         # TODO if_first_at_day

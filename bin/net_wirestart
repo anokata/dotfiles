@@ -1,0 +1,1 @@
+ip link set wlp2s0 down; ip link set wlp2s0 up
