@@ -37,9 +37,9 @@ fi
 export PS1="${DIST_SHORT}$XX\u$W@$OX\A$W\w$R\$(git_dirty)$W\$ "
 
 
-if [ -f ~/dotfiles/xterm_trans ]; then
-   ~/dotfiles/xterm_trans > /dev/null
-fi
+#if [ -f ~/dotfiles/xterm_trans ]; then
+   #~/dotfiles/xterm_trans > /dev/null
+#fi
 
 #loadkeys us-caps
 #TEST ==========================

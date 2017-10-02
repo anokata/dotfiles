@@ -25,3 +25,4 @@ sudo pacman -S curlftpfs
 sudo pacman -S tcpdump netcat
 sudo pacman -S xclip xsel
 sudo pacman -S sloccount
+sudo pacman -S lsof
