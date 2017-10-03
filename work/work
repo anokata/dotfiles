@@ -1,6 +1,6 @@
 #!/bin/bash
 #firefox&
-chromium
+chromium&
 telegram-desktop&
 slack&
 thunderbird&

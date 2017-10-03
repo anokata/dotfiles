@@ -2,8 +2,8 @@
 
 set -x
 echo downloading dicts...
-wget http://download.huzheng.org/lingvo/stardict-ER-LingvoUniversal-2.4.2.tar.bz2 -o /tmp/dict_er.tar.bz2
-wget http://download.huzheng.org/lingvo/stardict-RE-LingvoUniversal-2.4.2.tar.bz2 -o /tmp/dict_re.tar.bz2
+wget http://download.huzheng.org/lingvo/stardict-ER-LingvoUniversal-2.4.2.tar.bz2 -O /tmp/dict_er.tar.bz2
+wget http://download.huzheng.org/lingvo/stardict-RE-LingvoUniversal-2.4.2.tar.bz2 -O /tmp/dict_re.tar.bz2
 mkdir -p ~/.stardict/dic || true
 echo extracting...
 tar xf /tmp/dict_er.tar.bz2 -C ~/.stardict/dic
