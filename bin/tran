@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "$1" >> ~/.translate_words
+sdcv "$1" | less
