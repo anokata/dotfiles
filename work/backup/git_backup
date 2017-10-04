@@ -16,6 +16,13 @@ git clone $qas /tmp/qas
 git clone $sup /tmp/support
 git clone $fee /tmp/feedback
 
-(cd /tmp; tar -cvzf $PREFIX/qa.tar.gz qas)
-(cd /tmp; tar -cvzf $PREFIX/sup.tar.gz sup)
-(cd /tmp; tar -cvzf $PREFIX/fee.tar.gz fee)
+(cd /tmp; tar -czf qa.tar.gz /tmp/qas)
+(cd /tmp; tar -czf sup.tar.gz /tmp/support)
+(cd /tmp; tar -czf fee.tar.gz /tmp/feedback)
+cp -f /tmp/qa.tar.gz $PREFIX
+cp -f /tmp/sup.tar.gz $PREFIX
+cp -f /tmp/fee.tar.gz $PREFIX
+rm -rf /tmp/qas
+rm -rf /tmp/support
+rm -rf /tmp/feedback
+#ls -lah $PREFIX/*.gz
