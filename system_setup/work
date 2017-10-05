@@ -5,3 +5,5 @@ sudo pacman -S p7zip
 sudo pacman -S pangox-compat
 sudo pacman -S cronie
 sudo pacman -S nginx
+sudo pacman -S nodejs
+sudo pacman -S npm

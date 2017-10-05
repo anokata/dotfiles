@@ -1,28 +1,28 @@
 #!/bin/bash
-readonly RESET="\[\033[0;37m\]" 
-readonly K="\[\033[0;30m\]"    # black
-readonly R="\[\033[0;31m\]"    # red
-readonly G="\[\033[0;32m\]"    # green
-readonly Y="\[\033[0;33m\]"    # yellow
-readonly B="\[\033[0;34m\]"    # blue
-readonly M="\[\033[0;35m\]"    # magenta
-readonly C="\[\033[0;36m\]"    # cyan
-readonly W="\[\033[0;37m\]"    # white
+RESET="\[\033[0;37m\]" 
+K="\[\033[0;30m\]"    # black
+R="\[\033[0;31m\]"    # red
+G="\[\033[0;32m\]"    # green
+Y="\[\033[0;33m\]"    # yellow
+B="\[\033[0;34m\]"    # blue
+M="\[\033[0;35m\]"    # magenta
+C="\[\033[0;36m\]"    # cyan
+W="\[\033[0;37m\]"    # white
 # emphasized (bolded) colors
-readonly BK="\[\033[1;30m\]"
-readonly BR="\[\033[1;31m\]"
-readonly BG="\[\033[1;32m\]"
-readonly BY="\[\033[1;33m\]"
-readonly BB="\[\033[1;34m\]"
-readonly BM="\[\033[1;35m\]"
-readonly BC="\[\033[1;36m\]"
-readonly BW="\[\033[1;37m\]"
+BK="\[\033[1;30m\]"
+BR="\[\033[1;31m\]"
+BG="\[\033[1;32m\]"
+BY="\[\033[1;33m\]"
+BB="\[\033[1;34m\]"
+BM="\[\033[1;35m\]"
+BC="\[\033[1;36m\]"
+BW="\[\033[1;37m\]"
 
 _FORE="38;5"
 _BACK="48;5"
-readonly OX="\[\033[$_FORE;214m\]"
-readonly YX="\[\033[$_FORE;185m\]"
-readonly XX="\[\033[$_FORE;179m\]"
+OX="\[\033[$_FORE;214m\]"
+YX="\[\033[$_FORE;185m\]"
+XX="\[\033[$_FORE;179m\]"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
