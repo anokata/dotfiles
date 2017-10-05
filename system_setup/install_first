@@ -1,0 +1,12 @@
+#!/bin/bash
+pacman -S pptpclient grub efibootmgr os-prober
+pacman -S sudo tmux vim 
+
+# systemd-services cgroup-bin   bridge-utils debootstrap
+# mpv ?mupdf youtube-dl(python) netsurf fbreader valac at dialog sdcv mtpaint ?gimp 
+# ?localepurge
+# zip unzip rar
+# viber yandexdisk/dropbox 
+# aur: telegram slack
+# xbacklight iostat meminfo mpstat nmon
+# pulseaudio

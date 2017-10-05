@@ -1,0 +1,17 @@
+#!/bin/bash
+#xcompmgr transset-df
+# util
+yes | pacman -Sq tree htop wget ncdu pwgen unzip aircrack-ng tig curlftpfs cronie net-tools lsof tcpdump vifm dialog sdcv openssh sshfs
+yes | pacman -Sq arch-install-scripts pwgen unzip gvim gtypist 
+# dev
+yes | pacman -Sq --needed base-devel
+yes | pacman -Sq ctags git gcc pkg-config gnu-netcat make valgrind gdb ncurses libncurses libcurl freeglut3 lxc lxc-templates sloccount
+# X
+yes | pacman -Sq xbindkeys xorg-xdm xorg-xbacklight wpa_supplicant xorg-xrandr xorg-xmodmap xorg-xrdb xclip xsel
+yes | pacman -Sq xorg-server xorg xf86-video-intel xterm dmenu ttf-dejavu i3 xorg-xinit #xorg-xconsole
+# soft
+
+yes | pacman -Sq transmission-gtk firefox mplayer gnumeric scrot ffmpeg xdotool
+yes | pacman -Sq zathura zathura-pdf-poppler zathura-djvu xpdf cmus
+
+
