@@ -119,9 +119,17 @@ bindsym $mod+r mode "resize"
 
 bar {
     #status_command ~/dotfiles/conky_run
-    status_command conky -d -c ~/.conkyrc
+    #status_command conky -d -c ~/.conkyrc
     #mode              hide
+    mode              invisible
 }
+
+assign [class="Chromium"] 2
+assign [class="Firefox"] 5
+assign [class="Thunderbird"] 4
+assign [class="TelegramDesktop"] 3
+assign [class="Slack"] 3
+
 #for_window [class="Conky"] floating enable
 new_window none
 bindsym $mod+b exec "i3-msg border none"

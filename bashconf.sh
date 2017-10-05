@@ -34,7 +34,8 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
 elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
-export PS1="${DIST_SHORT}$XX\u$W@$OX\A$W\w$R\$(git_dirty)$W\$ "
+#export PS1="${DIST_SHORT}$XX\u$W@$OX\A$W\w$R\$(git_dirty)$W\$ "
+export PS1="$XX\u$W@$OX\A$W\w$R\$(git_dirty)$W\$ "
 
 
 #if [ -f ~/dotfiles/xterm_trans ]; then
