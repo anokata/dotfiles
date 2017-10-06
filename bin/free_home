@@ -1,0 +1,1 @@
+df -h | grep -e '\/home$' | tr -s '[:space:]' | cut -d' ' -f 4

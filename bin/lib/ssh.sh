@@ -3,7 +3,7 @@
 if which ssh-agent > /dev/null; then 
     if ! pidof ssh-agent > /dev/null; then 
         #eval "$(ssh-agent -s)"
-        ssh-agent > /run/user/$(id -u)/.ssh-agent-thing
+        ssh-agent > "/run/user/$(id -u)/.ssh-agent-thing"
     fi 
     
     if [[ "$SSH_AGENT_PID" == "" ]]; then
