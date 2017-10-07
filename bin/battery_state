@@ -3,7 +3,7 @@
 #BAT_STATE=/proc/acpi/battery/BAT0/state
 BAT_STATE=/sys/bus/acpi/drivers/battery/PNP0C0A\:00/power_supply/BAT0/capacity
 if [ -e $BAT_STATE ]; then
-    echo "[$(cat $BAT_STATE)%]"
+    echo "$(cat $BAT_STATE)%"
 else
     echo "|"
 fi
