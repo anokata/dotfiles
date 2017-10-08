@@ -107,6 +107,9 @@ function _distro_specific() {
 }
 
 function _first_general() {
+    #if _is_first_tty_run; then
+        #startx&
+    #fi
     if [ -e ~/.work.sig ]; then
         if _is_first_run; then 
             echo "Welcome to work!"
@@ -121,7 +124,7 @@ function _first_general() {
         fi
         export WORK_DIR=~/work/master_support
     elif [ -e ~/.home.sig ]; then
-        echo "Hi at home!"
+        #echo "Hi at home!"
         # TODO if_first_at_day
         if _is_first_run; then 
             echo "Hi new day!"
@@ -149,4 +152,8 @@ function _first_general() {
 _distro_specific
 _first_general
 
-_first_lock # must be at end
+if _is_console; then
+    _first_con_lock
+else
+    _first_lock # must be at end
+fi
