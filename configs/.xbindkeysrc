@@ -19,3 +19,12 @@
 "transset -p 1"
     m:0x51 + c:30
     Shift+Mod2+Mod4 + u
+
+
+"amixer sset Master 5%-"
+    m:0x5 + c:34
+    Control+Shift + bracketleft
+
+"amixer sset Master 5%+"
+    m:0x5 + c:35
+    Control+Shift + bracketright
