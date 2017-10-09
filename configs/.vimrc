@@ -249,6 +249,8 @@ let @p='0fpcwlogger.debug(€kD€kDA)'
 let @l='0wdwilog.info(A)'
 let @j='A {'
 map <leader>j A {
+" swap args in ()
+let @w='0f(ldt,f)pui, p0f,dw'
 
 " === netrw config ===
 " bind :Vexplore

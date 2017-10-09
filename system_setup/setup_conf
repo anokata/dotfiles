@@ -40,3 +40,4 @@ sudo localectl --no-convert set-x11-keymap ru,us pc104 ,qwerty grp:alt_shift_tog
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 # grub TODO
+sudo pacman -S xf86-input-synaptics
