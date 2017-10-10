@@ -16,3 +16,5 @@ pacman -Sq --noconfirm transmission-gtk firefox mplayer gnumeric scrot ffmpeg xd
 pacman -Sq --noconfirm zathura zathura-pdf-poppler zathura-djvu xpdf cmus
 
 
+sudo pacman -S  bind-tools
+sudo pacman -S nmap 

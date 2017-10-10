@@ -31,6 +31,7 @@ alias gp='git push'
 alias gd='git diff'
 alias gs='git status -sb'
 alias gst='git status'
+alias gpom='git push origin master'
 
 alias clr='clear'
 alias gl='git log --pretty=oneline '
