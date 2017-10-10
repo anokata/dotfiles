@@ -9,3 +9,5 @@ sudo pacman -S postgresql
 #sudo pacman -S thunderbird
 #sudo pacman -S libreoffice
 # aur: telegram slack
+sudo pacman -S qemu
+sudo pacman -S rdesktop
