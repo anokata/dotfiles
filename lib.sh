@@ -111,16 +111,18 @@ function _first_general() {
         #startx&
     #fi
     if [ -e ~/.work.sig ]; then
-        if _is_first_run; then 
+        if _is_first_tty_run; then
             echo "Welcome to work!"
             mkdir /run/user/$(id -u)/Downloads || true
             rmdir ~/Downloads || true
             ln -s /run/user/$(id -u)/Downloads ~/ || true
-
-            xbacklight -set 20 || true
-
             sudo ~/dotfiles/net/wistart
-            #startone&
+            ip link set $ETH up
+            sudo dhcpcd
+        fi
+        if _is_first_run; then 
+            xbacklight -set 20 || true
+            work
         fi
         export WORK_DIR=~/work/master_support
     elif [ -e ~/.home.sig ]; then
