@@ -13,8 +13,10 @@ check() {
     fi
 }
 
-check http://portal.support.mosreg.ru/login password
-check http://feedback.mosreg.ru/ mosreg 
+#check http://portal.support.mosreg.ru/login password
+#check http://feedback.mosreg.ru/ mosreg 
+check http://support.mosreg.ru/portal/login password
+check http://support.mosreg.ru/feed/ mosreg 
 check http://support.mosreg.ru/ mosreg
-check http://ext.support.mosreg.ru/ mosreg
+check http://ext.support.mosreg.ru/portal/ mosreg
 
