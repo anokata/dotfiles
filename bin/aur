@@ -4,5 +4,6 @@ name=$(basename $1)
 #mkdir $dir
 (cd $dir; git clone $1) || true
 echo $dir/$name
+cd $dir/$name
 (cd $dir/$name; makepkg -sri)
 

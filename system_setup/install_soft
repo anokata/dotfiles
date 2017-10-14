@@ -18,3 +18,6 @@ pacman -Sq --noconfirm zathura zathura-pdf-poppler zathura-djvu xpdf cmus
 
 sudo pacman -S  bind-tools
 sudo pacman -S nmap 
+sudo pacman -S msmtp
+sudo pacman -S mutt
+sudo pacman -S tint2
