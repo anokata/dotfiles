@@ -1,1 +1,1 @@
-sudo create_ap wlp5s0b1 ppp0 ksinet
+sudo create_ap $WIFI ppp0 ksinet
