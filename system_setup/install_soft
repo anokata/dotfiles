@@ -3,12 +3,14 @@
 # util
 pacman -Sq --noconfirm tree htop wget ncdu pwgen unzip aircrack-ng tig curlftpfs cronie net-tools lsof tcpdump vifm dialog sdcv openssh sshfs
 pacman -Sq --noconfirm arch-install-scripts pwgen unzip gvim gtypist 
+pacman -Sq --noconfirm bind-tools nmap mutt msmtp w3m
 # dev
 #yes | pacman -Sq --needed base-devel
 pacman -Sq --noconfirm ctags git gcc pkg-config gnu-netcat make valgrind gdb ncurses libncurses libcurl freeglut3 lxc lxc-templates sloccount
 # X
 pacman -Sq --noconfirm xbindkeys xorg-xdm xorg-xbacklight wpa_supplicant xorg-xrandr xorg-xmodmap xorg-xrdb xclip xsel
 pacman -Sq --noconfirm xorg-server xorg xf86-video-intel xterm dmenu ttf-dejavu i3 xorg-xinit 
+sudo pacman -Sq --noconfirm transmission-gtk
 #xorg-xconsole
 # soft
 
@@ -16,9 +18,4 @@ pacman -Sq --noconfirm transmission-gtk firefox mplayer gnumeric scrot ffmpeg xd
 pacman -Sq --noconfirm zathura zathura-pdf-poppler zathura-djvu xpdf cmus
 
 
-sudo pacman -S  bind-tools
-sudo pacman -S nmap 
-sudo pacman -S msmtp
-sudo pacman -S mutt
-sudo pacman -S tint2
-sudo pacman -S transmission-gtk
+#sudo pacman -S tint2
