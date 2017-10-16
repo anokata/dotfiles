@@ -21,3 +21,4 @@ sudo pacman -S nmap
 sudo pacman -S msmtp
 sudo pacman -S mutt
 sudo pacman -S tint2
+sudo pacman -S transmission-gtk

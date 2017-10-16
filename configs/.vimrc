@@ -20,6 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/DfrankUtil'
 Plug 'vim-scripts/vimprj'
 Plug 'vim-scripts/code_complete'
+Plug 'yuratomo/w3m.vim'
  Plug 'vim-scripts/OmniCppComplete'
 "Plug 'airblade/vim-rooter'
 "Plug 'vim-syntastic/syntastic'
@@ -189,11 +190,13 @@ let NERDTreeIgnore = ['\.pyc$']
 nmap <leader>r :NERDTreeToggle<CR>
 nmap <leader>Y :NERDTreeClose<CR>
 nmap <leader>c :TlistToggle<CR>
-nmap <leader>g :TableModeToggle<CR>
+"nmap <leader>g :TableModeToggle<CR>
 nmap <leader>x :TagbarToggle<CR>
 nmap <Leader>u ysiw_ysiw_
 nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 set tags=~/mytags
+" make open google word under cursor in tab
+nmap <leader>g :W3m google <cword>
 noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>

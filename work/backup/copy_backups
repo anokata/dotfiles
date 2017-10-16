@@ -8,7 +8,8 @@ mkdir -p "$BACKUPDIR" || true
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/backup
 
-scp ksi@10.10.30.56:/opt/qasite/backups/last/* $BACKUPDIR
+#scp ksi@10.10.30.56:/opt/qasite/backups/last/* $BACKUPDIR
+scp ksi@10.10.30.56:/home/qasupport/backups/last/* $BACKUPDIR
 
 scp tikhomirovs@10.10.30.232:/home/survey/backups/last/* $BACKUPDIR
 
