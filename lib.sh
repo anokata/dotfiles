@@ -124,7 +124,7 @@ function _first_general() {
             xbacklight -set 20 || true
             work
         fi
-        export WORK_DIR=~/work/master_support
+        export WORK_DIR=~/work/support3
     elif [ -e ~/.home.sig ]; then
         #echo "Hi at home!"
         # TODO if_first_at_day
