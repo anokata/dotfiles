@@ -9,6 +9,7 @@ source ~/dotfiles/bin/lib/net.sh
 source ~/dotfiles/bin/lib/first_run.sh
 if [ -e ~/.work.sig ]; then
     source ~/dotfiles/bin/lib/work.sh
+    source ~/dotfiles/work/alias.sh
 fi
 #source ~/dotfiles/bin/lib/*.sh #???
 

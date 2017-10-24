@@ -41,3 +41,6 @@ alias psfe='ps -ef'
 alias psa='ps aux'
 alias adbstart='sudo adb start-server'
 alias adbs='sudo adb start-server'
+
+alias files='find | wc -l'
+alias shot='sleep 1 && scrot'

@@ -67,3 +67,5 @@ else
     _try_tmux_run
 fi
 
+# TODO For small scripts - alias, functions
+

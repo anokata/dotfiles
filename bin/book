@@ -35,7 +35,11 @@ add_book() {
         exit
     fi
     echo Pushing book
-    echo "$NAME='$PWD/$BOOK'" >> $BOOKSFILE
+    if [ -e "$PWD/$BOOK" ]; then
+        echo "$NAME='$PWD/$BOOK'" >> $BOOKSFILE
+    elif [ -e "$BOOK" ]; then
+        echo "$NAME='$BOOK'" >> $BOOKSFILE
+    fi
 }
 
 show_book() {

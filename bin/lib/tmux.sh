@@ -18,6 +18,7 @@ function _tmux_run () {
                 tmux new-window -c $WORK_DIR
                 tmux split-window -hp 30 -c $WORK_DIR
                 tmux new-window -c ~/cprojects
+                tmux split-window -h
                 #tmux split-window -hp 50 -c ~/cprojects
                 tmux select-window -t 1
                 tmux select-pane -L
