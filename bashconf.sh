@@ -68,4 +68,4 @@ else
 fi
 
 # TODO For small scripts - alias, functions
-
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

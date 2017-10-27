@@ -17,5 +17,6 @@ sudo pacman -Sq --noconfirm transmission-gtk
 pacman -Sq --noconfirm transmission-gtk firefox mplayer gnumeric scrot ffmpeg xdotool
 pacman -Sq --noconfirm zathura zathura-pdf-poppler zathura-djvu xpdf cmus
 
+pacman -Sq --noconfirm fzf fzy
 
 #sudo pacman -S tint2

@@ -6,7 +6,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat' 
 Plug 'tpope/vim-speeddating'
 Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jceb/vim-orgmode'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/csv.vim'
@@ -22,6 +22,11 @@ Plug 'vim-scripts/vimprj'
 Plug 'vim-scripts/code_complete'
 Plug 'yuratomo/w3m.vim'
  Plug 'vim-scripts/OmniCppComplete'
+Plug 'docunext/closetag.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'pangloss/vim-javascript'
+"Plug 'mkomitee/vim-gf-python'
+"Plug 'easymotion/vim-easymotion'
 "Plug 'airblade/vim-rooter'
 "Plug 'vim-syntastic/syntastic'
 "Plug 'vimplugin/project.vim'
@@ -112,8 +117,10 @@ nmap <leader>w :tabclose<CR>
 nmap <leader>, :tabnext<CR>
 nmap <leader>. :tabprev<CR>
 " ==== Folding ====
-nmap <leader>f zf)
-nmap <leader>f :set foldmethod=indent<CR>
+"nmap <leader>f zf)
+"nmap <leader>f :set foldmethod=indent<CR>
+nmap <leader>f :FZF!<CR>
+"nmap <C-p> :FZF<CR>
 nmap <leader>a za
 " fold all
 " copy to system buffer
@@ -177,6 +184,7 @@ map <F3> :w<CR>:!make<CR>
 
 " BARE Python
 map <F10> :w<CR>:!python '%:t'<CR>
+"map <C-S-O> :w<CR>:!sudo systemctl reload support<CR>
 "VimL
 map <F11> :w<CR>:source %<CR>
 

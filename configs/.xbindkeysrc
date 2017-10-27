@@ -28,3 +28,6 @@
 "amixer sset Master 5%+"
     m:0x5 + c:35
     Control+Shift + bracketright
+"~/dotfiles/bin/t"
+    m:0x8 + c:28
+    Alt + t
