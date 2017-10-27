@@ -24,8 +24,8 @@ Plug 'yuratomo/w3m.vim'
  Plug 'vim-scripts/OmniCppComplete'
 Plug 'docunext/closetag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-"Plug 'pangloss/vim-javascript'
-"Plug 'mkomitee/vim-gf-python'
+Plug 'pangloss/vim-javascript'
+Plug 'mkomitee/vim-gf-python'
 "Plug 'easymotion/vim-easymotion'
 "Plug 'airblade/vim-rooter'
 "Plug 'vim-syntastic/syntastic'
@@ -204,7 +204,7 @@ nmap <Leader>u ysiw_ysiw_
 nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 set tags=~/mytags
 " make open google word under cursor in tab
-nmap <leader>g :W3m google <cword>
+nnoremap <leader>g :exe 'W3m google ' . expand('<cword>')<CR>
 noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
