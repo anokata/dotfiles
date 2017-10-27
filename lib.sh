@@ -135,6 +135,7 @@ function _first_general() {
             amixer sset Headphone 100
             export WORK_DIR=~/doc
             (gnumeric&)
+            (firefox&)
             (exec ~/dotfiles/bin/forecast&)
             gitpullall
         fi
