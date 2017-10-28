@@ -1,0 +1,15 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+# /dev/sda8
+UUID=32c93e0e-66c5-44a8-b7ff-09b08f3d792f	/         	ext4      	rw,noatime,data=ordered	0 1
+
+# /dev/sda7 LABEL=Home
+UUID=04c8f4a1-6c3b-4d8e-bfb2-c510059431d5	/home     	ext4      	rw,noatime,data=ordered	0 2
+
+# Data@sda6
+UUID=E0E6AE91E6AE678C /mnt/data ntfs-3g defaults,uid=ksi,gid=users,dmask=022,fmask=133,noatime,errors=remount-ro 0 0
+
+# SSD arch linux
+UUID=ea736b34-8aac-445d-b624-11ad50618603	/mnt/arch  	ext4      	rw,noatime,discard,data=ordered	0 1

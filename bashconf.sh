@@ -69,3 +69,5 @@ fi
 
 # TODO For small scripts - alias, functions
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
