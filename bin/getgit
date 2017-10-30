@@ -1,0 +1,21 @@
+#!/bin/bash
+# vim: filetype=sh
+DIR=$(mktempramdir)
+name=$(basename --suffix=.git /${1##*/})
+echo clone $name
+git clone $1 $DIR/$name
+
+if [ ! -e $DIR/$name ]; then
+    echo "Fail ssh"
+    git clone $1 $DIR/$name
+    if [ ! -e $DIR/$name ]; then
+        echo "Fail"
+        exit 1
+    fi
+fi
+#cd $DIR
+echo "$DIR/$name"
+export DOC=$DIR
+(cd $DIR/$name; bash)
+
+

@@ -111,6 +111,7 @@ function _first_general() {
     #if _is_first_tty_run; then
         #startx&
     #fi
+    export RAIN=https://github.com/RainlinLisa/EnergyCalc.git
     if [ -e ~/.work.sig ]; then
         if _is_first_tty_run; then
             echo "Welcome to work!"
