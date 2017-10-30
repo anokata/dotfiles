@@ -44,3 +44,7 @@ alias adbs='sudo adb start-server'
 
 alias files='find | wc -l'
 alias shot='sleep 1 && scrot'
+alias psm='ps -ef | less'
+alias psf='ps -ef | fzf'
+alias lf='ls -lah | less'
+alias lz='ls -lah | fzf'

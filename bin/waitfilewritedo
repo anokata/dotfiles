@@ -1,0 +1,6 @@
+#!/bin/bash
+# vim: filetype=sh
+while true; do 
+    inotifywait -e close_write $1; 
+    $2 $1
+done
