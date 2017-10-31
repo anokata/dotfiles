@@ -7,8 +7,8 @@ source ~/dotfiles/bin/lib/alias.sh
 source ~/dotfiles/bin/lib/ssh.sh
 source ~/dotfiles/bin/lib/net.sh
 source ~/dotfiles/bin/lib/first_run.sh
+source ~/dotfiles/bin/lib/work.sh #env
 if [ -e ~/.work.sig ]; then
-    source ~/dotfiles/bin/lib/work.sh
     source ~/dotfiles/work/alias.sh
 fi
 #source ~/dotfiles/bin/lib/*.sh #???

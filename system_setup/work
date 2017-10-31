@@ -11,3 +11,4 @@ sudo pacman -S postgresql
 # aur: telegram slack
 sudo pacman -S qemu
 sudo pacman -S rdesktop
+sudo pip install pgcli
