@@ -64,10 +64,12 @@ source /usr/share/git/completion/git-completion.bash
 if _is_console; then
     echo 
 else
-    _try_tmux_run
+    if [ -e ~/.home.sig -o -e ~/.work.sig ]; then 
+        _try_tmux_run
+    fi
 fi
 
-# TODO For small scripts - alias, functions
+# make For small scripts - alias, functions
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
 [ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
