@@ -48,3 +48,8 @@ alias psm='ps -ef | less'
 alias psf='ps -ef | fzf'
 alias lf='ls -lah | less'
 alias lz='ls -lah | fzf'
+
+# work
+alias lognge='sudo tail -f /var/log/nginx/error.log'
+alias lognga='sudo tail -f /var/log/nginx/access.log'
+
