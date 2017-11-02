@@ -429,4 +429,4 @@ filetype *.pdf xreader %f&
 fileviewer *.pdf
   \ pdftotext %c -
 set statusline="  %t%= %A %10u:%-7g %15E %20d  "
-
+map ym :move<CR>

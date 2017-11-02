@@ -1,0 +1,3 @@
+#!/bin/bash
+find -not -type d | sed 's!.*/!!' |  sed 's!.*\.!!' | sort | uniq -c  | sort -n
+
