@@ -51,3 +51,5 @@ hi User2 ctermbg=None ctermfg=53
 hi User3 ctermbg=None ctermfg=17
 hi User4 ctermbg=None ctermfg=107
 hi User5 ctermbg=None ctermfg=107
+" tilda ~
+highlight NonText ctermfg=16
