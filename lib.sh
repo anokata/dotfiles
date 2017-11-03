@@ -124,7 +124,7 @@ function _first_general() {
         fi
         if _is_first_run; then 
             xbacklight -set 20 || true
-            (work&)&
+            #(work&)&
         fi
         export WORK_DIR=~/work/support3
     elif [ -e ~/.home.sig ]; then
