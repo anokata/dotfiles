@@ -1,5 +1,8 @@
 #!/bin/bash
 
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias ls='ls --color=auto -XF --group-directories-first'
 alias ll='ls -alFh'
 alias la='ls -A'

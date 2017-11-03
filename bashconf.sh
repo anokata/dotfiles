@@ -29,11 +29,6 @@ if [ -x ~/dotfiles/ ]; then
     source ~/dotfiles/lib.sh
 fi
 
-if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-fi
 #export PS1="${DIST_SHORT}$XX\u$W@$OX\A$W\w$R\$(git_dirty)$W\$ "
 export PS1="$XX\u$W@$OX\A$W\w$R\$(git_dirty)$W\$ "
 
@@ -44,13 +39,7 @@ export PS1="$XX\u$W@$OX\A$W\w$R\$(git_dirty)$W\$ "
 
 #loadkeys us-caps
 #TEST ==========================
-LINEOS_DIR=~/lineos
-export PATH="$LINEOS_DIR/bin:$PATH"
-
 #PROMPT_COMMAND='[[ ${__new_wd:=$PWD} != $PWD ]] && ls; __new_wd=$PWD' # ls after cding
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
 shopt -s extglob
 shopt -s cmdhist 
 shopt -s dotglob     
@@ -58,7 +47,6 @@ shopt -s histappend
 shopt -s cdspell
 # make open cmd with switch by ext 
 # if [ -f "$1" ] ; then
-source /usr/share/git/completion/git-completion.bash
 #==============================
 
 if _is_console; then
@@ -70,6 +58,9 @@ else
 fi
 
 # make For small scripts - alias, functions
+[ -f /etc/bash_completion ] && source /etc/bash_completion
+[ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
 [ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
+[ -f /usr/share/git/completion/git-completion.bash ] && source /usr/share/git/completion/git-completion.bash
