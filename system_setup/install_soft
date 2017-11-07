@@ -21,3 +21,4 @@ pacman -Sq --noconfirm fzf fzy pv
 
 #sudo pacman -S tint2
 sudo pacman -S inotify-tools
+sudo pacman -S djvulibre

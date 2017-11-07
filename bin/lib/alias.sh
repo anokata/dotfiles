@@ -56,3 +56,6 @@ alias lz='ls -lah | fzf'
 alias lognge='sudo tail -f /var/log/nginx/error.log'
 alias lognga='sudo tail -f /var/log/nginx/access.log'
 
+function djt() {
+    djvutxt $1 | less
+}
