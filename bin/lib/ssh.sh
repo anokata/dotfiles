@@ -7,7 +7,9 @@ if which ssh-agent > /dev/null; then
     fi 
     
     if [[ "$SSH_AGENT_PID" == "" ]]; then
+        #if [ -e "/run/user/$(id -u)/.ssh-agent-thing" ]; then
         eval "$(</run/user/$(id -u)/.ssh-agent-thing)" > /dev/null
+        #fi
     fi
 
     ssh-add ~/.ssh/work_rsa > /dev/null 2>/dev/null
