@@ -1,7 +1,7 @@
 #!/bin/bash
 # vim: filetype=sh
 while true; do 
-    inotifywait -e close_write $1 -r --exclude .*conf; 
+    inotifywait -q -e close_write $1 -r --exclude '.*conf|.*lock'; 
     $2 $3 $4 $5
     #$2 $1
 done
