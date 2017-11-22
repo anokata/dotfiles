@@ -1,0 +1,13 @@
+#!/bin/bash
+# vim: filetype=sh
+#STATFILE=
+date=$(date +%d.%m.%Y)
+read -p "Enter when you wake up:" wake
+read -p "Enter when you sleep down:" sleepdown
+#read -p "Enter what you do last day:" sleepdown
+
+echo "$date|$sleepdown|$wake| |||||||||||||"
+read -p "It is correct?" -t 10 -n 1 ans
+if [ "$ans" != "n" ]; then
+    echo ok, write
+fi
