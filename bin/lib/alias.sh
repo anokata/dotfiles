@@ -55,6 +55,7 @@ alias lz='ls -lah | fzf'
 # work
 alias lognge='sudo tail -f /var/log/nginx/error.log'
 alias lognga='sudo tail -f /var/log/nginx/access.log'
+alias pdfone='pdfunite *.pdf one.pdf'
 
 function djt() {
     djvutxt $1 | less
