@@ -3,6 +3,8 @@ D=.
 # if pwd not is dotfiles; check cd ~/dotfiles
 WORKDIR=~/workprojects
 
+install: deploy_common
+
 deploy_common:
 	cp ./configs/.bashrc ~/
 
