@@ -12,6 +12,9 @@ function _tmux_run () {
             echo 'create'
             tmux new -s $TMUX_SESSION_NAME -d
 
+            if [ -e ~/.home.sig ]; then
+                tmux new-window -c ~/doc/stat
+            fi
             if [ -e ~/.work.sig ]; then
                 tmux split-window -h -c ~/dotfiles/
                 tmux select-pane -L
