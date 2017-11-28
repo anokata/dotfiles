@@ -1,0 +1,2 @@
+visudo for wheel all no pass
+autologin getty@tty1.service
