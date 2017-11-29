@@ -12,3 +12,4 @@ sudo pacman -S postgresql
 sudo pacman -S qemu
 sudo pacman -S rdesktop
 sudo pip install pgcli
+# aur https://aur.archlinux.org/sphinx.git
