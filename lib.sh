@@ -136,8 +136,8 @@ function _first_general() {
             amixer sset Headphone unmute
             amixer sset Headphone 100
             export WORK_DIR=~/doc
-            (gnumeric > /dev/null 2>&1 &)
-            (firefox > /dev/null 2>&1 &)
+            #(gnumeric > /dev/null 2>&1 &)
+            #(firefox > /dev/null 2>&1 &)
             (exec ~/dotfiles/bin/forecast&)
             gitpullall
         fi
