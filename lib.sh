@@ -58,13 +58,16 @@ function _arch_net_connect() {
     sleep 0.1
     echo 'ok'
 
-    if ping -c1 inet.atel.me >/dev/null 2>/dev/null; then
-        _net_arch_pptp
-    else
-        echo 'try wifi'
-        # if exist
-        #TODO
-    fi
+    for i in 1 2 3; do
+        if ping -c1 inet.atel.me >/dev/null 2>/dev/null; then
+            _net_arch_pptp
+        else
+            echo 'try wifi'
+            # if exist
+            #TODO
+        fi
+        sleep 0.1
+    done
 }
 
 function _ubuntu() {
