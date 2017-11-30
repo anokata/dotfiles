@@ -3,23 +3,23 @@ set background=dark
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
-" Orange Theme
-"highlight Function ctermbg=NONE ctermfg=179
-highlight Function cterm=bold ctermbg=NONE ctermfg=15
-highlight PreProc ctermbg=NONE ctermfg=179
+" orange
+highlight Function ctermbg=NONE ctermfg=179
+highlight PreProc ctermbg=NONE ctermfg=12
 highlight Special ctermbg=NONE ctermfg=179
 highlight Define ctermbg=NONE ctermfg=179
 highlight Title ctermbg=NONE ctermfg=179
 highlight Type ctermbg=NONE ctermfg=179
 
-highlight Statement ctermbg=NONE ctermfg=178
+highlight Statement ctermbg=NONE ctermfg=1
 
 " yellow
 highlight Keyword ctermbg=NONE ctermfg=185
 highlight Label ctermbg=NONE ctermfg=185
-highlight String ctermbg=NONE ctermfg=185
-highlight Number ctermbg=NONE ctermfg=185
-highlight Constant ctermbg=NONE ctermfg=185
+"highlight String ctermbg=NONE ctermfg=185
+highlight String ctermbg=NONE ctermfg=113
+highlight Number ctermbg=NONE ctermfg=1
+highlight Constant ctermbg=NONE ctermfg=5
 highlight Underlined ctermbg=NONE ctermfg=185
 
 " gray
@@ -27,29 +27,5 @@ highlight Identifier ctermbg=NONE ctermfg=8
 highlight Comment ctermbg=NONE ctermfg=8 
 highlight LineNr ctermbg=NONE ctermfg=8
 highlight VertSplit ctermbg=39  ctermfg=39
-highlight VertSplit ctermbg=238  ctermfg=238
+highlight VertSplit ctermbg=16  ctermfg=16
 
-"  Green Theme
-" highlight Function cterm=bold ctermbg=NONE ctermfg=81
-" highlight PreProc ctermbg=NONE ctermfg=24
-" highlight Special ctermbg=NONE ctermfg=26
-" highlight Define ctermbg=NONE ctermfg=26
-" highlight Title ctermbg=NONE ctermfg=26
-" highlight Type ctermbg=NONE ctermfg=117
-" highlight Statement ctermbg=NONE ctermfg=81
-
-" highlight Keyword ctermbg=NONE ctermfg=81
-" highlight Label ctermbg=NONE ctermfg=81
-" highlight String ctermbg=NONE ctermfg=81
-" highlight Number ctermbg=NONE ctermfg=81
-" highlight Constant ctermbg=NONE ctermfg=81
-" highlight Underlined ctermbg=NONE ctermfg=81
-
-hi CtrlSpaceNormal ctermfg=4 ctermbg=NONE
-hi User1 ctermbg=None ctermfg=107
-hi User2 ctermbg=None ctermfg=53
-hi User3 ctermbg=None ctermfg=17
-hi User4 ctermbg=None ctermfg=107
-hi User5 ctermbg=None ctermfg=107
-" tilda ~
-highlight NonText ctermfg=16
