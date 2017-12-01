@@ -136,6 +136,11 @@ function _first_general() {
         # TODO if_first_at_day
         if _is_first_run; then 
             echo "Hi new day!"
+
+            mkdir /run/user/$(id -u)/ram || true
+            rmdir ~/ram || true
+            ln -s /run/user/$(id -u)/ram ~/ || true
+
             amixer sset Headphone unmute
             amixer sset Headphone 100
             export WORK_DIR=~/doc

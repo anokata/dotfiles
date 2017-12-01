@@ -1,0 +1,31 @@
+console.log("begin");
+
+if (location.href.indexOf("sankakucomplex") > -1) {
+console.log("san");
+
+var link = document.querySelector("#highres");
+if (link) link.click();
+
+//window.addEventListener("load", function() {
+    console.log("start");
+    var link = document.querySelector("#highres");
+    console.log(link);
+    if (link) {
+        link.click();
+    } else {
+        var i = document.querySelector("img");
+        if (document.body.children.length == 1 && i) {
+            console.log("create a");
+            var link = document.createElement("a");
+            link.setAttribute("href", i.src);
+            link.setAttribute("download", "");
+            console.log(link);
+            console.log(link.href);
+            console.log("download!");
+            document.body.appendChild(link);
+            link.click();
+        }
+    }
+    console.log("end");
+//});
+}
