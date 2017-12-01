@@ -1,0 +1,47 @@
+#!/bin/bash
+# vim: filetype=sh
+# like iso (but tar archive) one big file with images. Copy from mega to ram, unpack to ram temp. Add
+name=mymusic.iso
+
+# get
+function get() {
+    DIR=$(mktemp -d -p /run/user/$(id -u)/)
+    (cd $DIR; megaget /Root/$name)
+    (cd $DIR; tar xf $name; ls -lah $name; rm $name)
+    (cd $DIR; bash)
+}
+
+function make() {
+    tar cf $name *
+    megaput --disable-previews $name --path /Root/$name.new
+    megarm /Root/$name
+    megaput --disable-previews $name --path /Root/$name
+    megarm /Root/$name.new
+    ls -lah $name
+    rm $name
+}
+
+# create from cur dir and upload
+function intro() {
+    cmd=$1
+    if [ -z "$cmd" ]; then 
+        echo "Usage: cmd [params]"
+        echo "cmd one of:"
+        echo -e "\tadd | p | put | s | save"
+        echo -e "\tget | g | add | create"
+    fi
+    case "$cmd" in
+        g) echo "get"
+            get
+            ;;
+        p) echo "put"
+            make
+            ;;
+        *)
+          echo "I do not understand"
+      ;;
+    esac
+}
+
+intro $1 $2
+
