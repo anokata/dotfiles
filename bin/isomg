@@ -13,10 +13,10 @@ function get() {
 
 function make() {
     tar cf $name *
-    megaput --disable-previews $name --path /Root/$name.new
+    #megaput --disable-previews $name --path /Root/$name.new
     megarm /Root/$name || true
     megaput --disable-previews $name --path /Root/$name
-    megarm /Root/$name.new || true
+    #megarm /Root/$name.new || true
     ls -lah $name
     rm $name
 }
