@@ -13,7 +13,7 @@ if (link) link.click();
     if (link) {
         link.click();
     } else {
-        var i = document.querySelector("img");
+        /*var i = document.querySelector("img");
         if (document.body.children.length == 1 && i) {
             console.log("create a");
             var link = document.createElement("a");
@@ -24,8 +24,46 @@ if (link) link.click();
             console.log("download!");
             document.body.appendChild(link);
             link.click();
-        }
+        }*/
     }
     console.log("end");
 //});
+}
+
+/*
+if (location.href.indexOf("donmai") > -1) {
+window.addEventListener("load", function() {
+    console.log("don");
+    var big = document.querySelector("#post-information > ul:nth-child(2) > li:nth-child(4) > a:nth-child(1)");
+    console.log(big);
+    if (big) big.click();
+})}
+*/
+enlarge("donmai", "#post-information > ul:nth-child(2) > li:nth-child(4) > a:nth-child(1)");
+window.addEventListener("load", download);
+
+function enlarge(prefix, selector) {
+    if (location.href.indexOf(prefix) > -1) {
+    window.addEventListener("load", function() {
+        console.log(prefix);
+        var big = document.querySelector(selector);
+        console.log(big);
+        if (big) big.click();
+    });
+    }
+}
+
+function download() {
+    var i = document.querySelector("img");
+    if (document.body.children.length == 1 && i) {
+        console.log("create a");
+        var link = document.createElement("a");
+        link.setAttribute("href", i.src);
+        link.setAttribute("download", "");
+        console.log(link);
+        console.log(link.href);
+        console.log("download!");
+        document.body.appendChild(link);
+        link.click();
+    }
 }
