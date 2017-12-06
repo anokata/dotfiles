@@ -1,0 +1,1 @@
+sudo mount /dev/sdc /mnt/mint/ -o iocharset=cp1251,rw,codepage=866,utf8=true,uid=ksi
