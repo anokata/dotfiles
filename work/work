@@ -2,5 +2,5 @@
 #firefox&
 (chromium &)& > /dev/null 2>&1 &
 (telegram-desktop &)& > /dev/null 2>&1 &
-(slack &)& > /dev/null 2>&1 &
+#(slack &)& > /dev/null 2>&1 &
 (thunderbird &)& > /dev/null 2>&1 &
