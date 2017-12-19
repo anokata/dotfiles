@@ -5,11 +5,23 @@ DIST_COLOR=$W
 DIST_SHORT=-
 DIST_SYM=-
 get_distro_name () {
-    if [ -f /etc/lsb-release ]; then
+    if [ -f /etc/arch-release ]; then 
+        DISTRO="ARCH"
+        DIST_SYM='A'
+        DISTRO=$(cat /etc/arch-release)
+        DIST_COLOR=$BG
+    elif [ -f /etc/lsb-release ]; then
         . /etc/lsb-release
         DISTRO=$DISTRIB_ID
-        DIST_SYM='U'
-        DIST_COLOR=$BC
+        if [ $DISTRO = "Arch" ]; then
+            DISTRO="ARCH"
+            DIST_SYM='A'
+            DISTRO=$(cat /etc/arch-release)
+            DIST_COLOR=$BG
+        else
+            DIST_SYM='U'
+            DIST_COLOR=$BC
+        fi
     elif [ -f /etc/debian_version ]; then
         DISTRO=debian
         DIST_SYM='D'
@@ -20,11 +32,6 @@ get_distro_name () {
         DIST_SYM='C'
         DIST_COLOR=$BR
     # for arch
-    elif [ -f /etc/arch-release ]; then 
-        DISTRO="ARCH"
-        DIST_SYM='A'
-        DISTRO=$(cat /etc/arch-release)
-        DIST_COLOR=$BG
     fi
 }
 get_distro_name
