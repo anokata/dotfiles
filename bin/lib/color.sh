@@ -25,6 +25,7 @@ BL="\[\033[$_FORE;11m\]"
 UC="\[\033[$_FORE;40m\]"
 YX="\[\033[$_FORE;185m\]"
 XX="\[\033[$_FORE;179m\]"
+GRAY="\[\033[$_FORE;244m\]"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
