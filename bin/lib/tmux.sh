@@ -14,6 +14,7 @@ function _tmux_run () {
 
             if [ -e ~/.home.sig ]; then
                 tmux new-window -c ~/doc/stat
+                tmux new-window -c ~/dotfiles/net
             fi
             if [ -e ~/.work.sig ]; then
                 tmux split-window -h -c ~/dotfiles/
