@@ -128,6 +128,7 @@ function _first_general() {
         fi
         if _is_first_run; then 
             xbacklight -set 20 || true
+            mons -s || true
             #(work&)&
         fi
         export WORK_DIR=~/work/support3
