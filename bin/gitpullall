@@ -1,7 +1,7 @@
 cd ~/dotfiles && git pull || true
 cd ~/doc && git pull || true
 cd ~/cppProjects && git pull || true
-cd ~/tst/cppProjects && git pull || true
-cd ~/tst/cprojects && git pull || true
+#cd ~/tst/cppProjects && git pull || true
+#cd ~/tst/cprojects && git pull || true
 cd ~/cprojects && git pull || true
 cd ~/cstudy && git pull || true
