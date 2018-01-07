@@ -1,0 +1,4 @@
+#!/bin/bash
+# vim: filetype=sh
+
+watch -n5 recon_beep 
