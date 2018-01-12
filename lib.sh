@@ -136,7 +136,8 @@ function _first_general() {
         #echo "Hi at home!"
         # TODO if_first_at_day
         if _is_first_run; then 
-            echo "Hi new day!"
+            #echo "Hi new day!"
+            hello
 
             mkdir /run/user/$(id -u)/ram || true
             rmdir ~/ram || true

@@ -1,0 +1,13 @@
+#!/bin/bash
+# vim: filetype=sh
+birthdate="Nov 11 1988"
+now=$(date '+%b %d %Y')
+
+datediff() {
+    d1=$(date -d "$1" +%s)
+    d2=$(date -d "$2" +%s)
+    d=$(( (d1 - d2) / 86400 ))
+    echo -e "Have a nice ${d}th day!"
+}
+
+datediff "$now" "$birthdate"
