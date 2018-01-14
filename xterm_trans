@@ -1,5 +1,5 @@
 #!/bin/bash
-OPAC=1
+OPAC=0.9
 if which transset 2>/dev/null; then
     transset -p $OPAC
 elif [ -f /usr/bin/transset-df 2>/dev/null ]; then
