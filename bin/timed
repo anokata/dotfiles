@@ -1,13 +1,15 @@
 #!/bin/bash
 # vim: filetype=sh
 WORK_END=$(date -d "$(date +%F)+18 hour" '+%s')
+TODAY=$(date -d "$(date +%F)" '+%s')
 birthdate="Nov 11 1988"
 
 remain() {
     now=$(date '+%s')
+    p=$(( ($now - $TODAY) * 10 / ($WORK_END- $now) ))
     d=$(( ($WORK_END- $now) / 60 ))
     s=$(( ($WORK_END- $now) - $d * 60))
-    echo -e "To end of work day remain: ${d}.$s minutes"
+    echo -e "To end of work day remain: ${d}.$s minutes (${p}%)"
 }
 
 
