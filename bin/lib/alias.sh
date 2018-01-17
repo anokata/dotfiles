@@ -60,3 +60,5 @@ alias pdfone='pdfunite *.pdf one.pdf'
 function djt() {
     djvutxt $1 | less
 }
+alias watchtime="watch -tc -n0.1 date +%T.%2N"
+alias watchtm="watch -tc -n0.1 timed"

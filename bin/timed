@@ -1,0 +1,35 @@
+#!/bin/bash
+# vim: filetype=sh
+WORK_END=$(date -d "$(date +%F)+18 hour" '+%s')
+birthdate="Nov 11 1988"
+
+remain() {
+    now=$(date '+%s')
+    d=$(( ($WORK_END- $now) / 60 ))
+    s=$(( ($WORK_END- $now) - $d * 60))
+    echo -e "To end of work day remain: ${d}.$s minutes"
+}
+
+
+datediff() {
+    d1=$(date +%s)
+    d2=$(date -d "$1" +%s)
+    d=$(( (d1 - d2) / 86400 ))
+    echo -e "Life: ${d}th day"
+}
+
+R="\033[0;31m"    # red
+W="\033[0;37m"    # white
+G="\033[0;32m"    # green
+Y="\033[1;33m"    # yellow
+B="\033[1;34m"    # blue
+M="\033[0;35m"    # magenta
+C="\033[0;36m"    # cyan
+
+echo -en "${G}"
+datediff "$birthdate"
+echo -en "${Y}"
+echo "Now: $(date +%T.%2N)"
+echo -en "${B}"
+remain
+echo -en "${W}"
