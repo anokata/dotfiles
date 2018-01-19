@@ -5,5 +5,5 @@ if ping -c1 ya.ru >/dev/null 2>/dev/null; then
     echo ok
 else
     beep
-    sudo ~/dotfiles/net/startnet_arch_pptp 
+    #sudo ~/dotfiles/net/startnet_arch_pptp 
 fi
