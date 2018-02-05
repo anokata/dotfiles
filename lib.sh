@@ -131,7 +131,7 @@ function _first_general() {
             mons -s || true
             #(work&)&
         fi
-        export WORK_DIR=~/work/support3
+        export WORK_DIR=~/work/portal
     elif [ -e ~/.home.sig ]; then
         #echo "Hi at home!"
         # TODO if_first_at_day
