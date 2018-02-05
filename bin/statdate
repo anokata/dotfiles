@@ -5,9 +5,9 @@ N=$2
 if [ -z "$START" ]; then START=0; fi
 if [ -z "$N" ]; then N=10; fi
 LAST=$(expr $START + $N)
-year=2017
-month=11
-day=28
+year=2018
+month=02
+day=05
 #kdate -d "$year$month$day next day" +%Y%m%d
 for i in $(seq $START $LAST); do 
     nday=$(date -d "$year$month$day next day" +%d)

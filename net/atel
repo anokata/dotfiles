@@ -1,0 +1,5 @@
+pty "pptp inet.atel.me --nolaunchpppd  --nobuffer --loglevel 0"
+name 7802-07-2009
+remotename atel
+ file /etc/ppp/options
+ipparam atel
