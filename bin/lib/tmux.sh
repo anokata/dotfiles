@@ -13,7 +13,7 @@ function _tmux_run () {
             tmux new -s $TMUX_SESSION_NAME -d
 
             if [ -e ~/.home.sig ]; then
-                tmux new-window -c ~/doc/stat
+                tmux new-window -c ~/doc/
                 tmux new-window -c ~/dotfiles/net
             fi
             if [ -e ~/.work.sig ]; then
