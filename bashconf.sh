@@ -30,7 +30,7 @@ if [ -x ~/dotfiles/ ]; then
 fi
 
 #export PS1="${DIST_SHORT}$XX\u$W@$OX\A$W\w$R\$(git_dirty)$W\$ "
-export PS1="$BL\u$GRAY@$BL\A$GRAY\w$R\$(git_dirty)$GRAY\$ $RESET"
+export PS1="$GREY\u$GRAY@$GREY\A$GRAY\w$R\$(git_dirty)$GRAY\$ $RESET$B"
 
 
 #if [ -f ~/dotfiles/xterm_trans ]; then
