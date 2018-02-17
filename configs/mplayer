@@ -7,3 +7,4 @@ unicode=yes
 utf8=yes
 ass=1
 subfont-osd-scale=1.0
+loop=0
