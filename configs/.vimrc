@@ -28,7 +28,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mkomitee/vim-gf-python'
 Plug 'valloric/matchtagalways'
 Plug 'gorodinskiy/vim-coloresque'
-Plug 'vim-scripts/utf8-math'
+Plug 'anokata/utf8-math'
 "Plug 'vim-scripts/math'
 Plug 'ktonga/vim-follow-my-lead'
 "Plug 'vim-scripts/Align'
@@ -98,7 +98,7 @@ syn region foldBraces start=/{/ end=/}/ transparent fold
 syn region foldJavadoc start=,/\*\*, end=,\*/, transparent fold keepend
 set wrap
 "set textwidth=90
-set textwidth=120
+set textwidth=0
 set wrapmargin=0
 set autoread
 
@@ -190,7 +190,7 @@ map <F9> :w<CR>:!./%<CR>
 map <F3> :w<CR>:!make<CR>
 
 " BARE Python
-map <F10> :w<CR>:!python '%:t'<CR>
+map <F10> :w<CR>:!epython '%:t'<CR>
 "map <C-S-O> :w<CR>:!sudo systemctl reload support<CR>
 "VimL
 map <F11> :w<CR>:source %<CR>
@@ -288,3 +288,6 @@ let g:indexer_disableCtagsWarning=1
 
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1 
+
+" save without root
+"map ?? :w !sudo tee %<CR>
