@@ -1,0 +1,1 @@
+ffmpeg -i file -vn -acodec copy file.ogg
