@@ -10,3 +10,4 @@ tar xf /tmp/dict_er.tar.bz2 -C ~/.stardict/dic
 tar xf /tmp/dict_re.tar.bz2 -C ~/.stardict/dic
 
 sudo pacman -S bridge-utils
+sudo pacman -S libnewt
