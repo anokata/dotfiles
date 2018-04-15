@@ -1,0 +1,1 @@
+ffmpeg -i x.mp4 -filter:v minterpolate -r 120 xoutput.mp4
