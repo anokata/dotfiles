@@ -1,12 +1,12 @@
 #!/bin/bash
 # vim: filetype=sh
+filename="$1"
+name="${filename%.*}"
 
-unzip myriad_cherv_68682.zip
-rm myriad_cherv_68682.zip 
-sed -e 's/<p>/\n/g; s/<\/p>//g;' myriad_cherv_68682.fb2 > myriad_cherv_68682.txt
-rm myriad_cherv_68682.fb2 
+unzip $name.zip || true
+rm $name.zip    || true
+sed -e 's/<p>/\n/g; s/<\/p>//g;' $name.fb2 > $name.txt
 
-#unzip $1
-#rm $1
-#sed -e 's/<p>/\n/g; s/<\/p>//g;' myriad_cherv_68682.fb2 > myriad_cherv_68682.txt
-#rm myriad_cherv_68682.fb2 
+#<empty-line/>
+#rm name.fb2 
+
