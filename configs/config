@@ -9,6 +9,10 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# other mon
+bindsym $mod+m move workspace to output left
+bindsym $mod+u move workspace to output right
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -125,10 +129,13 @@ bar {
 }
 
 assign [class="Chromium"] 2
-assign [class="Firefox"] 4
-assign [class="Thunderbird"] 3
+assign [class="Gnumeric"] 2
+assign [class="Firefox"] 5
+assign [class="Thunderbird"] 4
 assign [class="TelegramDesktop"] 3
-assign [class="Slack"] 5
+assign [class="Slack"] 3
+assign [class="Transmission-gtk"] 2
+assign [class="kdenlive"] 3
 
 #for_window [class="Conky"] floating enable
 new_window none
