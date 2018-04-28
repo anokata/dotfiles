@@ -143,13 +143,15 @@ function _first_general() {
             rmdir ~/ram || true
             ln -s /run/user/$(id -u)/ram ~/ || true
 
-            amixer sset Headphone unmute
-            amixer sset Headphone 100
+            amixer sset Headphone unmute || true
+            amixer sset Headphone 100 || true
             export WORK_DIR=~/doc
             #(gnumeric > /dev/null 2>&1 &)
             #(firefox > /dev/null 2>&1 &)
-            (exec ~/dotfiles/bin/forecast&)
-            gitpullall
+            #(exec ~/dotfiles/bin/forecast&)
+            if ! _is_console; then
+                gitpullall
+            fi
         fi
     elif [ -e ~/.mobile.sig ]; then
         echo "Welcome mobile!"
