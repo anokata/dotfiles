@@ -14,7 +14,7 @@ fi
 #source ~/dotfiles/bin/lib/*.sh #???
 
 function _is_console() {
-    echo $(tty) | grep tty
+    echo $(tty) > /dev/null | grep tty
 }
 
 function _prompt() {
@@ -58,16 +58,16 @@ function _arch_net_connect() {
     sleep 0.1
     echo 'ok'
 
-    for i in 1 2 3; do
-        if ping -c1 inet.atel.me >/dev/null 2>/dev/null; then
+    #for i in 1 2 3; do
+        #if ping -c1 inet.atel.me >/dev/null 2>/dev/null; then
             _net_arch_pptp
-        else
-            echo 'try wifi'
+        #else
+            #echo 'try wifi'
             # if exist
             #TODO
-        fi
-        sleep 0.1
-    done
+        #fi
+        #sleep 0.1
+    #done
 }
 
 function _ubuntu() {
@@ -122,7 +122,7 @@ function _first_general() {
             mkdir /run/user/$(id -u)/Downloads || true
             rmdir ~/Downloads || true
             ln -s /run/user/$(id -u)/Downloads ~/ || true
-            sudo ~/dotfiles/net/wistart
+            #sudo ~/dotfiles/net/wistart
             ip link set $ETH up
             sudo dhcpcd
         fi
@@ -139,12 +139,12 @@ function _first_general() {
             #echo "Hi new day!"
             hello
 
-            mkdir /run/user/$(id -u)/ram || true
-            rmdir ~/ram || true
-            ln -s /run/user/$(id -u)/ram ~/ || true
+            mkdir /run/user/$(id -u)/ram 2>/dev/null || true
+            rmdir ~/ram 2>/dev/null || true
+            ln -s /run/user/$(id -u)/ram ~/  2>/dev/null || true
 
-            amixer sset Headphone unmute || true
-            amixer sset Headphone 100 || true
+            #amixer sset Headphone unmute || true
+            #amixer sset Headphone 100 || true
             export WORK_DIR=~/doc
             #(gnumeric > /dev/null 2>&1 &)
             #(firefox > /dev/null 2>&1 &)
