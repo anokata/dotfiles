@@ -14,7 +14,8 @@ fi
 #source ~/dotfiles/bin/lib/*.sh #???
 
 function _is_console() {
-    echo $(tty) > /dev/null | grep tty
+    echo $(tty) | grep tty
+    #echo $(tty) > /dev/null | grep tty
 }
 
 function _prompt() {
