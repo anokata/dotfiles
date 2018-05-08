@@ -123,7 +123,7 @@ function _first_general() {
             mkdir /run/user/$(id -u)/Downloads || true
             rmdir ~/Downloads || true
             ln -s /run/user/$(id -u)/Downloads ~/ || true
-            #sudo ~/dotfiles/net/wistart
+            sudo ~/dotfiles/net/wistart
             ip link set $ETH up
             sudo dhcpcd
         fi
