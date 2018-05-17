@@ -5,7 +5,7 @@ ico=~/work/master_feed/media/img/favicon.png
 check() {
     URL=$1
     WORD=$2
-    if  curl -A "-- Monitoring" -s $URL | grep $WORD > /dev/null ; then
+    if  curl -k -A "-- Monitoring" -s $URL | grep $WORD > /dev/null ; then
         echo -e "up \t $URL"
     else
         echo down
