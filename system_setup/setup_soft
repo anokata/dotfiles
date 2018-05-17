@@ -11,3 +11,4 @@ tar xf /tmp/dict_re.tar.bz2 -C ~/.stardict/dic
 
 sudo pacman -S bridge-utils
 sudo pacman -S libnewt
+sudo pacman -S ltrace strace

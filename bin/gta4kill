@@ -1,0 +1,1 @@
+while true; do if pgrep gta4; then kill $(pgrep gta4); else sleep 1; fi; done
