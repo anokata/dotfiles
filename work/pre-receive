@@ -1,0 +1,12 @@
+#!/bin/bash
+ERRORS=0
+for f in $(git diff --cached --name-only | grep .py); do
+    if ! git diff --cached $f | pycodestyle --diff; then
+        ERRORS=1
+    fi
+done
+
+if [[ $ERRORS = 1 ]]; then
+    echo Style errors, reject!
+fi
+exit $ERRORS
