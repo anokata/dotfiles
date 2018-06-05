@@ -1,12 +1,23 @@
 #!/bin/bash
 ERRORS=0
-for f in $(git diff --cached --name-only | grep .py); do
-    if ! git diff --cached $f | pycodestyle --diff; then
-        ERRORS=1
-    fi
+
+while read old new ref
+do
+    echo "==> Style Check from git diff $old $new "
+
+    for f in $(git diff $old $new --name-only | grep .py); do
+        git cat-file -p $(git ls-tree $new $f  | cut -d " " -f 3 | cut -f 1) > $f
+        #git diff -U2 $old $new -- $f 
+        if ! git diff -U2 $old $new -- $f | pycodestyle --diff; then
+            ERRORS=1
+        fi
+        rm $f
+    done
+
 done
 
 if [[ $ERRORS = 1 ]]; then
     echo Style errors, reject!
 fi
+echo $ERRORS
 exit $ERRORS
