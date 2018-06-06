@@ -1,0 +1,14 @@
+#!/bin/bash
+# vim: filetype=sh
+run=1
+
+#while $run; do
+ip=$(shuf -i 0-254 -n 1).$(shuf -i 0-254 -n 1).$(shuf -i 0-254 -n 1).$(shuf -i 0-254 -n 1)
+
+host=$(host $ip)
+if ! host $ip | grep NXDOMAIN; then
+    host $ip
+    echo $ip
+    run=0
+fi
+#done
