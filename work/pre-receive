@@ -7,7 +7,7 @@ do
 
     for f in $(git diff $old $new --name-only | grep .py); do
         git cat-file -p $(git ls-tree $new $f  | cut -d " " -f 3 | cut -f 1) > $f
-        if ! git diff -U2 $old $new -- $f | pycodestyle --diff; then
+        if ! git diff -U0 $old $new -- $f | pycodestyle --diff; then
             ERRORS=1
         fi
         rm $f

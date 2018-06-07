@@ -1,0 +1,18 @@
+#!/bin/bash
+while read -ra ITEM; do
+  for i in "${ITEM[@]}"; do
+    git checkout $i
+    #
+    echo ======================== $i
+	echo $GIT_BRANCH $GIT_PREVIOUS_COMMIT $GIT_COMMIT
+	git diff --name-only $GIT_PREVIOUS_COMMIT $GIT_COMMIT
+    if ! git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle --diff; then
+          ERRORS=1
+          echo ERROR
+    fi
+
+	echo ========================___
+  done
+done <<< $(git branch -r | grep -v "HEAD ->" | xargs -L 1 | cut -d'/' -f2)
+
+exit 0

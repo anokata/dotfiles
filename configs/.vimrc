@@ -270,6 +270,7 @@ let @j='A {'
 map <leader>j A {
 " swap args in ()
 let @w='0f(ldt,f)pui, p0f,dw'
+let @s='GggVGy,s'
 
 " === netrw config ===
 " bind :Vexplore
