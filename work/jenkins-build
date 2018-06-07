@@ -16,3 +16,4 @@ while read -ra ITEM; do
 done <<< $(git branch -r | grep -v "HEAD ->" | xargs -L 1 | cut -d'/' -f2)
 
 exit 0
+

@@ -1,16 +1,17 @@
 #!/bin/bash
 # vim: filetype=sh
 run=true
+f=pointer
 
 while $run; do
 ip=$(shuf -i 0-254 -n 1).$(shuf -i 0-254 -n 1).$(shuf -i 0-254 -n 1).$(shuf -i 0-254 -n 1)
 
 host=$(host $ip)
-if host $ip | grep found > /dev/null; then
-    echo -n .
-else
+if host $ip | grep $f > /dev/null; then
     host $ip | cut -d" " -f 5
     echo $ip
     run=false
+else
+    echo -n .
 fi
 done
