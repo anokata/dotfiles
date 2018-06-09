@@ -1,0 +1,20 @@
+#!/bin/bash
+OPTIONS="--diff --max-line-length=120 --show-source"
+git pull origin master
+#EMAIL=$(git show --format="%aE" $GIT_COMMIT | head -n 1)
+EMAILS="tikhomirovsvl@mosreg.ru tikhomirovsvl@mosreg.ru"
+EMAIL=tikhomirovsvl@mosreg.ru
+WHO=$(git show --format="%aD %an %cn" $GIT_COMMIT | head -n 1)
+AUTHOR=$(git show --format="%an" $GIT_COMMIT | head -n 1)
+echo $WHO $EMAIL
+echo $(git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py)
+if ! git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS; then
+      ERRORS=1
+      git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS | mail -s "styleErrors by $AUTHOR" $EMAIL
+      echo $(git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle --diff )
+fi
+
+exit 0
+exit $ERRORS
+
+
