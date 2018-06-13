@@ -5,13 +5,24 @@ git pull origin master
 EMAILS="tikhomirovsvl@mosreg.ru tikhomirovsvl@mosreg.ru"
 EMAIL=tikhomirovsvl@mosreg.ru
 WHO=$(git show --format="%aD %an %cn" $GIT_COMMIT | head -n 1)
+COMMIT_DATE=$(git show --format="%aD" $GIT_COMMIT | head -n 1)
+COMMIT_BODY=$(git show --format="%B %N" $GIT_COMMIT | head -n 1)
 AUTHOR=$(git show --format="%an" $GIT_COMMIT | head -n 1)
 echo $WHO $EMAIL
 echo $(git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py)
 if ! git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS; then
       ERRORS=1
-      git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS | mail -s "styleErrors by $AUTHOR" $EMAIL
-      echo $(git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle --diff )
+      BODYFILE=$(mktemp)
+#git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS | mail -s "styleErrors by $AUTHOR" $EMAIL
+#echo $(git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle --diff )
+#printf "Error by %s\n%s" $(echo $WHO) $(git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS ) | mail -s "styleErrors by $AUTHOR" $EMAILS
+
+echo "Commit @ $COMMIT_DATE" >> $BODYFILE
+echo "Error by $AUTHOR" >> $BODYFILE
+echo "MSG: $COMMIT_BODY" >> $BODYFILE
+echo "" >> $BODYFILE
+echo git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS  >> $BODYFILE
+cat $BODYFILE | mail -s "styleErrors by $AUTHOR" $EMAIL
 fi
 
 exit 0
