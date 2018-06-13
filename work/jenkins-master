@@ -1,31 +1,26 @@
 #!/bin/bash
-OPTIONS="--diff --max-line-length=120 --show-source"
 git pull origin master
-#EMAIL=$(git show --format="%aE" $GIT_COMMIT | head -n 1)
-EMAILS="tikhomirovsvl@mosreg.ru tikhomirovsvl@mosreg.ru"
-EMAIL=tikhomirovsvl@mosreg.ru
-WHO=$(git show --format="%aD %an %cn" $GIT_COMMIT | head -n 1)
+# GIT_PREVIOUS_COMMIT=HEAD^^^^^^^^^^^^^^^^^^^^^^^^^
+ GIT_PREVIOUS_COMMIT=$(git merge-base $GIT_COMMIT $GIT_PREVIOUS_COMMIT)
+AUTHOR_EMAIL=$(git show --format="%aE" $GIT_COMMIT | head -n 1)
+OPTIONS="--diff --max-line-length=120 --statistics --show-source"
+EMAILS="tikhomirovsvl@mosreg.ru " # belovmm@mosreg.ru 
 COMMIT_DATE=$(git show --format="%aD" $GIT_COMMIT | head -n 1)
 COMMIT_BODY=$(git show --format="%B %N" $GIT_COMMIT | head -n 1)
 AUTHOR=$(git show --format="%an" $GIT_COMMIT | head -n 1)
-echo $WHO $EMAIL
-echo $(git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py)
 if ! git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS; then
-      ERRORS=1
-      BODYFILE=$(mktemp)
-#git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS | mail -s "styleErrors by $AUTHOR" $EMAIL
-#echo $(git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle --diff )
-#printf "Error by %s\n%s" $(echo $WHO) $(git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS ) | mail -s "styleErrors by $AUTHOR" $EMAILS
-
+ERRORS=1
+BODYFILE=$(mktemp)
 echo "Commit @ $COMMIT_DATE" >> $BODYFILE
-echo "Error by $AUTHOR" >> $BODYFILE
-echo "MSG: $COMMIT_BODY" >> $BODYFILE
+echo "By $AUTHOR" >> $BODYFILE
+echo "Commit message: $COMMIT_BODY" >> $BODYFILE
 echo "" >> $BODYFILE
-echo git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS  >> $BODYFILE
-cat $BODYFILE | mail -s "styleErrors by $AUTHOR" $EMAIL
+git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS  >> $BODYFILE
+echo "" >> $BODYFILE
+cat $BODYFILE | mail -s "Jenkins Style errors in commit by $AUTHOR" $EMAILS
+rm $BODYFILE
 fi
 
-exit 0
 exit $ERRORS
 
 

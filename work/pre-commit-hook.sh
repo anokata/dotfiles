@@ -1,6 +1,7 @@
 #!/bin/bash
 # echo $PATH
 # echo $(which pycodestyle)
+OPTIONS="--diff --max-line-length=120 --show-source"
 ERRORS=0
 if  [ -z $(command -v pycodestyle) ]; then
     ERRORS=1
@@ -16,8 +17,8 @@ do
         echo "INFO: skipping ${filename} because \"${extension}\""
         continue
     fi
-    if ! git diff -U0 $file | pycodestyle --diff; then
-        echo $(git diff -U0 ${file} | pycodestyle --diff)
+    if ! git diff -U0 $file | pycodestyle $OPTIONS; then
+        echo $(git diff -U0 ${file} | pycodestyle $OPTIONS)
         ERRORS=1
     else
         echo "INFO: ${filename} is OK"
