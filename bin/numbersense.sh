@@ -1,5 +1,5 @@
 #!/bin/bash
-# use: numbersense [min] [max] [separated?] [char]
+# use: numbersense [min] [max] [separated?] [char] [pause]
 
 if [ -z "$1" ]; then
     A=5
@@ -33,10 +33,9 @@ number=$(shuf -i $A-$B -n1)
 x=$number
 space=$(shuf -i 5-25 -n1)
 vert=$(shuf -i 0-5 -n1)
-printf "%${space}s"
 printf "%${vert}s" | tr " " "\n"
+printf "%${space}s"
 
-printf "         " 
 while [ $x -gt 0 ]  ; do 
     dec=$(shuf -i 1-$x -n1)
     x=$(expr $x - $dec)
@@ -49,6 +48,7 @@ while [ $x -gt 0 ]  ; do
 done
 
 tput cup 0 0
+#sleep 1; clear;
 read input
 if [ "0$input" -eq "$number" ]; then
     echo 'Good! :)'
@@ -56,6 +56,6 @@ else
     echo 'Nooo! :('
 fi
 echo $number
-sleep 1
+sleep 2
 
 done
