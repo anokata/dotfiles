@@ -1,5 +1,9 @@
 #!/bin/bash
 # use: numbersense [min] [max] [separated?] [char] [pause]
+chars=(. = + o - I ^ )
+nchar=$(expr ${#chars[*]} - 1)
+rounds=0
+wins=0
 
 if [ -z "$1" ]; then
     A=5
@@ -33,6 +37,8 @@ number=$(shuf -i $A-$B -n1)
 x=$number
 space=$(shuf -i 5-25 -n1)
 vert=$(shuf -i 0-5 -n1)
+char_i=$(shuf -i 0-$nchar -n1)
+ char=${chars[$char_i]}
 printf "%${vert}s" | tr " " "\n"
 printf "%${space}s"
 
@@ -50,8 +56,17 @@ done
 tput cup 0 0
 #sleep 1; clear;
 read input
+if [ "$input" = "q" ]; then
+    #must=$(expr $(expr $rounds \* $(expr 100 \/ $C)) \/ 100)
+    #get=$(expr $(expr $wins\* $(expr 100 \/ $C)) \/ 100)
+    echo "Total: $wins/$rounds Prc: $(expr $rounds \* $wins) must: $must $get"
+    exit
+fi
+
+rounds=$(expr $rounds + 1)
 if [ "0$input" -eq "$number" ]; then
     echo 'Good! :)'
+    wins=$(expr $wins + 1)
 else
     echo 'Nooo! :('
 fi
