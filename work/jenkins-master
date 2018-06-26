@@ -1,18 +1,21 @@
 #!/bin/bash
 git pull origin master
-# GIT_PREVIOUS_COMMIT=HEAD^^^^^^^^^^^^^^^^^^^^^^^^^
  GIT_PREVIOUS_COMMIT=$(git merge-base $GIT_COMMIT $GIT_PREVIOUS_COMMIT)
 AUTHOR_EMAIL=$(git show --format="%aE" $GIT_COMMIT | head -n 1)
 OPTIONS="--diff --max-line-length=120 --statistics --show-source"
-EMAILS="tikhomirovsvl@mosreg.ru " # belovmm@mosreg.ru 
 COMMIT_DATE=$(git show --format="%aD" $GIT_COMMIT | head -n 1)
 COMMIT_BODY=$(git show --format="%B %N" $GIT_COMMIT | head -n 1)
 AUTHOR=$(git show --format="%an" $GIT_COMMIT | head -n 1)
+PRE_AUTHOR=$(git show --format="%an" $(git rev-list $GIT_COMMIT --max-count 2 | tail -n1) | head -n1)
+PRE_EMAIL=$(git show --format="%aE" $(git rev-list $GIT_COMMIT --max-count 2 | tail -n1) | head -n1)
+EMAILS="tikhomirovsvl@mosreg.ru belovmm@mosreg.ru $AUTHOR_EMAIL" 
+
 if ! git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS; then
 ERRORS=1
 BODYFILE=$(mktemp)
 echo "Commit @ $COMMIT_DATE" >> $BODYFILE
 echo "By $AUTHOR" >> $BODYFILE
+echo "(previous commit author: $PRE_AUTHOR)" >> $BODYFILE
 echo "Commit message: $COMMIT_BODY" >> $BODYFILE
 echo "" >> $BODYFILE
 git diff -U0 $GIT_PREVIOUS_COMMIT $GIT_COMMIT -- *.py **/*.py | pycodestyle $OPTIONS  >> $BODYFILE
