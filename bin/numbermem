@@ -3,24 +3,21 @@ wins=0
 rounds=0
 sec=1
 nums=()
+A=0
+B=9
 
 if [ -z "$1" ]; then
-    A=1
+    C=3
 else
-    A=$1
+    C=$1
 fi
 
 if [ -z "$2" ]; then
-    B=9
+    sec=1
 else
-    B=$2
+    sec=$2
 fi
 
-if [ -z "$3" ]; then
-    C=2
-else
-    C=$3
-fi
 
 
 while true; do
