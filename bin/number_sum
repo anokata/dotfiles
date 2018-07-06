@@ -1,0 +1,47 @@
+#!/bin/bash
+wins=0
+rounds=0
+sec=2
+
+if [ -z "$1" ]; then
+    A=5
+else
+    A=$1
+fi
+
+if [ -z "$2" ]; then
+    B=100
+else
+    B=$2
+fi
+
+if [ -z "$3" ]; then
+    sec=2
+else
+    sec=$3
+fi
+
+while true; do
+    a=$(shuf -i $A-$B -n1)
+    b=$(shuf -i $A-$B -n1)
+    echo "$a + $b = ?"
+    sum=$(expr $a + $b)
+
+    echo "Enter in $sec seconds:"
+    read -t $sec input 
+    if [ "$input" = "q" ]; then
+        echo "Total: $wins/$rounds Prc: $(expr $(expr $wins \* 100) \/ $rounds)%"
+        exit
+    fi
+
+    rounds=$(expr $rounds + 1)
+    if [ "0$input" -eq "$sum" ]; then
+        echo 'Good! :)'
+        wins=$(expr $wins + 1)
+    else
+        echo 'Nooo! :('
+    fi
+    echo $sum
+    sleep 1
+
+done
