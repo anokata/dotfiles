@@ -2,6 +2,7 @@
 wins=0
 rounds=0
 sec=2
+op=+
 
 if [ -z "$1" ]; then
     A=5
@@ -21,11 +22,17 @@ else
     sec=$3
 fi
 
+if [ -z "$4" ]; then
+    op=+
+else
+    op=$4
+fi
+
 while true; do
     a=$(shuf -i $A-$B -n1)
     b=$(shuf -i $A-$B -n1)
-    echo "$a + $b = ?"
-    sum=$(expr $a + $b)
+    echo "$a $op $b = ?"
+    sum=$(expr $a $op $b)
 
     echo "Enter in $sec seconds:"
     read -t $sec input 
