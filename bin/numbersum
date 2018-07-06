@@ -31,7 +31,8 @@ fi
 while true; do
     a=$(shuf -i $A-$B -n1)
     b=$(shuf -i $A-$B -n1)
-    echo "$a $op $b = ?"
+    echo -e "$a $op $b = ?\n"
+    echo -e "$a \n$b"
     sum=$(expr $a $op $b)
 
     echo "Enter in $sec seconds:"
