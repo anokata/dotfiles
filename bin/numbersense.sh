@@ -57,9 +57,7 @@ tput cup 0 0
 #sleep 1; clear;
 read input
 if [ "$input" = "q" ]; then
-    #must=$(expr $(expr $rounds \* $(expr 100 \/ $C)) \/ 100)
-    #get=$(expr $(expr $wins\* $(expr 100 \/ $C)) \/ 100)
-    echo "Total: $wins/$rounds Prc: $(expr $rounds \* $wins) must: $must $get"
+    echo "Total: $wins/$rounds Prc: $(expr $(expr $wins \* 100) \/ $rounds)%"
     exit
 fi
 

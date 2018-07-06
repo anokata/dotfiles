@@ -1,0 +1,58 @@
+#!/bin/bash
+wins=0
+rounds=0
+sec=1
+nums=()
+
+if [ -z "$1" ]; then
+    A=1
+else
+    A=$1
+fi
+
+if [ -z "$2" ]; then
+    B=9
+else
+    B=$2
+fi
+
+if [ -z "$3" ]; then
+    C=2
+else
+    C=$3
+fi
+
+
+while true; do
+    sequence=""
+    for i in $(seq $C); do
+        num=$(shuf -i $A-$B -n1)
+        nums[$i]=num
+        sequence="$sequence $num"
+    done
+
+    echo $sequence
+    sleep $sec
+    clear
+
+    echo "Repeat sequence in 9 seconds:"
+    read -t 9 input 
+    if [ "$input" = "q" ]; then
+        echo "Total: $wins/$rounds Prc: $(expr $(expr $wins \* 100) \/ $rounds)%"
+        exit
+    fi
+
+    rounds=$(expr $rounds + 1)
+    input=$(echo "$input" | tr -d ' ')
+    sequence=$(echo "$sequence" | tr -d ' ')
+    if [ "$input" = "$sequence" ]; then
+        echo 'Good! :)'
+        wins=$(expr $wins + 1)
+    else
+        echo 'Nooo! :('
+        echo "It was $sequence"
+    fi
+    sleep 1
+    clear
+
+done
