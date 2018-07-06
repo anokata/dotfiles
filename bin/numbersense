@@ -1,7 +1,6 @@
 #!/bin/bash
-# use: numbersense [min] [max] [separated?] [char] [pause]
+echo "use: numbersense [min] [max] [separated?] [char] [pause]"
 chars=(. = + o - I ^ )
-nchar=$(expr ${#chars[*]} - 1)
 rounds=0
 wins=0
 
@@ -25,11 +24,12 @@ fi
 if [ -z "$4" ]; then
     char="="
 else
-    char="$4"
+    chars=($4, $4)
 fi
 # start
 
 C=$(expr $B - $A)
+nchar=$(expr ${#chars[*]} - 1)
 
 while true; do
 clear
