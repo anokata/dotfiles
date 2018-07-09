@@ -3,6 +3,8 @@ wins=0
 rounds=0
 sec=2
 op=+
+A=5
+B=100
 
 if [ -z "$1" ]; then
     A=5
@@ -36,14 +38,14 @@ while true; do
     sum=$(expr $a $op $b)
 
     echo "Enter in $sec seconds:"
-    read -t $sec input 
-    if [ "$input" = "q" ]; then
+    read -t $sec unput 
+    if [ "$unput" = "q" ]; then
         echo "Total: $wins/$rounds Prc: $(expr $(expr $wins \* 100) \/ $rounds)%"
         exit
     fi
 
     rounds=$(expr $rounds + 1)
-    if [ "0$input" -eq "$sum" ]; then
+    if [ "0$unput" -eq "$sum" ]; then
         echo 'Good! :)'
         wins=$(expr $wins + 1)
     else
@@ -51,5 +53,6 @@ while true; do
     fi
     echo $sum
     sleep 1
+    clear
 
 done
