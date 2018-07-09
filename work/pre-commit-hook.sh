@@ -20,7 +20,12 @@ do
     if ! git diff -U0 $file | pycodestyle $OPTIONS; then
         echo $(git diff -U0 ${file} | pycodestyle $OPTIONS)
         ERRORS=1
-    else
+    fi
+    
+    if ! git diff -U0 $file | ./checkpydoc.py ; then
+        ERRORS=1
+    fi
+    if [ $ERRORS == 0 ]; then 
         echo "INFO: ${filename} is OK"
     fi
 done
