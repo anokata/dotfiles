@@ -1,2 +1,0 @@
-mplayer -nocache http://cctv.atel.me:8080/rtsp/747/40cef2c9e810b4b63e25
-#$('.content > script:nth-child(2)')[0].text.split('\n')[3].split('=')[3]
