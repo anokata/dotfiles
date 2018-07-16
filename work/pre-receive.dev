@@ -15,7 +15,11 @@ function filter_file() {
 
 while read old new ref
 do
+    if [ $old == "0000000000000000000000000000000000000000" ]; then
+        old=$(git log --pretty=oneline | head -n 1 | tail -n 1 | cut -d" " -f 1)
+    fi
     echo "==> Style Check from git diff $old $new "
+    echo ""
 
     for f in $(git diff $old $new --name-only | grep .py); do
         dir=$(dirname $f)
