@@ -148,6 +148,7 @@ map <leader>r :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 nmap <leader>q :w<CR>
 nmap <leader>e :q<CR>
 nmap <leader>X :!chmod +x %<CR>
+nmap tt :terminal<CR>
 
 nmap ё `
 nmap Ж :
