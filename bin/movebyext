@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 ext=$1
 path=$2
-find -iname '*$ext' -exec mv {} $path \;
+find -iname "*$ext" -exec mv {} $path \;

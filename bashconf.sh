@@ -1,8 +1,8 @@
 #!/bin/bash
 
 HISTCONTROL=ignoreboth
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 set -o vi
 shopt -s histappend
 shopt -s checkwinsize
