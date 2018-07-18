@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ERRORS=0
-OPTIONS="--diff --max-line-length=120 --show-source --exclude=*smev*_api.py"
+OPTIONS="--diff --max-line-length=120 --show-source --exclude=*smev*_api.py --ignore=E722"
 
 function filter_file() {
     file=$1
@@ -26,19 +26,23 @@ do
         if [ $dir != "." ]; then
             mkdir -p $dir > /dev/null 2>&1
         fi
-        git cat-file -p $(git ls-tree $new $f  | cut -d " " -f 3 | cut -f 1) > $f
-        if filter_file $f; then
-            #git diff -U0 $old $new -- $f 
-            if ! git diff -U0 $old $new -- $f | pycodestyle $OPTIONS; then
-                ERRORS=1
+
+        hash=$(git ls-tree $new $f  | cut -d " " -f 3 | cut -f 1)
+        if [ ! -z "$hash" ]; then
+            git cat-file -p $hash > $f
+            if filter_file $f; then
+                #git diff -U0 $old $new -- $f 
+                if ! git diff -U0 $old $new -- $f | pycodestyle $OPTIONS; then
+                    ERRORS=1
+                fi
+                if ! git diff -U0 $old $new -- $f | ./checkpydoc.py ./; then
+                    ERRORS=1
+                fi
             fi
-            if ! git diff -U0 $old $new -- $f | ./checkpydoc.py ./; then
-                ERRORS=1
+            rm $f
+            if [ $dir != "." ]; then
+                rmdir $dir > /dev/null 2>&1
             fi
-        fi
-        rm $f
-        if [ $dir != "." ]; then
-            rmdir $dir > /dev/null 2>&1
         fi
     done
 
