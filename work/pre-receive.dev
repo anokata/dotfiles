@@ -2,6 +2,13 @@
 ERRORS=0
 OPTIONS="--diff --max-line-length=120 --show-source --exclude=*smev*_api.py --ignore=E722"
 
+gitismerge () {
+    local sha="$1"
+    msha=$(git rev-list -1 --merges ${sha}~1..${sha})
+    [ -z "$msha" ] && return 1
+    return 0
+}
+
 function filter_file() {
     file=$1
     IS_API=$(basename $file | grep '_api.py$' > /dev/null; echo $?)
@@ -17,6 +24,10 @@ while read old new ref
 do
     if [ $old == "0000000000000000000000000000000000000000" ]; then
         old=$(git log --pretty=oneline | head -n 1 | tail -n 1 | cut -d" " -f 1)
+    fi
+    if gitismerge $new; then
+        echo "==> Skip the commit because merge"
+        exit 0
     fi
     echo "==> Style Check from git diff $old $new "
     echo ""
