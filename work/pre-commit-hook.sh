@@ -24,13 +24,16 @@ do
         continue
     fi
 
+    git_root=$(git rev-parse --show-toplevel)
+
     if ! git diff -U0 $file | pycodestyle $OPTIONS; then
         echo $(git diff -U0 ${file} | pycodestyle $OPTIONS)
         ERRORS=1
     fi
     
-    if ! git diff -U0 $file | ./checkpydoc.py ; then
-        echo $(git diff -U0 $file | ./checkpydoc.py )
+    root=$(dirname $0)
+    if ! git diff -U0 $file | $root/checkpydoc.py "$git_root"; then
+        echo $(git diff -U0 $file | $root/checkpydoc.py $git_root)
         ERRORS=1
     fi
     if [ $ERRORS == 0 ]; then 
