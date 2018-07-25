@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+sd=$(newusb)
+echo "Mount $sd to /mnt/ftp"
+sudo mount /dev/$sd /mnt/ftp
+echo "Press Enter when need to unmound"
+read
+echo "Unmount $sd"
+sudo umount /dev/$sd
