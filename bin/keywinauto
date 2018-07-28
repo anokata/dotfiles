@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+#windowid=$(xdotool search --class Chromium | head -1)
+xdotool key --window $(xdotool getactivewindow) a
