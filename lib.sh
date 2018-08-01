@@ -130,7 +130,7 @@ function _first_general() {
         if _is_first_run; then 
             xbacklight -set 20 || true
             mons -s || true
-            (work > /dev/null 1>&1 &)&
+            #(work > /dev/null 1>&1 &)&
         fi
         export WORK_DIR=~/work/portal
     elif [ -e ~/.home.sig ]; then
