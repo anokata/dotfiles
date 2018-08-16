@@ -18,5 +18,5 @@ check() {
 check https://support.mosreg.ru/portal/login password
 check https://support.mosreg.ru/feed/ mosreg 
 check https://support.mosreg.ru/ mosreg
-check http://ext.support.mosreg.ru/portal/ mosreg
+check https://ext.support.mosreg.ru/portal/ mosreg
 
