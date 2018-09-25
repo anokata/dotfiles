@@ -21,9 +21,9 @@ function _tmux_run () {
                 tmux select-pane -L
                 tmux new-window -c $WORK_DIR
                 #tmux split-window -hp 30 -c $WORK_DIR
-                tmux new-window -c ~/work/mosreg-survey
+                tmux new-window -c ~/work/portal
                 tmux new-window -c $WORK_DIR
-                tmux split-window -v -c ~/work/mosreg-survey
+                tmux split-window -v -c ~/work/portal
                 #tmux split-window -h
                 #tmux split-window -hp 50 -c ~/cprojects
                 tmux select-window -t 1
