@@ -15,17 +15,15 @@ function _tmux_run () {
             if [ -e ~/.home.sig ]; then
                 tmux new-window -c ~/doc/
                 tmux new-window -c ~/dotfiles/net
+                tmux new-window -c /mnt/values/
             fi
             if [ -e ~/.work.sig ]; then
                 tmux split-window -h -c ~/dotfiles/
                 tmux select-pane -L
                 tmux new-window -c $WORK_DIR
-                #tmux split-window -hp 30 -c $WORK_DIR
                 tmux new-window -c ~/work/portal
                 tmux new-window -c $WORK_DIR
                 tmux split-window -v -c ~/work/portal
-                #tmux split-window -h
-                #tmux split-window -hp 50 -c ~/cprojects
                 tmux select-window -t 1
                 tmux select-pane -L
                 tmux split-window -vp25 portal_mon
