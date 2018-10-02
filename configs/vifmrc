@@ -180,6 +180,9 @@ filextype *.djvu
         \ {View in apvlv}
         \ apvlv %f,
 
+
+filetype *.jpg,*.jpeg,*.png,*.gif feh -FY %f 2>/dev/null & 
+
 " Audio
 filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.wma,*.ape,*.ac3
        \ {Play using ffplay}
@@ -424,7 +427,6 @@ nnoremap <f8> :delete<cr>
 map x :f xr<CR>
 map b :marks<CR>
 
-filetype *.jpg,*.jpeg,*.png,*.gif feh %f 2>/dev/null & 
 filetype *.pdf xreader %f&
 fileviewer *.pdf
   \ pdftotext %c -
