@@ -14,6 +14,7 @@ function _tmux_run () {
 
             if [ -e ~/.home.sig ]; then
                 tmux new-window -c ~/doc/
+                tmux split-window -v -c ~/doc/
                 tmux new-window -c ~/dotfiles/net
                 tmux split-window -v -c /mnt/store
                 tmux new-window -c /mnt/values/video
