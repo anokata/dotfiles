@@ -181,7 +181,7 @@ filextype *.djvu
         \ apvlv %f,
 
 
-filetype *.jpg,*.jpeg,*.png,*.gif feh -FY %f 2>/dev/null & 
+filetype *.jpg,*.jpeg,*.png, feh -FY %f 2>/dev/null & 
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.wma,*.ape,*.ac3
@@ -222,12 +222,18 @@ filetype *.[1-8] gtbl %c | groff -Tascii -man | less
 fileviewer *.[1-8] gtbl %c | groff -Tascii -man | col -b
 
 " Image
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.xpm
         \ {View in sxiv}
-        \ sxiv,
+        \ sxiv -a,
         \ {View in gpicview}
         \ gpicview %c,
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
+fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm convert -identify %f -verbose /dev/null
+
+" Gif
+filextype *.gif
+        \ {View in sxiv}
+        \ sxiv -a,
+fileviewer *.gif convert -identify %f -verbose /dev/null
 
 " MD5
 filetype *.md5
