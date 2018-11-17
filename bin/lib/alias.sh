@@ -11,6 +11,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias youtube="youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'"
+alias youtubehi="youtube-dl -f 'bestvideo[height>=720]+bestaudio/best[height>=720]'"
 alias nano='nano -u -x'
 alias sloc='cat *.c *.h | uniq | wc -l'
 alias lk='ll | grep / | grep " \."'
