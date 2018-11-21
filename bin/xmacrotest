@@ -1,0 +1,2 @@
+#xmacrorec2
+xmacroplay "$DISPLAY" < ~/macrotest
