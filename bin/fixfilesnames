@@ -1,0 +1,4 @@
+find . -type f -print0 | \
+perl -n0e '$new = $_; if($new =~ s/[^[:ascii:]]//g) {
+  print("Renaming $_ to $new\n"); rename($_, $new);
+}'
