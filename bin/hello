@@ -7,7 +7,8 @@ datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
     d=$(( (d1 - d2) / 86400 ))
-    echo -e "Have a nice ${d}th day!"
+    h=$(( (d1 - d2) / 3600 ))
+    echo -e "Have a nice ${d}th day! (you lived ${h} hours)"
 }
 
 datediff "$now" "$birthdate"
