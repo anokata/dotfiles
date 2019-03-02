@@ -1,0 +1,4 @@
+sudo rfkill unblock all
+sudo ip link set wlp2s0 up
+sudo wpa_supplicant -B -iwlp2s0 -c/etc/wpa_supplicant.conf -Dnl80211
+sudo dhcpcd wlp2s0
