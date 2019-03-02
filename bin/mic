@@ -1,0 +1,2 @@
+arecord -v -f cd -t raw | lame -r - /tmp/output.mp3
+mpv /tmp/output.mp3

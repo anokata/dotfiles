@@ -1,0 +1,6 @@
+rm noisesample.wav
+rm noise_profile_file
+rm output.mp3
+#ffmpeg -i "$1" -vn -ss 00:00:00 -t 00:00:01 noisesample.wav
+#sox noisesample.wav -n noiseprof noise_profile_file
+sox "$1" output.mp3 noisered noise_profile_file 0.31
