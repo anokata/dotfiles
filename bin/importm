@@ -1,1 +1,2 @@
 tar cf a.tar ~/.mozilla/ 2>/dev/null
+tar cf c.tar ~/.config/chromium/ 2>/dev/null
