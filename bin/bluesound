@@ -1,0 +1,7 @@
+sudo rfkill unblock 1
+echo "power on" | bluetoothctl
+echo "scan on" | bluetoothctl
+echo "agent on" | bluetoothctl
+echo "pair B8:69:C2:09:B0:A5" | bluetoothctl 
+echo "trust B8:69:C2:09:B0:A5" | bluetoothctl 
+echo "connect B8:69:C2:09:B0:A5" | bluetoothctl 
