@@ -1,0 +1,10 @@
+binutils
+telegram
+scim
+xorg-xrandr
+mons
+pacman-contrib
+sudo pacman -S --needed base-devel
+aur https://aur.archlinux.org/mons-git.git
+aur https://aur.archlinux.org/sc-im.git
+
