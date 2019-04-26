@@ -10,3 +10,6 @@ aur https://aur.archlinux.org/sc-im.git
 zip
 alsa-utils alsa-firmware alsa-tools
 mtpaint
+sudo pacman -S libva-intel-driver
+sudo pacman -S  intel-media-driver
+sudo pacman -S libva-utils mpv
