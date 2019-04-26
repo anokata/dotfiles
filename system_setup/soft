@@ -7,4 +7,6 @@ pacman-contrib
 sudo pacman -S --needed base-devel
 aur https://aur.archlinux.org/mons-git.git
 aur https://aur.archlinux.org/sc-im.git
-
+zip
+alsa-utils alsa-firmware alsa-tools
+mtpaint
