@@ -66,3 +66,4 @@ alias watchtime="watch -tc -n0.1 date +%T.%2N"
 alias watchtm="watch -tc -n0.1 timed"
 alias update="sudo pacman -Syu"
 alias feh='feh -FYr'
+alias m='mpv --opengl-es=yes'
