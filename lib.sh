@@ -148,10 +148,11 @@ function _first_general() {
             #amixer sset Headphone 100 || true
             export WORK_DIR=~/doc
             #(gnumeric > /dev/null 2>&1 &)
-            (firefox > /dev/null 2>&1 &)
+            #(firefox > /dev/null 2>&1 &)
             #(exec ~/dotfiles/bin/forecast&)
             if ! _is_console; then
-                gitpullall
+                #gitpullall
+                mons -s
             fi
         fi
     elif [ -e ~/.mobile.sig ]; then

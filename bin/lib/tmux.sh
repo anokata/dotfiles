@@ -13,12 +13,13 @@ function _tmux_run () {
             tmux new -s $TMUX_SESSION_NAME -d
 
             if [ -e ~/.home.sig ]; then
+                tmux split-window -v
                 tmux new-window -c ~/doc/
                 tmux split-window -v -c ~/doc/
                 tmux new-window -c ~/dotfiles/net
-                tmux split-window -v -c /mnt/store
-                tmux new-window -c /mnt/values/video
-                tmux split-window -v -c /mnt/store
+                tmux split-window -v -c /mnt/
+                tmux new-window -c /mnt/
+                tmux split-window -v -c /mnt/
                 tmux select-window -t 2
             fi
             if [ -e ~/.work.sig ]; then
