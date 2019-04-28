@@ -1,0 +1,97 @@
+2016-10-20.07:57:47
+Got signal 6
+0.1.5.976 x64
+[bt] Execution path:
+[bt] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x38) [0x7fdd69686418]
+[bt] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x38) [0x7fdd69686418]
+[bt] /lib/x86_64-linux-gnu/libc.so.6(abort+0x16a) [0x7fdd6968801a]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x16d) [0x7fdd69fc884d]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8d6b6) [0x7fdd69fc66b6]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8d701) [0x7fdd69fc6701]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8d919) [0x7fdd69fc6919]
+[bt] yandex-disk() [0x431c50]
+[bt] yandex-disk() [0x43c844]
+[bt] yandex-disk() [0x56ff54]
+[bt] yandex-disk() [0x5780b1]
+[bt] yandex-disk() [0x5dcd13]
+[bt] yandex-disk() [0x43093f]
+[bt] yandex-disk() [0x7bf3c5]
+[bt] yandex-disk() [0x9ff26c]
+[bt] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76fa) [0x7fdd6a2c26fa]
+[bt] /lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fdd69757b5d]
+
+2016-10-22.08:20:25
+Got signal 6
+0.1.5.976 x64
+[bt] Execution path:
+[bt] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x38) [0x7fc205f1d418]
+[bt] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x38) [0x7fc205f1d418]
+[bt] /lib/x86_64-linux-gnu/libc.so.6(abort+0x16a) [0x7fc205f1f01a]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x16d) [0x7fc20685f84d]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8d6b6) [0x7fc20685d6b6]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8d701) [0x7fc20685d701]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8d919) [0x7fc20685d919]
+[bt] yandex-disk() [0x431c50]
+[bt] yandex-disk() [0x43c844]
+[bt] yandex-disk() [0x56ff54]
+[bt] yandex-disk() [0x5780b1]
+[bt] yandex-disk() [0x5dcd13]
+[bt] yandex-disk() [0x43093f]
+[bt] yandex-disk() [0x7bf3c5]
+[bt] yandex-disk() [0x9ff26c]
+[bt] /lib/x86_64-linux-gnu/libpthread.so.0(+0x76fa) [0x7fc206b596fa]
+[bt] /lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fc205feeb5d]
+
+2016-11-26.21:30:02
+Got signal 6
+0.1.5.976 x64
+[bt] Execution path:
+[bt] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x38) [0x7f12bad20428]
+[bt] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x38) [0x7f12bad20428]
+[bt] /lib/x86_64-linux-gnu/libc.so.6(abort+0x16a) [0x7f12bad2202a]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x16d) [0x7f12bb66284d]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8d6b6) [0x7f12bb6606b6]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8d701) [0x7f12bb660701]
+[bt] /usr/lib/x86_64-linux-gnu/libstdc++.so.6(+0x8d919) [0x7f12bb660919]
+[bt] /usr/bin/yandex-disk() [0x48bf1f]
+[bt] /usr/bin/yandex-disk() [0x7adee4]
+[bt] /usr/bin/yandex-disk() [0x79dcba]
+[bt] /usr/bin/yandex-disk() [0x57f0c6]
+[bt] /usr/bin/yandex-disk() [0x578574]
+[bt] /usr/bin/yandex-disk() [0x758801]
+[bt] /usr/bin/yandex-disk() [0x43093f]
+[bt] /usr/bin/yandex-disk() [0x7bf3c5]
+[bt] /usr/bin/yandex-disk() [0x9ff26c]
+[bt] /lib/x86_64-linux-gnu/libpthread.so.0(+0x770a) [0x7f12bb95c70a]
+[bt] /lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7f12badf182d]
+
+2017-11-07.19:47:43
+Got signal 11, faulty address is 8, from 0x9e1f0a 
+0.1.5.978 x64
+[bt] Execution path:
+[bt] /usr/bin/yandex-disk() [0x9e1f0a]
+[bt] /usr/bin/yandex-disk() [0x9e1f0a]
+[bt] /usr/bin/yandex-disk() [0x9e4d8f]
+[bt] /usr/bin/yandex-disk() [0x45b15a]
+[bt] /usr/bin/yandex-disk() [0x43097f]
+[bt] /usr/bin/yandex-disk() [0x7c4f25]
+[bt] /usr/bin/yandex-disk() [0xa0666c]
+[bt] /usr/lib/libpthread.so.0(+0x708a) [0x7f4532d8808a]
+[bt] /usr/lib/libc.so.6(clone+0x3f) [0x7f45321d624f]
+
+2017-12-10.09:50:23
+Got signal 11, faulty address is 0, from 0x9e17af 
+0.1.5.978 x64
+[bt] Execution path:
+[bt] /usr/bin/yandex-disk() [0x9e17af]
+[bt] /usr/bin/yandex-disk() [0x9e17af]
+[bt] /usr/bin/yandex-disk() [0x9e1c8e]
+[bt] /usr/bin/yandex-disk() [0x9e1f5a]
+[bt] /usr/bin/yandex-disk() [0x9e4d8f]
+[bt] /usr/bin/yandex-disk() [0x45b15a]
+[bt] /usr/bin/yandex-disk() [0x43097f]
+[bt] /usr/bin/yandex-disk() [0x7c4f25]
+[bt] /usr/bin/yandex-disk() [0xa0666c]
+[bt] /usr/lib/libpthread.so.0(+0x708a) [0x7f829236c08a]
+[bt] /usr/lib/libc.so.6(clone+0x3f) [0x7f82917b942f]
+
