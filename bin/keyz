@@ -1,0 +1,1 @@
+for i in $(seq 100); do xdotool keydown z; xdotool keyup z; done
