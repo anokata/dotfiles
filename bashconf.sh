@@ -33,6 +33,8 @@ fi
 #export PS1="${DIST_SHORT}$XX\u$W@$OX\A$W\w$R\$(git_dirty)$W\$ "
 #export PS1="$GREY\u$GRAY@$GREY\A$GRAY\w$R\$(git_dirty)$GRAY\$ $RESET"
 export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
+# for white
+export PS1="$K\u@\w$R\$(git_dirty)$K\$ "
 #https://unix.stackexchange.com/questions/153102/how-to-start-xterm-with-prompt-at-the-bottom/153121
 #PS1='\[$(retval=$?;tput cup "$LINES";exit $retval)\]'$PS1
 #bind 'RETURN: "\e[1~clear; \e[4~\n"'
