@@ -12,7 +12,9 @@ with open(filename) as inf:
 
 new_link = soup.new_tag("a", href=link)
 new_link.string = link
+br = soup.new_tag("br")
 soup.body.append(new_link)
+soup.body.append(br)
 
 with open(filename, "w") as outf:
     outf.write(str(soup))
