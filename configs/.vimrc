@@ -1,34 +1,33 @@
-
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat' 
-Plug 'tpope/vim-speeddating'
+"Plug 'tpope/vim-speeddating'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'jceb/vim-orgmode'
+"Plug 'jceb/vim-orgmode'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/csv.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Raimondi/delimitMate'
-Plug 'vim-ctrlspace/vim-ctrlspace'
+"Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-scripts/utl.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/DfrankUtil'
-Plug 'vim-scripts/vimprj'
+"Plug 'vim-scripts/vimprj'
 Plug 'vim-scripts/code_complete'
-Plug 'yuratomo/w3m.vim'
- Plug 'vim-scripts/OmniCppComplete'
+"Plug 'yuratomo/w3m.vim'
+"Plug 'vim-scripts/OmniCppComplete'
 Plug 'docunext/closetag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'pangloss/vim-javascript'
 Plug 'mkomitee/vim-gf-python'
 Plug 'valloric/matchtagalways'
 Plug 'gorodinskiy/vim-coloresque'
-Plug 'anokata/utf8-math'
+Plug 'vim-scripts/utf8-math'
 "Plug 'vim-scripts/math'
 Plug 'ktonga/vim-follow-my-lead'
 "Plug 'vim-scripts/Align'
@@ -39,6 +38,18 @@ Plug 'stormherz/tablify'
 "Plug 'vimplugin/project.vim'
 "Plug 'hoxnox/indexer.vim'
 "tormaza Plug 'dhruvasagar/vim-table-mode'
+
+Plug 'lervag/vimtex'
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+Plug 'sirver/ultisnips'
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 call plug#end()
 
@@ -148,7 +159,6 @@ map <leader>r :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 nmap <leader>q :w<CR>
 nmap <leader>e :q<CR>
 nmap <leader>X :!chmod +x %<CR>
-nmap tt :terminal<CR>
 
 nmap ё `
 nmap Ж :
@@ -271,7 +281,6 @@ let @j='A {'
 map <leader>j A {
 " swap args in ()
 let @w='0f(ldt,f)pui, p0f,dw'
-let @s='GggVGy,s'
 
 " === netrw config ===
 " bind :Vexplore
@@ -290,6 +299,4 @@ let g:indexer_disableCtagsWarning=1
 
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1 
-
-" save without root
-"map ?? :w !sudo tee %<CR>
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
