@@ -1,0 +1,5 @@
+network={
+	ssid="mz"
+	#psk="eceb9bb40cee"
+	psk=7b286633f651b3e25efa571d9634367f7ab5997d347aff8626c1c28dd53e802f
+}
