@@ -67,3 +67,4 @@ alias watchtm="watch -tc -n0.1 timed"
 alias update="sudo pacman -Syu"
 alias feh='feh -FYr'
 alias m='mpv --opengl-es=yes'
+alias p='ping ya.ru'
