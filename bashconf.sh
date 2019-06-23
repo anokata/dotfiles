@@ -48,6 +48,7 @@ export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 #loadkeys us-caps
 #TEST ==========================
 #PROMPT_COMMAND='[[ ${__new_wd:=$PWD} != $PWD ]] && ls; __new_wd=$PWD' # ls after cding
+export PROMPT_COMMAND="$PROMPT_COMMAND; history -a; history -c;history -r;"
 shopt -s extglob
 shopt -s cmdhist 
 shopt -s dotglob     
