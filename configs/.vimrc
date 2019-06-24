@@ -39,6 +39,7 @@ Plug 'stormherz/tablify'
 "Plug 'hoxnox/indexer.vim'
 "tormaza Plug 'dhruvasagar/vim-table-mode'
 
+"Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
@@ -177,6 +178,7 @@ cmap ф a
 nnoremap <space> za
 "==== DEV ====
 "map <F9> :w<CR>:exe "make java JavaSource=" . expand("%") . " JavaClass=" . substitute(expand("%:r"), "/", ".", "g")<CR>
+map <F9> :w<CR>:!texmake %<CR>
 "map <F10> :w<CR>:!make test<CR>
 "map <F9> :w<CR> :!perl '%'<CR>
 "map <C-F8> :!dot -Tpng % -o%.png && feh %.png<CR>
@@ -196,7 +198,7 @@ map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u
 " BARE C++
 map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 " SHELL
-map <F9> :w<CR>:!./%<CR>
+"map <F9> :w<CR>:!./%<CR>
 " MAKE
 map <F3> :w<CR>:!make<CR>
 
