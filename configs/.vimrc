@@ -41,11 +41,18 @@ Plug 'stormherz/tablify'
 
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'lervag/vimtex'
+let g:vimtex_compiler_latexrun = {
+    \ 'build_dir' : '/tmp',
+    \}
+let g:vimtex_compiler_latexmk = {
+    \ 'build_dir' : '/tmp',
+\}
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
+let g:vimtex_latexmk_background=1
 
 Plug 'sirver/ultisnips'
 let g:UltiSnipsExpandTrigger = '<tab>'
