@@ -1,0 +1,5 @@
+#!/bin/bash
+filename=$(basename -- "$1")
+filename="${filename%.*}"
+pdflatex -output-directory /tmp $1
+zathura  /tmp/$filename.pdf
