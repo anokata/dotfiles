@@ -135,7 +135,8 @@ assign [class="Thunderbird"] 4
 assign [class="TelegramDesktop"] 3
 assign [class="Slack"] 3
 assign [class="Transmission-gtk"] 2
-assign [class="kdenlive"] 3
+assign [class="kdenlive"] 4
+assign [class="Zathura"] 2
 
 #for_window [class="Conky"] floating enable
 new_window none
@@ -143,3 +144,4 @@ bindsym $mod+b exec "i3-msg border none"
 bindsym $mod+n exec "i3-msg border normal"
 exec kterm
 exec --no-startup-id xsetroot -solid "#000000"
+exec feh --bg-fill -s ~/wall.jpg 
