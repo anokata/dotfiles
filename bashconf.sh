@@ -17,6 +17,7 @@ export PATH=$PATH:"/home/$(whoami)/bin"
 export PATH=$PATH:"/home/$(whoami)/dotfiles/bin"
 export PATH=$PATH:"/home/$(whoami)/dotfiles/work"
 export PATH=~/.local/bin:$PATH
+export PATH=$PATH:"/usr/lib/jvm/java-8-openjdk/bin/"
 export ANSIBLE_NOCOWS=1
 #export WORK_DIR=~/work/portal
 export CLICOLOR="YES"
@@ -40,6 +41,12 @@ export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 #PS1='\[$(retval=$?;tput cup "$LINES";exit $retval)\]'$PS1
 #bind 'RETURN: "\e[1~clear; \e[4~\n"'
 
+export ANDROIDSDK="/mnt/store/android/sdk/"
+export ANDROID_HOME="/mnt/store/android/sdk/"
+export ANDROIDNDK="/mnt/store/android/ndk"
+export ANDROIDAPI="15"  # Target API version of your application
+export NDKAPI="7"  # Minimum supported API version of your application
+export ANDROIDNDKVER="r7"  # Version of the NDK you installed
 
 #if [ -f ~/dotfiles/xterm_trans ]; then
    #~/dotfiles/xterm_trans > /dev/null
