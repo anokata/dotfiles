@@ -1,14 +1,27 @@
 #!/bin/bash
 # vim: filetype=sh
 birthdate="Nov 11 1988"
+subyear="2046"
+subenddate="Nov 11 $subyear"
 now=$(date '+%b %d %Y')
 
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
+    d3=$(date -d "$3" +%s)
     d=$(( (d1 - d2) / 86400 ))
     h=$(( (d1 - d2) / 3600 ))
-    echo -e "Have a nice ${d}th day! (you lived ${h} hours)"
+    # последняя дата - дата сейчас
+    eh=$(( (d3 - d1) / 3600 ))
+    ed=$(( (d3 - d1) / 86400 ))
+    # из eh часов каждый ed день будет уходить 8ч на сон
+    eh2=$(( eh - (ed * 8) ))
+    ehd=$(( eh2 / 24 ))
+
+    prc=$(( ((d1 - d2) * 100) / (d3 - d2) ))
+
+    echo -e "Have a nice ${d}th day! (you lived ${h} hours) (${prc}%)"
+    echo -e "To $subyear remain ${ed} days or ${eh} hours: ${eh2}h ($ehd days) without sleep"
 }
 
-datediff "$now" "$birthdate"
+datediff "$now" "$birthdate" "$subenddate"
