@@ -18,8 +18,8 @@ function _tmux_run () {
                 tmux split-window -v -c ~/doc/
                 tmux new-window -c ~/dotfiles/net
                 tmux split-window -v -c /mnt/store
-                tmux new-window -c ~/dev/allInOne/
-                tmux split-window -v -c ~/dev/allInOne/
+                tmux new-window -c ~/dev/allInOne/corona/takeone
+                tmux split-window -v -c ~/dev/allInOne/corona/takeone
                 tmux select-window -t 2
             fi
             if [ -e ~/.work.sig ]; then
