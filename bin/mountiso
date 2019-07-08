@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+sudo mount -o loop $1 /mnt/ftp
+echo "Press Enter when need to unmound"
+read
+sudo umount /mnt/ftp
