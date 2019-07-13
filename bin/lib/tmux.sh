@@ -13,7 +13,7 @@ function _tmux_run () {
             tmux new -s $TMUX_SESSION_NAME -d
 
             if [ -e ~/.home.sig ]; then
-                tmux split-window -v
+                #tmux split-window -v
                 tmux new-window -c ~/doc/
                 tmux split-window -v -c ~/doc/
                 tmux new-window -c ~/dotfiles/net
