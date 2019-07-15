@@ -1,0 +1,14 @@
+#!/bin/bash
+scale=$2
+if [ -z $2 ]; then
+    scale=2
+fi
+file=$1
+w=$(identify -format '%w' $file)
+new_size=$(expr $scale \* $w)
+dim=${new_size}x${new_size}
+fileext=${file##*.}
+filenew=${file%.*}x$scale.$fileext
+#echo $dim $filenew
+convert $file -scale $new_size $filenew
+echo $filenew

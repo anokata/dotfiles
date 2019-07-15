@@ -1,0 +1,11 @@
+#!/bin/bash
+files=""
+for f in *.*
+do
+	#echo scale $f
+    n=$(imgscale $f $1)
+    files="$files $n"
+done
+#echo $files
+gm convert $files +append tilemap.png
+rm *x2*
