@@ -131,6 +131,7 @@ bar {
 assign [class="Chromium"] 2
 assign [class="Gnumeric"] 2
 assign [class="Firefox"] 5
+assign [class="firefox"] 5
 assign [class="Navigator"] 5
 assign [class="Thunderbird"] 4
 assign [class="TelegramDesktop"] 3
