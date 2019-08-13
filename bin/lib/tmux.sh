@@ -19,7 +19,7 @@ function _tmux_run () {
                 tmux new-window -c ~/dotfiles/net
                 tmux split-window -v -c /mnt/store
                 tmux new-window -c ~/dev/allInOne/corona/takeone
-                tmux split-window -v -c ~/dev/allInOne/corona/takeone
+                tmux split-window -v -c /mnt/store/
                 tmux select-window -t 2
             fi
             if [ -e ~/.work.sig ]; then
