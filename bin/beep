@@ -3,5 +3,5 @@
 
 n=0.3
 speaker-test -t sine -f 700 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep $n; kill $a;
-speaker-test -t sine -f 600 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep $n; kill $a;
-speaker-test -t sine -f 800 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep $n; kill $a;
+#speaker-test -t sine -f 600 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep $n; kill $a;
+#speaker-test -t sine -f 800 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep $n; kill $a;

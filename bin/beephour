@@ -1,0 +1,6 @@
+#!/bin/bash
+# vim: filetype=sh
+
+speaker-test -t sine -f 700 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep 0.3; kill $a;
+d=$(date +'%H')
+padsp espeak -s 10 "$d"
