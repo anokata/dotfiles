@@ -1,6 +1,13 @@
 #!/bin/bash
 # vim: filetype=sh
 
-speaker-test -t sine -f 700 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep 0.3; kill $a;
+speaker-test -t sine -f 700 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep 0.2; kill $a;
 d=$(date +'%H')
-padsp espeak -s 10 "$d"
+sleep 0.4 
+even=$(expr $d % 2)
+if [ $even -eq 0 ]; then
+    padsp espeak "start product"
+else 
+    padsp espeak "start training"
+fi
+
