@@ -44,11 +44,20 @@ def preczeroformat(a):
     return str(a)
 
 def add_interval(time, i):
-    h = (time.split(":")[0])
-    m = preczeroformat(int(time.split(":")[1]) + i)
-    return "{}:{}".format(h, m)
+    if i > 0:
+        h = (time.split(":")[0])
+        m = preczeroformat(int(time.split(":")[1]) + i)
+        return "{}:{}".format(h, m)
+    else:
+        h = preczeroformat(int(time.split(":")[0]) + i)
+        m = 58
+        return "{}:{}".format(h, m)
+
 
 def make_task(time, fun, arg, interval, end_arg):
+    # add prepare
+    #sched[add_interval(time, -1)] = [say, "Prepear!"]
+    # add main task
     sched[time] = [fun, arg]
     if interval > 0:
         time = add_interval(time, interval)
@@ -77,6 +86,7 @@ make_task("19:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 #make_task("20:05", say, "test 2 ", TRAIN_INTERVAL, "test 2 ok")
 #make_task(getnow(), say, ["a", True], 1, "b")
 run_schedule(sched)
-#print(sched)
+if __name__ == "__main__":
+    print(sched)
 
 
