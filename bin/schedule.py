@@ -4,7 +4,7 @@ from subprocess import getoutput as start
 
 # TODO BEEP/Ring
 TRAIN_INTERVAL = 5
-TASK_INTERVAL = 5
+TASK_INTERVAL = 6
 TRAIN_TEXT = ["start training", True]
 END_TEXT = ["end. end"]
 TASK_TEXT = ["start mathematical task", True]
