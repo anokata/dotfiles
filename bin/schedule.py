@@ -71,6 +71,7 @@ sched = { #"9:00": [say, "start training"], "9:05": [say, "end. end"],
 
 make_task("7:55", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("9:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
+make_task("9:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("10:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("11:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("11:30", say, ["Privychka2", True], 0, [""])
