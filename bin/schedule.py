@@ -5,6 +5,8 @@ from subprocess import getoutput as start
 # TODO BEEP/Ring
 TRAIN_INTERVAL = 5
 TASK_INTERVAL = 6
+READ_TEXT = ["Start Reading", True]
+READ_INTERVAL = 5
 TRAIN_TEXT = ["start training", True]
 END_TEXT = ["end. end"]
 TASK_TEXT = ["start mathematical task", True]
@@ -56,7 +58,7 @@ def add_interval(time, i):
 
 def make_task(time, fun, arg, interval, end_arg):
     # add prepare
-    #sched[add_interval(time, -1)] = [say, "Prepear!"]
+    #sched[add_interval(time, -1)] = [say, "Prepare!"]
     # add main task
     sched[time] = [fun, arg]
     if interval > 0:
@@ -67,17 +69,18 @@ def make_task(time, fun, arg, interval, end_arg):
 sched = { #"9:00": [say, "start training"], "9:05": [say, "end. end"], 
         }
 
-make_task("8:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+make_task("7:55", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("9:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("10:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("11:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("11:30", say, ["Privychka2", True], 0, [""])
-#make_task("14:30", say, ["Privychka3", True], 0, [""])
 make_task("12:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("13:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("13:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("14:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+#make_task("14:30", say, ["Privychka3", True], 0, [""])
 make_task("15:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
+#make_task("15:30", say, READ_TEXT, READ_INTERVAL, END_TEXT)
 make_task("16:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("17:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("18:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
