@@ -6,7 +6,7 @@ from subprocess import getoutput as start
 TRAIN_INTERVAL = 5
 TASK_INTERVAL = 6
 READ_TEXT = ["Start Reading", True]
-READ_INTERVAL = 5
+READ_INTERVAL = 2
 TRAIN_TEXT = ["start training", True]
 END_TEXT = ["end. end"]
 TASK_TEXT = ["start mathematical task", True]
@@ -51,14 +51,19 @@ def add_interval(time, i):
         m = preczeroformat(int(time.split(":")[1]) + i)
         return "{}:{}".format(h, m)
     else:
-        h = preczeroformat(int(time.split(":")[0]) + i)
-        m = 58
-        return "{}:{}".format(h, m)
+        h = int(time.split(":")[0])
+        m = int(time.split(":")[1])
+        if m != 0:
+            m += i
+        else:
+            h -= 1
+            m = 60 + i
+        return "{}:{}".format(h, preczeroformat(m))
 
 
 def make_task(time, fun, arg, interval, end_arg):
     # add prepare
-    #sched[add_interval(time, -1)] = [say, "Prepare!"]
+    sched[add_interval(time, -1)] = [say, "Prepare!"]
     # add main task
     sched[time] = [fun, arg]
     if interval > 0:
@@ -69,7 +74,7 @@ def make_task(time, fun, arg, interval, end_arg):
 sched = { #"9:00": [say, "start training"], "9:05": [say, "end. end"], 
         }
 
-make_task("7:55", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+make_task("7:50", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("9:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("9:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("10:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
@@ -82,7 +87,9 @@ make_task("14:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 #make_task("14:30", say, ["Privychka3", True], 0, [""])
 make_task("15:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 #make_task("15:30", say, READ_TEXT, READ_INTERVAL, END_TEXT)
+make_task("15:30", say, ["Start. Read Algorithms"], READ_INTERVAL, END_TEXT)
 make_task("16:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+make_task("16:30", say, ["Start. Learn English"], READ_INTERVAL, END_TEXT)
 make_task("17:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("18:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("19:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
