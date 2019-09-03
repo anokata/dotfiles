@@ -128,7 +128,7 @@ bar {
     mode              invisible
 }
 
-assign [class="Chromium"] 2
+assign [class="Chromium"] 5
 assign [class="Gnumeric"] 2
 assign [class="Firefox"] 5
 assign [class="firefox"] 5

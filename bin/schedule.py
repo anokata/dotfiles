@@ -63,7 +63,7 @@ def add_interval(time, i):
 
 def make_task(time, fun, arg, interval, end_arg):
     # add prepare
-    sched[add_interval(time, -1)] = [say, "Prepare!"]
+    sched[add_interval(time, -1)] = [say, ["Prepare!"]]
     # add main task
     sched[time] = [fun, arg]
     if interval > 0:
