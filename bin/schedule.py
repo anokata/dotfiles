@@ -4,9 +4,9 @@ from subprocess import getoutput as start
 
 # TODO BEEP/Ring
 TRAIN_INTERVAL = 5
-TASK_INTERVAL = 6
+TASK_INTERVAL = 7
 READ_TEXT = ["Start Reading", True]
-READ_INTERVAL = 2
+READ_INTERVAL = 3
 TRAIN_TEXT = ["start training", True]
 END_TEXT = ["end. end"]
 TASK_TEXT = ["start mathematical task", True]
@@ -92,7 +92,10 @@ make_task("16:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("16:30", say, ["Start. Learn English"], READ_INTERVAL, END_TEXT)
 make_task("17:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("18:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+#make_task("18:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("19:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
+#make_task("19:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+# TODO "Start programming", "Start physics read and tasks"
 
 #make_task("20:05", say, "test 2 ", TRAIN_INTERVAL, "test 2 ok")
 #make_task(getnow(), say, ["a", True], 1, "b")
