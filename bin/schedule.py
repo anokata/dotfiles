@@ -75,9 +75,11 @@ sched = { #"9:00": [say, "start training"], "9:05": [say, "end. end"],
         }
 
 make_task("7:50", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+# 7:00 breakfast, 12 dinner, 17 supper
 make_task("9:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("9:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("10:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+#make_task("10:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("11:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("11:30", say, ["Privychka2", True], 0, [""])
 make_task("12:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
@@ -92,7 +94,7 @@ make_task("16:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("16:30", say, ["Start. Learn English"], READ_INTERVAL, END_TEXT)
 make_task("17:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("18:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
-#make_task("18:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+make_task("18:30", say, ["Start. Read Physic"], READ_INTERVAL, END_TEXT)
 make_task("19:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 #make_task("19:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 # TODO "Start programming", "Start physics read and tasks"
