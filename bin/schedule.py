@@ -2,11 +2,10 @@ import subprocess
 import datetime
 from subprocess import getoutput as start
 
-# TODO BEEP/Ring
 TRAIN_INTERVAL = 5
-TASK_INTERVAL = 7
+TASK_INTERVAL = 8
 READ_TEXT = ["Start Reading", True]
-READ_INTERVAL = 3
+READ_INTERVAL = 4
 TRAIN_TEXT = ["start training", True]
 END_TEXT = ["end. end", False]
 TASK_TEXT = ["start mathematical task", True]
@@ -72,7 +71,6 @@ def make_task(time, fun, arg, interval, end_arg):
 
 # Global schedule
 sched = { }
-# train: 6 Раз + утро 
 
 make_task("7:45", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 # 7:00 breakfast, 12 dinner, 17 supper
@@ -82,6 +80,7 @@ make_task("9:00", say, ["Start training set 1"], TRAIN_INTERVAL, END_TEXT)
 make_task("9:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("10:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 #make_task("10:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+make_task("10:30", say, ["Start. Read book", True], READ_INTERVAL, END_TEXT)
 make_task("11:00", say, ["Start training set 2"], TRAIN_INTERVAL, END_TEXT)
     #make_task("11:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("11:30", say, ["Privychka2", True], 0, [""])
@@ -103,13 +102,12 @@ make_task("17:00", say, ["Start training set 5"], TRAIN_INTERVAL, END_TEXT)
 make_task("18:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("18:30", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
 make_task("19:00", say, ["Start training set Core 2"], TRAIN_INTERVAL, END_TEXT)
+#make_task("19:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("22:00", say, ["Start training for night"], TRAIN_INTERVAL, END_TEXT)
     #make_task("19:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
-#make_task("19:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
-# TODO "Start programming", "Start physics read and tasks"
-
-#make_task("20:05", say, "test 2 ", TRAIN_INTERVAL, "test 2 ok")
+# TODO "Start programming"
 #make_task(getnow(), say, ["a", True], 1, "b")
+
 run_schedule(sched)
 if __name__ == "__main__":
     print(sched)
