@@ -3,9 +3,9 @@ import datetime
 from subprocess import getoutput as start
 
 TRAIN_INTERVAL = 5
-TASK_INTERVAL = 8
+TASK_INTERVAL = 9
 READ_TEXT = ["Start Reading", True]
-READ_INTERVAL = 4
+READ_INTERVAL = 5
 TRAIN_TEXT = ["start training", True]
 END_TEXT = ["end. end", False]
 TASK_TEXT = ["start mathematical task", True]
@@ -81,6 +81,7 @@ make_task("9:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("10:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 #make_task("10:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("10:30", say, ["Start. Read book", True], READ_INTERVAL, END_TEXT)
+# 10:40 - Shoping Time
 make_task("11:00", say, ["Start training set 2"], TRAIN_INTERVAL, END_TEXT)
     #make_task("11:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 make_task("11:30", say, ["Privychka2", True], 0, [""])
@@ -98,11 +99,11 @@ make_task("16:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("16:30", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
 make_task("17:00", say, ["Start training set 5"], TRAIN_INTERVAL, END_TEXT)
     #make_task("17:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
-#make_task("17:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+make_task("17:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("18:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("18:30", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
 make_task("19:00", say, ["Start training set Core 2"], TRAIN_INTERVAL, END_TEXT)
-#make_task("19:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+make_task("19:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("22:00", say, ["Start training for night"], TRAIN_INTERVAL, END_TEXT)
     #make_task("19:00", say, TRAIN_TEXT, TRAIN_INTERVAL, END_TEXT)
 # TODO "Start programming"
