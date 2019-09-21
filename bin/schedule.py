@@ -5,11 +5,11 @@ from subprocess import getoutput as start
 TRAIN_INTERVAL = 5
 TASK_INTERVAL = 11
 TASK_GEO_INTERVAL = 3
-READ_TEXT = ["Start Reading", True]
+READ_TEXT = ["Start. Reading", True]
 READ_INTERVAL = 7
-TRAIN_TEXT = ["start training", True]
+TRAIN_TEXT = ["start. training", True]
 END_TEXT = ["end. end", False]
-TASK_TEXT = ["start mathematical task", True]
+TASK_TEXT = ["start. mathematical task", True]
 
 # Будет вызываться регулярно, каждые 5 минут.
 # Проверять время. Если есть в расписании час:минута - вызывать соответствующую функцию с аргументами.
@@ -75,35 +75,38 @@ sched = { }
 
 # 7:00 breakfast, 12 dinner, 17 supper
 # 10:40 - Shoping Time
-make_task("7:10", say, ["Start geometry task "], TASK_GEO_INTERVAL, END_TEXT)
+make_task("7:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
 make_task("7:40", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("8:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
-make_task("9:00", say, ["Start training set 1"], TRAIN_INTERVAL, END_TEXT)
+make_task("9:00", say, ["Start. training set 1"], TRAIN_INTERVAL, END_TEXT)
+make_task("9:20", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
 make_task("9:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+make_task("9:50", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
 make_task("10:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("10:30", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
-make_task("11:00", say, ["Start training set 2"], TRAIN_INTERVAL, END_TEXT)
+make_task("11:00", say, ["Start. training set 2"], TRAIN_INTERVAL, END_TEXT)
 make_task("11:30", say, ["Privychka2", True], 0, [""])
 make_task("12:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("12:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
-make_task("13:00", say, ["Start training set 3"], TRAIN_INTERVAL, END_TEXT)
-make_task("13:10", say, ["Start geometry task "], TASK_GEO_INTERVAL, END_TEXT)
+make_task("13:00", say, ["Start. training set 3"], TRAIN_INTERVAL, END_TEXT)
+make_task("13:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
 make_task("13:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("14:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 #make_task("14:30", say, ["Privychka3", True], 0, [""])
-make_task("15:00", say, ["Start training set 4"], TRAIN_INTERVAL, END_TEXT)
+make_task("15:00", say, ["Start. training set 4"], TRAIN_INTERVAL, END_TEXT)
 make_task("15:30", say, ["Start. Read Algorithms", True], READ_INTERVAL, END_TEXT)
 make_task("16:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("16:30", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
-make_task("17:00", say, ["Start training set 5"], TRAIN_INTERVAL, END_TEXT)
-make_task("17:10", say, ["Start geometry task "], TASK_GEO_INTERVAL, END_TEXT)
+make_task("17:00", say, ["Start. training set 5"], TRAIN_INTERVAL, END_TEXT)
+make_task("17:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
 make_task("17:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("18:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("18:30", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
-make_task("19:00", say, ["Start training set Core 2"], TRAIN_INTERVAL, END_TEXT)
+make_task("19:00", say, ["Start. training set Core 2"], TRAIN_INTERVAL, END_TEXT)
 make_task("19:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("20:00", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
-make_task("22:00", say, ["Start training for night"], TRAIN_INTERVAL, END_TEXT)
+make_task("21:20", say, ["Start. Read mathematic book", True], READ_INTERVAL, END_TEXT)
+make_task("22:00", say, ["Start. training for night"], TRAIN_INTERVAL, END_TEXT)
 
 # TODO "Start programming"
 
