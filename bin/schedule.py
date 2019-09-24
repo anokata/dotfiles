@@ -3,7 +3,7 @@ import datetime
 from subprocess import getoutput as start
 
 TRAIN_INTERVAL = 5
-TASK_INTERVAL = 11
+TASK_INTERVAL = 12
 TASK_GEO_INTERVAL = 3
 READ_TEXT = ["Start. Reading", True]
 READ_INTERVAL = 7
@@ -11,12 +11,13 @@ TRAIN_TEXT = ["start. training", True]
 END_TEXT = ["end. end", False]
 TASK_TEXT = ["start. mathematical task", True]
 
+# 10-12 x 11 = 110 - 132 ~ 2h / all ~ 4h
 # Будет вызываться регулярно, каждые 5 минут.
 # Проверять время. Если есть в расписании час:минута - вызывать соответствующую функцию с аргументами.
 
 def say(phrase, beep=True):
     if beep:
-        start("speaker-test -t sine -f 700 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep 0.2; kill $a;")
+        start("speaker-test -t sine -f 700 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep 0.2; kill -KILL $a;")
         start("ffplay -nodisp -autoexit ~/dotfiles/bell.ogg")
     start("espeak '{}'".format(phrase))
 
@@ -74,7 +75,7 @@ def make_task(time, fun, arg, interval, end_arg):
 sched = { }
 
 # 7:00 breakfast, 12 dinner, 17 supper
-# 10:40 - Shoping Time
+# 10:40/14 - Shoping Time
 make_task("7:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
 make_task("7:40", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("8:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
@@ -83,6 +84,7 @@ make_task("9:20", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
 make_task("9:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("9:50", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
 make_task("10:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+make_task("10:20", say, ["Optional. Start. Read", True], READ_INTERVAL, END_TEXT)
 make_task("10:30", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
 make_task("11:00", say, ["Start. training set 2"], TRAIN_INTERVAL, END_TEXT)
 make_task("11:30", say, ["Privychka2", True], 0, [""])
