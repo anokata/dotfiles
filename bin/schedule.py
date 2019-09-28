@@ -4,9 +4,9 @@ from subprocess import getoutput as start
 
 TRAIN_INTERVAL = 5
 TASK_INTERVAL = 12
-TASK_GEO_INTERVAL = 3
+TASK_GEO_INTERVAL = 4
 READ_TEXT = ["Start. Reading", True]
-READ_INTERVAL = 7
+READ_INTERVAL = 8
 TRAIN_TEXT = ["start. training", True]
 END_TEXT = ["end. end", False]
 TASK_TEXT = ["start. mathematical task", True]
@@ -94,11 +94,13 @@ make_task("13:00", say, ["Start. training set 3"], TRAIN_INTERVAL, END_TEXT)
 make_task("13:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
 make_task("13:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("14:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
-#make_task("14:30", say, ["Privychka3", True], 0, [""])
+make_task("14:30", say, ["Privychka3", True], 0, [""])
 make_task("15:00", say, ["Start. training set 4"], TRAIN_INTERVAL, END_TEXT)
+make_task("15:15", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
 make_task("15:30", say, ["Start. Read Algorithms", True], READ_INTERVAL, END_TEXT)
 make_task("16:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("16:30", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
+make_task("16:15", say, ["Start. Read Algorithms", True], READ_INTERVAL, END_TEXT)
 make_task("17:00", say, ["Start. training set 5"], TRAIN_INTERVAL, END_TEXT)
 make_task("17:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
 make_task("17:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
@@ -110,11 +112,7 @@ make_task("20:00", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
 make_task("21:20", say, ["Start. Read mathematic book", True], READ_INTERVAL, END_TEXT)
 make_task("22:00", say, ["Start. training for night"], TRAIN_INTERVAL, END_TEXT)
 
-# TODO "Start programming"
-
 run_schedule(sched)
 if __name__ == "__main__":
     print(sched)
     #make_task(getnow(), say, ["a", True], 1, "b")
-
-
