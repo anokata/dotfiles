@@ -4,7 +4,7 @@ from subprocess import getoutput as start
 
 TRAIN_INTERVAL = 5
 TASK_INTERVAL = 12
-TASK_GEO_INTERVAL = 4
+TASK_GEO_INTERVAL = 5
 READ_TEXT = ["Start. Reading", True]
 READ_INTERVAL = 8
 TRAIN_TEXT = ["start. training", True]
@@ -84,7 +84,7 @@ make_task("9:20", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
 make_task("9:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("9:50", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
 make_task("10:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
-make_task("10:20", say, ["Optional. Start. Read", True], READ_INTERVAL, END_TEXT)
+make_task("10:20", say, ["Start. Read mathematic book", True], READ_INTERVAL, END_TEXT)
 make_task("10:30", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
 make_task("11:00", say, ["Start. training set 2"], TRAIN_INTERVAL, END_TEXT)
 make_task("11:30", say, ["Privychka2", True], 0, [""])
