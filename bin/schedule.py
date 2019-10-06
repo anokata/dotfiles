@@ -6,6 +6,7 @@ from subprocess import getoutput as start
 # Проверять время. Если есть в расписании час:минута - вызывать соответствующую функцию с аргументами.
 
 TASK_GEO_INTERVAL = 5
+MEDITATE_INTERVAL = 5
 TRAIN_INTERVAL = 4
 TASK_INTERVAL = 13
 READ_INTERVAL = 9
@@ -76,6 +77,7 @@ sched = { }
 #make_task("11:30", say, ["Privychka2", True], 0, [""])
 #make_task("14:30", say, ["Privychka3", True], 0, [""])
 make_task("7:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
+make_task("7:32", say, ["Begin. Meditate"], MEDITATE_INTERVAL, END_TEXT)
 make_task("7:40", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("8:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("9:00", say, ["Start. training set 1"], TRAIN_INTERVAL, END_TEXT)
@@ -93,7 +95,7 @@ make_task("11:06", say, ["Start. training set Core 1"], TRAIN_INTERVAL, END_TEXT
 #make_task("11:10", say, ["Begin. "], , END_TEXT)
 make_task("11:35", say, ["Begin. geometry task"], TASK_GEO_INTERVAL, END_TEXT)
 make_task("11:46", say, ["Start. Affirmate. write some new.", False], 1, END_TEXT)
-make_task("11:48", say, ["Begin. Meditate", False], 1, END_TEXT)
+make_task("11:49", say, ["Begin. Meditate"], MEDITATE_INTERVAL, END_TEXT)
 make_task("12:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
 make_task("12:15", say, ["Begin. Read book.", True], READ_INTERVAL, END_TEXT)
 make_task("12:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
