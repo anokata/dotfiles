@@ -66,7 +66,7 @@ shopt -s cdspell
 #==============================
 
 if _is_console; then
-    echo 
+    setleds -D +num
 else
     if [ -e ~/.home.sig -o -e ~/.work.sig ]; then 
         _try_tmux_run
