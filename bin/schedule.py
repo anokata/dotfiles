@@ -5,7 +5,7 @@ from subprocess import getoutput as start
 # Будет вызываться регулярно, каждые 5 минут.
 # Проверять время. Если есть в расписании час:минута - вызывать соответствующую функцию с аргументами.
 
-TASK_GEO_INTERVAL = 5
+TASK_GEO_INTERVAL = 6
 MEDITATE_INTERVAL = 5
 TRAIN_INTERVAL = 4
 TASK_INTERVAL = 14
@@ -16,17 +16,17 @@ TASK_TEXT = ["start. mathematical task", True]
 def make_schedule_one():
     # 7:00 breakfast, 12 dinner, 17 supper
     # 10:40/14 - Shoping Time
-    make_task("6:20", say, ["Warmup", False], TRAIN_INTERVAL, END_TEXT)
-    make_task("6:30", say, ["Repeat. Affirmate.", False], 1, END_TEXT)
+    make_task("6:20", say, ["Warmup"], TRAIN_INTERVAL, END_TEXT)
+    make_task("6:30", say, ["Repeat. Affirmate."], 1, END_TEXT)
     make_task("6:40", say, ["test. training set 0"], TRAIN_INTERVAL, END_TEXT)
-    make_task("6:46", say, ["test. training running", False], TRAIN_INTERVAL, END_TEXT)
+    make_task("6:46", say, ["test. training running"], TRAIN_INTERVAL, END_TEXT)
     make_task("7:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
-    make_task("7:17", say, ["Start. N. Back excercise", False], 1, END_TEXT)
-    make_task("7:26", say, ["Start. Speak exercise", False], 1, END_TEXT)
+    make_task("7:17", say, ["Start. N. Back excercise"], 1, END_TEXT)
+    make_task("7:26", say, ["Start. Speak exercise"], 1, END_TEXT)
     make_task("7:32", say, ["Begin. Meditate"], MEDITATE_INTERVAL, END_TEXT)
-    make_task("7:38", say, ["Repeat. Affirmate.", False], 1, END_TEXT)
+    #make_task("7:38", say, ["Repeat. Affirmate."], 1, END_TEXT)
     make_task("7:40", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
-    make_task("8:00", say, ["May. Fox. Train. pull up.", False], 1, END_TEXT)
+    make_task("8:00", say, ["May. Fox. Train. pull up."], 1, END_TEXT)
     make_task("8:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
     make_task("9:00", say, ["Start. training set 1"], TRAIN_INTERVAL, END_TEXT)
     # eat
@@ -40,7 +40,7 @@ def make_schedule_one():
     make_task("11:06", say, ["Start. training set Core 1"], TRAIN_INTERVAL, END_TEXT)
     #make_task("11:10", say, ["Begin. "], , END_TEXT)
     make_task("11:35", say, ["Begin. geometry task"], TASK_GEO_INTERVAL, END_TEXT)
-    make_task("11:46", say, ["Start. Affirmate. write some new.", False], 1, END_TEXT)
+    make_task("11:46", say, ["Start. Affirmate. write some new."], 1, END_TEXT)
     make_task("11:49", say, ["Begin. Meditate"], MEDITATE_INTERVAL, END_TEXT)
     make_task("12:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
     make_task("12:16", say, ["Begin. Read book.", True], READ_INTERVAL, END_TEXT)
@@ -54,7 +54,7 @@ def make_schedule_one():
     make_task("14:30", say, ["Start. training set Back"], TRAIN_INTERVAL, END_TEXT)
     make_task("14:36", say, ["Start. geometry task."], TASK_GEO_INTERVAL, END_TEXT)
     make_task("14:45", say, ["Start. number theory task."], TASK_GEO_INTERVAL, END_TEXT)
-    make_task("14:55", say, ["Repeat. Affirmate.", False], 1, END_TEXT)
+    make_task("14:55", say, ["Repeat. Affirmate."], 1, END_TEXT)
     make_task("15:00", say, ["Start. training set 4"], TRAIN_INTERVAL, END_TEXT)
     # eat
     make_task("15:15", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
@@ -66,6 +66,7 @@ def make_schedule_one():
     # eat
     make_task("17:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
     make_task("17:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+    make_task("17:45", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
     make_task("18:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
     #make_task("18:20", say, ["Begin. "], , END_TEXT)
     make_task("18:30", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
@@ -74,7 +75,7 @@ def make_schedule_one():
     #make_task("19:10", say, ["Begin. READ."], , END_TEXT)
     make_task("19:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
     make_task("20:00", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
-    make_task("20:20", say, ["Repeat. Affirmate.", False], 1, END_TEXT)
+    make_task("20:20", say, ["Repeat. Affirmate."], 1, END_TEXT)
     #make_task("20:20", say, ["Begin. "], , END_TEXT)
     #make_task("20:40", say, ["Begin. "], , END_TEXT)
     #make_task("21:00", say, ["Begin. "], , END_TEXT)
