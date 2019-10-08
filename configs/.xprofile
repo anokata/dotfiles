@@ -9,8 +9,6 @@ fi
 #xinput --disable 11
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 xrdb .Xresources
-if [ -f ~/dotfiles/xterm_trans ]; then
-   ~/dotfiles/xterm_trans > /dev/null
-fi
+feh --bg-fill -s ~/wall.jpg 
+numlockx &
 pulseaudio --daemonize
-xset -b
