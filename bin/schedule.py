@@ -54,8 +54,8 @@ def make_schedule_one():
     make_task("14:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
     make_task("14:30", say, ["Start. training set Back"], TRAIN_INTERVAL, END_TEXT)
     make_task("14:36", say, ["Start. geometry task."], TASK_GEO_INTERVAL, END_TEXT)
-    make_task("14:45", say, ["Start. number theory task."], TASK_GEO_INTERVAL, END_TEXT)
-    make_task("14:55", say, ["Repeat. Affirmate."], 0, END_TEXT)
+    make_task("14:46", say, ["Start. number theory task."], TASK_GEO_INTERVAL, END_TEXT)
+    make_task("14:56", say, ["Repeat. Affirmate."], 0, END_TEXT)
     make_task("15:00", say, ["Start. training set 4"], TRAIN_INTERVAL, END_TEXT)
     # eat
     make_task("15:15", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
