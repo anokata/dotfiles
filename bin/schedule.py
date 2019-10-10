@@ -5,7 +5,7 @@ from subprocess import getoutput as start
 # Будет вызываться регулярно, каждые 5 минут.
 # Проверять время. Если есть в расписании час:минута - вызывать соответствующую функцию с аргументами.
 
-TASK_GEO_INTERVAL = 6
+TASK_GEO_INTERVAL = 8
 MEDITATE_INTERVAL = 5
 TRAIN_INTERVAL = 4
 TASK_INTERVAL = 14
@@ -16,12 +16,13 @@ TASK_TEXT = ["start. mathematical task", True]
 def make_schedule_one():
     # 7:00 breakfast, 12 dinner, 17 supper
     # 10:40/14 - Shoping Time
+    make_task("6:10", say, ["Good morning. Read in voice. theorem or english."], 0, END_TEXT, False)
     make_task("6:20", say, ["Warmup"], TRAIN_INTERVAL, END_TEXT)
     make_task("6:30", say, ["Repeat. Affirmate."], 0, END_TEXT)
     make_task("6:40", say, ["test. training set 0"], TRAIN_INTERVAL, END_TEXT)
     make_task("6:46", say, ["test. training running"], TRAIN_INTERVAL, END_TEXT)
     make_task("7:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
-    make_task("7:18", say, ["Start. N. Back excercise"], 0, END_TEXT, False)
+    make_task("7:19", say, ["Start. N. Back excercise"], 0, END_TEXT, False)
     make_task("7:26", say, ["Start. Speak exercise"], 0, END_TEXT, False)
     make_task("7:32", say, ["Begin. Meditate"], MEDITATE_INTERVAL, END_TEXT)
     #make_task("7:38", say, ["Repeat. Affirmate."], 1, END_TEXT)
@@ -66,7 +67,7 @@ def make_schedule_one():
     # eat
     make_task("17:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
     make_task("17:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
-    make_task("17:45", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
+    make_task("17:47", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
     make_task("18:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
     #make_task("18:20", say, ["Begin. "], , END_TEXT)
     make_task("18:30", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
