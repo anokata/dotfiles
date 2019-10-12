@@ -9,7 +9,7 @@ TASK_GEO_INTERVAL = 8
 MEDITATE_INTERVAL = 5
 TRAIN_INTERVAL = 4
 TASK_INTERVAL = 14
-READ_INTERVAL = 9
+READ_INTERVAL = 10
 END_TEXT = ["end. end", False]
 TASK_TEXT = ["start. mathematical task", True]
 
@@ -23,17 +23,16 @@ def make_schedule_one():
     make_task("6:46", say, ["test. training running"], TRAIN_INTERVAL, END_TEXT)
     make_task("7:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
     make_task("7:19", say, ["Start. N. Back excercise"], 0, END_TEXT, False)
-    make_task("7:26", say, ["Start. Speak exercise"], 0, END_TEXT, False)
+    make_task("7:26", say, ["Start. Speak exercise with english vowels"], 0, END_TEXT, False)
     make_task("7:32", say, ["Begin. Meditate"], MEDITATE_INTERVAL, END_TEXT)
-    #make_task("7:38", say, ["Repeat. Affirmate."], 1, END_TEXT)
     make_task("7:40", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
     make_task("8:00", say, ["May. Fox. Train. pull up."], 0, END_TEXT)
     make_task("8:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
     make_task("9:00", say, ["Start. training set 1"], TRAIN_INTERVAL, END_TEXT)
     # eat
     make_task("9:20", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
-    make_task("9:31", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
-    make_task("9:47", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
+    make_task("9:32", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+    make_task("9:48", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
     make_task("10:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
     make_task("10:20", say, ["Begin. Read mathematic book", True], READ_INTERVAL, END_TEXT)
     make_task("10:31", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
@@ -57,6 +56,7 @@ def make_schedule_one():
     make_task("14:46", say, ["Start. number theory task."], TASK_GEO_INTERVAL, END_TEXT)
     make_task("14:56", say, ["Repeat. Affirmate."], 0, END_TEXT)
     make_task("15:00", say, ["Start. training set 4"], TRAIN_INTERVAL, END_TEXT)
+    make_task("15:10", say, ["Start. Write unsolved task."], 0, END_TEXT)
     # eat
     make_task("15:15", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
     make_task("15:30", say, ["Start. Read Algorithms. Patterns. O.O.P.", True], READ_INTERVAL, END_TEXT)
@@ -65,13 +65,15 @@ def make_schedule_one():
     make_task("16:30", say, ["Start. Learn English", True], READ_INTERVAL, END_TEXT)
     make_task("17:00", say, ["Start. training set 5"], TRAIN_INTERVAL, END_TEXT)
     # eat
-    make_task("17:10", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
+    make_task("17:07", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
     make_task("17:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
     make_task("17:47", say, ["Start. geometry task "], TASK_GEO_INTERVAL, END_TEXT)
     make_task("18:00", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
+    make_task("18:16", say, ["Start. read. Literature. "], 5, END_TEXT)
     #make_task("18:20", say, ["Begin. "], , END_TEXT)
     make_task("18:30", say, ["Start. Read Physic", True], READ_INTERVAL, END_TEXT)
     make_task("19:00", say, ["Start. training set Core 2"], TRAIN_INTERVAL, END_TEXT)
+    make_task("19:10", say, ["Start. Speak english exercise vowels"], 0, END_TEXT, False)
     # May eat
     #make_task("19:10", say, ["Begin. READ."], , END_TEXT)
     make_task("19:30", say, TASK_TEXT, TASK_INTERVAL, END_TEXT)
@@ -81,7 +83,7 @@ def make_schedule_one():
     #make_task("20:40", say, ["Begin. "], , END_TEXT)
     #make_task("21:00", say, ["Begin. "], , END_TEXT)
     make_task("21:20", say, ["Start. Read mathematic book", True], READ_INTERVAL, END_TEXT)
-    make_task("21:31", say, ["Start. Number theory task."], TASK_GEO_INTERVAL, END_TEXT)
+    make_task("21:35", say, ["Start. Number theory task."], TASK_GEO_INTERVAL, END_TEXT)
     make_task("22:00", say, ["Start. training for night"], TRAIN_INTERVAL, END_TEXT)
 
 
