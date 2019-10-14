@@ -13,6 +13,7 @@ READ_INTERVAL = 10
 END_TEXT = ["end. end", False]
 TASK_TEXT = ["start. mathematical task", True]
 busy_minutes = 0
+tasks_count = 0
 
 def make_schedule_one():
     # 7:00 breakfast, 12 dinner, 17 supper
@@ -20,14 +21,15 @@ def make_schedule_one():
     make_task("6:10", ["Good morning. Read in voice. theorem or english."], 0, False)
     make_task("6:20", ["Warmup"], TRAIN_INTERVAL)
     make_task("6:30", ["Repeat. Affirmate."], 0)
-    make_task("6:40", ["test. training set 0"], TRAIN_INTERVAL)
-    make_task("6:46", ["test. training running"], TRAIN_INTERVAL)
+    make_task("6:40", ["Morning. training set 0"], TRAIN_INTERVAL)
+    make_task("6:46", ["Morning. training running"], 0)
     make_task("7:10", ["Start. geometry task "], TASK_GEO_INTERVAL)
     make_task("7:19", ["Start. N. Back excercise"], 0, False)
     make_task("7:26", ["Start. Speak exercise with english vowels"], 0, False)
     make_task("7:32", ["Begin. Meditate"], MEDITATE_INTERVAL)
     make_task("7:40", TASK_TEXT, TASK_INTERVAL)
-    make_task("8:00", ["May. Fox. Train. pull up."], 0)
+    #make_task("8:00", ["May. Fox. Train. pull up."], 0)
+    make_task("8:15", ["Start. Read Physic"], READ_INTERVAL)
     make_task("8:30", TASK_TEXT, TASK_INTERVAL)
     make_task("9:00", ["Start. training set 1"], TRAIN_INTERVAL)
     make_task("9:20", ["Start. Read Physic"], READ_INTERVAL)
@@ -56,7 +58,7 @@ def make_schedule_one():
     make_task("15:00", ["Start. training set 4"], TRAIN_INTERVAL)
     make_task("15:10", ["Start. Write unsolved task."], 0)
     make_task("15:15", ["Start. Read Physic"], READ_INTERVAL)
-    make_task("15:30", ["Start. Read Algorithms. Patterns. O.O.P."], READ_INTERVAL)
+    make_task("15:30", ["Start. Read IT. Patterns. O.O.P."], READ_INTERVAL)
     make_task("16:00", TASK_TEXT, TASK_INTERVAL)
     make_task("16:16", ["Start. Read IT. Patterns. O.O.P."], READ_INTERVAL)
     make_task("16:30", ["Start. Learn English"], READ_INTERVAL)
@@ -72,8 +74,10 @@ def make_schedule_one():
     make_task("19:10", ["Start. Speak english exercise vowels"], 0, False)
     #make_task("19:10", ["Begin. READ."], , END_TEXT)
     make_task("19:30", TASK_TEXT, TASK_INTERVAL)
+    make_task("19:45", ["Start. Read IT. Patterns. O.O.P."], READ_INTERVAL)
     make_task("20:00", ["Start. Learn English"], READ_INTERVAL)
     make_task("20:20", ["Repeat. Affirmate."], 0)
+    make_task("20:10", ["Begin. Chistopisanie."], 0)
     #make_task("20:20", ["Begin. "], )
     #make_task("20:40", ["Begin. "], )
     #make_task("21:00", ["Begin. "], )
@@ -141,8 +145,9 @@ def make_task(time, arg, interval, prepare=True, end_arg=END_TEXT, fun=say):
         time = add_interval(time, interval)
         sched[time] = [fun, end_arg]
         # stat:
-        global busy_minutes
+        global busy_minutes, tasks_count
         busy_minutes += interval
+        tasks_count += 1
 
 # Global schedule
 sched = { }
@@ -157,5 +162,5 @@ if __name__ == "__main__":
     for time, task in sched.items():
         if task[1][0] != "Prepare!" and task[1][0] != "end. end": #fix + interval
             print("{} {}".format(time, task[1][0]))
-    print("tasks: {}\nminutes: {}".format(len(sched), busy_minutes))
+    print("tasks: {}\nminutes: {}".format(tasks_count, busy_minutes))
     print("hours: {}h{}m".format(busy_minutes // 60, busy_minutes % 60))
