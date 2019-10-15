@@ -7,7 +7,7 @@ from subprocess import getoutput as start
 
 TASK_GEO_INTERVAL = 8
 MEDITATE_INTERVAL = 5
-TRAIN_INTERVAL = 4
+TRAIN_INTERVAL = 3
 TASK_INTERVAL = 15
 READ_INTERVAL = 10
 END_TEXT = ["end. end", False]
@@ -36,7 +36,7 @@ def make_schedule_one():
     make_task("9:30", TASK_TEXT, TASK_INTERVAL)
     make_task("9:48", ["Start. Learn English"], READ_INTERVAL)
     make_task("10:00", TASK_TEXT, TASK_INTERVAL)
-    make_task("10:20", ["Begin. Read mathematic book"], READ_INTERVAL)
+    make_task("10:20", ["Begin. Read mathematic book. GEB."], READ_INTERVAL)
     make_task("10:32", ["Start. Read Physic"], READ_INTERVAL)
     make_task("11:00", ["Begin. training set 2"], TRAIN_INTERVAL)
     make_task("11:06", ["Start. training set Core 1"], TRAIN_INTERVAL)
@@ -59,6 +59,7 @@ def make_schedule_one():
     make_task("15:10", ["Start. Write unsolved task."], 0)
     make_task("15:15", ["Start. Read Physic"], READ_INTERVAL)
     make_task("15:30", ["Start. Read IT. Patterns. O.O.P."], READ_INTERVAL)
+    make_task("15:55", ["Start. training Biceps"], 0, False)
     make_task("16:00", TASK_TEXT, TASK_INTERVAL)
     make_task("16:17", ["Start. Read IT. Patterns. O.O.P."], READ_INTERVAL)
     make_task("16:30", ["Start. Learn English"], READ_INTERVAL)
@@ -66,6 +67,7 @@ def make_schedule_one():
     make_task("17:07", ["Start. geometry task "], TASK_GEO_INTERVAL)
     make_task("17:30", TASK_TEXT, TASK_INTERVAL)
     make_task("17:47", ["Start. geometry task "], TASK_GEO_INTERVAL)
+    make_task("17:55", ["Start. training shoulders"], 0, False)
     make_task("18:00", TASK_TEXT, TASK_INTERVAL)
     make_task("18:17", ["Start. read. Literature. "], 5)
     #make_task("18:20", ["Begin. "], )
