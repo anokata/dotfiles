@@ -20,7 +20,7 @@ def make_schedule_one():
     # 10:40/14 - Shoping Time
     make_task("6:10", ["Good morning. Read in voice. theorem or english."], 0, False)
     make_task("6:15", ["Food. Drink. Water."], 0, False)
-    make_task("6:20", ["Warmup"], TRAIN_INTERVAL)
+    make_task("6:20", ["Warmup"], 5)
     make_task("6:30", ["Repeat. Affirmate."], 0)
     make_task("6:35", ["Morning. training set 0"], TRAIN_INTERVAL)
     make_task("6:40", ["Morning. training running"], 0)
@@ -51,6 +51,7 @@ def make_schedule_one():
     make_task("12:31", TASK_TEXT, TASK_INTERVAL)
     make_task("13:00", ["Start. training set 3"], TRAIN_INTERVAL)
     make_task("13:10", ["Start. geometry task "], TASK_GEO_INTERVAL)
+    make_task("13:20", ["Begin. Math book task"], TASK_GEO_INTERVAL)
     make_task("13:30", TASK_TEXT, TASK_INTERVAL)
     make_task("14:00", TASK_TEXT, TASK_INTERVAL)
     make_task("14:30", ["Start. training set Back"], TRAIN_INTERVAL)
