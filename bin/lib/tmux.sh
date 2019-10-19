@@ -16,10 +16,10 @@ function _tmux_run () {
                 #tmux split-window -v
                 tmux new-window -c ~/doc/
                 tmux split-window -v -c ~/doc/
-                tmux new-window -c ~/dotfiles/net
-                tmux split-window -v -c /mnt/store
+                tmux new-window -c ~/dotfiles/ #net
+                tmux split-window -v "vifm"
                 tmux new-window -c ~/dev/allInOne/algo
-                tmux split-window -v -c ~/dev/allInOne/algo
+                tmux split-window -v "vifm"
                 tmux select-window -t 2
                 tmux new-window "gnumeric ~/doc/stat/day.gnumeric"
                 tmux split-window "scim ~/doc/stat/stat.sc"

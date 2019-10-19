@@ -18,8 +18,8 @@ tasks_count = 0
 def make_schedule_one():
     # 7:00 breakfast, 12 dinner, 17 supper
     # 10:40/14 - Shoping Time
-    make_task("6:10", ["Good morning. Read in voice. theorem or english."], 0, False)
-    make_task("6:15", ["Food. Drink. Water."], 0, False)
+    make_task("6:10", ["Good morning. Read in voice. theorem. poem. stih. english."], 0, False)
+    #make_task("6:15", ["Food. Drink. Water."], 0, False)
     make_task("6:20", ["Warmup"], 5)
     make_task("6:30", ["Repeat. Affirmate."], 0)
     make_task("6:35", ["Morning. training set 0"], TRAIN_INTERVAL)
