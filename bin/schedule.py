@@ -8,7 +8,7 @@ from subprocess import getoutput as start
 TASK_GEO_INTERVAL = 9
 MEDITATE_INTERVAL = 5
 TRAIN_INTERVAL = 3
-TASK_INTERVAL = 15
+TASK_INTERVAL = 16
 READ_INTERVAL = 10
 END_TEXT = ["end. end", False]
 TASK_TEXT = ["start. mathematical task", True]
@@ -33,10 +33,10 @@ def make_schedule_one():
     make_task("8:18", ["Start. Read and Learn Physic"], READ_INTERVAL)
     make_task("8:30", TASK_TEXT, TASK_INTERVAL)
     make_task("9:00", ["Start. training set 1"], TRAIN_INTERVAL)
-    make_task("9:18", ["Start. Read and Learn Physic"], READ_INTERVAL)
+    make_task("9:16", ["Start. Read and Learn Physic"], READ_INTERVAL)
 
-    make_task("9:30", TASK_TEXT, TASK_INTERVAL)
-    make_task("9:46", TASK_TEXT, TASK_INTERVAL, False)
+    make_task("9:28", TASK_TEXT, TASK_INTERVAL)
+    make_task("9:45", TASK_TEXT, TASK_INTERVAL, False)
     make_task("10:02", ["Start. Learn English"], READ_INTERVAL, False)
     make_task("10:14", ["Start. Learn English"], READ_INTERVAL, False) 
     make_task("10:30", ["Start. Read and Learn Physic"], READ_INTERVAL)
@@ -49,16 +49,16 @@ def make_schedule_one():
     make_task("11:45", ["Begin. Meditate"], MEDITATE_INTERVAL, False)
 
     make_task("12:00", TASK_TEXT, TASK_INTERVAL)
-    make_task("12:16", TASK_TEXT, TASK_INTERVAL, False)
-    make_task("12:32", TASK_TEXT, TASK_INTERVAL, False)
-    make_task("12:48", ["Begin. Read mathematic book"], READ_INTERVAL)
+    make_task("12:17", TASK_TEXT, TASK_INTERVAL, False)
+    make_task("12:33", TASK_TEXT, TASK_INTERVAL, False)
+    make_task("12:49", ["Begin. Read mathematic book"], READ_INTERVAL)
     #make_task("12:44", ["Start. Number theory task."], TASK_GEO_INTERVAL) # одну может 20 мин *2
 
     make_task("13:00", ["Start. training set 3"], TRAIN_INTERVAL)
     make_task("13:05", ["Start. geometry task "], TASK_GEO_INTERVAL)
     make_task("13:17", ["Begin. Hardest. Math task"], TASK_GEO_INTERVAL)
     make_task("13:30", TASK_TEXT, TASK_INTERVAL)
-    make_task("13:46", TASK_TEXT, TASK_INTERVAL)
+    make_task("13:47", TASK_TEXT, TASK_INTERVAL)
 
     make_task("14:30", ["Start. training set Back"], TRAIN_INTERVAL)
     make_task("14:33", ["Start. training set 4"], 0, False)
@@ -81,30 +81,31 @@ def make_schedule_one():
     make_task("17:06", ["Start. geometry task "], TASK_GEO_INTERVAL)
     make_task("17:17", ["Start. geometry task "], TASK_GEO_INTERVAL)
     make_task("17:28", TASK_TEXT, TASK_INTERVAL)
-    make_task("17:44", TASK_TEXT, TASK_INTERVAL)
+    make_task("17:45", TASK_TEXT, TASK_INTERVAL)
     make_task("18:05", ["Start. training shoulders"], 0, False)
 
-    make_task("18:18", ["Start. read. Literature. "], 6)
+    make_task("18:18", ["Start. read. Literature. "], 6) # to 19?
     make_task("18:25", ["Start. Read and Learn Physic"], READ_INTERVAL)
     make_task("18:37", ["Start. Read and Learn Physic"], READ_INTERVAL)
     make_task("18:50", ["Begin. Math write theorem on paper."], 0)
-    make_task("18:56", ["Start. Speak english exercise vowels"], 0, False)
-    make_task("19:00", ["Start. training set Core 2"], TRAIN_INTERVAL)
+    make_task("18:54", ["Start. Speak english exercise vowels"], 0, False)
+    make_task("18:58", ["Start. training set Core 2"], TRAIN_INTERVAL)
     make_task("19:10", TASK_TEXT, TASK_INTERVAL)
     make_task("19:35", ["Start. Read IT. Patterns. O.O.P."], READ_INTERVAL)
+    # Evening
     make_task("20:00", ["Start. Learn English"], READ_INTERVAL)
     make_task("20:15", ["Begin. Chistopisanie."], 0)
-    make_task("20:20", ["Repeat. Affirmate."], 0)
-    #make_task("20:40", ["Begin. "], )
-    #make_task("21:00", ["Begin. "], )
-    make_task("21:20", ["Start. Read mathematic book"], READ_INTERVAL)
-    make_task("21:35", ["Start. Number theory task."], TASK_GEO_INTERVAL)
-    make_task("22:00", ["Start. warmup for night"], TRAIN_INTERVAL)
+    #make_task("20:25", ["Start. read. Literature. "], READ_INTERVAL) 
+    #make_task("20:40", TASK_TEXT, TASK_INTERVAL)
+    #make_task("20:55", TASK_TEXT, TASK_INTERVAL)
+    #make_task("21:20", ["Start. Read mathematic book"], READ_INTERVAL*2)
+    make_task("22:00", ["Start. warmup for night"], 0)
+    make_task("22:05", ["Repeat. Affirmate."], 0)
 
 
 def say(phrase, beep=True):
     if beep:
-        start("speaker-test -t sine -f 700 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep 0.2; kill -KILL $a;")
+        # TODO? start("speaker-test -t sine -f 700 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep 0.2; kill -KILL $a;")
         start("ffplay -nodisp -autoexit ~/dotfiles/bell.ogg")
     start("espeak '{}'".format(phrase))
 
