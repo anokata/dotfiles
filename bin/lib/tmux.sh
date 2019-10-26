@@ -18,7 +18,7 @@ function _tmux_run () {
                 tmux split-window -v -c ~/doc/
                 tmux new-window -c ~/dotfiles/ #net
                 tmux split-window -v "vifm"
-                tmux new-window -c ~/dev/allInOne/algo
+                tmux new-window -c ~/dev/allInOne/java/2019
                 tmux split-window -v "vifm"
                 tmux select-window -t 2
                 tmux new-window "gnumeric ~/doc/stat/day.gnumeric"
