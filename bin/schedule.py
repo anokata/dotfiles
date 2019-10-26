@@ -39,32 +39,25 @@ def make_schedule_one():
     make_task("8:47", ["Start. training set 1"], TRAIN_INTERVAL, False)
     # 20m
     make_task("9:15", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL) # x2
-    make_task("9:28", TASK_TEXT, TASK_INTERVAL)
-    make_task("9:45", TASK_TEXT, TASK_INTERVAL, False)
+    make_task("9:28", TASK_TEXT, TASK_INTERVAL*2)
     make_task("10:02", ["Start. Learn English, please"], ENGLISH_INTERVAL*2, False) 
-    #make_task("10:14", ["Start. Learn English"], ENGLISH_INTERVAL, False)
     make_task("10:29", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL*2)
-    #make_task("10:41", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL, False)
     make_task("10:54", ["Begin. training set 2"], TRAIN_INTERVAL)
     # 30m
     make_task("11:30", ["Start. Affirmate. write some new."], 0)
     make_task("11:32", ["Begin. Meditate"], MEDITATE_INTERVAL, False)
-    make_task("11:44", ["Begin. geometry task"], TASK_GEO_INTERVAL)
-    make_task("12:00", TASK_TEXT, TASK_INTERVAL)
-    make_task("12:17", TASK_TEXT, TASK_INTERVAL, False)
-    make_task("12:33", TASK_TEXT, TASK_INTERVAL, False)
+    make_task("11:43", ["Begin. geometry task"], TASK_GEO_INTERVAL) # *2
+    make_task("11:56", TASK_TEXT, TASK_INTERVAL*2) #*3
+    make_task("12:30", TASK_TEXT, TASK_INTERVAL, False)
     #make_task("12:49", ["Begin. Hardest. Math task"], TASK_GEO_INTERVAL)
-    make_task("12:49", ["Begin. Uchit. Math task"], TASK_GEO_INTERVAL)
+    make_task("12:48", ["Start. training set 3"], TRAIN_INTERVAL)
+    make_task("12:55", ["Begin. Uchit. Math task"], TASK_GEO_INTERVAL)
 
-    make_task("13:00", ["Start. training set 3"], TRAIN_INTERVAL)
-    make_task("13:05", ["Start. geometry task "], TASK_GEO_INTERVAL)
-    make_task("13:17", ["Start. geometry task "], TASK_GEO_INTERVAL) # read
-    make_task("13:30", TASK_TEXT, TASK_INTERVAL)
-    make_task("13:47", TASK_TEXT, TASK_INTERVAL)
+    make_task("13:05", ["Start. geometry task "], TASK_GEO_INTERVAL*2)
+    make_task("13:30", TASK_TEXT, TASK_INTERVAL*2)
     # 30m
     make_task("14:30", ["Start. training set 4"], 0)
-    make_task("14:34", ["Start. geometry task."], TASK_GEO_INTERVAL)
-    make_task("14:44", ["Start. geometry task."], TASK_GEO_INTERVAL, False)
+    make_task("14:34", ["Start. geometry task."], TASK_GEO_INTERVAL*2)
     make_task("14:55", ["Repeat. Affirmate."], 0, False)
     make_task("14:57", ["Start. Write unsolved task."], 0, False)
     # 10m
@@ -76,26 +69,22 @@ def make_schedule_one():
     #make_task("16:06", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL)
     # 15
     make_task("16:26", ["Start. Learn English"], ENGLISH_INTERVAL*2)
-    #make_task("16:37", ["Start. Learn English"], ENGLISH_INTERVAL)
     make_task("16:48", ["Start. training set 5"], TRAIN_INTERVAL)
     # 15m (145)
-    make_task("17:06", ["Start. geometry task "], TASK_GEO_INTERVAL)
-    make_task("17:17", ["Start. geometry task "], TASK_GEO_INTERVAL) # read after
-    make_task("17:28", TASK_TEXT, TASK_INTERVAL)
-    make_task("17:45", TASK_TEXT, TASK_INTERVAL)
-    make_task("18:04", ["Start. training shoulders"], 0, False)
-    # 10m
-    make_task("18:15", ["Start. read. Literature. "], 6) # to 19?
-    make_task("18:23", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL*2)
-    #make_task("18:37", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL)
+    make_task("17:06", ["Start. geometry task "], TASK_GEO_INTERVAL*2)
+    make_task("17:27", TASK_TEXT, TASK_INTERVAL*2)
+    make_task("18:00", ["Start. training shoulders"], 0, False)
+    # 20m
+    #make_task("18:15", ["Start. read. Literature. "], 6) # to 19?
+    make_task("18:20", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL*2)
     make_task("18:47", ["Begin. Math write theorem on paper."], 0)
     make_task("18:51", ["Start. Speak english exercise vowels"], 0, False)
     make_task("18:54", ["Start. training set 6"], TRAIN_INTERVAL)
-    make_task("19:10", TASK_TEXT, TASK_INTERVAL) # удвоить, выбрать одно
-    make_task("19:30", ["Start. Read IT. Patterns. O.O.P."], READ_INTERVAL*2)
+    make_task("19:00", TASK_TEXT, TASK_INTERVAL*2)
+    make_task("19:35", ["Start. Read IT. Patterns. O.O.P."], READ_INTERVAL*2)
     # Evening
-    make_task("20:00", ["Start. Learn English"], ENGLISH_INTERVAL)
-    make_task("20:15", ["Begin. Chistopisanie 8"], 0)
+    make_task("20:00", ["Start. Learn English"], ENGLISH_INTERVAL*2)
+    make_task("20:25", ["Begin. Chistopisanie 8"], 0)
     #make_task("20:25", ["Start. read. Literature. "], READ_INTERVAL*2) 
     #make_task("20:40", TASK_TEXT, TASK_INTERVAL*2)
     #make_task("21:20", ["Start. Read mathematic book"], READ_INTERVAL*2)
