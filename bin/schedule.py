@@ -24,6 +24,7 @@ def make_schedule_one():
     # TODO не надо долго письменных 30мин, чтением разбавлять
     #make_task("12:44", ["Start. Number theory task."], TASK_GEO_INTERVAL) # одну может 20 мин *2
     #make_task("12:49", ["Begin. Hardest. Math task"], TASK_GEO_INTERVAL)
+    #netb
     # Серии без перерывов (<5min) делать и делать длиннее
     make_task("6:10", ["Good morning. Read in voice. theorem. poem. stih. english."], 0, False)
     make_task("6:15", ["Repeat. Affirmate."], 0, False)
@@ -84,6 +85,7 @@ def make_schedule_one():
     # Evening
     make_task("20:00", ["Start. Learn English"], ENGLISH_INTERVAL*2)
     make_task("20:25", ["Begin. Chistopisanie 8"], 0)
+    make_task("20:50", ["test"], 0)
     #make_task("20:25", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL*2)
     #make_task("20:40", TASK_TEXT, TASK_INTERVAL*2)
     #make_task("21:20", ["Start. Read mathematic book"], READ_INTERVAL*2)

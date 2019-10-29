@@ -134,16 +134,12 @@ function _first_general() {
         fi
         export WORK_DIR=~/work/portal
     elif [ -e ~/.home.sig ]; then
-        #echo "Hi at home!"
         # TODO if_first_at_day
         if _is_first_run; then 
-            #echo "Hi new day!"
             hello
-
             mkdir /run/user/$(id -u)/ram 2>/dev/null || true
             rmdir ~/ram 2>/dev/null || true
             ln -s /run/user/$(id -u)/ram ~/  2>/dev/null || true
-
             #amixer sset Headphone unmute || true
             #amixer sset Headphone 100 || true
             export WORK_DIR=~/doc
@@ -156,8 +152,14 @@ function _first_general() {
                 mons -s
             fi
         fi
-    elif [ -e ~/.mobile.sig ]; then
-        echo "Welcome mobile!"
+    elif [ -e ~/.netbook ]; then
+        if _is_first_run; then 
+            hello
+            mkdir /run/user/$(id -u)/ram 2>/dev/null || true
+            rmdir ~/ram 2>/dev/null || true
+            ln -s /run/user/$(id -u)/ram ~/  2>/dev/null || true
+            export WORK_DIR=~/doc
+        fi
     fi
 }
 
