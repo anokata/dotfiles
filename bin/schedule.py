@@ -85,7 +85,6 @@ def make_schedule_one():
     # Evening
     make_task("20:00", ["Start. Learn English"], ENGLISH_INTERVAL*2)
     make_task("20:25", ["Begin. Chistopisanie 8"], 0)
-    make_task("20:50", ["test"], 0)
     #make_task("20:25", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL*2)
     #make_task("20:40", TASK_TEXT, TASK_INTERVAL*2)
     #make_task("21:20", ["Start. Read mathematic book"], READ_INTERVAL*2)
