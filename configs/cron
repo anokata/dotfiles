@@ -1,0 +1,1 @@
+*/1 * * * * /usr/bin/python /home/ksi/dotfiles/bin/schedule.py
