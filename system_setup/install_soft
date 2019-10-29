@@ -24,3 +24,4 @@ sudo pacman -S inotify-tools
 sudo pacman -S djvulibre
 sudo pacman -S  pulseaudio-alsa
 aur https://aur.archlinux.org/xmacro.git
+sudo pacman -S espeak
