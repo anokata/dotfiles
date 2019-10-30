@@ -26,14 +26,17 @@ def make_schedule_one():
     #make_task("12:49", ["Begin. Hardest. Math task"], TASK_GEO_INTERVAL)
     #netb
     # Серии без перерывов (<5min) делать и делать длиннее
+    make_task("5:40", ["Maybe. mathematical task", True], TASK_INTERVAL) 
     make_task("6:10", ["Good morning. Read in voice. theorem. poem. stih. english."], 0, False)
     make_task("6:15", ["Repeat. Affirmate."], 0, False)
     make_task("6:17", ["Start. N. Back excercise"], 0, False) # del? make Math
     make_task("6:20", ["Warmup"], 5)
+    make_task("6:25", ["Start. Speak exercise with english vowels. R. L. The."], 0, False) # to 6h
+    make_task("6:30", ["Start. geometry task "], TASK_GEO_INTERVAL)
     #make_task("6:28", ["Begin. Chistopisanie 8"], 0)
-    make_task("6:35", ["Morning. training set 0"], TRAIN_INTERVAL) # task before?
-    make_task("6:40", ["Morning. training on street air"], 0)
-    make_task("7:00", ["Start. Speak exercise with english vowels. R. L. The."], 0, False) # to 6h
+    #make_task("6:35", ["Morning. training set 0"], TRAIN_INTERVAL) # task before?
+    #make_task("6:40", ["Morning. training on street air"], 0)
+    make_task("6:50", ["Wakeup fox"], 0)
     make_task("7:04", ["Start. geometry task "], TASK_GEO_INTERVAL*2)
     make_task("7:25", ["Begin. Meditate"], MEDITATE_INTERVAL)
     make_task("7:32", TASK_TEXT, TASK_INTERVAL) 
