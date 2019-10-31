@@ -33,14 +33,14 @@ def make_schedule_one():
     make_task("6:20", ["Warmup"], 5)
     make_task("6:25", ["Start. Speak exercise with english vowels. R. L. The."], 0, False) # to 6h
     make_task("6:30", ["Start. geometry task "], TASK_GEO_INTERVAL)
+    make_task("6:45", ["Begin. Meditate"], MEDITATE_INTERVAL)
     #make_task("6:28", ["Begin. Chistopisanie 8"], 0)
     #make_task("6:35", ["Morning. training set 0"], TRAIN_INTERVAL) # task before?
     #make_task("6:40", ["Morning. training on street air"], 0)
     make_task("6:50", ["Wakeup fox"], 0)
-    make_task("7:04", ["Start. geometry task "], TASK_GEO_INTERVAL*2)
-    make_task("7:25", ["Begin. Meditate"], MEDITATE_INTERVAL)
-    make_task("7:32", TASK_TEXT, TASK_INTERVAL) 
-    # 30m !
+    make_task("7:00", ["Start. geometry task "], TASK_GEO_INTERVAL*2)
+    make_task("7:21", TASK_TEXT, TASK_INTERVAL*2) 
+    # 20m !
     make_task("8:17", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL)
     make_task("8:30", TASK_TEXT, TASK_INTERVAL)
     make_task("8:47", ["Start. Read IT. Patterns. O.O.P."], DEV_INTERVAL*2)
