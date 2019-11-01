@@ -81,9 +81,9 @@ def make_schedule_one():
     # 20m (170) ~3h
     #make_task("18:15", ["Start. read. Literature. "], 6) # to 19?
     make_task("18:20", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL*2)
-    make_task("18:47", ["Begin. Math write theorem on paper."], 0)
-    make_task("18:51", ["Start. Speak english exercise vowels"], 0, False)
-    make_task("18:54", ["Start. training set 6"], TRAIN_INTERVAL)
+    make_task("18:43", ["Begin. Math write theorem on paper."], 0)
+    make_task("18:47", ["Start. Speak english exercise vowels"], 0, False)
+    make_task("18:50", ["Start. training set 6"], TRAIN_INTERVAL)
     make_task("19:00", TASK_TEXT, TASK_INTERVAL*2)
     make_task("19:35", ["Start. Read IT. Patterns. O.O.P."], READ_INTERVAL*2)
     # Evening
