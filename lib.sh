@@ -159,6 +159,7 @@ function _first_general() {
             rmdir ~/ram 2>/dev/null || true
             ln -s /run/user/$(id -u)/ram ~/  2>/dev/null || true
             export WORK_DIR=~/doc
+            ~/dotfiles/net/wistartnetbook
         fi
     fi
 }
