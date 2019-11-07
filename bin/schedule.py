@@ -1,8 +1,7 @@
 import subprocess                                                                                                      
 import datetime
 from subprocess import getoutput as start
-
-# Будет вызываться регулярно, каждые 5 минут.
+# Будет вызываться регулярно, каждую минуту.
 # Проверять время. Если есть в расписании час:минута - вызывать соответствующую функцию с аргументами.
 
 TASK_GEO_INTERVAL = 9
@@ -24,7 +23,6 @@ def make_schedule_one():
     # TODO не надо долго письменных 30мин, чтением разбавлять
     #make_task("12:44", ["Start. Number theory task."], TASK_GEO_INTERVAL) # одну может 20 мин *2
     #make_task("12:49", ["Begin. Hardest. Math task"], TASK_GEO_INTERVAL)
-    #netb
     # Серии без перерывов (<5min) делать и делать длиннее
     make_task("5:40", ["Maybe. mathematical task", True], TASK_INTERVAL) 
     make_task("6:10", ["Good morning. Read in voice. theorem. poem. stih. english."], 0, False)
@@ -38,8 +36,8 @@ def make_schedule_one():
     #make_task("6:35", ["Morning. training set 0"], TRAIN_INTERVAL) # task before?
     #make_task("6:40", ["Morning. training on street air"], 0)
     #make_task("6:51", ["Wakeup fox"], 0)
-    make_task("7:10", ["Wakeup fox"], 0)
     make_task("7:00", ["Start. geometry task "], TASK_GEO_INTERVAL*2)
+    make_task("7:10", ["Wakeup fox"], 0)
     make_task("7:21", TASK_TEXT, TASK_INTERVAL*2) 
     # 20m !
     make_task("8:17", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL)
@@ -50,7 +48,7 @@ def make_schedule_one():
     make_task("9:28", TASK_TEXT, TASK_INTERVAL*2)
     make_task("10:02", ["Start. Learn English, please"], ENGLISH_INTERVAL*2, False) 
     make_task("10:27", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL*2)
-    make_task("10:51", ["Begin. training set 2"], TRAIN_INTERVAL)
+    make_task("10:50", ["Begin. training set 2"], TRAIN_INTERVAL)
     # 30m - 10 and add task geo or dev x2
     make_task("11:25", ["Start. Affirmate. write some new."], 0)
     make_task("11:28", ["Begin. Meditate"], MEDITATE_INTERVAL, False)
@@ -60,14 +58,13 @@ def make_schedule_one():
     make_task("12:44", ["Start. training set 3"], TRAIN_INTERVAL, False)
     make_task("12:51", ["Begin. Uchit. Math task"], TASK_GEO_INTERVAL)
     make_task("13:02", ["Start. geometry task "], TASK_GEO_INTERVAL*2)
-    # 5m
-    make_task("13:25", TASK_TEXT, TASK_INTERVAL*2)
-    make_task("13:59", ["Start. training set 4"], TRAIN_INTERVAL)
-    # 30m
+    make_task("13:21", TASK_TEXT, TASK_INTERVAL*2)
+    make_task("13:55", ["Start. training set 4"], TRAIN_INTERVAL)
+    # 35m
     make_task("14:34", ["Start. geometry task."], TASK_GEO_INTERVAL*2)
     make_task("14:53", ["Start. Write unsolved task."], 0, False)
     make_task("14:55", ["Repeat. Affirmate."], 0, False)
-    # 10m
+    # 20m 125
     make_task("15:18", ["Start. Read IT. Patterns. O.O.P."], DEV_INTERVAL)
     make_task("15:29", ["Start. Read IT. Develop. O.O.P."], DEV_INTERVAL*2)
     make_task("15:53", ["Start. Read and Learn Physic"], PHYSIC_INTERVAL*2)
