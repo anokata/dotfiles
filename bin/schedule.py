@@ -15,6 +15,7 @@ PHYSIC_INTERVAL = 11
 END_TEXT = ["end. end", False]
 TASK_TEXT = ["start. mathematical task", True]
 DEV_TEXT = ["Start. Read IT. Patterns. O.O.P."]
+GEOM_TEXT = ["Start. geometry task "]
 busy_minutes = 0
 tasks_count = 0
 
@@ -45,6 +46,7 @@ def make_schedule_one():
     make_task("8:30", TASK_TEXT, TASK_INTERVAL)
     make_task("8:48", DEV_TEXT, DEV_INTERVAL*2)
     make_task("9:11", ["Start. training set 1"], TRAIN_INTERVAL, False)
+    make_task("9:15", ["Repeat. Affirmate."], 0, False)
     # 15m - 10
     make_task("9:28", TASK_TEXT, TASK_INTERVAL*2)
     make_task("10:02", ["Start. Learn English, please"], ENGLISH_INTERVAL*2, False) 
