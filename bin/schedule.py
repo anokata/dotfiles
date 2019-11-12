@@ -94,6 +94,7 @@ def make_schedule_one():
     #make_task("21:20", ["Start. Read mathematic book"], READ_INTERVAL*2)
     make_task("22:00", ["Start. warmup for night"], 0)
     make_task("22:05", ["Repeat. Affirmate."], 0)
+    make_task("22:10", ["Start. Ukulele train."], 5)
 
 
 def say(phrase, beep=True):
