@@ -1,0 +1,1 @@
+for i in ./*.ass ; do ffmpeg -i "$i" "$( echo "$i"|sed 's/\.ass//g' ).srt" ; done
