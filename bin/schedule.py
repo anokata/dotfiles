@@ -82,11 +82,11 @@ def make_schedule_one():
     # 20m (170) ~3h
     #make_task("18:15", ["Start. read. Literature. "], 6) # to 19?
     make_task("18:20", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
-    make_task("18:47", ["Start. Speak english exercise vowels"], 0, False)
-    make_task("18:50", ["Start. training set 6"], TRAIN_INTERVAL)
+    make_task("18:44", ["Start. training set 6"], TRAIN_INTERVAL)
     make_task("19:00", TASK_TEXT, TASK_INTERVAL*2)
     make_task("19:35", DEV_TEXT, READ_INTERVAL*2)
     # Evening
+    make_task("19:57", ["Start. Speak english exercise vowels"], 0, False)
     make_task("20:00", ENGLISH_TEXT, ENGLISH_INTERVAL*2)
     make_task("20:25", ["Begin. Chistopisanie 8"], 0)
     #make_task("20:25", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
