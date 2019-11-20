@@ -50,9 +50,13 @@ def make_schedule_one():
     # 15m - 10
     make_task("9:28", TASK_TEXT, TASK_INTERVAL*2)
     make_task("10:02", ENGLISH_TEXT, ENGLISH_INTERVAL*2, False) 
-    make_task("10:27", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
-    make_task("10:50", ["Begin. training set 2"], TRAIN_INTERVAL)
+    make_task("10:24", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
+    make_task("10:47", ["Begin. training set 2"], TRAIN_INTERVAL)
     # 30m - 10 and add task geo or dev x2
+
+    make_task("11:20", ["Start. Paint. Draw. Excercises."], 5)
+    #make_task("11:20", ["Start. Paint. draw. copy something."], 10)
+    #make_task("11:20", ["Start. Paint. draw. impovisation."], 10)
     make_task("11:25", ["Start. Affirmate. write some new."], 0)
     make_task("11:28", ["Begin. Meditate"], MEDITATE_INTERVAL, False)
     make_task("11:34", GEOM_TEXT, TASK_GEO_INTERVAL*2)
@@ -67,6 +71,7 @@ def make_schedule_one():
     make_task("14:34", GEOM_TEXT, TASK_GEO_INTERVAL*2)
     make_task("14:53", ["Start. Write unsolved task."], 0, False)
     make_task("14:55", ["Repeat. Affirmate."], 0, False)
+    make_task("14:57", ["Start. Paint. draw. copy something."], 10)
     # 20m 125
     make_task("15:18", DEV_TEXT, DEV_INTERVAL)
     make_task("15:29", DEV_TEXT, DEV_INTERVAL*2)

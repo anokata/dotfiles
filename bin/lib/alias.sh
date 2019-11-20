@@ -32,7 +32,7 @@ alias end='systemctl poweroff'
 # Git aliases
 alias ga='git add'
 alias gcm='git commit -m'
-alias gp='git push'
+#alias gp='git push'
 alias gd='git diff'
 alias gs='git status -sb'
 alias gst='git status'
@@ -68,3 +68,4 @@ alias update="sudo pacman -Syu"
 alias feh='feh -FYr'
 alias m='mpv --opengl-es=yes'
 alias p='ping ya.ru'
+alias gp='gp-2.11 ~/doc/gp'
