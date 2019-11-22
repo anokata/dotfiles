@@ -66,6 +66,7 @@ def make_schedule_one():
     make_task("13:02", GEOM_TEXT, TASK_GEO_INTERVAL*2)
     make_task("13:21", TASK_TEXT, TASK_INTERVAL*2)
     make_task("13:55", ["Start. training set 4"], TRAIN_INTERVAL)
+    make_task("13:59", ["English. make story."], 2)
     # 35m
     make_task("14:34", GEOM_TEXT, TASK_GEO_INTERVAL*2)
     make_task("14:53", ["Start. Write unsolved task."], 0, False)
@@ -94,8 +95,8 @@ def make_schedule_one():
     make_task("19:57", ["Start. Speak english exercise vowels"], 0, False)
     make_task("20:00", ["Begin. Chistopisanie 8"], 0)
     make_task("20:05", ENGLISH_TEXT, ENGLISH_INTERVAL*2)
-    #make_task("20:25", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
-    #make_task("20:40", TASK_TEXT, TASK_INTERVAL*2)
+    make_task("20:25", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
+    make_task("20:47", TASK_TEXT, TASK_INTERVAL*2)
     #make_task("21:20", ["Start. Read mathematic book"], READ_INTERVAL*2)
     make_task("22:00", ["Start. warmup for night"], 0)
     make_task("22:05", ["Repeat. Affirmate."], 0)
