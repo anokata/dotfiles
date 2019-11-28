@@ -40,7 +40,7 @@ Plug 'stormherz/tablify'
 "tormaza Plug 'dhruvasagar/vim-table-mode'
 
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 let g:vimtex_compiler_latexrun = {
     \ 'build_dir' : '/tmp',
     \}
@@ -199,9 +199,12 @@ map <F9> :w<CR>:!texmake %<CR>
 "
 " Generic make by filename
 map <F5> :w<CR>:!make '%:t:r'<CR>
-map <F6> :w<CR>:!make '%:t:r'_debug<CR>
+map <F6> :w<CR>:!make <CR>
+map <F7> :w<CR>:!javac '%:t:r'.java<CR>:!java '%:t:r'<CR>
+map <F9> :w<CR>:!make App<CR>
+"map <F6> :w<CR>:!make '%:t:r'_debug<CR>
 " BARE C
-map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
+"map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 " BARE C++
 map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 " SHELL
@@ -210,7 +213,8 @@ map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(
 map <F3> :w<CR>:!make<CR>
 
 " BARE Python
-map <F10> :w<CR>:!epython '%:t'<CR>
+map <F10> :w<CR>:!python '%:t'<CR>
+"map <F10> :w<CR>:!epython '%:t'<CR>
 "map <C-S-O> :w<CR>:!sudo systemctl reload support<CR>
 "VimL
 map <F11> :w<CR>:source %<CR>
@@ -290,6 +294,7 @@ let @j='A {'
 map <leader>j A {
 " swap args in ()
 let @w='0f(ldt,f)pui, p0f,dw'
+let @t="Iclass :put =expand('%:t:r')A {lxkJopublic static void main(String[] args) {}}"
 
 " === netrw config ===
 " bind :Vexplore
