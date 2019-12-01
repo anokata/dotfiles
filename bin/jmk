@@ -1,10 +1,22 @@
 #!/bin/bash
 #java make class source file
 touch $1.java
-echo """class $1 {
+echo """
+import javax.sound.midi.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+import java.io.*;
+import java.net.*;
+
+class $1 {
     public static void main(String[] args) {
-        System.out.println("\"$1\"");
         $1 app = new $1();
+    }
+
+    $1 () {
+        System.out.println("\"Created $1\"");
     }
 }
 """ >> $1.java
