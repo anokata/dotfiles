@@ -91,7 +91,7 @@ def make_schedule_one():
     make_task("19:00", TASK_TEXT, TASK_INTERVAL*2)
     make_task("19:35", DEV_TEXT, READ_INTERVAL*2)
     # Evening
-    make_task("19:57", ["Start. Speak english exercise vowels"], 0, False)
+    #make_task("19:57", ["Start. Speak english exercise vowels"], 0, False)
     make_task("20:00", ["Begin. Chistopisanie 8"], 0)
     make_task("20:05", ENGLISH_TEXT, ENGLISH_INTERVAL*2)
     make_task("20:25", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
