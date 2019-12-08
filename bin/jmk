@@ -2,6 +2,7 @@
 #java make class source file
 touch $1.java
 echo """
+package com.ksihe;
 import javax.sound.midi.*;
 import java.awt.event.*;
 import javax.swing.*;
