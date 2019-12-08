@@ -198,15 +198,26 @@ map <F9> :w<CR>:!texmake %<CR>
 "map <F10> :w<CR>:!clang '%' -o a.out && ./a.out<CR>
 "
 " Generic make by filename
+
+function CompileJava()
+    "w
+    "!javac '%:t:r'.java -d ~/classes/
+    let package = getline(0)
+    echo package
+    "!java -cp ~/classes/ '%:t:r'<CR>
+endfunction
+
 map <F5> :w<CR>:!make '%:t:r'<CR>
 map <F6> :w<CR>:!make <CR>
-map <F7> :w<CR>:!javac '%:t:r'.java<CR>:!java '%:t:r'<CR>
+"map <F8> :w<CR>:!javac '%:t:r'.java<CR>:!java '%:t:r'<CR>
+map <F7> :w<CR>:!javac '%:t:r'.java -d ~/classes/<CR>:!java -cp ~/classes/ '%:t:r'<CR>
+map <F7> :call CompileJava()<CR>
 map <F9> :w<CR>:!make App<CR>
 "map <F6> :w<CR>:!make '%:t:r'_debug<CR>
 " BARE C
 "map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 " BARE C++
-map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
+"map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 " SHELL
 "map <F9> :w<CR>:!./%<CR>
 " MAKE
@@ -295,6 +306,7 @@ map <leader>j A {
 " swap args in ()
 let @w='0f(ldt,f)pui, p0f,dw'
 let @t="Iclass :put =expand('%:t:r')A {lxkJopublic static void main(String[] args) {}}"
+let @t="Itry {lxo} catch (Exception ex) { ex.printStackTrace(); }"
 
 " === netrw config ===
 " bind :Vexplore
