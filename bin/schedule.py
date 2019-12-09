@@ -62,7 +62,7 @@ def make_schedule_one():
     make_task("11:51", TASK_TEXT, TASK_INTERVAL*2) #*3
     make_task("12:24", TASK_TEXT, TASK_INTERVAL, False)
     make_task("12:42", ["Start. training set 3"], TRAIN_INTERVAL, False)
-    make_task("12:46", ["Begin. Uchit. Math task"], TASK_GEO_INTERVAL+3)
+    make_task("12:46", ["Begin. Poya. Math task"], TASK_GEO_INTERVAL+3)
     make_task("13:02", GEOM_TEXT, TASK_GEO_INTERVAL*2)
     make_task("13:21", TASK_TEXT, TASK_INTERVAL*2)
     make_task("13:55", ["Start. training set 4"], TRAIN_INTERVAL)
