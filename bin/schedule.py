@@ -84,7 +84,7 @@ def make_schedule_one():
     make_task("17:07", GEOM_TEXT, TASK_GEO_INTERVAL*2)
     make_task("17:27", TASK_TEXT, TASK_INTERVAL*2)
     make_task("18:00", ["Start. training shoulders"], 0, False)
-    make_task("18:03", ["Begin. Math write theorem on paper."], 0)
+    #make_task("18:03", ["Begin. Math write theorem on paper."], 0)
     # 20m (170) ~3h
     #make_task("18:15", ["Start. read. Literature. "], 6) # to 19?
     make_task("18:20", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
