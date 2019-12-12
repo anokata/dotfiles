@@ -71,8 +71,9 @@ def make_schedule_one():
     make_task("14:34", GEOM_TEXT, TASK_GEO_INTERVAL*2)
     make_task("14:53", ["Start. Write unsolved task."], 0, False)
     make_task("14:55", ["Repeat. Affirmate."], 0, False)
+    make_task("14:57", ["Start. training Triceps"], 0, False)
     #make_task("14:57", ["Start. Paint. draw. copy something."], 10)
-    make_task("14:57", ["Start. Chess. Or checkers"], 10)
+    #make_task("14:57", ["Start. Chess. Or checkers"], 10)
     # 20m 125
     make_task("15:18", DEV_TEXT, DEV_INTERVAL)
     make_task("15:29", DEV_TEXT, DEV_INTERVAL*2)
@@ -102,7 +103,7 @@ def make_schedule_one():
     make_task("22:00", ["Start. warmup for night"], 0)
     make_task("22:05", ["Repeat. Affirmate."], 0)
     #make_task("22:10", ["Start. Ukulele train."], 5)
-    make_task("22:10", ["Start. Chess train."], 0)
+    #make_task("22:10", ["Start. Chess train."], 0)
 
 
 def say(phrase, beep=True):
