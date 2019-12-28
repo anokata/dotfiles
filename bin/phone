@@ -1,0 +1,5 @@
+adbfs ~/phone
+echo "mounted to ~/phone"
+(cd ~/phone; bash)
+fusermount -u ~/phone
+echo "unmounted"

@@ -16,3 +16,4 @@ sudo pacman -S libva-utils mpv
 sudo pacman -S pari
 sudo pacman -S fbreader
 sudo pacman -S android-file-transfer
+sudo pacman -S libmtp mtpfs
