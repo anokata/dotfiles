@@ -76,6 +76,7 @@ def make_schedule_one():
     make_task("14:34", GEOM_TEXT, TASK_GEO_INTERVAL*2)
     make_task("14:53", ["Repeat. Affirmate."], 0, False)
     make_task("14:55", ["Start. training Triceps"], 0, False)
+    make_task("14:57", ["Start. Math. Reasearch Task"], 17)
     # 20m 125
     make_task("15:18", DEV_TEXT, DEV_INTERVAL)
     make_task("15:29", DEV_TEXT, DEV_INTERVAL*2)
