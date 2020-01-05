@@ -22,7 +22,7 @@ function _tmux_run () {
                 tmux split-window -v "vifm"
                 tmux select-window -t 2
                 tmux new-window "gnumeric ~/doc/stat/day.gnumeric"
-                tmux split-window "scim ~/doc/stat/stat.sc"
+                #tmux split-window "scim ~/doc/stat/stat.sc"
             fi
             if [ -e ~/.work.sig ]; then
                 tmux split-window -h -c ~/dotfiles/
