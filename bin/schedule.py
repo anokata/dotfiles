@@ -21,6 +21,27 @@ ENGLISH_TEXT = ["Start. Learn English, please"]
 busy_minutes = 0
 tasks_count = 0
 
+def make_schedule2020():
+    DEV_INTERVAL = 20
+    TASK_INTERVAL = 30
+    PHYSIC_INTERVAL = 20
+    ENGLISH_INTERVAL = 20
+    TASK_GEO_INTERVAL = 20
+
+    make_task("7:00", ["Repeat. Affirmate."], 0, False)
+    make_task("7:03", ["Drink and read"], 0, False)
+    make_task("7:20", TASK_TEXT, TASK_INTERVAL) 
+    make_task("8:30", DEV_TEXT, DEV_INTERVAL)
+    make_task("8:52", ["Repeat. Affirmate."], 0, False)
+    make_task("8:54", ["Start. training set 1"], TRAIN_INTERVAL, False)
+    make_task("9:00", ["Food 20"], 0, False)
+    make_task("9:20", PHYSIC_TEXT, PHYSIC_INTERVAL)
+    #make_task("0:00", TASK_TEXT, TASK_INTERVAL) 
+    #make_task("0:00", PHYSIC_TEXT, PHYSIC_INTERVAL)
+    #make_task("0:00", DEV_TEXT, DEV_INTERVAL)
+    #make_task("0:00", GEOM_TEXT, TASK_GEO_INTERVAL)
+    #make_task("0:00", ENGLISH_TEXT, ENGLISH_INTERVAL) 
+
 def make_schedule_one():
     # Попробовать строенные задания с переменкой 1-2мин
     #make_task("6:15", ["Food. Drink. Water."], 0, False)
@@ -42,13 +63,10 @@ def make_schedule_one():
     make_task("6:17", ["Start. N. Back excercise"], 0, False) # del? make Math
     make_task("6:20", ["Warmup"], 5)
     make_task("6:25", ["Start. Speak exercise with english vowels. R. L. The."], 0, False) # to 6h
-    #make_task("6:30", GEOM_TEXT, TASK_GEO_INTERVAL)
-    #make_task("6:45", ["Begin. Meditate"], MEDITATE_INTERVAL)
     #make_task("6:28", ["Begin. Chistopisanie 8"], 0)
     #make_task("6:35", ["Morning. training set 0"], TRAIN_INTERVAL) # task before?
     #make_task("6:40", ["Morning. training on street air"], 0)
-    #make_task("7:00", GEOM_TEXT, TASK_GEO_INTERVAL*2)
-    make_task("7:21", TASK_TEXT, TASK_INTERVAL*2) 
+    make_task("7:20", TASK_TEXT, TASK_INTERVAL*2) 
     # 20m !
     make_task("8:17", PHYSIC_TEXT, PHYSIC_INTERVAL)
     make_task("8:30", TASK_TEXT, TASK_INTERVAL)
