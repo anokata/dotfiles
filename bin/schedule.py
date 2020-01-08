@@ -22,11 +22,14 @@ busy_minutes = 0
 tasks_count = 0
 
 def make_schedule2020():
-    DEV_INTERVAL = 20
-    TASK_INTERVAL = 30
-    PHYSIC_INTERVAL = 20
-    ENGLISH_INTERVAL = 20
-    TASK_GEO_INTERVAL = 20
+    DEV_INTERVAL = 20 # * 4 + 
+    TASK_INTERVAL = 30 # * 7 + 
+    PHYSIC_INTERVAL = 20 # * 4 + 
+    ENGLISH_INTERVAL = 20 # * 2 + 
+    TASK_GEO_INTERVAL = 20 # * 4 + 
+    # 80+210+80+40+80=490m~8h
+    # +
+    # d 3  t 4  e 2  p 2  g 3
 
     make_task("7:00", ["Repeat. Affirmate."], 0, False)
     make_task("7:03", ["Drink and read"], 0, False)
@@ -34,8 +37,34 @@ def make_schedule2020():
     make_task("8:30", DEV_TEXT, DEV_INTERVAL)
     make_task("8:52", ["Repeat. Affirmate."], 0, False)
     make_task("8:54", ["Start. training set 1"], TRAIN_INTERVAL, False)
-    make_task("9:00", ["Food 20"], 0, False)
+    make_task("9:00", ["Food.20 minutes"], 0, False)
     make_task("9:20", PHYSIC_TEXT, PHYSIC_INTERVAL)
+    make_task("9:41", ["Drink and read.10 minutes"], 0, False)
+    make_task("9:50", ENGLISH_TEXT, ENGLISH_INTERVAL) 
+    make_task("10:10", GEOM_TEXT, TASK_GEO_INTERVAL)
+    make_task("10:31", ["Start. training set 2"], TRAIN_INTERVAL, False)
+    make_task("10:37", TASK_TEXT, TASK_INTERVAL) 
+    make_task("11:18", ["Begin. Poya. Math task"], TASK_GEO_INTERVAL)
+    make_task("11:40", PHYSIC_TEXT, PHYSIC_INTERVAL)
+    make_task("12:00", ["Start. training set 3"], TRAIN_INTERVAL, False)
+    make_task("12:04", ["Drink and read.10 minutes"], 0, False)
+    make_task("12:15", TASK_TEXT, TASK_INTERVAL) 
+    make_task("12:45", ENGLISH_TEXT, ENGLISH_INTERVAL) 
+    make_task("13:05", ["Start. training set 4"], TRAIN_INTERVAL, False)
+    make_task("13:10", DEV_TEXT, DEV_INTERVAL)
+    make_task("13:31", ["Drink and read.10 minutes"], 0, False)
+    make_task("13:40", GEOM_TEXT, TASK_GEO_INTERVAL)
+    make_task("14:00", ["Start. training set 5"], TRAIN_INTERVAL, False)
+    make_task("14:05", DEV_TEXT, DEV_INTERVAL)
+    make_task("14:25", ["Food.20 minutes"], 0, False)
+    make_task("15:00", GEOM_TEXT, TASK_GEO_INTERVAL)
+    make_task("15:20", TASK_TEXT, TASK_INTERVAL) 
+    make_task("15:50", ["Start. training set 6"], TRAIN_INTERVAL, False)
+    make_task("15:55", ["Drink and read.10 minutes"], 0, False)
+    make_task("16:00", GEOM_TEXT, TASK_GEO_INTERVAL)
+    make_task("16:20", TASK_TEXT, TASK_INTERVAL) 
+    make_task("16:50", ["Start. training set 1"], TRAIN_INTERVAL, False)
+
     #make_task("0:00", TASK_TEXT, TASK_INTERVAL) 
     #make_task("0:00", PHYSIC_TEXT, PHYSIC_INTERVAL)
     #make_task("0:00", DEV_TEXT, DEV_INTERVAL)
@@ -110,7 +139,7 @@ def make_schedule_one():
     make_task("18:28", ["Start. training set 6"], TRAIN_INTERVAL)
     # 20m (170) ~3h
     make_task("19:00", TASK_TEXT, TASK_INTERVAL*2)
-    make_task("19:35", DEV_TEXT, READ_INTERVAL*2)
+    make_task("19:35", DEV_TEXT, DEV_INTERVAL*2)
     # Evening
     #make_task("19:57", ["Start. Speak english exercise vowels"], 0, False)
     #make_task("20:00", ["Begin. Chistopisanie 8"], 0)
