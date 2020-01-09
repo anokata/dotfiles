@@ -29,7 +29,7 @@ def make_schedule2020():
     TASK_GEO_INTERVAL = 20 # * 4 + 
     # 80+210+80+40+80=490m~8h
     # +
-    # d 3  t 4  e 2  p 2  g 3
+    # d 4  t 7  e 2  p 4  g 4
 
     make_task("7:00", ["Repeat. Affirmate."], 0, False)
     make_task("7:03", ["Drink and read"], 0, False)
@@ -48,6 +48,7 @@ def make_schedule2020():
     make_task("11:40", PHYSIC_TEXT, PHYSIC_INTERVAL)
     make_task("12:00", ["Start. training set 3"], TRAIN_INTERVAL, False)
     make_task("12:04", ["Drink and read.10 minutes"], 0, False)
+    make_task("12:12", ["Repeat. Affirmate."], 0, False)
     make_task("12:15", TASK_TEXT, TASK_INTERVAL) 
     make_task("12:45", ENGLISH_TEXT, ENGLISH_INTERVAL) 
     make_task("13:05", ["Start. training set 4"], TRAIN_INTERVAL, False)
@@ -64,7 +65,21 @@ def make_schedule2020():
     make_task("16:00", GEOM_TEXT, TASK_GEO_INTERVAL)
     make_task("16:20", TASK_TEXT, TASK_INTERVAL) 
     make_task("16:50", ["Start. training set 1"], TRAIN_INTERVAL, False)
-
+    make_task("16:55", TASK_TEXT, TASK_INTERVAL) 
+    make_task("17:25", PHYSIC_TEXT, PHYSIC_INTERVAL)
+    make_task("17:45", TASK_TEXT, TASK_INTERVAL) 
+    make_task("18:15", ["Start. training set 2"], TRAIN_INTERVAL, False)
+    make_task("18:20", ["Drink and read.10 minutes"], 0, False)
+    make_task("18:30", TASK_TEXT, TASK_INTERVAL) 
+    make_task("19:00", DEV_TEXT, DEV_INTERVAL)
+    make_task("19:20", GEOM_TEXT, TASK_GEO_INTERVAL)
+    make_task("19:40", PHYSIC_TEXT, PHYSIC_INTERVAL)
+    make_task("20:00", ["Food.20 minutes"], 0, False)
+    make_task("20:20", ENGLISH_TEXT, ENGLISH_INTERVAL) 
+    make_task("20:40", PHYSIC_TEXT, PHYSIC_INTERVAL)
+    make_task("21:00", GEOM_TEXT, TASK_GEO_INTERVAL)
+    make_task("21:20", DEV_TEXT, DEV_INTERVAL)
+    make_task("21:40", ["Repeat. Affirmate."], 0, False)
     #make_task("0:00", TASK_TEXT, TASK_INTERVAL) 
     #make_task("0:00", PHYSIC_TEXT, PHYSIC_INTERVAL)
     #make_task("0:00", DEV_TEXT, DEV_INTERVAL)
@@ -72,12 +87,8 @@ def make_schedule2020():
     #make_task("0:00", ENGLISH_TEXT, ENGLISH_INTERVAL) 
 
 def make_schedule_one():
-    # Попробовать строенные задания с переменкой 1-2мин
-    #make_task("6:15", ["Food. Drink. Water."], 0, False)
-    # TODO не надо долго письменных 30мин, чтением разбавлять
     #make_task("12:44", ["Start. Number theory task."], TASK_GEO_INTERVAL) # одну может 20 мин *2
     #make_task("12:49", ["Begin. Hardest. Math task"], TASK_GEO_INTERVAL)
-    # Серии без перерывов (<5min) делать и делать длиннее
     #make_task("18:03", ["Begin. Math write theorem on paper."], 0)
     #make_task("18:15", ["Start. read. Literature. "], 6) # to 19?
     #make_task("11:20", ["Start. Paint. Draw. Excercises."], 5)
