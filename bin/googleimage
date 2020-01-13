@@ -1,0 +1,15 @@
+#!/bin/bash
+#googleimagesdownload -cf config
+DIR="/home/ksi/ram/g/"
+rm -rf $DIR
+mkdir -p $DIR
+LIMIT=1
+if [ -z $2 ]; then
+    LIMIT=1
+else
+    LIMIT=$(expr 1 + $2)
+    echo $LIMIT
+fi
+googleimagesdownload --keywords "$1" --limit $LIMIT --output_directory $DIR --offset "0$2"
+feh -r $DIR
+#espeak "$1"

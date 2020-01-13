@@ -34,6 +34,7 @@ def make_schedule2020():
     make_task("7:00", ["Repeat. Affirmate."], 0, False)
     make_task("7:03", ["Drink and read"], 0, False)
     make_task("7:20", TASK_TEXT, TASK_INTERVAL) 
+    make_task("8:00", ["Start. training"], TRAIN_INTERVAL, False)
     make_task("8:30", DEV_TEXT, DEV_INTERVAL)
     make_task("8:52", ["Repeat. Affirmate."], 0, False)
     make_task("8:54", ["Start. training set 1"], TRAIN_INTERVAL, False)
@@ -98,13 +99,16 @@ def make_schedule_one():
     make_task("7:17", ["Read in voice math"], 0, False)
     make_task("7:20", TASK_TEXT, TASK_INTERVAL*2) 
     # 20m !
+    make_task("8:00", ["Start. training"], TRAIN_INTERVAL, False)
     make_task("8:17", PHYSIC_TEXT, PHYSIC_INTERVAL)
+    make_task("8:27", ["Start. training"], TRAIN_INTERVAL, False)
     make_task("8:30", TASK_TEXT, TASK_INTERVAL)
     make_task("8:48", DEV_TEXT, DEV_INTERVAL*2)
     make_task("9:11", ["Start. training set 1"], TRAIN_INTERVAL, False)
     make_task("9:15", ["Repeat. Affirmate."], 0, False)
     make_task("9:17", ["Begin. Meditate"], MEDITATE_INTERVAL, False)
     # 15m - 10
+    make_task("9:25", ["Start. training"], TRAIN_INTERVAL, False)
     make_task("9:28", TASK_TEXT, TASK_INTERVAL*2) # swat ot phy?
     make_task("10:02", ENGLISH_TEXT, ENGLISH_INTERVAL*2, False) 
     make_task("10:24", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
@@ -116,13 +120,15 @@ def make_schedule_one():
     make_task("11:51", TASK_TEXT, TASK_INTERVAL*2)
     #?
     #make_task("12:24", TASK_TEXT, TASK_INTERVAL, False)
+    make_task("12:26", ["Start. training"], TRAIN_INTERVAL, False)
     make_task("12:42", ["Start. training set 3"], TRAIN_INTERVAL, False)
     make_task("12:46", ["Begin. Meditate"], MEDITATE_INTERVAL, False)
     #make_task("12:46", ["Begin. Poya. Math task"], TASK_GEO_INTERVAL+3)
     make_task("13:02", GEOM_TEXT, TASK_GEO_INTERVAL*2)
     make_task("13:21", TASK_TEXT, TASK_INTERVAL*2)
     make_task("13:55", ["Start. training set 4"], TRAIN_INTERVAL)
-    make_task("13:58", ["English. make story."], 2)
+    #make_task("13:58", ["English. make story."], 2)
+    make_task("14:00", ["Start. Read"], TASK_GEO_INTERVAL, False)
     # 35m
     make_task("14:34", GEOM_TEXT, TASK_GEO_INTERVAL*2)
     make_task("14:53", ["Repeat. Affirmate."], 0, False)
