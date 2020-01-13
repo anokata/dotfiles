@@ -3,8 +3,21 @@ import subprocess
 exc = subprocess.getoutput
 import random
 words = [
-        "cats",
+        "one cat",
         "dogs",
+        "sweets",
+        "cake",
+        "cakes",
+        "water",
+        "botle, water",
+        "sleeping",
+        "book",
+        "books",
+        "people",
+        "tokyo",
+        "music",
+        "running man",
+        "weight lifting",
 ]
 
 word = random.choice(words)
