@@ -23,4 +23,4 @@ words = [
 word = random.choice(words)
 offset = str(random.randint(1,10))
 print(word, offset)
-exc("googleimage " + word + " " + offset)
+exc("/home/ksi/dotfiles/bin/googleimage " + word + " " + offset)

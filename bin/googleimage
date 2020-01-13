@@ -10,6 +10,6 @@ else
     LIMIT=$(expr 1 + $2)
     echo $LIMIT
 fi
-googleimagesdownload --keywords "$1" --limit $LIMIT --output_directory $DIR --offset "0$2"
-feh -r $DIR
+/usr/bin/googleimagesdownload --keywords "$1" --limit $LIMIT --output_directory $DIR --offset "0$2"
+feh -Z -r $DIR
 #espeak "$1"
