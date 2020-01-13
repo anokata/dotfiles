@@ -11,5 +11,5 @@ else
     echo $LIMIT
 fi
 /usr/bin/googleimagesdownload --keywords "$1" --limit $LIMIT --output_directory $DIR --offset "0$2"
-feh -Z -r $DIR
+feh -YZ -r $DIR
 #espeak "$1"
