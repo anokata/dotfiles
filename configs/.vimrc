@@ -38,6 +38,7 @@ Plug 'stormherz/tablify'
 "Plug 'vimplugin/project.vim'
 "Plug 'hoxnox/indexer.vim'
 "tormaza Plug 'dhruvasagar/vim-table-mode'
+Plug 'artur-shaik/vim-javacomplete2'
 
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
 "Plug 'lervag/vimtex'
@@ -198,19 +199,35 @@ map <F9> :w<CR>:!texmake %<CR>
 "map <F10> :w<CR>:!clang '%' -o a.out && ./a.out<CR>
 "
 " Generic make by filename
+set cmdheight=2
 
 function CompileJava()
-    "w
-    "!javac '%:t:r'.java -d ~/classes/
-    let package = getline(0)
-    echo package
-    "!java -cp ~/classes/ '%:t:r'<CR>
+    " Run from source dir where package root
+    " TODO Find root dir, if threre source, down n. or in prj dir
+    w
+    
+    let filename = expand('%:t:r')
+    let package = getline(1)
+    let packagename = split(package, ' ')[1]
+    let packagename =  trim(packagename, ";")
+    exec "cd ../../../"
+    let path = substitute(packagename, '[.]', '/', 'g')
+    "echo path
+    
+    let cmd = join([":silent !javac ", path, "/", filename, ".java -d ../classes/"], "")
+    "echo cmd
+    exec cmd
+    let cmd = join(["!java -cp ../classes/ ", packagename, ".", filename], "")
+    "echo cmd
+    exec cmd
+    exec "cd -"
 endfunction
+map <F8> :w<CR>:!jar -cvmf ../../manifest ~/classes/'%:t:r'.jar -C ~/classes/ com<CR>:!java -jar ~/classes/'%:t:r'.jar<CR>
+"map <F7> :w<CR>:!javac '%:t:r'.java -d ~/classes/<CR>:!java -cp ~/classes/ '%:t:r'<CR>
 
 map <F5> :w<CR>:!make '%:t:r'<CR>
 map <F6> :w<CR>:!make <CR>
-"map <F8> :w<CR>:!javac '%:t:r'.java<CR>:!java '%:t:r'<CR>
-map <F7> :w<CR>:!javac '%:t:r'.java -d ~/classes/<CR>:!java -cp ~/classes/ '%:t:r'<CR>
+map <F6> :w<CR>:!javac -d ~/classes '%:t:r'.java && java -ea -cp ~/classes '%:t:r'<CR>
 map <F7> :call CompileJava()<CR>
 map <F9> :w<CR>:!make App<CR>
 "map <F6> :w<CR>:!make '%:t:r'_debug<CR>
@@ -302,7 +319,7 @@ let @p='0fpcwlogger.debug(€kD€kDA)'
 " log
 let @l='0wdwilog.info(A)'
 let @j='A {'
-map <leader>j A {
+map <leader>k A {
 " swap args in ()
 let @w='0f(ldt,f)pui, p0f,dw'
 let @t="Iclass :put =expand('%:t:r')A {lxkJopublic static void main(String[] args) {}}"
@@ -326,3 +343,8 @@ let g:indexer_disableCtagsWarning=1
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+"filetype plugin on
+"set omnifunc=syntaxcomplete#Complete

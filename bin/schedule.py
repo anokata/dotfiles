@@ -158,6 +158,48 @@ def make_schedule_one():
     make_task("22:00", ["Start. warmup for night"], 0)
     make_task("22:05", ["Repeat. Affirmate."], 0)
 
+def make_schedule_two():
+    make_task("7:20", PHYSIC_TEXT, PHYSIC_INTERVAL)
+    make_task("8:00", ["Start. training"], TRAIN_INTERVAL, False)
+    make_task("8:17", TASK_TEXT, PHYSIC_INTERVAL)
+    make_task("8:27", ["Start. training"], TRAIN_INTERVAL, False)
+    make_task("8:30", ENGLISH_TEXT, ENGLISH_INTERVAL)
+    make_task("8:48", DEV_TEXT, DEV_INTERVAL*2)
+    make_task("9:11", ["Start. training set 1"], TRAIN_INTERVAL, False)
+    make_task("9:15", ["Repeat. Affirmate."], 0, False)
+    make_task("9:17", ["Begin. Meditate"], MEDITATE_INTERVAL, False)
+    make_task("9:25", ["Start. training"], TRAIN_INTERVAL, False)
+    make_task("9:28", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
+    make_task("10:02", ENGLISH_TEXT, ENGLISH_INTERVAL*2, False) 
+    make_task("10:24", TASK_TEXT, TASK_INTERVAL)
+    make_task("10:47", ["Begin. training set 2"], TRAIN_INTERVAL)
+    make_task("11:23", ["Repeat. Affirmate."], 0, False)
+    make_task("11:25", ["Begin. Meditate"], MEDITATE_INTERVAL, False)
+    make_task("11:31", DEV_TEXT, DEV_INTERVAL*2)
+    make_task("11:51", TASK_TEXT, TASK_INTERVAL*2)
+    make_task("12:26", ["Start. training"], TRAIN_INTERVAL, False)
+    make_task("12:42", ["Start. training set 3"], TRAIN_INTERVAL, False)
+    make_task("12:46", ["Begin. Meditate"], MEDITATE_INTERVAL, False)
+    make_task("13:02", GEOM_TEXT, TASK_GEO_INTERVAL*2)
+    make_task("13:21", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
+    make_task("13:55", ["Start. training set 4"], TRAIN_INTERVAL)
+    make_task("14:00", ["Start. Read"], TASK_GEO_INTERVAL, False)
+    make_task("14:34", TASK_TEXT, TASK_GEO_INTERVAL*2)
+    make_task("14:53", ["Repeat. Affirmate."], 0, False)
+    make_task("14:55", ["Start. training Triceps"], 0, False)
+    make_task("14:57", ["Begin. Meditate on Math. Inspire self"], MEDITATE_INTERVAL, False)
+    make_task("15:29", DEV_TEXT, DEV_INTERVAL*2)
+    make_task("15:53", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
+    make_task("16:15", ["Start. training Biceps"], 0, False)
+    make_task("16:19", ENGLISH_TEXT, ENGLISH_INTERVAL*2)
+    make_task("16:40", ["Start. training set 5"], TRAIN_INTERVAL)
+    make_task("17:10", GEOM_TEXT, TASK_GEO_INTERVAL*2)
+    make_task("17:30", TASK_TEXT, TASK_INTERVAL*2)
+    make_task("18:03", ["Start. training shoulders"], 0, False)
+    make_task("18:05", PHYSIC_TEXT, PHYSIC_INTERVAL*2)
+    make_task("18:28", ["Start. training set 6"], TRAIN_INTERVAL)
+    make_task("19:00", TASK_TEXT, TASK_INTERVAL*2)
+    make_task("19:35", DEV_TEXT, DEV_INTERVAL*2)
 
 def say(phrase, beep=True):
     if beep:
@@ -228,7 +270,8 @@ def make_task(time, arg, interval, prepare=True, end_arg=END_TEXT, fun=say):
 # Global schedule
 sched = { }
 
-make_schedule_one()
+#make_schedule_one()
+make_schedule_two()
 #make_schedule2020()
 
 run_schedule(sched)
