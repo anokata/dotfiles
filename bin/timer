@@ -1,0 +1,16 @@
+#!/bin/bash
+echo timer started.
+begin=$(date '+%s')
+datediff() {
+    sec=$(( ($1 - $2) % 60)) 
+    min=$(( ( ($1 - $2) / 60 ) % 60 )) 
+    hour=$(( ($1 - $2) / 3600 )) 
+    echo $hour:$min:$sec
+}
+
+while true; do
+    sleep 1
+    clear
+    now=$(date '+%s')
+    datediff $now $begin
+done

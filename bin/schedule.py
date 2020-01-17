@@ -162,38 +162,52 @@ def make_schedule_two(): # 1h=50do:10rest(offline)
     make_task("6:55", ["Meditate"], 0)
     make_task("7:00", ["Start. Warmup"], 0)
     make_task("7:04", ["Repeat. Affirmate."], 0)
-    make_task("7:20", GEOM_TEXT, 10)
-    make_task("7:30", ["Breathe. UpSide Down."], 0)
-    make_task("7:35", GEOM_TEXT, 10)
+    #make_task("7:20", GEOM_TEXT, 10)
+    #make_task("7:30", ["Breathe. UpSide Down."], 0)
+    #make_task("7:35", GEOM_TEXT, 10)
 
-    make_task("8:30", ["Breathe. Espander."], 0)
+    #make_task("8:30", ["Breathe. Espander."], 0)
+    #make_task("8:33", ["Concentrate. 100. look. imagine. Xaos"], 0)
+    #make_task("8:36", TASK_TEXT, 10)
 
     make_task("8:55", ["Meditate"], 0)
-    make_task("9:00", ["Start. training set 1"], 0)
-    make_task("9:04", ["Repeat. Affirmate."], 0)
-    make_task("9:30", ["Breathe. UpSide Down."], 0)
+    make_task("9:00", ["Repeat. Affirmate."], 0)
 
+    make_task("9:30", ["Concentrate. 100. look. Xaos. trance."], 0)
+
+    make_task("10:00", ["Start. training set 1"], 0)
+    make_task("10:05", DEV_TEXT, 10)
+    make_task("10:30", ["Breathe. Espander."], 0)
     make_task("10:55", ["Meditate"], 0)
     make_task("11:00", ["Start. training set 2"], 0)
     make_task("11:04", ["Repeat. Affirmate."], 0)
-    make_task("12:55", ["Meditate"], 0)
-    make_task("13:00", ["Go. Walk for 10 minutes"], 0)
+    make_task("11:20", PHYSIC_TEXT, 10)
+    make_task("11:30", ["Concentrate. 100. look. Xaos. trance."], 0)
+    make_task("11:33", ["Eye excercise"], 1)
+    make_task("11:50", TASK_TEXT, 10)
 
+    make_task("12:55", ["Meditate"], 0)
     make_task("13:00", ["Start. training set 3"], 0)
     make_task("13:04", ["Repeat. Affirmate."], 0)
+
+    make_task("14:15", GEOM_TEXT, 10)
+    make_task("14:25", TASK_TEXT, 10)
+
     make_task("14:55", ["Meditate. In Dark."], 0)
     make_task("15:00", ["Start. training set 4"], 0)
     make_task("15:04", ["Repeat. Affirmate."], 0)
 
+    make_task("15:30", DEV_TEXT, 10)
+    
+    #make_task("16:00", PHYSIC_TEXT, 10)
+
     make_task("16:55", ["Meditate"], 0)
     make_task("17:00", ["Start. training set 5"], 0)
     make_task("17:04", ["Repeat. Affirmate."], 0)
-    make_task("17:06", ["мысленно улучшай себя. Improve self in imagination."], 3)
+    make_task("17:06", ["мысленно улучшай себя. Improve self in imagination."], 1)
     #make_task("17:07", PHYSIC_TEXT, 10)
     #make_task("17:18", DEV_TEXT, 10)
     #make_task("17:29", GEOM_TEXT, 10)
-    #make_task("18:16", ["Breathe. Espander."], 0)
-    #make_task("18:20", GEOM_TEXT, 10)
     make_task("18:30", ["Breathe. UpSide Down."], 0)
     make_task("18:35", GEOM_TEXT, 10)
     
@@ -212,6 +226,7 @@ def say(phrase, beep=True):
 
     #start("flite -t '{}'".format(phrase))
     start("espeak '{}'".format(phrase))
+    start("ffplay -nodisp -autoexit ~/dotfiles/Ching3.wav")
 
 def getnow():
     date = datetime.datetime.now()
