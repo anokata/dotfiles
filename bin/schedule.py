@@ -216,6 +216,8 @@ def make_schedule_two(): # 1h=50do:10rest(offline)
     make_task("19:04", ["Repeat. Affirmate."], 0)
     #make_task("19:30", PHYSIC_TEXT, 10)
 
+def make_schedule_3():
+    make_task("14:11", DEV_TEXT, 10)
 
 
 def say(phrase, beep=True):
@@ -292,7 +294,8 @@ def make_task(time, arg, interval, prepare=True, end_arg=END_TEXT, fun=say):
 sched = { }
 
 #make_schedule_one()
-make_schedule_two()
+#make_schedule_two()
+make_schedule_3()
 #make_schedule2020()
 
 run_schedule(sched)
