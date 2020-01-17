@@ -218,6 +218,10 @@ def make_schedule_two(): # 1h=50do:10rest(offline)
 
 def make_schedule_3():
     make_task("14:11", DEV_TEXT, 10)
+    make_task("16:36", TASK_TEXT, 10)
+    make_task("16:47", TASK_TEXT, 10)
+    make_task("17:00", ["Start. training set 5"], 3)
+    make_task("18:00", ["Start. training set 6"], 3)
 
 
 def say(phrase, beep=True):
