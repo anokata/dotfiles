@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 import os
 import datetime
+import sys
 # TODO OOP
 PATH="/home/ksi/doc/dayschedule.py"
 PATH="/home/ksi/ram/dayschedule.py"
 
+# Значит надо расширить schedule чтобы можно было командой добавить задачу через 5 минут и отслеживать объём выполенного-запланированного.
+# команда start_dev - записывает в файл расписания на текущий день, schedule его выполняет. заодно получаем дневник.
 # TODO add task with arg cmd
 # run day tasks in schedule.py and run for current day(if exist)
+#Для стимуляции выполнения большего сделать вехи достижения! цветные в разделе статов. И добавить общие статы по выполненному и вычисляемы характеристики силы и ума итп.
+#добавить watch/notify отслежка выполненного объёма
 
 def append2sched(s):
-    if not os.path.exists(PATH):
-        os.mknod(PATH)
     with open(PATH, 'a') as out:
         out.write(s + '\n')
 
@@ -25,15 +28,37 @@ def getDate():
 def makeNewDayDef():
     return "def date_{}():\n    pass".format(getDate())
 
-def getTime():
+def getTime(delta=5):
     now = datetime.datetime.now()
-    now += datetime.timedelta(minutes=5)
+    now += datetime.timedelta(minutes=delta)
     return "{}:{}".format(now.hour, now.minute)
 
 def isNowdayExist():
-    return False
+    date = getDate()
+    fileContent = open(PATH).read()
+    return fileContent.find(date) >= 0
 
-print(makeNewDayDef())
-print(makeTask(getTime(), "Read", 10))
-#append2sched(makeNewDayDef())
-#append2sched(makeTask(getTime(), "Read", 10))
+def init():
+    if not os.path.exists(PATH):
+        os.mknod(PATH)
+
+init()
+
+def planTask(say, interval, delta=5): # Main fun
+    if not isNowdayExist():
+        append2sched(makeNewDayDef())
+    append2sched(makeTask(getTime(delta), say, interval))
+
+
+if __name__=="__main__":
+    if len(sys.argv) < 3:
+        print("no ars")
+        sys.exit(0)
+    say = sys.argv[1]
+    interval = int(sys.argv[2])
+    delta = 5
+    if (len(sys.argv) > 3):
+        delta = int(sys.argv[3])
+    #print(say, interval)
+    planTask(say, interval, delta)
+

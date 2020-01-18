@@ -1,8 +1,13 @@
 import subprocess                                                                                                      
 import datetime
 from subprocess import getoutput as start
+import schedule_add as sched_add
+#import dayschedule as 
+
 # Будет вызываться регулярно, каждую минуту.
 # Проверять время. Если есть в расписании час:минута - вызывать соответствующую функцию с аргументами.
+PATH="/home/ksi/doc/dayschedule.py"
+PATH="/home/ksi/ram/dayschedule.py"
 
 TASK_GEO_INTERVAL = 9
 MEDITATE_INTERVAL = 5
@@ -217,11 +222,12 @@ def make_schedule_two(): # 1h=50do:10rest(offline)
     #make_task("19:30", PHYSIC_TEXT, 10)
 
 def make_schedule_3():
-    make_task("8:56", TASK_TEXT, 10)
-    make_task("10:37", TASK_TEXT, 10)
-    make_task("11:17", ENGLISH_TEXT, 10)
-    make_task("11:31", DEV_TEXT, 10)
+    #make_task("8:56", TASK_TEXT, 10)
+    #make_task("10:37", TASK_TEXT, 10)
+    #make_task("11:17", ENGLISH_TEXT, 10)
+    #make_task("11:31", DEV_TEXT, 10)
 
+    make_task("15:06", ["TEST"], 10)
     #make_task("14:11", DEV_TEXT, 10)
     #make_task("16:36", TASK_TEXT, 10)
     #make_task("16:47", TASK_TEXT, 10)
@@ -254,7 +260,7 @@ def run_schedule(sched):
     time = "{}:{}".format(hour, minute)
     task = sched.get(time, False)
     # TODO Если нашёл две то последовательно их выполнить
-    #print(time, task)
+    print(time, task)
     if not task: return
     # call fun with arg
     task[0](*task[1])
@@ -302,25 +308,27 @@ def make_task(time, arg, interval, prepare=True, end_arg=END_TEXT, fun=say):
 # Global schedule
 sched = { }
 
-#make_schedule_one()
-#make_schedule_two()
-make_schedule_3()
-#make_schedule2020()
-
-run_schedule(sched)
-
+# read PATH and if exist make by date
+def readTodaySched():
+    functionName = "date_" + sched_add.getDate()
+    exec(open(PATH).read())
+    if sched_add.isNowdayExist():
+        eval(functionName + "()")
 
 if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
-    #run_schedule(sched)
-    print(sched)
+    #make_schedule_one()
+    #make_schedule_two()
+    #make_schedule_3()
+    readTodaySched()
+    #print(sched)
+    #make_schedule2020()
+    run_schedule(sched)
     for time, task in sched.items():
         if task[1][0] != "Prepare!" and task[1][0] != "end. end": #fix + interval
             print("{} {}".format(time, task[1][0]))
     print("tasks: {}\nminutes: {}".format(tasks_count, busy_minutes))
     print("hours: {}h{}m".format(busy_minutes // 60, busy_minutes % 60))
-    #print(add_interval("15:55", 15))
-
     #make_task("12:44", ["Start. Number theory task."], TASK_GEO_INTERVAL) # одну может 20 мин *2
     #make_task("12:49", ["Begin. Hardest. Math task"], TASK_GEO_INTERVAL)
     #make_task("18:03", ["Begin. Math write theorem on paper."], 0)
@@ -335,3 +343,5 @@ if __name__ == "__main__":
     #make_task("6:28", ["Begin. Chistopisanie 8"], 0)
     #make_task("22:10", ["Start. Ukulele train."], 5)
     #make_task("22:10", ["Start. Chess train."], 0)
+
+
