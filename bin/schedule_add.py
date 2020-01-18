@@ -10,8 +10,6 @@ PATH="/home/ksi/ram/dayschedule.py"
 # команда start_dev - записывает в файл расписания на текущий день, schedule его выполняет. заодно получаем дневник.
 # TODO add task with arg cmd
 # run day tasks in schedule.py and run for current day(if exist)
-#Для стимуляции выполнения большего сделать вехи достижения! цветные в разделе статов. И добавить общие статы по выполненному и вычисляемы характеристики силы и ума итп.
-#добавить watch/notify отслежка выполненного объёма
 
 def append2sched(s):
     with open(PATH, 'a') as out:
@@ -31,7 +29,7 @@ def makeNewDayDef():
 def getTime(delta=5):
     now = datetime.datetime.now()
     now += datetime.timedelta(minutes=delta)
-    return "{}:{}".format(now.hour, now.minute)
+    return "{}:{}".format(preczeroformat(now.hour), preczeroformat(now.minute))
 
 def isNowdayExist():
     date = getDate()
@@ -49,6 +47,11 @@ def planTask(say, interval, delta=5): # Main fun
         append2sched(makeNewDayDef())
     append2sched(makeTask(getTime(delta), say, interval))
 
+def preczeroformat(a):
+    a = int(a)
+    if a < 10:
+        return "0{}".format(a)
+    return str(a)
 
 if __name__=="__main__":
     if len(sys.argv) < 3:
