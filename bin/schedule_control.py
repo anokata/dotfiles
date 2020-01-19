@@ -16,10 +16,19 @@ ENGLISH_TEXT = "Start. Learn English"
 # посчитать в текущем расписании сколько задача было до текущего времени. Целевые объёмы.
 
 # use curses 
+import curses
+from curses import wrapper
+stdscr = 0
+
+def main(stdscr):
+    stdscr.clear()
+    main_loop()
+    stdscr.refresh()
+    stdscr.getkey()
 
 def main_loop():
-    loop = true
+    loop = True
     while loop:
-        pass
+        loop = False
 
-
+wrapper(main)
