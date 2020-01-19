@@ -221,18 +221,14 @@ def make_schedule_two(): # 1h=50do:10rest(offline)
     make_task("19:04", ["Repeat. Affirmate."], 0)
     #make_task("19:30", PHYSIC_TEXT, 10)
 
-def make_schedule_3():
-    #make_task("8:56", TASK_TEXT, 10)
-    #make_task("10:37", TASK_TEXT, 10)
-    #make_task("11:17", ENGLISH_TEXT, 10)
-    #make_task("11:31", DEV_TEXT, 10)
-
-    make_task("15:06", ["TEST"], 10)
-    #make_task("14:11", DEV_TEXT, 10)
-    #make_task("16:36", TASK_TEXT, 10)
-    #make_task("16:47", TASK_TEXT, 10)
-    #make_task("17:00", ["Start. training set 5"], 3)
-    #make_task("18:00", ["Start. training set 6"], 3)
+def make_schedule_train():
+    make_task("9:00", ["Start. training set 2"], 3)
+    make_task("10:00", ["Start. training set 3"], 3)
+    make_task("11:00", ["Start. training set 4"], 3)
+    make_task("12:00", ["Start. training set 5"], 3)
+    make_task("14:00", ["Start. training set 6"], 3)
+    make_task("16:00", ["Start. training set 5"], 3)
+    make_task("18:00", ["Start. training set 6"], 3)
 
 
 def say(phrase, beep=True):
@@ -319,7 +315,7 @@ if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
     #make_schedule_one()
     #make_schedule_two()
-    #make_schedule_3()
+    make_schedule_train()
     readTodaySched()
     #print(sched)
     #make_schedule2020()
