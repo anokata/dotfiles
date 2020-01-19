@@ -4,7 +4,7 @@ import datetime
 import sys
 # TODO OOP
 PATH="/home/ksi/doc/dayschedule.py"
-PATH="/home/ksi/ram/dayschedule.py"
+#PATH="/home/ksi/ram/dayschedule.py"
 
 # Значит надо расширить schedule чтобы можно было командой добавить задачу через 5 минут и отслеживать объём выполенного-запланированного.
 # команда start_dev - записывает в файл расписания на текущий день, schedule его выполняет. заодно получаем дневник.
@@ -29,7 +29,7 @@ def makeNewDayDef():
 def getTime(delta=5):
     now = datetime.datetime.now()
     now += datetime.timedelta(minutes=delta)
-    return "{}:{}".format(preczeroformat(now.hour), preczeroformat(now.minute))
+    return "{}:{}".format(now.hour, preczeroformat(now.minute))
 
 def isNowdayExist():
     date = getDate()

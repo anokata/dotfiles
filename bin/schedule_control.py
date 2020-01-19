@@ -1,7 +1,7 @@
 # run
 # schedule_add.py "Start geometry task" 5 1
 PATH="/home/ksi/doc/dayschedule.py"
-PATH="/home/ksi/ram/dayschedule.py"
+#PATH="/home/ksi/ram/dayschedule.py"
 
 MATH_TEXT = "Start. mathematical task"
 DEV_TEXT = "Start. Read IT. Patterns. O.O.P."

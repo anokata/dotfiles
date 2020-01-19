@@ -6,7 +6,7 @@ import schedule_add as sched_add
 
 # Будет вызываться регулярно, каждую минуту.
 # Проверять время. Если есть в расписании час:минута - вызывать соответствующую функцию с аргументами.
-PATH="/home/ksi/doc/dayschedule.py"
+#PATH="/home/ksi/doc/dayschedule.py"
 PATH="/home/ksi/ram/dayschedule.py"
 
 TASK_GEO_INTERVAL = 9
