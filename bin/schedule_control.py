@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # run
 # schedule_add.py "Start geometry task" 5 1
 PATH="/home/ksi/doc/dayschedule.py"
@@ -34,6 +35,7 @@ def main_loop(stdscr):
     make_task_table = { # key: [name, text, interval, delta]
             't': ['Training', "Start. Training"],
             'm': ['Math\t(10)', MATH_TEXT],
+            'M': ['Math\t(10) over 2min', MATH_TEXT, 10, 2],
             'g': ['Geometry\t(10)', GEOM_TEXT],
             'd': ['Dev\t(10)', DEV_TEXT],
             'p': ['Physic\t(10)', PHYSIC_TEXT],
@@ -73,8 +75,6 @@ def make_task_plan(stdscr, text='test', interval=10, delta=5):
     planTask(text, interval, delta)
     stdscr.getch()
 
-# Main
-#wrapper(main)
 
 # Читать расписание
 def read_schedule():
@@ -85,3 +85,5 @@ def read_schedule():
     return schedule.sched
 
 read_schedule()
+# Main
+wrapper(main)
