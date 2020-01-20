@@ -44,12 +44,16 @@ def main_loop(stdscr):
             'D': ['Dev\t(10) over 2min', DEV_TEXT, 10, 2],
             'p': ['Physic\t(10)', PHYSIC_TEXT],
             'P': ['Physic\t(10) over 2min', PHYSIC_TEXT, 10, 2],
+            'e': ['English\t(10)', ENGLISH_TEXT],
+            'E': ['English\t(10) over 2min', ENGLISH_TEXT, 10, 2],
             'r': ['Read\t(10)', "Read"],
     }
     while True:
         stdscr.clear()
         redraw(stdscr)
         i = 2
+        stdscr.addstr(i, 0, "(s) - Stat")
+        i+=1
         for key, param in make_task_table.items():
             name = param[0]
             text = param[1]
@@ -65,6 +69,8 @@ def main_loop(stdscr):
         c = stdscr.getch()
         if c == ord('q'):
             break
+        if c == ord('s'):
+            show_stat(stdscr)
         param = make_task_table.get(chr(c), False)
         if param:
             text = param[1]
@@ -74,6 +80,18 @@ def main_loop(stdscr):
                 interval = param[2]
                 delta = param[3]
             make_task_plan(stdscr, text, interval, delta)
+
+# TODO last 10 days, current month, last 3 months. group by tasks + sum
+def show_stat(stdscr):
+    sched = read_schedule()
+    past = filter_tonow(sched)
+    stdscr.clear()
+    stdscr.refresh()
+    stdscr.addstr(0, 0, 'Current day:')
+    stdscr.addstr(1, 0, 'English:')
+
+    stdscr.addstr(10, 1, "Sum:\t{}".format(calcSumInterval(past)))
+    stdscr.getch()
 
 def make_task_plan(stdscr, text='test', interval=10, delta=5):
     stdscr.addstr(stdscr.getmaxyx()[0]-1, 0, text)
@@ -93,7 +111,11 @@ def redraw(stdscr):
     stdscr.addstr(bottom-1, 0, "{}/{}".format(calcCount(past), calcCount(sched)))
     stdscr.addstr(bottom-1, 7, "Min:{}/{}".format(calcSumInterval(past), calcSumInterval(sched)))
     stdscr.addstr(bottom-1, 20, "Target:{}/{}".format(calcSumInterval(past), 100))
+    stdscr.addstr(bottom-1, 35, mark(past))
     stdscr.addstr(bottom-2, 0, "Next:" + next_task(sched))
+
+def mark(past):
+    return "({})".format("I" * (calcSumInterval(past) // 100))
 
 def next_task(sched):
     for time, task in sched.items():
@@ -146,9 +168,10 @@ def read_schedule():
         eval(functionName + "()")
     return schedule.sched
 
-print(calcCount(filter_tonow(read_schedule())))
-print(calcCount((read_schedule())))
-print(read_schedule())
+#print(calcCount(filter_tonow(read_schedule())))
+#print(calcCount((read_schedule())))
+#print(read_schedule())
+#print(calcSumInterval(filter_tonow(read_schedule())) // 100)
 #print(calcSumInterval(read_schedule()))
 # Main
 wrapper(main)
