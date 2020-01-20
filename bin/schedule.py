@@ -290,12 +290,12 @@ def add_interval(time, i):
 def make_task(time, arg, interval, prepare=True, end_arg=END_TEXT, fun=say):
     # add prepare
     if prepare:
-        sched[add_interval(time, -1)] = [say, ["Prepare!", False]]
+        sched[add_interval(time, -1)] = [say, ["Prepare!", False], 0]
     # add main task
-    sched[time] = [fun, arg]
+    sched[time] = [fun, arg, interval]
     if interval > 0:
         time = add_interval(time, interval)
-        sched[time] = [fun, end_arg]
+        sched[time] = [fun, end_arg, 0]
         # stat:
         global busy_minutes, tasks_count
         busy_minutes += interval
@@ -310,6 +310,9 @@ def readTodaySched():
     exec(open(PATH).read())
     if sched_add.isNowdayExist():
         eval(functionName + "()")
+
+def isRealTask(task):
+    return task[1][0] != "Prepare!" and task[1][0] != "end. end"
 
 if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
