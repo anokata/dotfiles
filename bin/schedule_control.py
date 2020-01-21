@@ -35,7 +35,7 @@ def main(stdscr):
 
 def main_loop(stdscr):
     make_task_table = { # key: [name, text, interval, delta]
-            't': ['Training', "Start. Training"],
+            't': ['Training', "Start. Training", 2, 5],
             'm': ['Math\t(10)', MATH_TEXT],
             'M': ['Math\t(10) over 2min', MATH_TEXT, 10, 2],
             'g': ['Geometry\t(10)', GEOM_TEXT],
@@ -47,6 +47,7 @@ def main_loop(stdscr):
             'e': ['English\t(10)', ENGLISH_TEXT],
             'E': ['English\t(10) over 2min', ENGLISH_TEXT, 10, 2],
             'r': ['Read\t(10)', "Read"],
+            'i': ['Meditate\t(5)', "Meditate. Concentrate on math, tasks and develop", 5, 2],
     }
     while True:
         stdscr.clear()
@@ -55,6 +56,7 @@ def main_loop(stdscr):
         stdscr.addstr(i, 0, "(s) - Stat")
         i+=1
         for key, param in make_task_table.items():
+            if key.isupper(): continue
             name = param[0]
             text = param[1]
             interval = 10

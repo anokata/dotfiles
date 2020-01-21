@@ -317,8 +317,7 @@ def isRealTask(task):
 if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
     #make_schedule_one()
-    #make_schedule_two()
-    make_schedule_train()
+    #make_schedule_train()
     readTodaySched()
     #print(sched)
     #make_schedule2020()
