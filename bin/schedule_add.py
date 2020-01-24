@@ -32,8 +32,9 @@ def getTime(delta=5):
     now += datetime.timedelta(minutes=delta)
     return "{}:{}".format(now.hour, preczeroformat(now.minute))
 
-def isNowdayExist():
-    date = getDate()
+def isNowdayExist(date=False):
+    if not date:
+        date = getDate()
     fileContent = open(PATH).read()
     return fileContent.find(date) >= 0
 

@@ -118,11 +118,29 @@ def redraw(stdscr):
     stdscr.addstr(bottom-2, 0, "Next:" + next_task(sched))
 
     # draw last days
-    stdscr.addstr(0, 40, "Last day (TSK#Min)")
-    # load past day sced
-    lastday = getLastDay()
-    # show task num; minutes
-    stdscr.addstr(1, 40, "{} {}".format(calcCount(lastday), calcSumInterval(lastday)))
+    left = 27
+    stdscr.addstr(0, left, "Last 10 day (TSK#Min)")
+    stdscr.addstr(1, left, "Task count|minutes")
+    for i in range(1, 11):
+        # load past day sced
+        lastday = getLastDay(i)
+        # show task num; minutes
+        if lastday != {}:
+            stdscr.addstr(1+i, left, "  #{}\t  | {}".format(calcCount(lastday), calcSumInterval(lastday)))
+    left = 54
+    stdscr.addstr(0, left, "Last weeks sum")
+    for i in range(1, 5):
+        tasks = 0
+        minutes = 0
+        for d in range(1, 8):
+            pass
+            #daysched = getLastDay(i*7 + d)
+            #tasks += calcCount(daysched)
+            #minutes += calcSumInterval(daysched)
+        stdscr.addstr(1+i, left, "  #{}\t  | {}".format(tasks, minutes))
+
+    left = 80
+    stdscr.addstr(0, left, "Last months sum")
 
 def mark(past):
     return "({})".format("I" * (calcSumInterval(past) // 100))
@@ -186,15 +204,16 @@ def read_schedule(date=False):
         functionName = "date_" + sched_add.getDate()
     exec(open(PATH).read())
     schedule.sched = {}
-    if sched_add.isNowdayExist():
+    if sched_add.isNowdayExist(date):
         eval(functionName + "()")
     return schedule.sched
 
-def getLastDay():
-    lastdate = datetime.datetime.now() - datetime.timedelta(days=1)
+def getLastDay(n=1):
+    lastdate = datetime.datetime.now() - datetime.timedelta(days=n)
     lastdate = sched_add.getDate(lastdate)
     s = read_schedule(lastdate)
     return filter_real(s)
 
 # Main
 wrapper(main)
+# test read_schedule
