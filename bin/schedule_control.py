@@ -5,7 +5,7 @@ PATH="/home/ksi/doc/dayschedule.py"
 #PATH="/home/ksi/ram/dayschedule.py"
 
 MATH_TEXT = "Start. mathematical task"
-DEV_TEXT = "Start. Read IT. Patterns. O.O.P."
+DEV_TEXT = "Start. Develop projectcs."
 GEOM_TEXT = "Start. Geometry task "
 PHYSIC_TEXT = "Start. Read and Learn Physic"
 ENGLISH_TEXT = "Start. Learn English"
@@ -36,6 +36,7 @@ def main(stdscr):
 def main_loop(stdscr):
     make_task_table = { # key: [name, text, interval, delta]
             't': ['Training', "Start. Training", 2, 5],
+            'T': ['Training', "Start. Training", 2, 2],
             'm': ['Math\t(10)', MATH_TEXT],
             'M': ['Math\t(10) over 2min', MATH_TEXT, 10, 2],
             'g': ['Geometry\t(10)', GEOM_TEXT],
@@ -116,6 +117,13 @@ def redraw(stdscr):
     stdscr.addstr(bottom-1, 35, mark(past))
     stdscr.addstr(bottom-2, 0, "Next:" + next_task(sched))
 
+    # draw last days
+    stdscr.addstr(0, 40, "Last day (TSK#Min)")
+    # load past day sced
+    lastday = getLastDay()
+    # show task num; minutes
+    stdscr.addstr(1, 40, "{} {}".format(calcCount(lastday), calcSumInterval(lastday)))
+
 def mark(past):
     return "({})".format("I" * (calcSumInterval(past) // 100))
 
@@ -124,6 +132,14 @@ def next_task(sched):
         if schedule.isRealTask(task) and not isTimePast(time):
             return "{} @ {}".format(task[1][0], time)
     return ""
+
+def filter_real(sched):
+    r = {}
+    for time, task in sched.items():
+        if schedule.isRealTask(task):
+            r[time] = task
+    return r
+
 
 def filter_tonow(sched):
     r = {}
@@ -163,17 +179,22 @@ def calcCount(sched):
     return s
 
 # Читать расписание
-def read_schedule():
-    functionName = "date_" + sched_add.getDate()
+def read_schedule(date=False):
+    if date:
+        functionName = "date_" + date
+    else:
+        functionName = "date_" + sched_add.getDate()
     exec(open(PATH).read())
+    schedule.sched = {}
     if sched_add.isNowdayExist():
         eval(functionName + "()")
     return schedule.sched
 
-#print(calcCount(filter_tonow(read_schedule())))
-#print(calcCount((read_schedule())))
-#print(read_schedule())
-#print(calcSumInterval(filter_tonow(read_schedule())) // 100)
-#print(calcSumInterval(read_schedule()))
+def getLastDay():
+    lastdate = datetime.datetime.now() - datetime.timedelta(days=1)
+    lastdate = sched_add.getDate(lastdate)
+    s = read_schedule(lastdate)
+    return filter_real(s)
+
 # Main
 wrapper(main)

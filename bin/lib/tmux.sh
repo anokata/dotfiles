@@ -21,6 +21,7 @@ function _tmux_run () {
                 tmux new-window -c ~/dev/javapetprojects
                 tmux split-window -v "vifm"
                 tmux select-window -t 2
+                tmux new-window -v "~/dotfiles/bin/schedule_control.py"
                 tmux new-window "gnumeric ~/doc/stat/day.gnumeric"
                 #tmux split-window "scim ~/doc/stat/stat.sc"
             fi

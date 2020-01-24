@@ -19,8 +19,9 @@ def makeTask(time, say, interval):
     task = "    make_task(\"{}\", [\"{}\"], {})".format(time, say, interval)
     return task
 
-def getDate():
-    now = datetime.datetime.now()
+def getDate(now=False):
+    if not now:
+        now = datetime.datetime.now()
     return "{}_{}_{}".format(now.day, now.month, now.year)
         
 def makeNewDayDef():
