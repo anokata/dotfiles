@@ -29,6 +29,7 @@ import datetime
 def main(stdscr):
     stdscr.clear()
     curses.curs_set(0)
+    curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
     main_loop(stdscr)
     stdscr.refresh()
     #stdscr.getkey()
@@ -107,6 +108,7 @@ def redraw(stdscr):
     now = datetime.datetime.now()
     stdscr.addstr(0, 0, "Available tasks:\n(q) - Exit")
     stdscr.addstr(bottom, right-5, "{}:{}".format(now.hour, schedule.preczeroformat(now.minute)))
+    stdscr.addstr(bottom-4, 1, "Всё я могу!", curses.color_pair(1))
 
     # Отсеять до настоящего момента
     sched = read_schedule()
@@ -126,7 +128,7 @@ def redraw(stdscr):
         lastday = getLastDay(i)
         # show task num; minutes
         if lastday != {}:
-            stdscr.addstr(1+i, left, "  #{}\t  | {}".format(calcCount(lastday), calcSumInterval(lastday)))
+            stdscr.addstr(1+i, left, "  #{}      {}".format(calcCount(lastday), calcSumInterval(lastday)))
     left = 54
     stdscr.addstr(0, left, "Last weeks sum")
     for i in range(1, 5):
@@ -137,7 +139,7 @@ def redraw(stdscr):
             #daysched = getLastDay(i*7 + d)
             #tasks += calcCount(daysched)
             #minutes += calcSumInterval(daysched)
-        stdscr.addstr(1+i, left, "  #{}\t  | {}".format(tasks, minutes))
+        stdscr.addstr(1+i, left, "  #{}    | {}".format(tasks, minutes))
 
     left = 80
     stdscr.addstr(0, left, "Last months sum")
