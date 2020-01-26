@@ -129,6 +129,8 @@ def redraw(stdscr):
         # show task num; minutes
         if lastday != {}:
             stdscr.addstr(1+i, left, "  #{}      {}".format(calcCount(lastday), calcSumInterval(lastday)))
+    stdscr.addstr(12, left, "AVG:")
+
     left = 54
     stdscr.addstr(0, left, "Last weeks sum")
     for i in range(1, 5):
@@ -141,8 +143,10 @@ def redraw(stdscr):
             #minutes += calcSumInterval(daysched)
         stdscr.addstr(1+i, left, "  #{}    | {}".format(tasks, minutes))
 
+    stdscr.addstr(7, left, "Last months sum")
+
     left = 80
-    stdscr.addstr(0, left, "Last months sum")
+    stdscr.addstr(0, left, "Math, Dev, ...")
 
 def mark(past):
     return "({})".format("I" * (calcSumInterval(past) // 100))
