@@ -91,11 +91,18 @@ def show_stat(stdscr):
     past = filter_tonow(sched)
     stdscr.clear()
     stdscr.refresh()
-    stdscr.addstr(0, 0, 'Current day:')
-    stdscr.addstr(1, 0, 'English: {}'.format(countTask(sched, ENGLISH_TEXT)))
-    stdscr.addstr(2, 0, 'Develop: {}'.format(countTask(sched, DEV_TEXT)))
+    i = 0
+    stdscr.addstr(i, 0, 'Current day: \t #N  Minutes'); i+=1
+    stdscr.addstr(i, 0, 'Training:\t {}   {}'.format(*countTask(sched, "Train"))); i+=1
+    stdscr.addstr(i, 0, 'English:\t {}   {}'.format(*countTask(sched, ENGLISH_TEXT))); i+=1
+    stdscr.addstr(i, 0, 'Develop:\t {}   {}'.format(*countTask(sched, DEV_TEXT))); i+=1
+    stdscr.addstr(i, 0, 'Mathemathic:\t {}   {}'.format(*countTask(sched, MATH_TEXT))); i+=1
+    stdscr.addstr(i, 0, 'Geometry:\t {}   {}'.format(*countTask(sched, GEOM_TEXT))); i+=1
+    stdscr.addstr(i, 0, 'Physic: \t {}   {}'.format(*countTask(sched, PHYSIC_TEXT))); i+=1
+    stdscr.addstr(i, 0, 'Reading:\t {}   {}'.format(*countTask(sched, "Read"))); i+=1
+    stdscr.addstr(i, 0, 'Meditation:\t {}   {}'.format(*countTask(sched, "Medit"))); i+=1
 
-    stdscr.addstr(10, 1, "Sum:\t{}".format(calcSumInterval(past)))
+    stdscr.addstr(i, 1, "Sum:\t\t {}   {}".format(calcCount(past), calcSumInterval(past)))
     stdscr.getch()
 
 def make_task_plan(stdscr, text='test', interval=10, delta=5):
@@ -240,16 +247,21 @@ def getLastDay(n=1):
 
 def countTask(sched, s):
     n = 0
+    sm = 0
     for time, task in sched.items():
         if schedule.isRealTask(task):
             if (getTaskStr(task).find(s) >= 0):
                 n += 1
-    return n
+                sm += getTaskInterval(task)
+    return n, sm
 
 def getTaskStr(task):
     return task[1][0]
 
-#print(countTask(read_schedule(), 'Dev'))
+def getTaskInterval(task):
+    return task[2]
+
+#print(countTask(read_schedule(), 'Dev')); exit()
 # Main
 wrapper(main)
 
