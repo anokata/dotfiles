@@ -36,7 +36,7 @@ def isNowdayExist(date=False):
     if not date:
         date = getDate()
     fileContent = open(PATH).read()
-    return fileContent.find(date) >= 0
+    return fileContent.find("date_" + date) >= 0
 
 def init():
     if not os.path.exists(PATH):

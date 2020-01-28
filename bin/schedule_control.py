@@ -92,7 +92,8 @@ def show_stat(stdscr):
     stdscr.clear()
     stdscr.refresh()
     stdscr.addstr(0, 0, 'Current day:')
-    stdscr.addstr(1, 0, 'English:')
+    stdscr.addstr(1, 0, 'English: {}'.format(countTask(sched, ENGLISH_TEXT)))
+    stdscr.addstr(2, 0, 'Develop: {}'.format(countTask(sched, DEV_TEXT)))
 
     stdscr.addstr(10, 1, "Sum:\t{}".format(calcSumInterval(past)))
     stdscr.getch()
@@ -121,6 +122,8 @@ def redraw(stdscr):
 
     # draw last days
     left = 27
+    weekCountAvg = 0
+    weekSumAvg= 0
     stdscr.addstr(0, left, "Last 10 day (TSK#Min)")
     stdscr.addstr(1, left, "Task count|minutes")
     for i in range(1, 11):
@@ -128,22 +131,37 @@ def redraw(stdscr):
         lastday = getLastDay(i)
         # show task num; minutes
         if lastday != {}:
-            stdscr.addstr(1+i, left, "  #{}      {}".format(calcCount(lastday), calcSumInterval(lastday)))
-    stdscr.addstr(12, left, "AVG:")
+            count = calcCount(lastday)
+            sumint = calcSumInterval(lastday)
+            stdscr.addstr(1+i, left, "  #{}      {}".format(count, sumint))
+            weekCountAvg += count
+            weekSumAvg += sumint
+    weekCountAvg = round(weekCountAvg / 7)
+    weekSumAvg = round(weekSumAvg / 7)
+    stdscr.addstr(12, left, "AVG: #{}    {}".format(weekCountAvg, weekSumAvg))
 
     left = 54
-    stdscr.addstr(0, left, "Last weeks sum")
-    for i in range(1, 5):
+    stdscr.addstr(0, left, "Last weeks sum/avg")
+    for i in range(0, 4):
         tasks = 0
         minutes = 0
-        for d in range(1, 8):
-            pass
-            #daysched = getLastDay(i*7 + d)
-            #tasks += calcCount(daysched)
-            #minutes += calcSumInterval(daysched)
-        stdscr.addstr(1+i, left, "  #{}    | {}".format(tasks, minutes))
-
+        for d in range(0, 7):
+            daysched = getLastDay(i*7 + d)
+            tasks += calcCount(daysched)
+            minutes += calcSumInterval(daysched)
+        stdscr.addstr(1+i, left, "  #{} {} / #{} {}".format(tasks, minutes, round(tasks/7), round(minutes/7)))
+    
+    top = i
+    monthday = 30
     stdscr.addstr(7, left, "Last months sum")
+    for i in range(0, 3):
+        tasks = 0
+        minutes = 0
+        for d in range(0, monthday):
+            daysched = getLastDay(i*monthday + d)
+            tasks += calcCount(daysched)
+            minutes += calcSumInterval(daysched)
+        stdscr.addstr(5+i+top, left, "  #{} {} / #{} {}".format(tasks, minutes, round(tasks/monthday), round(minutes/monthday)))
 
     left = 80
     stdscr.addstr(0, left, "Math, Dev, ...")
@@ -220,6 +238,18 @@ def getLastDay(n=1):
     s = read_schedule(lastdate)
     return filter_real(s)
 
+def countTask(sched, s):
+    n = 0
+    for time, task in sched.items():
+        if schedule.isRealTask(task):
+            if (getTaskStr(task).find(s) >= 0):
+                n += 1
+    return n
+
+def getTaskStr(task):
+    return task[1][0]
+
+#print(countTask(read_schedule(), 'Dev'))
 # Main
 wrapper(main)
-# test read_schedule
+
