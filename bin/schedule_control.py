@@ -9,6 +9,8 @@ DEV_TEXT = "Start. Develop projectcs."
 GEOM_TEXT = "Start. Geometry task "
 PHYSIC_TEXT = "Start. Read and Learn Physic"
 ENGLISH_TEXT = "Start. Learn English"
+INTERVAL = 3
+MILESTONE = 3
 
 #Для стимуляции выполнения большего сделать вехи достижения! цветные в разделе статов. И добавить общие статы по выполненному и вычисляемы характеристики силы и ума итп.
 #добавить watch/notify отслежка выполненного объёма
@@ -35,23 +37,18 @@ def main(stdscr):
     #stdscr.getkey()
 
 def main_loop(stdscr):
-    make_task_table = { # key: [name, text, interval, delta]
-            't': ['Training', "Start. Training", 2, 5],
-            'T': ['Training', "Start. Training", 2, 2],
-            'm': ['Math\t(10)', MATH_TEXT],
-            'M': ['Math\t(10) over 2min', MATH_TEXT, 10, 2],
-            'g': ['Geometry\t(10)', GEOM_TEXT],
-            'G': ['Geometry\t(10) over 2min', GEOM_TEXT, 10, 2],
-            'd': ['Dev\t(10)', DEV_TEXT],
-            'D': ['Dev\t(10) over 2min', DEV_TEXT, 10, 2],
-            'p': ['Physic\t(10)', PHYSIC_TEXT],
-            'P': ['Physic\t(10) over 2min', PHYSIC_TEXT, 10, 2],
-            'e': ['English\t(10)', ENGLISH_TEXT],
-            'E': ['English\t(10) over 2min', ENGLISH_TEXT, 10, 2],
-            'r': ['Read\t(10)', "Read"],
-            'i': ['Meditate\t(5)', "Meditate. Concentrate on math, tasks and develop", 5, 2],
-    }
     while True:
+        past = filter_tonow(read_schedule())
+        make_task_table = { # key: [name, text, interval, delta]
+                't': ['Training', "Start. Training", 2, 1],
+                'm': ['Math\t({}) {}/{}'.format(INTERVAL, countTask(past, MATH_TEXT)[1], MILESTONE), MATH_TEXT],
+                'g': ['Geometry\t({}) {}/{}'.format(INTERVAL, countTask(past, GEOM_TEXT)[1], MILESTONE), GEOM_TEXT],
+                'd': ['Dev\t({}) {}/{}'.format(INTERVAL, countTask(past, DEV_TEXT)[1], MILESTONE), DEV_TEXT],
+                'p': ['Physic\t({}) {}/{}'.format(INTERVAL, countTask(past, PHYSIC_TEXT)[1], MILESTONE), PHYSIC_TEXT],
+                'e': ['English\t({}) {}/{}'.format(INTERVAL, countTask(past, ENGLISH_TEXT)[1], MILESTONE), ENGLISH_TEXT],
+                'r': ['Read\t({})'.format(INTERVAL), "Read"],
+                'i': ['Meditate\t(5)', "Meditate. Concentrate on math, tasks and develop", 5, 1],
+        }
         stdscr.clear()
         redraw(stdscr)
         i = 2
@@ -61,8 +58,8 @@ def main_loop(stdscr):
             if key.isupper(): continue
             name = param[0]
             text = param[1]
-            interval = 10
-            delta = 5
+            interval = INTERVAL
+            delta = 1
             if len(param) > 2:
                 interval = param[2]
                 delta = param[3]
@@ -78,8 +75,8 @@ def main_loop(stdscr):
         param = make_task_table.get(chr(c), False)
         if param:
             text = param[1]
-            interval = 10
-            delta = 5
+            interval = INTERVAL
+            delta = 1
             if len(param) > 2:
                 interval = param[2]
                 delta = param[3]
@@ -105,7 +102,7 @@ def show_stat(stdscr):
     stdscr.addstr(i, 1, "Sum:\t\t {}   {}".format(calcCount(past), calcSumInterval(past)))
     stdscr.getch()
 
-def make_task_plan(stdscr, text='test', interval=10, delta=5):
+def make_task_plan(stdscr, text='test', interval=INTERVAL, delta=1):
     stdscr.addstr(stdscr.getmaxyx()[0]-1, 0, text)
     planTask(text, interval, delta)
     stdscr.getch()
@@ -122,8 +119,8 @@ def redraw(stdscr):
     sched = read_schedule()
     past = filter_tonow(sched)
     stdscr.addstr(bottom-1, 0, "{}/{}".format(calcCount(past), calcCount(sched)))
-    stdscr.addstr(bottom-1, 7, "Min:{}/{}".format(calcSumInterval(past), calcSumInterval(sched)))
-    stdscr.addstr(bottom-1, 20, "Target:{}/{}".format(calcSumInterval(past), 100))
+    stdscr.addstr(bottom-1, 7, "Min:{}({})/{}".format(calcSumInterval(past), calcSumIntervalTASKS(past), calcSumInterval(sched)))
+    stdscr.addstr(bottom-1, 20, "Target:{}/{}".format(calcSumIntervalTASKS(past), MILESTONE*5))
     stdscr.addstr(bottom-1, 35, mark(past))
     stdscr.addstr(bottom-2, 0, "Next:" + next_task(sched))
 
@@ -218,6 +215,19 @@ def calcSumInterval(sched):
     for time, task in sched.items():
         if schedule.isRealTask(task):
             s += task[2]
+    return s
+
+def isMileTask(task):
+    if getTaskStr(task) in [MATH_TEXT, DEV_TEXT, PHYSIC_TEXT, GEOM_TEXT, ENGLISH_TEXT]:
+        return True
+    return False
+
+def calcSumIntervalTASKS(sched):
+    s = 0
+    for time, task in sched.items():
+        if schedule.isRealTask(task):
+            if isMileTask(task):
+                s += task[2]
     return s
 
 def calcCount(sched):

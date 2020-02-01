@@ -222,13 +222,27 @@ def make_schedule_two(): # 1h=50do:10rest(offline)
     #make_task("19:30", PHYSIC_TEXT, 10)
 
 def make_schedule_train():
-    make_task("9:00", ["Start. training set 2"], 3)
-    make_task("10:00", ["Start. training set 3"], 3)
-    make_task("11:00", ["Start. training set 4"], 3)
-    make_task("12:00", ["Start. training set 5"], 3)
-    make_task("14:00", ["Start. training set 6"], 3)
-    make_task("16:00", ["Start. training set 5"], 3)
-    make_task("18:00", ["Start. training set 6"], 3)
+    make_task("10:00", ["Start. training set 2"], 3)
+    make_task("11:00", ["Start. training set 3"], 3)
+    make_task("12:00", ["Start. training set 4"], 3)
+    make_task("14:00", ["Start. training set 5"], 3)
+    make_task("16:00", ["Start. training set 6"], 3)
+
+def make_schedule_3():
+    TASK_INTERVAL = 3
+    #make_task("7:30", ["Start. training"], 3)
+    #make_task("8:25", ["Start. training set 1"], 3)
+    make_task("8:30", ["Breakfast. Free Time. 60 minutes"], 0)
+    #make_task("9:30", ["Walking outside. 5 minutes"], 0)
+    #make_task("9:40", TASK_TEXT, TRAIN_INTERVAL)
+    #make_task("11:00", ["Start. training set 2"], 3)
+    #make_task("12:00", ["Meditate"], 5)
+    #make_task("12:55", ["Start. training set 3"], 3)
+    make_task("13:00", ["Dinner. Free Time. 60 minutes"], 0)
+    #make_task("14:00", ["Walking outside. 5 minutes"], 0)
+    #make_task("16:55", ["Start. training set 3"], 3)
+    make_task("17:00", ["Supper. Free Time. 60 minutes"], 0)
+    #make_task("18:55", ["Start. training set 4"], 3)
 
 
 def say(phrase, beep=True):
@@ -318,6 +332,7 @@ if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
     #make_schedule_one()
     #make_schedule_train()
+    make_schedule_3()
     readTodaySched()
     #print(sched)
     #make_schedule2020()
