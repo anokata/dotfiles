@@ -10,7 +10,7 @@ GEOM_TEXT = "Start. Geometry task "
 PHYSIC_TEXT = "Start. Read and Learn Physic"
 ENGLISH_TEXT = "Start. Learn English"
 INTERVAL = 3
-MILESTONE = 3
+MILESTONE = 6
 
 #Для стимуляции выполнения большего сделать вехи достижения! цветные в разделе статов. И добавить общие статы по выполненному и вычисляемы характеристики силы и ума итп.
 #добавить watch/notify отслежка выполненного объёма
