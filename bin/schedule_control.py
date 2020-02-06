@@ -40,7 +40,7 @@ def main_loop(stdscr):
     while True:
         past = filter_tonow(read_schedule())
         make_task_table = { # key: [name, text, interval, delta]
-                't': ['Training', "Start. Training", 2, 1],
+                't': ['Training', "Start. Training", 3, 1],
                 'm': ['Math\t({}) {}/{}'.format(INTERVAL, countTask(past, MATH_TEXT)[1], MILESTONE), MATH_TEXT],
                 'g': ['Geometry\t({}) {}/{}'.format(INTERVAL, countTask(past, GEOM_TEXT)[1], MILESTONE), GEOM_TEXT],
                 'd': ['Dev\t({}) {}/{}'.format(INTERVAL, countTask(past, DEV_TEXT)[1], MILESTONE), DEV_TEXT],
@@ -120,7 +120,7 @@ def redraw(stdscr):
     past = filter_tonow(sched)
     stdscr.addstr(bottom-1, 0, "{}/{}".format(calcCount(past), calcCount(sched)))
     stdscr.addstr(bottom-1, 7, "Min:{}({})/{}".format(calcSumInterval(past), calcSumIntervalTASKS(past), calcSumInterval(sched)))
-    stdscr.addstr(bottom-1, 20, "Target:{}/{}".format(calcSumIntervalTASKS(past), MILESTONE*5))
+    stdscr.addstr(bottom-1, 21, "Target:{}/{}".format(calcSumIntervalTASKS(past), MILESTONE*5))
     stdscr.addstr(bottom-1, 35, mark(past))
     stdscr.addstr(bottom-2, 0, "Next:" + next_task(sched))
 

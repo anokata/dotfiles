@@ -17,7 +17,8 @@ READ_INTERVAL = 10
 DEV_INTERVAL = 11
 ENGLISH_INTERVAL = 10
 PHYSIC_INTERVAL = 11
-END_TEXT = ["end. end", False]
+END_TEXT = "ok"
+END_ARG = [END_TEXT, False]
 TASK_TEXT = ["start. mathematical task", True]
 DEV_TEXT = ["Start. Read IT. Patterns. O.O.P."]
 GEOM_TEXT = ["Start. geometry task "]
@@ -25,6 +26,7 @@ PHYSIC_TEXT = ["Start. Read and Learn Physic"]
 ENGLISH_TEXT = ["Start. Learn English, please"]
 busy_minutes = 0
 tasks_count = 0
+PREPARE = "Get ready!"
 
 def make_schedule2020():
     DEV_INTERVAL = 20 # * 4 + 
@@ -228,38 +230,41 @@ def make_schedule_train():
     make_task("14:00", ["Start. training set 5"], 3)
     make_task("16:00", ["Start. training set 6"], 3)
 
-def make_schedule_3():
-    TASK_INTERVAL = 3
-    #make_task("7:30", ["Start. training"], 3)
-    #make_task("8:25", ["Start. training set 1"], 3)
-    make_task("8:30", ["Breakfast. Free Time. 60 minutes"], 0)
-    #make_task("9:30", ["Walking outside. 5 minutes"], 0)
-    #make_task("9:40", TASK_TEXT, TRAIN_INTERVAL)
-    #make_task("11:00", ["Start. training set 2"], 3)
-    #make_task("12:00", ["Meditate"], 5)
-    #make_task("12:55", ["Start. training set 3"], 3)
-    make_task("13:00", ["Dinner. Free Time. 60 minutes"], 0)
-    #make_task("14:00", ["Walking outside. 5 minutes"], 0)
-    #make_task("16:55", ["Start. training set 3"], 3)
-    make_task("17:00", ["Supper. Free Time. 60 minutes"], 0)
-    #make_task("18:55", ["Start. training set 4"], 3)
+# no more than 30 tasks in a day, task len <= 40min
+def make_schedule_minimum():
+    MATH_INTERVAL = 3
+    MATH = "Algebra time"
+    task("7:30", "Warmup. morning ritual")
+    # Вспомнить цель. nback. Подышать.
+    task("8:25", "Start. training set 1")
+    task("8:30", "Breakfast")
+    task("9:40", MATH, MATH_INTERVAL)
+    task("11:00", "Start. training set 2")
+    task("12:55", "Start. training set 3")
+    task("13:00", "Dinner. Free Time. 60 minutes")
+    #task("14:00", "Walking outside. 5 minutes")
+    task("15:00", "Start. training set 4")
+    task("16:55", "Start. training set 5")
+    task("17:00", "Supper. Free Time. 60 minutes")
+    task("18:55", "Start. training set 6")
 
 
 def say(phrase, beep=True):
     if beep:
         #old: start("speaker-test -t sine -f 700 -l 1 -P 2 -c 1& a=$(jobs -p | head); echo $a; sleep 0.2; kill -KILL $a;")
-        start("ffplay -nodisp -autoexit ~/dotfiles/Ching4.wav")
-        start("ffplay -nodisp -autoexit ~/dotfiles/bell2.ogg")
+        #start("ffplay -nodisp -autoexit ~/dotfiles/Ching4.wav")
+        #start("ffplay -nodisp -autoexit ~/dotfiles/bell2.ogg")
+        start("ffplay -nodisp -autoexit ~/dotfiles/bell.ogg")
 
     #start("flite -t '{}'".format(phrase))
     start("espeak '{}'".format(phrase))
-    start("ffplay -nodisp -autoexit ~/dotfiles/Ching3.wav")
+    #start("ffplay -nodisp -autoexit ~/dotfiles/Ching3.wav")
 
 def getnow():
     date = datetime.datetime.now()
     hour = date.hour
     minute = date.minute
-    time = "{}:{}".format(hour, minute)
+    time = "{}:{}".format(hour, preczeroformat(minute))
     return time
 
 def run_schedule(sched):
@@ -301,10 +306,10 @@ def add_interval(time, i):
 
 # TODO return end time возврашать время окончания +1min чтобы можно было поставить след задачу с него
 # TODO dic->list чтобы была возможность в одно время несколько задач?
-def make_task(time, arg, interval, prepare=True, end_arg=END_TEXT, fun=say):
+def make_task(time, arg, interval=0, prepare=True, end_arg=END_ARG, fun=say):
     # add prepare
     if prepare:
-        sched[add_interval(time, -1)] = [say, ["Prepare!", False], 0]
+        sched[add_interval(time, -1)] = [say, [PREPARE, False], 0]
     # add main task
     sched[time] = [fun, arg, interval]
     if interval > 0:
@@ -315,6 +320,9 @@ def make_task(time, arg, interval, prepare=True, end_arg=END_TEXT, fun=say):
         busy_minutes += interval
         tasks_count += 1
 
+
+def task(time, arg, interval=0, prepare=True, end_arg=END_ARG, fun=say):
+    make_task(time, [arg], interval, prepare, end_arg, fun)
 # Global schedule
 sched = { }
 
@@ -326,20 +334,20 @@ def readTodaySched():
         eval(functionName + "()")
 
 def isRealTask(task):
-    return task[1][0] != "Prepare!" and task[1][0] != "end. end"
+    return task[1][0] != PREPARE and task[1][0] != END_TEXT
 
 if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
-    #make_schedule_one()
-    #make_schedule_train()
-    make_schedule_3()
+    make_schedule_minimum()
     readTodaySched()
     #print(sched)
     #make_schedule2020()
     run_schedule(sched)
+    i = 0
     for time, task in sched.items():
-        if task[1][0] != "Prepare!" and task[1][0] != "end. end": #fix + interval
-            print("{} {}".format(time, task[1][0]))
+        if task[1][0] != PREPARE and task[1][0] != END_TEXT: #fix + interval
+            i += 1
+            print("{}  {} {}".format(i, time, task[1][0]))
     print("tasks: {}\nminutes: {}".format(tasks_count, busy_minutes))
     print("hours: {}h{}m".format(busy_minutes // 60, busy_minutes % 60))
     #make_task("12:44", ["Start. Number theory task."], TASK_GEO_INTERVAL) # одну может 20 мин *2
