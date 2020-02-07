@@ -338,7 +338,7 @@ def isRealTask(task):
 
 if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
-    make_schedule_minimum()
+    #make_schedule_minimum()
     readTodaySched()
     #print(sched)
     #make_schedule2020()
