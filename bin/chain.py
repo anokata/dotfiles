@@ -14,11 +14,13 @@ clear = lambda: os.system('clear')
 +если прервал выполнение? можно начать с n задачи? или вести журнал?
 +Чтобы запускать с n-ой
 +авто пауза перед след
-?нужно учесть задачи которые неясно сколкьо делать - зарядка - чтобы не было таймера а сам завершал
-задачи-комментарии
+-нужно учесть задачи которые неясно сколкьо делать - зарядка - чтобы не было таймера а сам завершал. после паузы доделываю.
+-задачи-комментарии
+помнить номер задачи за текущий день. где хранить? файл ~/.chain_hist
 """
 
 TEST = False
+CONFIG = "/home/ksi/.chain_hist"
 
 def preczeroformat(a):
     a = int(a)
@@ -90,6 +92,7 @@ class Chain:
     tasks = []
     current = -1
     started = False
+    time_sum = 0
 
     # Create chain of tasks from input string
     def __init__(self, chain_input, start=1):
@@ -98,8 +101,9 @@ class Chain:
         for line in chain_input.split("\n"):
             line = line.strip()
             if line: # skip empty
-                self.tasks.append(Task(line, self))
-                #self.tasks.append(self.make_rest_task())
+                task = Task(line, self)
+                self.tasks.append(task)
+        self.time_sum = self.sum_task_interaval()
 
     def make_rest_task(self):
         task = Task("Rest | 1", self)
@@ -116,12 +120,23 @@ class Chain:
             print("{}#{}: {}".format(mark, i, task))
             i += 1
 
+    def sum_task_interaval(self, to=-1):
+        s = 0
+        if to == -1:
+            to = len(self.tasks)
+        for i in range(0, to):
+            s += self.tasks[i].interval
+        return s
+
     def show_prompt(self):
         clear()
         self.show_schedule()
         task = self.get_current()
+        done = self.sum_task_interaval(self.current)
+        done_prc = round(done / self.time_sum * 100)
+        print("Total {} min    Done {}({}%)".format(self.time_sum, done, done_prc))
         print("{}:{} {} [{}]".format(task.seconds // 60, preczeroformat(task.seconds % 60), "paused=" if task.paused else "started->", task.text))
-        control_text = "enter(start)  (space)pause  s(kip)  q(uit) r(efresh)"
+        control_text = "enter(start)  (space)pause  s(kip)  q(uit) r(efresh) [Number](go)"
         print(control_text)
 
     def next_task(self):
@@ -141,7 +156,7 @@ class Chain:
 
     def start(self):
         self.show_prompt()
-        cmd = input()
+        #cmd = input()
         self.started = True
         # Now started
         self.next_task()
@@ -161,14 +176,17 @@ class Chain:
                 self.skip()
             elif cmd.isalnum():
                 self.get_current().stop()
-                self.current = int(cmd)-1
+                self.current = int(cmd)-2
+                self.next_task()
 
 
     def clear_tasks(self):
         self.tasks = []
+        self.time_sum = 0
 
     def maketask(self, text, interval):
         self.tasks.append(Task("{} | {}".format(text, interval), self))
+        self.time_sum += interval
         return self
 
 #Time | Say text | Interval
@@ -207,21 +225,51 @@ def path_one(chain):
     chain.maketask("Remember target", 1)
     chain.maketask("NBack", 2)
     chain.maketask("Breathe", 1)
+    chain.maketask("Read", 5)
     chain.maketask("Start. training set 1" , TRAIN)
     chain.maketask("Do Math" , VAL)
-    #chain.maketask("English" , VAL)
+    chain.maketask("English" , VAL)
     chain.maketask("Start. training set 2" , TRAIN)
     chain.maketask("Do Math" , VAL)
-    #chain.maketask("Dev books" , VAL)
+    chain.maketask("Dev books" , VAL)
     chain.maketask("Start. training set 3" , TRAIN)
     chain.maketask("Do Math Research" , VAL)
-    #chain.maketask("Geometry" , VAL)
+    chain.maketask("Geometry" , VAL)
     chain.maketask("Start. training set 4" , TRAIN)
     chain.maketask("Do English" , VAL)
     chain.maketask("Do Math" , VAL)
     chain.maketask("Start. training set 5" , TRAIN)
     chain.maketask("Do Phisic" , VAL)
     chain.maketask("Do Math" , VAL)
+    #chain.maketask("Dev Card" , VAL)
+    chain.maketask("Start. training set 6" , TRAIN)
+
+def path_two(chain):
+    VAL = 5
+    TRAIN = 5
+    chain.maketask("Warmup", 5)
+    chain.maketask("Remember target", 1)
+    chain.maketask("NBack", 2)
+    chain.maketask("Breathe", 1)
+    chain.maketask("Read", 5)
+    chain.maketask("Start. training set 1" , TRAIN)
+    chain.maketask("Do Math" , VAL)
+    chain.maketask("English" , VAL)
+    chain.maketask("Read Math. Poya" , VAL)
+    chain.maketask("Start. training set 2" , TRAIN)
+    chain.maketask("Do Math" , VAL)
+    chain.maketask("Dev books" , VAL)
+    chain.maketask("Start. training set 3" , TRAIN)
+    chain.maketask("Do Math Research" , VAL)
+    chain.maketask("Geometry" , VAL)
+    chain.maketask("Do Phisic" , VAL)
+    chain.maketask("Start. training set 4" , TRAIN)
+    chain.maketask("Do English" , VAL)
+    chain.maketask("Do Math" , VAL)
+    chain.maketask("Start. training set 5" , TRAIN)
+    chain.maketask("Do Phisic" , VAL)
+    chain.maketask("Do Math" , VAL)
+    chain.maketask("Dev Card" , VAL)
     chain.maketask("Start. training set 6" , TRAIN)
 
 if __name__ == "__main__":
@@ -237,6 +285,8 @@ if __name__ == "__main__":
         print(start_from)
 
     chain = Chain(path, start=start_from)
-    chain.clear_tasks()
-    path_one(chain)
+    if not TEST:
+        chain.clear_tasks()
+        #path_one(chain)
+        path_two(chain)
     chain.start()
