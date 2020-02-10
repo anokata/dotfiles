@@ -17,10 +17,13 @@ clear = lambda: os.system('clear')
 -нужно учесть задачи которые неясно сколкьо делать - зарядка - чтобы не было таймера а сам завершал. после паузы доделываю.
 -задачи-комментарии
 помнить номер задачи за текущий день. где хранить? файл ~/.chain_hist
+Помнить сделанные задачи. отмечать и не пройденные чтобы можно вернуться и пройти.
 """
 
 TEST = False
 CONFIG = "/home/ksi/.chain_hist"
+# date: current index. list of made
+# 10.02.2020: 3. 1, 2
 
 def preczeroformat(a):
     a = int(a)
@@ -163,7 +166,7 @@ class Chain:
 
         while self.started:
             self.show_prompt()
-            cmd = input()
+            cmd = input("Command:")
             if cmd == "q":
                 print('quit')
                 self.started = False
@@ -188,6 +191,10 @@ class Chain:
         self.tasks.append(Task("{} | {}".format(text, interval), self))
         self.time_sum += interval
         return self
+
+    def save_sate(self):
+        with open(CONFIG, 'w+') as fout:
+            pass
 
 #Time | Say text | Interval
 TestChainInput = """
@@ -245,7 +252,7 @@ def path_one(chain):
     chain.maketask("Start. training set 6" , TRAIN)
 
 def path_two(chain):
-    VAL = 5
+    VAL = 7
     TRAIN = 5
     chain.maketask("Warmup", 5)
     chain.maketask("Remember target", 1)
