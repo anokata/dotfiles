@@ -5,6 +5,7 @@ from threading import Thread
 import time
 import os
 import sys
+import datetime
 clear = lambda: os.system('clear') 
 
 """
@@ -49,6 +50,7 @@ class Task(Thread):
     chain = {}
     say_end = True
     visible = True
+    completed = False
 
     def __init__(self, task_string, chain):
         text, interval = map(str.strip, task_string.split("|"))
@@ -78,6 +80,7 @@ class Task(Thread):
         if self.seconds == 0:
             ending(self.say_end)
             self.chain.next_task()
+            self.completed = True
 
     def stop(self):
         self.started = False
@@ -119,7 +122,9 @@ class Chain:
             if not task.visible: continue
             mark = ""
             if i == (self.current+1):
-                mark = "*"
+                mark = "=>"
+            if task.completed: 
+                mark = "+"
             print("{}#{}: {}".format(mark, i, task))
             i += 1
 
@@ -141,6 +146,8 @@ class Chain:
         print("{}:{} {} [{}]".format(task.seconds // 60, preczeroformat(task.seconds % 60), "paused=" if task.paused else "started->", task.text))
         control_text = "enter(start)  (space)pause  s(kip)  q(uit) r(efresh) [Number](go)"
         print(control_text)
+        #print(self.make_state_str()) # TEST
+        #self.load_last()
 
     def next_task(self):
         self.current += 1
@@ -192,9 +199,32 @@ class Chain:
         self.time_sum += interval
         return self
 
+    # TODO
     def save_sate(self):
         with open(CONFIG, 'w+') as fout:
             pass
+        # get last line
+        # if line exist - rewrite
+
+    def load_last(self):
+        if not os.path.exists(CONFIG): return ""
+        with open(CONFIG) as fin:
+            content = fin.readlines()
+
+    def make_state_str(self):
+        s = "{}: {}. ".format(getdate(), self.current)
+        i = 0
+        for task in self.tasks:
+            i += 1
+            if task.completed:
+                s += str(i) + " "
+        return s
+
+def getdate():
+    now = datetime.datetime.now()
+    date = "{}.{}.{}".format(now.day, now.month, now.year);
+    return date
+
 
 #Time | Say text | Interval
 TestChainInput = """
@@ -254,6 +284,7 @@ def path_one(chain):
 def path_two(chain):
     VAL = 7
     TRAIN = 5
+    ENGLISH = 10
     chain.maketask("Warmup", 5)
     chain.maketask("Remember target", 1)
     chain.maketask("NBack", 2)
@@ -266,16 +297,17 @@ def path_two(chain):
     chain.maketask("Start. training set 2" , TRAIN)
     chain.maketask("Do Math" , VAL)
     chain.maketask("Dev books" , VAL)
+    chain.maketask("Do Phisic" , VAL)
     chain.maketask("Start. training set 3" , TRAIN)
     chain.maketask("Do Math Research" , VAL)
     chain.maketask("Geometry" , VAL)
-    chain.maketask("Do Phisic" , VAL)
-    chain.maketask("Start. training set 4" , TRAIN)
     chain.maketask("Do English" , VAL)
+    chain.maketask("Start. training set 4" , TRAIN)
+    chain.maketask("Do Math" , VAL)
+    chain.maketask("Do Phisic" , VAL)
     chain.maketask("Do Math" , VAL)
     chain.maketask("Start. training set 5" , TRAIN)
-    chain.maketask("Do Phisic" , VAL)
-    chain.maketask("Do Math" , VAL)
+    chain.maketask("Geometry" , VAL)
     chain.maketask("Dev Card" , VAL)
     chain.maketask("Start. training set 6" , TRAIN)
 
