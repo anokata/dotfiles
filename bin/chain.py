@@ -121,10 +121,10 @@ class Chain:
         for task in self.tasks:
             if not task.visible: continue
             mark = ""
-            if i == (self.current+1):
-                mark = "=>"
             if task.completed: 
                 mark = "+"
+            if i == (self.current+1):
+                mark = "=>"
             print("{}#{}: {}".format(mark, i, task))
             i += 1
 
@@ -146,8 +146,6 @@ class Chain:
         print("{}:{} {} [{}]".format(task.seconds // 60, preczeroformat(task.seconds % 60), "paused=" if task.paused else "started->", task.text))
         control_text = "enter(start)  (space)pause  s(kip)  q(uit) r(efresh) [Number](go)"
         print(control_text)
-        #print(self.make_state_str()) # TEST
-        #self.load_last()
 
     def next_task(self):
         self.current += 1
@@ -188,6 +186,7 @@ class Chain:
                 self.get_current().stop()
                 self.current = int(cmd)-2
                 self.next_task()
+            self.save_sate()
 
 
     def clear_tasks(self):
@@ -199,17 +198,41 @@ class Chain:
         self.time_sum += interval
         return self
 
-    # TODO
     def save_sate(self):
-        with open(CONFIG, 'w+') as fout:
-            pass
-        # get last line
+        if not os.path.exists(CONFIG): 
+            open(CONFIG, 'w')
+        lines = open(CONFIG).readlines()
+        if lines == []:
+            lines.append("")
+        #print(lines)
+        line = self.make_state_str()
+        date = getdate()
+        # if no today - append
+        if lines[-1].find(date) < 0:
+            #print("no")
+            lines.append(line)
+        else:
         # if line exist - rewrite
+            lines[-1] = line
+        with open(CONFIG, 'w+') as fout:
+            fout.write("".join(lines))
 
+    # TODO
     def load_last(self):
-        if not os.path.exists(CONFIG): return ""
-        with open(CONFIG) as fin:
-            content = fin.readlines()
+        if not os.path.exists(CONFIG): return False
+        # read last line
+        line = open(CONFIG).readlines()[-1]
+        # check today
+        if line.find(getdate()) < 0: return False
+        #print(line)
+        state = line.split(":")[1].strip()
+        current = int(state.split(".")[0])
+        self.current = current - 1
+        completed = state.split(".")[1].strip().split(" ")
+        for task_index in completed:
+            task_index = int(task_index)
+            self.tasks[task_index-1].completed = True
+
 
     def make_state_str(self):
         s = "{}: {}. ".format(getdate(), self.current)
@@ -282,7 +305,7 @@ def path_one(chain):
     chain.maketask("Start. training set 6" , TRAIN)
 
 def path_two(chain):
-    VAL = 7
+    VAL = 8
     TRAIN = 5
     ENGLISH = 10
     chain.maketask("Warmup", 5)
@@ -310,6 +333,7 @@ def path_two(chain):
     chain.maketask("Geometry" , VAL)
     chain.maketask("Dev Card" , VAL)
     chain.maketask("Start. training set 6" , TRAIN)
+    chain.load_last()
 
 if __name__ == "__main__":
     #TEST = True

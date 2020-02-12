@@ -1,5 +1,10 @@
 #!/bin/bash
 echo timer started.
+s=$(( $1 * 60 ))
+sleep $s
+espeak "Timer Done"
+exit
+
 begin=$(date '+%s')
 datediff() {
     sec=$(( ($1 - $2) % 60)) 
