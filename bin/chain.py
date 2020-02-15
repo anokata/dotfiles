@@ -133,7 +133,8 @@ class Chain:
         if to == -1:
             to = len(self.tasks)
         for i in range(0, to):
-            s += self.tasks[i].interval
+            if self.tasks[i].completed:
+                s += self.tasks[i].interval
         return s
 
     def show_prompt(self):
@@ -229,6 +230,7 @@ class Chain:
         current = int(state.split(".")[0])
         self.current = current - 1
         completed = state.split(".")[1].strip().split(" ")
+        if completed == [""]: return 
         for task_index in completed:
             task_index = int(task_index)
             self.tasks[task_index-1].completed = True
@@ -255,27 +257,6 @@ Say Test | 2
 Test | 3
 Do work | 6
 Relax | 5
-"""
-
-Path = """
-    Warmup | 5
-    Remember target | 1
-    NBack | 2
-    Breathe | 1
-
-    Start. training set 1 | 5
-Do Math | 3
-    Start. training set 2 | 5
-Do Math | 3
-    Start. training set 3 | 5
-Do Math Research | 3
-    Start. training set 4 | 5
-Do English | 3
-Do Math | 3
-    Start. training set 5 | 5
-Do Phisic | 3
-Do Math | 3
-    Start. training set 6 | 5
 """
 
 def path_one(chain):
@@ -305,42 +286,46 @@ def path_one(chain):
     chain.maketask("Start. training set 6" , TRAIN)
 
 def path_two(chain):
-    VAL = 8
+    VAL = 10
     TRAIN = 5
     ENGLISH = 10
     chain.maketask("Warmup", 5)
     chain.maketask("Remember target", 1)
+    chain.maketask("Read", 5)
     chain.maketask("NBack", 2)
     chain.maketask("Breathe", 1)
-    chain.maketask("Read", 5)
-    chain.maketask("Start. training set 1" , TRAIN)
+    #chain.maketask("Start. training set 1" , TRAIN)
     chain.maketask("Do Math" , VAL)
-    chain.maketask("English" , VAL)
+    chain.maketask("English. Grammar" , VAL)
     chain.maketask("Read Math. Poya" , VAL)
-    chain.maketask("Start. training set 2" , TRAIN)
+    #chain.maketask("Start. training set 2" , TRAIN)
     chain.maketask("Do Math" , VAL)
     chain.maketask("Dev books" , VAL)
     chain.maketask("Do Phisic" , VAL)
-    chain.maketask("Start. training set 3" , TRAIN)
+    #chain.maketask("Start. training set 3" , TRAIN)
     chain.maketask("Do Math Research" , VAL)
     chain.maketask("Geometry" , VAL)
-    chain.maketask("Do English" , VAL)
-    chain.maketask("Start. training set 4" , TRAIN)
+    chain.maketask("Do English. Audio listen and analyze" , VAL)
+    #chain.maketask("Start. training set 4" , TRAIN)
     chain.maketask("Do Math" , VAL)
     chain.maketask("Do Phisic" , VAL)
     chain.maketask("Do Math" , VAL)
-    chain.maketask("Start. training set 5" , TRAIN)
+    #chain.maketask("Start. training set 5" , TRAIN)
     chain.maketask("Geometry" , VAL)
     chain.maketask("Dev Card" , VAL)
-    chain.maketask("Start. training set 6" , TRAIN)
+    chain.maketask("English. Writing. Translate" , VAL)
+    #chain.maketask("Start. training set 6" , TRAIN)
+    #path_two_add(chain)
     chain.load_last()
+    # E: 30   M: 40  G: 20  D: 20
+
+def path_two_add(chain):
+    VAL = 10
+    chain.maketask("Read Math. Poya" , VAL)
 
 if __name__ == "__main__":
     #TEST = True
-    if not TEST:
-        path = Path
-    else:
-        path = TestChainInput
+    path = TestChainInput
 
     start_from = 1
     if len(sys.argv) > 1:

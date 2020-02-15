@@ -224,11 +224,20 @@ def make_schedule_two(): # 1h=50do:10rest(offline)
     #make_task("19:30", PHYSIC_TEXT, 10)
 
 def make_schedule_train():
-    make_task("10:00", ["Start. training set 2"], 3)
-    make_task("11:00", ["Start. training set 3"], 3)
-    make_task("12:00", ["Start. training set 4"], 3)
-    make_task("14:00", ["Start. training set 5"], 3)
-    make_task("16:00", ["Start. training set 6"], 3)
+    task("9:00", "Start. training set 1")
+    task("9:05", "Breakfast")
+    task("10:00", "Start. training set 2")
+    task("11:00", "Start. training set 3")
+    task("12:00", "Start. training set 4")
+    task("13:00", "Dinner")
+    task("14:05", "Start. training set 5")
+    task("15:00", "Start. training set 6")
+    task("16:00", "Start. training set 1")
+    task("17:00", "Supper")
+    task("18:00", "Start. training set 2")
+    task("19:00", "Start. training set 3")
+    task("20:00", "Start. training set 6")
+    task("21:00", "Start. training set 5")
 
 # no more than 30 tasks in a day, task len <= 40min
 def make_schedule_minimum():
@@ -321,7 +330,7 @@ def make_task(time, arg, interval=0, prepare=True, end_arg=END_ARG, fun=say):
         tasks_count += 1
 
 
-def task(time, arg, interval=0, prepare=True, end_arg=END_ARG, fun=say):
+def task(time, arg, interval=5, prepare=True, end_arg=END_ARG, fun=say):
     make_task(time, [arg], interval, prepare, end_arg, fun)
 # Global schedule
 sched = { }
@@ -342,6 +351,7 @@ if __name__ == "__main__":
     readTodaySched()
     #print(sched)
     #make_schedule2020()
+    make_schedule_train()
     run_schedule(sched)
     i = 0
     for time, task in sched.items():

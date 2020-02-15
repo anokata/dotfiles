@@ -2,7 +2,7 @@
 echo timer started.
 s=$(( $1 * 60 ))
 sleep $s
-espeak "Timer Done"
+espeak "Timer. Done. $2"
 exit
 
 begin=$(date '+%s')
