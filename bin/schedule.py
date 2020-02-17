@@ -230,7 +230,7 @@ def make_schedule_train():
     task("11:00", "Start. training set 3")
     task("12:00", "Start. training set 4")
     task("13:00", "Dinner")
-    task("14:05", "Start. training set 5")
+    task("14:00", "Start. training set 5")
     task("15:00", "Start. training set 6")
     task("16:00", "Start. training set 1")
     task("17:00", "Supper")
