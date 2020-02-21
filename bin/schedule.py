@@ -239,22 +239,30 @@ def make_schedule_train():
     task("20:00", "Start. training set 6")
     task("21:00", "Start. training set 5")
 
-# no more than 30 tasks in a day, task len <= 40min
-def make_schedule_minimum():
+DELTA = 0 # TODO
+# Не более 30 задач в день. Задача не более 40 мин.
+# после задачи не менее 5 минут перерыв - доделать задачу, консолидировать, отдых (без расслабления)
+def make_schedule_2020_march():
+    # начинаем как в августе. постепенно.
     MATH_INTERVAL = 3
+    INTERVAL = 3
     MATH = "Algebra time"
-    task("7:30", "Warmup. morning ritual")
-    # Вспомнить цель. nback. Подышать.
-    task("8:25", "Start. training set 1")
-    task("8:30", "Breakfast")
+    task("7:30", "Warmup")
+    task("7:40", "Read")
+    task("8:30", "NBack")
+    task("8:35", "Breathe")
+
+    task("8:55", "Start. training set 1")
+    task("9:00", "Breakfast")
+
     task("9:40", MATH, MATH_INTERVAL)
     task("11:00", "Start. training set 2")
     task("12:55", "Start. training set 3")
-    task("13:00", "Dinner. Free Time. 60 minutes")
+    task("13:00", "Dinner")
     #task("14:00", "Walking outside. 5 minutes")
     task("15:00", "Start. training set 4")
     task("16:55", "Start. training set 5")
-    task("17:00", "Supper. Free Time. 60 minutes")
+    task("17:00", "Supper")
     task("18:55", "Start. training set 6")
 
 
@@ -347,11 +355,9 @@ def isRealTask(task):
 
 if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
-    #make_schedule_minimum()
     readTodaySched()
     #print(sched)
-    #make_schedule2020()
-    make_schedule_train()
+    #make_schedule_2020_march() # TODO
     run_schedule(sched)
     i = 0
     for time, task in sched.items():

@@ -24,6 +24,7 @@ function _tmux_run () {
                 #tmux new-window "/home/ksi/dotfiles/bin/schedule_control.py"
                 tmux new-window "gnumeric ~/doc/stat/day.gnumeric"
                 #tmux split-window "scim ~/doc/stat/stat.sc"
+                tmux split-window -v -c /mnt/store/bad/2020/youtube
             fi
             if [ -e ~/.work.sig ]; then
                 tmux split-window -h -c ~/dotfiles/
