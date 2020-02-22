@@ -13,7 +13,7 @@ alias egrep='egrep --color=auto'
 alias youtube="youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'"
 alias youtubehi="youtube-dl -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"
 alias youtubebest="youtube-dl -f 'bestvideo[height>=720]+bestaudio/best[height>=720]'"
-alias youtuben="youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]' -o '%(title)s.%(ext)s' --restrict-filenames"
+alias youtuben="youtube-dl -f 'bestvideo[height>=72]+bestaudio/best[height>=720]' -o '%(title)s.%(ext)s' --restrict-filenames"
 alias nano='nano -u -x'
 alias sloc='cat *.c *.h | uniq | wc -l'
 alias lk='ll | grep / | grep " \."'
