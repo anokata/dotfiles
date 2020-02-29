@@ -244,21 +244,28 @@ DELTA = 0 # TODO
 # после задачи не менее 5 минут перерыв - доделать задачу, консолидировать, отдых (без расслабления)
 def make_schedule_2020_march():
     # начинаем как в августе. постепенно.
+    # ADD: Relax, walking outside
     MATH_INTERVAL = 3
     INTERVAL = 3
     MATH = "Algebra time"
+    ENG = "English"
+    MEDITATION = "Meditate"
     task("7:30", "Warmup")
-    task("7:40", "Read")
+    task("7:40", "Read", INTERVAL)
     task("8:30", "NBack")
     task("8:35", "Breathe")
 
     task("8:55", "Start. training set 1")
     task("9:00", "Breakfast")
 
-    task("9:40", MATH, MATH_INTERVAL)
+    #task("9:40", MATH, MATH_INTERVAL)
+    task("10:00", ENG, 2)
     task("11:00", "Start. training set 2")
+    task("12:00", ENG, 2)
     task("12:55", "Start. training set 3")
     task("13:00", "Dinner")
+    task("14:00", ENG, 2)
+    task("15:30", MEDITATION, 7)
     #task("14:00", "Walking outside. 5 minutes")
     task("15:00", "Start. training set 4")
     task("16:55", "Start. training set 5")
@@ -357,7 +364,7 @@ if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
     readTodaySched()
     #print(sched)
-    #make_schedule_2020_march() # TODO
+    make_schedule_2020_march() # TODO
     run_schedule(sched)
     i = 0
     for time, task in sched.items():
