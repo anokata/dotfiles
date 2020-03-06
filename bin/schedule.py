@@ -239,15 +239,8 @@ def make_schedule_train():
     task("20:00", "Start. training set 6")
     task("21:00", "Start. training set 5")
 
-DELTA = 0 # TODO
-# Не более 30 задач в день. Задача не более 40 мин.
-# после задачи не менее 5 минут перерыв - доделать задачу, консолидировать, отдых (без расслабления)
-def make_schedule_2020_march():
-    # начинаем как в августе. постепенно.
-    # ADD: Relax, walking outside. min 5 перерывы
-    # отдельное для выходных. сохранять старые. новое каждуюу неделю.
-    MATH_INTERVAL = 4
-    INTERVAL = 4
+def make_schedule_2020_march_2():
+    INTERVAL = 5
     MATH = "Algebra time"
     ENG = "English"
     GEOM = "Geometry"
@@ -259,16 +252,57 @@ def make_schedule_2020_march():
     task("8:35", "Breakfast")
     task("9:35", "Relax")
     task("9:40", "Read Math", INTERVAL)
-    task("9:45", "Read. CBT", INTERVAL)
-    task("9:50", MEDITATION, 7)
+    task("9:46", "Read. CBT", INTERVAL)
+    task("9:52", MEDITATION, 7)
     task("10:00", ENG, INTERVAL)
     task("11:00", "Start. training set 2")
     task("12:00", ENG, INTERVAL)
     task("12:55", "Start. training set 3")
     task("13:00", "Dinner")
     task("14:00", ENG, INTERVAL)
-    task("14:06", GEOM, INTERVAL)
-    task("14:12", "Read Math", INTERVAL)
+    task("14:07", GEOM, INTERVAL)
+    task("14:14", "Read Math", INTERVAL)
+    #task("14:00", "Walking outside. 5 minutes")
+    task("15:00", "Start. training set 4")
+    task("15:30", MEDITATION, 7)
+    task("15:39", GEOM, INTERVAL)
+    task("16:35", "Start. training set 5")
+    task("16:40", "Supper")
+    task("16:50", "Read. CBT", INTERVAL)
+    task("17:00", "Math", INTERVAL)
+    task("18:00", "Start. training set 6")
+
+
+DELTA = 0 # TODO
+# Не более 30 задач в день. Задача не более 40 мин.
+# после задачи не менее 5 минут перерыв - доделать задачу, консолидировать, отдых (без расслабления)
+def make_schedule_2020_march():
+    # начинаем как в августе. постепенно.
+    # ADD: Relax, walking outside. min 5 перерывы
+    # отдельное для выходных. сохранять старые. новое каждуюу неделю.
+    MATH_INTERVAL = 4
+    INTERVAL = 5
+    MATH = "Algebra time"
+    ENG = "English"
+    GEOM = "Geometry"
+    MEDITATION = "Meditate"
+    task("7:25", "Read")
+    task("7:30", "Warmup")
+    task("8:30", "Start. training set 1")
+    task("8:28", "Breathe relax")
+    task("8:35", "Breakfast")
+    task("9:35", "Relax")
+    task("9:40", "Read Math", INTERVAL)
+    task("9:46", "Read. CBT", INTERVAL)
+    task("9:52", MEDITATION, 7)
+    task("10:00", ENG, INTERVAL)
+    task("11:00", "Start. training set 2")
+    task("12:00", ENG, INTERVAL)
+    task("12:55", "Start. training set 3")
+    task("13:00", "Dinner")
+    task("14:00", ENG, INTERVAL)
+    task("14:07", GEOM, INTERVAL)
+    task("14:14", "Read Math", INTERVAL)
     #task("14:00", "Walking outside. 5 minutes")
     task("15:00", "Start. training set 4")
     task("15:30", MEDITATION, 7)
@@ -370,7 +404,7 @@ def isRealTask(task):
 if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
     readTodaySched()
-    make_schedule_2020_march() # TODO
+    make_schedule_2020_march_2()
     #print(sched)
     run_schedule(sched)
     i = 0
