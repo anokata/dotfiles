@@ -240,6 +240,40 @@ def make_schedule_train():
     task("21:00", "Start. training set 5")
 
 # TODO расписание на выходные. больше с утра.
+def make_schedule_2020_march_3():
+    INTERVAL = 7
+    MATH = "Algebra time"
+    ENG = "English"
+    GEOM = "Geometry"
+    MEDITATION = "Meditate"
+    task("7:25", "Read")
+    task("7:30", "Warmup")
+    task("8:28", "Breathe relax")
+    task("8:30", "Start. training set 1")
+    task("8:35", "Breakfast")
+    task("9:38", "Read Math", INTERVAL)
+    task("9:46", "Read. CBT", INTERVAL)
+    task("9:54", MEDITATION, 7)
+    task("10:02", ENG, INTERVAL)
+    task("11:00", "Start. training set 2")
+    task("12:00", ENG, INTERVAL)
+    task("12:09", GEOM, INTERVAL)
+    task("12:55", "Start. training set 3")
+    task("13:00", "Dinner")
+    task("14:00", ENG, INTERVAL)
+    task("14:09", GEOM, INTERVAL)
+    task("14:18", "Read Math", INTERVAL)
+    #task("14:00", "Walking outside. 5 minutes")
+    task("15:00", "Start. training set 4")
+    task("15:30", MEDITATION, 7)
+    task("15:39", GEOM, INTERVAL)
+    task("16:35", "Start. training set 5")
+    task("16:40", "Supper")
+    task("16:50", "Read. CBT", INTERVAL)
+    task("16:58", "Math", INTERVAL)
+    task("17:50", "Read Math", INTERVAL)
+    task("18:00", "Start. training set 6")
+    #task("18:30", "Math. Analyze", INTERVAL)
 
 def make_schedule_2020_march_2():
     INTERVAL = 6
@@ -407,7 +441,7 @@ def isRealTask(task):
 if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
     readTodaySched()
-    make_schedule_2020_march_2()
+    make_schedule_2020_march_3()
     #print(sched)
     run_schedule(sched)
     i = 0
