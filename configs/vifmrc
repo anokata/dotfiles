@@ -61,7 +61,9 @@ set noiec
 
 " Selected color scheme
 
+"colorscheme my
 colorscheme Default
+colorscheme zenburn_1
 
 " The FUSE_HOME directory will be used as a root dir for all FUSE mounts.
 " Unless it exists with write/exec permissions set, vifm will attempt to
@@ -438,3 +440,7 @@ fileviewer *.pdf
   \ pdftotext %c -
 set statusline="  %t%= %A %10u:%-7g %15E %20d  "
 map ym :move<CR>
+
+
+filetype *.cbr evince %f&
+fileviewer *.cbr

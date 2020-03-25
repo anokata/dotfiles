@@ -252,7 +252,6 @@ def make_schedule_2020_march_3():
     task("7:30", "Warmup")
     task("8:30", "Start. training set 1")
     task("8:35", "Breakfast")
-
     task("9:35", "Read Math", INTERVAL)
     task("9:45", "Read. book", INTERVAL)
     task("9:54", MEDITATION, 7)
@@ -273,8 +272,8 @@ def make_schedule_2020_march_3():
     task("15:39", GEOM, INTERVAL)
     task("16:35", "Start. training set 5")
     task("16:40", "Supper")
-    task("16:50", "Read. book", INTERVAL)
-    task("17:00", "Math", INTERVAL)
+    #task("16:50", "Read. book", INTERVAL)
+    #task("17:00", "Math", INTERVAL)
     task("17:50", "Read Math", INTERVAL)
     task("18:00", "Start. training set 6")
     #task("18:10", "Develop. java card.", DEV_INT)

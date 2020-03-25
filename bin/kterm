@@ -1,3 +1,4 @@
 #!/bin/bash
-xterm -fn 7x12 -fa "DejaVu Sans Mono for Powerline:size=12:antialias=true" -bg "rgb:20/20/20" -bd black -fg white
 #xterm -fn 7x13 -fa "DejaVu Sans Mono:size=12:antialias=true" -bg "rgb:20/20/28" -bd black -fg white
+#xterm -fn 7x12 -fa "DejaVu Sans Mono for Powerline:size=12:antialias=true" -bg "rgb:20/20/20" -bd black -fg white
+xterm -fn 7x12 -fa "DejaVu Sans Mono for Powerline:size=12:antialias=true" -bg "rgb:2C/2C/40" -bd black -fg white
