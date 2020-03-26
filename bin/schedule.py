@@ -239,6 +239,30 @@ def make_schedule_train():
     task("20:00", "Start. training set 6")
     task("21:00", "Start. training set 5")
 
+def make_schedule_2020_march_4():
+    ENG = "English"
+    GEOM = "Geometry"
+    # TODO может всё в один плотный час?
+    # нет - малым задачам. Это только потворствует рассредоточенности внимения.
+    # пусть будет час одного дела и час другого. (в этот час можно делать только его или нет)
+    task("7:30", "Warmup")
+    task("8:30", "Start. training set 1")
+    task("8:35", "Breakfast")
+    task("9:00", "Hour of Reading Math")
+    task("10:00", ENG)
+    task("11:00", "Start. training set 2")
+    task("12:00", GEOM)
+    task("12:55", "Start. training set 3")
+    task("13:00", "Dinner")
+    task("14:00", ENG)
+    task("15:00", "Start. training set 4")
+    task("15:10", "Hour of Reading")
+    task("16:00", "Hour of Math")
+    task("16:55", "Start. training set 5")
+    task("17:00", "Supper")
+    task("17:30", "half Hour of develop")
+    task("18:00", "Start. training set 6")
+
 # TODO расписание на выходные. больше с утра.
 def make_schedule_2020_march_3():
     INTERVAL = 8
@@ -445,7 +469,7 @@ def isRealTask(task):
 if __name__ == "__main__":
     #make_task(getnow(), ["a", True], 1) 
     readTodaySched()
-    make_schedule_2020_march_3()
+    make_schedule_2020_march_4()
     #print(sched)
     run_schedule(sched)
     i = 0
