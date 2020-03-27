@@ -18,7 +18,7 @@ function _tmux_run () {
                 tmux split-window -v -c ~/doc/
                 tmux new-window -c ~/dotfiles/ #net
                 tmux split-window -v "vifm"
-                tmux new-window -c ~/dev/javapetprojects
+                tmux new-window -c ~/dev/
                 tmux split-window -v "vifm"
                 tmux select-window -t 2
                 #tmux new-window "/home/ksi/dotfiles/bin/schedule_control.py"
