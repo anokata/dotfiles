@@ -257,7 +257,7 @@ def make_schedule_2020_march_4():
     task("14:00", ENG)
     task("15:00", "Start. training set 4")
     task("15:10", "Hour of Reading")
-    task("16:00", "Hour of Math")
+    task("16:00", "Hour. Math. Yoga.")
     task("16:55", "Start. training set 5")
     task("17:00", "Supper")
     task("17:30", "half Hour of develop")
