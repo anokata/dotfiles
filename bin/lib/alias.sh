@@ -12,6 +12,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias youtube="youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'"
 alias youtubehi="youtube-dl -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"
+alias youtubehq="youtube-dl -f 'bestvideo[height>=1080]+bestaudio/best[height>=1080]'"
 alias youtubebest="youtube-dl -f 'bestvideo[height>=720]+bestaudio/best[height>=720]'"
 alias youtuben="youtube-dl -f 'bestvideo[height>=72]+bestaudio/best[height>=720]' -o '%(title)s.%(ext)s' --restrict-filenames"
 alias nano='nano -u -x'
