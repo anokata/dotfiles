@@ -39,6 +39,7 @@ Plug 'stormherz/tablify'
 "Plug 'hoxnox/indexer.vim'
 "tormaza Plug 'dhruvasagar/vim-table-mode'
 Plug 'artur-shaik/vim-javacomplete2'
+"Plug 'kassio/neoterm'
 
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
 "Plug 'lervag/vimtex'
@@ -302,13 +303,9 @@ set laststatus=2
 set clipboard=unnamed
 set clipboard=unnamedplus
 colorscheme my
+colorscheme xcodedark
+"colorscheme sonokai
 
-" AVOID SHIFT AND CTL
-" enter to cmd mode
-map <space> :
-map q<space> q:
-" leva
-" gmap
 "set fillchars+=vert:\ 
 "highlight VertSplit ctermbg=238  ctermfg=238
 " Macros
@@ -324,6 +321,9 @@ map <leader>k A {
 let @w='0f(ldt,f)pui, p0f,dw'
 let @t="Iclass :put =expand('%:t:r')A {lxkJopublic static void main(String[] args) {}}"
 let @t="Itry {lxo} catch (Exception ex) { ex.printStackTrace(); }"
+let @m='/\<mdxExpertReportLink"f,a "exportFormats":["PDF","DOC","XLS","CSV","XML","PPT","ODT","ODS","ODP","DOCX","XLSX","PPTX"],":w'
+let @n='/"WebReports.Controls.Report"bbbi"exportFormats":["PDF","DOC","XLS","CSV","XML","PPT","ODT","ODS","ODP","DOCX","XLSX","PPTX"],":w'
+
 
 " === netrw config ===
 " bind :Vexplore
@@ -344,7 +344,22 @@ let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
 
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+"autocmd FileType java setlocal omnifunc=javacomplete#Complete
+"nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 "filetype plugin on
-"set omnifunc=syntaxcomplete#Complete
+set omnifunc=syntaxcomplete#Complete
+noremap - h
+" run current line
+noremap <c-c> yy:@"<CR>
+" enter will insert line
+noremap <cr> o<Esc>
+set autoindent
+set lazyredraw
+set smartcase
+set ignorecase
+inoremap <c-d> <esc>ddi
+inoremap <c-u> <esc>viwUi
+" always use *noremap
+" AVOID SHIFT AND CTL " enter to cmd mode
+noremap <space> :
+noremap q<space> q:
