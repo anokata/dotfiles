@@ -168,6 +168,9 @@ command! reload :write | restart
 filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
+" cbz
+filextype *.cbz zathura %c %i &, evince %c
+
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
         \ {View in zathura}

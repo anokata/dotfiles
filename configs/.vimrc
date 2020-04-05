@@ -139,6 +139,7 @@ let maplocalleader=";"
 " ## Edit .vimrc ##
 map <leader>v :vsp $MYVIMRC<CR>
 map <leader>V :source $MYVIMRC<CR>
+map <leader>ev :tabnew $MYVIMRC<CR>
 " ==== Tabs ====
 nmap <leader>t :tabnew<CR>
 nmap <leader>w :tabclose<CR>
@@ -351,6 +352,7 @@ set omnifunc=syntaxcomplete#Complete
 noremap - h
 " run current line
 noremap <c-c> yy:@"<CR>
+"noremap <leader>c yy:@"<CR>
 " enter will insert line
 noremap <cr> o<Esc>
 set autoindent
@@ -363,3 +365,12 @@ inoremap <c-u> <esc>viwUi
 " AVOID SHIFT AND CTL " enter to cmd mode
 noremap <space> :
 noremap q<space> q:
+" my typos correction
+iabbrev adn and
+iabbrev waht what
+iabbrev tehn then
+iabbrev fi if
+iabbrev funciotn function
+iabbrev funciton function
+iabbrev @@ quartenium@gmail.com
+
