@@ -15,7 +15,7 @@ Plug 'vim-scripts/utl.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/DfrankUtil'
-Plug 'vim-scripts/code_complete'
+"Plug 'vim-scripts/code_complete'
 Plug 'docunext/closetag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'pangloss/vim-javascript'
@@ -24,9 +24,9 @@ Plug 'valloric/matchtagalways'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'vim-scripts/utf8-math'
 Plug 'ktonga/vim-follow-my-lead'
-Plug 'artur-shaik/vim-javacomplete2'
+"Plug 'artur-shaik/vim-javacomplete2'
 Plug 'stormherz/tablify'
-Plug 'sirver/ultisnips'
+"Plug 'sirver/ultisnips'
 "Plug 'vim-scripts/math'
 "Plug 'vim-scripts/Align'
 "Plug 'easymotion/vim-easymotion'
@@ -61,9 +61,9 @@ let g:vimtex_quickfix_mode=0
 let g:tex_conceal='abdmg'
 let g:vimtex_latexmk_background=1
 
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+"let g:UltiSnipsExpandTrigger = '<tab>'
+"let g:UltiSnipsJumpForwardTrigger = '<tab>'
+"let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
@@ -132,7 +132,6 @@ set clipboard=unnamedplus
 set cmdheight=2
 set conceallevel=1
 set expandtab
-set expandtab
 set foldenable
 set foldlevel=20
 set foldlevelstart=0
@@ -148,13 +147,12 @@ set nocompatible
 set noswapfile
 set nowritebackup
 set number
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 set shiftwidth=4
 set shiftwidth=4
 set smartcase
 set t_Co=256
 set t_ut=
-set tabstop=4
 set tabstop=4
 set tags=~/mytags
 set textwidth=0
@@ -251,9 +249,12 @@ nnoremap <space> za
 
 " run current line
 noremap <c-c> yy:@"<CR>
+" run paragraph
+noremap <c-s-x> {V}kyy:@"<CR>}
 "noremap <leader>c yy:@"<CR>
 " enter will insert line
 noremap <cr> o<Esc>
+noremap <leader><cr> xi<cr><esc>
 " AVOID SHIFT AND CTL " enter to cmd mode
 "noremap <space> :
 "noremap q<space> q:
@@ -300,6 +301,16 @@ nnoremap <bs> <C-w><Left>
 " Toggle paste mode
 nnoremap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 inoremap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
+
+" open previous buffer in vert split
+nnoremap <leader>p :execute "rightbelow vsplit " . bufname("#")<cr>
+" add semicolon in the end, save cursor
+function! _Add_semi()
+    let cmd=':execute "normal! mqA;\<esc>`q"'
+    echo cmd
+    execute cmd
+endfunction
+nnoremap <leader>; :call _Add_semi()<cr>
 " }}}
 
 "==== DEV ==== {{{
