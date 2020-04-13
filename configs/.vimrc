@@ -201,6 +201,7 @@ nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 map <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
 map <leader>V :source $MYVIMRC<CR>
 map <leader>ev :tabnew $MYVIMRC<CR>
+map <leader>es :source %<CR>
 " ==== Tabs ====
 nmap <leader>t :tabnew<CR>
 nmap <leader>w :tabclose<CR>
@@ -253,7 +254,7 @@ noremap <c-c> yy:@"<CR>
 noremap <c-s-x> {V}kyy:@"<CR>}
 "noremap <leader>c yy:@"<CR>
 " enter will insert line
-noremap <cr> o<Esc>
+"noremap <cr> o<Esc>
 noremap <leader><cr> xi<cr><esc>
 " AVOID SHIFT AND CTL " enter to cmd mode
 "noremap <space> :
@@ -311,6 +312,12 @@ function! _Add_semi()
     execute cmd
 endfunction
 nnoremap <leader>; :call _Add_semi()<cr>
+
+" Search by grep with quick-window mappings
+nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
+nnoremap <leader>n :cnext<cr>
+nnoremap <leader>l :cclose<cr>
+
 " }}}
 
 "==== DEV ==== {{{
