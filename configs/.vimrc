@@ -267,7 +267,7 @@ iabbrev tehn then
 iabbrev fi if
 iabbrev funciotn function
 iabbrev funciton function
-iabbrev @@ quartenium@gmail.com
+iabbrev @@@ quartenium@gmail.com
 iabbrev ifmain if __name__=='__main__':<CR>
 iabbrev #i #include
 iabbrev #d #define
@@ -281,7 +281,7 @@ nnoremap - h
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 nnoremap GG GGzz
-nnoremap <leader>g :exe 'W3m google ' . expand('<cword>')<CR>
+"nnoremap <leader>g :exe 'W3m google ' . expand('<cword>')<CR>
 
 " d(el) y(ank) c(hange) inside ()
 onoremap p i(
@@ -314,7 +314,7 @@ endfunction
 nnoremap <leader>; :call _Add_semi()<cr>
 
 " Search by grep with quick-window mappings
-nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
+"nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
 nnoremap <leader>n :cnext<cr>
 nnoremap <leader>l :cclose<cr>
 
