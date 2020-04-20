@@ -192,6 +192,7 @@ if has('persistent_undo')
     silent !mkdir ~/.vim/backups > /dev/null 2>&1
     set undodir=~/.vim/backups
     set undofile
+    redraw!
 endif
 " }}}
 
@@ -318,6 +319,7 @@ nnoremap <leader>; :call _Add_semi()<cr>
 nnoremap <leader>n :cnext<cr>
 nnoremap <leader>l :cclose<cr>
 
+nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
 " }}}
 
 "==== DEV ==== {{{
@@ -325,8 +327,6 @@ nnoremap <leader>l :cclose<cr>
 function CompileJava()
     " Run from source dir where package root
     " TODO Find root dir, if threre source, down n. or in prj dir
-    w
-    
     let filename = expand('%:t:r')
     let package = getline(1)
     let packagename = split(package, ' ')[1]
@@ -339,6 +339,7 @@ function CompileJava()
     let cmd = join(["!java -cp ../classes/ ", packagename, ".", filename], "")
     exec cmd
     exec "cd -"
+    execute "redraw!"
 endfunction
 
 map <F3> :w<CR>:!make<CR>
