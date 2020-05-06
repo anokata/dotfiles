@@ -1,0 +1,1 @@
+scrot -d 1 -e 'mtpaint $f'

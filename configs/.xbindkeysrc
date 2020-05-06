@@ -45,12 +45,12 @@
 "pkill -KILL xdotool"
     m:0xc + c:24
     Control+Alt + q
+
 "xdotool click --repeat 1000000000 --delay 10 1"
     m:0xc + c:31
     Control+Alt + i
-"for i in $(seq 100); do xdotool keydown z; xdotool keyup z; done"
-    m:0x5 + c:52
-    Control+Shift + z
 
-
+"scrot -d 1"
+    m:0x18 + c:39
+    Control+Alt + s
 
