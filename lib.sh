@@ -146,6 +146,7 @@ function _first_general() {
             #(gnumeric > /dev/null 2>&1 &)
             #(firefox > /dev/null 2>&1 &)
             (telegram-desktop> /dev/null 2>&1 &)
+            tabletrev 15
             #(exec ~/dotfiles/bin/forecast&)
             if ! _is_console; then
                 #gitpullall

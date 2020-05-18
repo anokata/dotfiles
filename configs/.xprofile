@@ -13,4 +13,4 @@ feh --bg-fill -s ~/wall.jpg
 numlockx &
 pulseaudio --daemonize
 #jackd -d alsa
-tablet_inverse
+#tabletrev 15
