@@ -1,0 +1,5 @@
+#!/bin/bash
+for f in $(find *.*) ; do 
+    mogrify -colorspace Gray $f ;
+    echo "ok: $f " ;
+done
