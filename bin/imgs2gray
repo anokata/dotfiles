@@ -1,1 +1,1 @@
-foreach mogrify -colorspace Gray 
+foreach "mogrify -colorspace Gray "
