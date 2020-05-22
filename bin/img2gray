@@ -1,1 +1,1 @@
-mogrify -colorspace Gray %1
+mogrify -colorspace Gray "$1"
