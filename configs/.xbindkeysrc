@@ -37,3 +37,11 @@
     m:0x18 + c:39
     Control+Alt + s
 
+
+"~/dotfiles/bin/_tabletsmall"
+    m:0x1c + c:10
+    Control+Alt+Mod2 + 1
+
+"~/dotfiles/bin/tabletrev"
+    m:0x1c + c:11
+    Control+Alt+Mod2 + 2

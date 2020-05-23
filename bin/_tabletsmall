@@ -1,5 +1,8 @@
-#ID=  xinput | grep "Pen Pen"
+#!/bin/bash
+ID=$(xinput | grep "Pen Pen" | cut -f 2 | cut -d= -f 2)
+#W 0 X 0 H Y 0 0 S
 
 #xinput set-prop 16 "Coordinate Transformation Matrix" -0.5 0 0.8 0 -0.5 0.8 0 0 1
 #xinput set-prop 16 "Coordinate Transformation Matrix" -0.8 0 0.8 0 -0.8 0.8 0 0 1
-xinput set-prop 16 "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1.5
+#xinput set-prop $ID "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1.5
+xinput set-prop $ID "Coordinate Transformation Matrix" -1 0 1.5 0 -1 1 0 0 1.5
