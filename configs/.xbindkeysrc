@@ -45,3 +45,8 @@
 "~/dotfiles/bin/tabletrev"
     m:0x1c + c:11
     Control+Alt+Mod2 + 2
+
+
+"~/dotfiles/bin/screen2clipboard"
+    m:0x10 + c:107
+    Mod2 + Print
