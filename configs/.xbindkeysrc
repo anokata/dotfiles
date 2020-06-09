@@ -50,3 +50,11 @@
 "~/dotfiles/bin/screen2clipboard"
     m:0x10 + c:107
     Mod2 + Print
+
+"~/dotfiles/bin/screenframe2clipboard"
+    m:0x11 + c:107
+    Shift+Mod2 + Print
+
+"~/dotfiles/bin/screenframe2file"
+    m:0x14 + c:107
+    Control+Mod2 + Print

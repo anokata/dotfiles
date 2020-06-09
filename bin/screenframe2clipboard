@@ -1,0 +1,5 @@
+#!/bin/bash
+name="/home/ksi/ram/screen_$(date +%d.%M.%Y_%H:%M:%S).png"
+import $name
+xclip -selection clipboard -target image/png -i $name 
+rm $name
