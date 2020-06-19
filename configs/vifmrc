@@ -169,7 +169,7 @@ filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " cbz
-filextype *.cbz zathura %c %i &, evince %c
+filextype *.cbz evince %c
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
@@ -256,6 +256,7 @@ fileviewer *.torrent dumptorrent -v %c
 
 " FuseZipMount
 filetype *.zip,*.jar,*.war,*.ear,*.oxt
+       \ unzip %c,
        \ {Mount with fuse-zip}
        \ FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR,
        \ {View contents}
@@ -274,6 +275,7 @@ fileviewer *.tar.txz,*.txz xz --list %c
 
 " Rar2FsMount and rar archives
 filetype *.rar
+       \ rar x %c,
        \ {Mount with rar2fs}
        \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
 fileviewer *.rar unrar v %c
