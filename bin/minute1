@@ -1,0 +1,7 @@
+#!/bin/bash
+echo start
+while true; do 
+    sleep 60; 
+    ffplay -nodisp -autoexit /mnt/store/sounds/Ching.wav; 
+    echo minute
+done
