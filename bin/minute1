@@ -1,7 +1,12 @@
 #!/bin/bash
+if [ -z $1 ]; then
+    sec=60
+else
+    sec=$1
+fi
 echo start
 while true; do 
-    sleep 60; 
+    sleep $sec; 
     ffplay -nodisp -autoexit /mnt/store/sounds/Ching.wav; 
     echo minute
 done

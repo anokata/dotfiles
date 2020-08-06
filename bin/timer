@@ -3,7 +3,7 @@ echo timer started.
 s=$(( $1 * 60 ))
 sleep $s
 espeak "Timer. Done. $2"
-zenity --info --text "Timer \n $2"
+zenity --info --text "Timer \n $1 min: $2"
 exit
 
 begin=$(date '+%s')
