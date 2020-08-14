@@ -7,6 +7,7 @@ fi
 echo start
 while true; do 
     sleep $sec; 
-    ffplay -nodisp -autoexit /mnt/store/sounds/Ching.wav; 
+    #ffplay -nodisp -autoexit /mnt/store/sounds/Ching.wav; 
+    beep 0.1 750
     echo minute
 done
