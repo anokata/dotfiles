@@ -1,0 +1,5 @@
+#!/bin/bash
+#With audio file
+ext="${1##*.}"
+name=$(basename -s ".$ext" "$1")
+mplayer "$name.$ext" -audiofile "$name.mp3"
