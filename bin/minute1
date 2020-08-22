@@ -1,13 +1,16 @@
 #!/bin/bash
+n=0
 if [ -z $1 ]; then
     sec=60
 else
     sec=$1
 fi
-echo start
+m=$(expr $sec / 60)
+echo start by $m
 while true; do 
     sleep $sec; 
     #ffplay -nodisp -autoexit /mnt/store/sounds/Ching.wav; 
     beep 0.1 750
-    echo minute
+    n=$(expr $n + 1)
+    echo $n minute pass
 done
