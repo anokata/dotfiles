@@ -7,7 +7,7 @@
 "xbacklight -inc 10"
     m:0xc + c:35
     Control+Alt + bracketright        
-"scrot"
+"scrot  -e 'mv $f ~/screenshots/'"
     m:0xc + c:39
     Control+Alt + s
 "export DISPLAY=:0 && /home/ksi/dotfiles/xterm_trans"
@@ -32,11 +32,6 @@
 "pkill -KILL xdotool"
     m:0xc + c:24
     Control+Alt + q
-
-"scrot -d 1"
-    m:0x18 + c:39
-    Control+Alt + s
-
 
 "~/dotfiles/bin/_tabletsmall"
     m:0x1c + c:10
