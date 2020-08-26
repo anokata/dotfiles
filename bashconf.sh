@@ -24,6 +24,9 @@ export CLICOLOR="YES"
 #export TERM=xterm-256color
 export TERM=screen-256color
 export GOPATH=/home/ksi/go
+export WINEARCH="win64" 
+export WINEPREFIX="$HOME/.wine64"
+
 #export TERM=xterm
 if [ ! -z $(which java 2&>/dev/null) ]; then
     export JAVA_HOME=$(dirname $(dirname $(dirname $(readlink -f $(which java)))))
