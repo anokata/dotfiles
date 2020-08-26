@@ -55,3 +55,14 @@
     Control+Mod2 + Print
 
 
+"shutdown now"
+    m:0x55 + c:26
+    Control+Shift+Mod2+Mod4 + e
+
+"firefox"
+    m:0x55 + c:44
+    Control+Shift+Mod2+Mod4 + j
+    
+"chromium"
+    m:0x55 + c:45
+    Control+Shift+Mod2+Mod4 + k
