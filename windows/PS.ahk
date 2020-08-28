@@ -4,7 +4,12 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;^Space::MsgBox % A_ThisHotkey
 
+
 #IfWinActive, ahk_class Photoshop
+
+; ? dialog 
+;$z::Send 
+
 ;New Layer ;  Новый слой
 ;d::^+F2
 $d::Send ^+{F2}
@@ -20,22 +25,25 @@ $3::SendInput, {ctrl down}={ctrl up}
 $2::Send ^-
 
 ; color dialog
-$z::Send +!{F6}
+$c::Send +!{F6}
 ; filters/filters-hue-saturation <Primary><Alt>h
 ; select-none `
 $`::Send ^!{F12}
 
-; мягкая кисть 
-$F2::Send ^+{F4}
+; диалог слоев
+$a::Send ^!+{F7}
+
+; мягкая кисть F2
+;$F2::Send ^+{F4}
 ; жесткая кисть 
-$F1::Send ^+{F5}
+$F1::Send +{F2}
 ; размер кисти qw
 $q::Send [
 $w::Send ]
-;Ластик мягкий e
-$F3::Send ^+{F12}
-;Ластик жесткий
-$F4::Send ^+{F11}
+;Ластик мягкий F4
+;$F3::Send ^+{F12}
+;Ластик жесткий F3
+;$F4::Send ^+{F11}
 ;связать слой с пред <Primary><Shift>z
 $+Z::Send ^!g
 ; диалог цвета  z
@@ -43,13 +51,13 @@ $+Z::Send ^!g
 $j::Send ^+{F10}
 ; выбор кисти <ctrl> space / win
 $^Space::Send ^+!{F6}
-$LWin::Send ^+!{F6}
+;$LWin::Send ^+!{F6}
 ; Текст t
 ; layers-delete Delete
 ; dialogs-keyboard-shortcuts ctrl+alt+shift+k
 ; layers-lock-alpha a
 ; tools-bucket-fill g
-; tools-ellipse-select <Shift>e
+; tools-ellipse-select l
 ; tools-free-select s 
 ; tools-gradient >g
 ;  диалог кисти ctrl b
@@ -73,6 +81,11 @@ $Numpad5::Send +{F9}
 ; colors-default <ctrl>`
 $^`::Send k
 ;Invers selection ctrl-i
+; vectors-selection-replace <Shift>g
+$+G::Send +{F11}
+; vectors-selection-to-vectors g
+$g::Send +{F12}
+; shift-v toggle fullscreen mode; ctrl-shift-f =fullscreen
 
 ;поворот холста
 ;Добавить маску
@@ -83,8 +96,7 @@ $^`::Send k
 ;tools-size-increase-percent z
 ;tools-smudge ?
 ;tools-unified-transform t
-;vectors-selection-replace <Shift>g
-;vectors-selection-to-vectors g
+
 ;view-show-grid <Primary>g
 ;блюр <Primary><Shift>b
 ;в серое <Shift>F9
@@ -104,6 +116,11 @@ $^`::Send k
 ;select-feather <Primary><Alt>z
 ;select-shrink <Alt>F2
 
+Return	
+#IfWinActive
+
+#IfWinActive, ahk_exe gvim.exe
+$CapsLock::Esc
 Return	
 #IfWinActive
 

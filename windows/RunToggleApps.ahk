@@ -3,6 +3,24 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+; Sound
+$^!]::Send {Volume_Up 5}
+$^![::Send {Volume_Down 5} 
+
+;Timer
+;#Persistent
+$^#F12::
+InputBox, UserInput, Timer, Minutes, 20, 20
+minutes:=UserInput
+UserInput:=UserInput * -60000
+SetTimer, Alert1, %UserInput%
+return
+Alert1:
+SoundBeep, 650, 200 
+MsgBox, "%minutes%" min pass
+SetTimer, Alert1, Off
+return
+
 
 ; win+t totalcmd
 #t::
