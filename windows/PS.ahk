@@ -4,14 +4,18 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;^Space::MsgBox % A_ThisHotkey
 
-
 #IfWinActive, ahk_class Photoshop
+
+; hide layer and add new
+$^,::
+Send, ^{,}
+Send ^+{F2}
+return
 
 ; ? dialog 
 ;$z::Send 
 
 ;New Layer ;  Новый слой
-;d::^+F2
 $d::Send ^+{F2}
 n::^+n
 $^n::Send ^n
@@ -115,6 +119,10 @@ $g::Send +{F12}
 ;select-border F3
 ;select-feather <Primary><Alt>z
 ;select-shrink <Alt>F2
+
+; ctrl-shift-w warp
+; ctrl-shift-t distort
+; ctrl-alt-f9 define brush
 
 Return	
 #IfWinActive

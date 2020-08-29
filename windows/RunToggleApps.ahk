@@ -25,7 +25,8 @@ return
 ; win+t totalcmd
 #t::
 class:="TTOTAL_CMD"
-app:="D:\progs\totalcmd\TOTALCMD.EXE"
+;app:="D:\progs\totalcmd\TOTALCMD.EXE"
+app:="D:\progs\TCMI\TOTALCMD64.EXE"
 IfWinNotExist, ahk_class %class%
 {
 	Run %app%
