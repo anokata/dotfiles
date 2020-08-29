@@ -128,4 +128,31 @@ IfWinActive
 }
 }
 
+
+; win+v VIM
+#v::
+exe:=" gvim.exe"
+app:="D:\progs\Vim\vim82\gvim.exe"
+IfWinNotExist, ahk_exe %exe%
+{
+	Run %app%, D:\doc
+        return
+}
+IfWinExist, ahk_exe %exe%
+{   
+    WinGetTitle, T, ahk_exe %exe%
+    IfWinNotActive, ahk_exe %exe%
+	{
+	WinMinimizeAll
+	WinRestore
+	WinMaximize
+	return
+	}
+IfWinActive 
+{
+	WinMinimize
+	return
+}
+}
+
 ^r::Reload
