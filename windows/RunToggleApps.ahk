@@ -4,8 +4,8 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Sound
-$^!]::Send {Volume_Up 5}
-$^![::Send {Volume_Down 5} 
+$^!]::Send {Volume_Up 3}
+$^![::Send {Volume_Down 3} 
 
 ;Timer
 ;#Persistent
@@ -155,4 +155,3 @@ IfWinActive
 }
 }
 
-^r::Reload

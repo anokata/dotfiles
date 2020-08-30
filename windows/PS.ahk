@@ -5,20 +5,24 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;^Space::MsgBox % A_ThisHotkey
 
 #IfWinActive, ahk_class Photoshop
-; Free keys: h y i k - = [ ] F10 F11 
+; Free keys: h y i k - = [ ] F10 F11
 
-; hide layer and add new
+
+; hide layer and add new !buging
 $^,::
 Send, ^{,}
 Send ^+{F2}
 return
 
-; ? dialog 
-;$z::Send 
-
+; add layer mask ctrl-alt-w to ctrl-shift-f12
+$^!w::Send ^+{F12}
+; fullscreen
+$+v::Send ^+f 
+; liquify
+$+w::Send ^+x
 ;New Layer ;  Новый слой
 $d::Send ^+{F2}
-$n::Send ^!+n
+;$n::Send ^!+n
 ;$^n::Send ^n
 ; Merge Layers ;layers-merge-down v
 $v::Send ^e
@@ -28,18 +32,13 @@ $1::Send ^1
 $3::SendInput, {ctrl down}={ctrl up}
 ; zoom -
 $2::Send ^-
-
-
-
 ; color dialog
 $c::Send +!{F6}
 ; filters/filters-hue-saturation <Primary><Alt>h
 ; select-none `
 $`::Send ^!{F12}
-
 ; диалог слоев
 $a::Send ^!+{F7}
-
 ; мягкая кисть F2
 ;$F2::Send ^+{F4}
 ; жесткая кисть 
@@ -48,17 +47,34 @@ $F1::Send +{F2}
 $q::Send [
 $w::Send ]
 ;Ластик мягкий F4
-;$F3::Send ^+{F12}
 ;Ластик жесткий F3
-;$F4::Send ^+{F11}
 ;связать слой с пред <Primary><Shift>z
 $+Z::Send ^!g
-; диалог цвета  z
 ; Добавить связанный слой
 $j::Send ^+{F10}
 ; выбор кисти <ctrl> space / win
 $^Space::Send ^+!{F6}
-;$LWin::Send ^+!{F6}
+; Пресеты Casp
+$CapsLock::Send ^+!{F12}
+; Установить режим слоя: норм, screen, softlight, ?? не так часто
+$Numpad1::Send ^+{F8}
+$Numpad2::Send ^+{F7}
+$Numpad3::Send +{F6}
+$Numpad4::Send +{F7}
+$Numpad0::Send +{F8}
+$Numpad5::Send +{F9}
+; colors-default <ctrl>`  maybe n?
+$^`::Send k
+;Invers selection ctrl-i
+; vectors-selection-replace <Shift>g
+$+G::Send +{F11}
+; vectors-selection-to-vectors g
+$g::Send +{F12}
+; ctrl-alt-f9 define brush
+$+^!n::Send +^!n
+
+; диалог цвета  z
+; shift-v toggle fullscreen mode; ctrl-shift-f =fullscreen
 ; Текст t
 ; layers-delete Delete
 ; dialogs-keyboard-shortcuts ctrl+alt+shift+k
@@ -76,24 +92,6 @@ $^Space::Send ^+!{F6}
 ; трансформация ctrl-t
 ; Зеркал вида <ctrl>f
 ; flow & opacity : 4 5 6 0 & shift 1 &*)_  flow больше 30 и не надо
-; Пресеты Casp
-$CapsLock::Send ^+!{F12}
-; Установить режим слоя: норм, screen, softlight, 
-$Numpad1::Send ^+{F8}
-$Numpad2::Send ^+{F7}
-$Numpad3::Send +{F6}
-$Numpad4::Send +{F7}
-$Numpad0::Send +{F8}
-$Numpad5::Send +{F9}
-; colors-default <ctrl>`
-$^`::Send k
-;Invers selection ctrl-i
-; vectors-selection-replace <Shift>g
-$+G::Send +{F11}
-; vectors-selection-to-vectors g
-$g::Send +{F12}
-; shift-v toggle fullscreen mode; ctrl-shift-f =fullscreen
-
 ;поворот холста
 ;Добавить маску
 ;tools-heal <Shift>h
@@ -103,12 +101,10 @@ $g::Send +{F12}
 ;tools-size-increase-percent z
 ;tools-smudge ?
 ;tools-unified-transform t
-
 ;view-show-grid <Primary>g
 ;блюр <Primary><Shift>b
 ;в серое <Shift>F9
 ;выделить по альфе
-;Документ 1 <Alt>1
 ;слой по изображению F12
 ;фильтр контраста <Primary><Alt>t
 ;Фильтра денасыщенность <Primary><Alt>c
@@ -122,10 +118,9 @@ $g::Send +{F12}
 ;select-border F3
 ;select-feather <Primary><Alt>z
 ;select-shrink <Alt>F2
-
 ; ctrl-shift-w warp
 ; ctrl-shift-t distort
-; ctrl-alt-f9 define brush
+
 
 Return	
 #IfWinActive
@@ -155,5 +150,6 @@ SetDefaultKeyboard(USA)
 Return	
 
 #IfWinActive
+$CapsLock::Send {Esc}
 
-^r::Reload
+;^r::Reload
