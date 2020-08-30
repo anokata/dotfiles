@@ -1,0 +1,1 @@
+sc config "SysMain" start=auto & sc start "SysMain"

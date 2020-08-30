@@ -5,6 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;^Space::MsgBox % A_ThisHotkey
 
 #IfWinActive, ahk_class Photoshop
+; Free keys: h y i k - = [ ] F10 F11 
 
 ; hide layer and add new
 $^,::
@@ -17,8 +18,8 @@ return
 
 ;New Layer ;  Новый слой
 $d::Send ^+{F2}
-n::^+n
-$^n::Send ^n
+$n::Send ^!+n
+;$^n::Send ^n
 ; Merge Layers ;layers-merge-down v
 $v::Send ^e
 ; zoom 100%
@@ -27,6 +28,8 @@ $1::Send ^1
 $3::SendInput, {ctrl down}={ctrl up}
 ; zoom -
 $2::Send ^-
+
+
 
 ; color dialog
 $c::Send +!{F6}
