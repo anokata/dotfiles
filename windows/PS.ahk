@@ -2,10 +2,13 @@
  #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+; ^ctrl #win +shift !alt
 
 #IfWinActive, ahk_class Photoshop
 ; Free keys: h y i k - = [ ] F10 F11
 
+; Gradient map M -> ctrl-shift-f6
+$+m::Send ^+{F6}
 
 ; hide layer and add new !buging  ctrl+. -> ctrl-shift-f5
 $^.::Send ^+{F5}
