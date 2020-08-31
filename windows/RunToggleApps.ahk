@@ -155,3 +155,31 @@ IfWinActive
 }
 }
 
+; far
+; win+a VIM
+#a::
+exe:="Far.exe"
+app:="D:\progs\Far\Far.exe"
+IfWinNotExist, ahk_exe %exe%
+{
+	Run %app%
+	Sleep 1	
+	WinMaximize
+        return
+}
+IfWinExist, ahk_exe %exe%
+{   
+    WinGetTitle, T, ahk_exe %exe%
+    IfWinNotActive, ahk_exe %exe%
+	{
+	WinMinimizeAll
+	WinRestore
+	WinMaximize
+	return
+	}
+IfWinActive 
+{
+	WinMinimize
+	return
+}
+}

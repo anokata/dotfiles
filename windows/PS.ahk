@@ -1,19 +1,14 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
+ #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-;^Space::MsgBox % A_ThisHotkey
 
 #IfWinActive, ahk_class Photoshop
 ; Free keys: h y i k - = [ ] F10 F11
 
 
-; hide layer and add new !buging
-$^,::
-Send, ^{,}
-Send ^+{F2}
-return
-
+; hide layer and add new !buging  ctrl+. -> ctrl-shift-f5
+$^.::Send ^+{F5}
 ; add layer mask ctrl-alt-w to ctrl-shift-f12
 $^!w::Send ^+{F12}
 ; fullscreen
@@ -34,21 +29,16 @@ $3::SendInput, {ctrl down}={ctrl up}
 $2::Send ^-
 ; color dialog
 $c::Send +!{F6}
-; filters/filters-hue-saturation <Primary><Alt>h
 ; select-none `
 $`::Send ^!{F12}
 ; диалог слоев
 $a::Send ^!+{F7}
-; мягкая кисть F2
-;$F2::Send ^+{F4}
 ; жесткая кисть 
 $F1::Send +{F2}
 ; размер кисти qw
 $q::Send [
 $w::Send ]
-;Ластик мягкий F4
-;Ластик жесткий F3
-;связать слой с пред <Primary><Shift>z
+;связать слой с пред <Primary><Shift>z -> ctrl-alt-g
 $+Z::Send ^!g
 ; Добавить связанный слой
 $j::Send ^+{F10}
@@ -65,7 +55,6 @@ $Numpad0::Send +{F8}
 $Numpad5::Send +{F9}
 ; colors-default <ctrl>`  maybe n?
 $^`::Send k
-;Invers selection ctrl-i
 ; vectors-selection-replace <Shift>g
 $+G::Send +{F11}
 ; vectors-selection-to-vectors g
@@ -73,56 +62,18 @@ $g::Send +{F12}
 ; ctrl-alt-f9 define brush
 $+^!n::Send +^!n
 
-; диалог цвета  z
-; shift-v toggle fullscreen mode; ctrl-shift-f =fullscreen
-; Текст t
-; layers-delete Delete
-; dialogs-keyboard-shortcuts ctrl+alt+shift+k
-; layers-lock-alpha a
-; tools-bucket-fill g
-; tools-ellipse-select l
-; tools-free-select s 
-; tools-gradient >g
-;  диалог кисти ctrl b
-;  Диалог слоёв F6
-;  Зум
-;  размытие o
-; Фильтра кривые <Primary>l
-; Фильтр порог <Primary><Shift>t
-; трансформация ctrl-t
-; Зеркал вида <ctrl>f
-; flow & opacity : 4 5 6 0 & shift 1 &*)_  flow больше 30 и не надо
-;поворот холста
-;Добавить маску
-;tools-heal <Shift>h
+;в серое <Shift>F9
+;tools-clone
 ;tools-ink <Shift>k
 ;tools-measure <Shift>n
-;tools-shear
-;tools-size-increase-percent z
-;tools-smudge ?
-;tools-unified-transform t
-;view-show-grid <Primary>g
-;блюр <Primary><Shift>b
-;в серое <Shift>F9
 ;выделить по альфе
-;слой по изображению F12
-;фильтр контраста <Primary><Alt>t
-;Фильтра денасыщенность <Primary><Alt>c
-;edit-paste-as-new-layer-in-place <Shift>b
 ;filters-kaleidoscope <Primary><Alt>k
 ;filters-mosaic <Primary><Alt>m
 ;image-resize F2
-;layers-new-group <Primary><Shift>m
-;layers-visible <Shift>v
-;script-fu-add-anim-layer <Primary>F3
 ;select-border F3
 ;select-feather <Primary><Alt>z
 ;select-shrink <Alt>F2
-; ctrl-shift-w warp
-; ctrl-shift-t distort
 
-
-Return	
 #IfWinActive
 
 
@@ -140,16 +91,14 @@ SetDefaultKeyboard(LocaleID){
 	}
 }
 
-USA := 0x0409
-RUS := 0x0419
-
 #IfWinActive, ahk_exe gvim.exe
+;RUS := 0x0419
 $CapsLock::
 Send {Esc}
+USA := 0x0409
 SetDefaultKeyboard(USA)
 Return	
 
 #IfWinActive
 $CapsLock::Send {Esc}
 
-;^r::Reload
