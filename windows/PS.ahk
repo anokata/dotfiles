@@ -7,6 +7,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #IfWinActive, ahk_class Photoshop
 ; Free keys: h y i k - = [ ] F10 F11
 
+; transform t->ctrl-t
+; text ctrl-t -> t
+$t::Send ^t
+$^t::Send t
+
 ; Gradient map M -> ctrl-shift-f6
 $+m::Send ^+{F6}
 
@@ -30,6 +35,8 @@ $1::Send ^1
 $3::SendInput, {ctrl down}={ctrl up}
 ; zoom -
 $2::Send ^-
+; zoom fit to screen
+$4::Send ^0
 ; color dialog
 $c::Send +!{F6}
 ; select-none `
