@@ -52,17 +52,18 @@ $w::Send ]
 $+Z::Send ^!g
 ; Добавить связанный слой
 $j::Send ^+{F10}
-; выбор кисти <ctrl> space / win
-$^Space::Send ^+!{F6}
-; Пресеты Casp
-$CapsLock::Send ^+!{F12}
-; Установить режим слоя: норм, screen, softlight, ?? не так часто
+; выбор кисти caps 
+$CapsLock::Send ^+!{F6}
+; Пресеты <ctrl> space
+$^Space::Send ^+!{F12}
+; Установить режим слоя: норм, screen, softlight, add
 $Numpad1::Send ^+{F8}
 $Numpad2::Send ^+{F7}
 $Numpad3::Send +{F6}
 $Numpad4::Send +{F7}
 $Numpad0::Send +{F8}
 $Numpad5::Send +{F9}
+$Numpad6::Send ^+{F4}
 ; colors-default <ctrl>`  maybe n?
 $^`::Send k
 ; vectors-selection-replace <Shift>g
