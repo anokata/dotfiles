@@ -4,6 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ^ctrl #win +shift !alt
 
+
 #IfWinActive, ahk_class Photoshop
 ; Free keys: h y i k - = [ ] F10 F11
 
