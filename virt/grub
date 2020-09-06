@@ -1,0 +1,19 @@
+grub-install --root-directory=/mnt/ /dev/sda
+arch-chroot /mnt
+grub-install /dev/sda
+update-grub
+ pacman os-prober
+grub-mkconfig -o /boot/grub/grub.cfg
+
+submenu "Windows" {
+ regexp -s root '\((.+)\)' "$cmdpath"
+ chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+}
+
+/etc/default/grub
+GRUB_DEFAULT="saved"
+GRUB_SAVEDEFAULT="true"
+
+https://itsfoss.com/no-grub-windows-linux/
+adm cmd:
+bcdedit /set {bootmgr} path \EFI\ubuntu\grubx64.efi
