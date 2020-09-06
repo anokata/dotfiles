@@ -1,0 +1,1 @@
+qemu-system-x86_64 -enable-kvm -m 1G -boot d -drive format=raw,file=win7.img -cdrom /mnt/store/Windows\ 7\ HP\ SP1\ RU\ x86_x64\ Lite\ v.6.17\ by\ naifle.iso

@@ -1,0 +1,5 @@
+sudo mount -o loop,offset=32256 ./win7.img /mnt/ftp/
+echo "Press Enter when need to unmound"
+read
+echo "Unmount win"
+sudo umount /mnt/ftp
