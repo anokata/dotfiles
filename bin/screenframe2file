@@ -1,4 +1,5 @@
 #!/bin/bash
-name="/home/ksi/screenshots/screen_$(date +%d.%M.%Y_%H:%M:%S).png"
+#name="/home/ksi/screenshots/screen_$(date +%d.%M.%Y_%H:%M:%S).png"
+name="/mnt/store/screens/screen_$(date +%d.%M.%Y_%H:%M:%S).png"
 import $name
 xclip -selection clipboard -target image/png -i $name 
