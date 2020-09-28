@@ -8,6 +8,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #IfWinActive, ahk_class Photoshop
 ; Free keys: h y i k - = [ ] F10 F11
 
+$^Esc::Send {Enter}
+
 ; transform t->ctrl-t
 ; text ctrl-t -> t
 $t::Send ^t
