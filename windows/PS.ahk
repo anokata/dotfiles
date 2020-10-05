@@ -110,7 +110,7 @@ SetDefaultKeyboard(LocaleID){
 $CapsLock::
 Send {Esc}
 USA := 0x0409
-SetDefaultKeyboard(USA)
+;SetDefaultKeyboard(USA)
 Return	
 
 #IfWinActive
