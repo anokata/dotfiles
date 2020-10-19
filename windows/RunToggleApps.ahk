@@ -3,7 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-$^r::Reload
+;$^r::Reload
 
 ; Sound
 $^!]::Send {Volume_Up 3}
@@ -28,10 +28,10 @@ $^#F11::
 Gui, Destroy
 Gui, Add, Text,, Interval:
 Gui, Add, Edit
-Gui, Add, UpDown, vInterval Range1-100, 5 ym  
+Gui, Add, UpDown, vInterval Range1-100, 1 ym  
 Gui, Add, Text,, Count:
 Gui, Add, Edit
-Gui, Add, UpDown, vCount Range1-100, 2
+Gui, Add, UpDown, vCount Range1-100, 5
 Gui, Add, Button, default, OK
 Gui, Show,, Simple Input Example
 return  

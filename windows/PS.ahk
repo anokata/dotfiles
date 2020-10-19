@@ -10,6 +10,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 $^Esc::Send {Enter}
 
+; Layer via cut ctrl-shift-f4  -> ctrl-alt-c
+$^!c::Send ^+{F4}
+
 ; transform t->ctrl-t
 ; text ctrl-t -> t
 $t::Send ^t
