@@ -3,6 +3,8 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+$^r::Reload
+
 ; Sound
 $^!]::Send {Volume_Up 3}
 $^![::Send {Volume_Down 3} 
@@ -19,6 +21,43 @@ Alert1:
 SoundBeep, 650, 200 
 MsgBox, "%minutes%" min pass
 SetTimer, Alert1, Off
+return
+
+; Interval Timer
+$^#F11::
+Gui, Destroy
+Gui, Add, Text,, Interval:
+Gui, Add, Edit
+Gui, Add, UpDown, vInterval Range1-100, 5 ym  
+Gui, Add, Text,, Count:
+Gui, Add, Edit
+Gui, Add, UpDown, vCount Range1-100, 2
+Gui, Add, Button, default, OK
+Gui, Show,, Simple Input Example
+return  
+
+ButtonOK:
+Gui, Submit 
+Interval:=Interval * 60000
+
+; start timer
+;MsgBox "%Interval% by %Count%".
+SetTimer, AlertI, %Interval%
+return
+
+; timer action
+AlertI:
+SoundBeep, 650, 200 
+Count:=Count - 1
+if (Count <= 0) {
+	SetTimer, AlertI, Off
+	SoundBeep, 350, 200 
+}
+
+return
+
+GuiClose:
+Gui, Submit  
 return
 
 
