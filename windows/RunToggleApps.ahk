@@ -3,7 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-;$^r::Reload
+#$^r::Reload
 
 ; Sound
 $^!]::Send {Volume_Up 3}
@@ -29,6 +29,7 @@ Gui, Destroy
 Gui, Add, Text,, Interval:
 Gui, Add, Edit
 Gui, Add, UpDown, vInterval Range1-100, 1 ym  
+Gui, Add, CheckBox, vSeconds, Seconds?
 Gui, Add, Text,, Count:
 Gui, Add, Edit
 Gui, Add, UpDown, vCount Range1-100, 5
@@ -38,10 +39,17 @@ return
 
 ButtonOK:
 Gui, Submit 
+if (Seconds == 0) 
+{
 Interval:=Interval * 60000
+}
+if (Seconds == 1) 
+{
+Interval:=Interval * 1000
+}
 
 ; start timer
-;MsgBox "%Interval% by %Count%".
+;MsgBox "%Interval% by %Count% %Seconds%".
 SetTimer, AlertI, %Interval%
 return
 
