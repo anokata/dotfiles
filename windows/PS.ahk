@@ -13,6 +13,9 @@ $^Esc::Send {Enter}
 ; Layer via cut ctrl-shift-f4  -> ctrl-alt-c
 $^!c::Send ^+{F4}
 
+; New Back Layer D -> ctrl-f10
+$+d::Send ^{F10}
+
 ; transform t->ctrl-t
 ; text ctrl-t -> t
 $t::Send ^t
