@@ -69,33 +69,6 @@ Gui, Submit
 return
 
 
-; win+t totalcmd
-#t::
-class:="TTOTAL_CMD"
-;app:="D:\progs\totalcmd\TOTALCMD.EXE"
-app:="D:\progs\TCMI\TOTALCMD64.EXE"
-IfWinNotExist, ahk_class %class%
-{
-	Run %app%
-        return
-}
-IfWinExist, ahk_class %class%
-{   
-    WinGetTitle, T, ahk_class %class%
-    IfWinNotActive, ahk_class %class%
-	{
-	;WinActivate ahk_class %class%
-	WinMinimizeAll
-	WinRestore
-	WinMaximize
-	return
-	}
-IfWinActive 
-{
-	WinMinimize
-	return
-}
-}
 
 ; win+g telegram
 #g::
@@ -129,7 +102,7 @@ exe:="firefox.exe"
 app:="D:\programs\firefox.exe"
 IfWinNotExist, ahk_exe %exe%
 {
-	Run %app%
+	;Run %app%
         return
 }
 IfWinExist, ahk_exe %exe%
