@@ -8,6 +8,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #IfWinActive, ahk_class Photoshop
 ; Free keys: h y i k - = [ ] F10 F11
 
+; Mirror copy layer  -> ctrl-shift-f9
+$^!m::Send ^+{F9}
+
 $^Esc::Send {Enter}
 
 ; Layer via cut ctrl-shift-f4  -> ctrl-alt-c
