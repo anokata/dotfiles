@@ -31,6 +31,7 @@ $+m::Send ^+{F6}
 $^.::Send ^+{F5}
 ; add layer mask ctrl-alt-w to ctrl-shift-f12
 $^!w::Send ^+{F12}
+$^a::Send ^+{F12}
 ; fullscreen
 $+v::Send ^+f 
 ; liquify
