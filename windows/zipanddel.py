@@ -6,7 +6,7 @@ shortname = sys.argv[1].replace(" ", "").replace("&", "")
 filename = sys.argv[1]
 
 zipper="D:\\progs\\7-Zip\\7z.exe" 
-zipopt=" a -sdel {}.zip \"{}\""
+zipopt=" a -sdel -mx1 {}.zip \"{}\""
 
 cmdline=zipper + zipopt.format(shortname, filename)
 print(cmdline)
