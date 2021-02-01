@@ -64,7 +64,7 @@ $w::Send ]
 ;связать слой с пред <Primary><Shift>z -> ctrl-alt-g
 $+Z::Send ^!g
 ; Добавить связанный слой
-$j::Send ^+{F10}
+$g::Send ^+{F10}
 ; выбор кисти caps 
 $CapsLock::Send ^+!{F6}
 ; Пресеты <ctrl> space
@@ -80,9 +80,9 @@ $Numpad6::Send ^+{F4}
 ; colors-default <ctrl>`  maybe n?
 $^`::Send k
 ; vectors-selection-replace <Shift>g
-$+G::Send +{F11}
+#$+G::Send +{F11}
 ; vectors-selection-to-vectors g
-$g::Send +{F12}
+#$j::Send +{F12}
 ; ctrl-alt-f9 define brush
 $+^!n::Send +^!n
 
