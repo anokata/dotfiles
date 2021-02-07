@@ -1,1 +1,2 @@
-dir /s /b > list.txt
+dir /s /b *.jpg > reflist.txt
+dir /s/ b *.png >> reflist.txt
