@@ -1,0 +1,1 @@
+D:\progs\ffmpeg-2020-09-27-git-a3a6b56200-full_build\bin\ffmpeg.exe -i %1 -ab 320k -map_metadata 0 -id3v2_version 3 %1.mp3
