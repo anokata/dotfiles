@@ -102,7 +102,7 @@ exe:="firefox.exe"
 app:="D:\programs\firefox.exe"
 IfWinNotExist, ahk_exe %exe%
 {
-	;Run %app%
+	Run %app%
         return
 }
 IfWinExist, ahk_exe %exe%
@@ -122,13 +122,13 @@ IfWinActive
 }
 }
 
-; win+e firefox
+; win+e ps
 #e::
 exe:="Photoshop.exe"
 app:="D:\progs\Photoshop20\Adobe Photoshop 2020\Photoshop.exe"
 IfWinNotExist, ahk_exe %exe%
 {
-	Run %app%
+	;Run %app%
         return
 }
 IfWinExist, ahk_exe %exe%
