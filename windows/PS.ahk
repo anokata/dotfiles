@@ -22,6 +22,11 @@ $NumpadSub::Send !{F9}
 ;Layer via Copy ctrl-alt-c -> ctrl-shift-f11
 $^!c::Send ^+{F11}
 
+; fill with fg alt+x -> alt+bs
+$!x::Send !{Backspace}
+; fill with bg alt+c -> ctrl+bs
+$!c::Send ^{Backspace}
+
 ; Mirror copy layer  -> ctrl-shift-f9
 $^!m::Send ^+{F9}
 
