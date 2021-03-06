@@ -15,13 +15,20 @@ $^Space::Send {\}
 #IfWinActive, ahk_class Photoshop
 ; Free keys: h y i k - = [ ] F10 F11
 
+; Actions windows Num- ->alt-F9
+$NumpadSub::Send !{F9}
+; NumpadDot NumpadMult NumpadAdd NumpadEnter
+
+;Layer via Copy ctrl-alt-c -> ctrl-shift-f11
+$^!c::Send ^+{F11}
+
 ; Mirror copy layer  -> ctrl-shift-f9
 $^!m::Send ^+{F9}
 
 $^Esc::Send {Enter}
 
-; Layer via cut ctrl-shift-f4  -> ctrl-alt-c
-$^!c::Send ^+{F4}
+; Layer via cut ctrl-shift-f4  -> ctrl-alt-x
+$^!x::Send ^+{F4}
 
 ; New Back Layer D -> ctrl-f10
 $+d::Send ^{F10}
@@ -83,7 +90,8 @@ $Numpad3::Send +{F6}
 $Numpad4::Send +{F7}
 $Numpad0::Send +{F8}
 $Numpad5::Send +{F9}
-$Numpad6::Send ^+{F4}
+$Numpad6::Send +{F10}
+$Numpad7::Send ^{F7}
 ; colors-default <ctrl>`  maybe n?
 $^`::Send k
 ; vectors-selection-replace <Shift>g
