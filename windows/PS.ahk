@@ -19,6 +19,9 @@ $^Space::Send {\}
 $NumpadSub::Send !{F9}
 ; NumpadDot NumpadMult NumpadAdd NumpadEnter
 
+; Lock layer shift-ctrl-a -> shift-f3
+$+^a::Send +{F3}
+
 ;Layer via Copy ctrl-alt-c -> ctrl-shift-f11
 $^!c::Send ^+{F11}
 
