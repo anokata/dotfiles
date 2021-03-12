@@ -10,10 +10,21 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 $CapsLock::Send {/}
 $^Space::Send {\}
 
+$Tab::Send {Enter}
+;$LWin::Send {Delete}
+
 #IfWinActive
 
 #IfWinActive, ahk_class Photoshop
 ; Free keys: h y i k - = [ ] F10 F11
+
+; TODO FULLSCREEN TO TAB+SHIFT
+; fullscreen
+;$+v::Send ^+f 
+;$+{Tab}::Send ^+f 
+
+$Tab::Send {Enter}
+;$LWin::Send {Delete}
 
 ; Actions windows Num- ->alt-F9
 $NumpadSub::Send !{F9}
@@ -54,8 +65,6 @@ $^.::Send ^+{F5}
 ; add layer mask ctrl-alt-w to ctrl-shift-f12
 $^!w::Send ^+{F12}
 $^a::Send ^+{F12}
-; fullscreen
-$+v::Send ^+f 
 ; liquify
 $+w::Send ^+x
 ;New Layer ;  Новый слой
@@ -148,4 +157,5 @@ Return
 
 #IfWinActive
 $CapsLock::Send {Esc}
+
 
