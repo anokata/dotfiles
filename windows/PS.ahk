@@ -109,6 +109,7 @@ $Numpad0::Send +{F8}
 $Numpad5::Send +{F9}
 $Numpad6::Send +{F10}
 $Numpad7::Send ^{F7}
+$Numpad8::Send ^{F6}
 ; colors-default <ctrl>`  maybe n?
 $^`::Send k
 ; vectors-selection-replace <Shift>g
