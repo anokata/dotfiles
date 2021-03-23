@@ -4,6 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ^ctrl #win +shift !alt
 
+
 ; CLIP STUDIO PAINT
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
 ;$Esc::Send {/}
@@ -25,6 +26,9 @@ $Tab::Send {Enter}
 
 $Tab::Send {Enter}
 ;$LWin::Send {Delete}
+
+; shift-s = polylasso
+$+s::Send m
 
 ; Actions windows Num- ->alt-F9
 $NumpadSub::Send !{F9}
