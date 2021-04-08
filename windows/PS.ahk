@@ -5,6 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ^ctrl #win +shift !alt
 
 
+
 ; CLIP STUDIO PAINT
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
 ;$Esc::Send {/}
@@ -13,6 +14,7 @@ $^Space::Send {\}
 
 $Tab::Send {Enter}
 ;$LWin::Send {Delete}
+
 
 #IfWinActive
 
