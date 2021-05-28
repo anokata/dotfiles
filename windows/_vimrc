@@ -38,12 +38,15 @@ Plug 'gorodinskiy/vim-coloresque'
 "Plug 'kassio/neoterm'
 "Plug 'tpope/vim-speeddating'
 "Plug 'jceb/vim-orgmode'
+"Plug 'Scuilion/markdown-drawer'
 "Plug 'vim-ctrlspace/vim-ctrlspace'
 "Plug 'vim-scripts/vimprj'
 "Plug 'yuratomo/w3m.vim'
 "Plug 'vim-scripts/OmniCppComplete'
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
 "Plug 'lervag/vimtex'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 " }}}
@@ -199,6 +202,8 @@ nmap <leader>p "+p
 nmap <leader>P o<ESC>"+P
 " Copy vim def " buffer to clipboard
 nmap <leader>s :let @+=@"<CR>
+" for windows, copy to sys buffer
+nmap yy yy<leader>s
 " paste link
 "nmap <leader>l o<ESC>"+p0yss[
 
@@ -325,7 +330,8 @@ map <F6> :w<CR>:!javac -d ~/classes '%:t:r'.java && java -ea -cp ~/classes '%:t:
 map <F7> :call CompileJava()<CR>
 "map <F7> :w<CR>:!javac '%:t:r'.java -d ~/classes/<CR>:!java -cp ~/classes/ '%:t:r'<CR>
 "map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
-map <F8> :w<CR>:!jar -cvmf ../../manifest ~/classes/'%:t:r'.jar -C ~/classes/ com<CR>:!java -jar ~/classes/'%:t:r'.jar<CR>
+"map <F8> :w<CR>:!jar -cvmf ../../manifest ~/classes/'%:t:r'.jar -C ~/classes/ com<CR>:!java -jar ~/classes/'%:t:r'.jar<CR>
+nmap <F8> :TagbarToggle<CR>
 "map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 map <F9> :w<CR>:!texmake %<CR>
 map <F9> :w<CR>:!make App<CR>
@@ -390,7 +396,20 @@ endfunction
 
 autocmd GUIEnter * call Maximize()
 set guioptions+=c
-autocmd GUIEnter * silent e D:\doc\draw\learn
 
+au BufNewFile,BufRead * set syntax=markdown
+au BufNewFile,BufRead * set filetype=markdown
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
+"nnoremap <Space> za
+
+autocmd GUIEnter * silent edit D:\doc\draw\ideas
+autocmd GUIEnter * silent tabnew D:\doc\draw\trainings
+autocmd GUIEnter * silent tabnew D:\doc\draw\learn
+autocmd GUIEnter * silent tabnew D:\doc\draw\nowdraw
+"autocmd GUIEnter * silent tabnew D:\doc\draw\warmup_inspire
+"autocmd GUIEnter * silent tabnew D:\doc\draw\photoshop
+"autocmd GUIEnter * silent tabnew D:\doc\mind\mind_2020.txt
+"autocmd GUIEnter * silent tabnew D:\doc\draw\process
+"autocmd GUIEnter * silent tabnew D:\doc\lifeDo\VOLAresult
+
