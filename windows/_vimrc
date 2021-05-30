@@ -1,22 +1,28 @@
+" vim: set syntax=vim:
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-repeat' 
+Plug 'airblade/vim-gitgutter'
+Plug 'gorodinskiy/vim-coloresque'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat' 
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'airblade/vim-gitgutter'
-"Plug 'chrisbra/csv.vim'
 Plug 'Raimondi/delimitMate'
+
+"Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'mzlogin/vim-markdown-toc'
+
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'chrisbra/csv.vim'
 "Plug 'vim-scripts/utl.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 "Plug 'vim-scripts/DfrankUtil'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'pangloss/vim-javascript'
 "Plug 'mkomitee/vim-gf-python'
-Plug 'gorodinskiy/vim-coloresque'
 "Plug 'vim-scripts/utf8-math'
 "Plug 'ktonga/vim-follow-my-lead'
 "Plug 'stormherz/tablify'
@@ -45,8 +51,6 @@ Plug 'gorodinskiy/vim-coloresque'
 "Plug 'vim-scripts/OmniCppComplete'
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
 "Plug 'lervag/vimtex'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 " }}}
@@ -88,9 +92,23 @@ let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
 set t_ut=
-highlight Normal ctermbg=NONE
-highlight nonText ctermbg=NONE
+
+function! MyHighlights() abort
+    highlight Normal ctermbg=NONE gui=NONE
+    highlight nonText ctermbg=NONE gui=NONE
+    highlight lCursor guifg=NONE guibg=Cyan
+    highlight htmlLink cterm=underline guifg=#aaaacc gui=underline
+    hi Title	guifg=#109098
+
+endfunction
+
+augroup MyColors
+    autocmd!
+    autocmd ColorScheme * call MyHighlights()
+augroup END
+
 colorscheme desert 
+
 " }}}
 
 " Basic settings {{{
@@ -102,12 +120,12 @@ set autoread
 set clipboard=unnamed
 set clipboard=unnamedplus
 set cmdheight=2
-set conceallevel=1
+set conceallevel=2
 set expandtab
 set foldenable
-set foldlevel=20
 set foldlevelstart=0
 set foldmethod=syntax
+set foldlevel=20
 set hidden
 set ignorecase
 set iminsert=0
@@ -135,13 +153,12 @@ set wrapmargin=0
 "set keymap=russian-jcukenwin
 set guioptions -=T
 set guioptions -=L
-syn region foldBraces start=/{/ end=/}/ transparent fold
-syn region foldJavadoc start=,/\*\*, end=,\*/, transparent fold keepend
+"syn region foldBraces start=/{/ end=/}/ transparent fold
+"syn region foldJavadoc start=,/\*\*, end=,\*/, transparent fold keepend
 
 filetype off
 filetype plugin indent on
 syntax on
-highlight lCursor guifg=NONE guibg=Cyan
 
 if has("autocmd")
   filetype plugin indent on
@@ -190,7 +207,7 @@ nmap <leader>. :tabprev<CR>
 " ==== Folding ====
 "nmap <leader>f zf)
 "nmap <leader>f :set foldmethod=indent<CR>
-nmap <leader>f :FZF!<CR>
+"nmap <leader>f :FZF!<CR>
 "nmap <C-p> :FZF<CR>
 nmap <leader>a za
 " fold all
@@ -349,6 +366,7 @@ map <F11> :w<CR>:source %<CR>
 " }}}
 
 " Macros {{{
+" i ctrl-r ctrl-r q"
 " param on new line
 let @d='f,lli'
 " logger
@@ -375,7 +393,7 @@ augroup allAutoCmds
     autocmd FileType vim setlocal foldmethod=marker
     "autocmd FileType java setlocal omnifunc=javacomplete#Complete
     "
-    autocmd FileType markdown :onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
+    "autocmd FileType markdown :onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
 augroup END
 " }}}
 
@@ -397,16 +415,35 @@ endfunction
 autocmd GUIEnter * call Maximize()
 set guioptions+=c
 
-au BufNewFile,BufRead * set syntax=markdown
-au BufNewFile,BufRead * set filetype=markdown
+let g:vim_markdown_conceal = 2
+let g:vim_markdown_autowrite = 1
+" 'tab', 'vsplit', 'hsplit', 'current'"
+let g:vim_markdown_edit_url_in = 'tab'
+nmap <leader>Y :Toc<CR>
+nmap <leader>mt :Toc<CR>
+let g:vmt_dont_insert_fence = 0
+let g:vmt_list_item_char='-'
+let g:vmt_include_headings_before=1
+let g:vmt_auto_update_on_save = 1
+let g:vim_markdown_follow_anchor = 1
+nmap <leader>T :GenTocGFM<CR>
+" make Header
+let @h='0y$,sI[A]A()hp0'
+" BufEnter
+"au BufNewFile,BufRead * set syntax=markdown
+"au BufNewFile,BufRead * set filetype=markdown
+au BufNewFile,BufRead *vimrc set syntax=vim
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 "nnoremap <Space> za
 
 autocmd GUIEnter * silent edit D:\doc\draw\ideas
 autocmd GUIEnter * silent tabnew D:\doc\draw\trainings
-autocmd GUIEnter * silent tabnew D:\doc\draw\learn
+"autocmd GUIEnter * silent tabnew D:\doc\draw\learn
 autocmd GUIEnter * silent tabnew D:\doc\draw\nowdraw
+"autocmd GUIEnter * silent edit D:\doc\draw\nowdraw
+autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\dotnetcsharp
+"autocmd GUIEnter * silent tabnew D:\doc\draw\test.md
 "autocmd GUIEnter * silent tabnew D:\doc\draw\warmup_inspire
 "autocmd GUIEnter * silent tabnew D:\doc\draw\photoshop
 "autocmd GUIEnter * silent tabnew D:\doc\mind\mind_2020.txt
