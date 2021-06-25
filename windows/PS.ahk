@@ -366,3 +366,13 @@ IfWinActive
 }
 }
 
+
+setKeyDelay, 50, 50
+setMouseDelay, 50
+$^~lbutton::
+	while (getKeyState("lbutton", "P"))
+	{
+		send, {lbutton}
+		sleep, 50
+	}
+return
