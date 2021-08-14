@@ -104,11 +104,14 @@ set background=dark
 set t_ut=
 
 function! MyHighlights() abort
+":help syntax *highlight-groups* 
     highlight Normal ctermbg=NONE gui=NONE
     highlight nonText ctermbg=NONE gui=NONE
     highlight lCursor guifg=NONE guibg=Cyan
     highlight htmlLink cterm=underline guifg=#aaaacc gui=underline
     hi Title	guifg=#109098
+    hi Folded guibg=#505050 guifg=#c0b030
+    hi LineNr guifg=#70a0c0
 
 endfunction
 
