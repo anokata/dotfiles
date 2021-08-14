@@ -1,6 +1,7 @@
 " vim: set syntax=vim:
 " Plugins {{{
-call plug#begin('~/.vim/plugged')
+call plug#begin('D:/dev/vim/plugged')
+"call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -16,6 +17,15 @@ Plug 'Raimondi/delimitMate'
 "Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'mzlogin/vim-markdown-toc'
+"Plug 'OmniSharp/omnisharp-vim'
+
+" Python
+Plug 'vim-syntastic/syntastic'
+"Plug 'flebel/vim-mypy', { 'for': 'python', 'branch': 'bugfix/fast_parser_is_default_and_only_parser' }
+Plug 'Integralist/vim-mypy'
+Plug 'tell-k/vim-autopep8'
+Plug 'python-rope/ropevim'
+Plug 'dense-analysis/ale'
 
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'chrisbra/csv.vim'
@@ -321,6 +331,9 @@ nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
 " }}}
 
 "==== DEV ==== {{{
+function CompileCS()
+    exec "!dotnet run"
+endfunction
 
 function CompileJava()
     " Run from source dir where package root
@@ -342,6 +355,7 @@ endfunction
 
 map <F3> :w<CR>:!make<CR>
 map <F5> :w<CR>:!make '%:t:r'<CR>
+map <F5> :w<CR>:call CompileCS()<CR>
 map <F6> :w<CR>:!make <CR>
 map <F6> :w<CR>:!javac -d ~/classes '%:t:r'.java && java -ea -cp ~/classes '%:t:r'<CR>
 map <F7> :call CompileJava()<CR>
@@ -427,6 +441,7 @@ let g:vmt_include_headings_before=1
 let g:vmt_auto_update_on_save = 1
 let g:vim_markdown_follow_anchor = 1
 nmap <leader>T :GenTocGFM<CR>
+nmap <leader>x gxdd,q
 " make Header
 let @h='0y$,sI[A]A()hp0'
 " BufEnter
@@ -437,16 +452,33 @@ set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 "nnoremap <Space> za
 
-autocmd GUIEnter * silent edit D:\doc\draw\ideas
-autocmd GUIEnter * silent tabnew D:\doc\draw\trainings
+let g:asyncomplete_auto_popup = 1
+" Markdown
+" GenTocGFM HeaderIncreace UpdateToc 
+let g:syntastic_python_checkers=['mypy']
+let ropevim_vim_completion=1
+let g:ropevim_autoimport_modules = ["os", "shutil"]
+let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'eslint']}
+let g:ale_fix_on_save = 1
+
+"autocmd GUIEnter * silent edit D:\doc\draw\ideas
+"autocmd GUIEnter * silent tabnew D:\doc\draw\what.md
+"autocmd GUIEnter * silent tabnew D:\doc\draw\trainings
+"autocmd GUIEnter * silent tabnew D:\doc\draw\process
 "autocmd GUIEnter * silent tabnew D:\doc\draw\learn
-autocmd GUIEnter * silent tabnew D:\doc\draw\nowdraw
+"autocmd GUIEnter * silent edit D:\doc\draw\design
+autocmd GUIEnter * silent edit D:\doc\draw\etudes.md
 "autocmd GUIEnter * silent edit D:\doc\draw\nowdraw
-autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\dotnetcsharp
+"autocmd GUIEnter * silent tabnew D:\doc\draw\flowmap.md
+"autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\return.md
+autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\dotnetcsharp.md
+"autocmd GUIEnter * silent tabnew D:\doc\lifeDo\2021AUG
+"autocmd GUIEnter * silent tabnew D:\doc\lifeDo\life2021.md
 "autocmd GUIEnter * silent tabnew D:\doc\draw\test.md
 "autocmd GUIEnter * silent tabnew D:\doc\draw\warmup_inspire
 "autocmd GUIEnter * silent tabnew D:\doc\draw\photoshop
-"autocmd GUIEnter * silent tabnew D:\doc\mind\mind_2020.txt
+"autocmd GUIEnter * silent tabnew D:\doc\mind\mind_2021.md
 "autocmd GUIEnter * silent tabnew D:\doc\draw\process
 "autocmd GUIEnter * silent tabnew D:\doc\lifeDo\VOLAresult
 
