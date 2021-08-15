@@ -27,6 +27,10 @@ Plug 'tell-k/vim-autopep8'
 Plug 'python-rope/ropevim'
 Plug 'dense-analysis/ale'
 
+" JS
+Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
+"Plug '1995eaton/vim-better-javascript-completion'
+
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'chrisbra/csv.vim'
 "Plug 'vim-scripts/utl.vim'
@@ -112,6 +116,8 @@ function! MyHighlights() abort
     hi Title	guifg=#109098
     hi Folded guibg=#505050 guifg=#c0b030
     hi LineNr guifg=#70a0c0
+    hi Pmenu	guibg=#303050
+    "PmenuSel PmenuSbar PmenuThumb
 
 endfunction
 
@@ -150,7 +156,8 @@ set nocompatible
 set noswapfile
 set nowritebackup
 set number
-"set omnifunc=syntaxcomplete#Complete
+set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
 set shiftwidth=4
 set shiftwidth=4
 set smartcase
@@ -182,6 +189,7 @@ set statusline=
 "set statusline +=%1*\ %n\ %*            "buffer number
 "set statusline +=%3*%y%*                "file type
 set statusline +=%3*%=%*
+set statusline +=%{SyntasticStatuslineFlag()}
 set statusline +=%1*\ %<%F\ %*            "full path
 "set statusline +=%3*%m%*                "modified flag
 "set statusline +=%3*/%L%*               "total lines
@@ -338,6 +346,12 @@ function CompileCS()
     exec "!dotnet run"
 endfunction
 
+function RunJSNODE()
+    let filename = expand('%:t:r')
+    let cmd = join(["!node ", filename])
+    exec cmd
+endfunction
+
 function CompileJava()
     " Run from source dir where package root
     " TODO Find root dir, if threre source, down n. or in prj dir
@@ -358,7 +372,8 @@ endfunction
 
 map <F3> :w<CR>:!make<CR>
 map <F5> :w<CR>:!make '%:t:r'<CR>
-map <F5> :w<CR>:call CompileCS()<CR>
+"map <F5> :w<CR>:call CompileCS()<CR>
+map <F5> :w<CR>:call RunJSNODE()<CR>
 map <F6> :w<CR>:!make <CR>
 map <F6> :w<CR>:!javac -d ~/classes '%:t:r'.java && java -ea -cp ~/classes '%:t:r'<CR>
 map <F7> :call CompileJava()<CR>
@@ -464,6 +479,36 @@ let g:ropevim_autoimport_modules = ["os", "shutil"]
 let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'eslint']}
 let g:ale_fix_on_save = 1
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+let g:syntastic_javascript_eslint_exe = 'eslint .'
+let g:vimjs#casesensistive = 1
+let g:vimjs#smartcomplete = 0
+let g:vimjs#chromeapis = 0
+
+if has("gui_running")
+    inoremap <C-Space> <C-n>
+else " no gui
+  if has("unix")
+    inoremap <Nul> <C-n>
+  endif
+endif
+
+
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+" open omni completion menu closing previous if open and opening new menu without changing the text
+inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+            \ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+
 
 "autocmd GUIEnter * silent edit D:\doc\draw\ideas
 "autocmd GUIEnter * silent tabnew D:\doc\draw\what.md
