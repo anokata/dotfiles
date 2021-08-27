@@ -33,6 +33,7 @@ Plug 'mzlogin/vim-markdown-toc'
 "hallettj/jslint.vim
 "Html
 "Plug 'mattn/emmet-vim'
+"Plug 'kywind3000/asyncrun.vim'
 
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'chrisbra/csv.vim'
@@ -351,7 +352,7 @@ endfunction
 
 function RunJSNODE()
     let filename = expand('%:t:r')
-    let cmd = join(["!node ", filename])
+    let cmd = join(["!start cmd /k \"node ", filename, "\""])
     exec cmd
 endfunction
 
@@ -380,13 +381,13 @@ map <F5> :w<CR>:call RunJSNODE()<CR>
 map <F6> :w<CR>:!make <CR>
 map <F6> :w<CR>:!javac -d ~/classes '%:t:r'.java && java -ea -cp ~/classes '%:t:r'<CR>
 "map <F7> :call CompileJava()<CR>
-map <F6> :!npm start<CR>
-map <F7> :!npm run dev<CR>
+map <F6> :!start cmd /k "npm start"<CR>
+map <F7> :!start cmd /k "npm run dev"<CR>
 "map <F7> :w<CR>:!javac '%:t:r'.java -d ~/classes/<CR>:!java -cp ~/classes/ '%:t:r'<CR>
 "map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 "map <F8> :w<CR>:!jar -cvmf ../../manifest ~/classes/'%:t:r'.jar -C ~/classes/ com<CR>:!java -jar ~/classes/'%:t:r'.jar<CR>
 "nmap <F8> :TagbarToggle<CR>
-nmap <F8> :!cmd<CR>
+nmap <F8> :!start cmd /k "cmd"<CR>
 "map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 map <F9> :w<CR>:!texmake %<CR>
 map <F9> :w<CR>:!make App<CR>
