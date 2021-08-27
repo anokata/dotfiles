@@ -20,16 +20,19 @@ Plug 'mzlogin/vim-markdown-toc'
 "Plug 'OmniSharp/omnisharp-vim'
 
 " Python
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 "Plug 'flebel/vim-mypy', { 'for': 'python', 'branch': 'bugfix/fast_parser_is_default_and_only_parser' }
-Plug 'Integralist/vim-mypy'
-Plug 'tell-k/vim-autopep8'
-Plug 'python-rope/ropevim'
-Plug 'dense-analysis/ale'
+"Plug 'Integralist/vim-mypy'
+"Plug 'tell-k/vim-autopep8'
+"Plug 'python-rope/ropevim'
+"Plug 'dense-analysis/ale'
 
 " JS
-Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
+"Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 "Plug '1995eaton/vim-better-javascript-completion'
+"hallettj/jslint.vim
+"Html
+"Plug 'mattn/emmet-vim'
 
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'chrisbra/csv.vim'
@@ -376,11 +379,14 @@ map <F5> :w<CR>:!make '%:t:r'<CR>
 map <F5> :w<CR>:call RunJSNODE()<CR>
 map <F6> :w<CR>:!make <CR>
 map <F6> :w<CR>:!javac -d ~/classes '%:t:r'.java && java -ea -cp ~/classes '%:t:r'<CR>
-map <F7> :call CompileJava()<CR>
+"map <F7> :call CompileJava()<CR>
+map <F6> :!npm start<CR>
+map <F7> :!npm run dev<CR>
 "map <F7> :w<CR>:!javac '%:t:r'.java -d ~/classes/<CR>:!java -cp ~/classes/ '%:t:r'<CR>
 "map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 "map <F8> :w<CR>:!jar -cvmf ../../manifest ~/classes/'%:t:r'.jar -C ~/classes/ com<CR>:!java -jar ~/classes/'%:t:r'.jar<CR>
-nmap <F8> :TagbarToggle<CR>
+"nmap <F8> :TagbarToggle<CR>
+nmap <F8> :!cmd<CR>
 "map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 map <F9> :w<CR>:!texmake %<CR>
 map <F9> :w<CR>:!make App<CR>
@@ -518,9 +524,15 @@ inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Es
 "autocmd GUIEnter * silent edit D:\doc\draw\design
 autocmd GUIEnter * silent edit D:\doc\draw\etudes.md
 "autocmd GUIEnter * silent edit D:\doc\draw\nowdraw
+autocmd GUIEnter * silent tabnew D:\doc\draw\pixiv
+"autocmd GUIEnter * silent tabnew D:\doc\draw\job
 "autocmd GUIEnter * silent tabnew D:\doc\draw\flowmap.md
 "autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\return.md
-autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\dotnetcsharp.md
+"autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\dotnetcsharp.md
+autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\js.md
+"autocmd GUIEnter * silent tabnew F:\dev\js\start.js
+autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.js
+autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.html
 "autocmd GUIEnter * silent tabnew D:\doc\lifeDo\2021AUG
 "autocmd GUIEnter * silent tabnew D:\doc\lifeDo\life2021.md
 "autocmd GUIEnter * silent tabnew D:\doc\draw\test.md
