@@ -1,5 +1,4 @@
 #!/bin/bash
-
 export BASHCONF="D:\dotfiles\windows\bashconfig"
 export BASEDIR='D:\dotfiles\windows'
 export DOC=https://anokata@bitbucket.org/anokata/doc.git
@@ -8,10 +7,9 @@ export PATH=$PATH:'D:\dotfiles\windows\bin'
 export CLICOLOR="YES"
 export TERM=xterm-256color
 export PROMPT_COMMAND="history -a; history -c;history -r"
-echo from win bash conf $BASHCONF
+# echo from win bash conf $BASHCONF
 alias bashrc='vim $BASHCONF; source $BASHCONF'
 alias bashsrc='source $BASHCONF'
-
 
 HISTCONTROL=ignoreboth
 HISTSIZE=10000
@@ -19,11 +17,6 @@ HISTFILESIZE=20000
 set -o vi
 stty -ixon # for not stop draw at C-s (C-q restore)
 bind -x '"\C-o"':"fg"
-
-
-# if [ -x "$BASEDIR" ]; then
-#     source "$BASEDIR\lib\lib.sh"
-# fi
 
 source $BASEDIR/lib/alias.sh
 source $BASEDIR/lib/color.sh

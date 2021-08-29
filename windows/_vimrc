@@ -405,6 +405,7 @@ map <F5> :w<CR>:call RunJSNODE()<CR>
 map <F6> :!start cmd /k "npm start"<CR>
 map <F7> :!start cmd /k "npm run dev"<CR>
 nmap <F8> :!start cmd /k "cmd"<CR>
+nmap <F8> :!start "D:/progs/Git/git-bash"<CR>
 nmap <F9> :!start cmd /k "npm run test"<CR>
 nmap <F12> :!start cmd /k "npm run lint"<CR>
 nmap <F12> :w<CR>:call RunESLINT()<CR>

@@ -366,6 +366,34 @@ IfWinActive
 }
 }
 
+; win+c git-bash
+#c::
+exe:="Far.exe"
+app:="D:\progs\Git\git-bash.exe"
+IfWinNotExist, ahk_exe %exe%
+{
+	Run %app%
+	Sleep 1	
+	WinMaximize
+        return
+}
+IfWinExist, ahk_exe %exe%
+{   
+    WinGetTitle, T, ahk_exe %exe%
+    IfWinNotActive, ahk_exe %exe%
+	{
+	WinMinimizeAll
+	WinRestore
+	WinMaximize
+	return
+	}
+IfWinActive 
+{
+	WinMinimize
+	return
+}
+}
+
 
 setKeyDelay, 50, 50
 setMouseDelay, 50
