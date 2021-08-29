@@ -38,9 +38,7 @@ Plug 'https://github.com/adelarsq/vim-matchit'
 "Plug 'sukima/xmledit'
 
 "<Leader>p
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -183,8 +181,8 @@ set wildmode=longest:list,full
 set wrap
 set wrapmargin=0
 "set keymap=russian-jcukenwin
-set guioptions -=T
-set guioptions -=L
+" set guioptions -=T
+" set guioptions -=L
 "syn region foldBraces start=/{/ end=/}/ transparent fold
 "syn region foldJavadoc start=,/\*\*, end=,\*/, transparent fold keepend
 
@@ -228,7 +226,8 @@ endif
 " Mapping {{{
 nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 " ## Edit .vimrc ##
-map <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
+" map <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
+map <leader>v :vsp /etc/vimrc<CR>:set foldmethod=marker<cr>
 map <leader>V :source $MYVIMRC<CR>
 map <leader>ev :tabnew $MYVIMRC<CR>
 map <leader>es :source %<CR>
