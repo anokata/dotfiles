@@ -36,6 +36,10 @@ Plug 'mzlogin/vim-markdown-toc'
 " html match tags MUSThave!
 Plug 'https://github.com/adelarsq/vim-matchit'
 "Plug 'sukima/xmledit'
+"Plug 'pangloss/vim-javascript'    " JavaScript support
+"Plug 'leafgarland/typescript-vim' " TypeScript syntax
+"Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+"Plug 'jparise/vim-graphql'        " GraphQL syntax
 
 "<Leader>p
 Plug 'prettier/vim-prettier', {
@@ -546,7 +550,7 @@ inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Es
 "autocmd GUIEnter * silent edit D:\doc\draw\design
 autocmd GUIEnter * silent edit D:\doc\draw\etudes.md
 "autocmd GUIEnter * silent edit D:\doc\draw\nowdraw
-autocmd GUIEnter * silent tabnew D:\doc\draw\pixiv
+"autocmd GUIEnter * silent tabnew D:\doc\draw\pixiv
 "autocmd GUIEnter * silent tabnew D:\doc\draw\job
 "autocmd GUIEnter * silent tabnew D:\doc\draw\flowmap.md
 "autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\return.md
