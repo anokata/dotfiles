@@ -1,22 +1,39 @@
 " vim: set syntax=vim:
 " Plugins {{{
+
+" NEW USE: csw)  ysiwt<html> cswt< dst   del tag ysiw 
+"insert mode: <C-X><Space> <C-X>/
+":Git ,ga ,gc ,gp
+
 call plug#begin('D:/dev/vim/plugged')
 "call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-repeat' 
-Plug 'airblade/vim-gitgutter'
-Plug 'gorodinskiy/vim-coloresque'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-commentary'
 Plug 'Raimondi/delimitMate'
-
-"Plug 'godlygeek/tabular'
+let delimitMate_balance_matchpairs = 1
+Plug 'tpope/vim-repeat' 
+Plug 'tpope/vim-commentary'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-dadbod'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'tpope/vim-vinegar'
 Plug 'plasticboy/vim-markdown'
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'https://github.com/adelarsq/vim-matchit'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"Plug 'docunext/closetag.vim'
+"Plug 'majutsushi/tagbar'
+"Plug 'vim-scripts/taglist.vim'
+"Plug 'vim-scripts/utl.vim'
+"Plug 'vim-scripts/DfrankUtil'
+"tpope/vim-heroku
+let g:ragtag_global_maps = 1
+Plug 'tpope/vim-ragtag'
+
+"Plug 'godlygeek/tabular'
 "Plug 'OmniSharp/omnisharp-vim'
 
 " Python
@@ -34,7 +51,6 @@ Plug 'mzlogin/vim-markdown-toc'
 "Plug 'mattn/emmet-vim'
 "Plug 'kywind3000/asyncrun.vim'
 " html match tags MUSThave!
-Plug 'https://github.com/adelarsq/vim-matchit'
 "Plug 'sukima/xmledit'
 "Plug 'pangloss/vim-javascript'    " JavaScript support
 "Plug 'leafgarland/typescript-vim' " TypeScript syntax
@@ -49,17 +65,11 @@ Plug 'prettier/vim-prettier', {
 
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'chrisbra/csv.vim'
-"Plug 'vim-scripts/utl.vim'
-"Plug 'vim-scripts/DfrankUtil'
-"Plug 'pangloss/vim-javascript'
 "Plug 'mkomitee/vim-gf-python'
 "Plug 'vim-scripts/utf8-math'
 "Plug 'ktonga/vim-follow-my-lead'
 "Plug 'stormherz/tablify'
-"Plug 'majutsushi/tagbar'
-"Plug 'vim-scripts/taglist.vim'
 "Plug 'vim-scripts/code_complete'
-"Plug 'docunext/closetag.vim'
 "Plug 'valloric/matchtagalways'
 "Plug 'artur-shaik/vim-javacomplete2'
 "Plug 'sirver/ultisnips'
@@ -67,7 +77,6 @@ Plug 'prettier/vim-prettier', {
 "Plug 'vim-scripts/Align'
 "Plug 'easymotion/vim-easymotion'
 "Plug 'airblade/vim-rooter'
-"Plug 'vim-syntastic/syntastic'
 "Plug 'vimplugin/project.vim'
 "Plug 'hoxnox/indexer.vim'
 "tormaza Plug 'dhruvasagar/vim-table-mode'
@@ -368,12 +377,19 @@ function RunJSNODE()
     let ext = expand('%:e')
 
     if ext == 'ts'
-        let compile = join(["!tsc -t es6 ", fullfilename])
+
+        
+        let compile = join(["!tsc --strictNullChecks --noEmitOnError -t es6 ", fullfilename])
         exec compile
+
+        if v:shell_error != 0
+            return
+        endif
+
         let cmd = join(["!node ", filename])
         exec cmd
     else
-        let cmd = join(["!start cmd /k \"node ", filename, "\""])
+        let cmd = join(["!start cmd /k \"node ", fullfilename, "\""])
         exec cmd
     endif
     
@@ -579,3 +595,8 @@ autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.html
 "autocmd GUIEnter * silent tabnew D:\doc\draw\process
 "autocmd GUIEnter * silent tabnew D:\doc\lifeDo\VOLAresult
 
+nmap <leader>ga :Git add .<CR>
+"TODO currentfile nmap <leader>gA :Git add filename<CR>
+nmap <leader>gc :Git commit<CR>
+nmap <leader>gp :Git push<CR>
+nmap <leader>gg :Git add .<bar>Git commit<CR><bar>Git push<CR>
