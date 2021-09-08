@@ -364,8 +364,19 @@ endfunction
 
 function RunJSNODE()
     let filename = expand('%:t:r')
-    let cmd = join(["!start cmd /k \"node ", filename, "\""])
-    exec cmd
+    let fullfilename = expand('%:t')
+    let ext = expand('%:e')
+
+    if ext == 'ts'
+        let compile = join(["!tsc -t es6 ", fullfilename])
+        exec compile
+        let cmd = join(["!node ", filename])
+        exec cmd
+    else
+        let cmd = join(["!start cmd /k \"node ", filename, "\""])
+        exec cmd
+    endif
+    
 endfunction
 
 function RunESLINT()
