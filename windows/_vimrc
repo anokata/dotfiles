@@ -585,8 +585,8 @@ autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.js
 
 set autowrite
 nnoremap <leader>Q :q!<CR>
-nnoremap <leader>b :buffers<cr>:b<space> 
-nnoremap <leader>B :CtrlPBuffer<cr>
+nnoremap <leader>B :buffers<cr>:b<space> 
+nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <C-S-T> :CtrlP D:/doc<cr>
 nnoremap <C-S-H> :CtrlP F:/dev<cr>
 "C-d
