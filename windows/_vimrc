@@ -1,37 +1,48 @@
 " vim: set syntax=vim:
-" Plugins {{{
 
 " NEW USE: csw)  ysiwt<html> cswt< dst   del tag ysiw 
+" gd - goto def
+" buffers
+    ":sb
+    ":b
+    "change tabnew at end to buffers in 2 tabs
 "insert mode: <C-X><Space> <C-X>/
 ":Git ,ga ,gc ,gp
+"@h
+",;
+"zm
+"https://shapeshed.com/vim-netrw/
+
+" Plugins {{{
+
 
 call plug#begin('D:/dev/vim/plugged')
 "call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
-let delimitMate_balance_matchpairs = 1
 Plug 'tpope/vim-repeat' 
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-"Plug 'tpope/vim-dadbod'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'tpope/vim-vinegar'
 Plug 'plasticboy/vim-markdown'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'https://github.com/adelarsq/vim-matchit'
+Plug 'tpope/vim-ragtag'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"Plug 'tpope/vim-unimpaired'
+"Plug 'tpope/vim-dadbod'
 "Plug 'docunext/closetag.vim'
 "Plug 'majutsushi/tagbar'
 "Plug 'vim-scripts/taglist.vim'
 "Plug 'vim-scripts/utl.vim'
 "Plug 'vim-scripts/DfrankUtil'
 "tpope/vim-heroku
-let g:ragtag_global_maps = 1
-Plug 'tpope/vim-ragtag'
+"Plug 'Shougo/unite.vim'
 
 "Plug 'godlygeek/tabular'
 "Plug 'OmniSharp/omnisharp-vim'
@@ -52,18 +63,26 @@ Plug 'tpope/vim-ragtag'
 "Plug 'kywind3000/asyncrun.vim'
 " html match tags MUSThave!
 "Plug 'sukima/xmledit'
-"Plug 'pangloss/vim-javascript'    " JavaScript support
-"Plug 'leafgarland/typescript-vim' " TypeScript syntax
-"Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+"Plug 'styled-components/vim-styled-components'
 "Plug 'jparise/vim-graphql'        " GraphQL syntax
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+" https://github.com/liuchengxu/vim-clap/issues/439
 
 "<Leader>p
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
-
+" https://github.com/junegunn/fzf.vim
+":Buffers
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'           " Set up fzf and fzf.vim
 "Plug 'chrisbra/csv.vim'
 "Plug 'mkomitee/vim-gf-python'
 "Plug 'vim-scripts/utf8-math'
@@ -95,6 +114,9 @@ call plug#end()
 " }}}
 
 " Plugin settings let {{{
+let delimitMate_balance_matchpairs = 1
+let g:ragtag_global_maps = 1
+
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_splits = 0
@@ -119,6 +141,37 @@ let g:netrw_browse_split = 2
 let g:netrw_winsize = 35
 let g:netrw_altv = 1
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
+
+let g:vim_markdown_conceal = 2
+let g:vim_markdown_autowrite = 1
+" 'tab', 'vsplit', 'hsplit', 'current'"
+let g:vim_markdown_edit_url_in = 'tab'
+let g:vmt_dont_insert_fence = 0
+let g:vmt_list_item_char='-'
+let g:vmt_include_headings_before=1
+let g:vmt_auto_update_on_save = 1
+let g:vim_markdown_follow_anchor = 1
+
+let g:asyncomplete_auto_popup = 1
+let g:syntastic_python_checkers=['mypy']
+let ropevim_vim_completion=1
+let g:ropevim_autoimport_modules = ["os", "shutil"]
+let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'eslint']}
+let g:ale_fix_on_save = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+let g:syntastic_javascript_eslint_exe = 'eslint .'
+let g:vimjs#casesensistive = 1
+let g:vimjs#smartcomplete = 0
+let g:vimjs#chromeapis = 0
+
+let g:NERDTreeWinPos = "right"
+let NERDTreeIgnore = ['\.pyc$']
 
 "==== Session ====
 nmap <C-F5> :call MakeDefSession()<CR>
@@ -200,18 +253,35 @@ set guioptions -=T
 set guioptions -=L
 "syn region foldBraces start=/{/ end=/}/ transparent fold
 "syn region foldJavadoc start=,/\*\*, end=,\*/, transparent fold keepend
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+"set guifont=Lucida_Console:h11
+"set guifont=courier_new:h12
+set guifont=DejaVu\ Sans\ Mono:h12
+set encoding=utf-8
+set noerrorbells visualbell t_vb=
+set guioptions+=c
+
+function Maximize()
+   winpos 0 0
+   set lines=80
+   set columns=238
+endfunction
+
 
 filetype off
 filetype plugin indent on
 syntax on
 
-if has("autocmd")
-  filetype plugin indent on
-endif
+" if has("autocmd")
+"   filetype plugin indent on
+" endif
 
 " Status line
 set statusline=
-"set statusline +=%1*\ %n\ %*            "buffer number
+set statusline +=%1*\ %n\ %*            "buffer number
 "set statusline +=%3*%y%*                "file type
 set statusline +=%3*%=%*
 "set statusline +=%{SyntasticStatuslineFlag()}
@@ -219,14 +289,6 @@ set statusline +=%1*\ %<%F\ %*            "full path
 "set statusline +=%3*%m%*                "modified flag
 "set statusline +=%3*/%L%*               "total lines
 "set statusline +=%1*%4v\ %*             "virtual column number
-"set statusline +=%2*0x%04B\ %*          "character under cursor
-" }}}
-
-"==== NERDTree ==== {{{
-let g:NERDTreeWinPos = "right"
-let NERDTreeIgnore = ['\.pyc$']
-nmap <leader>r :NERDTreeToggle<CR>
-nmap <leader>Y :NERDTreeClose<CR>
 " }}}
 
 " ================ Persistent Undo ================== {{{
@@ -239,6 +301,8 @@ endif
 " }}}
 
 " Mapping {{{
+nmap <leader>r :NERDTreeToggle<CR>
+nmap <leader>Y :NERDTreeClose<CR>
 nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 " ## Edit .vimrc ##
 map <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
@@ -255,11 +319,9 @@ nmap <leader>. :tabprev<CR>
 "nmap <leader>f :set foldmethod=indent<CR>
 "nmap <leader>f :FZF!<CR>
 "nmap <C-p> :FZF<CR>
-nmap <leader>a za
-" fold all
+nnoremap <space> za
 " copy to system buffer
 nmap <leader>y "+y
-" TODO from vim buffer to sys
 " Paste from Clipboard
 "nmap <leader>p "+p
 nmap <leader>P o<ESC>"+P
@@ -272,7 +334,7 @@ nmap yy yy<leader>s
 
 "map <leader>r :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 nmap <leader>q :w<CR>
-nmap <leader>e :q<CR>
+nmap <leader>e :wq<CR>
 nmap <leader>X :!chmod +x %<CR>
 nmap <Leader>u ysiw_ysiw_
 
@@ -291,9 +353,8 @@ cmap й q
 cmap ч x
 cmap у e
 cmap ф a
-nnoremap <space> za
 
-" run current line
+" VIMSCRIPT  run current line
 noremap <c-c> yy:@"<CR>
 " run paragraph
 noremap <c-s-x> {V}kyy:@"<CR>}
@@ -326,7 +387,6 @@ nnoremap - h
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 nnoremap GG GGzz
-"nnoremap <leader>g :exe 'W3m google ' . expand('<cword>')<CR>
 
 " d(el) y(ank) c(hange) inside ()
 onoremap p i(
@@ -343,7 +403,7 @@ nnoremap <C-j> <C-w><Down>
 nnoremap <C-l> <C-w><Right>
 nnoremap <C-h> <C-w><Left>
 nnoremap <bs> <C-w><Left>
-"nnoremap <leader>b :BufExplorer<CR>
+nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
 " Toggle paste mode
 nnoremap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 inoremap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
@@ -363,7 +423,39 @@ nnoremap <leader>; :call _Add_semi()<cr>
 nnoremap <leader>n :cnext<cr>
 nnoremap <leader>l :cclose<cr>
 
-nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
+" MD: GenTocGFM HeaderIncreace UpdateToc 
+nmap <leader>T :GenTocGFM<CR>
+nmap <leader>x gxdd,q
+nmap <leader>Y :Toc<CR>
+nmap <leader>mt :Toc<CR>
+" make Header
+let @h='0y$,sI[A]A()hp0'
+"nnoremap <Space> za
+nmap <leader>ga :Git add .<CR>
+"TODO currentfile nmap <leader>gA :Git add filename<CR>
+nmap <leader>gc :Git commit<CR>
+nmap <leader>gp :Git push<CR>
+nmap <leader>gg :Git add .<bar>Git commit<CR><bar>Git push<CR>
+
+
+if has("gui_running")
+    inoremap <C-Space> <C-n>
+else " no gui
+  if has("unix")
+    inoremap <Nul> <C-n>
+  endif
+endif
+
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+" open omni completion menu closing previous if open and opening new menu without changing the text
+inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+            \ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+
+
 " }}}
 
 "==== DEV ==== {{{
@@ -428,9 +520,8 @@ map <F6> :w<CR>:!javac -d ~/classes '%:t:r'.java && java -ea -cp ~/classes '%:t:
 "map <F7> :w<CR>:!javac '%:t:r'.java -d ~/classes/<CR>:!java -cp ~/classes/ '%:t:r'<CR>
 "map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 "map <F8> :w<CR>:!jar -cvmf ../../manifest ~/classes/'%:t:r'.jar -C ~/classes/ com<CR>:!java -jar ~/classes/'%:t:r'.jar<CR>
-"nmap <F8> :TagbarToggle<CR>
 "map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
-"
+"nmap <leader>b :TagbarToggle<CR>
 " Javascript
 map <F5> :w<CR>:call RunJSNODE()<CR>
 map <F6> :!start cmd /k "npm start"<CR>
@@ -457,146 +548,47 @@ map <F11> :w<CR>:source %<CR>
 " }}}
 
 " Macros {{{
-" i ctrl-r ctrl-r q"
+" Insert macros q:  i ctrl-r ctrl-r q"
 " param on new line
 let @d='f,lli'
-" logger
-let @p='0fpcwlogger.debug(�kD�kDA)'
-" log
-let @l='0wdwilog.info(A)'
-let @j='A {'
-map <leader>k A {
-" swap args in ()
-let @w='0f(ldt,f)pui, p0f,dw'
-" Java try 
-let @t="Iclass :put =expand('%:t:r')A {lxkJopublic static void main(String[] args) {}}"
-let @t="Itry {lxo} catch (Exception ex) { ex.printStackTrace(); }"
-" temporary macros. for rainlin
-let @m='/\<mdxExpertReportLink"f,a "exportFormats":["PDF","DOC","XLS","CSV","XML","PPT","ODT","ODS","ODP","DOCX","XLSX","PPTX"],":w'
-let @n='/"WebReports.Controls.Report"bbbi"exportFormats":["PDF","DOC","XLS","CSV","XML","PPT","ODT","ODS","ODP","DOCX","XLSX","PPTX"],":w'
 " }}}
 
-" right way to use autocmd --- {{{ fold with za
+" AutoCMD {{{
 augroup allAutoCmds
     autocmd!
     "autocmd FileType python colorscheme sonokai
-    autocmd FileType python :iabbrev <buffer> iff if:<left>
-    autocmd FileType vim setlocal foldmethod=marker
     "autocmd FileType java setlocal omnifunc=javacomplete#Complete
     "
     "autocmd FileType markdown :onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
+    " BufEnter
+    "au BufNewFile,BufRead * set syntax=markdown
+    "au BufNewFile,BufRead * set filetype=markdown
+    autocmd GUIEnter * call Maximize()
+    autocmd FileType python :iabbrev <buffer> iff if:<left>
+    autocmd FileType vim setlocal foldmethod=marker
+    autocmd BufNewFile,BufRead *vimrc set syntax=vim
+    autocmd GUIEnter * set visualbell t_vb=
+    autocmd BufEnter *.md set filetype=markdown
+    autocmd BufEnter *.md set syntax=markdown
+    autocmd BufEnter *.js,*.mjs set filetype=javascript
 augroup END
 " }}}
 
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-"set guifont=Lucida_Console:h11
-set guifont=DejaVu\ Sans\ Mono:h12
-"set guifont=courier_new:h12
-set encoding=utf-8
-
-function Maximize()
-   winpos 0 0
-   set lines=80
-   set columns=238
-endfunction
-
-autocmd GUIEnter * call Maximize()
-set guioptions+=c
-
-let g:vim_markdown_conceal = 2
-let g:vim_markdown_autowrite = 1
-" 'tab', 'vsplit', 'hsplit', 'current'"
-let g:vim_markdown_edit_url_in = 'tab'
-nmap <leader>Y :Toc<CR>
-nmap <leader>mt :Toc<CR>
-let g:vmt_dont_insert_fence = 0
-let g:vmt_list_item_char='-'
-let g:vmt_include_headings_before=1
-let g:vmt_auto_update_on_save = 1
-let g:vim_markdown_follow_anchor = 1
-nmap <leader>T :GenTocGFM<CR>
-nmap <leader>x gxdd,q
-" make Header
-let @h='0y$,sI[A]A()hp0'
-" BufEnter
-"au BufNewFile,BufRead * set syntax=markdown
-"au BufNewFile,BufRead * set filetype=markdown
-au BufNewFile,BufRead *vimrc set syntax=vim
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
-"nnoremap <Space> za
-
-let g:asyncomplete_auto_popup = 1
-" Markdown
-" GenTocGFM HeaderIncreace UpdateToc 
-let g:syntastic_python_checkers=['mypy']
-let ropevim_vim_completion=1
-let g:ropevim_autoimport_modules = ["os", "shutil"]
-let b:ale_fixers = ['prettier', 'eslint']
-let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'eslint']}
-let g:ale_fix_on_save = 1
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-"let g:syntastic_javascript_eslint_exe = 'npm run lint --'
-let g:syntastic_javascript_eslint_exe = 'eslint .'
-let g:vimjs#casesensistive = 1
-let g:vimjs#smartcomplete = 0
-let g:vimjs#chromeapis = 0
-
-if has("gui_running")
-    inoremap <C-Space> <C-n>
-else " no gui
-  if has("unix")
-    inoremap <Nul> <C-n>
-  endif
-endif
-
-
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-" open omni completion menu closing previous if open and opening new menu without changing the text
-inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-            \ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-
-
-"autocmd GUIEnter * silent edit D:\doc\draw\ideas
-"autocmd GUIEnter * silent tabnew D:\doc\draw\what.md
-"autocmd GUIEnter * silent tabnew D:\doc\draw\trainings
-"autocmd GUIEnter * silent tabnew D:\doc\draw\process
-"autocmd GUIEnter * silent tabnew D:\doc\draw\learn
-"autocmd GUIEnter * silent edit D:\doc\draw\design
+" {{{ Auto open files in tabs
+autocmd GUIEnter * silent edit D:\doc\dev\way2021\js.md
+autocmd GUIEnter * silent edit D:\doc\indexpath.md
 autocmd GUIEnter * silent edit D:\doc\draw\etudes.md
-"autocmd GUIEnter * silent edit D:\doc\draw\nowdraw
-"autocmd GUIEnter * silent tabnew D:\doc\draw\pixiv
-"autocmd GUIEnter * silent tabnew D:\doc\draw\job
-"autocmd GUIEnter * silent tabnew D:\doc\draw\flowmap.md
-"autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\return.md
-"autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\dotnetcsharp.md
-autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\js.md
-"autocmd GUIEnter * silent tabnew F:\dev\js\start.js
 autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.js
-autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.html
-"autocmd GUIEnter * silent tabnew D:\doc\lifeDo\2021AUG
-"autocmd GUIEnter * silent tabnew D:\doc\lifeDo\life2021.md
-"autocmd GUIEnter * silent tabnew D:\doc\draw\test.md
-"autocmd GUIEnter * silent tabnew D:\doc\draw\warmup_inspire
-"autocmd GUIEnter * silent tabnew D:\doc\draw\photoshop
 "autocmd GUIEnter * silent tabnew D:\doc\mind\mind_2021.md
-"autocmd GUIEnter * silent tabnew D:\doc\draw\process
-"autocmd GUIEnter * silent tabnew D:\doc\lifeDo\VOLAresult
+"}}}
 
-nmap <leader>ga :Git add .<CR>
-"TODO currentfile nmap <leader>gA :Git add filename<CR>
-nmap <leader>gc :Git commit<CR>
-nmap <leader>gp :Git push<CR>
-nmap <leader>gg :Git add .<bar>Git commit<CR><bar>Git push<CR>
+
+set autowrite
+nnoremap <leader>Q :q!<CR>
+nnoremap <leader>b :buffers<cr>:b<space> 
+nnoremap <leader>B :CtrlPBuffer<cr>
+nnoremap <C-S-T> :CtrlP D:/doc<cr>
+nnoremap <C-S-H> :CtrlP F:/dev<cr>
+"C-d
+let doc='D:/doc'
+let dev='F:/dev'
