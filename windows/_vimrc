@@ -114,6 +114,8 @@ call plug#end()
 " }}}
 
 " Plugin settings let {{{
+let doc='D:/doc'
+let dev='F:/dev'
 let delimitMate_balance_matchpairs = 1
 let g:ragtag_global_maps = 1
 
@@ -196,6 +198,10 @@ function! MyHighlights() abort
     hi LineNr guifg=#70a0c0
     hi Pmenu	guibg=#303050
     "PmenuSel PmenuSbar PmenuThumb
+    highlight SignColumn guibg=NONE ctermbg=NONE
+    highlight GitGutterAdd    guifg=#409040 guibg=NONE ctermfg=2
+    highlight GitGutterChange guifg=#bbbb00 guibg=NONE ctermfg=3
+    highlight GitGutterDelete guifg=#c02222 guibg=NONE ctermfg=1
 
 endfunction
 
@@ -405,8 +411,8 @@ nnoremap <C-h> <C-w><Left>
 nnoremap <bs> <C-w><Left>
 nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
 " Toggle paste mode
-nnoremap <silent> <F4> :set invpaste<CR>:set paste?<CR>
-inoremap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
+" nnoremap <silent> <F4> :set invpaste<CR>:set paste?<CR>
+" inoremap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 
 " open previous buffer in vert split
 "nnoremap <leader>p :execute "rightbelow vsplit " . bufname("#")<cr>
@@ -437,6 +443,11 @@ nmap <leader>gc :Git commit<CR>
 nmap <leader>gp :Git push<CR>
 nmap <leader>gg :Git add .<bar>Git commit<CR><bar>Git push<CR>
 
+nnoremap <leader>Q :q!<CR>
+nnoremap <leader>B :buffers<cr>:b<space> 
+nnoremap <leader>b :CtrlPBuffer<cr>
+nnoremap <C-S-T> :CtrlP D:/doc<cr>
+nnoremap <C-S-H> :CtrlP F:/dev<cr>
 
 if has("gui_running")
     inoremap <C-Space> <C-n>
@@ -579,16 +590,9 @@ autocmd GUIEnter * silent edit D:\doc\dev\way2021\js.md
 autocmd GUIEnter * silent edit D:\doc\indexpath.md
 autocmd GUIEnter * silent edit D:\doc\draw\etudes.md
 autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.js
+autocmd GUIEnter * silent edit F:\dev\js\app1\nodeapp4.js
+autocmd GUIEnter * silent edit F:\dev\js\app1\testapp3.ts
 "autocmd GUIEnter * silent tabnew D:\doc\mind\mind_2021.md
 "}}}
 
-
 set autowrite
-nnoremap <leader>Q :q!<CR>
-nnoremap <leader>B :buffers<cr>:b<space> 
-nnoremap <leader>b :CtrlPBuffer<cr>
-nnoremap <C-S-T> :CtrlP D:/doc<cr>
-nnoremap <C-S-H> :CtrlP F:/dev<cr>
-"C-d
-let doc='D:/doc'
-let dev='F:/dev'
