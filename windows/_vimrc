@@ -59,7 +59,10 @@ Plug 'vim-airline/vim-airline-themes'
 "Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 "Plug '1995eaton/vim-better-javascript-completion'
 "Html
-"Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<C-x>'
 "Plug 'kywind3000/asyncrun.vim'
 " html match tags MUSThave!
 "Plug 'sukima/xmledit'
@@ -226,7 +229,7 @@ set cmdheight=2
 set conceallevel=2
 set expandtab
 set foldenable
-set foldlevelstart=0
+set foldlevelstart=90
 set foldmethod=syntax
 " level >20 for folded
 set foldlevel=90
@@ -243,8 +246,7 @@ set nowritebackup
 set number
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
-set shiftwidth=4
-set shiftwidth=4
+set shiftwidth=2
 set smartcase
 set t_Co=256
 set t_ut=
@@ -410,7 +412,6 @@ nnoremap <C-j> <C-w><Down>
 nnoremap <C-l> <C-w><Right>
 nnoremap <C-h> <C-w><Left>
 nnoremap <bs> <C-w><Left>
-nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
 " Toggle paste mode
 " nnoremap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 " inoremap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
@@ -429,6 +430,7 @@ nnoremap <leader>; :call _Add_semi()<cr>
 "nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
 nnoremap <leader>n :cnext<cr>
 nnoremap <leader>l :cclose<cr>
+nnoremap <leader>d :execute "normal! a" . expand("%:p")<cr>
 
 " MD: GenTocGFM HeaderIncreace UpdateToc 
 nmap <leader>T :GenTocGFM<CR>
@@ -576,6 +578,7 @@ map <F11> :w<CR>:source %<CR>
 " Insert macros q:  i ctrl-r ctrl-r q"
 " param on new line
 let @d='f,lli'
+let @t='0f<i'
 " }}}
 
 " AutoCMD {{{
@@ -604,11 +607,14 @@ autocmd GUIEnter * silent edit D:\doc\dev\way2021\js.md
 autocmd GUIEnter * silent edit D:\doc\mind\mind_2021.md
 autocmd GUIEnter * silent edit D:\doc\indexpath.md
 autocmd GUIEnter * silent edit D:\doc\draw\etudes.md
+autocmd GUIEnter * silent edit D:\doc\lifeDo\life2021.md
 autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.js
-autocmd GUIEnter * silent edit F:\dev\js\app1\nodeapp4.js
-autocmd GUIEnter * silent edit F:\dev\js\app1\testapp3.ts
-autocmd GUIEnter * silent edit F:\dev\js\reactapp1\index.html
+" autocmd GUIEnter * silent edit F:\dev\js\app1\nodeapp4.js
+" autocmd GUIEnter * silent edit F:\dev\js\app1\testapp3.ts
+autocmd GUIEnter * silent edit F:\dev\js\app1\expressServ.js
+autocmd GUIEnter * silent edit F:\dev\js\reactapp1\forms.html
 autocmd GUIEnter * silent edit F:\dev\js\reactapp1\index.jsx
+
 "}}}
 
 set autowrite
