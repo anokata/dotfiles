@@ -484,6 +484,16 @@ function RunNODEMON()
     exec cmd
 endfunction
 
+
+function RunSASS()
+    let filename = expand('%:t:r')
+    let scss = expand('%')
+    let css = filename . '.css'
+    let cmd = "!sass " . scss . " " . css
+    exec cmd
+
+endfunction
+
 function RunJSNODE()
     let filename = expand('%:t:r')
     let fullfilename = expand('%:t')
@@ -536,9 +546,9 @@ function CompileJava()
     execute "redraw!"
 endfunction
 
+"map <F5> :w<CR>:call CompileCS()<CR>
 map <F3> :w<CR>:!make<CR>
 map <F5> :w<CR>:!make '%:t:r'<CR>
-"map <F5> :w<CR>:call CompileCS()<CR>
 map <F6> :w<CR>:!make <CR>
 map <F6> :w<CR>:!javac -d ~/classes '%:t:r'.java && java -ea -cp ~/classes '%:t:r'<CR>
 "map <F7> :call CompileJava()<CR>
@@ -555,19 +565,20 @@ nmap <F8> :!start cmd /k "cmd"<CR>
 nmap <F8> :!start "D:/progs/Git/git-bash"<CR>
 nmap <F9> :!start cmd /k "npm run test"<CR>
 nmap <F10> :call RunNODEMON()<CR>
+nmap <F11> :call RunSASS()<CR>
 nmap <F12> :!start cmd /k "npm run lint"<CR>
 nmap <F12> :w<CR>:call RunESLINT()<CR>
 
 "map <F9> :w<CR>:!texmake %<CR>
 "map <F9> :w<CR>:!make App<CR>
-map <C-F9> :!python3 -i '%:t'<CR>
 " SHELL
 "map <F9> :w<CR>:!./%<CR>
 " map <F10> :w<CR>:!python '%:t'<CR>
+map <C-F9> :!python3 -i '%:t'<CR>
 map <C-F10> :w<CR>:!python '%:t'<CR>
 " map <C-F10> :w<CR>:!epython '%:t'<CR>
 "VimL
-map <F11> :w<CR>:source %<CR>
+"map <F11> :w<CR>:source %<CR>
 "map <F3> :w<CR>:!javac '%' && java '%:r'<CR>
 "map <F9> :w<CR> :!perl '%'<CR>
 "map <F10> :w<CR>:!make test<CR>
@@ -608,12 +619,14 @@ autocmd GUIEnter * silent edit D:\doc\mind\mind_2021.md
 autocmd GUIEnter * silent edit D:\doc\indexpath.md
 autocmd GUIEnter * silent edit D:\doc\draw\etudes.md
 autocmd GUIEnter * silent edit D:\doc\lifeDo\life2021.md
-autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.js
+autocmd GUIEnter * silent edit D:\doc\dev\way2021\vacancy.md
+" autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.js
 " autocmd GUIEnter * silent edit F:\dev\js\app1\nodeapp4.js
 " autocmd GUIEnter * silent edit F:\dev\js\app1\testapp3.ts
-autocmd GUIEnter * silent edit F:\dev\js\app1\expressServ.js
-autocmd GUIEnter * silent edit F:\dev\js\reactapp1\forms.html
-autocmd GUIEnter * silent edit F:\dev\js\reactapp1\index.jsx
+" autocmd GUIEnter * silent edit F:\dev\js\app1\expressServ.js
+" autocmd GUIEnter * silent edit F:\dev\js\reactapp1\forms.html
+" autocmd GUIEnter * silent tabnew F:\dev\js\reactapp1\index.jsx
+autocmd GUIEnter * silent edit F:\dev\js\index.html
 
 "}}}
 
