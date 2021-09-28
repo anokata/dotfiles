@@ -395,6 +395,13 @@ IfWinActive
 }
 
 
+; win+s screen saver
+#s::
+{
+Run C:/Windows/System32/scrnsave.scr /s
+}
+
+
 setKeyDelay, 50, 50
 setMouseDelay, 50
 $#^~lbutton::
