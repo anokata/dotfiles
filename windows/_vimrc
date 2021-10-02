@@ -61,7 +61,7 @@ Plug 'vim-airline/vim-airline-themes'
 "Html
 Plug 'mattn/emmet-vim'
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,js EmmetInstall
 let g:user_emmet_leader_key='<C-x>'
 "Plug 'kywind3000/asyncrun.vim'
 " html match tags MUSThave!
@@ -324,8 +324,6 @@ nmap <leader>w :tabclose<CR>
 nmap <leader>, :tabnext<CR>
 nmap <leader>. :tabprev<CR>
 " ==== Folding ====
-"nmap <leader>f zf)
-"nmap <leader>f :set foldmethod=indent<CR>
 "nmap <leader>f :FZF!<CR>
 "nmap <C-p> :FZF<CR>
 nnoremap <space> za
@@ -451,6 +449,8 @@ nnoremap <leader>B :buffers<cr>:b<space>
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <C-S-T> :CtrlP D:/doc<cr>
 nnoremap <C-S-H> :CtrlP F:/dev<cr>
+
+nmap <leader>f :!D:\programs\firefox.exe %:p<CR>
 
 if has("gui_running")
     inoremap <C-Space> <C-n>
@@ -626,7 +626,9 @@ autocmd GUIEnter * silent edit D:\doc\dev\way2021\vacancy.md
 " autocmd GUIEnter * silent edit F:\dev\js\app1\expressServ.js
 " autocmd GUIEnter * silent edit F:\dev\js\reactapp1\forms.html
 " autocmd GUIEnter * silent tabnew F:\dev\js\reactapp1\index.jsx
-autocmd GUIEnter * silent edit F:\dev\js\index.html
+autocmd GUIEnter * silent edit F:\dev\js\reactapp2\flex.html
+autocmd GUIEnter * silent edit F:\dev\js\reactapp2\index.html
+autocmd GUIEnter * silent edit F:\dev\js\reactintro3\src\index.js
 
 "}}}
 
