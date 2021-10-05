@@ -58,10 +58,15 @@ Plug 'vim-airline/vim-airline-themes'
 "Plug 'vim-syntastic/syntastic'
 "Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 "Plug '1995eaton/vim-better-javascript-completion'
+"Plug 'mxw/vim-jsx'
 "Html
 Plug 'mattn/emmet-vim'
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,js EmmetInstall
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
 let g:user_emmet_leader_key='<C-x>'
 "Plug 'kywind3000/asyncrun.vim'
 " html match tags MUSThave!
@@ -610,6 +615,8 @@ augroup allAutoCmds
     autocmd BufEnter *.md set filetype=markdown
     autocmd BufEnter *.md set syntax=markdown
     autocmd BufEnter *.js,*.mjs set filetype=javascript
+    autocmd FileType html,css,js,jsx EmmetInstall
+    autocmd FileType javascript EmmetInstall
 augroup END
 " }}}
 
