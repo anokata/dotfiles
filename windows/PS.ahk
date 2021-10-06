@@ -166,6 +166,7 @@ Return
 $CapsLock::Send {Esc}
 $#CapsLock::Send {Esc}
 $!CapsLock::Send {Esc}
+$+CapsLock::Send {Esc}
 
 #$^r::Reload
 
