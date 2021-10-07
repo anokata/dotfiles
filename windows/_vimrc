@@ -1,6 +1,7 @@
 " vim: set syntax=vim:
 
 " NEW USE: csw)  ysiwt<html> cswt< dst   del tag ysiw 
+" .e
 " gd - goto def
 " buffers
     ":sb
@@ -150,7 +151,7 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 2
 let g:netrw_winsize = 35
 let g:netrw_altv = 1
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\|dist\|dist\'
 
 let g:vim_markdown_conceal = 2
 let g:vim_markdown_autowrite = 1
@@ -182,6 +183,7 @@ let g:vimjs#chromeapis = 0
 
 let g:NERDTreeWinPos = "right"
 let NERDTreeIgnore = ['\.pyc$']
+
 
 "==== Session ====
 nmap <C-F5> :call MakeDefSession()<CR>
@@ -389,6 +391,20 @@ iabbrev @@@ quartenium@gmail.com
 iabbrev ifmain if __name__=='__main__':<CR>
 iabbrev #i #include
 iabbrev #d #define
+iabbrev #c \<CR
+iabbrev @l console.log(
+iabbrev #r 
+\<CR>export class  extends React.Component {
+\<CR>  constructor(props) {
+\<CR>    super(props);
+\<CR>    this.state = {
+\<CR>    };
+\<CR>  }
+\<CR>
+\<CR>  render() {
+\<CR>    return (<div></div>);
+\<CR>  }
+\<CR>}
 
 inoremap jk <esc>
 inoremap kj <esc>
@@ -428,6 +444,7 @@ function! _Add_semi()
     execute cmd
 endfunction
 nnoremap <leader>; :call _Add_semi()<cr>
+nnoremap <leader>' A,<ESC>
 
 " Search by grep with quick-window mappings
 "nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
@@ -633,9 +650,11 @@ autocmd GUIEnter * silent edit D:\doc\dev\way2021\vacancy.md
 " autocmd GUIEnter * silent edit F:\dev\js\app1\expressServ.js
 " autocmd GUIEnter * silent edit F:\dev\js\reactapp1\forms.html
 " autocmd GUIEnter * silent tabnew F:\dev\js\reactapp1\index.jsx
-autocmd GUIEnter * silent edit F:\dev\js\reactapp2\flex.html
-autocmd GUIEnter * silent edit F:\dev\js\reactapp2\index.html
-autocmd GUIEnter * silent edit F:\dev\js\reactintro3\src\index.js
+" autocmd GUIEnter * silent edit F:\dev\js\reactapp2\flex.html
+" autocmd GUIEnter * silent edit F:\dev\js\reactapp2\index.html
+" autocmd GUIEnter * silent edit F:\dev\js\reactintro3\src\index.js
+autocmd GUIEnter * silent edit F:\dev\js\reactdoc4\src\index.js
+autocmd GUIEnter * silent edit F:\dev\js\idler02react\src\index.js
 
 "}}}
 
