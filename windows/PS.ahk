@@ -5,6 +5,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ^ctrl #win +shift !alt
 
 
+$^!a::
+Run, mmsys.cpl
+WinWait, Sound ahk_exe rundll32.exe
+
+ControlSend,SysListView321,{Down}, Sound ahk_exe rundll32.exe
+ControlGet, isEnabled, Enabled ,, Button2, Sound ahk_exe rundll32.exe
+if !isEnabled
+	ControlSend,SysListView321,{Down}, Sound ahk_exe rundll32.exe
+ControlClick,Button2, Sound ahk_exe rundll32.exe 	; &Set Default
+ControlClick,OK, Sound ahk_exe rundll32.exe
+return
 
 ; CLIP STUDIO PAINT
 #IfWinActive, ahk_exe CLIPStudioPaint.exe
