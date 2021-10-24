@@ -45,6 +45,7 @@ Plug 'vim-airline/vim-airline-themes'
 "tpope/vim-heroku
 "Plug 'Shougo/unite.vim'
 
+"Plug 'diepm/vim-rest-console'
 "Plug 'godlygeek/tabular'
 "Plug 'OmniSharp/omnisharp-vim'
 
@@ -633,19 +634,19 @@ augroup allAutoCmds
     autocmd BufEnter *.md set filetype=markdown
     autocmd BufEnter *.md set syntax=markdown
     autocmd BufEnter *.js,*.mjs set filetype=javascript
-    autocmd FileType html,css,js,jsx EmmetInstall
+    autocmd FileType html,css,js,jsx,tsx EmmetInstall
     autocmd FileType javascript EmmetInstall
 augroup END
 " }}}
 
 " {{{ Auto open files in tabs
-autocmd GUIEnter * silent edit D:\doc\dev\way2021\js.md
 autocmd GUIEnter * silent edit D:\doc\dev\way2021\react.md
 autocmd GUIEnter * silent edit D:\doc\mind\mind_2021.md
 autocmd GUIEnter * silent edit D:\doc\indexpath.md
 autocmd GUIEnter * silent edit D:\doc\draw\etudes.md
 "autocmd GUIEnter * silent edit D:\doc\lifeDo\life2021.md
 autocmd GUIEnter * silent edit D:\doc\dev\way2021\vacancy.md
+autocmd GUIEnter * silent edit D:\doc\dev\way2021\angular.md
 " autocmd GUIEnter * silent tabnew F:\dev\js\idler01\idler01.js
 " autocmd GUIEnter * silent edit F:\dev\js\app1\nodeapp4.js
 " autocmd GUIEnter * silent edit F:\dev\js\app1\testapp3.ts
@@ -654,11 +655,22 @@ autocmd GUIEnter * silent edit D:\doc\dev\way2021\vacancy.md
 " autocmd GUIEnter * silent tabnew F:\dev\js\reactapp1\index.jsx
 " autocmd GUIEnter * silent edit F:\dev\js\reactapp2\flex.html
 " autocmd GUIEnter * silent edit F:\dev\js\reactapp2\index.html
-" autocmd GUIEnter * silent edit F:\dev\js\reactintro3\src\index.js
 " autocmd GUIEnter * silent edit F:\dev\js\reactdoc4\src\index.js
+" autocmd GUIEnter * silent edit F:\dev\js\reactdoc4\src\hooks.js
 " autocmd GUIEnter * silent edit F:\dev\js\idler02react\src\index.js
-autocmd GUIEnter * silent edit F:\dev\js\todolist\src\index.js
-
+" autocmd GUIEnter * silent edit F:\dev\js\todolist\src\app\todolist.js
+autocmd GUIEnter * silent edit F:\dev\js\gallery\tz
+" autocmd GUIEnter * silent edit F:\dev\js\rest.js
+" autocmd GUIEnter * silent edit F:\dev\js\algo.js
+autocmd GUIEnter * silent edit D:\doc\dev\way2021\js.md
+autocmd GUIEnter * silent edit D:\doc\dev\way2021\web.md
+autocmd GUIEnter * silent edit D:\doc\dev\way2021\jobfind.md
+autocmd GUIEnter * silent edit D:\doc\dev\way2021\todo.md
+" autocmd GUIEnter * silent edit F:\dev\js\todong\
+" autocmd GUIEnter * silent edit F:\dev\js\reactdoc4\src\slomux.js
+autocmd GUIEnter * silent tabnew D:\doc\dev\way2021\interview_sobes.md
+autocmd GUIEnter * silent edit D:\doc\lifeDo\life2021.md
+autocmd GUIEnter * silent tabnew F:\dev\js\app1\rx.mjs
 "}}}
 
 set autowrite
