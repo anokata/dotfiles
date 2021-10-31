@@ -1,0 +1,64 @@
+"Plug 
+" commenter
+
+let mapleader=","
+nmap <leader>q :w<CR>
+nmap <leader>e :wq<CR>
+nmap <leader>t :tabnew<CR>
+nmap <leader>w :tabclose<CR>
+nmap <leader>, :tabnext<CR>
+nmap <leader>. :tabprev<CR>
+nnoremap <space> za
+" copy to system buffer
+nmap <leader>y "+y
+" Paste from Clipboard
+"nmap <leader>p "+p
+nmap <leader>P o<ESC>"+P
+" Copy vim def " buffer to clipboard
+nmap <leader>s :let @+=@"<CR>
+" for windows, copy to sys buffer
+nmap yy yy<leader>s
+
+" moving normal in russian
+nmap ё `
+nmap Ж :
+nmap ш i
+nmap о j
+nmap л k
+nmap ф a
+nmap Ф A
+nmap б ,
+nmap ю .
+cmap ц w
+cmap й q
+cmap ч x
+cmap у e
+cmap ф a
+
+iabbrev adn and
+iabbrev waht what
+iabbrev tehn then
+iabbrev fi if
+iabbrev funciotn function
+iabbrev funciton function
+iabbrev @@@ quartenium@gmail.com
+iabbrev ifmain if __name__=='__main__':<CR>
+iabbrev #i #include
+iabbrev #d #define
+iabbrev #c \<CR
+iabbrev @l console.log(
+ 
+map <F5> :w<CR>:call RunJSNODE()<CR>
+map <F6> :!start cmd /k "npm start"<CR>
+map <F7> :!start cmd /k "npm run dev"<CR>
+nmap <F8> :!start cmd /k "cmd"<CR>
+nmap <F8> :!start "D:/progs/Git/git-bash"<CR>
+nmap <F9> :!start cmd /k "npm run test"<CR>
+nmap <F10> :call RunNODEMON()<CR>
+nmap <F11> :call RunSASS()<CR>
+nmap <F12> :!start cmd /k "npm run lint"<CR>
+nmap <F12> :w<CR>:call RunESLINT()<CR>
+nmap <F12> :w<CR>:call RunLiteServer()<CR>
+
+map <leader>v :tabnew d:/dotfiles/windows/vscodevim<CR>:set foldmethod=marker<cr>
+map <leader>V :source MYVIMRC<CR>

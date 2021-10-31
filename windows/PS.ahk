@@ -272,6 +272,33 @@ IfWinActive
 }
 }
 
+
+; win+b vscode
+#b::
+exe:="Code.exe"
+app:="D:\dev\VSCode\Code.exe"
+IfWinNotExist, ahk_exe %exe%
+{
+	Run %app%
+        return
+}
+IfWinExist, ahk_exe %exe%
+{   
+    WinGetTitle, T, ahk_exe %exe%
+    IfWinNotActive, ahk_exe %exe%
+	{
+	WinMinimizeAll
+	WinRestore
+	WinMaximize
+	return
+	}
+IfWinActive 
+{
+	WinMinimize
+	return
+}
+}
+
 ; win+f firefox
 #f::
 exe:="firefox.exe"
