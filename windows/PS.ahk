@@ -505,6 +505,7 @@ switchDesktopByNumber(targetDesktop)
  ; Don't attempt to switch to an invalid desktop
  if (targetDesktop > DesktopCount || targetDesktop < 1) {
  OutputDebug, [invalid] target: %targetDesktop% current: %CurrentDesktop%
+ send, {lbutton}
  return
  }
  ; Go right until we reach the desktop we want
