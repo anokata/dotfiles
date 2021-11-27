@@ -18,6 +18,10 @@ brew install python3
 brew install node
 brew install node@16
 brew install tmux
+brew install zsh-completions
+brew install zsh-syntax-highlighting
+
+defaults write com.apple.Finder AppleShowAllFiles true
 
 Ssh copy, chown $USER chmod 600 ~/.ssh/*
 git clone git@github.com:anokata/dotfiles.git
@@ -42,7 +46,10 @@ https://itunes.apple.com/ru/app/the-unarchiver/id425424353?mt=12
 
 Iterm2
 
+vscode
+  "terminal.integrated.fontFamily": "Meslo LG M for Powerline"
 
+# kuber
 brew install kubernetes-cli
 brew install minikube
 brew install hyperkit
