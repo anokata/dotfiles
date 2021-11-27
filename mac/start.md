@@ -56,3 +56,12 @@ brew install hyperkit
 brew install kubernetes-helm
 brew install skaffold
 
+git@gitlab.com:anokata/doc.git
+
+
+# dev
+npm install --global gulp-cli
+npm install -g pnpm
+npm install nodemon -g
+npm install -g nx
+npm install -g @angular/cli
