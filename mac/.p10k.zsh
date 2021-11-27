@@ -1,0 +1,1 @@
+/Users/stanislavtikhomirov/.p10k.zsh
