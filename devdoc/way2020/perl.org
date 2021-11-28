@@ -1,0 +1,9 @@
+>>http://citforum.ru/internet/perl_tut/begin.shtml
+>>http://perl.find-info.ru/perl/014/index.htm
+>>https://perldoc.perl.org/index-functions-by-cat.html
+>https://habrahabr.ru/post/70610/
+>http://www.perlmonks.org/?node_id=353259
+>http://perldoc.perl.org/perlvar.html
+>http://eax.me/perl-basics/
+>https://www.opennet.ru/docs/RUS/perl_help/
+>https://habrahabr.ru/post/245659/

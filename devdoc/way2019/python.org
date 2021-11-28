@@ -1,0 +1,119 @@
+https://learnpythonthehardway.org/
+https://colab.research.google.com
+Сделать прогу расчёта по дате рождения когда будет 10000*n день/ час
+* Numpy
+https://docs.scipy.org/doc/numpy/user/quickstart.html
+https://www.tutorialspoint.com/numpy/index.htm
+https://stepik.org/lesson/16462/step/6?unit=4283
+
+https://sites.google.com/view/pypry/
+https://habrahabr.ru/post/352904/
+https://github.com/vintasoftware/python-linters-and-code-analysis
+https://aiohttp.readthedocs.io/en/stable/
+http://www.tornadoweb.org/en/stable/
+
+* selenium
+>https://selenium2.ru/docs/webdriver.html
+>http://selenium-python.readthedocs.io/
+
+- STATIC :: http://mypy.readthedocs.io/en/stable/
+            >http://mypy.readthedocs.io/en/latest/builtin_types.html
+      >https://coverage.readthedocs.io/en/coverage-4.4.1/
+
+>https://labix.org/python-dateutil
+>http://coverage.readthedocs.io/en/coverage-4.4.1/>https://blog.emacsos.com/unicode-in-python.html
+>http://python-3-patterns-idioms-test.readthedocs.io/en/latest/PatternRefactoring.html
+>https://github.com/mdipierro/nlib
+>https://opensource.com/article/17/4/grok-gil
+>https://habrahabr.ru/company/ods/blog/322626/
+
+* tools
+>https://pypi.python.org/pypi/autopep8/
+
+* Libs
+>http://wiki.python.su/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8/BeautifulSoup
+>http://docs.python-zeep.org/en/master/
+>http://www.npcole.com/npyscreen/
+>https://pymorphy2.readthedocs.io/en/latest/user/guide.html
+>http://www.nltk.org/
+>http://radimrehurek.com/gensim/tutorial.html
+>https://nlpub.ru/Pymorphy
+>http://www.vim.org/scripts/script.php?script_id=891
+>https://dou.ua/lenta/articles/python-logging/
+** flask
+>https://flask-russian-docs.readthedocs.io/ru/latest/blueprints.html#blueprints
+>http://flask-sqlalchemy.pocoo.org/2.1/quickstart/
+>https://habrahabr.ru/post/196810/
+>https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins
+** django
+>>!! https://github.com/amureki/django_faq
+>https://djbook.ru/rel1.4/ref/templates/builtins.html
+>>https://tutorial.djangogirls.org/ru/django_forms/
+>http://djbook.ru/rel1.9/intro/tutorial02.html
+** web wsgi
+>http://web2py.com/books/default/chapter/29/13/deployment-recipes
+>https://www.fullstackpython.com/wsgi-servers.html
+>https://uwsgi-docs.readthedocs.io/en/latest/Logging.html
+>https://www.python.org/dev/peps/pep-0333/
+
+* gamedev
+>http://pysdl2.readthedocs.io/en/rel_0_9_5/modules/sdl2ext_font.html?highlight=text
+>https://github.com/dangillet/pysdl2-examples
+>http://www.pygame.org/wiki/CookBook
+>http://pygame.org/wiki/tutorials
+
+модуль inspect
+** 2.X
+        погоду писать в папку статистики в csv(чем открывать?) или sc(странный формат - плохо читать текстом)? или yaml?
+        Финансы
+** 2.7 youtube api github api vk api REST. Как получить список видео для пользователя по подпискам.
+        2.7.0 просматривать список подписок. добавлять подписки в список. получать список последних видео с канала,
+         с возможностью получить следующие. получение урл видео и скачка в определённом формате. список пользователей.
+         список скачанных видео и запуск. настройка автоскачки последних новых видео с каналов.
+** 2.8 изучать модули питона(collections, functools..) и др стандартные возможности.
+        http://www.brunningonline.net/simon/python/quick-ref2_0.html#BuiltIn
+        http://aliev.me/runestone/Trees/ListofListsRepresentation.html
+        https://pythonworld.ru/moduli
+    Что ещё точно осовить в python:
+    создание пакетов. setuptools, pip, easy_install
+** 2.9 dbm pickle shelve создание архива, tar, zip. (для бэкапа)
+** 2.D Брать тему, искать, придумывать на неё задачи и решать изучая её.
+         PIL Complex nums : фрактал, raytracer
+        os files
+        web server http
+        как делать пакеты, установочные.
+        virtualenv
+        Shovel
+        Redis
+
+* html parse
+>>http://wiki.python.su/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8/BeautifulSoup#A.2BBBwEPgQ0BDgERAQ4BDoEMARGBDgETw_.2BBDQENQRABDUEMgQw_.2BBEEEOAQ9BEIEMAQ6BEEEOARHBDUEQQQ6BD4EMwQ.2B_.2BBEAEMAQ3BDEEPgRABDA-
+* learn
+>http://aliev.me/runestone/Trees/ListofListsRepresentation.html
+>http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html
+>http://jff.name/odesk-how-to/
+>https://sourceware.org/gdb/wiki/PythonGdbTutorial
+>https://doc.scrapy.org/en/latest/intro/overview.html
+>http://www.openbookproject.net/py4fun/
+>https://www.python.org/dev/peps/pep-3124/
+>http://lazycleric.blogspot.ru/2009/05/python.html
+>http://code.activestate.com/recipes/langs/python/
+>https://pymotw.com/2/contents.html
+>http://pleac.sourceforge.net/pleac_python/index.html
+>https://docs.python.org/dev/howto/functional.html
+>http://www.siafoo.net/article/52
+>http://gnosis.cx/publish/tech_index_cp.html
+>http://pyvideo.org/
+>http://blogger.sapronov.me/
+>http://ru.diveintopython.net/toc.html
+>http://wombat.org.ua/AByteOfPython/what_next.html#id4
+>https://pythondigest.ru/
+* get dissasseble code
+      import dis
+      dis.dis(some_func)
+
+* search
+http://whoosh.readthedocs.io/en/latest/indexing.html
+* ffi
+https://dbader.org/blog/python-ctypes-tutorial
+

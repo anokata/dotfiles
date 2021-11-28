@@ -1,0 +1,29 @@
+https://habr.com/ru/post/497106/
+https://www.youtube.com/user/itsemaev/playlists
+https://www.youtube.com/user/BachiloDmitry
+https://www.youtube.com/watch?v=sEqQrE38M58
+ngrep
+https://vc.ru/36213-esli-zablokiruyut-telegram-chto-delat?ref=vc.ru
+http://telegra.ph/Kak-aktivirovat-SOCKS-5-v-Telegram-06-26
+http://ebtables.netfilter.org/br_fw_ia/br_fw_ia.html
+>http://beej.us/guide/bgipc/output/html/multipage/unixsock.html
+>http://eax.me/network-application-mistakes/
+>https://habrahabr.ru/post/147996/
+>https://curl.haxx.se/docs/httpscripting.html#Background
+>https://wiki.centos.org/HowTos/Network/IPTables
+
+* SSL
+>https://www.akadia.com/services/ssh_test_certificate.html
+      openssl genrsa -des3 -out server.key 1024
+      openssl req -new -key server.key -out server.csr
+      cp server.key server.key.org
+      openssl rsa -in server.key.org -out server.key
+      openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+>>https://www.sslshopper.com/article-most-common-openssl-commands.html
+>https://stackoverflow.com/questions/10175812/how-to-create-a-self-signed-certificate-with-openssl
+>http://nginx.org/ru/docs/http/ngx_http_ssl_module.html
+
+* w
+https://www.opennet.ru/docs/RUS/tcpip/netprg1.html
+http://citforum.ru/book/cook/winsock.shtml
+https://habrahabr.ru/post/211474/

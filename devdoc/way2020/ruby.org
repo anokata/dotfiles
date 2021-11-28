@@ -1,0 +1,5 @@
+ri - doc
+irb - repl
+
+* learn doc
+>https://www.ruby-lang.org/ru/documentation/

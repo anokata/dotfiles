@@ -1,0 +1,8 @@
+https://github.com/mooz/percol
+https://github.com/jlevy/the-art-of-command-line
+static analyse
+>https://habrahabr.ru/company/ruvds/blog/342580/
+nohup
+disown
+netstat -lntp
+ss -plat

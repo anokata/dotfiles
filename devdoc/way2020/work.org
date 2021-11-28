@@ -1,0 +1,117 @@
+https://github.com/activeloopai/Hub
+Предотвратить повторное создание
+https://github.com/django-mptt/django-mptt
+https://github.com/mbraak/django-mptt-admin
+просто подменить шаблон и нарисовать дерево самому?
+
+* vacation
+nikityukov@mosreg.ru
+
+*Write #private #public*
+>https://github.com/pybuilder/pybuilder
+>http://phpfaq.ru/tech/ip
+*use strict in js*
+*use django.forms*
+
+- Многократная отправка коммента. Не давать
+- +сделать нормальные поля с 139
+- увеличение изображений
+- кнопка файлов
+      миниатюры https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications#Example_Showing_thumbnails_of_user-selected_images
+- add to wheel in makefile/deploy script - root init
+
+- Будем ли менять порядок отображения вложений - можно сделать просто одно под другим всегда. Увеличивать на странице как сейчас (но исправить анимацию или убрать её) Либо сделать модальное окно с изображением Либо открывать отдельной вкладкой.
+
+* backups
+учесть другой IP в Allowed hosts
+      +dump 
+      save to storage
+      restore to test
+      cron
+      configs, nginx, guni
+      app, libs install
+      create user and db user
+      test in container
+      backup git repos
+      copy ssh config
+
+      !! install and setup postgresql
+      remote cron make dump
+      local cron scp dump
+      add users at first deploy to ssh login and get backups
+** deploy
+      create container
+      ssh to it
+      install all
+      clone repo
+      deploy app
+      set up DB
+      run app
+      set up backup
+** portal int
+** portal ext
+** support
+      db
+      qa: 10.10.30.56 5432
+
+      host:
+            make backup at host @ 1:00
+
+      storage:
+            copy backup to storage @ 8:00
+            restore backup at test/containter @ 8:30
+
+            cd prj dir
+            git pull http master
+            cd ..
+            tar -cf prj prj.tar
+            gzip prj.tar
+
+
+** feedback
+      +make db dump
+
+
+* techdebt
+- +ticket data get via rest
+- comment post by rest
+4. errors handling
+      - check fail requests via change urls
+5. deploy full script
+      - nginx config from template m4? cpp? PORT DIR
+      - install script for libs
+6. feedback refactor, py3
+7. logs separate, feedback too
+7. typing http://mypy.readthedocs.io/en/latest/kinds_of_types.html
+8. write tests, selenium
+8. doc write to conf + readme
+8. code coverage https://coverage.readthedocs.io/en/coverage-4.4.1/
+9. comments
+
+Внешний  /home/extprod/extportal/ http://ext.support.mosreg.ru/
+Внутренний /home/selfsup/self-support/ http://portal.support.mosreg.ru/
+
+
+openssl x509 -in certificate.crt -text -noout
+https://ssl.com.ua/faq/ssl-certificate-chain-download.html
+try
+https://uwsgi-docs.readthedocs.io/en/latest/
+
+http://www.odata.org/documentation/odata-version-2-0/uri-conventions/
+
+* ages
+39
+36
+36
+36
+33
+33
+31
+
+28
+28
+25
+25
+24
+24
+398/13 ~ 30.6

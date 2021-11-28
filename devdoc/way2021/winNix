@@ -1,0 +1,6 @@
+git bash
+
+msys2
+pacman -S tmux
+
+Copy tmux.exe and msys-event-2-1-4.dll to your Git

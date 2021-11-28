@@ -1,0 +1,74 @@
+!https://github.com/danistefanovic/build-your-own-x#build-your-own-web-server
+https://brennan.io/2016/11/14/kernel-dev-ep3/
+Сделать структуру для работы с очень большими числами для idle-games инкременты, сложения, отображение в разных форматах.
+Форум. Golang or ES6. java
+
+
+Алгоритмы и структуры
+    Деревья, графы
+
+Что такое прозрачный ящик.
+
+1. Алгоритмы на python/c/cpp/c#/java/js
+2. OOP, Паттерны
+3. Модули ядра Linux
+4. Фреймворк для форума/магазина web(php js java) - паттерны, mvc
+
+https://spacevim.org/use-vim-as-a-java-ide/
+http://eclim.org/vim/java/complete.html
+
+Приложение для андроида на яве: моё расписание.
+    ежечасное, редактор
+    запускаемое по кнопке - утрненнее - через 5мин зарядка. далее чтение там и тп. продумать
+        запуск, учёт выполненного.
+    Или бота в телеграмм
+https://github.com/dbader/schedule
+
+* проекты
+    Решатель уравнений, графики
+!!!        редактор формул python/java прикрутить готовый (+tex может)
+https://www.google.com/search?client=firefox-b-d&q=formula+editor+java
+https://www.mathjax.org/
+http://visualmatheditor.equatheque.net/
+LaTeX, AscciMath and MathML
+        построение корней на комплексной
+        нахождение численное корней
+        оперирование комплекснымии числами
+        обычная арифметика
+    Теор вер. Диф ур, производные, триг.
+    mind map vi
+    Симуляторы 
+    Блог
+    https://habr.com/ru/post/345092/
+    http://codekata.pragprog.com/   IdealProg
+* стоящие технологии
+    Сети протоколы
+    * python
+        PyCFFI
+        numpy scipy
+    * C
+    * CPP 
+        OOP
+        Александреску
+        Шаблоны, SFINAE
+        Loki Boost
+    * Linux
+        Linux kernel modules
+    mongodb/redis
+    Многопоточность
+    Async
+    ML нейронки генетические алг
+    Паттерны?
+    ?selenium
+
+    -Карты! 21 gtk
+    -бильярд
+    -music demoscene keygen
+    -музыкальный трекер/piano
+
+
+* 08.10
+Создавать объекты косвенно. Тип объекта - не класс а интерфейс.
+Абстрактные типы в python.
+
+https://proglib.io/p/programming-books/

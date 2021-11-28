@@ -1,0 +1,15 @@
+Свой "яндекс"диск.
+1. Найти куда всё выгружать. Варианты:
+ google disk - OAuth
+ yandex disk - OAuth
+ github rest api ? 
+ python hosting. pythonanywhere, googleApp, Redhat
+
+ а лучше сразу в несколько мест.
+2. urllib (or other) использовать для доступа к REST api
+ https://api.github.com/users/anokata 
+
+Peewee ORM
+WatchDog
+
+

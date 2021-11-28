@@ -1,0 +1,18 @@
+https://habr.com/ru/company/mailru/blog/352122/
+http://www.elisdn.ru/blog/113/psr7-framework-http
+http://php.net/manual/en/features.commandline.webserver.php
+http://php-di.org/
+!https://www.php-fig.org/
+!https://habrahabr.ru/company/mailru/blog/352122/
+>http://php.net/manual/ru/features.gc.php
+>http://www.phpinfo.su/articles/practice/shablony_v_php.html
+>http://git.php.net/?p=php-src.git;a=blob_plain;f=CODING_STANDARDS;
+>http://php.net/manual/ru/language.oop5.basic.php
+>https://phpunit.de/getting-started.html
+
+* hosting
+euai_19877416
+>http://urls.eu.ai/
+>http://www.bplaced.net/?location=menu&handler=dns
+>https://wiki.archlinux.org/index.php/CurlFtpFS
+>http://cpanel.eu.ai/panel/

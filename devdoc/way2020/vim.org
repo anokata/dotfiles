@@ -1,0 +1,152 @@
+// vim: set ft=markdown:
+# old
+Tridactyl
+https://addons.mozilla.org/ru/firefox/addon/tridactyl-vim/
+https://github.com/lervag/vimtex
+https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+https://vimawesome.com/plugin/emmet-vim
+https://github.com/baruchel/vim-notebook
+!!!>https://youtu.be/XA2WjJbmmoM
+>https://habrahabr.ru/company/mailru/blog/340740/
+>>http://vimgolf.com/
+>https://github.com/vim-scripts/code_complete
+>https://github.com/vim-scripts/OmniCppComplete
+>https://github.com/vimplugin/project.vim
+>https://github.com/hoxnox/indexer.vim
+https://dmitryfrank.com/articles/vim_project_code_navigation
+http://vim.wikia.com/wiki/Use_Vim_like_an_IDE
+http://www.vim.org/scripts/script.php?script_id=2154
+https://github.com/vim-syntastic/syntastic
+* learn
+>http://vim.wikia.com/wiki/Avoid_the_escape_key
+>https://sanctum.geek.nz/arabesque/vim-command-window/
+>http://scabere.livejournal.com/62886.html
+>http://najomi.org/vim
+>http://vimcasts.org/blog/2013/11/registers-the-good-the-bad-and-the-ugly-parts/
+* dev in vim
+>https://stackoverflow.com/questions/8781975/refactoring-in-vim
+* setup
+statusline
+>http://vimdoc.sourceforge.net/htmldoc/autocmd.html#autocommand
+>http://vimcasts.org/
+>http://vim.wikia.com/wiki/Category:VimTip
+>http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
+>http://vim.wikia.com/wiki/Find_in_files_within_Vim
+* color
+>http://bytefluent.com/vivify/
+>http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim?file=Xterm-color-table.png
+coloring in syntax help
+* plugins
+ctrlp
+>https://github.com/dhruvasagar/vim-dotoo
+>https://habrahabr.ru/post/261783/
+>https://wiki.archlinux.org/index.php/Powerline
+>http://vimawesome.com/
+>http://www.held.org.il/blog/2011/02/configuring-ctags-for-python-and-vim/
+>https://github.com/python-rope/ropevim
+>https://vim.sourceforge.io/scripts/script_search_results.php?order_by=rating
+>https://github.com/svermeulen/vim-easyclip
+* vimscript
+>http://learnvimscriptthehardway.stevelosh.com/chapters/01.html
+* tips
+используй S
+используй s
++ после f можно ; повторить поиск
+Делять изменения, повторения Повторяемыми.
+@: повторяет команду ex
+& повторяет подстановку
+, (так то) повторяет поиск символа назад
+db cb de
+C-f edit like vim <CR> in command-mode
+zz zt zb
+q: for :C-f
+ :help c_ctrl-f
+di" di( yi" yi(
+cs("
+d%  c%  y%
+c-space  b ?
+
+daw delete a word
+C-a C-x sub/add number at cursor
+in insert mode:
+ C-w del word  C-u del to start
+ C-o sub-normal mode
+ C-k :digraphs
+
+?it inside tag
+K on word - Man
+surround: dst delete surround tag
+dit delete in tag
+dat delete around tag
+
+>https://stackoverflow.com/questions/7186880/using-normal-mode-motions-in-command-line-mode-in-vim
+>https://shapeshed.com/custom-vim-bindings-in-tmux-2-4/
+>https://github.com/tpope/vim-vinegar
+errorformat
+>https://habrahabr.ru/post/102954/
+>https://github.com/hoxnox/indexer.vim
+>https://stackoverflow.com/questions/7186880/using-normal-mode-motions-in-command-line-mode-in-vim
+>http://www.vim.org/scripts/script.php?script_id=2154
+* ctrl-space
+
+
+:.! ls :.!date
+https://stackoverflow.com/questions/726894/what-are-the-dark-corners-of-vim-your-mom-never-told-you-about
+:%TOhtml
+
+# use 2021
+csw)  
+ysiwt<html>
+cswt<
+dst   del tag
+ysiw 
+emmet: <c-y>,  <c-y>k <c-y>j <c-y>a
+cstt 
+
+"insert mode: <C-X><Space> <C-X>/
+":Git ,ga ,gc ,gp
+"@h
+",;
+"zm
+"https://shapeshed.com/vim-netrw/
+
+https://stackoverflow.com/questions/16082991/vim-switching-between-files-rapidly-using-vanilla-vim-no-plugins
+:b4         " switch to buffer number 4
+:bn         " switch to next buffer in the buffer list
+:bp         " switch to previous buffer in the buffer list
+:bf         " switch to first buffer in the buffer list
+:bl         " switch to last buffer in the buffer list
+:b foo<Tab> " switch by buffer name with tab-completion
+:b#         " switch to the alternate file
+:ls
+nnoremap gb :ls<CR>:b<Space>
+C-i C-o C-6
+m marks
+
+augroup VIMRC
+  autocmd!
+
+  autocmd BufLeave *.css  normal! mC
+  autocmd BufLeave *.html normal! mH
+  autocmd BufLeave *.js   normal! mJ
+  autocmd Buf?? enter *.js   normal! 'J
+  autocmd BufLeave *.php  normal! mP
+augroup END
+
+buf close? :q ,e
+:bn :bp :bd
+:b tab
+nnoremap <leader>bb :buffers<cr>:b<space> 
+C-d
+
+https://www.vim.org/scripts/script.php?script_id=1890
+https://vim.fandom.com/wiki/Easier_buffer_switching
+https://github.com/tpope/vim-unimpaired
+" Insert macros q:  i ctrl-r ctrl-r q"
+https://pragmaticpineapple.com/ultimate-vim-typescript-setup/#code-completions
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
+"nmap <leader>f zf)
+"nmap <leader>f :set foldmethod=indent<CR>

@@ -1,0 +1,60 @@
+input("eneter:")
+imp.reload(MODULE)
+
+dir(module or)
+type(obj)
+divmod
+int() float() str()
+len() 
+"".split() Str=>[str]
+"".join() [str]=>Str
+find rfind 
+"".count()
+center ljust rjust
+list()
+[::-1]
+[].append()
++=  extend()
+del remove()
+pop()
+index()
+el in []
+range()
+
+locals()
+globals()
+
+functools.reduce
+filter()
+map()
+
+enumerate() zip()
+collections.defaultdict()
+  .counter()
+  .most_common()
+  OrderedDict()
+  deque
+itertools.chain()
+  cycle
+  accumulate
+pprint.pprint
+
+property()
+@property
+
+@classmethod
+@staticmethod
+from collections import namedtuple
+binascii hexlify
+struct pack unpack
+bytes bytearray
+unicodedata name lookup
+encode decode
+pickle dumps loads ...
+shelve (aka pickle with dmb)
+glob
+math.hypot
+ascii
+
+sum_x_y = lambda x, y: x + y
+

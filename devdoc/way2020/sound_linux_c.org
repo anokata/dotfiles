@@ -1,0 +1,38 @@
+http://alsa.opensrc.org/HowTo_Asynchronous_Playback
+https://www.alsa-project.org/main/index.php/PCM_Ring_Buffer
+http://www.linuxjournal.com/article/6735?page=0,1
+sdl mixer, 
+>https://xiph.org/ao/
+>https://freedesktop.org/software/pulseaudio/doxygen/simple.html
+>https://jan.newmarch.name/LinuxSound/
+>https://gstreamer.freedesktop.org/
+>https://developer.gnome.org/gsound/stable/
+>https://developer.gnome.org/gstreamer/stable/
+>https://developer.gnome.org/gstreamer-libs/stable/
+>https://github.com/scottstensland/render-audio-openal
+openal
+>https://en.wikipedia.org/wiki/Pulse-code_modulation
+>http://tldp.org/HOWTO/Sound-HOWTO/x504.html
+
+>o https://ru.wikipedia.org/wiki/%D0%98%D0%BC%D0%BF%D1%83%D0%BB%D1%8C%D1%81%D0%BD%D0%BE-%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F%D1%86%D0%B8%D1%8F
+ogg - Vorbis
+>https://ftp.osuosl.org/pub/xiph/releases/vorbis/
+>https://xiph.org/downloads/
+
+https://ru.wikipedia.org/wiki/%D0%A2%D1%80%D0%B5%D0%BA%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D0%B0
+https://ru.wikipedia.org/wiki/MO3
+http://modarchive.org/
+lxmp
+http://linux-sound.org/mod.html
+https://wiki.linuxaudio.org/apps/categories/mod_trackers_and_players
+
+http://docs.python.org/library/wave.html
+
+arecord -d 3 -q -f cd -r 16000 speech.wav
+sox
+lame
+
+http://www.pouet.net/
+* radio
+>https://geektimes.ru/post/275168/
+

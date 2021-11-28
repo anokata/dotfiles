@@ -1,0 +1,7 @@
+https://coderpad.io/
+>http://www.hanselman.com/blog/ScottHanselmans2007UltimateDeveloperAndPowerUsersToolListForWindows.aspx
+>http://babun.github.io/
+* dx
+https://ubuntuforums.org/archive/index.php/t-426509.html
+http://www.directxtutorial.com/Lesson.aspx?lessonid=9-4-1
+https://stackoverflow.com/questions/47975/is-it-possible-to-develop-directx-apps-in-linux
