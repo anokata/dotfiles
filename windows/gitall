@@ -7,7 +7,6 @@ git add . && git commit -m "$1"
 for o in $(git remote); do 
     if [ "$o" = "ssh" ]; then
         git push $o master
-        pause
     fi
 done
 for o in $(git remote); do 
