@@ -355,7 +355,9 @@ IfWinActive
 ; win+v VIM
 #v::
 exe:=" gvim.exe"
+exe:="Obsidian.exe"
 app:="D:\progs\Vim\vim82\gvim.exe"
+app:="C:\Users\ksi\AppData\Local\Obsidian\Obsidian.exe"
 IfWinNotExist, ahk_exe %exe%
 {
 	Run %app%, D:\doc
