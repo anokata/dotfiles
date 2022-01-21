@@ -1,0 +1,1 @@
+D:\\progs\\7-Zip\\7z.exe a "G:\My Drive\doc2022backup.zip" "G:\My Drive\doc"

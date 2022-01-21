@@ -95,7 +95,7 @@ $1::Send ^1
 ; zoom +
 $3::SendInput, {ctrl down}={ctrl up}
 ; zoom -
-$2::Send ^+-
+$2::Send ^-
 ; zoom fit to screen
 $4::Send ^0
 ; color dialog
