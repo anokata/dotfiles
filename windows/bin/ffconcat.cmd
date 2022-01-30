@@ -1,1 +1,1 @@
-ffmpeg -i opening.mkv -i episode.mkv -filter_complex '[0:0] [0:1] [1:0] [1:1] concat=n=2:v=1:a=2 [v] [a1]' -map '[v]' -map '[a1]'  output.mkv
+ffmpeg -i %1 -i %2 -filter_complex '[0:0] [0:1] [1:0] [1:1] concat=n=2:v=1:a=2 [v] [a1]' -map '[v]' -map '[a1]'  output.mkv
