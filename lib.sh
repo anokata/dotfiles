@@ -4,10 +4,10 @@ source ~/dotfiles/bin/lib/color.sh
 source ~/dotfiles/bin/lib/distro.sh
 source ~/dotfiles/bin/lib/tmux.sh
 source ~/dotfiles/bin/lib/alias.sh
-source ~/dotfiles/bin/lib/ssh.sh
-source ~/dotfiles/bin/lib/net.sh
+#source ~/dotfiles/bin/lib/ssh.sh
+#source ~/dotfiles/bin/lib/net.sh
 source ~/dotfiles/bin/lib/first_run.sh
-source ~/dotfiles/bin/lib/work.sh #env
+#source ~/dotfiles/bin/lib/work.sh #env
 if [ -e ~/.work.sig ]; then
     source ~/dotfiles/work/alias.sh
 fi

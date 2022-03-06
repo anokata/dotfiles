@@ -24,6 +24,7 @@ alias dushgg='du -sh | grep G'
 alias lld='ll -d */'
 alias free='free -m'
 alias df='df -h'
+alias dh='df -h -x squashfs -x tmpfs'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias tdl='tree -dL'
 
