@@ -1,3 +1,5 @@
+# Description tree
+
 bin/ - script for automating everyday tasks
     book - manage books
 configs - try to guess what is it
@@ -7,7 +9,14 @@ system_setup - almost full arch linux install scripts
 bashconf.sh - main bash config, sourced by .bashrc
 lib.sh - main lib script, containing all functions
 
-INSTALL:
+---
+
+# INSTALL:
     copy configs/.bashrc to $HOME
     move this dir to $HOME/dotfiles
     # make install
+
+---
+
+
+

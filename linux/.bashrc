@@ -1,3 +1,8 @@
+xmodmap -e "clear lock" #disable caps lock switch
+xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+/usr/bin/setxkbmap -option "caps:swapescape"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 HISTCONTROL=ignoreboth
 stty -ixon # for not stop draw at C-s (C-q restore)
