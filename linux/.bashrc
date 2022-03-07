@@ -1,6 +1,8 @@
-xmodmap -e "clear lock" #disable caps lock switch
-xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
-/usr/bin/setxkbmap -option "caps:swapescape"
+#xmodmap -e "clear lock" #disable caps lock switch
+#xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+#setxkbmap -option caps:swapescape
+#/usr/bin/setxkbmap -option "caps:swapescape"
+setxkbmap -option caps:escape
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -26,6 +28,6 @@ shopt -s cdspell
 [ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 [ -f /usr/share/git/completion/git-completion.bash ] && source /usr/share/git/completion/git-completion.bash
 
-source ~/dotfiles/lib.sh
+source ~/dotfiles/linux/lib.sh
 
 export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"

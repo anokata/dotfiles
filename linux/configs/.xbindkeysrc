@@ -1,0 +1,53 @@
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+"notify-send xxix"
+    m:0x41 + c:25
+    Shift+Mod4 + w
+
+
+# Increase volume
+"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+    m:0x8 + c:64
+    Alt + Alt_L
+
+# Decrease volume
+"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+    m:0xc + c:34
+    Control+Alt + bracketleft
+
+
+# set directly keycode (here control + f with my keyboard)
+#"xterm"
+#  c:41 + m:0x4
+
+# specify a mouse button
+#"xterm"
+#  control + b:2
+
+#"xterm -geom 50x20+20+20"
+#   Shift+Mod2+alt + s
+#
+## set directly keycode (here control+alt+mod2 + f with my keyboard)
+#"xterm"
+#  alt + c:0x29 + m:4 + mod2
+#
+## Control+Shift+a  release event starts rxvt
+#"rxvt"
+#  release+control+shift + a
+#
+## Control + mouse button 2 release event starts rxvt
+#"rxvt"
+#  Control + b:2 + Release
+
+##################################
+# End of xbindkeys configuration #
+##################################
