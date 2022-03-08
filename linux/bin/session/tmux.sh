@@ -11,7 +11,7 @@ function _tmux_run () {
             # create new session
             tmux new -s $TMUX_SESSION_NAME -d
             tmux new-window -c ~/dotfiles/
-            tmux split-window -v ~/sdata/
+            tmux split-window -c ~/sdata/
             tmux new-window vifm
             tmux select-window -t 1
             tmux attach -t $TMUX_SESSION_NAME

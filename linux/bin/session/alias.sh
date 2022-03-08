@@ -75,3 +75,6 @@ alias gp='gp-2.11 ~/doc/gp'
 alias gimp='gimp -f'
 alias mpvsp='mpv --save-position-on-quit'
 alias fehs="feh -D30 -z ."
+
+# sys config
+alias vimbash="vim ~/dotfiles/linux/.bashrc"
