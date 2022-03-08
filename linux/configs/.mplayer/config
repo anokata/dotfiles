@@ -1,0 +1,13 @@
+
+# Set font.
+font=/home/osmo/.fonts/microsoft-vista/calibri.ttf
+
+# Set subtitle file encoding.
+subfont-encoding=unicode
+subfont-text-scale=2
+subfont-osd-scale=2
+unicode=yes
+utf8=yes
+
+ass=1
+loop=0
