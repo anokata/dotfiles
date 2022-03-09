@@ -51,5 +51,11 @@ function git_dirty {
 
 export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 
-_ram
-_tmux_run
+#_ram
+
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+    echo "hi vscode"
+else
+    _tmux_run
+fi
+
