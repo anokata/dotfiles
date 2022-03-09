@@ -1,0 +1,4 @@
+#!/bin/bash
+N=10
+[ -n "$1" ] && N=$1
+dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | tail -n $N
