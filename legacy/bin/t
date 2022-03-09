@@ -2,7 +2,6 @@
 notExit=0
 tmpfile=/tmp/a
 A="`zenity --entry 2> /dev/null`"
-#echo $A
 #A=`exec "./getText"`
 B=`sdcv -n "$A"`
 echo $B > $tmpfile
@@ -11,4 +10,3 @@ zenity --text-info --filename=$tmpfile --text="$B" 2>/dev/null
 #do
 #    notExit=zenity --text-info --filename=$tmpfile --text="$B" 2>/dev/null 
 #done
-#echo **$B**

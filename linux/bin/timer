@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# get minutes
+minutes=$(zenity --entry --title="Timer" --text="Enter minutes to count" --entry-text "")
+
+# Wait
+s=$(( $minutes * 60 ))
+sleep $s
+
+# show message
+zenity --info --text "Timer for $minutes minutes is ended."
+# TODO beep
+exit
+
