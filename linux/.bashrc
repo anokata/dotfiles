@@ -34,9 +34,16 @@ HISTCONTROL=ignoreboth
 source ~/dotfiles/linux/bin/session/alias.sh
 source ~/dotfiles/linux/bin/session/color.sh
 source ~/dotfiles/linux/bin/session/tmux.sh
+source ~/dotfiles/linux/bin/session/first_run.sh
 if [ -e ~/.work.sig ]; then
     source ~/dotfiles/work/alias.sh
 fi
+
+if _is_first_run; then
+    echo first
+    #xbindkeys&
+fi
+
 
 function _ram() {
     mkdir /run/user/$(id -u)/ram 2>/dev/null || true
