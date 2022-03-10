@@ -11,6 +11,7 @@ export PATH=$PATH:"/home/$(whoami)/dotfiles/bin"
 export PATH=$PATH:"/home/$(whoami)/dotfiles/linux/bin"
 export DOC=https://anokata@bitbucket.org/anokata/doc.git
 export DOTFILES="/home/$(whoami)/dotfiles"
+export DEFAULT_REFLIST="reflist.list"
 
 ### Bash config
 set -o vi

@@ -69,6 +69,8 @@ alias watchtime="watch -tc -n0.1 date +%T.%2N"
 alias watchtm="watch -tc -n0.1 timed"
 alias update="sudo pacman -Syu"
 alias feh='feh -FYr'
+alias fef='feh -FYr -f '
+alias fer="feh -FYr -f $DEFAULT_REFLIST"
 alias m='mpv --opengl-es=yes'
 alias p='ping ya.ru'
 alias gp='gp-2.11 ~/doc/gp'

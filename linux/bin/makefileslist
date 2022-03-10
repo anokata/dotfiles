@@ -1,0 +1,3 @@
+#!/bin/bash
+[ -z "$DEFAULT_REFLIST" ] && DEFAULT_REFLIST='reflist.list'
+find > $DEFAULT_REFLIST
