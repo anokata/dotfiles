@@ -44,6 +44,9 @@ Plug 'stormherz/tablify'
 "Plug 'vim-scripts/OmniCppComplete'
 "Plug 'LaTeX-Box-Team/LaTeX-Box'
 "Plug 'lervag/vimtex'
+"
+"Plug 'manasthakur/vimsessionist'
+"Plug 'neoclide/coc.nvim'
 
 call plug#end()
 " }}}
@@ -400,3 +403,6 @@ augroup allAutoCmds
 augroup END
 " }}}
 
+" 2022
+nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<left><left>
+nnoremap <leader>rc :%s/\<<C-r><C-w>\>//gc<left><left><left>
