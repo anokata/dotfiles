@@ -12,6 +12,8 @@ export PATH=$PATH:"/home/$(whoami)/dotfiles/linux/bin"
 export DOC=https://anokata@bitbucket.org/anokata/doc.git
 export DOTFILES="/home/$(whoami)/dotfiles"
 export DEFAULT_REFLIST="reflist.list"
+export SCREENS_DIR="/home/$(whoami)/data/screens/scr2022/"
+export SCREENS_DIR_MEDIA="/home/$(whoami)/data/screens/scr2022/media/"
 
 ### Bash config
 set -o vi

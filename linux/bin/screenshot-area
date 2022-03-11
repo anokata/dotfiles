@@ -1,0 +1,3 @@
+setxkbmap -option grab:break_actions
+xdotool key XF86Ungrab
+scrot -s "$SCREENS_DIR/%Y-%m-%d_$(date '+%H%M%S').png"

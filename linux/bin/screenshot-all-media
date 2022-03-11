@@ -1,0 +1,1 @@
+scrot "$SCREENS_DIR_MEDIA/%Y-%m-%d_$(date '+%H%M%S').png"

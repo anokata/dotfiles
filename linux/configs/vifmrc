@@ -455,3 +455,4 @@ filetype *.cbr evince %f&
 fileviewer *.cbr
 
 nnoremap ,c :write | execute ':!%n${EDITOR:-vim} $MYVIFMRC' | restart<cr>
+nnoremap zo :sync %c<CR><Tab>
