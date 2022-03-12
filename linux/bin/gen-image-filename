@@ -1,0 +1,10 @@
+#!/bin/bash
+DATETIME="$(date '+%Y-%m-%d_%H%M%S')"
+EXT=".png"
+WINDOW_NAME="$(xdotool getactivewindow getwindowname)"
+WINDOW_NAME_WITHOUT_WHITESPACE="$(echo -e "${WINDOW_NAME}" | tr -d '[:space:]')"
+WINDOW_NAME_SANITIZED="$(echo -e "$WINDOW_NAME_WITHOUT_WHITESPACE" | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')"
+#echo "${DATETIME}_$WINDOW_NAME_SANITIZED$EXT"
+echo "${DATETIME}$EXT"
+
+

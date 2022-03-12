@@ -1,0 +1,3 @@
+#!/bin/bash
+FILENAME="$(xclip -selection -clipboard -o)"
+xclip -selection clipboard -target image/png -i $FILENAME

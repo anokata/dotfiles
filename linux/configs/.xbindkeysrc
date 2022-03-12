@@ -67,10 +67,15 @@
     m:0x14 + c:96
     Control+Mod2 + F12 
 
-#screenshot to media dir
+#c-s-w-f12 screenshot to media dir
 "screenshot-all-media"
     m:0x55 + c:96
     Control+Shift+Mod2+Mod4 + F12 
+
+#c-w-f11 path image load to clip
+"clipboard-path-load-image"
+    m:0x54 + c:95
+    Control+Mod2+Mod4 + F11 
 
 #
 # End of xbindkeys configuration
