@@ -69,9 +69,22 @@ alias watchtime="watch -tc -n0.1 date +%T.%2N"
 alias watchtm="watch -tc -n0.1 timed"
 alias update="sudo pacman -Syu"
 # feh image view
-alias feh='feh -FYr'
-alias fef='feh -FYr -f '
-alias fer="feh -FYr -f $DEFAULT_REFLIST"
+alias feh='feh -FYr --action1 ";save-file-copy $PWD/%N" --action2 ";clipboard-set $PWD/%N"'
+alias fef='feh -f '
+alias fer="feh -f $DEFAULT_REFLIST"
+alias ref_anime="cd $REF_ANIME; fer"
+alias ref_scr="cd $SCREENS_BASE; fer"
+alias ref_scr2022="cd $SCREENS_DIR; fer"
+alias ref_me="cd $REF_TOME; fer"
+alias ref_art="cd $REF_ART; fer"
+alias ref_paint="cd $REF_PAINT; fer"
+alias ref_photo="cd $REF_PHOTO; fer"
+alias ref_prn="cd $REF_PRN; fer"
+alias ref_still="cd $REF_STILL; fer"
+alias ref_study="cd $REF_STUDY; fer"
+alias ref_forme="cd $REF_FORME; fer"
+alias ref_manga="cd $REF_MANGA; fer"
+alias ref_ppref="cd $REF_PPREF; fer"
 
 alias m='mpv --opengl-es=yes'
 alias p='ping ya.ru'

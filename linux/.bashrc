@@ -12,8 +12,22 @@ export PATH=$PATH:"/home/$(whoami)/dotfiles/linux/bin"
 export DOC=https://anokata@bitbucket.org/anokata/doc.git
 export DOTFILES="/home/$(whoami)/dotfiles"
 export DEFAULT_REFLIST="reflist.list"
+export SCREENS_BASE="/home/$(whoami)/data/screens/"
 export SCREENS_DIR="/home/$(whoami)/data/screens/scr2022/"
 export SCREENS_DIR_MEDIA="/home/$(whoami)/data/screens/scr2022/media/"
+# TODO: to list, and gen aliases and update. or use node
+export REF_BASE="/home/$(whoami)/data/draw"
+export REF_ANIME="${REF_BASE}/refAnimePrn"
+export REF_TOME="${REF_BASE}/ref_0ForMeHuman"
+export REF_ART="${REF_BASE}/ref_art"
+export REF_PAINT="${REF_BASE}/ref_paintings"
+export REF_PHOTO="${REF_BASE}/ref_photo"
+export REF_PRN="${REF_BASE}/ref_prnphoto"
+export REF_STILL="${REF_BASE}/ref_still_life"
+export REF_STUDY="${REF_BASE}/ref_study"
+export REF_FORME="${REF_BASE}/ref_0ForMe"
+export REF_MANGA="${REF_BASE}/ref_art_MangaJap"
+export REF_PPREF="${REF_BASE}/PPref"
 
 ### Bash config
 set -o vi

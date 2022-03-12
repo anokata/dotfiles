@@ -1,0 +1,6 @@
+#!/bin/bash
+FILENAME="$1"
+DIR="$(dirname "${FILENAME}")"
+FILE="$(basename "${FILENAME}")"
+COPY_FILENAME="$(file-save-dialog "$DIR" "$FILE")"
+[ "$COPY_FILENAME" ] && cp "$FILENAME" "$COPY_FILENAME"

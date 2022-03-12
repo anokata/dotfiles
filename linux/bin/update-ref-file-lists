@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd $REF_ANIME; makefileslist; echo "anime updated"
+cd $SCREENS_BASE; makefileslist; echo "base scr updated"
+cd $SCREENS_DIR; makefileslist; echo "screends updated"
+cd $REF_TOME; makefileslist; echo "to me updated"
+cd $REF_ART; makefileslist; echo "art updated"
+cd $REF_PAINT; makefileslist; echo "painters updated"
+cd $REF_PHOTO; makefileslist; echo "photo ref updated"
+cd $REF_PRN; makefileslist; echo "prn updated"
+cd $REF_STILL; makefileslist; echo "still updated"
+cd $REF_STUDY; makefileslist; echo "study updated"
+cd $REF_FORME; makefileslist; echo "for me updated"
+cd $REF_MANGA; makefileslist; echo "manga updated"
+cd $REF_PPREF; makefileslist; echo "ppref updated"

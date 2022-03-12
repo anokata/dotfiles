@@ -1,0 +1,6 @@
+#!/bin/bash
+BASEPATH="$1"
+FILENAME="$2"
+cd "$BASEPATH"
+zenity --file-selection --save --title="save copy to" --filename="$FILENAME"
+
