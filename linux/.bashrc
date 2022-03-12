@@ -43,8 +43,7 @@ if [ -e ~/.work.sig ]; then
 fi
 
 if _is_first_run; then
-    echo first
-    #xbindkeys&
+    pidof xbindkeys >/dev/null || xbindkeys&
 fi
 
 
