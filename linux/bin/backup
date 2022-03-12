@@ -1,0 +1,4 @@
+#!/bin/bash
+cd "/home/$(whoami)/dotfiles"
+gitall '[backup]'
+# tar doc
