@@ -456,3 +456,4 @@ fileviewer *.cbr
 
 nnoremap ,c :write | execute ':!%n${EDITOR:-vim} $MYVIFMRC' | restart<cr>
 nnoremap zo :sync %c<CR><Tab>
+nnoremap ,l :!ln -s %d/%c /home/$(whoami)/links/%c<CR>
