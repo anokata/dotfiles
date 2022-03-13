@@ -2,3 +2,4 @@
 cd "/home/$(whoami)/dotfiles"
 gitall '[backup]'
 # tar doc
+# backup_vault

@@ -14,7 +14,7 @@ setopt autocd extendedglob notify
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
-#
+
 # традиционный стиль перенаправлений fd
 unsetopt MULTIOS
 # поддержка ~… и file completion после = в аргументах
@@ -25,3 +25,6 @@ setopt BSD_ECHO
 setopt INTERACTIVE_COMMENTS
 # поддержка $(cmd) в $PS1 etc.
 setopt PROMPT_SUBST
+
+
+
