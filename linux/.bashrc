@@ -58,7 +58,8 @@ if [ -e ~/.work.sig ]; then
 fi
 
 if _is_first_run; then
-    pidof xbindkeys >/dev/null || xbindkeys&
+    #pidof xbindkeys >/dev/null || xbindkeys&
+    tablet-small
 fi
 
 

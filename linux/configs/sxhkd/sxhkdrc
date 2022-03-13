@@ -2,6 +2,24 @@
 alt + Return
     gnome-terminal
 
+## my apps
+
+ctrl + shift + F12
+  ~/dotfiles/linux/bin/timer
+
+ctrl + F12
+  ~/dotfiles/linux/bin/screenshot-area
+
+ctrl + alt + d
+  rofi -show run
+
+super + ctrl + 9
+  pacmd set-default-sink 0
+
+ctrl + super + 0
+  pacmd set-default-sink 2
+
+
 # make sxhkd reload its configuration files:
 super + ctrl + shift + s
     notify-send 'Reloading sxhkd configuration.';\
@@ -40,8 +58,8 @@ super + shift + q
 super + shift + m
 	bspc desktop -l next
 
-alt + Tab
-	bspc node -f next.local
+#alt + Tab
+	#bspc node -f next.local
 
 # focus to the given desktop
 super + {1-9}
@@ -95,40 +113,19 @@ super + shift + 0
     id=$(bspc query -N -n); bspc node -d 10
 
 # Restart wifi 
-super + alt + space 
-	notify-send 'Restarting wifi interface..  *_*';\
-	nmcli radio wifi off ; nmcli radio wifi on
+#super + alt + space 
+#notify-send 'Restarting wifi interface..  *_*';\
+#nmcli radio wifi off ; nmcli radio wifi on
 
 # Increase volume
-XF86AudioRaiseVolume
-	ponymix increase 5
+#XF86AudioRaiseVolume
+#ponymix increase 5
 
 # Decrease volume
-XF86AudioLowerVolume
-	ponymix decrease 5
+#XF86AudioLowerVolume
+#ponymix decrease 5
 
 # Toggle mute
-alt + m
-	ponymix toggle
+#alt + m
+#ponymix toggle
 
-# Brightness
-XF86MonBrightnessDown
-	light -U 2; \
-  polybar-msg -p $(pidof polybar) hook brightness 1
-
-XF86MonBrightnessUp
-	light -A 2; \
-  polybar-msg -p $(pidof polybar) hook brightness 1
- 
-
-## my apps
-
-ctrl + shift + f12
-    timer
-
-ctrl + f12
-    screenshot-area
-
-#alt + d
-ctrl + alt + d
-  rofi -show run

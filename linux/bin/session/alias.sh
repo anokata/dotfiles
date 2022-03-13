@@ -99,3 +99,8 @@ alias vimbash="vim ~/dotfiles/linux/.bashrc"
 
 # links
 alias lns="ln -s "
+
+# sound
+alias audio-devices="pacmd list-sinks | grep name:"
+alias audio-switch-0="pacmd set-default-sink 0"
+alias audio-switch-2="pacmd set-default-sink 2"
