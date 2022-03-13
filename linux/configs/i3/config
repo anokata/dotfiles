@@ -4,7 +4,24 @@ font pango:DejaVu Sans Mono 10
 
 # Start i3bar to display a workspace bar
 bar {
-        status_command i3status
+    output            LVDS1
+    status_command    i3status
+    position          top
+    #mode              hide
+    workspace_buttons yes
+    #tray_output       none
+
+    font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+    colors {
+        background #202020
+        statusline #fafafa
+
+        focused_workspace  #ffffff #285577
+        active_workspace   #ffffff #333333
+        inactive_workspace #888888 #222222
+        urgent_workspace   #ffffff #900000
+    }
 }
 
 
