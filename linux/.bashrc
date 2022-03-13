@@ -51,13 +51,12 @@ if [ -e ~/.work.sig ]; then
     source ~/dotfiles/work/alias.sh
 fi
 
-if _is_first_run; then
-    #pidof xbindkeys >/dev/null || xbindkeys&
-    #sxhkd
-    tablet-small
-    setxkbmap -option caps:escape
-fi
+#if _is_first_run; then
+#fi
 
+#pidof xbindkeys >/dev/null || xbindkeys&
+pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
+setxkbmap -option caps:escape
 
 function _ram() {
     mkdir /run/user/$(id -u)/ram 2>/dev/null || true
