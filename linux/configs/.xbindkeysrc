@@ -34,11 +34,6 @@
 #keystate_capslock = enable
 
 
-
-"notify-send xxix"
-    m:0x41 + c:25
-    Shift+Mod4 + w 
-
 # Increase volume
 "pactl set-sink-volume @DEFAULT_SINK@ +1000"
     m:0x8 + c:64

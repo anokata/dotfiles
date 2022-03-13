@@ -128,5 +128,16 @@ Print
 super + s
   capture
 
+
+
+## my apps
+
+ctrl + shift + f12
+    timer
+
+ctrl + f12
+    screenshot-area
+
+#alt + d
 ctrl + alt + d
-  xrandr --output eDP --brightness 1
+  rofi -show run
