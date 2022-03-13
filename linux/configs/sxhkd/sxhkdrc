@@ -120,15 +120,6 @@ XF86MonBrightnessUp
 	light -A 2; \
   polybar-msg -p $(pidof polybar) hook brightness 1
  
-# screenshot
-Print 
-	scrot '%Y-%m-%d-%k%M%S-scrot.png' -e 'mv $f ~/Screenshots/'
-
-# screenshot a specific part
-super + s
-  capture
-
-
 
 ## my apps
 

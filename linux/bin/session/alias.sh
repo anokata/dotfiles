@@ -47,6 +47,7 @@ alias wcl='wc -l'
 alias psef='ps -ef'
 alias psfe='ps -ef'
 alias psa='ps aux'
+alias psg='ps aux | grep '
 alias adbstart='sudo adb start-server'
 alias adbs='sudo adb start-server'
 
