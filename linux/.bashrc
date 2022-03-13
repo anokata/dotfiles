@@ -6,6 +6,7 @@
 setxkbmap -option caps:escape
 
 ### PATH
+export XDG_CONFIG_HOME="$HOME/.config"
 export PATH=$PATH:"/home/$(whoami)/bin"
 export PATH=$PATH:"/home/$(whoami)/dotfiles/bin"
 export PATH=$PATH:"/home/$(whoami)/dotfiles/linux/bin"

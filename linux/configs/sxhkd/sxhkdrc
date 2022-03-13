@@ -20,7 +20,7 @@ super + shift + ctrl + d
 # reload xresources
 super + shift + ctrl + x
     notify-send 'Reloading xresources';\
-    xrdb /home/mohan/.Xresources
+    xrdb "/home/$(whoami)/.Xresources"
 
 
 #
