@@ -1,11 +1,4 @@
-#mons -s || true
-#amixer sset Headphone unmute || true
-#amixer sset Headphone 100 || true
-#tabletrev 15
-
-setxkbmap -option caps:escape
-
-### PATH
+### PATH/ENV
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH=$PATH:"/home/$(whoami)/bin"
 export PATH=$PATH:"/home/$(whoami)/dotfiles/bin"
@@ -16,7 +9,6 @@ export DEFAULT_REFLIST="reflist.list"
 export SCREENS_BASE="/home/$(whoami)/data/screens/"
 export SCREENS_DIR="/home/$(whoami)/data/screens/scr2022/"
 export SCREENS_DIR_MEDIA="/home/$(whoami)/data/screens/scr2022/media/"
-# TODO: to list, and gen aliases and update. or use node
 export REF_BASE="/home/$(whoami)/data/draw"
 export REF_ANIME="${REF_BASE}/refAnimePrn"
 export REF_TOME="${REF_BASE}/ref_0ForMeHuman"
@@ -29,6 +21,13 @@ export REF_STUDY="${REF_BASE}/ref_study"
 export REF_FORME="${REF_BASE}/ref_0ForMe"
 export REF_MANGA="${REF_BASE}/ref_art_MangaJap"
 export REF_PPREF="${REF_BASE}/PPref"
+# TODO: ref* to list, and gen aliases and update. or use node
+
+### Imports
+source ~/dotfiles/linux/bin/session/alias.sh
+source ~/dotfiles/linux/bin/session/color.sh
+source ~/dotfiles/linux/bin/session/tmux.sh
+source ~/dotfiles/linux/bin/session/first_run.sh
 
 ### Bash config
 set -o vi
@@ -48,18 +47,15 @@ HISTCONTROL=ignoreboth
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 [ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 [ -f /usr/share/git/completion/git-completion.bash ] && source /usr/share/git/completion/git-completion.bash
-
-source ~/dotfiles/linux/bin/session/alias.sh
-source ~/dotfiles/linux/bin/session/color.sh
-source ~/dotfiles/linux/bin/session/tmux.sh
-source ~/dotfiles/linux/bin/session/first_run.sh
 if [ -e ~/.work.sig ]; then
     source ~/dotfiles/work/alias.sh
 fi
 
 if _is_first_run; then
     #pidof xbindkeys >/dev/null || xbindkeys&
+    #sxhkd
     tablet-small
+    setxkbmap -option caps:escape
 fi
 
 
@@ -83,4 +79,8 @@ if [[ "$TERM_PROGRAM" == "vscode" ]]; then
 else
     _tmux_run
 fi
+
+#mons -s || true
+#amixer sset Headphone unmute || true
+#amixer sset Headphone 100 || true
 
