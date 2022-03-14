@@ -2,7 +2,14 @@
 alt + Return
     gnome-terminal
 
-## my apps
+ctrl + alt + t
+    gnome-terminal
+
+ctrl + shift + F1
+    google-chrome
+
+ctrl + shift + F2
+    obsidian
 
 ctrl + shift + F12
   ~/dotfiles/linux/bin/timer
@@ -10,14 +17,29 @@ ctrl + shift + F12
 ctrl + F12
   ~/dotfiles/linux/bin/screenshot-area
 
+alt + F12
+  screenshot-all
+
+ctrl + shift + super + F12
+    screenshot-all-media
+
+super + F12
+    screenshot-all-media
+
+ctrl + super + F11
+    clipboard-path-load-image
+
 ctrl + alt + d
+  dmenu_run
+
+alt + d
   rofi -show run
 
 super + ctrl + 9
   pacmd set-default-sink 0
 
 ctrl + super + 0
-  pacmd set-default-sink 2
+  pacmd set-default-sink 1
 
 
 # make sxhkd reload its configuration files:

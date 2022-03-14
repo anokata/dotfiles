@@ -1,4 +1,5 @@
+#!/bin/bash
 FILENAME="$SCREENS_DIR_MEDIA$(gen-image-filename)"
-scrot "$FILENAME"
+scrot -u "$FILENAME"
 echo "$FILENAME" | xclip -sel c 
 echo "$FILENAME" | xclip 

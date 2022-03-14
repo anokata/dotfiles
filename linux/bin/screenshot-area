@@ -2,7 +2,7 @@
 setxkbmap -option grab:break_actions
 xdotool key XF86Ungrab
 FILENAME="$SCREENS_DIR$(gen-image-filename)"
-scrot -s "$FILENAME"
+scrot -f -s "$FILENAME"
 #xclip -selection clipboard -target image/png -i $FILENAME
 echo "$FILENAME" | xclip -sel c 
 echo "$FILENAME" | xclip 
