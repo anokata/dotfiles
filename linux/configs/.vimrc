@@ -15,7 +15,6 @@ Plug 'vim-scripts/utl.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/DfrankUtil'
-"Plug 'vim-scripts/code_complete'
 Plug 'docunext/closetag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'pangloss/vim-javascript'
@@ -24,29 +23,28 @@ Plug 'valloric/matchtagalways'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'vim-scripts/utf8-math'
 Plug 'ktonga/vim-follow-my-lead'
-"Plug 'artur-shaik/vim-javacomplete2'
 Plug 'stormherz/tablify'
+
+Plug 'junegunn/goyo.vim'
+Plug 'flazz/vim-colorschemes'
+
+"Plug 'vim-scripts/code_complete'
+"Plug 'neoclide/coc.nvim'
+
 "Plug 'sirver/ultisnips'
-"Plug 'vim-scripts/math'
 "Plug 'vim-scripts/Align'
 "Plug 'easymotion/vim-easymotion'
 "Plug 'airblade/vim-rooter'
 "Plug 'vim-syntastic/syntastic'
 "Plug 'vimplugin/project.vim'
 "Plug 'hoxnox/indexer.vim'
-"tormaza Plug 'dhruvasagar/vim-table-mode'
 "Plug 'kassio/neoterm'
 "Plug 'tpope/vim-speeddating'
 "Plug 'jceb/vim-orgmode'
 "Plug 'vim-ctrlspace/vim-ctrlspace'
 "Plug 'vim-scripts/vimprj'
-"Plug 'yuratomo/w3m.vim'
 "Plug 'vim-scripts/OmniCppComplete'
-"Plug 'LaTeX-Box-Team/LaTeX-Box'
-"Plug 'lervag/vimtex'
-"
 "Plug 'manasthakur/vimsessionist'
-"Plug 'neoclide/coc.nvim'
 
 call plug#end()
 " }}}
@@ -406,3 +404,32 @@ augroup END
 " 2022
 nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<left><left>
 nnoremap <leader>rc :%s/\<<C-r><C-w>\>//gc<left><left><left>
+
+
+
+function! s:goyo_enter()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  endif
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  Limelight
+  " ...
+endfunction
+
+function! s:goyo_leave()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  endif
+  set showmode
+  set showcmd
+  set scrolloff=5
+  Limelight!
+  " ...
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()

@@ -1,4 +1,83 @@
+! Fonts
+Xft.dpi: 96
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+! URxvt
+*.font: xft:FiraCode-Regular:style=Regular:size=12
+*.boldFont: xft:FiraCode:style=Bold:size=12
+*.italicFont: xft:FiraCode:style=Italic:size=12
+*.boldItalicFont: xft:FiraCode:style=Bold Italic:size=12
+! URxvt.font: xft: Terminus: pixelsize = 14
+! URxvt.boldFont: xft:scientifica:size=8:style=Bold
+! URxvt.italicFont: xft:scientifica:size=8:style=Italic
+URxvt.cursorUnderline: true
+URxvt.internalBorder: 15
+URxvt.letterSpace: 0
+URxvt.perl-ext-common: default,matcher,font-size
+URxvt.scrollBar: false
+! rofi
+! rofi.font: scientifica Regular 8
+rofi.terminal: urxvtc
+rofi.ssh-client: ssh
+rofi.ssh-command: {terminal} -e {ssh-client} {host}
+
+! Clickable URLs
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
+
+! Use Control-Shift-V/C for X clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! Resizeable text
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+
+
+
 ! URxvt.font:                       xft:Fantasque Sans Mono:regular:size=15
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+
+! red
+*.color1:       #a54242
+*.color9:       #cc6666
+
+! green
+*.color2:       #8c9440
+*.color10:      #b5bd68
+
+! yellow
+*.color3:       #de935f
+*.color11:      #f0c674
+
+! blue
+*.color4:       #5f819d
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #85678f
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
+
 
 ! Disable ctrl + shift (insert picture mode)
 URxvt.iso14755: false
@@ -86,10 +165,6 @@ URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
 URxvt.depth: 24
 
-*.font: xft:FiraCode-Regular:style=Regular:size=12
-*.boldFont: xft:FiraCode:style=Bold:size=12
-*.italicFont: xft:FiraCode:style=Italic:size=12
-*.boldItalicFont: xft:FiraCode:style=Bold Italic:size=12
 
 !! Common Keybinds for Navigations
 URxvt.keysym.Shift-Up: command:\033]720;1\007
@@ -101,3 +176,5 @@ URxvt.keysym.Control-Left: \033[1;5D
 
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
+
+

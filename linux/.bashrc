@@ -1,5 +1,6 @@
 ### PATH/ENV
 source ~/dotfiles/linux/.env
+export TERM=screen-256color
 
 ### Imports
 source ~/dotfiles/linux/bin/session/alias.sh
@@ -60,4 +61,3 @@ fi
 #mons -s || true
 #amixer sset Headphone unmute || true
 #amixer sset Headphone 100 || true
-
