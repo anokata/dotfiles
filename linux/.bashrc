@@ -7,6 +7,7 @@ source ~/dotfiles/linux/bin/session/alias.sh
 source ~/dotfiles/linux/bin/session/color.sh
 source ~/dotfiles/linux/bin/session/tmux.sh
 source ~/dotfiles/linux/bin/session/first_run.sh
+source ~/dotfiles/linux/bin/session/ndm.sh #work
 
 ### Bash config
 set -o vi
