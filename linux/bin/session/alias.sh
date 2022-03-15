@@ -109,3 +109,4 @@ alias audio-switch-2="pacmd set-default-sink 2"
 # apps
 alias gnome-terminal='gnome-terminal --full-screen'
 alias gterm='gnome-terminal --full-screen'
+alias rxvt='xrdb ~/.Xresources; urxvt'
