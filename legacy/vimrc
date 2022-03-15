@@ -277,10 +277,29 @@ nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
 
 "==== DEV ==== {{{
 
+function CompileJava()
+    " Run from source dir where package root
+    " TODO Find root dir, if threre source, down n. or in prj dir
+    let filename = expand('%:t:r')
+    let package = getline(1)
+    let packagename = split(package, ' ')[1]
+    let packagename =  trim(packagename, ";")
+    exec "cd ../../../"
+    let path = substitute(packagename, '[.]', '/', 'g')
+    
+    let cmd = join([":silent !javac ", path, "/", filename, ".java -d ../classes/"], "")
+    exec cmd
+    let cmd = join(["!java -cp ../classes/ ", packagename, ".", filename], "")
+    exec cmd
+    exec "cd -"
+    execute "redraw!"
+endfunction
+
 map <F3> :w<CR>:!make<CR>
 map <F5> :w<CR>:!make '%:t:r'<CR>
 map <F6> :w<CR>:!make <CR>
 map <F6> :w<CR>:!javac -d ~/classes '%:t:r'.java && java -ea -cp ~/classes '%:t:r'<CR>
+map <F7> :call CompileJava()<CR>
 "map <F7> :w<CR>:!javac '%:t:r'.java -d ~/classes/<CR>:!java -cp ~/classes/ '%:t:r'<CR>
 "map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 map <F8> :w<CR>:!jar -cvmf ../../manifest ~/classes/'%:t:r'.jar -C ~/classes/ com<CR>:!java -jar ~/classes/'%:t:r'.jar<CR>
@@ -294,7 +313,9 @@ map <F10> :w<CR>:!python '%:t'<CR>
 map <C-F10> :w<CR>:!epython '%:t'<CR>
 "VimL
 map <F11> :w<CR>:source %<CR>
+"map <F3> :w<CR>:!javac '%' && java '%:r'<CR>
 "map <F9> :w<CR> :!perl '%'<CR>
+"map <F10> :w<CR>:!make test<CR>
 "map <C-F8> :!dot -Tpng % -o%.png && feh %.png<CR>
 " }}}
 
