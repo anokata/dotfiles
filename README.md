@@ -1,20 +1,19 @@
 # Description tree
 
-bin/ - script for automating everyday tasks
-    book - manage books
-configs - try to guess what is it
-net - net related, not finished scripts
-work - other work related auto script
-system_setup - almost full arch linux install scripts
-bashconf.sh - main bash config, sourced by .bashrc
-lib.sh - main lib script, containing all functions
+**Ordinary dotfiles here**
+
+- bin - script for automating everyday tasks
+- linux and linux/configs - my configs and scripts
+- legacy - old configs
+- mac - mac os configs
+- windows - win configs and scripts
 
 ---
 
 # INSTALL:
-    copy configs/.bashrc to $HOME
-    move this dir to $HOME/dotfiles
-    # make install
+
+    clone https://github.com/anokata/dotfiles.git $HOME
+    echo 'source ~/dotfiles/linux/.bashrc' >> ~/.bashrc
 
 ---
 
