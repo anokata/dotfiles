@@ -41,6 +41,8 @@ super + ctrl + 9
 ctrl + super + 0
   pacmd set-default-sink 1
 
+ctrl + super + 8
+  pacmd set-default-sink 2
 
 # make sxhkd reload its configuration files:
 super + ctrl + shift + s
