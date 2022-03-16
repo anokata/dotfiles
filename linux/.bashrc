@@ -21,6 +21,7 @@ shopt -s histappend
 shopt -s cdspell
 stty -ixon # for not stop draw at C-s (C-q restore)
 HISTCONTROL=ignoreboth
+bind -m vi-command '"v": abort'
 
 ### Plug
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

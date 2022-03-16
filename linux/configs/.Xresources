@@ -79,15 +79,9 @@ URxvt.keysym.M-o:             perl:keyboard-select:activate
 !#include "/home/sernam/.colors/themes/base16-atelier-dune-256.Xresources"
 !#include "/home/sernam/.colors/themes/base16-atelier-estuary-256.Xresources"
 !#include "/home/sernam/.colors/themes/base16-atelier-heath-256.Xresources"
+!#include "/home/sernam/.colors/themes/base16-atelier-plateau-256.Xresources"
 
-!#include "/home/sernam/.colors/themes/base16-atelier-dune.Xresources"
-!#include "/home/sernam/.colors/themes/base16-atelier-estuary.Xresources"
-!#include "/home/sernam/.colors/themes/base16-atelier-forest.Xresources"
-!#include "/home/sernam/.colors/themes/base16-atelier-heath.Xresources"
-#include "/home/sernam/.colors/themes/base16-atelier-plateau-256.Xresources"
-!#include "/home/sernam/.colors/themes/base16-atelier-plateau.Xresources"
-!#include "/home/sernam/.colors/themes/base16-atelier-savanna-256.Xresources"
-!#include "/home/sernam/.colors/themes/base16-atelier-savanna.Xresources"
+#include "/home/sernam/.colors/themes/base16-atelier-savanna-256.Xresources" ! !!
 !#include "/home/sernam/.colors/themes/base16-atelier-seaside-256.Xresources"
 !#include "/home/sernam/.colors/themes/base16-atelier-seaside.Xresources"
 !#include "/home/sernam/.colors/themes/base16-atelier-sulphurpool-256.Xresources"
