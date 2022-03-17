@@ -11,9 +11,10 @@ function _tmux_run () {
             # create new session
             tmux new -s $TMUX_SESSION_NAME -d
             tmux new-window -c ~/dotfiles/
-            tmux new-window -c ~/data/
+            tmux new-window -c ~/ndw/
             tmux split-window -c ~/sdata/
             tmux new-window vifm
+            tmux new-window ranger
             tmux select-window -t 1
             tmux attach -t $TMUX_SESSION_NAME
         fi
