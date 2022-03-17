@@ -111,3 +111,5 @@ alias audio-switch-3="pacmd set-default-sink 3"
 alias gnome-terminal='gnome-terminal --full-screen'
 alias gterm='gnome-terminal --full-screen'
 alias rxvt='xrdb ~/.Xresources; urxvt'
+
+alias caps-toggle='xdotool key Caps_Lock'
