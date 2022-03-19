@@ -25,6 +25,8 @@ Plug 'ktonga/vim-follow-my-lead'
 Plug 'stormherz/tablify'
 
 Plug 'flazz/vim-colorschemes'
+Plug 'lifepillar/vim-colortemplate'
+Plug 'sainnhe/everforest'
 
 "Plug 'vim-scripts/code_complete'
 "Plug 'neoclide/coc.nvim'
