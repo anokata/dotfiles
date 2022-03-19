@@ -76,7 +76,7 @@ URxvt.keysym.M-o:             perl:keyboard-select:activate
 ! Colors
 #include "/home/sernam/dotfiles/linux/configs/.colors/themes/Gslob-nature-suede.Xresources"
 !#include "/home/sernam/dotfiles/linux/configs/.colors/themes/twilight.dark.Xresources"
-!#include "/home/sernam/dotfiles/linux/configs/.colors/themes/railscasts.dark.Xresources"
+#include "/home/sernam/dotfiles/linux/configs/.colors/themes/railscasts.dark.Xresources"
 
 !#include "/home/sernam/dotfiles/linux/configs/.colors/themes/ocean.dark.Xresources"
 

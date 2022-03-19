@@ -25,9 +25,11 @@ Plug 'ktonga/vim-follow-my-lead'
 Plug 'stormherz/tablify'
 
 Plug 'flazz/vim-colorschemes'
-Plug 'lifepillar/vim-colortemplate'
 Plug 'sainnhe/everforest'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-colorscheme-switcher'
 
+"Plug 'lifepillar/vim-colortemplate'
 "Plug 'vim-scripts/code_complete'
 "Plug 'neoclide/coc.nvim'
 call plug#end()
@@ -86,8 +88,7 @@ set background=dark
 set t_ut=
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
-colorscheme my
-colorscheme sonokai
+colorscheme soruby
 "set fillchars+=vert:\ 
 " }}}
 
@@ -278,25 +279,13 @@ nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
 " }}}
 
 "==== DEV ==== {{{
-
-map <F3> :w<CR>:!make<CR>
 map <F5> :w<CR>:!make '%:t:r'<CR>
-map <F6> :w<CR>:!make <CR>
-map <F6> :w<CR>:!javac -d ~/classes '%:t:r'.java && java -ea -cp ~/classes '%:t:r'<CR>
-"map <F7> :w<CR>:!javac '%:t:r'.java -d ~/classes/<CR>:!java -cp ~/classes/ '%:t:r'<CR>
 "map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
-map <F8> :w<CR>:!jar -cvmf ../../manifest ~/classes/'%:t:r'.jar -C ~/classes/ com<CR>:!java -jar ~/classes/'%:t:r'.jar<CR>
 "map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
-map <F9> :w<CR>:!texmake %<CR>
-map <F9> :w<CR>:!make App<CR>
 map <C-F9> :!python3 -i '%:t'<CR>
-" SHELL
 map <F9> :w<CR>:!./%<CR>
 map <F10> :w<CR>:!python '%:t'<CR>
-map <C-F10> :w<CR>:!epython '%:t'<CR>
-"VimL
 map <F11> :w<CR>:source %<CR>
-"map <F9> :w<CR> :!perl '%'<CR>
 "map <C-F8> :!dot -Tpng % -o%.png && feh %.png<CR>
 " }}}
 
