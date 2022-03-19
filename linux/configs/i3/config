@@ -27,10 +27,6 @@ client.urgent           $base01 $base01 $base05 $base00
 new_window pixel 5
 new_float  pixel 5
 
-# Gaps 
-gaps inner 10
-gaps outer 0
-
 ### Autostart
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -107,8 +103,8 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-bindsym $mod+` focus child
+# focus the child container TODO
+#bindsym $mod+` focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 set $ws1 "1"
@@ -163,17 +159,18 @@ bindsym $mod+u move workspace to output right
 
 ### Apps runners
 # start dmenu 
-bindsym Mod1+d exec dmenu_run
+bindsym Mod1+Ctrl+d exec dmenu_run
+bindsym Mod1+s exec rofi -show run
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym Mod1+F4 kill
 
 
-new_window none
 bindsym $mod+b exec "i3-msg border none"
 bindsym $mod+n exec "i3-msg border normal"
 
@@ -192,6 +189,7 @@ assign [class="Slack"] 3
 assign [class="Transmission-gtk"] 4
 assign [class="shotcut"] 4
 
-exec gnome-terminal
+# exec gnome-terminal
 exec --no-startup-id xsetroot -solid "#404040"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id sxhkd

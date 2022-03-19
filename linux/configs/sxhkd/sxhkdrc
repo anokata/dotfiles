@@ -56,8 +56,8 @@ super + ctrl + shift + s
 
 # reload polybar
 super + shift + ctrl + p
-    notify-send 'Reloading polybar.';\
     killall polybar ; polybar bottom &
+    #notify-send 'Reloading polybar.';\
 
 # reload notification system
 super + shift + ctrl + d
