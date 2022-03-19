@@ -1,9 +1,10 @@
 # Applications
 alt + Return
-    gnome-terminal
+    xrdb "/home/$(whoami)/.Xresources"; terminal
 
 ctrl + alt + t
     gnome-terminal
+
 
 ctrl + shift + F1
     google-chrome
