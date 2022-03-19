@@ -27,12 +27,6 @@ client.urgent           $base01 $base01 $base05 $base00
 new_window pixel 5
 new_float  pixel 5
 
-### Autostart
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-exec --no-startup-id nm-applet
 
 ### Keybindings
 # Use pactl to adjust volume in PulseAudio.
@@ -205,7 +199,11 @@ assign [class="Slack"] 3
 assign [class="Transmission-gtk"] 4
 assign [class="shotcut"] 4
 
-# exec gnome-terminal
+
+### Autostart
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
 exec --no-startup-id xsetroot -solid "#404040"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id sxhkd
