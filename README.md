@@ -14,6 +14,7 @@
 
     clone https://github.com/anokata/dotfiles.git $HOME
     echo 'source ~/dotfiles/linux/.bashrc' >> ~/.bashrc
+    echo 'source /home/sernam/dotfiles/linux/.env' >> ~/.profile
 
 ---
 
