@@ -1,12 +1,15 @@
 # Applications
 alt + Return
-    xrdb "/home/$(whoami)/.Xresources"; terminal
+    terminal
 
 ctrl + alt + t
     gnome-terminal
 
 
 ctrl + shift + F1
+    google-chrome
+
+super + F1
     google-chrome
 
 ctrl + shift + F2
@@ -31,6 +34,9 @@ ctrl + super + F11
     clipboard-path-load-image
 
 ctrl + alt + d
+  dmenu_run
+
+super + d
   dmenu_run
 
 alt + d

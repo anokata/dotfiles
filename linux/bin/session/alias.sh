@@ -110,7 +110,17 @@ alias audio-switch-3="pacmd set-default-sink 3"
 # apps
 alias gnome-terminal='gnome-terminal --full-screen'
 alias gterm='gnome-terminal --full-screen'
-alias rxvt='xrdb ~/.Xresources; urxvt'
-alias terminal='urxvt -e sh -c "sleep 0.1; wmctrl -x -r urxvt -b add,fullscreen; zsh"'
+alias xresources-reload='xrdb ~/.Xresources'
+alias rxvt='xresources-reload; urxvt'
 
 alias caps-toggle='xdotool key Caps_Lock'
+
+alias wm-name="printf '%s' $XDG_CURRENT_DESKTOP"
+alias wm-type="wmctrl -m"
+alias wm-is-i3='[ "$(wm-name)" = "i3" ] && echo 1 || echo 0'
+
+if [ wm-is-i3 ]; then
+    alias terminal='xresources-reload; urxvt -e tmux a'
+else
+    alias terminal='xresources-reload; urxvt -e sh -c "sleep 0.1; wmctrl -x -r urxvt -b add,fullscreen; bash"'
+fi

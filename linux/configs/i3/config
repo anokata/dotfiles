@@ -159,13 +159,13 @@ bindsym $mod+u move workspace to output right
 
 ### Apps runners
 # start dmenu 
-bindsym Mod1+Ctrl+d exec dmenu_run
+#bindsym Mod1+Ctrl+d exec dmenu_run
 bindsym Mod1+s exec rofi -show run
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # start a terminal
 bindsym $mod+Return exec terminal
-#
+
 # start a browser
 bindsym $mod+F1 exec google-chrome
 
