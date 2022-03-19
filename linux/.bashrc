@@ -55,7 +55,7 @@ export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 #_ram
 
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
-    echo "hi vscode"
+    echo "vscode"
 else
     _tmux_run
 fi

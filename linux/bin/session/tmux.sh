@@ -18,5 +18,7 @@ function _tmux_run () {
             tmux select-window -t 1
             tmux attach -t $TMUX_SESSION_NAME
         fi
+    else
+        tmux a
     fi
 }
