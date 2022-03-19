@@ -81,9 +81,12 @@ super + shift + ctrl + x
 #
 
 # quit/restart bspwm
-super + ctrl + shift + {q,b}
+super + ctrl + shift + {q,r}
 	notify-send 'Restarting bspwm.';\
 	bspc {quit,wm -r}
+
+super + shift + e
+    bspc quit 1
 
 # close and kill
 super + shift + q
@@ -93,16 +96,27 @@ super + shift + q
 super + shift + m
 	bspc desktop -l next
 
-#alt + Tab
-	#bspc node -f next.local
+super + Tab
+	bspc node -f next.local
 
 # focus to the given desktop
 super + {1-9}
 	bspc desktop -f '^{1-9,9}'
 
-# preselect the direction
-alt + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+super + ctrl + 1
+	bspc desktop -f '^3';\
+	bspc desktop -f '^1'
+
+super + ctrl + 2
+	bspc desktop -f '^4';\
+	bspc desktop -f '^2'
+
+super + {Left, Right}
+    bspc monitor --focus {prev,next}
+
+# select the direction
+super + {h,j,k,l}
+	bspc node -s {west,south,north,east}
 
 ####################
 # System shortcuts #
