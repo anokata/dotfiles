@@ -99,11 +99,19 @@ alias mpvsp='mpv --save-position-on-quit'
 alias fehs="feh -D30 -z ."
 
 # sys config
+alias xresources-reload='xrdb ~/.Xresources'
 alias config-bash="vim $DOTFILES/linux/.bashrc"
 alias config-alias="vim $DOTFILES_BIN/session/alias.sh"
 alias config-tmux="$EDITOR $DOTFILES_CONFIGS/.tmux.conf"
 alias config-bspwm="$EDITOR $DOTFILES_CONFIGS/bspwm/bspwmrc"
+alias config-sxhkd="$EDITOR $DOTFILES_CONFIGS/sxhkd/sxhkdrc"
+alias config-vim="$EDITOR $DOTFILES_CONFIGS/.vimrc"
+alias config-nvim="$EDITOR $DOTFILES_CONFIGS/nvim/init.vim"
+alias config-xresources="$EDITOR $DOTFILES_CONFIGS/.Xresources; xresources-reload"
+alias config-sxhkd-reload="pkill -USR1 -x sxhkd"
+alias config-bspwm-reload=""
 alias bashrc-reload="source ~/dotfiles/linux/.bashrc"
+alias config-bashrc-reload="source $DOTFILES/linux/.bashrc"
 
 # links
 alias lns="ln -s "
@@ -118,7 +126,6 @@ alias audio-switch-3="pacmd set-default-sink 3"
 # apps
 alias gnome-terminal='gnome-terminal --full-screen'
 alias gterm='gnome-terminal --full-screen'
-alias xresources-reload='xrdb ~/.Xresources'
 alias rxvt='xresources-reload; urxvt'
 
 alias caps-toggle='xdotool key Caps_Lock'
