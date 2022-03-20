@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo create_ap $NET_WIFI ppp0 ksinet kitten28Cat0

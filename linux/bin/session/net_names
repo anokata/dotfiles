@@ -1,0 +1,11 @@
+#!/bin/bash
+for interface in $(\ls -1 /sys/class/net); do 
+    first=$(echo $interface | head -c1)
+    if [[ $first = 'e' ]]; then
+        export NET_ETH=$interface
+    elif [[ $first = 'w' ]]; then
+        export NET_WIFI=$interface
+    elif [[ $first = 'p' ]]; then
+        export NET_PPP=$interface
+    fi
+done

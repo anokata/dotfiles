@@ -1,1 +1,0 @@
-/home/ksi/dev/pythonPetProjects/contimer.py
