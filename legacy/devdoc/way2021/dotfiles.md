@@ -1,4 +1,0 @@
-dotbot
-chezmoi
-rcm
-yadm

@@ -17,7 +17,7 @@ Plug 'vim-scripts/DfrankUtil'
 Plug 'docunext/closetag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'pangloss/vim-javascript'
-Plug 'mkomitee/vim-gf-python'
+"Plug 'mkomitee/vim-gf-python'
 Plug 'valloric/matchtagalways'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'vim-scripts/utf8-math'

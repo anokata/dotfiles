@@ -1,8 +1,0 @@
-#Через adb ... tap сделать возможность печатать сообщения.
-#Разрешение: H=854 W=480
-adb shell input swipe
-adb shell input tap
-adb shell input keyevent 26
-def phone_swipe(sx, sy, ex, ey):
-
-unlock = 

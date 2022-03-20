@@ -1,7 +1,0 @@
-Если надо прокоментировать в методе - вынести в новый метод.
-Замена переменной вызовом метода - что то вычисляешь и используешь - вынос
-Если метода изменяет и возвращает - разделить на 2
-
-Вместо null возвращайте Null-объект, который предоставляет поведение по умолчанию.
-https://betterprogramming.pub/refactoring-guard-clauses-2ceeaa1a9da
-https://refactoring.guru/ru/smells/parallel-inheritance-hierarchies

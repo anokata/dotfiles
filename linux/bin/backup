@@ -1,5 +1,6 @@
 #!/bin/bash
-cd "/home/$(whoami)/dotfiles"
+cd "$DOTFILES"
+# $DOTFILES/linux/configs/configs.list
 gitall '[backup]'
 # tar doc
 # backup_vault

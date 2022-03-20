@@ -44,6 +44,7 @@ alias psg='ps aux | grep '
 alias psm='ps -ef | less'
 alias psf='ps -ef | fzf'
 alias p='ping ya.ru'
+alias sys-ram='sudo dmidecode -t 17'
 
 # Finding
 alias grep='grep --color=auto'
