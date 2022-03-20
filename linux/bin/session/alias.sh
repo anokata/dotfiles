@@ -4,6 +4,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cdd="cd $DOTFILES"
+alias cda="cd $HDD1"
+alias cdb="cd $HDD2"
+alias cds="cd $SSD"
 alias ls='ls --color=auto -XF --group-directories-first'
 alias ll='ls -alFh'
 alias la='ls -A'
@@ -96,7 +99,11 @@ alias mpvsp='mpv --save-position-on-quit'
 alias fehs="feh -D30 -z ."
 
 # sys config
-alias vimbash="vim ~/dotfiles/linux/.bashrc"
+alias config-bash="vim $DOTFILES/linux/.bashrc"
+alias config-alias="vim $DOTFILES_BIN/session/alias.sh"
+alias config-tmux="$EDITOR $DOTFILES_CONFIGS/.tmux.conf"
+alias config-bspwm="$EDITOR $DOTFILES_CONFIGS/bspwm/bspwmrc"
+alias bashrc-reload="source ~/dotfiles/linux/.bashrc"
 
 # links
 alias lns="ln -s "

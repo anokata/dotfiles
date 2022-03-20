@@ -19,6 +19,10 @@
 ## test:
     cp ~/dotfiles/linux/.@(!(.|))  ~/
     cp ~/dotfiles/linux/* ~/.config # TODO: not dot
+    ln configs:
+        tmux
+        bspcwmrc
+        ...
 ---
 
 
