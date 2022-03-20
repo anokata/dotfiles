@@ -162,6 +162,8 @@ nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 " ## Edit .vimrc ##
 map <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
 map <leader>V :source $MYVIMRC<CR>
+map <leader>n :vsp $HOME/.vimrc<CR>:set foldmethod=marker<cr>
+map <leader>N :source $HOME/.vimrc<CR>
 map <leader>ev :tabnew $MYVIMRC<CR>
 map <leader>es :source %<CR>
 " ==== Tabs ====
@@ -272,7 +274,7 @@ nnoremap <leader>; :call _Add_semi()<cr>
 
 " Search by grep with quick-window mappings
 nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
-nnoremap <leader>n :cnext<cr>
+"nnoremap <leader>n :cnext<cr>
 nnoremap <leader>l :cclose<cr>
 
 nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
@@ -325,4 +327,7 @@ augroup END
 " nnoremap <leader>rc :%s/\<<C-r><C-w>\>//gc<left><left><left>
 
 
-
+" NeoVim specific config
+if !has('nvim')
+    
+endif
