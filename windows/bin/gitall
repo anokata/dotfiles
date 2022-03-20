@@ -1,5 +1,8 @@
 #!/bin/bash
 
+eval $(ssh-agent -s)
+ssh-add /c/users/ksi/.ssh/id_rsa
+
 git add . && git commit -m "$1" 
 for o in $(git remote); do 
     if [ "$o" = "ssh" ]; then
