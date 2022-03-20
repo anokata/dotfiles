@@ -1,11 +1,15 @@
 #! /bin/sh
 
-sxhkd &
+pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
 dunst &
 xrdb "/home/$(whoami)/.Xresources"
 nm-applet &
 $HOME/.config/polybar/launch.sh
-terminal &
+#terminal &
+pidof urxvt >/dev/null || terminal &
+pidof obsidian >/dev/null || obsidian &
+pidof chrome >/dev/null || google-chrome &
+dropbox start &
 xsetroot -solid "#202020"
 
 #bspc monitor -d I II III IV V VI VII VIII IX
@@ -19,7 +23,8 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a urxvt desktop='^2' state=floating follow=on
+bspc rule -a urxvt desktop='^2'
+bspc rule -a terminal desktop='^2'
 bspc rule -a google-chrome desktop='^1'
 bspc rule -a nautilus desktop='^2'
 bspc rule -a thunar desktop='^2'
@@ -28,4 +33,4 @@ bspc rule -a transmission-gtk desktop='^4'
 bspc rule -a audacious desktop='^4'
 bspc rule -a obsidian desktop='^3'
 bspc rule -a obs desktop='^3'
-# focus=on manage=off
+#  state=floating follow=on focus=on manage=off

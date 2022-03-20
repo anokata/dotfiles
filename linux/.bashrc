@@ -35,7 +35,6 @@ fi
 #if _is_first_run; then
 #fi
 
-#pidof xbindkeys >/dev/null || xbindkeys&
 pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
 setxkbmap -option caps:escape
 
@@ -52,7 +51,6 @@ function git_dirty {
 
 export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 
-#_ram
 
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
     echo "vscode"
@@ -60,6 +58,7 @@ else
     _tmux_run
 fi
 
+#_ram
 #mons -s || true
 #amixer sset Headphone unmute || true
 #amixer sset Headphone 100 || true
