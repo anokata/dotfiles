@@ -16,6 +16,9 @@
     echo 'source ~/dotfiles/linux/.bashrc' >> ~/.bashrc
     echo 'source /home/sernam/dotfiles/linux/.env' >> ~/.profile
 
+## test:
+    cp ~/dotfiles/linux/.@(!(.|))  ~/
+    cp ~/dotfiles/linux/* ~/.config # TODO: not dot
 ---
 
 

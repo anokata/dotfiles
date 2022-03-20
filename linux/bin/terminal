@@ -1,2 +1,7 @@
-#urxvt -e sh -c "sleep 0.1; wmctrl -x -r urxvt -b add,fullscreen; bash"
-rxvt -e tmux a
+#!/bin/bash
+
+if [ "printf '%s' $XDG_CURRENT_DESKTOP" = "i3" ]; then
+    xrdb ~/.Xresources; urxvt -e tmux a
+else
+    xrdb ~/.Xresources; urxvt -e sh -c "sleep 0.1; wmctrl -x -r urxvt -b add,fullscreen; bash"
+fi
