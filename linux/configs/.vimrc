@@ -1,46 +1,39 @@
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
+Plug 'Raimondi/delimitMate'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'docunext/closetag.vim'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'ktonga/vim-follow-my-lead'
+Plug 'majutsushi/tagbar'
+Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/nerdtree'
+Plug 'stormherz/tablify'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat' 
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'majutsushi/tagbar'
-Plug 'Raimondi/delimitMate'
-Plug 'vim-scripts/taglist.vim'
-Plug 'vim-scripts/utl.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'valloric/matchtagalways'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/DfrankUtil'
-Plug 'docunext/closetag.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'pangloss/vim-javascript'
-"Plug 'mkomitee/vim-gf-python'
-Plug 'valloric/matchtagalways'
-Plug 'gorodinskiy/vim-coloresque'
+Plug 'vim-scripts/taglist.vim'
 Plug 'vim-scripts/utf8-math'
-Plug 'ktonga/vim-follow-my-lead'
-Plug 'stormherz/tablify'
-
+Plug 'vim-scripts/utl.vim'
+Plug 'wakatime/vim-wakatime'
 Plug 'flazz/vim-colorschemes'
 Plug 'sainnhe/everforest'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
 
-"Plug 'lifepillar/vim-colortemplate'
 "Plug 'vim-scripts/code_complete'
 "Plug 'neoclide/coc.nvim'
 call plug#end()
 " }}}
 
-" Plugin settings let {{{
-
-"let g:UltiSnipsExpandTrigger = '<tab>'
-"let g:UltiSnipsJumpForwardTrigger = '<tab>'
-"let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-
+" Plugin settings let
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_splits = 0
@@ -56,9 +49,7 @@ let g:airline_section_x = ''
 let g:airline_section_z = '%3p%% %#__accent_bold#%{g:airline_symbols.linenr}%2l%#__restore__#%#__accent_bold#/%L%#__restore__# :%3v'
 let g:airline_section_b = ''
 let g:airline_section_c = '%<%f%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
-
 let g:rooter_patterns = ['Makefile']
-
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_browse_split = 2
@@ -68,10 +59,6 @@ let g:indexer_disableCtagsWarning=1
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
-
-"==== Session ====
-nmap <C-F5> :call MakeDefSession()<CR>
-nmap <S-F5> :call LoadDefSession()<CR>
 
 "==== NERDTree ==== {{{
 let g:NERDTreeWinPos = "right"
@@ -214,14 +201,10 @@ cmap у e
 cmap ф a
 nnoremap <space> za
 
-" run current line
-noremap <c-c> yy:@"<CR>
-" run paragraph
-noremap <c-s-x> {V}kyy:@"<CR>}
-"noremap <leader>c yy:@"<CR>
-" enter will insert line
-"noremap <cr> o<Esc>
+noremap <leader>c yy:@"<CR>
 noremap <leader><cr> xi<cr><esc>
+nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<left><left>
+nnoremap <leader>rc :%s/\<<C-r><C-w>\>//gc<left><left><left>
 
 " typos correction and abbrevations
 iabbrev adn and
@@ -272,15 +255,15 @@ function! _Add_semi()
 endfunction
 nnoremap <leader>; :call _Add_semi()<cr>
 
-" Search by grep with quick-window mappings
-nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
-"nnoremap <leader>n :cnext<cr>
-nnoremap <leader>l :cclose<cr>
-
 nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
 " }}}
 
 "==== DEV ==== {{{
+" run current line
+noremap <c-c> yy:@"<CR>
+" run paragraph
+noremap <c-s-x> {V}kyy:@"<CR>}
+
 map <F5> :w<CR>:!make '%:t:r'<CR>
 "map <F7> :w<CR>:!gcc -Wall '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
 "map <F8> :w<CR>:!g++ -std=c++11 '%' -o /run/user/$(id -u)/a.out && ./run/user/$(id -u)/a.out<CR>
@@ -310,24 +293,24 @@ let @m='/\<mdxExpertReportLink"f,a "exportFormats":["PDF","DOC","XLS","CSV","XM
 let @n='/"WebReports.Controls.Report"bbbi"exportFormats":["PDF","DOC","XLS","CSV","XML","PPT","ODT","ODS","ODP","DOCX","XLSX","PPTX"],":w'
 " }}}
 
-" right way to use autocmd --- {{{ fold with za
+" right way to use autocmd 
 augroup allAutoCmds
     autocmd!
-    "autocmd FileType python colorscheme sonokai
     autocmd FileType python :iabbrev <buffer> iff if:<left>
     autocmd FileType vim setlocal foldmethod=marker
-    "autocmd FileType java setlocal omnifunc=javacomplete#Complete
-    "
     autocmd FileType markdown :onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
 augroup END
-" }}}
-
-" 2022
-" nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<left><left>
-" nnoremap <leader>rc :%s/\<<C-r><C-w>\>//gc<left><left><left>
-
 
 " NeoVim specific config
 if !has('nvim')
     
 endif
+
+"==== Session ====
+"nmap <C-F5> :call MakeDefSession()<CR>
+"nmap <S-F5> :call LoadDefSession()<CR>
+
+" Search by grep with quick-window mappings
+" nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
+"nnoremap <leader>n :cnext<cr>
+" nnoremap <leader>l :cclose<cr>
