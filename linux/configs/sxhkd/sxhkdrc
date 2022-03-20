@@ -1,19 +1,28 @@
 # Applications
 alt + Return
     terminal
-
 ctrl + alt + t
     gnome-terminal
-
-
-ctrl + shift + F1
-    google-chrome
-
 super + F1
     google-chrome
-
-ctrl + shift + F2
+super + F2
+    code
+super + F3
     obsidian
+super + F4
+    nautilus
+super + F5
+    keepassx
+super + F6
+    transmission-gtk
+super + F7
+    flameshot
+super + F8
+    peek
+super + F9
+    audacious
+super + F11
+    obs
 
 ctrl + shift + F12
   ~/dotfiles/linux/bin/timer

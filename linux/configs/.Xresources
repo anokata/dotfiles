@@ -12,11 +12,10 @@ URxvt.perl-ext-common: default,matcher,font-size,url-select,keyboard-select,full
 URxvt.keysym.F11:       perl:fullscreen:switch
 
 ! URxvt Appearance
-! FiraCode Nerd Font Mono
-URxvt.font: xft:Fira Code:regular:size=12:minspace=False, xft:Hack Nerd Font:size=12, xft:DejaVu Sans:size=12
-URxvt.boldFont: xft:Fira Code:style=Bold:size=12:minspace=False, xft:DejaVu Sans:size=12
-URxvt.italicFont: xft:Fira Code:style=Italic:size=12:minspace=False, xft:DejaVu Sans:size=12
-URxvt.boldItalicFont: xft:Fira Code:style=Bold Italic:size=12:minspace=False, xft:DejaVu Sans:size=12
+URxvt.font: xft:FiraCode Nerd Font:regular:size=12, xft:Hack Nerd Font:size=12, xft:DejaVu Sans:size=12, xft:Symbola:size=9
+URxvt.boldFont: xft:FiraCode Nerd Font:style=Bold:size=12, xft:Hack Nerd Font:size=12, xft:DejaVu Sans:size=12, xft:Symbola:size=9
+URxvt.italicFont: xft:FiraCode Nerd Font Mono:style=Italic:size=12, xft:Hack Nerd Font:size=12, xft:DejaVu Sans:size=12, xft:Symbola:size=9
+URxvt.boldItalicFont: xft:FiraCode Nerd Font Mono:style=Bold Italic:size=12, xft:Hack Nerd Font:size=12, xft:DejaVu Sans:size=12, xft:Symbola:size=9
 URxvt.letterSpace: -1
 URxvt.lineSpace: 0
 URxvt.geometry: 120x60
