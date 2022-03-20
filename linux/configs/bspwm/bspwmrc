@@ -6,19 +6,26 @@ xrdb "/home/$(whoami)/.Xresources"
 nm-applet &
 $HOME/.config/polybar/launch.sh
 terminal &
-#xsetroot -solid "#404040"
+xsetroot -solid "#202020"
 
-#bspc monitor -d I II III IV V VI VII VIII IX X
-bspc monitor HDMI-1 -d I III 
-bspc monitor DP-3 -d II IV 
+#bspc monitor -d I II III IV V VI VII VIII IX
+bspc monitor HDMI-1 -d I II III
+bspc monitor DP-3 -d IV V VI
 
 bspc config border_width         0
-bspc config window_gap          10
+bspc config window_gap           0
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a rxvt desktop='^2' state=floating follow=on
+bspc rule -a urxvt desktop='^2' state=floating follow=on
 bspc rule -a google-chrome desktop='^1'
+bspc rule -a nautilus desktop='^2'
+bspc rule -a thunar desktop='^2'
+bspc rule -a code desktop='^2'
+bspc rule -a transmission-gtk desktop='^4'
+bspc rule -a audacious desktop='^4'
+bspc rule -a obsidian desktop='^3'
+bspc rule -a obs desktop='^3'
 # focus=on manage=off

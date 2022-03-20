@@ -146,8 +146,8 @@ alias wm-name="printf '%s' $XDG_CURRENT_DESKTOP"
 alias wm-type="wmctrl -m"
 alias wm-is-i3='[ "$(wm-name)" = "i3" ] && echo 1 || echo 0'
 
-if [ wm-is-i3 ]; then
-    alias terminal='xresources-reload; urxvt -e tmux a'
+if [ ! wm-is-i3 ]; then
+    alias term='xresources-reload; urxvt -e sh -c "sleep 0.1; wmctrl -x -r urxvt -b add,fullscreen; bash"'
 else
-    alias terminal='xresources-reload; urxvt -e sh -c "sleep 0.1; wmctrl -x -r urxvt -b add,fullscreen; bash"'
+    alias term='xresources-reload; urxvt -e tmux a'
 fi

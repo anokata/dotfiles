@@ -24,6 +24,7 @@ super + F9
 super + F11
     obs
 
+# scripts
 ctrl + shift + F12
   ~/dotfiles/linux/bin/timer
 
@@ -32,9 +33,6 @@ ctrl + F12
 
 alt + F12
   screenshot-all
-
-ctrl + shift + super + F12
-    screenshot-all-media
 
 super + F12
     screenshot-all-media
@@ -63,7 +61,6 @@ ctrl + super + 8
 ctrl + super + 7
   pacmd set-default-sink 3
 
-
 # make sxhkd reload its configuration files:
 super + ctrl + shift + s
     notify-send 'Reloading sxhkd configuration.';\
@@ -71,7 +68,7 @@ super + ctrl + shift + s
 
 # reload polybar
 super + shift + ctrl + p
-    killall polybar ; polybar bottom &
+    killall polybar ; $HOME/.config/polybar/launch.sh &
     #notify-send 'Reloading polybar.';\
 
 # reload notification system
@@ -84,10 +81,7 @@ super + shift + ctrl + x
     notify-send 'Reloading xresources';\
     xrdb "/home/$(whoami)/.Xresources"
 
-
-#
-# bspwm hotkeys
-#
+### bspwm hotkeys
 
 # quit/restart bspwm
 super + ctrl + shift + {q,r}
@@ -105,20 +99,22 @@ super + shift + q
 super + shift + m
 	bspc desktop -l next
 
-super + Tab
+alt + Tab
 	bspc node -f next.local
 
 # focus to the given desktop
-super + {1-9}
+super + ctrl + {1-9}
 	bspc desktop -f '^{1-9,9}'
 
-super + ctrl + 1
-	bspc desktop -f '^3';\
-	bspc desktop -f '^1'
-
-super + ctrl + 2
+super + 1
 	bspc desktop -f '^4';\
+	bspc desktop -f '^1'
+super + 2
+	bspc desktop -f '^5';\
 	bspc desktop -f '^2'
+super + 3
+	bspc desktop -f '^6';\
+	bspc desktop -f '^3'
 
 super + {Left, Right}
     bspc monitor --focus {prev,next}
@@ -169,6 +165,12 @@ super + shift + {1-9}
 
 super + shift + 0
     id=$(bspc query -N -n); bspc node -d 10
+
+# move to other monitor
+super + shift + {Left,Down,Up,Right}
+	dir={west,south,north,east}; \
+	bspc node -s "$dir.local" --follow \
+	    || bspc node -m "$dir" --follow
 
 # Restart wifi 
 #super + alt + space 
