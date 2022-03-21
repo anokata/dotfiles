@@ -1,0 +1,11 @@
+
+#_ram
+#mons -s || true
+#amixer sset Headphone unmute || true
+#amixer sset Headphone 100 || true
+
+function username_filtered() {
+    [ $(whoami) = "sernam" ] && echo ""; return 0
+    echo "\u$GRAY@$GRAY"
+}
+#export PS1="$GREY$(username_filtered)\w$R\$(git_dirty)$GRAY\$ $RESET"

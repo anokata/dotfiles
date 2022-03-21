@@ -109,8 +109,8 @@ alias ref_ppref="cd $REF_PPREF; fer"
 
 # sys config
 alias xresources-reload='xrdb ~/.Xresources'
-alias config-bash="vim $DOTFILES/linux/.bashrc"
-alias config-alias="vim $DOTFILES_BIN/session/alias.sh"
+alias config-bash="$EDITOR $DOTFILES/linux/.bashrc"
+alias config-alias="$EDITOR $DOTFILES_BIN/session/alias.sh"
 alias config-tmux="$EDITOR $DOTFILES_CONFIGS/.tmux.conf"
 alias config-bspwm="$EDITOR $DOTFILES_CONFIGS/bspwm/bspwmrc"
 alias config-sxhkd="$EDITOR $DOTFILES_CONFIGS/sxhkd/sxhkdrc"

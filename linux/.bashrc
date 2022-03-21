@@ -49,7 +49,8 @@ function git_dirty {
     if [[ $status != "" ]]; then echo -e "*"; fi
 }
 
-export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
+# export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
+export PS1="$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 
 
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
@@ -58,7 +59,3 @@ else
     _tmux_run
 fi
 
-#_ram
-#mons -s || true
-#amixer sset Headphone unmute || true
-#amixer sset Headphone 100 || true
