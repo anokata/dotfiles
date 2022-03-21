@@ -140,6 +140,7 @@ alias rxvt='xresources-reload; urxvt'
 alias draw="wine64bit ~/sdata/bin/ptsai2/sai2.exe"
 
 alias caps-toggle='xdotool key Caps_Lock'
+alias wm-window-name='xprop | grep WM_CLASS'
 
 # Wm
 alias wm-name="printf '%s' $XDG_CURRENT_DESKTOP"
