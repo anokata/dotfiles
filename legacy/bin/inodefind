@@ -1,3 +1,0 @@
-#!/bin/bash
-#for i in $1*; do echo $i; find $i |wc -l; done 2>/dev/null
-du -s --inodes * 2>/dev/null |sort -g

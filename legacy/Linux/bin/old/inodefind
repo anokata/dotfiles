@@ -1,0 +1,2 @@
+#!/bin/bash
+du -s --inodes * 2>/dev/null |sort -g
