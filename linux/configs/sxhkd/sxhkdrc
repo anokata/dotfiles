@@ -1,3 +1,11 @@
+### chain keys
+# ndm
+alt + x; n ; s
+    ndm-time-status
+# markdown
+alt + x; m ; l
+    markdown-clip-convert-to-url
+
 # Applications
 alt + Return
     terminal

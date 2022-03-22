@@ -1,0 +1,4 @@
+#!/bin/bash
+LINK=$(xclip -o)
+TASK=$(echo $LINK | rev | cut -d'/' -f 1 | rev)
+clipboard-set "($TASK)[$LINK]"
