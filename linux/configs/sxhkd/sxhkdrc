@@ -107,7 +107,7 @@ super + shift + q
 super + shift + m
 	bspc desktop -l next
 
-alt + Tab
+super + Tab
 	bspc node -f next.local
 
 # focus to the given desktop
