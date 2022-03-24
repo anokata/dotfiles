@@ -35,11 +35,11 @@
     "toolbar1_view_manips": false,
     "toolbar1_view_resets": false
   },
-  "ui.toolbar_icon_size": "large",
+  "ui.toolbar_icon_size": "small",
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": "experimental/basic",
+  "brushmanager.selected_brush": "F1_OP",
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
@@ -57,30 +57,78 @@
     "left_sidebar": {
       "groups": [
         {
-          "tools": [],
-          "active_page": -1
-        }
-      ],
-      "w": 8,
-      "h": 612
-    },
-    "right_sidebar": {
-      "groups": [
+          "tools": [
+            [
+              "MyPaintBrushGroupTool",
+              "new"
+            ]
+          ],
+          "active_page": 0,
+          "w": 222,
+          "h": 166
+        },
+        {
+          "tools": [
+            [
+              "MyPaintBrushGroupTool",
+              "favorites"
+            ]
+          ],
+          "active_page": 0,
+          "w": 222,
+          "h": 314
+        },
         {
           "tools": [],
           "active_page": -1
         }
       ],
-      "w": 286,
+      "w": 222,
       "h": 612
     },
-    "floating": [],
-    "position": {
-      "x": 280,
-      "y": 277,
-      "w": 675,
-      "h": 451
+    "right_sidebar": {
+      "groups": [
+        {
+          "tools": [
+            [
+              "MyPaintHSVSquareTool"
+            ]
+          ],
+          "active_page": 0,
+          "w": 305,
+          "h": 237
+        },
+        {
+          "tools": [
+            [
+              "MyPaintLayersTool"
+            ]
+          ],
+          "active_page": 0,
+          "w": 305,
+          "h": 412
+        },
+        {
+          "tools": [
+            [
+              "MyPaintBrushGroupTool",
+              "Ksi"
+            ]
+          ],
+          "active_page": 0,
+          "w": 305,
+          "h": 85
+        },
+        {
+          "tools": [],
+          "active_page": -1
+        }
+      ],
+      "w": 305,
+      "h": 751
     },
+    "floating": [],
+    "position": {},
     "autohide": true,
     "fullscreen": false,
     "maximized": true
@@ -113,7 +161,7 @@
     "PenTablet Pad:tablet-pad:7": {},
     "PenTablet Pen Pen (0):pen:3": {}
   },
-  "colors.current": "#3d3d3d",
+  "colors.current": "#c0b54e",
   "colors.palette": {
     "name": "MyPaint Default",
     "columns": 7,
@@ -429,15 +477,15 @@
     ]
   },
   "ui.support_smooth_scrolling": true,
-  "ui.blink_layers": true,
+  "ui.blink_layers": false,
   "ui.file_compat_warning_mild": true,
   "ui.file_compat_warning_severe": true,
   "colors.history": [
-    "#282725",
-    "#e3eebc",
-    "#00ee32",
-    "#000000",
-    "#3d3d3d"
+    "#8b1ee3",
+    "#020201",
+    "#e8ebdc",
+    "#010000",
+    "#c0b54e"
   ],
   "brush_chooser.default.window_size": [
     256,
@@ -447,12 +495,12 @@
     282,
     322
   ],
-  "color_chooser.fast_subset.selected_adjuster": "WashColorChangerTool",
+  "color_chooser.fast_subset.selected_adjuster": "CrossedBowlColorChangerTool",
   "color_chooser.default.window_size": [
     282,
     322
   ],
-  "color_chooser.default.selected_adjuster": "ComponentSlidersTool",
-  "brush_chooser.default.selected_group": "Experimental",
+  "color_chooser.default.selected_adjuster": "HSVSquareTool",
+  "brush_chooser.default.selected_group": "Ksi",
   "autorecovery.check_at_startup": true
 }
