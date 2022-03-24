@@ -39,7 +39,7 @@
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": "F1_OP",
+  "brushmanager.selected_brush": "kaerhon_v1/flat_bar_l",
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
