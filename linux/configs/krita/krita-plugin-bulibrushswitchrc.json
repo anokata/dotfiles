@@ -1,0 +1,204 @@
+{
+    "config": {
+        "brushes": {
+            "default": {
+                "lastSelected": "1367df61-b0e2-4304-9b51-ff04c102659e",
+                "modificationMode": "ignoreModification",
+                "selectionMode": "firstFromList"
+            },
+            "list": {
+                "brushes": [
+                    {
+                        "blendingMode": "erase",
+                        "color": "",
+                        "colorBg": "",
+                        "comments": "",
+                        "defaultPaintTool": null,
+                        "eraserMode": true,
+                        "flow": 1.0,
+                        "ignoreEraserMode": true,
+                        "keepUserModifications": true,
+                        "name": "a) Eraser Circle",
+                        "opacity": 1.0,
+                        "position": 0,
+                        "shortcut": "7",
+                        "size": 50.0,
+                        "uuid": "1367df61-b0e2-4304-9b51-ff04c102659e"
+                    },
+                    {
+                        "blendingMode": "normal",
+                        "color": "",
+                        "colorBg": "",
+                        "comments": "",
+                        "defaultPaintTool": "KritaShape/KisToolBrush",
+                        "eraserMode": false,
+                        "flow": 1.0,
+                        "ignoreEraserMode": true,
+                        "keepUserModifications": true,
+                        "name": "ksi f1",
+                        "opacity": 1.0,
+                        "position": 1,
+                        "shortcut": "8",
+                        "size": 5.0,
+                        "uuid": "0b1abd3a-b306-4e1e-961f-a474cfc0a4b1"
+                    },
+                    {
+                        "blendingMode": "normal",
+                        "color": "",
+                        "colorBg": "",
+                        "comments": "",
+                        "defaultPaintTool": "KritaShape/KisToolBrush",
+                        "eraserMode": false,
+                        "flow": 1.0,
+                        "ignoreEraserMode": true,
+                        "keepUserModifications": true,
+                        "name": "ksi f1",
+                        "opacity": 1.0,
+                        "position": 2,
+                        "shortcut": "9",
+                        "size": 5.0,
+                        "uuid": "b03b5e40-c65a-4b99-aca3-d351adafc430"
+                    },
+                    {
+                        "blendingMode": "erase",
+                        "color": "",
+                        "colorBg": "",
+                        "comments": "",
+                        "defaultPaintTool": null,
+                        "eraserMode": true,
+                        "flow": 0.41,
+                        "ignoreEraserMode": true,
+                        "keepUserModifications": true,
+                        "name": "ksi f3 Op Eraser",
+                        "opacity": 1.0,
+                        "position": 3,
+                        "shortcut": "0",
+                        "size": 53.79,
+                        "uuid": "754fcc4a-2c99-4ad7-96aa-ed779594248b"
+                    },
+                    {
+                        "blendingMode": "normal",
+                        "color": "",
+                        "colorBg": "",
+                        "comments": "",
+                        "defaultPaintTool": null,
+                        "eraserMode": false,
+                        "flow": 1.0,
+                        "ignoreEraserMode": true,
+                        "keepUserModifications": true,
+                        "name": "b) Basic-5 Size Opacity",
+                        "opacity": 1.0,
+                        "position": 4,
+                        "shortcut": "",
+                        "size": 40.0,
+                        "uuid": "73d7d64f-d27f-424a-b3f0-10e2ff36b753"
+                    }
+                ],
+                "count": 5
+            }
+        },
+        "editor": {
+            "brushes": {
+                "list": {
+                    "splitterPosition": [
+                        813,
+                        407
+                    ],
+                    "zoomLevel": 1
+                }
+            },
+            "scratchpad": {
+                "colorPicker": {
+                    "colorCombination": 0,
+                    "colorCss": {
+                        "visible": false
+                    },
+                    "colorSlider": {
+                        "cmyk": {
+                            "asPct": false,
+                            "visible": false
+                        },
+                        "hsl": {
+                            "asPct": false,
+                            "visible": false
+                        },
+                        "hsv": {
+                            "asPct": false,
+                            "visible": true
+                        },
+                        "rgb": {
+                            "asPct": false,
+                            "visible": false
+                        }
+                    },
+                    "colorWheel": {
+                        "colorPreview": true,
+                        "visible": true
+                    },
+                    "compact": false,
+                    "palette": {
+                        "default": "Default",
+                        "visible": false
+                    }
+                }
+            },
+            "text": {
+                "colorPicker": {
+                    "colorCombination": 0,
+                    "colorCss": {
+                        "visible": false
+                    },
+                    "colorSlider": {
+                        "cmyk": {
+                            "asPct": false,
+                            "visible": false
+                        },
+                        "hsl": {
+                            "asPct": false,
+                            "visible": false
+                        },
+                        "hsv": {
+                            "asPct": false,
+                            "visible": false
+                        },
+                        "rgb": {
+                            "asPct": false,
+                            "visible": false
+                        }
+                    },
+                    "colorWheel": {
+                        "colorPreview": true,
+                        "visible": false
+                    },
+                    "compact": false,
+                    "palette": {
+                        "default": "Default",
+                        "visible": true
+                    }
+                }
+            },
+            "window": {
+                "position": {
+                    "x": 1404,
+                    "y": 149
+                },
+                "size": {
+                    "height": 700,
+                    "width": 1236
+                }
+            }
+        },
+        "ui": {
+            "popup": {
+                "brushes": {
+                    "list": {
+                        "viewMode": 0,
+                        "zoomLevel": 3
+                    }
+                },
+                "height": 550,
+                "width": 950
+            }
+        }
+    }
+}
