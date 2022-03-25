@@ -39,7 +39,7 @@
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": "classic/pencil",
+  "brushmanager.selected_brush": "classic/ink_eraser",
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
@@ -68,15 +68,27 @@
             ],
             [
               "MyPaintBrushGroupTool",
+              "Ramon"
+            ],
+            [
+              "MyPaintBrushGroupTool",
+              "Ramon2"
+            ],
+            [
+              "MyPaintBrushGroupTool",
+              "Tone"
+            ],
+            [
+              "MyPaintBrushGroupTool",
               "Deevad"
             ],
             [
               "MyPaintBrushGroupTool",
-              "Dieterle"
+              "Tanda"
             ]
           ],
-          "active_page": 0,
-          "w": 239,
+          "active_page": 6,
+          "w": 320,
           "h": 286
         },
         {
@@ -87,7 +99,7 @@
             ]
           ],
           "active_page": 0,
-          "w": 239,
+          "w": 320,
           "h": 314
         },
         {
@@ -95,49 +107,18 @@
           "active_page": -1
         }
       ],
-      "w": 239,
-      "h": 612
+      "w": 320,
+      "h": 649
     },
     "right_sidebar": {
       "groups": [
-        {
-          "tools": [
-            [
-              "MyPaintHSVSquareTool"
-            ]
-          ],
-          "active_page": 0,
-          "w": 305,
-          "h": 237
-        },
-        {
-          "tools": [
-            [
-              "MyPaintLayersTool"
-            ]
-          ],
-          "active_page": 0,
-          "w": 305,
-          "h": 412
-        },
-        {
-          "tools": [
-            [
-              "MyPaintBrushGroupTool",
-              "Ksi"
-            ]
-          ],
-          "active_page": 0,
-          "w": 305,
-          "h": 85
-        },
         {
           "tools": [],
           "active_page": -1
         }
       ],
-      "w": 305,
-      "h": 751
+      "w": 21,
+      "h": 649
     },
     "floating": [],
     "position": {},
@@ -146,13 +127,11 @@
     "maximized": true
   },
   "input.button_mapping": {
-    "Button2": "PanViewMode",
     "<Shift>Button2": "RotateViewMode",
     "<Primary>Button2": "ZoomViewMode",
     "<Alt>Button2": "ZoomViewMode",
-    "<Primary><Shift>Button2": "FrameEditMode",
-    "<Shift><Alt>Button2": "FrameEditMode",
-    "Button3": "ShowPopupMenu"
+    "<Primary>Button3": "ShowPopupMenu",
+    "Button2": "PanViewMode"
   },
   "compat_behavior_when_unknown": "unless-pigment-layer-1.x",
   "default_compatibility_mode": "2.x",
@@ -180,7 +159,7 @@
     "PenTablet Consumer Control:pen:4": {},
     "COMPANY 2.4G Device Keyboard:mouse:4": {}
   },
-  "colors.current": "#ebeee0",
+  "colors.current": "#000000",
   "colors.palette": {
     "name": "MyPaint Default",
     "columns": 7,
@@ -500,11 +479,11 @@
   "ui.file_compat_warning_mild": true,
   "ui.file_compat_warning_severe": true,
   "colors.history": [
-    "#179d9f",
-    "#43aab0",
-    "#5091c1",
-    "#2b1e4e",
-    "#ebeee0"
+    "#513e1c",
+    "#7a5d2b",
+    "#8e6c32",
+    "#232018",
+    "#4d5d66"
   ],
   "brush_chooser.default.window_size": [
     256,
@@ -519,8 +498,9 @@
     282,
     322
   ],
-  "color_chooser.default.selected_adjuster": "PaletteTool",
+  "color_chooser.default.selected_adjuster": "ComponentSlidersTool",
   "brush_chooser.default.selected_group": "Ksi",
   "autorecovery.check_at_startup": true,
-  "command.max_undo_stack_size": 40
+  "command.max_undo_stack_size": 40,
+  "devbrush.last_used": "PenTablet Pen Pen (0)"
 }

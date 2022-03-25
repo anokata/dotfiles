@@ -1,6 +1,7 @@
 #! /bin/sh
 
 pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
+setxkbmap -option caps:escape
 dunst &
 xrdb "/home/$(whoami)/.Xresources"
 nm-applet &
