@@ -39,7 +39,7 @@
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": "CD_concept/Text_Marker",
+  "brushmanager.selected_brush": "classic/marker_fat",
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
@@ -60,38 +60,42 @@
           "tools": [
             [
               "MyPaintBrushGroupTool",
-              "C_D"
+              "Classic"
             ],
             [
               "MyPaintBrushGroupTool",
-              "Classic"
+              "Experimental"
+            ],
+            [
+              "MyPaintBrushGroupTool",
+              "Deevad"
+            ],
+            [
+              "MyPaintBrushGroupTool",
+              "Dieterle"
             ]
           ],
           "active_page": 0,
-          "w": 259,
+          "w": 257,
           "h": 272
         },
         {
           "tools": [
             [
               "MyPaintBrushGroupTool",
-              "new"
-            ],
-            [
-              "MyPaintBrushGroupTool",
-              "favorites"
+              "quart"
             ]
           ],
           "active_page": 0,
-          "w": 259,
-          "h": 328
+          "w": 257,
+          "h": 238
         },
         {
           "tools": [],
           "active_page": -1
         }
       ],
-      "w": 259,
+      "w": 257,
       "h": 612
     },
     "right_sidebar": {
@@ -137,7 +141,7 @@
     },
     "floating": [],
     "position": {},
-    "autohide": true,
+    "autohide": false,
     "fullscreen": false,
     "maximized": true
   },
@@ -176,7 +180,7 @@
     "PenTablet Consumer Control:pen:4": {},
     "COMPANY 2.4G Device Keyboard:mouse:4": {}
   },
-  "colors.current": "#a3a29c",
+  "colors.current": "#000000",
   "colors.palette": {
     "name": "MyPaint Default",
     "columns": 7,
@@ -496,11 +500,11 @@
   "ui.file_compat_warning_mild": true,
   "ui.file_compat_warning_severe": true,
   "colors.history": [
-    "#c0b54e",
-    "#eef0e4",
-    "#ecefe3",
-    "#000000",
-    "#a3a29c"
+    "#a3a29c",
+    "#eeefe3",
+    "#94948f",
+    "#333603",
+    "#000000"
   ],
   "brush_chooser.default.window_size": [
     256,
