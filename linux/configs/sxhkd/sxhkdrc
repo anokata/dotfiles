@@ -191,15 +191,27 @@ super + shift + {Left,Down,Up,Right}
 #notify-send 'Restarting wifi interface..  *_*';\
 #nmcli radio wifi off ; nmcli radio wifi on
 
-# Increase volume
-#XF86AudioRaiseVolume
-#ponymix increase 5
+# XF86AudioRaiseVolume
+#     pactl set-sink-volume 0 +5%
+# XF86AudioLowerVolume
+#     pactl set-sink-volume 0 -5%
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
+#Volume Control
+XF86AudioLowerVolume
+    amixer -D pulse sset Master 5%- unmute
+XF86AudioRaiseVolume
+    amixer -D pulse sset Master 5%+ unmute
+XF86AudioMute
+    amixer set Master toggle
 
-# Decrease volume
-#XF86AudioLowerVolume
-#ponymix decrease 5
+XF86AudioMicMute
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-# Toggle mute
-#alt + m
-#ponymix toggle
+# Toggle mpd
+alt + x; m; t
+    mpc -q toggle
 
+# Navigate mpd playlist
+alt + x; m; {comma, period}
+    mpc -q {prev, next}
