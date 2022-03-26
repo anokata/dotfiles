@@ -50,6 +50,9 @@ alias sys-ram='sudo dmidecode -t 17'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias fd='fdfind'
+alias fde='fd -e '
+alias fdh='fd -H '
 
 # Video download
 alias youtube="youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'"
@@ -110,7 +113,7 @@ alias ref_ppref="cd $REF_PPREF; fer"
 # sys config
 alias xresources-reload='xrdb ~/.Xresources'
 alias config-bash="$EDITOR $DOTFILES/linux/.bashrc"
-alias config-alias="$EDITOR $DOTFILES_BIN/session/alias.sh"
+alias config-alias="$EDITOR $DOTFILES_BIN/session/alias.sh && bashrc-reload"
 alias config-tmux="$EDITOR $DOTFILES_CONFIGS/.tmux.conf"
 alias config-bspwm="$EDITOR $DOTFILES_CONFIGS/bspwm/bspwmrc"
 alias config-sxhkd="$EDITOR $DOTFILES_CONFIGS/sxhkd/sxhkdrc"
