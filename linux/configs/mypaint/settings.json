@@ -39,7 +39,7 @@
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": "CD_concept/Blender_Marker",
+  "brushmanager.selected_brush": "F3_Op_Erase",
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
@@ -88,7 +88,7 @@
             ]
           ],
           "active_page": 0,
-          "w": 312,
+          "w": 242,
           "h": 286
         },
         {
@@ -111,7 +111,7 @@
             ]
           ],
           "active_page": 0,
-          "w": 312,
+          "w": 242,
           "h": 314
         },
         {
@@ -119,18 +119,29 @@
           "active_page": -1
         }
       ],
-      "w": 312,
-      "h": 612
+      "w": 242,
+      "h": 669
     },
     "right_sidebar": {
       "groups": [
+        {
+          "tools": [
+            [
+              "MyPaintBrushGroupTool",
+              "new"
+            ]
+          ],
+          "active_page": 0,
+          "w": 235,
+          "h": 314
+        },
         {
           "tools": [],
           "active_page": -1
         }
       ],
-      "w": 21,
-      "h": 612
+      "w": 235,
+      "h": 669
     },
     "floating": [],
     "position": {},
@@ -171,7 +182,7 @@
     "PenTablet Consumer Control:pen:4": {},
     "COMPANY 2.4G Device Keyboard:mouse:4": {}
   },
-  "colors.current": "#f1f3ea",
+  "colors.current": "#000000",
   "colors.palette": {
     "name": "MyPaint Default",
     "columns": 7,
@@ -491,11 +502,11 @@
   "ui.file_compat_warning_mild": true,
   "ui.file_compat_warning_severe": true,
   "colors.history": [
-    "#3f1817",
-    "#edede0",
-    "#ff0000",
-    "#421a19",
-    "#f1f3ea"
+    "#9bbbcb",
+    "#3e4b51",
+    "#1f2528",
+    "#1b2428",
+    "#4d5d66"
   ],
   "brush_chooser.default.window_size": [
     256,
@@ -513,5 +524,6 @@
   "color_chooser.default.selected_adjuster": "HSVSquareTool",
   "brush_chooser.default.selected_group": "Ksi",
   "autorecovery.check_at_startup": true,
-  "command.max_undo_stack_size": 40
+  "command.max_undo_stack_size": 40,
+  "devbrush.last_used": "PenTablet Pen Pen (0)"
 }

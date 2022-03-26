@@ -117,6 +117,9 @@ super + Tab
 super + ctrl + {1-9}
 	bspc desktop -f '^{1-9,9}'
 
+#ctrl + space;  {1-9}
+	#bspc desktop -f '^{1-9,9}'
+
 super + 1
 	bspc desktop -f '^6';\
 	bspc desktop -f '^1'
