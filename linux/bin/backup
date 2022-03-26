@@ -1,8 +1,25 @@
 #!/bin/bash
-#cd "$DOTFILES"
-# $DOTFILES/linux/configs/configs.list
-# gitall '[backup]'
-# tar doc
-# backup_vault
-cd $HOME
-tar $DOTFILES
+# Prepare
+source $DOTFILES/linux/.env
+TEMP=$(create-temp-ram-dir)
+DATE="$(date '+%Y-%d-%m')"
+cd $TEMP
+
+# Backup dirs
+
+# Backup to Dropbox
+BACKUPS="$HOME/Dropbox/backups"
+BACKUPS_REF="$BACKUPS/refBackup"
+backup-dir $DOTFILES $TEMP
+backup-dir $HOME/Dropbox/doc $TEMP
+backup-dir $REF_PHOTO/$(basename $REF_PHOTO).$(date '+%Y') $TEMP $BACKUPS_REF
+backup-dir $REF_ART/$(basename $REF_ART).$(date '+%Y') $TEMP $BACKUPS_REF
+backup-dir $REF_TOME/$(basename $REF_TOME).$(date '+%Y') $TEMP $BACKUPS_REF
+backup-dir $SCREENS_DIR $TEMP $BACKUPS_REF
+
+# TODO
+# ppref refmy draw/my
+# Backup to external hdd
+
+
+ls -lha $BACKUPS

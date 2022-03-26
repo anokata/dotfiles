@@ -1,0 +1,19 @@
+#!/bin/bash
+# params: 
+#   $1 = dir to tar and backup
+#   $2 = temp dir, will create if no
+
+DATE="$(date '+%Y-%d-%m')"
+
+# Check params
+[ -z $1 ] && echo "Need dir param" && exit
+[ -z $2 ] && TEMP=$(create-temp-ram-dir) || TEMP="$2"
+[ -z $3 ] || BACKUPS="$3"
+cd $TEMP
+
+# Create tar file and move to backup dir
+FILENAME="$(basename $1).$DATE.tar"
+tar  cf "$FILENAME" -C "$(dirname $1)" --exclude-vcs "$(basename $1)" 
+mv "$FILENAME" "$BACKUPS"
+
+echo $FILENAME copyied to $BACKUPS from $TEMP
