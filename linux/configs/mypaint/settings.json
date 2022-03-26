@@ -39,7 +39,7 @@
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": null,
+  "brushmanager.selected_brush": "CD_concept/Blender_Marker",
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
@@ -87,8 +87,8 @@
               "Tanda"
             ]
           ],
-          "active_page": 6,
-          "w": 318,
+          "active_page": 0,
+          "w": 312,
           "h": 286
         },
         {
@@ -96,10 +96,22 @@
             [
               "MyPaintBrushGroupTool",
               "quart"
+            ],
+            [
+              "MyPaintBrushGroupTool",
+              "Ksi_basic"
+            ],
+            [
+              "MyPaintBrushGroupTool",
+              "Ksi_oil"
+            ],
+            [
+              "MyPaintBrushGroupTool",
+              "Ksi"
             ]
           ],
           "active_page": 0,
-          "w": 318,
+          "w": 312,
           "h": 314
         },
         {
@@ -107,7 +119,7 @@
           "active_page": -1
         }
       ],
-      "w": 318,
+      "w": 312,
       "h": 612
     },
     "right_sidebar": {
@@ -159,7 +171,7 @@
     "PenTablet Consumer Control:pen:4": {},
     "COMPANY 2.4G Device Keyboard:mouse:4": {}
   },
-  "colors.current": "#edf0e7",
+  "colors.current": "#f1f3ea",
   "colors.palette": {
     "name": "MyPaint Default",
     "columns": 7,
@@ -479,11 +491,11 @@
   "ui.file_compat_warning_mild": true,
   "ui.file_compat_warning_severe": true,
   "colors.history": [
-    "#59272d",
-    "#4c1e22",
-    "#000000",
-    "#010101",
-    "#edf0e7"
+    "#3f1817",
+    "#edede0",
+    "#ff0000",
+    "#421a19",
+    "#f1f3ea"
   ],
   "brush_chooser.default.window_size": [
     256,
@@ -498,7 +510,7 @@
     282,
     322
   ],
-  "color_chooser.default.selected_adjuster": "ComponentSlidersTool",
+  "color_chooser.default.selected_adjuster": "HSVSquareTool",
   "brush_chooser.default.selected_group": "Ksi",
   "autorecovery.check_at_startup": true,
   "command.max_undo_stack_size": 40

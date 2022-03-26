@@ -152,6 +152,7 @@ map <leader>V :source $MYVIMRC<CR>
 map <leader>n :vsp $HOME/.vimrc<CR>:set foldmethod=marker<cr>
 map <leader>N :source $HOME/.vimrc<CR>
 map <leader>ev :tabnew $MYVIMRC<CR>
+map <C-,> :tabnew $MYVIMRC<CR>
 map <leader>es :source %<CR>
 " ==== Tabs ====
 nmap <leader>t :tabnew<CR>
@@ -162,7 +163,7 @@ nmap <leader>. :tabprev<CR>
 "nmap <leader>f zf)
 "nmap <leader>f :set foldmethod=indent<CR>
 nmap <leader>f :FZF!<CR>
-"nmap <C-p> :FZF<CR>
+nmap <C-[> :FZF<CR>
 nmap <leader>a za
 " fold all
 " copy to system buffer

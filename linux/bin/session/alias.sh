@@ -32,6 +32,9 @@ alias sloc='cat *.c *.h | uniq | wc -l'
 alias wcl='wc -l'
 alias files='find | wc -l'
 alias dd='dd status=progress '
+alias bat="batcat"
+alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+alias vim="nvim"
 
 # links
 alias lns="ln -s "
@@ -128,6 +131,7 @@ alias bashrc-reload="source ~/dotfiles/linux/.bashrc"
 alias config-bashrc-reload="source $DOTFILES/linux/.bashrc"
 alias config-bashlibs="$EDITOR $DOTFILES/linux/bin/session"
 alias config-ranger="$EDITOR $DOTFILES_CONFIGS/ranger/"
+alias config-env="$EDITOR $DOTFILES_LINUX/.env && bashrc-reload"
 
 
 # sound
