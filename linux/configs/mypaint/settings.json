@@ -39,7 +39,7 @@
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": "classic/ink_eraser",
+  "brushmanager.selected_brush": "deevad/4H_pencil",
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
@@ -479,11 +479,11 @@
   "ui.file_compat_warning_mild": true,
   "ui.file_compat_warning_severe": true,
   "colors.history": [
-    "#513e1c",
-    "#7a5d2b",
-    "#8e6c32",
-    "#232018",
-    "#4d5d66"
+    "#4d5d66",
+    "#632d36",
+    "#59272d",
+    "#4c1e22",
+    "#000000"
   ],
   "brush_chooser.default.window_size": [
     256,

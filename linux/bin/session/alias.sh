@@ -122,6 +122,9 @@ alias config-sxhkd-reload="pkill -USR1 -x sxhkd"
 alias config-polybar-reload="killall polybar ; polybar bottom &"
 alias bashrc-reload="source ~/dotfiles/linux/.bashrc"
 alias config-bashrc-reload="source $DOTFILES/linux/.bashrc"
+alias config-bashlibs="$EDITOR $DOTFILES/linux/bin/session"
+alias config-ranger="$EDITOR $DOTFILES_CONFIGS/ranger/"
+
 
 # sound
 alias audio-devices="pacmd list-sinks | grep name:"
