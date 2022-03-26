@@ -14,6 +14,7 @@ function _tmux_run () {
             tmux new-window -c ~/ndw/
             # tmux split-window -c ~/sdata/
             # tmux new-window vifm
+            tmux new-window cmus
             tmux new-window ranger
             tmux select-window -t 1
             tmux attach -t $TMUX_SESSION_NAME
