@@ -1,2 +1,0 @@
-python ~/dotfiles/bin/addlink.py
-(cd ~/dev/anokata.github.io/; git add .; git commit -m "link"; git push origin master)

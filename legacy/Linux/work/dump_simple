@@ -1,1 +1,0 @@
-pg_dump -h $1 -p 5432 -U lod -T public.mamonsu_* -Ovx $2 | gzip --best > $2.sql.gz

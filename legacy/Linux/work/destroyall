@@ -1,6 +1,0 @@
-#!/bin/bash
-##dd if=/dev/random of=/dev/sdb status=progress bs=4096
-#dd if=/dev/zero of=/dev/sdb status=progress bs=4096
-#dd if=/dev/zero of=/dev/sdb status=progress bs=4096
-#make ntfs parts
-#wipefs shred

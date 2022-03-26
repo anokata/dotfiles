@@ -1,2 +1,0 @@
-source vars
-vboxheadless --startvm $NAME&

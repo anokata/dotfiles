@@ -1,9 +1,0 @@
-#!/bin/bash
-# vim: filetype=sh
-DISK=sdb
-sudo mount /dev/$DISK /mnt/ftp
-tar cjf ~/cdda ~/cataclysmdda-0.C/
-ls -lah ~/cdda
-sudo cp ~/cdda /mnt/ftp/
-ls -lah /mnt/ftp
-sudo umount /dev/$DISK

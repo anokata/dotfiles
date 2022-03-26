@@ -1,8 +1,0 @@
-#!/bin/bash
-#set -x
-for f in  *.ass; do 
-    mv "$f" .temp
-    iconv -f cp1251 .temp -o "$f"
-    mv .temp "$f.old"
-done
-exit 0

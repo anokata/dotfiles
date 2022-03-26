@@ -1,1 +1,0 @@
-zcat $1 | sudo -u postgres psql -d $2

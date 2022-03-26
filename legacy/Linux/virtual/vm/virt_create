@@ -1,2 +1,0 @@
-sudo virsh net-start default
-sudo virt-install --name ubu --location ~/Downloads/ubuntu-16.04.2-server-amd64.iso --memory=512 --vcpus=1 --disk size=2

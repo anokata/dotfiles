@@ -1,6 +1,0 @@
-#!/bin/bash
-# vim: filetype=sh
-touch $(pwd | xargs basename).{h,cpp}
-mkdir build
-cd build
-cmake -G "Unix Makefiles" ..

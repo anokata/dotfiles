@@ -1,5 +1,0 @@
-#!/bin/bash
-# update
-sudo pacman -Syu
-# clean
-sudo pacman -Sc

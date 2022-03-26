@@ -1,4 +1,0 @@
-#!/bin/bash
-# vi: filetype=sh
-whiptail --title  "Deploy" --yes-button  "Setup" \
-    --no-button  "deploy"  --yesno  "Choose deploy or make settings" 10 60

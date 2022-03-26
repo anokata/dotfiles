@@ -1,5 +1,0 @@
-#!/bin/bash
-# 10.10.30.91
-source ~/dotfiles/bin/lib/net.sh
-echo "sudo tcpdump -i $ETH -s0 -A host $1 and port 80"
-sudo tcpdump -i $ETH -s0 -A host 10.10.30.91 and port 80

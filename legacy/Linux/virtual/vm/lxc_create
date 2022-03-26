@@ -1,2 +1,0 @@
-sudo apt install pacman
-sudo lxc-create -t ubuntu -n uba

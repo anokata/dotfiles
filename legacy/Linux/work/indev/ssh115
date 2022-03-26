@@ -1,1 +1,0 @@
-sshpass -p $PASS ssh mplic@10.4.126.115

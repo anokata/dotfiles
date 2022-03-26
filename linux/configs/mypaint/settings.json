@@ -39,7 +39,7 @@
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": "deevad/4H_pencil",
+  "brushmanager.selected_brush": null,
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
@@ -88,7 +88,7 @@
             ]
           ],
           "active_page": 6,
-          "w": 320,
+          "w": 318,
           "h": 286
         },
         {
@@ -99,7 +99,7 @@
             ]
           ],
           "active_page": 0,
-          "w": 320,
+          "w": 318,
           "h": 314
         },
         {
@@ -107,8 +107,8 @@
           "active_page": -1
         }
       ],
-      "w": 320,
-      "h": 649
+      "w": 318,
+      "h": 612
     },
     "right_sidebar": {
       "groups": [
@@ -118,7 +118,7 @@
         }
       ],
       "w": 21,
-      "h": 649
+      "h": 612
     },
     "floating": [],
     "position": {},
@@ -159,7 +159,7 @@
     "PenTablet Consumer Control:pen:4": {},
     "COMPANY 2.4G Device Keyboard:mouse:4": {}
   },
-  "colors.current": "#000000",
+  "colors.current": "#edf0e7",
   "colors.palette": {
     "name": "MyPaint Default",
     "columns": 7,
@@ -479,11 +479,11 @@
   "ui.file_compat_warning_mild": true,
   "ui.file_compat_warning_severe": true,
   "colors.history": [
-    "#4d5d66",
-    "#632d36",
     "#59272d",
     "#4c1e22",
-    "#000000"
+    "#000000",
+    "#010101",
+    "#edf0e7"
   ],
   "brush_chooser.default.window_size": [
     256,
@@ -501,6 +501,5 @@
   "color_chooser.default.selected_adjuster": "ComponentSlidersTool",
   "brush_chooser.default.selected_group": "Ksi",
   "autorecovery.check_at_startup": true,
-  "command.max_undo_stack_size": 40,
-  "devbrush.last_used": "PenTablet Pen Pen (0)"
+  "command.max_undo_stack_size": 40
 }

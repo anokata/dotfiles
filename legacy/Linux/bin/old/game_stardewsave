@@ -1,4 +1,0 @@
-#!/bin/bash
-tar cf stardewsave.tar ~/.config/StardewValley
-bzip2 stardewsave.tar
-mv stardewsave.tar.bz2 ~/ydsk/offline/

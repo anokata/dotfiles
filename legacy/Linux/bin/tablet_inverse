@@ -1,2 +1,0 @@
-ID=16
-xinput set-prop $ID "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1 

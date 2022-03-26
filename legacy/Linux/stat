@@ -1,8 +1,0 @@
-vmstat
-#free -h
-#df -h
-#tcpdump -i enp4s0
-#iotop
-#iostat #from sysstat
-#sudo iftop
-#nmon

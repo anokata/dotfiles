@@ -1,4 +1,0 @@
-sudo rfkill unblock all
-sudo ip link set wlp5s0b1 up
-sudo wpa_supplicant -B -iwlp5s0b1 -c/etc/wpa_supplicant.conf -Dnl80211
-sudo dhcpcd wlp5s0b1

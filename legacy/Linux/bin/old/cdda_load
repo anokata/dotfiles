@@ -1,4 +1,0 @@
-sudo mount /dev/sdc /mnt/ftp
-cd ~/games
-tar xf /mnt/ftp/cdda
-sudo umount /mnt/ftp

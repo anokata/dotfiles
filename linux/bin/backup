@@ -1,6 +1,8 @@
 #!/bin/bash
-cd "$DOTFILES"
+#cd "$DOTFILES"
 # $DOTFILES/linux/configs/configs.list
-gitall '[backup]'
+# gitall '[backup]'
 # tar doc
 # backup_vault
+cd $HOME
+tar $DOTFILES

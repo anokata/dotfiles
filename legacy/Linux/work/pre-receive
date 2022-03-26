@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-exec hooks/pre-receive.dev "$@" <&0 >&1 2>&2

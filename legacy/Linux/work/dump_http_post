@@ -1,7 +1,0 @@
-#!/bin/sh
-# vi: filetype=sh
-IFACE=$1
-if [ -z $IFACE ]; then
-    IFACE=eno16780032 
-fi
-sudo tcpdump -i $IFACE -s 0 -A 'tcp dst port 80 and (tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x504f5354)'

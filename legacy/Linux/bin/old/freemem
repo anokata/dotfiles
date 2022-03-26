@@ -1,1 +1,0 @@
-free -h | tail -n2 | head -n1 | tr -s "[:space:]" | cut -d" " -f 7

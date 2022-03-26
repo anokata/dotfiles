@@ -1,3 +1,0 @@
-#!/bin/bash
-source net_names
-sudo create_ap $WIFI ppp0 ksinet kitten28Cat0

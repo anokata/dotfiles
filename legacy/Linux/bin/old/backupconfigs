@@ -1,4 +1,0 @@
-#!/bin/bash
-#cp -r ~/.config/GIMP/2.10/ ~/ram/
-tar cjf ~/dotfiles/gimp.tar.bz2 ~/.config/GIMP/2.10/
-

@@ -1,3 +1,0 @@
-#!/bin/bash
-source ~/dotfiles/bin/lib/net.sh 
-sudo create_ap $WIFI ppp0 ksinet kitten28Cat0

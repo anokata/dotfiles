@@ -31,6 +31,7 @@ alias tdl='tree -dL'
 alias sloc='cat *.c *.h | uniq | wc -l'
 alias wcl='wc -l'
 alias files='find | wc -l'
+alias dd='dd status=progress '
 
 # links
 alias lns="ln -s "

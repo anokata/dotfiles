@@ -1,1 +1,0 @@
-sudo aireplay-ng -0 2 -a  $1 -c $2  wlp2s0mon

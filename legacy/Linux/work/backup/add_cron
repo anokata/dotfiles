@@ -1,4 +1,0 @@
-#!/bin/bash
-# vim: filetype=sh
-JOB=$1
-(crontab -l 2>/dev/null; echo "$JOB") | crontab -

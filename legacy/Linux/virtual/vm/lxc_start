@@ -1,3 +1,0 @@
-sudo lxc-start -n uba -d
-sudo lxc-info -n uba
-sudo lxc-attach -n uba

@@ -1,4 +1,0 @@
-dpkg --get-selections | grep -v dein
-xbacklight -set 50
-tint2
-update-alternatives --config editor

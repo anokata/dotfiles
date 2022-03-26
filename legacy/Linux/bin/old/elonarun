@@ -1,1 +1,0 @@
-(cd ~/games/elona/elonaplus1.77/; ./run; cd ~/games/elona/; tar cjf elonap elonaplus1.77; cp elonap ~/ydsk/saves/)

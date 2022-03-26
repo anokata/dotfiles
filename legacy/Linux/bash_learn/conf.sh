@@ -1,3 +1,0 @@
-PORT=1234
-SERVER=127.0.0.1
-FIFO=/tmp/ncfifo

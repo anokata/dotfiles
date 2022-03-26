@@ -1,1 +1,0 @@
-nmcli connection up Atel

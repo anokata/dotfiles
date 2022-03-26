@@ -1,7 +1,0 @@
-#!/bin/bash
-# vim: filetype=sh
-HOST=127.0.0.1
-PORT=5432
-USER=lod
-DB=lod_db
-pgcli -h $HOST -p $PORT -U $USER $DB

@@ -1,9 +1,0 @@
-rm ~/avansert_meteogram.png
-wget http://www.yr.no/place/Russia/Yaroslavl/Rybinsk/avansert_meteogram.png
-#gpicview ~/avansert_meteogram.png
-if which xviewer; then 
-    xviewer ~/avansert_meteogram.png; 
-elif which feh; then 
-    feh ~/avansert_meteogram.png; 
-fi
-

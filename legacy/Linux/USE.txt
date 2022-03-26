@@ -1,6 +1,0 @@
-ranger
-w3m or xlinks2 or...uzbl
-dpkg-reconfigure PKG
-localepurge
-gtkorphan
-xdiskusage
