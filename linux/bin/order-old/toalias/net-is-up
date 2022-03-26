@@ -1,0 +1,1 @@
+[ ping -c1 -W1 ya.ru >/dev/null 2>/dev/null ] || echo $? 
