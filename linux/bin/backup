@@ -23,3 +23,7 @@ backup-dir $SCREENS_DIR $TEMP $BACKUPS_REF
 
 
 ls -lha $BACKUPS
+
+# backup configs
+cp ~/kritakeys.shortcuts $DOTFILES_CONFIGS/krita/
+#cp $KRITA $DOTFILES_CONFIGS/krita/
