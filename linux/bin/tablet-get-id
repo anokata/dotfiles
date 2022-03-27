@@ -1,3 +1,3 @@
 #!/bin/bash
-ID=$(xinput | grep "Pen Pen" | cut -f 2 | cut -d= -f 2)
+ID=$(xinput | grep "Pen Pen" | cut -f 2 | cut -d= -f 2 | head -n 1)
 echo $ID
