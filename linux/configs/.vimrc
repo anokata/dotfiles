@@ -10,6 +10,8 @@ Plug 'ktonga/vim-follow-my-lead'
 Plug 'majutsushi/tagbar'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
 Plug 'stormherz/tablify'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat' 
@@ -28,8 +30,11 @@ Plug 'flazz/vim-colorschemes'
 Plug 'sainnhe/everforest'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-scripts/code_complete'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 " }}}
@@ -63,11 +68,19 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
 
 " File browse
 let g:NERDTreeWinPos = "left"
+let g:NERDTreeChDirMode = 2
 let NERDTreeIgnore = ['\.pyc$', '\node_modules']
 nmap <C-b> :NERDTreeToggle<CR>
 nmap <leader>c :TlistToggle<CR>
 nmap <leader>x :TagbarToggle<CR>
+nmap <leader>l :TagbarToggle<CR>
+nmap <C-F1> :NERDTreeFind<CR>
+let g:ranger_map_keys = 0
+nmap <leader>r :Ranger<CR>
+"nmap <C-r> :Ranger<CR>
+"TODO Bind C-Fx S-Fx
 
+nmap <leader>pi :PlugInstall<CR>:PlugClean<CR>
 
 " Color {{{
 let g:solarized_termcolors=256
@@ -160,13 +173,11 @@ nmap <leader>t :tabnew<CR>
 nmap <leader>w :tabclose<CR>
 nmap <leader>, :tabnext<CR>
 nmap <leader>. :tabprev<CR>
-map <C-s-w> :tabclose<CR>
-map <C-s-n> :tabnew<CR>
 " ==== Folding ====
 "nmap <leader>f zf)
 "nmap <leader>f :set foldmethod=indent<CR>
 nmap <leader>f :FZF!<CR>
-nmap <C-[> :FZF<CR>
+nmap <C-f> :FZF<CR>
 nmap <leader>a za
 " fold all
 " copy to system buffer
@@ -206,9 +217,9 @@ cmap ф a
 nnoremap <space> za
 
 " noremap <leader>c yy:@"<CR>
-noremap <leader><cr> xi<cr><esc>
-nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<left><left>
-nnoremap <leader>rc :%s/\<<C-r><C-w>\>//gc<left><left><left>
+" noremap <leader><cr> xi<cr><esc>
+" nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<left><left>
+" nnoremap <leader>rc :%s/\<<C-r><C-w>\>//gc<left><left><left>
 
 " typos correction and abbrevations
 iabbrev adn and
@@ -300,6 +311,7 @@ let @n='/"WebReports.Controls.Report"bbbi"exportFormats":["PDF","DOC","XLS","CS
 " right way to use autocmd 
 augroup allAutoCmds
     autocmd!
+    autocmd DirChanged global :NERDTreeCWD
     autocmd FileType netrw setlocal bufhidden=wipe
     autocmd FileType python :iabbrev <buffer> iff if:<left>
     autocmd FileType vim setlocal foldmethod=marker
@@ -319,6 +331,10 @@ endif
 "command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
 command! -nargs=1 Ngrep grep "<args>" -g "*.md" $NOTES_DIR
 nnoremap <leader>nn :Ngrep 
+
+" inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
+" inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
+imap <c-x><c-f> <plug>(fzf-complete-path)
 
 "==== Session ====
 "nmap <C-F5> :call MakeDefSession()<CR>
