@@ -12,7 +12,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-Plug 'stormherz/tablify'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat' 
 Plug 'tpope/vim-surround'
@@ -34,8 +33,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-scripts/code_complete'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'leafgarland/typescript-vim'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+" Plug 'leafgarland/typescript-vim'
 
+" Plug 'stormherz/tablify'
 call plug#end()
 " }}}
 
@@ -80,7 +81,8 @@ nmap <leader>r :Ranger<CR>
 "nmap <C-r> :Ranger<CR>
 "TODO Bind C-Fx S-Fx
 
-nmap <leader>pi :PlugInstall<CR>:PlugClean<CR>
+nmap <localleader>pi :PlugInstall<CR>
+nmap <localleader>pc :PlugClean<CR>
 
 " Color {{{
 let g:solarized_termcolors=256
@@ -173,6 +175,10 @@ nmap <leader>t :tabnew<CR>
 nmap <leader>w :tabclose<CR>
 nmap <leader>, :tabnext<CR>
 nmap <leader>. :tabprev<CR>
+nmap tn :tabnew<CR>
+nmap tw :tabclose<CR>
+nmap th :tabnext<CR>
+nmap tl :tabprev<CR>
 " ==== Folding ====
 "nmap <leader>f zf)
 "nmap <leader>f :set foldmethod=indent<CR>

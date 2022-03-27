@@ -13,6 +13,7 @@ alias cda="cd $HDD1"
 alias cdb="cd $HDD2"
 alias cds="cd $SSD"
 alias cdc="cd $DOTFILES_CONFIGS"
+alias cdl="cd $LINKS_DIR"
 
 # Files info
 alias l='ls -CF'
