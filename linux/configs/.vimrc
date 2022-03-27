@@ -28,9 +28,9 @@ Plug 'flazz/vim-colorschemes'
 Plug 'sainnhe/everforest'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
+Plug 'neoclide/coc.nvim'
+Plug 'vim-scripts/code_complete'
 
-"Plug 'vim-scripts/code_complete'
-"Plug 'neoclide/coc.nvim'
 call plug#end()
 " }}}
 
@@ -61,13 +61,13 @@ let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
 
-"==== NERDTree ==== {{{
-let g:NERDTreeWinPos = "right"
-let NERDTreeIgnore = ['\.pyc$']
-nmap <leader>r :NERDTreeToggle<CR>
+" File browse
+let g:NERDTreeWinPos = "left"
+let NERDTreeIgnore = ['\.pyc$', '\node_modules']
+nmap <C-b> :NERDTreeToggle<CR>
 nmap <leader>c :TlistToggle<CR>
 nmap <leader>x :TagbarToggle<CR>
-" }}}
+
 
 " Color {{{
 let g:solarized_termcolors=256
@@ -93,7 +93,7 @@ set conceallevel=1
 set expandtab
 set foldenable
 set foldlevel=20
-set foldlevelstart=0
+set foldlevelstart=20
 set foldmethod=syntax
 set hidden
 set ignorecase
@@ -152,14 +152,16 @@ map <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
 map <leader>V :source $MYVIMRC<CR>
 map <leader>n :vsp $HOME/.vimrc<CR>:set foldmethod=marker<cr>
 map <leader>N :source $HOME/.vimrc<CR>
+map <C-k> :tabnew $MYVIMRC<CR>
 map <leader>ev :tabnew $MYVIMRC<CR>
-map <C-,> :tabnew $MYVIMRC<CR>
 map <leader>es :source %<CR>
 " ==== Tabs ====
 nmap <leader>t :tabnew<CR>
 nmap <leader>w :tabclose<CR>
 nmap <leader>, :tabnext<CR>
 nmap <leader>. :tabprev<CR>
+map <C-s-w> :tabclose<CR>
+map <C-s-n> :tabnew<CR>
 " ==== Folding ====
 "nmap <leader>f zf)
 "nmap <leader>f :set foldmethod=indent<CR>
@@ -203,7 +205,7 @@ cmap у e
 cmap ф a
 nnoremap <space> za
 
-noremap <leader>c yy:@"<CR>
+" noremap <leader>c yy:@"<CR>
 noremap <leader><cr> xi<cr><esc>
 nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<left><left>
 nnoremap <leader>rc :%s/\<<C-r><C-w>\>//gc<left><left><left>
@@ -237,7 +239,7 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 " Map ctrl-movement keys to window switching
-nnoremap <C-k> <C-w><Up>
+" nnoremap <C-k> <C-w><Up>
 nnoremap <C-j> <C-w><Down>
 nnoremap <C-l> <C-w><Right>
 nnoremap <C-h> <C-w><Left>
@@ -248,7 +250,7 @@ nnoremap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 inoremap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 
 " open previous buffer in vert split
-nnoremap <leader>p :execute "rightbelow vsplit " . bufname("#")<cr>
+" nnoremap <leader>p :execute "rightbelow vsplit " . bufname("#")<cr>
 " add semicolon in the end, save cursor
 function! _Add_semi()
     let cmd=':execute "normal! mqA;\<esc>`q"'
@@ -298,6 +300,7 @@ let @n='/"WebReports.Controls.Report"bbbi"exportFormats":["PDF","DOC","XLS","CS
 " right way to use autocmd 
 augroup allAutoCmds
     autocmd!
+    autocmd FileType netrw setlocal bufhidden=wipe
     autocmd FileType python :iabbrev <buffer> iff if:<left>
     autocmd FileType vim setlocal foldmethod=marker
     autocmd FileType markdown :onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>

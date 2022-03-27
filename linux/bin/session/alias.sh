@@ -12,6 +12,7 @@ alias cdd="cd $DOTFILES"
 alias cda="cd $HDD1"
 alias cdb="cd $HDD2"
 alias cds="cd $SSD"
+alias cdc="cd $DOTFILES_CONFIGS"
 
 # Files info
 alias l='ls -CF'
@@ -39,6 +40,8 @@ alias notes='vim `fzf`'
 
 # links
 alias lns="ln -s "
+alias lnsn="ln -s -n "
+alias lnsnr="ln -s -n -r "
 
 # System info
 alias free='free -m'
