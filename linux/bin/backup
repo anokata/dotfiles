@@ -26,4 +26,5 @@ ls -lha $BACKUPS
 
 # backup configs
 cp ~/kritakeys.shortcuts $DOTFILES_CONFIGS/krita/
-#cp $KRITA $DOTFILES_CONFIGS/krita/
+cp $HOME/.config/krita* $DOTFILES_CONFIGS/krita/
+#cp $KRITA_DIR $DOTFILES_CONFIGS/krita/
