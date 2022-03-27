@@ -39,7 +39,7 @@
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": "F3_Op_Erase",
+  "brushmanager.selected_brush": "deevad/pen",
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
@@ -64,10 +64,6 @@
             ],
             [
               "MyPaintBrushGroupTool",
-              "Experimental"
-            ],
-            [
-              "MyPaintBrushGroupTool",
               "Ramon"
             ],
             [
@@ -85,10 +81,14 @@
             [
               "MyPaintBrushGroupTool",
               "Tanda"
+            ],
+            [
+              "MyPaintBrushGroupTool",
+              "Experimental"
             ]
           ],
-          "active_page": 0,
-          "w": 242,
+          "active_page": 4,
+          "w": 236,
           "h": 286
         },
         {
@@ -96,10 +96,6 @@
             [
               "MyPaintBrushGroupTool",
               "quart"
-            ],
-            [
-              "MyPaintBrushGroupTool",
-              "Ksi_basic"
             ],
             [
               "MyPaintBrushGroupTool",
@@ -111,7 +107,7 @@
             ]
           ],
           "active_page": 0,
-          "w": 242,
+          "w": 236,
           "h": 314
         },
         {
@@ -119,8 +115,8 @@
           "active_page": -1
         }
       ],
-      "w": 242,
-      "h": 669
+      "w": 236,
+      "h": 612
     },
     "right_sidebar": {
       "groups": [
@@ -128,7 +124,18 @@
           "tools": [
             [
               "MyPaintBrushGroupTool",
-              "new"
+              "Ksi_basic"
+            ]
+          ],
+          "active_page": 0,
+          "w": 235,
+          "h": 286
+        },
+        {
+          "tools": [
+            [
+              "MyPaintBrushGroupTool",
+              "C_D"
             ]
           ],
           "active_page": 0,
@@ -141,7 +148,7 @@
         }
       ],
       "w": 235,
-      "h": 669
+      "h": 612
     },
     "floating": [],
     "position": {},
@@ -182,7 +189,7 @@
     "PenTablet Consumer Control:pen:4": {},
     "COMPANY 2.4G Device Keyboard:mouse:4": {}
   },
-  "colors.current": "#000000",
+  "colors.current": "#525252",
   "colors.palette": {
     "name": "MyPaint Default",
     "columns": 7,
@@ -502,11 +509,11 @@
   "ui.file_compat_warning_mild": true,
   "ui.file_compat_warning_severe": true,
   "colors.history": [
-    "#9bbbcb",
-    "#3e4b51",
-    "#1f2528",
     "#1b2428",
-    "#4d5d66"
+    "#4d5d66",
+    "#b8baae",
+    "#000000",
+    "#525252"
   ],
   "brush_chooser.default.window_size": [
     256,

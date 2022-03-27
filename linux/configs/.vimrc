@@ -1,4 +1,4 @@
-" Plugins {{{
+"" Plugins {{{
 call plug#begin('~/.vim/plugged')
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
@@ -15,6 +15,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat' 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-unimpaired'
 Plug 'valloric/matchtagalways'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -300,12 +301,21 @@ augroup allAutoCmds
     autocmd FileType python :iabbrev <buffer> iff if:<left>
     autocmd FileType vim setlocal foldmethod=marker
     autocmd FileType markdown :onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
+    autocmd FileType c,cpp,java,php,myb,rust,javascript,typescript autocmd BufWritePre <buffer> %s/\s\+$//e
 augroup END
 
 " NeoVim specific config
 if !has('nvim')
     
 endif
+
+if executable('rg')
+    set grepprg=rg\ --color=never\ --vimgrep
+endif
+
+"command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
+command! -nargs=1 Ngrep grep "<args>" -g "*.md" $NOTES_DIR
+nnoremap <leader>nn :Ngrep 
 
 "==== Session ====
 "nmap <C-F5> :call MakeDefSession()<CR>
