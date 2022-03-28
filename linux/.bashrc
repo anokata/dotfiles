@@ -1,3 +1,4 @@
+set -e
 ### PATH/ENV
 source ~/dotfiles/linux/.env
 export TERM=screen-256color
