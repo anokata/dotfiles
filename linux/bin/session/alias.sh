@@ -102,22 +102,22 @@ alias clr='clear'
 
 # feh image view and refs
 alias fehs="feh -D30 -z ."
-alias feh='feh -FYr --action1 ";save-file-copy $PWD/%N" --action2 ";clipboard-set $PWD/%N"'
+alias feh='feh -FYr --action1 ";save-file-copy %F" --action2 ";clipboard-set %F"'
 alias fef='feh -f '
 alias fer="feh -f $DEFAULT_REFLIST"
-alias ref_anime="cd $REF_ANIME; fer"
-alias ref_scr="cd $SCREENS_BASE; fer"
-alias ref_scr2022="cd $SCREENS_DIR; fer"
-alias ref_me="cd $REF_TOME; fer"
-alias ref_art="cd $REF_ART; fer"
-alias ref_paint="cd $REF_PAINT; fer"
-alias ref_photo="cd $REF_PHOTO; fer"
-alias ref_prn="cd $REF_PRN; fer"
-alias ref_still="cd $REF_STILL; fer"
-alias ref_study="cd $REF_STUDY; fer"
-alias ref_forme="cd $REF_FORME; fer"
-alias ref_manga="cd $REF_MANGA; fer"
-alias ref_ppref="cd $REF_PPREF; fer"
+alias ref-anime="cd $REF_ANIME; fer"
+alias ref-scr="cd $SCREENS_BASE; fer"
+alias ref-scr2022="cd $SCREENS_DIR; fer"
+alias ref-me="cd $REF_TOME; fer"
+alias ref-art="cd $REF_ART; fer"
+alias ref-paint="cd $REF_PAINT; fer"
+alias ref-photo="cd $REF_PHOTO; fer"
+alias ref-prn="cd $REF_PRN; fer"
+alias ref-still="cd $REF_STILL; fer"
+alias ref-study="cd $REF_STUDY; fer"
+alias ref-forme="cd $REF_FORME; fer"
+alias ref-manga="cd $REF_MANGA; fer"
+alias ref-ppref="cd $REF_PPREF; fer"
 
 # sys config
 alias xresources-reload='xrdb ~/.Xresources'
