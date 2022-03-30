@@ -10,11 +10,11 @@ function _tmux_run () {
         else
             # create new session
             tmux new -s $TMUX_SESSION_NAME -d
-            tmux new-window -c $DOTFILES/linux
-            tmux new-window -c ~/ndw/
+            tmux new-window -c $DOTFILES_LINUX
+            # tmux new-window -c ~/ndw/
             # tmux split-window -c ~/sdata/
             # tmux new-window vifm
-            tmux new-window cmus
+            # tmux new-window cmus
             tmux new-window ranger
             tmux select-window -t 1
             tmux attach -t $TMUX_SESSION_NAME
