@@ -49,13 +49,13 @@ ctrl + super + F11
     clipboard-path-load-image
 
 ctrl + alt + d
-  rofi -show run -run-list-command "list-alias" -run-command "/bin/bash -i -c '{cmd}'"
+  rofi -show run
 
 super + d
   dmenu_run
 
 alt + d
-  rofi -show run
+  rofi-with-aliases
 
 super + ctrl + 9
   pacmd set-default-sink 0
