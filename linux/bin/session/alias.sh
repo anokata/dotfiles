@@ -158,6 +158,7 @@ alias gnome-terminal='gnome-terminal --full-screen'
 alias gterm='gnome-terminal --full-screen'
 alias rxvt='xresources-reload; urxvt'
 alias draw="wine64bit ~/sdata/bin/ptsai2/sai2.exe"
+alias ranger='. ranger'
 
 alias caps-toggle='xdotool key Caps_Lock'
 alias wm-window-name='xprop | grep WM_CLASS'

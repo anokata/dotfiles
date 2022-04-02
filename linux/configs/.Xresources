@@ -85,3 +85,6 @@ URxvt.keysym.M-o:             perl:keyboard-select:activate
 !#include "/home/sernam/dotfiles/linux/configs/.colors/themes/codeschool.dark.Xresources"
 !#include "/home/sernam/dotfiles/linux/configs/.colors/themes/google.dark.Xresources"
 !#include "/home/sernam/dotfiles/linux/configs/.colors/themes/londontube.dark.Xresources"
+
+! Keymap
+#include "/home/sernam/dotfiles/linux/configs/URxvt-keymap"

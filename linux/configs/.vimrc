@@ -89,6 +89,7 @@ let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
 set t_ut=
+set mouse=a
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 colorscheme soruby

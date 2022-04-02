@@ -1,0 +1,364 @@
+! ================= !
+! === Key Binds === !
+! ================= !
+
+!URxvt.keysym.C-a              : \033[25~a
+URxvt.keysym.C-A              : \033[26~a
+URxvt.keysym.M-a              : \033[28~a
+URxvt.keysym.M-A              : \033[29~a
+URxvt.keysym.C-M-a            : \033[31~a
+URxvt.keysym.C-M-A            : \033[32~a
+
+!URxvt.keysym.C-b              : \033[25~b
+URxvt.keysym.C-B              : \033[26~b
+URxvt.keysym.M-b              : \033[28~b
+URxvt.keysym.M-B              : \033[29~b
+URxvt.keysym.C-M-b            : \033[31~b
+URxvt.keysym.C-M-B            : \033[32~b
+
+!URxvt.keysym.C-c              : \033[25~c
+URxvt.keysym.C-C              : \033[26~c
+URxvt.keysym.M-c              : \033[28~c
+URxvt.keysym.M-C              : \033[29~c
+URxvt.keysym.C-M-c            : \033[31~c
+URxvt.keysym.C-M-C            : \033[32~c
+
+!URxvt.keysym.C-d              : \033[25~d
+URxvt.keysym.C-D              : \033[26~d
+URxvt.keysym.M-d              : \033[28~d
+URxvt.keysym.M-D              : \033[29~d
+URxvt.keysym.C-M-d            : \033[31~d
+URxvt.keysym.C-M-D            : \033[32~d
+
+!URxvt.keysym.C-e              : \033[25~e
+URxvt.keysym.C-E              : \033[26~e
+URxvt.keysym.M-e              : \033[28~e
+URxvt.keysym.M-E              : \033[29~e
+URxvt.keysym.C-M-e            : \033[31~e
+URxvt.keysym.C-M-E            : \033[32~e
+
+!URxvt.keysym.C-f              : \033[25~f
+URxvt.keysym.C-F              : \033[26~f
+URxvt.keysym.M-f              : \033[28~f
+URxvt.keysym.M-F              : \033[29~f
+URxvt.keysym.C-M-f            : \033[31~f
+URxvt.keysym.C-M-F            : \033[32~f
+
+!URxvt.keysym.C-g              : \033[25~g
+URxvt.keysym.C-G              : \033[26~g
+URxvt.keysym.M-g              : \033[28~g
+URxvt.keysym.M-G              : \033[29~g
+URxvt.keysym.C-M-g            : \033[31~g
+URxvt.keysym.C-M-G            : \033[32~g
+
+!URxvt.keysym.C-h              : \033[25~h
+URxvt.keysym.C-H              : \033[26~h
+URxvt.keysym.M-h              : \033[28~h
+URxvt.keysym.M-H              : \033[29~h
+URxvt.keysym.C-M-h            : \033[31~h
+URxvt.keysym.C-M-H            : \033[32~h
+
+!URxvt.keysym.C-i              : \033[25~i
+URxvt.keysym.C-I              : \033[26~i
+URxvt.keysym.M-i              : \033[28~i
+URxvt.keysym.M-I              : \033[29~i
+URxvt.keysym.C-M-i            : \033[31~i
+URxvt.keysym.C-M-I            : \033[32~i
+
+!URxvt.keysym.C-j              : \033[25~j
+URxvt.keysym.C-J              : \033[26~j
+URxvt.keysym.M-j              : \033[28~j
+URxvt.keysym.M-J              : \033[29~j
+URxvt.keysym.C-M-j            : \033[31~j
+URxvt.keysym.C-M-J            : \033[32~j
+
+!URxvt.keysym.C-k              : \033[25~k
+URxvt.keysym.C-K              : \033[26~k
+URxvt.keysym.M-k              : \033[28~k
+URxvt.keysym.M-K              : \033[29~k
+URxvt.keysym.C-M-k            : \033[31~k
+URxvt.keysym.C-M-K            : \033[32~k
+
+!URxvt.keysym.C-l              : \033[25~l
+URxvt.keysym.C-L              : \033[26~l
+URxvt.keysym.M-l              : \033[28~l
+URxvt.keysym.M-L              : \033[29~l
+URxvt.keysym.C-M-l            : \033[31~l
+URxvt.keysym.C-M-L            : \033[32~l
+
+!URxvt.keysym.C-m              : \033[25~m
+URxvt.keysym.C-M              : \033[26~m
+URxvt.keysym.M-m              : \033[28~m
+URxvt.keysym.M-M              : \033[29~m
+URxvt.keysym.C-M-m            : \033[31~m
+URxvt.keysym.C-M-M            : \033[32~m
+
+!URxvt.keysym.C-n              : \033[25~n
+URxvt.keysym.C-N              : \033[26~n
+URxvt.keysym.M-n              : \033[28~n
+URxvt.keysym.M-N              : \033[29~n
+URxvt.keysym.C-M-n            : \033[31~n
+URxvt.keysym.C-M-N            : \033[32~n
+
+!URxvt.keysym.C-o              : \033[25~o
+URxvt.keysym.C-O              : \033[26~o
+URxvt.keysym.M-o              : \033[28~o
+URxvt.keysym.M-O              : \033[29~o
+URxvt.keysym.C-M-o            : \033[31~o
+URxvt.keysym.C-M-O            : \033[32~o
+
+!URxvt.keysym.C-p              : \033[25~p
+URxvt.keysym.C-P              : \033[26~p
+URxvt.keysym.M-p              : \033[28~p
+URxvt.keysym.M-P              : \033[29~p
+URxvt.keysym.C-M-p            : \033[31~p
+URxvt.keysym.C-M-P            : \033[32~p
+
+!URxvt.keysym.C-q              : \033[25~q
+URxvt.keysym.C-Q              : \033[26~q
+URxvt.keysym.M-q              : \033[28~q
+URxvt.keysym.M-Q              : \033[29~q
+URxvt.keysym.C-M-q            : \033[31~q
+URxvt.keysym.C-M-Q            : \033[32~q
+
+!URxvt.keysym.C-r              : \033[25~r
+URxvt.keysym.C-R              : \033[26~r
+URxvt.keysym.M-r              : \033[28~r
+URxvt.keysym.M-R              : \033[29~r
+URxvt.keysym.C-M-r            : \033[31~r
+URxvt.keysym.C-M-R            : \033[32~r
+
+!URxvt.keysym.C-s              : \033[25~s
+URxvt.keysym.C-S              : \033[26~s
+URxvt.keysym.M-s              : \033[28~s
+URxvt.keysym.M-S              : \033[29~s
+URxvt.keysym.C-M-s            : \033[31~s
+URxvt.keysym.C-M-S            : \033[32~s
+
+!URxvt.keysym.C-t              : \033[25~t
+URxvt.keysym.C-T              : \033[26~t
+URxvt.keysym.M-t              : \033[28~t
+URxvt.keysym.M-T              : \033[29~t
+URxvt.keysym.C-M-t            : \033[31~t
+URxvt.keysym.C-M-T            : \033[32~t
+
+!URxvt.keysym.C-u              : \033[25~u
+URxvt.keysym.C-U              : \033[26~u
+URxvt.keysym.M-u              : \033[28~u
+URxvt.keysym.M-U              : \033[29~u
+URxvt.keysym.C-M-u            : \033[31~u
+URxvt.keysym.C-M-U            : \033[32~u
+
+!URxvt.keysym.C-v              : \033[25~v
+URxvt.keysym.C-V              : \033[26~v
+URxvt.keysym.M-v              : \033[28~v
+URxvt.keysym.M-V              : \033[29~v
+URxvt.keysym.C-M-v            : \033[31~v
+URxvt.keysym.C-M-V            : \033[32~v
+
+!URxvt.keysym.C-w              : \033[25~w
+URxvt.keysym.C-W              : \033[26~w
+URxvt.keysym.M-w              : \033[28~w
+URxvt.keysym.M-W              : \033[29~w
+URxvt.keysym.C-M-w            : \033[31~w
+URxvt.keysym.C-M-W            : \033[32~w
+
+!URxvt.keysym.C-x              : \033[25~x
+URxvt.keysym.C-X              : \033[26~x
+URxvt.keysym.M-x              : \033[28~x
+URxvt.keysym.M-X              : \033[29~x
+URxvt.keysym.C-M-x            : \033[31~x
+URxvt.keysym.C-M-X            : \033[32~x
+
+!URxvt.keysym.C-y              : \033[25~y
+URxvt.keysym.C-Y              : \033[26~y
+URxvt.keysym.M-y              : \033[28~y
+URxvt.keysym.M-Y              : \033[29~y
+URxvt.keysym.C-M-y            : \033[31~y
+URxvt.keysym.C-M-Y            : \033[32~y
+
+!URxvt.keysym.C-z             : \033[25~z
+URxvt.keysym.C-Z              : \033[26~z
+URxvt.keysym.M-z              : \033[28~z
+URxvt.keysym.M-Z              : \033[29~z
+URxvt.keysym.C-M-z            : \033[31~z
+URxvt.keysym.C-M-Z            : \033[32~z
+
+URxvt.keysym.C-grave          : \033[25~`
+URxvt.keysym.C-asciitilde     : \033[26~~
+URxvt.keysym.M-grave          : \033[28~`
+URxvt.keysym.M-asciitilde     : \033[29~~
+URxvt.keysym.C-M-grave        : \033[31~`
+URxvt.keysym.C-M-asciitilde   : \033[32~~
+
+URxvt.keysym.C-1              : \033[25~1
+URxvt.keysym.C-exclam         : \033[26~!
+URxvt.keysym.M-1              : \033[28~1
+URxvt.keysym.M-exclam         : \033[29~!
+URxvt.keysym.C-M-1            : \033[31~1
+URxvt.keysym.C-M-exclam       : \033[32~!
+
+URxvt.keysym.C-2              : \033[25~2
+URxvt.keysym.C-at             : \033[26~@
+URxvt.keysym.M-2              : \033[28~2
+URxvt.keysym.M-at             : \033[29~@
+URxvt.keysym.C-M-2            : \033[31~2
+URxvt.keysym.C-M-at           : \033[32~@
+
+URxvt.keysym.C-3              : \033[25~3
+URxvt.keysym.C-numbersign     : \033[26~#
+URxvt.keysym.M-3              : \033[28~3
+URxvt.keysym.M-numbersign     : \033[29~#
+URxvt.keysym.C-M-3            : \033[31~3
+URxvt.keysym.C-M-numbersign   : \033[32~#
+
+URxvt.keysym.C-4              : \033[25~4
+URxvt.keysym.C-dollar         : \033[26~$
+URxvt.keysym.M-4              : \033[28~4
+URxvt.keysym.M-dollar         : \033[29~$
+URxvt.keysym.C-M-4            : \033[31~4
+URxvt.keysym.C-M-dollar       : \033[32~$
+
+URxvt.keysym.C-5              : \033[25~5
+URxvt.keysym.C-percent        : \033[26~%
+URxvt.keysym.M-5              : \033[28~5
+URxvt.keysym.M-percent        : \033[29~%
+URxvt.keysym.C-M-5            : \033[31~5
+URxvt.keysym.C-M-percent      : \033[32~%
+
+URxvt.keysym.C-6              : \033[25~6
+URxvt.keysym.C-asciicircum    : \033[26~^
+URxvt.keysym.M-6              : \033[28~6
+URxvt.keysym.M-asciicircum    : \033[29~^
+URxvt.keysym.C-M-6            : \033[31~6
+URxvt.keysym.C-M-asciicircum  : \033[32~^
+
+URxvt.keysym.C-7              : \033[25~7
+URxvt.keysym.C-ampersand      : \033[26~&
+URxvt.keysym.M-7              : \033[28~7
+URxvt.keysym.M-ampersand      : \033[29~&
+URxvt.keysym.C-M-7            : \033[31~7
+URxvt.keysym.C-M-ampersand    : \033[32~&
+
+URxvt.keysym.C-8              : \033[25~8
+URxvt.keysym.C-asterisk       : \033[26~*
+URxvt.keysym.M-8              : \033[28~8
+URxvt.keysym.M-asterisk       : \033[29~*
+URxvt.keysym.C-M-8            : \033[31~8
+URxvt.keysym.C-M-asterisk     : \033[32~*
+
+URxvt.keysym.C-9              : \033[25~9
+URxvt.keysym.C-parenleft      : \033[26~(
+URxvt.keysym.M-9              : \033[28~9
+URxvt.keysym.M-parenleft      : \033[29~(
+URxvt.keysym.C-M-9            : \033[31~9
+URxvt.keysym.C-M-parenleft    : \033[32~(
+
+URxvt.keysym.C-0              : \033[25~0
+URxvt.keysym.C-parenright     : \033[26~)
+URxvt.keysym.M-0              : \033[28~0
+URxvt.keysym.M-parenright     : \033[29~)
+URxvt.keysym.C-M-0            : \033[31~0
+URxvt.keysym.C-M-parenright   : \033[32~)
+
+URxvt.keysym.C-minus          : \033[25~-
+URxvt.keysym.C-underscore     : \033[26~_
+URxvt.keysym.M-minus          : \033[28~-
+URxvt.keysym.M-underscore     : \033[29~_
+URxvt.keysym.C-M-minus        : \033[31~-
+URxvt.keysym.C-M-underscore   : \033[32~_
+
+URxvt.keysym.C-equal          : \033[25~=
+URxvt.keysym.C-plus           : \033[26~+
+URxvt.keysym.M-equal          : \033[28~=
+URxvt.keysym.M-plus           : \033[29~+
+URxvt.keysym.C-M-equal        : \033[31~=
+URxvt.keysym.C-M-plus         : \033[32~+
+
+URxvt.keysym.C-bracketleft    : \033[25~[
+URxvt.keysym.C-braceleft      : \033[26~{
+URxvt.keysym.M-bracketleft    : \033[28~[
+URxvt.keysym.M-braceleft      : \033[29~{
+URxvt.keysym.C-M-bracketleft  : \033[31~[
+URxvt.keysym.C-M-braceleft    : \033[32~{
+
+URxvt.keysym.C-bracketright   : \033[25~]
+URxvt.keysym.C-braceright     : \033[26~}
+URxvt.keysym.M-bracketright   : \033[28~]
+URxvt.keysym.M-braceright     : \033[29~}
+URxvt.keysym.C-M-bracketright : \033[31~]
+URxvt.keysym.C-M-braceright   : \033[32~}
+
+URxvt.keysym.C-backslash      : \033[25~<Backslash>
+URxvt.keysym.C-bar            : \033[26~|
+URxvt.keysym.M-backslash      : \033[28~<Backslash>
+URxvt.keysym.M-bar            : \033[29~|
+URxvt.keysym.C-M-backslash    : \033[31~<Backslash>
+URxvt.keysym.C-M-bar          : \033[32~|
+
+URxvt.keysym.C-semicolon      : \033[25~;
+URxvt.keysym.C-colon          : \033[26~:
+URxvt.keysym.M-semicolon      : \033[28~;
+URxvt.keysym.M-colon          : \033[29~:
+URxvt.keysym.C-M-semicolon    : \033[31~;
+URxvt.keysym.C-M-colon        : \033[32~:
+
+URxvt.keysym.C-apostrophe     : \033[25~'
+URxvt.keysym.C-quotedbl       : \033[26~"
+URxvt.keysym.M-apostrophe     : \033[28~'
+URxvt.keysym.M-quotedbl       : \033[29~"
+URxvt.keysym.C-M-apostrophe   : \033[31~'
+URxvt.keysym.C-M-quotedbl     : \033[32~"
+
+URxvt.keysym.C-comma          : \033[25~,
+URxvt.keysym.C-less           : \033[26~<
+URxvt.keysym.M-comma          : \033[28~,
+URxvt.keysym.M-less           : \033[29~<
+URxvt.keysym.C-M-comma        : \033[31~,
+URxvt.keysym.C-M-less         : \033[32~<
+
+URxvt.keysym.C-period         : \033[25~.
+URxvt.keysym.C-greater        : \033[26~>
+URxvt.keysym.M-period         : \033[28~.
+URxvt.keysym.M-greater        : \033[29~>
+URxvt.keysym.C-M-period       : \033[31~.
+URxvt.keysym.C-M-greater      : \033[32~>
+
+URxvt.keysym.C-slash          : \033[25~/
+URxvt.keysym.C-question       : \033[26~?
+URxvt.keysym.M-slash          : \033[28~/
+URxvt.keysym.M-question       : \033[29~?
+URxvt.keysym.C-M-slash        : \033[31~/
+URxvt.keysym.C-M-question     : \033[32~?
+
+URxvt.keysym.C-Return         : \033[25~<CR>
+URxvt.keysym.C-S-Return       : \033[26~<CR>
+URxvt.keysym.M-Return         : \033[28~<CR>
+URxvt.keysym.M-S-Return       : \033[29~<CR>
+URxvt.keysym.C-M-Return       : \033[31~<CR>
+URxvt.keysym.C-M-S-Return     : \033[32~<CR>
+URxvt.keysym.S-Return         : \033[33~<CR>
+
+URxvt.keysym.C-BackSpace      : \033[25~<BS>
+URxvt.keysym.C-S-BackSpace    : \033[26~<BS>
+URxvt.keysym.M-BackSpace      : \033[28~<BS>
+URxvt.keysym.M-S-BackSpace    : \033[29~<BS>
+URxvt.keysym.C-M-BackSpace    : \033[31~<BS>
+URxvt.keysym.C-M-S-BackSpace  : \033[32~<BS>
+URxvt.keysym.S-BackSpace      : \033[33~<BS>
+
+URxvt.keysym.C-Tab            : \033[25~<Tab>
+URxvt.keysym.C-S-Tab          : \033[26~<Tab>
+URxvt.keysym.M-Tab            : \033[28~<Tab>
+URxvt.keysym.M-S-Tab          : \033[29~<Tab>
+URxvt.keysym.C-M-Tab          : \033[31~<Tab>
+URxvt.keysym.C-M-S-Tab        : \033[32~<Tab>
+URxvt.keysym.S-Tab            : \033[33~<Tab>
+
+URxvt.keysym.C-space          : \033[25~<space>
+URxvt.keysym.C-S-space        : \033[26~<space>
+URxvt.keysym.M-space          : \033[28~<space>
+URxvt.keysym.M-S-space        : \033[29~<space>
+URxvt.keysym.C-M-space        : \033[31~<space>
+URxvt.keysym.C-M-S-space      : \033[32~<space>
+URxvt.keysym.S-space          : \033[33~<space>
