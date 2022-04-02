@@ -141,6 +141,7 @@ alias config-ranger="$EDITOR $DOTFILES_CONFIGS/ranger/"
 alias config-env="$EDITOR $DOTFILES_LINUX/.env && bashrc-reload"
 alias config-draw-mypaint-brushes="$EDITOR $MYPAINT_BRUSHES"
 alias config-draw-mypaint="$EDITOR $MYPAINT"
+alias config-kitty="$EDITOR $DOTFILES_CONFIGS/kitty/kitty.conf"
 
 
 # sound

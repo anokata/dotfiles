@@ -351,3 +351,5 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 " nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
 "nnoremap <leader>n :cnext<cr>
 " nnoremap <leader>l :cclose<cr>
+nmap <ALT-c> :echo hi<CR>
+nmap <A-c> :echo 'hi'<CR>
