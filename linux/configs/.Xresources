@@ -10,6 +10,8 @@ Xft.lcdfilter: lcddefault
 URxvt.cursorUnderline: false
 URxvt.perl-ext-common: default,matcher,font-size,url-select,keyboard-select,fullscreen
 URxvt.keysym.F11:       perl:fullscreen:switch
+URxvt*meta8: boolean
+URxvt.meta8: boolean
 
 ! URxvt Appearance
 URxvt.font: xft:FiraCode Nerd Font:regular:size=12, xft:Hack Nerd Font:size=12, xft:DejaVu Sans:size=12, xft:Symbola:size=9

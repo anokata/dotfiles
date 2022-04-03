@@ -1,7 +1,7 @@
 #set -e
 ### PATH/ENV
 source ~/dotfiles/linux/.env
-export TERM=screen-256color
+#export TERM=screen-256color
 
 ### Imports
 source ~/dotfiles/linux/bin/session/alias.sh
