@@ -25,15 +25,28 @@ HISTCONTROL=ignoreboth
 bind -m vi-command '"v": abort'
 
 # Bindings
+# FM
+bind -x '"\eOS":"ranger"' # F4
 bind -x '"\e[1;5S":"ranger"' # C-F4
 bind -x '"\e[1;6S":"tmux new-window ranger"' # C-S-F4
+bind -x '"\e[15;5~":"nnn"' # C-F5
+bind -x '"\e[15~":"nnn"' # C-F5
+
 bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
-bind -x '"\e[1;5P":"vim $DOTFILES"' # C-F1
+
+## vim
+bind -x '"\e[1;6P":"$EDITOR $DOTFILES"' # C-S-F1
+bind -x '"\e[1;5P":"$EDITOR"' # C-F1
+bind -x '"\eOP":"$EDITOR"' # F1
+bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
 bind -x '"\C-e":"$EDITOR $(fzf)"' # C-e fzf and open in vim
+
+#
 
 
 ### Plug
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/,.git/}"'
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 [ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 [ -f /usr/share/git/completion/git-completion.bash ] && source /usr/share/git/completion/git-completion.bash

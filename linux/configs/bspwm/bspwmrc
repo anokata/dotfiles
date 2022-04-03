@@ -6,8 +6,9 @@ dunst &
 xrdb "/home/$(whoami)/.Xresources"
 nm-applet &
 $HOME/.config/polybar/launch.sh
-#terminal &
-pidof urxvt >/dev/null || terminal &
+#pidof urxvt >/dev/null || terminal &
+pidof kitty >/dev/null &
+#pidof st >/dev/null &
 pidof obsidian >/dev/null || obsidian &
 pidof chrome >/dev/null || google-chrome &
 dropbox start &

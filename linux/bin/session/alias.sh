@@ -164,6 +164,9 @@ alias xkitty='kitty --start-as fullscreen'
 alias icat="kitty +kitten icat"
 alias st="st -g 180x50 tmux a"
 
+# Org
+alias vimdoc="$EDITOR $NOTES_DIR"
+
 alias caps-toggle='xdotool key Caps_Lock'
 alias wm-window-name='xprop | grep WM_CLASS'
 
