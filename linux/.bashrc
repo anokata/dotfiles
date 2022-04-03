@@ -24,6 +24,14 @@ stty -ixon # for not stop draw at C-s (C-q restore)
 HISTCONTROL=ignoreboth
 bind -m vi-command '"v": abort'
 
+# Bindings
+bind -x '"\e[1;5S":"ranger"' # C-F4
+bind -x '"\e[1;6S":"tmux new-window ranger"' # C-S-F4
+bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
+bind -x '"\e[1;5P":"vim $DOTFILES"' # C-F1
+bind -x '"\C-e":"$EDITOR $(fzf)"' # C-e fzf and open in vim
+
+
 ### Plug
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /etc/bash_completion ] && source /etc/bash_completion

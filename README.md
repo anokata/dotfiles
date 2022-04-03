@@ -8,6 +8,10 @@
 - mac - mac os configs
 - windows - win configs and scripts
 
+configs:
+
+    inputrc - readline key bindings
+
 ---
 
 # INSTALL:
