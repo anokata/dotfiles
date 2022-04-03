@@ -1,3 +1,5 @@
+$include /etc/inputrc
+
 "\C-p":history-search-backward
 "\C-n":history-search-forward
 
@@ -8,3 +10,7 @@ set mark-symlinked-directories On
 set show-all-if-ambiguous On
 set show-all-if-unmodified On
 set visible-stats On
+
+set show-mode-in-prompt on
+set vi-ins-mode-string "\033[0;33m+"
+set vi-cmd-mode-string "\033[0;32m "

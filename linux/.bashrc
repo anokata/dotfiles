@@ -24,6 +24,11 @@ stty -ixon # for not stop draw at C-s (C-q restore)
 HISTCONTROL=ignoreboth
 bind -m vi-command '"v": abort'
 
+# Bindings
+#bind -x '"\e":""'
+bind -x '"\e[1;5S":"echo sm"'
+
+
 ### Plug
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /etc/bash_completion ] && source /etc/bash_completion
