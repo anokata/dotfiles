@@ -1,0 +1,47 @@
+$include /etc/inputrc
+
+"\C-p":history-search-backward
+"\C-n":history-search-forward
+
+set echo-control-characters off
+
+# Color files by types
+set colored-stats On
+set completion-ignore-case On
+set completion-prefix-display-length 3
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set visible-stats On
+set colored-completion-prefix On
+set menu-complete-display-prefix On
+
+set show-mode-in-prompt on
+#set vi-ins-mode-string "\033[0;33m+"
+#set vi-cmd-mode-string "\033[0;32m "
+# Different cursor on vi mode
+set vi-ins-mode-string \1\e[6 q\2
+set vi-cmd-mode-string \1\e[2 q\2
+
+# c-a-l append | less
+"\e\C-l": "\e$a | less\e\C-m"
+
+# c-l clear
+"\C-l": "\e0Diclear\e\C-m"
+
+# c-a-d clear cmd
+"\e\C-l": "\e0D"
+
+# alt-s  prepend with sudo
+"\es": "\e0isudo \e$"
+
+# c-b to background
+"\e\C-b": "\C-e > /dev/null 2>&1 &\C-m"
+
+# "\e\C-": "\e0Di \C-m"
+# apps
+# c-a-n nnn
+"\e\C-n": "\e0Dinnn\C-m"
+"\C-\eOS": "\e0Dinnn\C-m"
+#bind -x '"\e[1;5S":"echo sm"'
+"\e[1;5S":"\e0Dinnn\C-m"
