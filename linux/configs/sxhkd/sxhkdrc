@@ -36,6 +36,10 @@ super + F11
 ctrl + shift + F12
   ~/dotfiles/linux/bin/timer
 
+# TODO
+#ctrl + shift + F11
+  #~/dotfiles/linux/bin/timer-interval
+
 ctrl + F12
   ~/dotfiles/linux/bin/screenshot-area
 
