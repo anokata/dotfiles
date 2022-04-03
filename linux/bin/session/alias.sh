@@ -162,6 +162,7 @@ alias draw="wine64bit ~/sdata/bin/ptsai2/sai2.exe"
 alias ranger='. ranger'
 alias xkitty='kitty --start-as fullscreen'
 alias icat="kitty +kitten icat"
+alias st="st -g 180x50 tmux a"
 
 alias caps-toggle='xdotool key Caps_Lock'
 alias wm-window-name='xprop | grep WM_CLASS'
