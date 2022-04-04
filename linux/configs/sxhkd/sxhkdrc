@@ -52,6 +52,7 @@ super + F12
 ctrl + super + F11
     clipboard-path-load-image
 
+# Rofi
 ctrl + alt + d
   rofi -show run
 
@@ -61,6 +62,10 @@ super + d
 alt + d
   rofi-with-aliases
 
+alt + w
+  rofi -show window
+
+# sound
 super + ctrl + 9
   pacmd set-default-sink 0
 
