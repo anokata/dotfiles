@@ -39,7 +39,8 @@ bind -x '"\e[1;6P":"$EDITOR $DOTFILES"' # C-S-F1
 bind -x '"\e[1;5P":"$EDITOR"' # C-F1
 bind -x '"\eOP":"$EDITOR"' # F1
 bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
-bind -x '"\C-e":"$EDITOR $(fzf)"' # C-e fzf and open in vim
+bind -x '"\C-f":"$EDITOR $(fzf)"' # C-e fzf and open in vim
+bind -x '"\C-o":"$EDITOR $(fzf)"' # C-e fzf and open in vim
 
 #
 

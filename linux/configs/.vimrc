@@ -185,6 +185,7 @@ nmap tl :tabprev<CR>
 "nmap <leader>f :set foldmethod=indent<CR>
 nmap <leader>f :FZF!<CR>
 nmap <C-f> :FZF<CR>
+nmap <C-A-o> :FZF<CR>
 nmap <leader>a za
 " fold all
 " copy to system buffer
