@@ -7,14 +7,13 @@ xrdb "/home/$(whoami)/.Xresources"
 nm-applet &
 $HOME/.config/polybar/launch.sh
 #pidof urxvt >/dev/null || terminal &
-pidof kitty >/dev/null &
+pidof kitty >/dev/null & kitty
 #pidof st >/dev/null &
 pidof obsidian >/dev/null || obsidian &
 pidof chrome >/dev/null || google-chrome &
 dropbox start &
 xsetroot -solid "#202020"
 
-#bspc monitor -d I II III IV V VI VII VIII IX
 #bspc monitor -d "一" "二" "三" "四" "五" "六" "七" "八" "九"
 bspc monitor HDMI-1 -d "一" II III IV V
 bspc monitor DP-3 -d VI VII VIII IX X
@@ -28,7 +27,8 @@ bspc config gapless_monocle      true
 
 bspc rule -a google-chrome desktop='^1'
 bspc rule -a urxvt desktop='^5'
-bspc rule -a terminal desktop='^5'
+bspc rule -a kitty desktop='^2'
+bspc rule -a st desktop='^2'
 bspc rule -a Nautilus desktop='^2'
 bspc rule -a thunar desktop='^2'
 bspc rule -a Code desktop='^2'
