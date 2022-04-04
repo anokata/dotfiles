@@ -8,7 +8,7 @@ alt + x; m ; l
 
 # Applications
 alt + Return
-    terminal
+    kitty
 ctrl + alt + t
     gnome-terminal
 super + F1
@@ -53,17 +53,15 @@ ctrl + super + F11
     clipboard-path-load-image
 
 # Rofi
-ctrl + alt + d
-  rofi -show run
-
-super + d
-  dmenu_run
-
+#super + d
 alt + d
   rofi-with-aliases
 
 alt + w
   rofi -show window
+
+ctrl + alt + d
+  bash -i -c $(list-alias | rofi -dmenu)
 
 # sound
 super + ctrl + 9
