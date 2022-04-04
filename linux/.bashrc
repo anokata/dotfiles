@@ -25,6 +25,10 @@ HISTCONTROL=ignoreboth
 bind -m vi-command '"v": abort'
 
 # Bindings
+# Move
+bind -x '"\e[1;5A":"cd .."' # c-up
+bind -x '"\e[1;5A":"cd -"' # c-left
+
 # FM
 bind -x '"\eOS":"ranger"' # F4
 bind -x '"\e[1;5S":"ranger"' # C-F4

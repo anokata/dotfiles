@@ -16,6 +16,7 @@ alias cdc="cd $DOTFILES_CONFIGS"
 alias cdl="cd $LINKS_DIR"
 alias cdn="cd $WORK_DIR"
 alias cdn3="cd $WORK_DIR/ndw3-without-isw/"
+alias c="pushd "
 
 # Files info
 alias l='ls -CF'
