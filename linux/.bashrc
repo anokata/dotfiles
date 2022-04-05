@@ -1,7 +1,7 @@
 #set -e
 ### PATH/ENV
 source ~/dotfiles/linux/.env
-#export TERM=screen-256color
+export TERM=screen-256color
 
 ### Imports
 source ~/dotfiles/linux/bin/session/alias.sh
@@ -33,8 +33,8 @@ bind -x '"\e[1;5A":"cd -"' # c-left
 bind -x '"\eOS":"ranger"' # F4
 bind -x '"\e[1;5S":"ranger"' # C-F4
 bind -x '"\e[1;6S":"tmux new-window ranger"' # C-S-F4
-bind -x '"\e[15;5~":"nnn"' # C-F5
-bind -x '"\e[15~":"nnn"' # F5
+bind -x '"\e[15;5~":"fff"' # C-F5
+bind -x '"\e[15~":"fff"' # F5
 
 bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
 
