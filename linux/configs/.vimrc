@@ -69,7 +69,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
 
 " File browse
 let g:NERDTreeWinPos = "left"
-let g:NERDTreeChDirMode = 2
+let g:NERDTreeChDirMode = 3
 let NERDTreeIgnore = ['\.pyc$', '\node_modules']
 nmap <C-b> :NERDTreeToggle<CR>
 nmap <leader>c :TlistToggle<CR>
@@ -319,7 +319,7 @@ let @n='/"WebReports.Controls.Report"bbbi"exportFormats":["PDF","DOC","XLS","CS
 " right way to use autocmd 
 augroup allAutoCmds
     autocmd!
-    autocmd DirChanged global :NERDTreeCWD
+    "autocmd DirChanged global :NERDTreeCWD
     autocmd FileType netrw setlocal bufhidden=wipe
     autocmd FileType python :iabbrev <buffer> iff if:<left>
     autocmd FileType vim setlocal foldmethod=marker
@@ -355,3 +355,31 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 nmap <C-q> :qa<CR>
 nmap <C-A-q> :qa!<CR>
 nmap <C-UP> :tc ..<CR>:pwd<CR>
+
+" mirroring configs
+nmap <leader>xb ,t:e $DOTFILES/linux/.bashrc<CR>
+nmap <leader>xa ,t:e $DOTFILES_BIN/session/alias.sh<CR>
+nmap <leader>xt ,t:e $DOTFILES_CONFIGS/.tmux.conf<CR>
+nmap <leader>xb ,t:e $DOTFILES_CONFIGS/bspwm/bspwmrc<CR>
+nmap <leader>xs ,t:e $DOTFILES_CONFIGS/sxhkd/sxhkdrc<CR>
+"nmap <leader>x1 ,t:e $DOTFILES_CONFIGS/polybar/config.ini<CR>
+nmap <leader>xx ,t:e $DOTFILES_CONFIGS/.Xresources<CR>
+nmap <leader>xi ,t:e $DOTFILES_LINUX/.inputrc<CR>
+nmap <leader>xr ,t:e $DOTFILES_CONFIGS/ranger/<CR>
+nmap <leader>xe ,t:e $DOTFILES_LINUX/.env<CR>
+nmap <leader>xk ,t:e $DOTFILES_CONFIGS/kitty/kitty.conf<CR>
+
+nmap <leader>zD :e $DOTFILES<CR>
+nmap <leader>zl :e $DOTFILES_LINUX<CR>
+nmap <leader>zb :e $DOTFILES_BIN<CR>
+nmap <leader>zc :e $DOTFILES_CONFIGS<CR>
+nmap <leader>zn :e $NOTES_DIR<CR>
+nmap <leader>zw :e $WORK_DIR<CR>
+"nmap <leader>zB :e $BACKUPS<CR>
+"nmap <leader>zl :e $LINKS_DIR<CR>
+"nmap <leader>z1 :e $DRAW_DIR<CR>
+"nmap <leader>z1 :e $SCREENS_BASE<CR>
+"nmap <leader>z1 :e $REF_BASE<CR>
+"nmap <leader>z1 :e $HDD1<CR>
+"nmap <leader>z1 :e $HDD2<CR>
+"nmap <leader>z1 :e $SSD<CR>

@@ -35,18 +35,25 @@ bind -x '"\e[1;5S":"ranger"' # C-F4
 bind -x '"\e[1;6S":"tmux new-window ranger"' # C-S-F4
 bind -x '"\e[15;5~":"fff"' # C-F5
 bind -x '"\e[15~":"fff"' # F5
+# list
+#bind -x '"\e[15~":"ls"' # a-l 
+
+# tmux
+#bind -x '"\e[1;5A":"tmux new-window"' # c-
+
 
 bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
 
 ## vim
 bind -x '"\e[1;6P":"$EDITOR $DOTFILES"' # C-S-F1
-bind -x '"\e[1;5P":"$EDITOR"' # C-F1
+bind -x '"\e[1;5P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # C-F1
 bind -x '"\eOP":"$EDITOR"' # F1
 bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
 bind -x '"\C-f":"$EDITOR $(fzf)"' # C-e fzf and open in vim
 bind -x '"\C-o":"$EDITOR $(fzf)"' # C-e fzf and open in vim
 
 #
+
 
 
 ### Plug
