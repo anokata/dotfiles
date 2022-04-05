@@ -31,7 +31,7 @@ highlight Identifier                guifg=yellow ctermfg=73 gui=NONE cterm=NONE
 highlight Include                   guifg=#ff6458 ctermfg=173 gui=NONE cterm=NONE
 highlight PreCondit                 guifg=yellow ctermfg=173 gui=NONE cterm=NONE
 highlight Keyword                   guifg=yellow ctermfg=173 cterm=NONE
-highlight LineNr                    guifg=#9E9E9E ctermfg=159 guibg=#171717
+highlight LineNr                    guifg=#6E6E6E ctermfg=101 guibg=#171717
 highlight Number                    guifg=#A5C261 ctermfg=107
 highlight PreProc                   guifg=#CC7833 ctermfg=103
 highlight Search                    guifg=NONE ctermfg=NONE guibg=#2b2b2b ctermbg=235 gui=italic cterm=underline

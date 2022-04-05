@@ -349,6 +349,18 @@ nmap <C-q> :qa<CR>
 nmap <C-A-q> :qa!<CR>
 nmap <C-UP> :tc ..<CR>:pwd<CR>
 
+" duplicate line up/down
+nmap <C-A-k> yykp
+nmap <C-A-j> yyp
+nmap <C-A-UP> yykp
+nmap <C-A-DOWN> yyp
+" move line up/down
+nmap <A-UP> ddkP
+nmap <A-DOWN> ddp
+nmap <A-k> ddkP
+nmap <A-j> ddp
+
+
 " runtime ".vimrc-bind-files"
 " mirroring configs
 nmap <leader>xb ,t:e $DOTFILES/linux/.bashrc<CR>

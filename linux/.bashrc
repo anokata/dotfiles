@@ -47,6 +47,7 @@ bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
 bind -x '"\e[1;6P":"$EDITOR $DOTFILES"' # C-S-F1
 bind -x '"\e[1;5P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # C-F1
 bind -x '"\e[1;5Q":"$EDITOR $DOTFILES_LINUX/.bashrc"' # C-F2
+bind -x '"\eOQ":"$EDITOR $NOTES_DIR/"' # F2
 bind -x '"\eOP":"$EDITOR"' # F1
 bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
 bind -x '"\C-f":"$EDITOR $(fzf)"' # C-e fzf and open in vim
@@ -60,7 +61,7 @@ bind '"\e[6;5~":"cd $DOTFILES\C-m"' # C-num-3
 # bind '"\e[1;":"cd $DOTFILES_LINUX\C-m"' # C-num-0
 # bind '"\e[1;":"cd $DOTFILES_BIN\C-m"' # C-num-0
 # bind '"\e[1;":"cd $DOTFILES_CONFIGS\C-m"' # C-num-0
-# bind '"\e[1;":"cd $NOTES_DIR\C-m"' # C-num-0
+bind '"\e[1;5D":"cd $NOTES_DIR\C-m$EDITOR $(fzf)\C-m"' # C-num-4
 # bind '"\e[1;":"cd $WORK_DIR\C-m"' # C-num-0
 # bind '"\e[1;":"cd $BACKUPS\C-m"' # C-num-0
 # bind '"\e[1;":"cd $LINKS_DIR\C-m"' # C-num-0
