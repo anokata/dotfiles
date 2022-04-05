@@ -1,4 +1,4 @@
-"" Plugins {{{
+"" === Plugins === {{{
 call plug#begin('~/.vim/plugged')
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
@@ -34,10 +34,13 @@ Plug 'vim-scripts/code_complete'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'vim-ctrlspace/vim-ctrlspace'
-" Plug 'leafgarland/typescript-vim'
+Plug 'dylanaraps/fff.vim'
 
-" Plug 'stormherz/tablify'
+" Plug 'leafgarland/typescript-vim'
 call plug#end()
+
+nmap <localleader>pi :PlugInstall<CR>
+nmap <localleader>pc :PlugClean<CR>
 " }}}
 
 " Plugin settings let
@@ -67,7 +70,7 @@ let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
 
-" File browse
+" === FM ===
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeChDirMode = 3
 let NERDTreeIgnore = ['\.pyc$', '\node_modules']
@@ -76,13 +79,16 @@ nmap <leader>c :TlistToggle<CR>
 nmap <leader>x :TagbarToggle<CR>
 nmap <leader>l :TagbarToggle<CR>
 nmap <C-F1> :NERDTreeFind<CR>
-let g:ranger_map_keys = 0
+nmap <S-F1> :F<CR>
+nmap <leader>f :FZF!<CR>
+nmap <C-f> :FZF<CR>
+nmap <C-A-o> :FZF<CR>
 nmap <leader>r :Ranger<CR>
+let g:ranger_map_keys = 0
+let g:fff#split = "30vnew"
 "nmap <C-r> :Ranger<CR>
 "TODO Bind C-Fx S-Fx
 
-nmap <localleader>pi :PlugInstall<CR>
-nmap <localleader>pc :PlugClean<CR>
 
 " Color {{{
 let g:solarized_termcolors=256
@@ -183,9 +189,6 @@ nmap tl :tabprev<CR>
 " ==== Folding ====
 "nmap <leader>f zf)
 "nmap <leader>f :set foldmethod=indent<CR>
-nmap <leader>f :FZF!<CR>
-nmap <C-f> :FZF<CR>
-nmap <C-A-o> :FZF<CR>
 nmap <leader>a za
 " fold all
 " copy to system buffer
@@ -300,26 +303,16 @@ map <F11> :w<CR>:source %<CR>
 " Macros {{{
 " param on new line
 let @d='f,lli'
-" logger
-let @p='0fpcwlogger.debug(€kD€kDA)'
-" log
-let @l='0wdwilog.info(A)'
 let @j='A {'
 map <leader>k A {
 " swap args in ()
 let @w='0f(ldt,f)pui, p0f,dw'
-" Java try 
-let @t="Iclass :put =expand('%:t:r')A {lxkJopublic static void main(String[] args) {}}"
-let @t="Itry {lxo} catch (Exception ex) { ex.printStackTrace(); }"
-" temporary macros. for rainlin
-let @m='/\<mdxExpertReportLink"f,a "exportFormats":["PDF","DOC","XLS","CSV","XML","PPT","ODT","ODS","ODP","DOCX","XLSX","PPTX"],":w'
-let @n='/"WebReports.Controls.Report"bbbi"exportFormats":["PDF","DOC","XLS","CSV","XML","PPT","ODT","ODS","ODP","DOCX","XLSX","PPTX"],":w'
 " }}}
 
 " right way to use autocmd 
 augroup allAutoCmds
     autocmd!
-    "autocmd DirChanged global :NERDTreeCWD
+    autocmd DirChanged global :NERDTreeCWD
     autocmd FileType netrw setlocal bufhidden=wipe
     autocmd FileType python :iabbrev <buffer> iff if:<left>
     autocmd FileType vim setlocal foldmethod=marker
@@ -356,6 +349,7 @@ nmap <C-q> :qa<CR>
 nmap <C-A-q> :qa!<CR>
 nmap <C-UP> :tc ..<CR>:pwd<CR>
 
+" runtime ".vimrc-bind-files"
 " mirroring configs
 nmap <leader>xb ,t:e $DOTFILES/linux/.bashrc<CR>
 nmap <leader>xa ,t:e $DOTFILES_BIN/session/alias.sh<CR>
