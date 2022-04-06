@@ -1,0 +1,4 @@
+#!/bin/bash
+CMD=$1
+[ -z $CMD ] && exit
+. $HOME/dotfiles/linux/.env && mpc -p $MPD_PORT $CMD && notify-send "$(mpc -p $MPD_PORT current)"

@@ -87,7 +87,13 @@ ctrl + super + 7
   pacmd set-default-sink 3
 
 ctrl + super + c
-    . ~/dotfiles/linux/.env && mpc -p $MPD_PORT toggle && notify-send "$(mpc -p $MPD_PORT current)"
+    ~/dotfiles/linux/bin/mpd-command toggle
+
+ctrl + super + v
+    ~/dotfiles/linux/bin/mpd-command next
+
+ctrl + super + x
+    ~/dotfiles/linux/bin/mpd-command prev
 
 # make sxhkd reload its configuration files:
 super + ctrl + shift + s
