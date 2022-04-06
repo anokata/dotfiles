@@ -3,6 +3,7 @@
 pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
 setxkbmap -option caps:escape
 dunst &
+#[ ! -s ~/.config/mpd/pid ] && mpd
 xrdb "/home/$(whoami)/.Xresources"
 nm-applet &
 $HOME/.config/polybar/launch.sh
