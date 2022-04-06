@@ -169,6 +169,11 @@ alias icat="kitty +kitten icat"
 alias st="st -g 180x50 tmux a"
 alias mpd-restart="mpd --kill && mpd"
 alias mpd-update="mpc update"
+alias mpc="mpc -p $MPD_PORT"
+alias mpc-play="mpc play"
+alias mpc-pause="mpc pause"
+alias mpc-next="mpc next"
+alias mpc-prev="mpc prev"
 
 # Org
 alias vimdoc="$EDITOR $NOTES_DIR"
