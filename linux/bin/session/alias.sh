@@ -145,6 +145,7 @@ alias config-draw-mypaint-brushes="$EDITOR $MYPAINT_BRUSHES"
 alias config-draw-mypaint="$EDITOR $MYPAINT"
 alias config-kitty="$EDITOR $DOTFILES_CONFIGS/kitty/kitty.conf"
 alias config-rofi="$EDITOR $DOTFILES_CONFIGS/rofi/config.rasi"
+alias config-mpd="$EDITOR $DOTFILES_CONFIGS/mpd/mpd.conf"
 
 
 # sound
@@ -166,6 +167,8 @@ alias ranger='. ranger'
 alias xkitty='kitty --start-as fullscreen'
 alias icat="kitty +kitten icat"
 alias st="st -g 180x50 tmux a"
+alias mpd-restart="mpd --kill && mpd"
+alias mpd-update="mpc update"
 
 # Org
 alias vimdoc="$EDITOR $NOTES_DIR"
