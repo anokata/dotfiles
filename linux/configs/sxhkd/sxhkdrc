@@ -86,14 +86,24 @@ ctrl + super + 8
 ctrl + super + 7
   pacmd set-default-sink 3
 
+#ctrl + super + m; x - music prefix
 ctrl + super + c
     ~/dotfiles/linux/bin/mpd-command toggle
 
-ctrl + super + v
+ctrl + super + m; c
+    ~/dotfiles/linux/bin/mpd-command toggle
+
+ctrl + super + m; v
     ~/dotfiles/linux/bin/mpd-command next
 
-ctrl + super + x
+ctrl + super + m; x
     ~/dotfiles/linux/bin/mpd-command prev
+
+ctrl + super + m; s
+    ~/dotfiles/linux/bin/rofi-mpd -s
+
+ctrl + super + s
+    ~/dotfiles/linux/bin/rofi-mpd -s
 
 # make sxhkd reload its configuration files:
 super + ctrl + shift + s
