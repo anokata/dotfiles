@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 # Origin: https://github.com/samedamci/rofi-mpd
-# TODO: Add playlists select mode
+# TODO: 
+#    Add to playlists in menu by key
+#    search all files names 
+#       / track
 # chg screens
 
 m() { rofi -dmenu -i "$@" ;}
@@ -31,10 +34,17 @@ song() {
   mpc list title | sort -f | mb -p "Song" -l 30
 }
 
+filename() {
+  lines="$(mpc listall | wc -l)"
+  [ "$lines" -gt 30 ] && lines=30
+  mpc listall | sort -f | mb -p "filename" -l 30
+}
+
 case "$1" in
   -l | --library) mode=Library ;;
   -A | --album) mode=Album ;;
   -s | --song) mode=Song ;;
+  -f | --file) mode=Filename ;;
   -a | --ask)
     MODE=$(printf "Library\nAlbum\nSong" | m -p "Choose mode" -l 3)
     mode=$MODE
@@ -48,6 +58,7 @@ case "$1" in
   -l, --library     library mode (artist -> album)
   -A, --album       album mode
   -s, --song        song mode (select one song)
+  -f, --file        filename mode (select one file)
   -a, --ask         ask for mode
 
   bindings:
@@ -75,6 +86,14 @@ case "$mode" in
     [ ! "$song" ] && exit
     [ "$cod" -eq 10 ] || mpc clear
     mpc search "(title==\"$song\")" | mpc add
+    mpc play >/dev/null
+    ;;
+  Filename)
+    filename=$(filename)
+    cod=$?
+    [ ! "$filename" ] && exit
+    [ "$cod" -eq 10 ] || mpc clear
+    mpc search "(filename==\"$filename\")" | mpc add
     mpc play >/dev/null
     ;;
   Album)

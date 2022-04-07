@@ -93,6 +93,12 @@ ctrl + super + c
 ctrl + super + m; c
     ~/dotfiles/linux/bin/mpd-command toggle
 
+#super + KP_{Divide,Multiply,Subtract,Add,Decimal,Enter,Separator}
+#super + KP_Subtract
+#super + KP_Add
+super + KP_Enter
+    ~/dotfiles/linux/bin/mpd-command toggle
+
 ctrl + super + m; v
     ~/dotfiles/linux/bin/mpd-command next
 
@@ -101,6 +107,15 @@ ctrl + super + m; x
 
 ctrl + super + m; s
     ~/dotfiles/linux/bin/rofi-mpd -s
+
+ctrl + super + a
+    ~/dotfiles/linux/bin/rofi-mpd -A
+ctrl + super + l
+    ~/dotfiles/linux/bin/rofi-mpd -l
+ctrl + super + f
+    ~/dotfiles/linux/bin/rofi-mpd -f
+super + KP_Subtract
+    ~/dotfiles/linux/bin/rofi-mpd -l
 
 ctrl + super + s
     ~/dotfiles/linux/bin/rofi-mpd -s
