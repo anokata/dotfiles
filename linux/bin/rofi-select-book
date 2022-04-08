@@ -1,0 +1,4 @@
+#!/bin/bash
+. ~/dotfiles/linux/.env
+cd $DRAW_BOOKS_BST
+echo "$DRAW_BOOKS_BST/$(fdfind . | rofi -dmenu -lines 30 -width 85)"

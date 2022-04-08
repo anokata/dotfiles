@@ -34,6 +34,10 @@ super + F9
 super + F11
     obs
 
+# Bookmarks
+ctrl + super + b
+    rofi-books
+
 # scripts
 ctrl + shift + F12
   ~/dotfiles/linux/bin/timer
