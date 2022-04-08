@@ -53,6 +53,7 @@ bind -x '"\eOP":"$EDITOR"' # F1
 bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
 bind -x '"\C-f":"$EDITOR $(fzf)"' # C-e fzf and open in vim
 bind -x '"\C-o":"$EDITOR $(fzf)"' # C-e fzf and open in vim
+#bind '"\C-i":"cd $NOTES_DIR\C-m$EDITOR $(fzf)\C-m"' # c-i
 
 # Fav dirs
 bind '"\e[1;5F":"cd $HDD1\C-m"' # C-num-1

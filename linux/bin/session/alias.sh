@@ -193,6 +193,3 @@ else
 fi
 
 
-# work NDM
-alias ndm-start-local="npm start 192.168.1.1"
-alias ndm-start-mobile="npm start 192.168.22.14"
