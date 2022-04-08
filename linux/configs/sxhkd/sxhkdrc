@@ -54,7 +54,7 @@ super + F12
 ctrl + super + F11
     clipboard-path-load-image
 
-# Rofi
+##### Rofi
 #super + d
 alt + d
   rofi-with-aliases
@@ -75,7 +75,7 @@ alt + v
         -theme-str 'listview \{ spacing: 0; \}' \
         -theme-str 'window \{ width: 20em; \}'
 
-# sound
+##### sound
 super + ctrl + 9
   pacmd set-default-sink 0
 
@@ -119,8 +119,37 @@ ctrl + super + f
 super + KP_Subtract
     ~/dotfiles/linux/bin/rofi-mpd -l
 
+ctrl + super + m; {comma, period}
+    ~/dotfiles/linux/bin/mpd-command {"seek +00:01:00", "seek -00:01:00"}
+ctrl + super + shift + {less, greater}
+    ~/dotfiles/linux/bin/mpd-command {"seek +00:05:00", "seek -00:05:00"}
+    
+
 ctrl + super + s
     ~/dotfiles/linux/bin/rofi-mpd -s
+
+# Navigate mpd playlist
+alt + x; m; {comma, period}
+    mpc -q {prev, next}
+
+##### Volume Control
+#     pactl set-sink-volume 0 +5%
+#     pactl set-sink-volume 0 -5%
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
+XF86AudioLowerVolume
+    amixer -D pulse sset Master 5%- unmute
+XF86AudioRaiseVolume
+    amixer -D pulse sset Master 5%+ unmute
+XF86AudioMute
+    amixer set Master toggle
+ctrl + alt + {bracketleft, bracketright}
+    amixer -D pulse sset Master 5%{-,+} unmute
+
+XF86AudioMicMute
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+#### Configs
 
 # make sxhkd reload its configuration files:
 super + ctrl + shift + s
@@ -250,27 +279,3 @@ super + shift + {Left,Down,Up,Right}
 #notify-send 'Restarting wifi interface..  *_*';\
 #nmcli radio wifi off ; nmcli radio wifi on
 
-# XF86AudioRaiseVolume
-#     pactl set-sink-volume 0 +5%
-# XF86AudioLowerVolume
-#     pactl set-sink-volume 0 -5%
-XF86AudioMute
-    pactl set-sink-mute 0 toggle
-#Volume Control
-XF86AudioLowerVolume
-    amixer -D pulse sset Master 5%- unmute
-XF86AudioRaiseVolume
-    amixer -D pulse sset Master 5%+ unmute
-XF86AudioMute
-    amixer set Master toggle
-
-XF86AudioMicMute
-    pactl set-source-mute @DEFAULT_SOURCE@ toggle
-
-# Toggle mpd
-alt + x; m; t
-    mpc -q toggle
-
-# Navigate mpd playlist
-alt + x; m; {comma, period}
-    mpc -q {prev, next}

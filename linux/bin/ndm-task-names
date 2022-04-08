@@ -1,8 +1,14 @@
 #!/bin/bash
 #from:
 #https://ndm.atlassian.net/browse/NWI-988
-#gen to:
+#gen to: branch namd, PR title
 #NWI-988/fix-ndw-tabs-bugs
 #Fix-ndw-tabs-bugs (NWI-988)
 
-#load task name
+#load task name - chrome plugin js
+# or vim script? and auto create $NDM/TASKID.md
+TASK=$(clipboard-get)
+
+echo $TASK | xclip
+echo $TASK | xclip -sel c
+echo $TASK

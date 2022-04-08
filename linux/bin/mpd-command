@@ -1,4 +1,5 @@
 #!/bin/bash
 CMD=$1
+ARGS=$2
 [ -z $CMD ] && exit
-. $HOME/dotfiles/linux/.env && mpc -p $MPD_PORT $CMD && notify-send "$(mpc -p $MPD_PORT current)"
+. $HOME/dotfiles/linux/.env && mpc -q -p $MPD_PORT $CMD $ARGS && notify-send "$(mpc -p $MPD_PORT current)"
