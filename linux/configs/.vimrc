@@ -1,21 +1,27 @@
 "" === Plugins === {{{
 call plug#begin('~/.vim/plugged')
+" Base
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat' 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" New try
+Plug 'tpope/vim-speeddating'
+Plug 'svermeulen/vim-subversive'
+
+" Old
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'docunext/closetag.vim'
 Plug 'gorodinskiy/vim-coloresque'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'ktonga/vim-follow-my-lead'
 Plug 'majutsushi/tagbar'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat' 
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-unimpaired'
 Plug 'valloric/matchtagalways'
 Plug 'vim-airline/vim-airline'
@@ -36,6 +42,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'dylanaraps/fff.vim'
 
+"Plug 'tpope/vim-vinegar'
 " Plug 'leafgarland/typescript-vim'
 call plug#end()
 
@@ -80,7 +87,7 @@ nmap <leader>x :TagbarToggle<CR>
 nmap <leader>l :TagbarToggle<CR>
 nmap <C-F1> :NERDTreeFind<CR>
 nmap <S-F1> :F<CR>
-nmap <leader>f :FZF!<CR>
+nmap tf :FZF!<CR>
 nmap <C-f> :FZF<CR>
 nmap <C-A-o> :FZF<CR>
 nmap <leader>r :Ranger<CR>
@@ -179,6 +186,7 @@ map <leader>ev :tabnew $MYVIMRC<CR>
 map <leader>es :source %<CR>
 " ==== Tabs ====
 nmap <leader>t :tabnew<CR>
+nmap <C-n> :tabnew<CR>
 nmap <leader>w :tabclose<CR>
 nmap <leader>, :tabnext<CR>
 nmap <leader>. :tabprev<CR>
@@ -354,6 +362,8 @@ nmap <C-A-k> yykp
 nmap <C-A-j> yyp
 nmap <C-A-UP> yykp
 nmap <C-A-DOWN> yyp
+nmap <A-S-UP> yykp
+nmap <A-S-DOWN> yyp
 " move line up/down
 nmap <A-UP> ddkP
 nmap <A-DOWN> ddp
@@ -389,3 +399,8 @@ nmap <leader>zw :e $WORK_DIR<CR>
 "nmap <leader>z1 :e $HDD1<CR>
 "nmap <leader>z1 :e $HDD2<CR>
 "nmap <leader>z1 :e $SSD<CR>
+"
+" Substitute
+nmap s <plug>(SubversiveSubstitute)
+nmap ss <plug>(SubversiveSubstituteLine)
+" Remember use: marks, S

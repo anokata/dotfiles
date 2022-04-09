@@ -124,9 +124,9 @@ super + KP_Subtract
     ~/dotfiles/linux/bin/rofi-mpd -l
 
 ctrl + super + {comma, period}
-    ~/dotfiles/linux/bin/mpd-command {"seek +00:01:00", "seek -00:01:00"}
+    ~/dotfiles/linux/bin/mpd-command {"seek -00:01:00", "seek +00:01:00"}
 ctrl + super + shift + {less, greater}
-    ~/dotfiles/linux/bin/mpd-command {"seek +00:05:00", "seek -00:05:00"}
+    ~/dotfiles/linux/bin/mpd-command {"seek -00:05:00", "seek +00:05:00"}
     
 ctrl + super + p
     ~/dotfiles/linux/bin/mpd-open-player

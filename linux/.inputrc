@@ -40,8 +40,6 @@ set vi-cmd-mode-string \1\e[2 q\2
 
 # "\e\C-": "\e0Di \C-m"
 # apps
-# c-a-n nnn
-"\e\C-n": "\e0Dinnn\C-m"
-"\C-\eOS": "\e0Dinnn\C-m"
-#bind -x '"\e[1;5S":"echo sm"'
-#"\e[1;5S":"\e0Dinnn\C-m"
+# c-a-n fff
+"\e\C-n": "\e0Difff\C-m"
+"\C-\eOS": "\e0Difff\C-m"

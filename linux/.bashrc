@@ -53,17 +53,18 @@ bind -x '"\eOP":"$EDITOR"' # F1
 bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
 bind -x '"\C-f":"$EDITOR $(fzf)"' # C-e fzf and open in vim
 bind -x '"\C-o":"$EDITOR $(fzf)"' # C-e fzf and open in vim
-#bind '"\C-i":"cd $NOTES_DIR\C-m$EDITOR $(fzf)\C-m"' # c-i
 
 # Fav dirs
-bind '"\e[1;5F":"cd $HDD1\C-m"' # C-num-1
-bind '"\e[2;5~":"cd $HDD2\C-m"' # C-num-0
-bind '"\e[1;5B":"cd $SSD\C-m"' # C-num-2
-bind '"\e[6;5~":"cd $DOTFILES\C-m"' # C-num-3
+#bind '"\e[1;5F":"cd $HDD1\C-m"' # C-num-1
+#bind '"\e[2;5~":"cd $HDD2\C-m"' # C-num-0
+#bind '"\e[1;5B":"cd $SSD\C-m"' # C-num-2
+#bind '"\e[6;5~":"cd $DOTFILES\C-m"' # C-num-3
+#bind '"\C-i":"cd $NOTES_DIR\C-m$EDITOR $(fzf)\C-m"' # c-i
+#bind '"\e[1;5D":"cd $NOTES_DIR\C-m$EDITOR $(fzf)\C-m"' # C-left
+
 # bind '"\e[1;":"cd $DOTFILES_LINUX\C-m"' # C-num-0
 # bind '"\e[1;":"cd $DOTFILES_BIN\C-m"' # C-num-0
 # bind '"\e[1;":"cd $DOTFILES_CONFIGS\C-m"' # C-num-0
-bind '"\e[1;5D":"cd $NOTES_DIR\C-m$EDITOR $(fzf)\C-m"' # C-num-4
 # bind '"\e[1;":"cd $WORK_DIR\C-m"' # C-num-0
 # bind '"\e[1;":"cd $BACKUPS\C-m"' # C-num-0
 # bind '"\e[1;":"cd $LINKS_DIR\C-m"' # C-num-0
