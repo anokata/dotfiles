@@ -123,11 +123,13 @@ ctrl + super + f
 super + KP_Subtract
     ~/dotfiles/linux/bin/rofi-mpd -l
 
-ctrl + super + m; {comma, period}
+ctrl + super + {comma, period}
     ~/dotfiles/linux/bin/mpd-command {"seek +00:01:00", "seek -00:01:00"}
 ctrl + super + shift + {less, greater}
     ~/dotfiles/linux/bin/mpd-command {"seek +00:05:00", "seek -00:05:00"}
     
+ctrl + super + p
+    ~/dotfiles/linux/bin/mpd-open-player
 
 ctrl + super + s
     ~/dotfiles/linux/bin/rofi-mpd -s
@@ -283,3 +285,7 @@ super + shift + {Left,Down,Up,Right}
 #notify-send 'Restarting wifi interface..  *_*';\
 #nmcli radio wifi off ; nmcli radio wifi on
 
+## new rofi
+#ctrl + super + shift + 
+alt + x; r ; k
+    ~/gits/kaomoji-rofi/kaomoji.sh
