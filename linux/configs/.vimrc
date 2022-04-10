@@ -1,4 +1,5 @@
 " Remember use: marks, S, C-m
+" [] [[ [{ ][ ]]
 
 "" === Plugins === {{{
 call plug#begin('~/.vim/plugged')
@@ -11,9 +12,11 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " New try
 Plug 'tpope/vim-speeddating'
 Plug 'svermeulen/vim-subversive'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
+Plug 'sbdchd/neoformat'
 
 " Old
 Plug 'Raimondi/delimitMate'
@@ -40,7 +43,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'sainnhe/everforest'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-scripts/code_complete'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
@@ -89,6 +91,8 @@ let g:NERDTreeWinPos = "left"
 let g:NERDTreeChDirMode = 3
 let NERDTreeIgnore = ['\.pyc$', '\node_modules']
 nmap <C-b> :NERDTreeToggle<CR>
+nmap <leader>n1 :NERDTree-cd<CR>:pwd<CR>
+nmap <leader>n2 :NERDTree-CD<CR>:pwd<CR>
 nmap <leader>c :TlistToggle<CR>
 nmap <leader>x :TagbarToggle<CR>
 nmap <leader>l :TagbarToggle<CR>
@@ -327,6 +331,7 @@ let @w='0f(ldt,f)pui, p0f,dw'
 " right way to use autocmd 
 augroup allAutoCmds
     autocmd!
+    autocmd FileType javascript set formatprg=prettier-eslint\ --stdin
     autocmd DirChanged global :NERDTreeCWD
     autocmd FileType netrw setlocal bufhidden=wipe
     autocmd FileType python :iabbrev <buffer> iff if:<left>
