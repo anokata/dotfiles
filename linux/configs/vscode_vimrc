@@ -1,0 +1,12 @@
+nmap <leader>q :w<CR>
+nmap <leader>n :vsp "/home/sernam/dotfiles/linux/configs/vscode_vimrc"<CR>
+nmap <leader>t :tabnew<CR>
+nmap <leader>w :tabclose<CR>
+nmap <leader>, :tabnext<CR>
+nmap <leader>. :tabprev<CR>
+nmap tn :tabnew<CR>
+nmap tw :tabclose<CR>
+nmap th :tabnext<CR>
+nmap tl :tabprev<CR>
+nmap <leader>e :q<CR>
+nmap <leader>xb ,t:e $DOTFILES/linux/.bashrc<CR>

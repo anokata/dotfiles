@@ -1,3 +1,5 @@
+" Remember use: marks, S, C-m
+
 "" === Plugins === {{{
 call plug#begin('~/.vim/plugged')
 " Base
@@ -9,6 +11,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " New try
 Plug 'tpope/vim-speeddating'
 Plug 'svermeulen/vim-subversive'
+
+" to try
+Plug 'jasoncodes/ctrlp-modified.vim'
 
 " Old
 Plug 'Raimondi/delimitMate'
@@ -48,8 +53,9 @@ call plug#end()
 
 nmap <localleader>pi :PlugInstall<CR>
 nmap <localleader>pc :PlugClean<CR>
+nmap <localleader>pa IPlug '<ESC>px
 " }}}
-
+ 
 " Plugin settings let
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
@@ -76,6 +82,7 @@ let g:indexer_disableCtagsWarning=1
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
 " === FM ===
 let g:NERDTreeWinPos = "left"
@@ -403,4 +410,6 @@ nmap <leader>zw :e $WORK_DIR<CR>
 " Substitute
 nmap s <plug>(SubversiveSubstitute)
 nmap ss <plug>(SubversiveSubstituteLine)
-" Remember use: marks, S
+
+" window
+nmap <C-A-w> ZZ
