@@ -13,6 +13,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-speeddating'
 Plug 'svermeulen/vim-subversive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'oinksoft/npm.vim'
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'

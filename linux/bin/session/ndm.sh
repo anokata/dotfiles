@@ -11,3 +11,5 @@ alias ndm-keenetic-show-route='ndm-ssh-local show ip route'
 alias ndm-start-local="npm start 192.168.1.1"
 alias ndm-start-mobile="npm start 192.168.22.14"
 alias ndm-start-test="npm run ng-test"
+alias ndm-add-vlan="ndm-ssh-local-default interface GigabitEthernet0/Vlan5"
+alias ndm-del-vlan="ndm-ssh-local-default no interface GigabitEthernet0/Vlan5"
