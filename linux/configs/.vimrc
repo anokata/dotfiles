@@ -60,72 +60,12 @@ call plug#end()
 
 " }}}
  
-" Plugin settings (let var)
-let g:airline_powerline_fonts = 0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#close_symbol = 'x'
-let g:airline_extensions = ['tabline']
-let g:airline_theme='minimalist'
-let g:airline_skip_empty_sections = 1
-let g:airline_section_y = ''
-let g:airline_section_x = ''
-let g:airline_section_z = '%3p%% %#__accent_bold#%{g:airline_symbols.linenr}%2l%#__restore__#%#__accent_bold#/%L%#__restore__# :%3v'
-let g:airline_section_b = ''
-let g:airline_section_c = '%<%f%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
-let g:rooter_patterns = ['Makefile']
-
-let g:netrw_liststyle = 3
-let g:netrw_banner = 0
-let g:netrw_browse_split = 2
-let g:netrw_winsize = 35
-let g:netrw_altv = 1
-
-let g:indexer_disableCtagsWarning=1
-let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
-let g:CtrlSpaceSaveWorkspaceOnExit = 1 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
-let g:CtrlSpaceDefaultMappingKey = "<C-space> "
-
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeChDirMode = 3
-let NERDTreeIgnore = ['\.pyc$', '\node_modules']
-
-let g:ranger_map_keys = 0
-let g:fff#split = "30vnew"
-
-" === FM ===
-nmap <C-b> :NERDTreeToggle<CR>
-nmap <leader>n1 :NERDTree-cd<CR>:pwd<CR>
-nmap <leader>n2 :NERDTree-CD<CR>:pwd<CR>
-nmap <leader>c :TlistToggle<CR>
-nmap <leader>x :TagbarToggle<CR>
-nmap <leader>l :TagbarToggle<CR>
-nmap <C-F1> :NERDTreeFind<CR>
-nmap <S-F1> :F<CR>
-nmap tf :FZF!<CR>
-nmap <C-f> :FZF<CR>
-nmap <C-A-o> :FZF<CR>
-nmap <leader>r :Ranger<CR>
-"nmap <C-r> :Ranger<CR>
-"TODO Bind C-Fx S-Fx
-
-
-" Color {{{
-let g:solarized_termcolors=256
-set t_Co=256
-set background=dark
-set t_ut=
-set mouse=a
-highlight Normal ctermbg=NONE
-highlight nonText ctermbg=NONE
-highlight lCursor guifg=NONE guibg=Cyan
-colorscheme soruby
-"set fillchars+=vert:\ 
-" }}}
+source ~/.vim/config/bind-files
+source ~/.vim/config/map-rus
+source ~/.vim/config/abbrev
+source ~/.vim/config/persistent-undo
+source ~/.vim/config/plugin-settings
+source ~/.vim/config/ui
 
 " Basic settings {{{
 let mapleader=","
@@ -165,14 +105,13 @@ set wildmenu
 set wildmode=longest:list,full
 set wrap
 set wrapmargin=0
+"set omnifunc=syntaxcomplete#Complete
+"set keymap=russian-jcukenwin
+
 " Status line
 set statusline=
 set statusline +=%3*%=%*
 set statusline +=%1*\ %<%F\ %*            "full path
-"set omnifunc=syntaxcomplete#Complete
-"set keymap=russian-jcukenwin
-"set guioptions -=T
-"set guioptions -=L
 
 if executable('rg')
     set grepprg=rg\ --color=never\ --vimgrep
@@ -187,10 +126,26 @@ syntax on
 
 
 " === Mapping {{{
-source ~/.vim/config/bind-files
-source ~/.vim/config/map-rus
-source ~/.vim/config/abbrev
-source ~/.vim/config/persistent-undo
+" open files on cursor always
+nmap gf :e <cfile><CR>
+nmap <C-W><C-F> :tabnew <cfile><CR>
+
+" === FM ===
+nmap <C-b> :NERDTreeToggle<CR>
+nmap <leader>n1 :NERDTree-cd<CR>:pwd<CR>
+nmap <leader>n2 :NERDTree-CD<CR>:pwd<CR>
+nmap <leader>c :TlistToggle<CR>
+nmap <leader>x :TagbarToggle<CR>
+nmap <leader>l :TagbarToggle<CR>
+nmap <C-F1> :NERDTreeFind<CR>
+nmap <S-F1> :F<CR>
+nmap tf :FZF!<CR>
+nmap <C-f> :FZF<CR>
+nmap <C-A-o> :FZF<CR>
+nmap <leader>r :Ranger<CR>
+"nmap <C-r> :Ranger<CR>
+"TODO Bind C-Fx S-Fx
+
 
 " Plug package mappings
 nmap <localleader>pi :PlugInstall<CR>

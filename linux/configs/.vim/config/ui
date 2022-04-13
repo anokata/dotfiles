@@ -1,0 +1,16 @@
+" vim: ft=vim
+
+" Color {{{
+let g:solarized_termcolors=256
+set t_Co=256
+set background=dark
+set t_ut=
+set mouse=a
+"set fillchars+=vert:\ 
+"set guioptions -=T
+"set guioptions -=L
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+highlight lCursor guifg=NONE guibg=Cyan
+colorscheme soruby
+" }}}
