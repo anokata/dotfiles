@@ -13,11 +13,15 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-speeddating'
 Plug 'svermeulen/vim-subversive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'oinksoft/npm.vim'
+Plug 'neoclide/npm.nvim'
+Plug 'Shougo/denite.nvim'
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
 Plug 'sbdchd/neoformat'
+Plug 'tpope/vim-obsession'
+Plug 'dhruvasagar/vim-prosession'
+"nmap :Prosession
 
 " Old
 Plug 'Raimondi/delimitMate'
