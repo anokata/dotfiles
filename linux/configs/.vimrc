@@ -51,15 +51,12 @@ Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'dylanaraps/fff.vim'
 
 "Plug 'tpope/vim-vinegar'
-" Plug 'leafgarland/typescript-vim'
+"Plug 'leafgarland/typescript-vim'
 call plug#end()
 
-nmap <localleader>pi :PlugInstall<CR>
-nmap <localleader>pc :PlugClean<CR>
-nmap <localleader>pa IPlug '<ESC>px
 " }}}
  
-" Plugin settings let
+" Plugin settings (let var)
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_splits = 0
@@ -76,21 +73,24 @@ let g:airline_section_z = '%3p%% %#__accent_bold#%{g:airline_symbols.linenr}%2l%
 let g:airline_section_b = ''
 let g:airline_section_c = '%<%f%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 let g:rooter_patterns = ['Makefile']
+
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_browse_split = 2
 let g:netrw_winsize = 35
 let g:netrw_altv = 1
+
 let g:indexer_disableCtagsWarning=1
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
-" === FM ===
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeChDirMode = 3
 let NERDTreeIgnore = ['\.pyc$', '\node_modules']
+
+" === FM ===
 nmap <C-b> :NERDTreeToggle<CR>
 nmap <leader>n1 :NERDTree-cd<CR>:pwd<CR>
 nmap <leader>n2 :NERDTree-CD<CR>:pwd<CR>
@@ -117,6 +117,7 @@ set t_ut=
 set mouse=a
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
+highlight lCursor guifg=NONE guibg=Cyan
 colorscheme soruby
 "set fillchars+=vert:\ 
 " }}}
@@ -159,22 +160,19 @@ set wildmenu
 set wildmode=longest:list,full
 set wrap
 set wrapmargin=0
-"set omnifunc=syntaxcomplete#Complete
-"set keymap=russian-jcukenwin
-" set guioptions -=T
-" set guioptions -=L
-syn region foldBraces start=/{/ end=/}/ transparent fold
-syn region foldJavadoc start=,/\*\*, end=,\*/, transparent fold keepend
-
-filetype off
-filetype plugin indent on
-syntax on
-highlight lCursor guifg=NONE guibg=Cyan
-
 " Status line
 set statusline=
 set statusline +=%3*%=%*
 set statusline +=%1*\ %<%F\ %*            "full path
+"set omnifunc=syntaxcomplete#Complete
+"set keymap=russian-jcukenwin
+"set guioptions -=T
+"set guioptions -=L
+syn region foldBraces start=/{/ end=/}/ transparent fold
+
+filetype off
+filetype plugin indent on
+syntax on
 " }}}
 
 " ================ Persistent Undo ================== {{{
@@ -186,7 +184,13 @@ if has('persistent_undo')
 endif
 " }}}
 
-" Mapping {{{
+" === Mapping {{{
+source ~/.vim/config/bind-files
+
+" Plug package mappings
+nmap <localleader>pi :PlugInstall<CR>
+nmap <localleader>pc :PlugClean<CR>
+nmap <localleader>pa IPlug '<ESC>px
 nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 " ## Edit .vimrc ##
 map <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
@@ -384,34 +388,6 @@ nmap <A-k> ddkP
 nmap <A-j> ddp
 
 
-" runtime ".vimrc-bind-files"
-" mirroring configs
-nmap <leader>xb ,t:e $DOTFILES/linux/.bashrc<CR>
-nmap <leader>xa ,t:e $DOTFILES_BIN/session/alias.sh<CR>
-nmap <leader>xt ,t:e $DOTFILES_CONFIGS/.tmux.conf<CR>
-nmap <leader>xb ,t:e $DOTFILES_CONFIGS/bspwm/bspwmrc<CR>
-nmap <leader>xs ,t:e $DOTFILES_CONFIGS/sxhkd/sxhkdrc<CR>
-"nmap <leader>x1 ,t:e $DOTFILES_CONFIGS/polybar/config.ini<CR>
-nmap <leader>xx ,t:e $DOTFILES_CONFIGS/.Xresources<CR>
-nmap <leader>xi ,t:e $DOTFILES_LINUX/.inputrc<CR>
-nmap <leader>xr ,t:e $DOTFILES_CONFIGS/ranger/<CR>
-nmap <leader>xe ,t:e $DOTFILES_LINUX/.env<CR>
-nmap <leader>xk ,t:e $DOTFILES_CONFIGS/kitty/kitty.conf<CR>
-
-nmap <leader>zD :e $DOTFILES<CR>
-nmap <leader>zl :e $DOTFILES_LINUX<CR>
-nmap <leader>zb :e $DOTFILES_BIN<CR>
-nmap <leader>zc :e $DOTFILES_CONFIGS<CR>
-nmap <leader>zn :e $NOTES_DIR<CR>
-nmap <leader>zw :e $WORK_DIR<CR>
-"nmap <leader>zB :e $BACKUPS<CR>
-"nmap <leader>zl :e $LINKS_DIR<CR>
-"nmap <leader>z1 :e $DRAW_DIR<CR>
-"nmap <leader>z1 :e $SCREENS_BASE<CR>
-"nmap <leader>z1 :e $REF_BASE<CR>
-"nmap <leader>z1 :e $HDD1<CR>
-"nmap <leader>z1 :e $HDD2<CR>
-"nmap <leader>z1 :e $SSD<CR>
 "
 " Substitute
 nmap s <plug>(SubversiveSubstitute)
