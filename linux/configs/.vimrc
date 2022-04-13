@@ -90,6 +90,9 @@ let g:NERDTreeWinPos = "left"
 let g:NERDTreeChDirMode = 3
 let NERDTreeIgnore = ['\.pyc$', '\node_modules']
 
+let g:ranger_map_keys = 0
+let g:fff#split = "30vnew"
+
 " === FM ===
 nmap <C-b> :NERDTreeToggle<CR>
 nmap <leader>n1 :NERDTree-cd<CR>:pwd<CR>
@@ -103,8 +106,6 @@ nmap tf :FZF!<CR>
 nmap <C-f> :FZF<CR>
 nmap <C-A-o> :FZF<CR>
 nmap <leader>r :Ranger<CR>
-let g:ranger_map_keys = 0
-let g:fff#split = "30vnew"
 "nmap <C-r> :Ranger<CR>
 "TODO Bind C-Fx S-Fx
 
@@ -168,6 +169,11 @@ set statusline +=%1*\ %<%F\ %*            "full path
 "set keymap=russian-jcukenwin
 "set guioptions -=T
 "set guioptions -=L
+
+if executable('rg')
+    set grepprg=rg\ --color=never\ --vimgrep
+endif
+
 syn region foldBraces start=/{/ end=/}/ transparent fold
 
 filetype off
@@ -175,17 +181,12 @@ filetype plugin indent on
 syntax on
 " }}}
 
-" ================ Persistent Undo ================== {{{
-if has('persistent_undo')
-    silent !mkdir ~/.vim/backups > /dev/null 2>&1
-    set undodir=~/.vim/backups
-    set undofile
-    redraw!
-endif
-" }}}
 
 " === Mapping {{{
 source ~/.vim/config/bind-files
+source ~/.vim/config/map-rus
+source ~/.vim/config/abbrev
+source ~/.vim/config/persistent-undo
 
 " Plug package mappings
 nmap <localleader>pi :PlugInstall<CR>
@@ -234,38 +235,12 @@ nmap <leader>e :q<CR>
 nmap <leader>X :!chmod +x %<CR>
 nmap <Leader>u ysiw_ysiw_
 
-" moving normal in russian
-nmap ё `
-nmap Ж :
-nmap ш i
-nmap о j
-nmap л k
-nmap ф a
-nmap Ф A
-nmap б ,
-nmap ю .
-cmap ц w
-cmap й q
-cmap ч x
-cmap у e
-cmap ф a
 nnoremap <space> za
 
 " noremap <leader>c yy:@"<CR>
 " noremap <leader><cr> xi<cr><esc>
 " nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<left><left>
 " nnoremap <leader>rc :%s/\<<C-r><C-w>\>//gc<left><left><left>
-
-" typos correction and abbrevations
-iabbrev adn and
-iabbrev waht what
-iabbrev tehn then
-iabbrev funciotn function
-iabbrev funciton function
-iabbrev @@@ quartenium@gmail.com
-iabbrev ifmain if __name__=='__main__':<CR>
-iabbrev #i #include
-iabbrev #d #define
 
 inoremap jk <esc>
 inoremap kj <esc>
@@ -350,10 +325,6 @@ if !has('nvim')
     
 endif
 
-if executable('rg')
-    set grepprg=rg\ --color=never\ --vimgrep
-endif
-
 "command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
 command! -nargs=1 Ngrep grep "<args>" -g "*.md" $NOTES_DIR
 nnoremap <leader>nn :Ngrep 
@@ -374,6 +345,7 @@ nmap <C-q> :qa<CR>
 nmap <C-A-q> :qa!<CR>
 nmap <C-UP> :tc ..<CR>:pwd<CR>
 
+" === Editing mappings
 " duplicate line up/down
 nmap <C-A-k> yykp
 nmap <C-A-j> yyp

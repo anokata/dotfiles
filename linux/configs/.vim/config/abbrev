@@ -1,0 +1,12 @@
+" vim: ft=vim
+
+" typos correction and abbrevations
+iabbrev adn and
+iabbrev waht what
+iabbrev tehn then
+iabbrev funciotn function
+iabbrev funciton function
+iabbrev @@@ quartenium@gmail.com
+iabbrev ifmain if __name__=='__main__':<CR>
+iabbrev #i #include
+iabbrev #d #define

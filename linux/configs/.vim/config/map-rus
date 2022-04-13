@@ -1,0 +1,17 @@
+" vim: ft=vim
+
+" moving normal in russian
+nmap ё `
+nmap Ж :
+nmap ш i
+nmap о j
+nmap л k
+nmap ф a
+nmap Ф A
+nmap б ,
+nmap ю .
+cmap ц w
+cmap й q
+cmap ч x
+cmap у e
+cmap ф a
