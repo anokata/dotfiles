@@ -192,4 +192,3 @@ else
     alias term='xresources-reload; urxvt -e tmux a'
 fi
 
-

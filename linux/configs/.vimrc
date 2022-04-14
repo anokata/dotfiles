@@ -60,6 +60,8 @@ call plug#end()
 
 " }}}
  
+" === Load configs ===
+source ~/.vim/config/basic
 source ~/.vim/config/bind-files
 source ~/.vim/config/map-rus
 source ~/.vim/config/abbrev
@@ -67,62 +69,21 @@ source ~/.vim/config/persistent-undo
 source ~/.vim/config/plugin-settings
 source ~/.vim/config/ui
 
-" Basic settings {{{
-let mapleader=","
-let maplocalleader=";"
-set autochdir
-set autoindent
-set autoread
-set clipboard=unnamed
-set clipboard=unnamedplus
-set cmdheight=2
-set conceallevel=1
-set expandtab
-set foldenable
-set foldlevel=20
-set foldlevelstart=20
-set foldmethod=syntax
-set hidden
-set ignorecase
-set iminsert=0
-set imsearch=0
-set laststatus=2
-set lazyredraw
-set nobackup
-set nocompatible
-set noswapfile
-set nowritebackup
-set number
-set shiftwidth=4
-set shiftwidth=4
-set smartcase
-set t_Co=256
-set t_ut=
-set tabstop=4
-set tags=~/mytags
-set textwidth=0
-set wildmenu
-set wildmode=longest:list,full
-set wrap
-set wrapmargin=0
-"set omnifunc=syntaxcomplete#Complete
-"set keymap=russian-jcukenwin
+" Macros {{{
+" param on new line
+let @d='f,lli'
+let @j='A {'
+map <leader>k A {
+" swap args in ()
+let @w='0f(ldt,f)pui, p0f,dw'
+" }}}
 
-" Status line
-set statusline=
-set statusline +=%3*%=%*
-set statusline +=%1*\ %<%F\ %*            "full path
-
-if executable('rg')
-    set grepprg=rg\ --color=never\ --vimgrep
-endif
 
 syn region foldBraces start=/{/ end=/}/ transparent fold
 
 filetype off
 filetype plugin indent on
 syntax on
-" }}}
 
 
 " === Mapping {{{
@@ -170,8 +131,9 @@ nmap tn :tabnew<CR>
 nmap tw :tabclose<CR>
 nmap th :tabnext<CR>
 nmap tl :tabprev<CR>
+nmap <C-l> gt 
+nmap <C-h> gT
 " ==== Folding ====
-"nmap <leader>f zf)
 "nmap <leader>f :set foldmethod=indent<CR>
 nmap <leader>a za
 " fold all
@@ -218,11 +180,11 @@ noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
-" Map ctrl-movement keys to window switching
-" nnoremap <C-k> <C-w><Up>
-nnoremap <C-j> <C-w><Down>
-nnoremap <C-l> <C-w><Right>
-nnoremap <C-h> <C-w><Left>
+" Map ctrl-atl-movement keys to window switching
+nnoremap <Up> <C-w><Up>
+nnoremap <Down> <C-w><Down>
+nnoremap <Right> <C-w><Right>
+nnoremap <Left> <C-w><Left>
 nnoremap <bs> <C-w><Left>
 "nnoremap <leader>b :BufExplorer<CR>
 " Toggle paste mode
@@ -256,15 +218,6 @@ map <F9> :w<CR>:!./%<CR>
 map <F10> :w<CR>:!python '%:t'<CR>
 map <F11> :w<CR>:source %<CR>
 "map <C-F8> :!dot -Tpng % -o%.png && feh %.png<CR>
-" }}}
-
-" Macros {{{
-" param on new line
-let @d='f,lli'
-let @j='A {'
-map <leader>k A {
-" swap args in ()
-let @w='0f(ldt,f)pui, p0f,dw'
 " }}}
 
 " right way to use autocmd 

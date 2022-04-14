@@ -1,0 +1,50 @@
+" vim: ft=vim
+
+let mapleader=","
+let maplocalleader=";"
+set autochdir
+set autoindent
+set autoread
+set clipboard=unnamed
+set clipboard=unnamedplus
+set cmdheight=2
+set conceallevel=1
+set expandtab
+set foldenable
+set foldlevel=20
+set foldlevelstart=20
+set foldmethod=syntax
+set hidden
+set ignorecase
+set iminsert=0
+set imsearch=0
+set laststatus=2
+set lazyredraw
+set nobackup
+set nocompatible
+set noswapfile
+set nowritebackup
+set number
+set shiftwidth=4
+set shiftwidth=4
+set smartcase
+set t_Co=256
+set t_ut=
+set tabstop=4
+set tags=~/mytags
+set textwidth=0
+set wildmenu
+set wildmode=longest:list,full
+set wrap
+set wrapmargin=0
+"set omnifunc=syntaxcomplete#Complete
+"set keymap=russian-jcukenwin
+
+" Status line
+set statusline=
+set statusline +=%3*%=%*
+set statusline +=%1*\ %<%F\ %*            "full path
+
+if executable('rg')
+    set grepprg=rg\ --color=never\ --vimgrep
+endif
