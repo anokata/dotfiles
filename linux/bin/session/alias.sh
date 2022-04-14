@@ -86,6 +86,14 @@ alias gst='git status'
 alias gpom='git push origin master'
 alias gl='git log --pretty=oneline '
 alias gph='git push'
+alias go='git checkout'
+alias gu='git pull'
+alias gm='git merge'
+alias gb='git branch'
+alias gbc='git branch --show-current'
+alias gpc='git push origin $(git branch --show-current)'
+alias gpa='git push --all'
+# TODO git push current branch
 
 # Dev
 alias adbstart='sudo adb start-server'
