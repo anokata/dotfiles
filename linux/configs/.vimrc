@@ -68,15 +68,7 @@ source ~/.vim/config/abbrev
 source ~/.vim/config/persistent-undo
 source ~/.vim/config/plugin-settings
 source ~/.vim/config/ui
-
-" Macros {{{
-" param on new line
-let @d='f,lli'
-let @j='A {'
-map <leader>k A {
-" swap args in ()
-let @w='0f(ldt,f)pui, p0f,dw'
-" }}}
+source ~/.vim/config/macros
 
 
 syn region foldBraces start=/{/ end=/}/ transparent fold
@@ -88,7 +80,7 @@ syntax on
 
 " === Mapping {{{
 " open files on cursor always
-nmap gf :e <cfile><CR>
+nmap gF :e <cfile><CR>
 nmap <C-W><C-F> :tabnew <cfile><CR>
 
 " === FM ===

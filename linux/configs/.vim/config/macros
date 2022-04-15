@@ -1,0 +1,10 @@
+" vim: ft=vim
+
+" Macros {{{
+" param on new line
+let @d='f,lli'
+let @j='A {'
+map <leader>k A {
+" swap args in ()
+let @w='0f(ldt,f)pui, p0f,dw'
+" }}}
