@@ -77,8 +77,9 @@ filetype off
 filetype plugin indent on
 syntax on
 
-
 " === Mapping {{{
+" paste as markdownlink
+nmap <localleader>mpl 0yss)$T/yt)0O<ESC>pyss]$Jx
 " open files on cursor always
 nmap gF :e <cfile><CR>
 nmap <C-W><C-F> :tabnew <cfile><CR>
