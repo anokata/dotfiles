@@ -15,3 +15,7 @@ alias ndm-add-vlan="ndm-ssh-local-default interface GigabitEthernet0/Vlan5"
 alias ndm-add-modem="ndm-ssh-local-default interface UsbModem2"
 alias ndm-del-modem="ndm-ssh-local-default no interface UsbModem2"
 alias ndm-del-vlan="ndm-ssh-local-default no interface GigabitEthernet0/Vlan5"
+
+alias ndm-task-status-done="echo '(done, ndw3-without-isw)' | xclip -sel c"
+alias ndm-task-status-review="echo '(review, ndw3-without-isw)' | xclip -sel c"
+alias ndm-task-status-dev="echo '(dev, ndw3-without-isw)' | xclip -sel c"

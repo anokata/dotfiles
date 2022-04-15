@@ -4,6 +4,12 @@ alt + x; n ; s
     ndm-time-status
 alt + x; n ; t
     ndm-task-names
+alt + x; n ; d
+    ndm-task-status-dev
+alt + x; n ; D
+    ndm-task-status-done
+alt + x; n ; r
+    ndm-task-status-review
 # markdown
 alt + x; m ; l
     markdown-clip-convert-to-url
