@@ -25,3 +25,5 @@ cmap й q
 cmap ч x
 cmap у e
 cmap ф a
+
+let @b="0dt/A (\<ESC>p0x~:s/-/ /g\<CR>"
