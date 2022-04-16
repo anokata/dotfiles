@@ -17,9 +17,9 @@ source ~/.vim/config/ui
 source ~/.vim/config/macros
 source ~/.vim/config/autocmds
 
-" base cmd to open folder and fzf in it
-" function
-" nmap <localleader>?? :tabnew<CR>:tcd ~/.vim/config/<CR>:FZF<CR>
+" TODO
+" https://github.com/junegunn/fzf.vim#commands
+"
 
 " <-=== Mapping (testing) ===->
 " FIX:

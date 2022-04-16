@@ -45,6 +45,8 @@ set wrapmargin=0
 "set keymap=russian-jcukenwin
 setglobal tags-=./tags tags-=./tags; tags^=./tags;
 
+set numberwidth=4
+
 " Status line
 set statusline=
 set statusline +=%3*%=%*

@@ -15,8 +15,8 @@ nmap <localleader>xr ,t:e $DOTFILES_CONFIGS/ranger/<CR>
 nmap <localleader>xe ,t:e $DOTFILES_LINUX/.env<CR>
 nmap <localleader>xk ,t:e $DOTFILES_CONFIGS/kitty/kitty.conf<CR>
 
-nmap <localleader>cD :tcd $DOTFILES<CR>
-nmap <localleader>cw :tcd $WORK_DIR<CR>
+nmap <localleader>cD :Files $DOTFILES<CR>
+nmap <localleader>cw :Files $WORK_DIR<CR>
 nmap <localleader>cn :tcd $NOTES_DIR<CR>:FZF<CR>
 
 nmap <localleader>zD :e $DOTFILES<CR>

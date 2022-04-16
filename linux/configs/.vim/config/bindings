@@ -77,10 +77,12 @@ nmap <C-A-o> :FZF<CR>
 nmap <leader>r :Ranger<CR>
 " vim config files open bindings configs
 nmap <localleader>cb :tabnew ~/.vim/config/bindings<CR>
-nmap <localleader>cc :tabnew<CR>:tcd ~/.vim/config/<CR>:FZF<CR>
+" nmap <localleader>cc :tabnew<CR>:tcd ~/.vim/config/<CR>:FZF<CR>
+nmap <localleader>cc :Files ~/.vim/config/<CR>
 nmap <localleader>cp :tabnew ~/.vim/config/plugins<CR>
 nmap <localleader>cs :tabnew ~/.vim/config/settings<CR>
 nmap <localleader>cf :tabnew ~/.vim/config/bind-files<CR>
+nmap <localleader>cl :tabnew ~/.vim/config/plugin-settings<CR>
 
 " === Plug package mappings ===
 nmap <localleader>pi :PlugInstall<CR>
@@ -92,10 +94,9 @@ nmap <localleader>pp :tabnew ~/.vim/config/plugins<CR>
 " ### Config .vimrc ###
 nmap <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
 nmap <leader>V :source $MYVIMRC<CR>
-nmap <leader>n :vsp $HOME/.vimrc<CR>:set foldmethod=marker<cr>
+nmap <leader>n :tabnew $HOME/.vimrc<CR>:set foldmethod=marker<cr>
 nmap <leader>N :source $HOME/.vimrc<CR>
-nmap <C-k> :tabnew $MYVIMRC<CR>
-nmap <leader>ev :tabnew $MYVIMRC<CR>
+nmap <C-k> :tabnew $HOME/.vimrc<CR>
 nmap <leader>es :source %<CR>
 
 " === Tabs ===
