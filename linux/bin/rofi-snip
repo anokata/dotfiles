@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+current_wid=$(xdo id)
+snippet=$(rofi -i -dmenu $@ < $(dirname $0)/snippets.txt)
+echo -n "$snippet" | xclip -selection clipboard
+xdotool key --window $current_wid --clearmodifiers ctrl+v

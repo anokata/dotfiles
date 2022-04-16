@@ -15,6 +15,7 @@ Plug 'svermeulen/vim-subversive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/npm.nvim'
 Plug 'Shougo/denite.nvim'
+Plug 'chamindra/marvi'
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
@@ -80,6 +81,10 @@ syntax on
 " === Mapping {{{
 " paste as markdownlink
 nmap <localleader>mpl 0yss)$T/yt)0O<ESC>pyss]$Jx
+
+" navigate to next inner block
+noremap <leader>nb /{[^}]*$<CR>
+
 " open files on cursor always
 nmap gF :e <cfile><CR>
 nmap <C-W><C-F> :tabnew <cfile><CR>
