@@ -1,5 +1,6 @@
 " vim: ft=vim
 
+nnoremap <C-UP> :tc ..<CR>:pwd<CR>
 " mirroring configs
 nmap <localleader>xb ,t:e $DOTFILES/linux/.bashrc<CR>
 nmap <localleader>eb ,t:e $DOTFILES/linux/.bashrc<CR>

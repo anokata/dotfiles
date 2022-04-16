@@ -75,7 +75,9 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
  
 " === Load configs ===
-source ~/.vim/config/basic
+source ~/.vim/config/plugins
+source ~/.vim/config/settings
+source ~/.vim/config/bindings
 source ~/.vim/config/bind-files
 source ~/.vim/config/dev
 source ~/.vim/config/map-rus
@@ -88,6 +90,7 @@ source ~/.vim/config/autocmds
 
 
 " <-=== Mapping ===->
+
 " === Navigation ===
 nnoremap GG GGzz
 " navigate to next inner block
@@ -96,14 +99,17 @@ noremap <leader>nb /{[^}]*$<CR>
 nmap gF :tabnew <cfile><CR>
 nmap <C-W><C-F> :tabnew <cfile><CR>
 " no highlight
-nmap <localleader>nn :noh<CR>
+nmap <localleader>hh :noh<CR>
 " double esc to no highlight
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
-
+" Quick search
+nnoremap <localleader>n :cnext<cr>
+nnoremap <localleader>l :cclose<cr>
 
 " === Editing ===
 nmap <leader>q :w<CR>
+nnoremap <C-s> :w<CR>
 nmap <leader>e :q<CR>
 nmap <leader>X :!chmod +x %<CR>
 " Substitute
@@ -139,13 +145,17 @@ nmap <leader>s :let @*=@"<CR>
 "nmap <leader>l o<ESC>"+p0yss[
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
-
-"map <leader>gr :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+" Toggle paste mode
+nnoremap <silent> <F4> :set invpaste<CR>:set paste?<CR>
+inoremap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
+" add semicolon in the end, save cursor
+nnoremap <leader>; mqA;<ESC>`q
+" insert current path
+nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
 
 " === IDE ===
 nmap <localleader>a :AirlineToggle<CR>
-
-
+nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 
 " === FM ===
 nmap <C-b> :NERDTreeToggle<CR>
@@ -160,13 +170,16 @@ nmap tf :FZF!<CR>
 nmap <C-f> :FZF<CR>
 nmap <C-A-o> :FZF<CR>
 nmap <leader>r :Ranger<CR>
+" vim config files open bindings
+nmap <localleader>cb :tabnew ~/.vim/config/bindings<CR>
+nmap <localleader>pp :tabnew ~/.vim/config/plugins<CR>
+nmap <localleader>cs :tabnew ~/.vim/config/settings<CR>
 
 " === Plug package mappings ===
 nmap <localleader>pi :PlugInstall<CR>
 nmap <localleader>pc :PlugClean!<CR>
 nmap <localleader>pa O<ESC>IPlug '<ESC>p
 nmap <localleader>pA <localleader>pa,V<localleader>pi
-nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 
 " ### Config .vimrc ###
 nmap <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
@@ -201,38 +214,10 @@ nnoremap <Right> <C-w><Right>
 nnoremap <Left> <C-w><Left>
 nnoremap <bs> <C-w><Left>
 
-" Toggle paste mode
-nnoremap <silent> <F4> :set invpaste<CR>:set paste?<CR>
-inoremap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
-
-" open previous buffer in vert split
-" nnoremap <leader>p :execute "rightbelow vsplit " . bufname("#")<cr>
-
-" add semicolon in the end, save cursor
-nnoremap <leader>; mqA;<ESC>`q
-
-" insert current path
-nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
-" }}}
-
-
-
+" === Notes ===
 "command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
 command! -nargs=1 Ngrep grep "<args>" -g "*.md" $NOTES_DIR
 nnoremap <leader>nn :Ngrep 
-
-
-"==== Session ====
-"nmap <C-F5> :call MakeDefSession()<CR>
-"nmap <S-F5> :call LoadDefSession()<CR>
-
-" Search by grep with quick-window mappings
-" nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
-"nnoremap <leader>n :cnext<cr>
-" nnoremap <leader>l :cclose<cr>
-nmap <C-UP> :tc ..<CR>:pwd<CR>
-
-
 
 " === insert mode mappings ===
 " moving in insert mode
@@ -257,6 +242,7 @@ onoremap p i(
 " F select function name
 onoremap <silent> F :<C-U>normal! 0f(hviw<CR>
 
+
 " NOTE: not used
 "nmap <leader>f :set foldmethod=indent<CR>
 " nmap <Leader>u ysiw_ysiw_
@@ -265,4 +251,14 @@ onoremap <silent> F :<C-U>normal! 0f(hviw<CR>
 " noremap <leader><cr> xi<cr><esc>
 " nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<left><left>
 " nnoremap <leader>rc :%s/\<<C-r><C-w>\>//gc<left><left><left>
+"nmap <leader>gr :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+" open previous buffer in vert split
+" nnoremap <leader>p :execute "rightbelow vsplit " . bufname("#")<cr>
+
+"==== Session ====
+"nmap <C-F5> :call MakeDefSession()<CR>
+"nmap <S-F5> :call LoadDefSession()<CR>
+
+" Search by grep with quick-window mappings
+" nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
 
