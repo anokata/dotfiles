@@ -23,6 +23,15 @@ if (has("termguicolors"))
 endif
 
 colorscheme palenight
-" }}}
 let g:lightline = { 'colorscheme': 'palenight' }
 let g:airline_theme = "palenight"
+
+let g:one_allow_italics = 1 
+colorscheme one
+let g:airline_theme='one'
+
+" good: mango
+" colorscheme onehalfdark
+" let g:airline_theme='onehalfdark'
+
+" }}}

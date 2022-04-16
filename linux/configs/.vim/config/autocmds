@@ -1,0 +1,13 @@
+" vim: ft=vim
+
+augroup allAutoCmds
+    autocmd!
+    autocmd FileType javascript set formatprg=prettier-eslint\ --stdin
+    autocmd DirChanged global :NERDTreeCWD
+    autocmd FileType netrw setlocal bufhidden=wipe
+    autocmd FileType python :iabbrev <buffer> iff if:<left>
+    autocmd FileType vim setlocal foldmethod=marker
+    autocmd FileType markdown :onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
+    autocmd FileType markdown :set autowriteall
+    autocmd FileType c,cpp,java,php,myb,rust,javascript,typescript autocmd BufWritePre <buffer> %s/\s\+$//e
+augroup END

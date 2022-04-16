@@ -24,6 +24,16 @@ Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 "nmap :Prosession
 Plug 'tpope/vim-unimpaired'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'chamindra/marvim'
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-buffer'
+" Plug 'hrsh7th/cmp-path'
+" Plug 'hrsh7th/cmp-calc'
+" Plug 'andersevenrud/compe-tmux', { 'branch': 'cmp' }
+Plug 'dhruvasagar/vim-dotoo'
+
 
 " Old
 Plug 'Raimondi/delimitMate'
@@ -55,9 +65,11 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'dylanaraps/fff.vim'
 
+Plug 'xolox/vim-colorscheme-switcher'
 Plug 'drewtempelmeyer/palenight.vim'
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme palenight
+Plug 'rakr/vim-one'
+Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 "Plug 'tpope/vim-vinegar'
 "Plug 'leafgarland/typescript-vim'
@@ -74,6 +86,7 @@ source ~/.vim/config/persistent-undo
 source ~/.vim/config/plugin-settings
 source ~/.vim/config/ui
 source ~/.vim/config/macros
+source ~/.vim/config/autocmds
 
 
 syn region foldBraces start=/{/ end=/}/ transparent fold
@@ -83,9 +96,9 @@ filetype plugin indent on
 syntax on
 
 " === Mapping {{{
+nmap <localleader>a :AirlineToggle<CR>
 " replace
-" nmap <C-A-r> :%s/
-"
+nmap <C-A-r> :%s/
 " moving in insert mode
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
@@ -125,8 +138,9 @@ nmap <leader>r :Ranger<CR>
 
 " Plug package mappings
 nmap <localleader>pi :PlugInstall<CR>
-nmap <localleader>pc :PlugClean<CR>
-nmap <localleader>pa IPlug '<ESC>px
+nmap <localleader>pc :PlugClean!<CR>
+nmap <localleader>pa O<ESC>IPlug '<ESC>p
+nmap <localleader>pA <localleader>pa,V<localleader>pi
 nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 " ## Edit .vimrc ##
 map <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
@@ -234,18 +248,6 @@ map <F10> :w<CR>:!python '%:t'<CR>
 map <F11> :w<CR>:source %<CR>
 "map <C-F8> :!dot -Tpng % -o%.png && feh %.png<CR>
 " }}}
-
-" right way to use autocmd 
-augroup allAutoCmds
-    autocmd!
-    autocmd FileType javascript set formatprg=prettier-eslint\ --stdin
-    autocmd DirChanged global :NERDTreeCWD
-    autocmd FileType netrw setlocal bufhidden=wipe
-    autocmd FileType python :iabbrev <buffer> iff if:<left>
-    autocmd FileType vim setlocal foldmethod=marker
-    autocmd FileType markdown :onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
-    autocmd FileType c,cpp,java,php,myb,rust,javascript,typescript autocmd BufWritePre <buffer> %s/\s\+$//e
-augroup END
 
 " NeoVim specific config
 if !has('nvim')
