@@ -1,0 +1,5 @@
+echo $DOTFILES
+echo $HOME
+echo $VIM_DIR_CONFIGS
+echo $NOTES_DIR
+echo $WORK_DIR

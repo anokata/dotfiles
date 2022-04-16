@@ -1,0 +1,14 @@
+echo $DOTFILES/linux/.bashrc
+echo $DOTFILES_BIN/session/alias.sh
+echo $DOTFILES_CONFIGS/.tmux.conf
+echo $DOTFILES_CONFIGS/bspwm/bspwmrc
+echo $DOTFILES_CONFIGS/sxhkd/sxhkdrc
+echo $DOTFILES_CONFIGS/polybar/config.ini
+echo $DOTFILES_CONFIGS/.Xresources
+echo $DOTFILES_LINUX/.inputrc
+echo $DOTFILES_CONFIGS/ranger/rc.conf
+echo $DOTFILES_LINUX/.env
+echo ~/.vim/config/plugins
+echo ~/.vim/config/settings
+echo ~/.vim/config/bind-files
+echo ~/.vim/config/plugin-settings

@@ -19,7 +19,18 @@ source ~/.vim/config/autocmds
 
 " TODO
 " https://github.com/junegunn/fzf.vim#commands
-"
+" fzf with custom list of bookmarks
+nnoremap <C-A-f> :Rg! 
+nnoremap <Tab><Tab> :Windows<CR>
+" nnoremap <leader><Tab> :<CR>
+" nnoremap <localleader><Tab> :<CR>
+" nnoremap <leader><Esc> :<CR>
+" nnoremap <localleader><Esc> :<CR>
+" nnoremap  :Lines! 
+" nnoremap  :Buffers 
+" nnoremap  :Windows 
+" nnoremap  :Commands 
+" nnoremap  :Maps 
 
 " <-=== Mapping (testing) ===->
 " FIX:

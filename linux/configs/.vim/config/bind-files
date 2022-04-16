@@ -1,5 +1,9 @@
 " vim: ft=vim
 
+" nnoremap <localleader><Tab> :call fzf#run({'source': 'favorite-dirs', 'sink': 'tabedit'})<CR>
+nnoremap <localleader><Tab> :call fzf#run({'source': 'favorite-dirs', 'sink': 'FZF'})<CR>
+nnoremap <localleader><Esc> :call fzf#run({'source': 'favorite-configs', 'sink': 'tabedit'})<CR>
+
 nnoremap <C-UP> :tc ..<CR>:pwd<CR>
 " mirroring configs
 nmap <localleader>xb ,t:e $DOTFILES/linux/.bashrc<CR>
@@ -15,9 +19,9 @@ nmap <localleader>xr ,t:e $DOTFILES_CONFIGS/ranger/<CR>
 nmap <localleader>xe ,t:e $DOTFILES_LINUX/.env<CR>
 nmap <localleader>xk ,t:e $DOTFILES_CONFIGS/kitty/kitty.conf<CR>
 
-nmap <localleader>cD :Files $DOTFILES<CR>
-nmap <localleader>cw :Files $WORK_DIR<CR>
-nmap <localleader>cn :tcd $NOTES_DIR<CR>:FZF<CR>
+nmap <localleader>od :Files $DOTFILES<CR>
+nmap <localleader>ow :Files $WORK_DIR<CR>
+nmap <localleader>on :tcd $NOTES_DIR<CR>:FZF<CR>
 
 nmap <localleader>zD :e $DOTFILES<CR>
 nmap <localleader>zl :e $DOTFILES_LINUX<CR>
