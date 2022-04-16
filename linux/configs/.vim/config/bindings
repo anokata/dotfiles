@@ -83,9 +83,10 @@ nmap <localleader>cp :tabnew ~/.vim/config/plugins<CR>
 nmap <localleader>cs :tabnew ~/.vim/config/settings<CR>
 nmap <localleader>cf :tabnew ~/.vim/config/bind-files<CR>
 nmap <localleader>cl :tabnew ~/.vim/config/plugin-settings<CR>
+nmap <localleader>cu :tabnew ~/.vim/config/ui<CR>
 
 " === Plug package mappings ===
-nmap <localleader>pi :PlugInstall<CR>
+nmap <localleader>pi ,V:PlugInstall<CR>
 nmap <localleader>pc :PlugClean!<CR>
 nmap <localleader>pa O<ESC>IPlug '<ESC>p
 nmap <localleader>pA <localleader>pa,V<localleader>pi
@@ -129,7 +130,7 @@ command! -nargs=1 Ngrep grep "<args>" -g "*.md" $NOTES_DIR
 nnoremap <leader>nn :Ngrep 
 
 " === IDE ===
-nmap <localleader>a :AirlineToggle<CR>
+" nmap <localleader>a :AirlineToggle<CR>
 nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
 
 

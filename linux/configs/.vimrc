@@ -25,12 +25,24 @@ nnoremap <Tab><Tab> :Windows<CR>
 " nnoremap <leader><Tab> :<CR>
 " nnoremap <localleader><Tab> :<CR>
 " nnoremap <leader><Esc> :<CR>
-" nnoremap <localleader><Esc> :<CR>
+nnoremap <localleader><Esc> :Maps<CR>
 " nnoremap  :Lines! 
 " nnoremap  :Buffers 
 " nnoremap  :Windows 
 " nnoremap  :Commands 
 " nnoremap  :Maps 
+set noshowmode
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified', 'helloworld' ] ]
+      \ },
+      \ 'component': {
+      \   'helloworld': 'Hello a world!'
+      \ },
+      \ }
 
 " <-=== Mapping (testing) ===->
 " FIX:

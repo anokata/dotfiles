@@ -30,7 +30,8 @@ endif
 " let g:airline_theme = "palenight"
 
 colorscheme one
-let g:airline_theme='one'
+" let g:airline_theme='one'
+let g:lightline = { 'colorscheme': 'onehalfdark' }
 
 " good: mango
 " colorscheme onehalfdark
