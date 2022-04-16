@@ -12,5 +12,17 @@ set mouse=a
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 highlight lCursor guifg=NONE guibg=Cyan
-colorscheme soruby
+" colorscheme soruby
+
+if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+colorscheme palenight
 " }}}
+let g:lightline = { 'colorscheme': 'palenight' }
+let g:airline_theme = "palenight"

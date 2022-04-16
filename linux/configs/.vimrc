@@ -1,5 +1,6 @@
 " Remember use: marks, S, C-m
 " [] [[ [{ ][ ]]
+" daw vaw
 
 "" === Plugins === {{{
 call plug#begin('~/.vim/plugged')
@@ -15,7 +16,6 @@ Plug 'svermeulen/vim-subversive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/npm.nvim'
 Plug 'Shougo/denite.nvim'
-Plug 'chamindra/marvi'
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
@@ -23,6 +23,7 @@ Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 "nmap :Prosession
+Plug 'tpope/vim-unimpaired'
 
 " Old
 Plug 'Raimondi/delimitMate'
@@ -36,7 +37,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tpope/vim-unimpaired'
 Plug 'valloric/matchtagalways'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -54,6 +54,10 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'dylanaraps/fff.vim'
+
+Plug 'drewtempelmeyer/palenight.vim'
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+colorscheme palenight
 
 "Plug 'tpope/vim-vinegar'
 "Plug 'leafgarland/typescript-vim'
@@ -79,6 +83,19 @@ filetype plugin indent on
 syntax on
 
 " === Mapping {{{
+" replace
+" nmap <C-A-r> :%s/
+"
+" moving in insert mode
+inoremap <C-e> <C-o>$
+inoremap <C-a> <C-o>0
+
+" no highlight
+nmap <localleader>nn :noh<CR>
+" double esc to no highlight
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+
 " paste as markdownlink
 nmap <localleader>mpl 0yss)$T/yt)0O<ESC>pyss]$Jx
 
@@ -86,7 +103,7 @@ nmap <localleader>mpl 0yss)$T/yt)0O<ESC>pyss]$Jx
 noremap <leader>nb /{[^}]*$<CR>
 
 " open files on cursor always
-nmap gF :e <cfile><CR>
+nmap gF :tabnew <cfile><CR>
 nmap <C-W><C-F> :tabnew <cfile><CR>
 
 " === FM ===

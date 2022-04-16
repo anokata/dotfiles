@@ -28,6 +28,11 @@ set number
 set shiftwidth=4
 set shiftwidth=4
 set smartcase
+set smarttab
+set smartindent
+set scrolloff=1
+set sidescrolloff=5
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set t_Co=256
 set t_ut=
 set tabstop=4
@@ -39,6 +44,7 @@ set wrap
 set wrapmargin=0
 "set omnifunc=syntaxcomplete#Complete
 "set keymap=russian-jcukenwin
+setglobal tags-=./tags tags-=./tags; tags^=./tags;
 
 " Status line
 set statusline=
