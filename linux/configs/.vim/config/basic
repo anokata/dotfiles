@@ -29,7 +29,6 @@ set shiftwidth=4
 set shiftwidth=4
 set smartcase
 set smarttab
-set smartindent
 set scrolloff=1
 set sidescrolloff=5
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
@@ -54,3 +53,8 @@ set statusline +=%1*\ %<%F\ %*            "full path
 if executable('rg')
     set grepprg=rg\ --color=never\ --vimgrep
 endif
+
+filetype off
+filetype plugin indent on
+syntax on
+

@@ -1,7 +1,10 @@
 " vim: ft=vim
 
+syn region foldBraces start=/{/ end=/}/ transparent fold
+
 " Color {{{
 let g:solarized_termcolors=256
+let g:one_allow_italics = 1 
 set t_Co=256
 set background=dark
 set t_ut=
@@ -22,11 +25,10 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme palenight
-let g:lightline = { 'colorscheme': 'palenight' }
-let g:airline_theme = "palenight"
+" colorscheme palenight
+" let g:lightline = { 'colorscheme': 'palenight' }
+" let g:airline_theme = "palenight"
 
-let g:one_allow_italics = 1 
 colorscheme one
 let g:airline_theme='one'
 
