@@ -1,2 +1,71 @@
 " vim: ft=vim
+"" <-=== Plugins ===->
+call plug#begin('~/.vim/plugged')
+" Base
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat' 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+" New try
+Plug 'tpope/vim-speeddating'
+Plug 'svermeulen/vim-subversive'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/npm.nvim'
+Plug 'Shougo/denite.nvim'
+
+" to try
+Plug 'jasoncodes/ctrlp-modified.vim'
+Plug 'sbdchd/neoformat'
+Plug 'tpope/vim-obsession'
+Plug 'dhruvasagar/vim-prosession'
+"nmap :Prosession
+Plug 'tpope/vim-unimpaired'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'chamindra/marvim'
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-buffer'
+" Plug 'hrsh7th/cmp-path'
+" Plug 'hrsh7th/cmp-calc'
+" Plug 'andersevenrud/compe-tmux', { 'branch': 'cmp' }
+Plug 'dhruvasagar/vim-dotoo'
+
+" Old
+Plug 'Raimondi/delimitMate'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'docunext/closetag.vim'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'ktonga/vim-follow-my-lead'
+Plug 'majutsushi/tagbar'
+Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'valloric/matchtagalways'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/DfrankUtil'
+Plug 'vim-scripts/taglist.vim'
+Plug 'vim-scripts/utf8-math'
+Plug 'vim-scripts/utl.vim'
+Plug 'wakatime/vim-wakatime'
+Plug 'flazz/vim-colorschemes'
+Plug 'sainnhe/everforest'
+Plug 'xolox/vim-misc'
+Plug 'vim-scripts/code_complete'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'dylanaraps/fff.vim'
+
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'rakr/vim-one'
+Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+
+"Plug 'tpope/vim-vinegar'
+"Plug 'leafgarland/typescript-vim'
+call plug#end()

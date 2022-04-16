@@ -1,2 +1,152 @@
 " vim: ft=vim
 
+" === Navigation ===
+nnoremap GG GGzz
+" navigate to next inner block
+noremap <leader>nb /{[^}]*$<CR>
+" open files on cursor always
+nmap gF :tabnew <cfile><CR>
+nmap <C-W><C-F> :tabnew <cfile><CR>
+" no highlight
+nmap <localleader>hh :noh<CR>
+" double esc to no highlight
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+" Quick search
+nnoremap <localleader>n :cnext<cr>
+nnoremap <localleader>l :cclose<cr>
+
+" === Editing ===
+nmap <leader>q :w<CR>
+nnoremap <C-s> :w<CR>
+nmap <leader>e :q<CR>
+nmap <leader>X :!chmod +x %<CR>
+" Substitute
+nmap s <plug>(SubversiveSubstitute)
+nmap ss <plug>(SubversiveSubstituteLine)
+" duplicate line up/down
+nmap <C-A-k> yykp
+nmap <C-A-j> yyp
+nmap <C-A-UP> yykp
+nmap <C-A-DOWN> yyp
+nmap <A-S-UP> yykp
+nmap <A-S-DOWN> yyp
+" move line up/down
+nmap <A-UP> ddkP
+nmap <A-DOWN> ddp
+nmap <A-k> ddkP
+nmap <A-j> ddp
+" replace
+nmap <C-A-r> :%s/
+" paste as markdownlink
+nmap <localleader>mpl 0yss)$T/yt)0O<ESC>pyss]$Jx
+" copy to system buffer
+" nmap <leader>y "+y
+nmap <leader>y "*y
+nmap <leader>Y "+y
+" Paste from Clipboard
+nmap <leader>p "+p
+nmap <leader>P o<ESC>"+P
+" Copy vim def " buffer to clipboard
+" nmap <leader>s :let @+=@"<CR>
+nmap <leader>s :let @*=@"<CR>
+" paste link
+"nmap <leader>l o<ESC>"+p0yss[
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+" Toggle paste mode
+nnoremap <silent> <F4> :set invpaste<CR>:set paste?<CR>
+inoremap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
+" add semicolon in the end, save cursor
+nnoremap <leader>; mqA;<ESC>`q
+" insert current path
+nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
+
+" === FM ===
+nmap <C-b> :NERDTreeToggle<CR>
+nmap <leader>n1 :NERDTree-cd<CR>:pwd<CR>
+nmap <leader>n2 :NERDTree-CD<CR>:pwd<CR>
+nmap <leader>c :TlistToggle<CR>
+nmap <leader>x :TagbarToggle<CR>
+nmap <leader>l :TagbarToggle<CR>
+nmap <C-F1> :NERDTreeFind<CR>
+nmap <S-F1> :F<CR>
+nmap tf :FZF!<CR>
+nmap <C-f> :FZF<CR>
+nmap <C-A-o> :FZF<CR>
+nmap <leader>r :Ranger<CR>
+" vim config files open bindings configs
+nmap <localleader>cb :tabnew ~/.vim/config/bindings<CR>
+nmap <localleader>cc :tabnew<CR>:tcd ~/.vim/config/<CR>:FZF<CR>
+nmap <localleader>cp :tabnew ~/.vim/config/plugins<CR>
+nmap <localleader>cs :tabnew ~/.vim/config/settings<CR>
+nmap <localleader>cf :tabnew ~/.vim/config/bind-files<CR>
+
+" === Plug package mappings ===
+nmap <localleader>pi :PlugInstall<CR>
+nmap <localleader>pc :PlugClean!<CR>
+nmap <localleader>pa O<ESC>IPlug '<ESC>p
+nmap <localleader>pA <localleader>pa,V<localleader>pi
+nmap <localleader>pp :tabnew ~/.vim/config/plugins<CR>
+
+" ### Config .vimrc ###
+nmap <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
+nmap <leader>V :source $MYVIMRC<CR>
+nmap <leader>n :vsp $HOME/.vimrc<CR>:set foldmethod=marker<cr>
+nmap <leader>N :source $HOME/.vimrc<CR>
+nmap <C-k> :tabnew $MYVIMRC<CR>
+nmap <leader>ev :tabnew $MYVIMRC<CR>
+nmap <leader>es :source %<CR>
+
+" === Tabs ===
+nmap <leader>t :tabnew<CR>
+nmap <C-n> :tabnew<CR>
+nmap <leader>w :tabclose<CR>
+nmap <leader>, :tabnext<CR>
+nmap <leader>. :tabprev<CR>
+nmap tn :tabnew<CR>
+nmap tw :tabclose<CR>
+nmap th :tabnext<CR>
+nmap tl :tabprev<CR>
+nmap <C-l> gt 
+nmap <C-h> gT
+
+" === window ===
+noremap <C-A-w> ZZ
+noremap <C-q> :qa<CR>
+noremap <C-A-q> :qa!<CR>
+" Map ctrl-atl-movement keys to window switching
+nnoremap <Up> <C-w><Up>
+nnoremap <Down> <C-w><Down>
+nnoremap <Right> <C-w><Right>
+nnoremap <Left> <C-w><Left>
+nnoremap <bs> <C-w><Left>
+
+" === Notes ===
+"command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
+command! -nargs=1 Ngrep grep "<args>" -g "*.md" $NOTES_DIR
+nnoremap <leader>nn :Ngrep 
+
+" === IDE ===
+nmap <localleader>a :AirlineToggle<CR>
+nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
+
+
+" === Insert mode mappings ===
+" moving in insert mode
+inoremap <C-e> <C-o>$
+inoremap <C-a> <C-o>0
+" inoremap jk <esc>
+inoremap kj <esc>
+" delete line
+inoremap <c-d> <esc>ddi
+" uppercase
+inoremap <c-u> <esc>viwUi
+
+
+" === Operators ===
+" ?
+onoremap p i(
+" F select function name
+onoremap <silent> F :<C-U>normal! 0f(hviw<CR>
+
