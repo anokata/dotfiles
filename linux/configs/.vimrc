@@ -37,13 +37,21 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'helloworld' ] ]
+      \             [ 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo', 'datetime' ],
+      \              [ 'percent' ],
+      \              [ 'gitbranch', 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
       \ },
-      \ 'component': {
-      \   'helloworld': 'Hello a world!'
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead',
+      \   'datetime': 'Ksi_datetime'
       \ },
       \ }
 
+function Ksi_datetime()
+   return strftime('%d.%m %H:%M')
+endfunction
+" echo Ksi_datetime()
 " <-=== Mapping (testing) ===->
 " FIX:
 " inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
