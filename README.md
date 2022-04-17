@@ -2,33 +2,33 @@
 
 **Ordinary dotfiles here**
 
-- `bin` - script for automating everyday tasks
-- `linux` and linux/configs - my configs and scripts
-- `legacy` - old configs
+- `linux` 
+    - `bin` - script for automating everyday tasks
+    - `configs` - my configs and scripts
+    - `.bashrc` - shell config, will source: bin/session/
+    - `.env` - variables
+    - `inputrc` - readline key bindings
 - `mac` - mac os configs
 - `windows` - win configs and scripts
 
-configs:
-    - `inputrc` - readline key bindings
+`configs`: all than should be in $HOME or $HOME/.config
+    - `.vim` - vim configs + `.vimrc`
+    - `.tmux.conf`
 
 ---
 
 # Install:
 ```
     clone https://github.com/anokata/dotfiles.git $HOME
-    echo 'source ~/dotfiles/linux/.bashrc' >> ~/.bashrc
-    echo 'source ~/dotfiles/linux/.env' >> ~/.profile
+    cd linux
+    make install
 ```
+
 ## Intall config:
 ```
-    cp ~/dotfiles/linux/.@(!(.|))  ~/
-    cp ~/dotfiles/linux/* ~/.config # TODO: not dot
-    ln configs:
-        tmux
-        bspcwmrc
-        ...
-    nvim -c :PlugInstall
+    cd linux && make config
 ```
+
 ---
 
 
