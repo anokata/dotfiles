@@ -36,6 +36,8 @@ Plug 'chamindra/marvim'
 "Plug 'leafgarland/typescript-vim'
 
 " FM
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'kevinhwang91/rnvimr'"
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
@@ -50,9 +52,6 @@ Plug 'gorodinskiy/vim-coloresque'
 Plug 'ktonga/vim-follow-my-lead'
 Plug 'majutsushi/tagbar'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
 Plug 'valloric/matchtagalways'
 Plug 'vim-scripts/DfrankUtil'
 Plug 'vim-scripts/taglist.vim'
@@ -64,12 +63,13 @@ Plug 'sainnhe/everforest'
 Plug 'xolox/vim-misc'
 Plug 'vim-scripts/code_complete'
 
-" Color
+" Color and UI
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'rakr/vim-one'
 Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'ryanoasis/vim-devicons'
 
 " not used anymore
 " Plug 'vim-ctrlspace/vim-ctrlspace'

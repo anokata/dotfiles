@@ -20,8 +20,10 @@ nmap <localleader>xe ,t:e $DOTFILES_LINUX/.env<CR>
 nmap <localleader>xk ,t:e $DOTFILES_CONFIGS/kitty/kitty.conf<CR>
 
 nmap <localleader>od :Files $DOTFILES<CR>
+nmap <localleader>oc :Files $DOTFILES<CR>
 nmap <localleader>ow :Files $WORK_DIR<CR>
-nmap <localleader>on :tcd $NOTES_DIR<CR>:FZF<CR>
+nmap <localleader>on :Files $NOTES_DIR<CR>
+" nmap <localleader>on :tcd $NOTES_DIR<CR>:FZF<CR>
 
 nmap <localleader>zD :e $DOTFILES<CR>
 nmap <localleader>zl :e $DOTFILES_LINUX<CR>

@@ -31,7 +31,8 @@ bind -x '"\e[1;5A":"cd .."' # c-up
 bind -x '"\e[1;5A":"cd -"' # c-left
 
 # FM
-bind -x '"\eOS":"ranger"' # F4
+bind -x '"\e[17~":"ranger"' # F6
+
 bind -x '"\e[1;5S":"ranger"' # C-F4
 bind -x '"\e[1;6S":"tmux new-window ranger"' # C-S-F4
 bind -x '"\e[15;5~":"fff"' # C-F5
@@ -45,16 +46,25 @@ bind -x '"\C-n":"tmux new-window"' # c-n
 bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
 
 ## vim
-bind -x '"\e[1;6P":"$EDITOR $DOTFILES"' # C-S-F1
+bind -x '"\e[1;6P":"$EDITOR"' # C-S-F1
+# sessions
+bind -x '"\eOP":"cd $DOTFILES; $EDITOR"' # F1 - open session: dotfiles
+bind -x '"\eOQ":"cd $NOTES_DIR; $EDITOR"' # F2 - notes
+bind -x '"\eOR":"cd $WORK_DIR_CURRENT; $EDITOR"' # F3 - ndm
+bind -x '"\eOS":"cd $VIM_DIR_CONFIGS; $EDITOR"' # F4 - vim
+
+bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
+
+# fzf and vim
+bind -x '"\C-f":"$EDITOR $(fzf)"' # C-e fzf and open in vim
+bind -x '"\C-o":"cd $NOTES_DIR; $EDITOR $(fzf)"' # C-e fzf and open in vim
+
+# configs
 bind -x '"\e[1;5P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # C-F1
 bind -x '"\e[1;5Q":"$EDITOR $DOTFILES_LINUX/.bashrc"' # C-F2
-bind -x '"\eOQ":"$EDITOR $NOTES_DIR/"' # F2
-bind -x '"\eOP":"$EDITOR"' # F1
-bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
-bind -x '"\C-f":"$EDITOR $(fzf)"' # C-e fzf and open in vim
-bind -x '"\C-o":"$EDITOR $(fzf)"' # C-e fzf and open in vim
 
 # Fav dirs
+# num not num
 #bind '"\e[1;5F":"cd $HDD1\C-m"' # C-num-1
 #bind '"\e[2;5~":"cd $HDD2\C-m"' # C-num-0
 #bind '"\e[1;5B":"cd $SSD\C-m"' # C-num-2
