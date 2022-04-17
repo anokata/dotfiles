@@ -13,6 +13,7 @@ Plug 'dhruvasagar/vim-prosession'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-rooter'
 
+
 " New try
 Plug 'tpope/vim-speeddating'
 Plug 'svermeulen/vim-subversive'
@@ -22,6 +23,7 @@ Plug 'Shougo/denite.nvim'
 Plug 'SidOfc/mkdx'
 Plug 'majutsushi/tagbar'
 " Plug 'tenfyzhong/tagbar-markdown.vim'
+Plug 'shmargum/vim-sass-colors'
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
@@ -39,7 +41,6 @@ Plug 'chamindra/marvim'
 " Plug 'dhruvasagar/vim-dotoo'
 "Plug 'tpope/vim-vinegar'
 "Plug 'leafgarland/typescript-vim'
-Plug 'ap/vim-css-color'
 " Plug 'gorodinskiy/vim-coloresque'
 
 " FM
@@ -51,6 +52,10 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'dylanaraps/fff.vim'
 
 " IDE
+
+" CSS
+Plug 'KabbAmine/vCoolor.vim'
+Plug 'ap/vim-css-color'
 
 " Old
 Plug 'Raimondi/delimitMate'
