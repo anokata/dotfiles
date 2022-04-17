@@ -38,8 +38,7 @@ nnoremap <BS> :RnvimrToggle<CR>
 " :NERDTreeToggleVCS
 " let g:fzf_tags_command = 'ctags -R'
 
-
-
+" https://github.com/Shougo/dein.vim
 
 
 " FIX:
