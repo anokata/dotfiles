@@ -3,7 +3,7 @@
 augroup allAutoCmds
     autocmd!
     autocmd FileType javascript set formatprg=prettier-eslint\ --stdin
-    autocmd DirChanged global :NERDTreeCWD
+    " autocmd DirChanged global :NERDTreeCWD
     autocmd FileType netrw setlocal bufhidden=wipe
     autocmd FileType python :iabbrev <buffer> iff if:<left>
     autocmd FileType vim setlocal foldmethod=marker

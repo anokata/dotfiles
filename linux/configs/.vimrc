@@ -33,11 +33,9 @@ source ~/.vim/config/autocmds
 " nnoremap  :Windows 
 " nnoremap  :Commands 
 " nnoremap  :Maps 
-"nmap :Prosession
-nnoremap - :call fzf#run({'source': prosession#ListSessions(), 'sink': 'Prosession'})<CR>
 let g:NERDTreeQuitOnOpen = 1
 let g:ranger_terminal = 'kitty'
-let g:NERDTreeHijackNetrw = 0
+" let g:NERDTreeHijackNetrw = 0
 " let g:ranger_replace_netrw = 1
 " :NERDTreeToggleVCS
 " call fzf#run({'source':  'sink': 'colo', 'left': '25%'})

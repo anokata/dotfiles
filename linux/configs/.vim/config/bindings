@@ -134,6 +134,10 @@ nnoremap <leader>nn :Ngrep
 " === IDE ===
 " nmap <localleader>a :AirlineToggle<CR>
 nmap <leader>C :!ctags -R -o ~/mytags `pwd`<cr>
+" create session
+nnoremap <localleader>pp :Prosession .<CR>
+" list and open session
+nnoremap - :call fzf#run({'source': prosession#ListSessions(), 'sink': 'Prosession'})<CR>
 
 
 " === Insert mode mappings ===
