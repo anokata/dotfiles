@@ -78,3 +78,9 @@ let g:rooter_patterns = ['=src', '=doc', '.git', 'Makefile', '*.sln', 'build/env
 
 let g:fzf_buffers_jump = 1
 let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.9 } }
+
+let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
+                        \ 'enter': { 'shift': 1 },
+                        \ 'links': { 'external': { 'enable': 1 } },
+                        \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
+                        \ 'fold': { 'enable': 1 } }

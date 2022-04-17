@@ -10,4 +10,5 @@ augroup allAutoCmds
     autocmd FileType markdown :onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
     autocmd FileType markdown setlocal autowriteall
     autocmd FileType c,cpp,java,php,myb,rust,javascript,typescript autocmd BufWritePre <buffer> %s/\s\+$//e
+    autocmd FileType markdown,mkdx call MkdxRemap()
 augroup END

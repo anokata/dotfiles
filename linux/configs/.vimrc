@@ -1,7 +1,6 @@
 " Remember use: marks, S, C-m
 " [] [[ [{ ][ ]]
 " daw vaw
-" usefull bindings not used:  = - space bs Bind C-Fx S-Fx (F1-F12)
  
 " === Load configs === (<localleader>c* to open)
 source ~/.vim/config/plugins
@@ -18,7 +17,6 @@ source ~/.vim/config/macros
 source ~/.vim/config/autocmds
 
 " TODO
-" https://github.com/junegunn/fzf.vim#commands
 " nnoremap <localleader><Esc> :Maps<CR>
 " nnoremap <leader><Tab> :<CR>
 " nnoremap -
@@ -33,24 +31,17 @@ source ~/.vim/config/autocmds
 " nnoremap  :Windows 
 " nnoremap  :Commands 
 " nnoremap  :Maps 
+" <-=== Mapping (testing) ===->
 nnoremap <BS> :RnvimrToggle<CR>
 " let g:NERDTreeHijackNetrw = 0
 " let g:ranger_replace_netrw = 1
 " :NERDTreeToggleVCS
-" help terminal-configuration
-" let g:XkbSwitchLib = "/usr/local/lib/libxkbswitch.so"
-" let g:XkbSwitchEnabled = 1
-" let g:XkbSwitchIMappings = ['ru']
-" echo libcall(g:XkbSwitchLib, 'Xkb_Switch_getXkbLayout', '')
-" call libcall(g:XkbSwitchLib, 'Xkb_Switch_setXkbLayout', 'us')
-nnoremap <C-S-F1> :Prosession $DOTFILES_CONFIGS<CR>
-nnoremap <C-S-F2> :Prosession $DOTFILES<CR>
-nnoremap <C-S-F3> :Prosession $NOTES_DIR<CR>
-nnoremap <C-S-F4> :Prosession $WORK_DIR_CURRENT<CR>
-nnoremap <C-S-F5> :Prosession $VIM_DIR_CONFIGS<CR>
-
 " let g:fzf_tags_command = 'ctags -R'
-" <-=== Mapping (testing) ===->
+
+
+
+
+
 " FIX:
 " inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
 " inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')

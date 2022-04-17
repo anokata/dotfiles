@@ -5,6 +5,12 @@ nnoremap <localleader><Tab> :call fzf#run({'source': 'favorite-dirs', 'sink': 'F
 nnoremap <localleader><Esc> :call fzf#run({'source': 'favorite-configs', 'sink': 'tabedit'})<CR>
 
 nnoremap <C-UP> :tc ..<CR>:pwd<CR>
+" favorite sessions 
+nnoremap <C-S-F1> :Prosession $DOTFILES_CONFIGS<CR>
+nnoremap <C-S-F2> :Prosession $DOTFILES<CR>
+nnoremap <C-S-F3> :Prosession $NOTES_DIR<CR>
+nnoremap <C-S-F4> :Prosession $WORK_DIR_CURRENT<CR>
+nnoremap <C-S-F5> :Prosession $VIM_DIR_CONFIGS<CR>
 " mirroring configs
 nmap <localleader>xb ,t:e $DOTFILES/linux/.bashrc<CR>
 nmap <localleader>eb ,t:e $DOTFILES/linux/.bashrc<CR>
@@ -21,6 +27,7 @@ nmap <localleader>xk ,t:e $DOTFILES_CONFIGS/kitty/kitty.conf<CR>
 
 nmap <localleader>od :Files $DOTFILES<CR>
 nmap <localleader>oc :Files $DOTFILES<CR>
+nmap <localleader>cd :Files $DOTFILES<CR>
 nmap <localleader>ow :Files $WORK_DIR<CR>
 nmap <localleader>on :Files $NOTES_DIR<CR>
 " nmap <localleader>on :tcd $NOTES_DIR<CR>:FZF<CR>

@@ -1,5 +1,5 @@
 " vim: ft=vim
-"" <-=== Plugins ===->
+" <-=== Plugins ===->
 call plug#begin('~/.vim/plugged')
 " Base
 Plug 'tpope/vim-surround'
@@ -11,6 +11,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-rooter'
 
 " New try
 Plug 'tpope/vim-speeddating'
@@ -18,7 +19,7 @@ Plug 'svermeulen/vim-subversive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/npm.nvim'
 Plug 'Shougo/denite.nvim'
-Plug 'tpope/vim-markdown'
+Plug 'SidOfc/mkdx'
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
@@ -26,7 +27,6 @@ Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-unimpaired'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'chamindra/marvim'
-Plug 'airblade/vim-rooter'
 
 " Plug 'hrsh7th/nvim-cmp'
 " Plug 'hrsh7th/cmp-nvim-lsp'
@@ -45,6 +45,8 @@ Plug 'kevinhwang91/rnvimr'"
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'dylanaraps/fff.vim'
+
+" IDE
 
 " Old
 Plug 'Raimondi/delimitMate'

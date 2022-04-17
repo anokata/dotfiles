@@ -92,7 +92,7 @@ nmap <localleader>cu :tabnew ~/.vim/config/ui<CR>
 nmap <localleader>pi ,V:PlugInstall<CR>
 nmap <localleader>pc :PlugClean!<CR>
 nmap <localleader>pa O<ESC>IPlug '<ESC>p
-nmap <localleader>pA <localleader>pa,V<localleader>pi
+nmap <localleader>pA <localleader>pa:w<CR>,V<localleader>pi
 nmap <localleader>pp :tabnew ~/.vim/config/plugins<CR>
 
 " ### Config .vimrc ###
@@ -159,4 +159,14 @@ inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 onoremap p i(
 " F select function name
 onoremap <silent> F :<C-U>normal! 0f(hviw<CR>
+
+
+" === markdown ===
+" TODO
+fun! MkdxRemap()
+    echo 'remap'
+    nmap <buffer><silent> <space> <Plug>(mkdx-checkbox-prev-n)
+    " <Plug>(mkdx-toggle-checklist-n)
+    ""<Plug>(mkdx-toggle-checkbox-n)
+endfun
 
