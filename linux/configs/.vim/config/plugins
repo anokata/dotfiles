@@ -22,7 +22,6 @@ Plug 'jasoncodes/ctrlp-modified.vim'
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
-"nmap :Prosession
 Plug 'tpope/vim-unimpaired'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'chamindra/marvim'

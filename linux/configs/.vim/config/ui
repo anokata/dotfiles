@@ -31,7 +31,8 @@ endif
 
 colorscheme one
 " let g:airline_theme='one'
-let g:lightline = { 'colorscheme': 'onehalfdark' }
+" let g:lightline = { 'colorscheme': 'onehalfdark' }
+" let g:lightline = { 'colorscheme': 'wombat' }
 
 " good: mango
 " colorscheme onehalfdark

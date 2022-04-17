@@ -1,6 +1,8 @@
 " vim: ft=vim
 
 " === Navigation ===
+nnoremap <C-A-f> :Rg! 
+nnoremap <Tab><Tab> :Windows<CR>
 nnoremap GG GGzz
 " navigate to next inner block
 noremap <leader>nb /{[^}]*$<CR>

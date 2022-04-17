@@ -15,7 +15,39 @@
 " let g:airline_section_z = '%3p%% %#__accent_bold#%{g:airline_symbols.linenr}%2l%#__restore__#%#__accent_bold#/%L%#__restore__# :%3v'
 " let g:airline_section_b = ''
 " let g:airline_section_c = '%<%f%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
-"
+
+let g:lightline = {
+  \ 'colorscheme': 'onehalfdark',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'readonly', 'filename', 'modified' ] ],
+  \   'right': [ [ 'lineinfo', 'datetime' ],
+  \              [ 'percent' ],
+  \              [ 'gitbranch', 'fileencoding', 'filetype' ] ]
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'FugitiveHead',
+  \   'datetime': 'Ksi_datetime'
+  \ },
+  \ 'mode_map': {
+    \ 'n' : 'N',
+    \ 'i' : 'I',
+    \ 'R' : 'R',
+    \ 'v' : 'V',
+    \ 'V' : 'VL',
+    \ "\<C-v>": 'VB',
+    \ 'c' : 'C',
+    \ 's' : 'S',
+    \ 'S' : 'SL',
+    \ "\<C-s>": 'SB',
+    \ 't': 'T',
+    \ },
+  \ }
+
+function Ksi_datetime()
+   return strftime('%d.%m %H:%M')
+endfunction
+
 let g:rooter_patterns = ['Makefile']
 
 let g:netrw_liststyle = 3
@@ -23,6 +55,11 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 2
 let g:netrw_winsize = 35
 let g:netrw_altv = 1
+let g:netrw_keepdir = 0
+let g:netrw_localcopydircmd = 'cp -r'
+hi! link netrwMarkFile Search
+" nnoremap <localleader>fd :Lexplore %:p:h<CR>
+" nnoremap <localleader>fe :Lexplore<CR>
 
 let g:indexer_disableCtagsWarning=1
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
@@ -30,8 +67,8 @@ let g:CtrlSpaceSaveWorkspaceOnExit = 1
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeChDirMode = 2
+let g:NERDTreeWinPos = "right"
+let g:NERDTreeChDirMode = 0
 let NERDTreeIgnore = ['\.pyc$', '\node_modules']
 
 let g:ranger_map_keys = 0

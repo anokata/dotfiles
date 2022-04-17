@@ -19,39 +19,29 @@ source ~/.vim/config/autocmds
 
 " TODO
 " https://github.com/junegunn/fzf.vim#commands
-" fzf with custom list of bookmarks
-nnoremap <C-A-f> :Rg! 
-nnoremap <Tab><Tab> :Windows<CR>
+" nnoremap <localleader><Esc> :Maps<CR>
 " nnoremap <leader><Tab> :<CR>
+" nnoremap -
+" nnoremap =
+" nnoremap <C-F1>
+" nnoremap <F1>
 " nnoremap <localleader><Tab> :<CR>
+" nnoremap <localleader><localleader>
 " nnoremap <leader><Esc> :<CR>
-nnoremap <localleader><Esc> :Maps<CR>
 " nnoremap  :Lines! 
 " nnoremap  :Buffers 
 " nnoremap  :Windows 
 " nnoremap  :Commands 
 " nnoremap  :Maps 
-set noshowmode
+"nmap :Prosession
+nnoremap - :call fzf#run({'source': prosession#ListSessions(), 'sink': 'Prosession'})<CR>
+let g:NERDTreeQuitOnOpen = 1
+let g:ranger_terminal = 'kitty'
+let g:NERDTreeHijackNetrw = 0
+" let g:ranger_replace_netrw = 1
+" :NERDTreeToggleVCS
+" call fzf#run({'source':  'sink': 'colo', 'left': '25%'})
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified' ] ],
-      \   'right': [ [ 'lineinfo', 'datetime' ],
-      \              [ 'percent' ],
-      \              [ 'gitbranch', 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead',
-      \   'datetime': 'Ksi_datetime'
-      \ },
-      \ }
-
-function Ksi_datetime()
-   return strftime('%d.%m %H:%M')
-endfunction
-" echo Ksi_datetime()
 " <-=== Mapping (testing) ===->
 " FIX:
 " inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
