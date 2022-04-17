@@ -12,3 +12,5 @@ mkdir $HOME/Dropbox
 
 # git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 pip install ueberzug
+pip install pynvim
+sudo apt install python3-pynvim

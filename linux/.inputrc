@@ -33,7 +33,10 @@ set vi-cmd-mode-string \1\e[2 q\2
 "\e\C-l": "\e0D"
 
 # alt-s  prepend with sudo
-"\es": "\e0isudo \e$"
+"\es": "\e0Isudo \e$"
+
+# alt-s  prepend with echo % >> 
+"\ee": "\e0I'\eA'\e0Iecho \e$a >> \eA"
 
 # c-b to background
 "\e\C-b": "\C-e > /dev/null 2>&1 &\C-m"
