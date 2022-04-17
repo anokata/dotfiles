@@ -45,7 +45,8 @@ nnoremap <BS> :RnvimrToggle<CR>
 " let g:XkbSwitchIMappings = ['ru']
 " echo libcall(g:XkbSwitchLib, 'Xkb_Switch_getXkbLayout', '')
 " call libcall(g:XkbSwitchLib, 'Xkb_Switch_setXkbLayout', 'us')
-
+let g:fzf_buffers_jump = 1
+" let g:fzf_tags_command = 'ctags -R'
 " <-=== Mapping (testing) ===->
 " FIX:
 " inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
