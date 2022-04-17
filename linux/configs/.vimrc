@@ -34,11 +34,12 @@ source ~/.vim/config/autocmds
 " nnoremap  :Commands 
 " nnoremap  :Maps 
 let g:NERDTreeQuitOnOpen = 1
-let g:ranger_terminal = 'kitty'
+nnoremap <BS> :RnvimrToggle<CR>
 " let g:NERDTreeHijackNetrw = 0
 " let g:ranger_replace_netrw = 1
 " :NERDTreeToggleVCS
 " call fzf#run({'source':  'sink': 'colo', 'left': '25%'})
+" help terminal-configuration
 
 " <-=== Mapping (testing) ===->
 " FIX:

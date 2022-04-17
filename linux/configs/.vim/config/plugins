@@ -8,6 +8,9 @@ Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-obsession'
+Plug 'dhruvasagar/vim-prosession'
+Plug 'tpope/vim-fugitive'
 
 " New try
 Plug 'tpope/vim-speeddating'
@@ -15,13 +18,10 @@ Plug 'svermeulen/vim-subversive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/npm.nvim'
 Plug 'Shougo/denite.nvim'
-Plug 'tpope/vim-fugitive'
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
 Plug 'sbdchd/neoformat'
-Plug 'tpope/vim-obsession'
-Plug 'dhruvasagar/vim-prosession'
 Plug 'tpope/vim-unimpaired'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'chamindra/marvim'
@@ -31,7 +31,15 @@ Plug 'chamindra/marvim'
 " Plug 'hrsh7th/cmp-path'
 " Plug 'hrsh7th/cmp-calc'
 " Plug 'andersevenrud/compe-tmux', { 'branch': 'cmp' }
-Plug 'dhruvasagar/vim-dotoo'
+" Plug 'dhruvasagar/vim-dotoo'
+"Plug 'tpope/vim-vinegar'
+"Plug 'leafgarland/typescript-vim'
+
+" FM
+Plug 'kevinhwang91/rnvimr'"
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'dylanaraps/fff.vim'
 
 " Old
 Plug 'Raimondi/delimitMate'
@@ -55,21 +63,16 @@ Plug 'flazz/vim-colorschemes'
 Plug 'sainnhe/everforest'
 Plug 'xolox/vim-misc'
 Plug 'vim-scripts/code_complete'
-Plug 'kevinhwang91/rnvimr'"
-" Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'vim-ctrlspace/vim-ctrlspace'
-Plug 'dylanaraps/fff.vim'
 
+" Color
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'rakr/vim-one'
 Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
-"Plug 'tpope/vim-vinegar'
-"Plug 'leafgarland/typescript-vim'
-
+" not used anymore
+" Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 call plug#end()

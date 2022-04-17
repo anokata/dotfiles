@@ -3,6 +3,7 @@
 " === Navigation ===
 nnoremap <C-A-f> :Rg! 
 nnoremap <Tab><Tab> :Windows<CR>
+nnoremap <Tab><Esc> :Buffers<CR>
 nnoremap GG GGzz
 " navigate to next inner block
 noremap <leader>nb /{[^}]*$<CR>

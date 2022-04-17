@@ -14,3 +14,5 @@ mkdir $HOME/Dropbox
 pip install ueberzug
 pip install pynvim
 sudo apt install python3-pynvim
+npm install -g neovim
+python2 -m pip install --user --upgrade pynvim
