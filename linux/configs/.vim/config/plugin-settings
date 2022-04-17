@@ -48,7 +48,6 @@ function Ksi_datetime()
    return strftime('%d.%m %H:%M')
 endfunction
 
-let g:rooter_patterns = ['Makefile']
 
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
@@ -75,3 +74,4 @@ let g:NERDTreeQuitOnOpen = 1
 let g:ranger_map_keys = 0
 let g:fff#split = "30vnew"
 
+let g:rooter_patterns = ['=src', '=doc', '.git', 'Makefile', '*.sln', 'build/env.sh', 'Makefile']
