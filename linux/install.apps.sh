@@ -16,5 +16,7 @@ pip install pynvim
 sudo apt install python3-pynvim
 npm install -g neovim
 python2 -m pip install --user --upgrade pynvim
-sudo apt install libxkbfile-dev
-git clone https://github.com/grwlf/xkb-switch.git
+# sudo apt install libxkbfile-dev
+# git clone https://github.com/grwlf/xkb-switch.git
+npm install -g neovim
+nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css

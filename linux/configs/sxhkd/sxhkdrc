@@ -113,6 +113,9 @@ ctrl + super + m; x
 ctrl + super + m; s
     ~/dotfiles/linux/bin/rofi-mpd -s
 
+ctrl + super + m; n # show name
+    notify-send "$(~/dotfiles/linux/bin/mpd-command current)"
+
 ctrl + super + a
     ~/dotfiles/linux/bin/rofi-mpd -A
 ctrl + super + l

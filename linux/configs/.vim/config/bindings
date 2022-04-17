@@ -166,11 +166,11 @@ onoremap <silent> F :<C-U>normal! 0f(hviw<CR>
 fun! MkdxRemap()
     echo 'remap'
     " check toggle
-    nnoremap <buffer><silent> <space> <Plug>(mkdx-checkbox-prev-n)
+    nmap <buffer><silent> <space> <Plug>(mkdx-checkbox-prev-n)
     " add checkbox list
-    nnoremap <buffer><silent> <C-m> <Plug>(mkdx-toggle-checklist-n)
+    nmap <buffer><silent> <C-m> <Plug>(mkdx-toggle-checklist-n)
     " add checkbox 
-    nnoremap <buffer><silent> <C-A-m> <Plug>(mkdx-toggle-checkbox-n)
+    nmap <buffer><silent> <C-A-m> <Plug>(mkdx-toggle-checkbox-n)
     " promote/demote headings
     nmap <buffer><silent> 11 <leader>[
     nmap <buffer><silent> 22 <leader>]
