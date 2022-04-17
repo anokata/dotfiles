@@ -37,15 +37,13 @@ nnoremap <BS> :RnvimrToggle<CR>
 " let g:NERDTreeHijackNetrw = 0
 " let g:ranger_replace_netrw = 1
 " :NERDTreeToggleVCS
-" call fzf#run({'source':  'sink': 'colo', 'left': '25%'})
-
 " help terminal-configuration
 " let g:XkbSwitchLib = "/usr/local/lib/libxkbswitch.so"
 " let g:XkbSwitchEnabled = 1
 " let g:XkbSwitchIMappings = ['ru']
 " echo libcall(g:XkbSwitchLib, 'Xkb_Switch_getXkbLayout', '')
 " call libcall(g:XkbSwitchLib, 'Xkb_Switch_setXkbLayout', 'us')
-let g:fzf_buffers_jump = 1
+
 " let g:fzf_tags_command = 'ctags -R'
 " <-=== Mapping (testing) ===->
 " FIX:

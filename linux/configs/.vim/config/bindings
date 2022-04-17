@@ -151,7 +151,8 @@ inoremap kj <esc>
 inoremap <c-d> <esc>ddi
 " uppercase
 inoremap <c-u> <esc>viwUi
-
+" complete path with fzf
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 
 " === Operators ===
 " ?
