@@ -1,5 +1,7 @@
 echo $DOTFILES/linux/.bashrc
 echo $DOTFILES_BIN/session/alias.sh
+echo $DOTFILES_BIN/session/bind.sh
+echo $DOTFILES_BIN/session/tmux.sh
 echo $DOTFILES_CONFIGS/.tmux.conf
 echo $DOTFILES_CONFIGS/bspwm/bspwmrc
 echo $DOTFILES_CONFIGS/sxhkd/sxhkdrc
