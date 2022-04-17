@@ -18,6 +18,7 @@ Plug 'svermeulen/vim-subversive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/npm.nvim'
 Plug 'Shougo/denite.nvim'
+Plug 'tpope/vim-markdown'
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'

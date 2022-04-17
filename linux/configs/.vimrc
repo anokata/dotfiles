@@ -43,6 +43,11 @@ nnoremap <BS> :RnvimrToggle<CR>
 " let g:XkbSwitchIMappings = ['ru']
 " echo libcall(g:XkbSwitchLib, 'Xkb_Switch_getXkbLayout', '')
 " call libcall(g:XkbSwitchLib, 'Xkb_Switch_setXkbLayout', 'us')
+nnoremap <C-S-F1> :Prosession $DOTFILES_CONFIGS<CR>
+nnoremap <C-S-F2> :Prosession $DOTFILES<CR>
+nnoremap <C-S-F3> :Prosession $NOTES_DIR<CR>
+nnoremap <C-S-F4> :Prosession $WORK_DIR_CURRENT<CR>
+nnoremap <C-S-F5> :Prosession $VIM_DIR_CONFIGS<CR>
 
 " let g:fzf_tags_command = 'ctags -R'
 " <-=== Mapping (testing) ===->
