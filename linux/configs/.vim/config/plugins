@@ -12,7 +12,7 @@ Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-rooter'
-
+Plug 'wakatime/vim-wakatime'
 
 " New try
 Plug 'airblade/vim-gitgutter'
@@ -27,7 +27,6 @@ Plug 'majutsushi/tagbar'
 Plug 'shmargum/vim-sass-colors'
 Plug 'SirVer/ultisnips/'
 Plug 'Shougo/deoplete.nvim'
-
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
@@ -63,23 +62,21 @@ Plug 'ap/vim-css-color'
 
 " Old
 Plug 'Raimondi/delimitMate'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'docunext/closetag.vim'
-Plug 'ktonga/vim-follow-my-lead'
-Plug 'pangloss/vim-javascript'
-Plug 'valloric/matchtagalways'
-Plug 'vim-scripts/DfrankUtil'
-Plug 'vim-scripts/taglist.vim'
-Plug 'vim-scripts/utf8-math'
-Plug 'vim-scripts/utl.vim'
-Plug 'wakatime/vim-wakatime'
+" Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'docunext/closetag.vim'
+" Plug 'ktonga/vim-follow-my-lead'
+" Plug 'pangloss/vim-javascript'
+" Plug 'valloric/matchtagalways'
+" Plug 'vim-scripts/DfrankUtil'
+" Plug 'vim-scripts/taglist.vim'
+" Plug 'vim-scripts/utf8-math'
+" Plug 'vim-scripts/utl.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'sainnhe/everforest'
 Plug 'xolox/vim-misc'
-Plug 'vim-scripts/code_complete'
 
 " Color and UI
-Plug 'xolox/vim-colorscheme-switcher'
+" Plug 'xolox/vim-colorscheme-switcher'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'rakr/vim-one'
 Plug 'morhetz/gruvbox'

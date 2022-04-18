@@ -73,6 +73,8 @@ nmap <leader>c :TlistToggle<CR>
 nmap <leader>x :TagbarToggle<CR>
 nmap <leader>l :TagbarToggle<CR>
 nmap <C-F1> :NERDTreeFind<CR>
+nmap <F1> :NERDTreeFind<CR>
+nmap <leader>n3 :NERDTreeFind<CR>
 nmap <S-F1> :F<CR>
 nmap tf :FZF!<CR>
 nmap <C-f> :Files<CR>

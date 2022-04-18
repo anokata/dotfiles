@@ -39,7 +39,13 @@ nnoremap <BS> :RnvimrToggle<CR>
 " let g:fzf_tags_command = 'ctags -R'
 
 " https://github.com/Shougo/dein.vim
+" UltiSnips
+let g:UltiSnipsSnippetDirectories=["$HOME/.vim/UltiSnips", "UltiSnips"]
+nnoremap <localleader>ue :UltiSnipsEdit<CR>
 
+" ProsessionClean
+" ProsessionDelete
+" SwitchRegion
 
 " FIX:
 " inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
