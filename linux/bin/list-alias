@@ -1,4 +1,5 @@
 #!/bin/bash
 source $KSI_ENV
 source $DOTFILES_BIN/session/alias.sh
+source $DOTFILES_BIN/session/ndm.sh
 alias | awk -F'[ =]' '{print $2}'

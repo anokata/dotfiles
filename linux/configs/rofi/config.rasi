@@ -4,6 +4,7 @@ configuration {
 	location: 0;
 	show-icons: true;
 	hide-scrollbar: true;
+    matching: "fuzzy";
 /* width: 150; */
 /*	lines: 15;*/
 /*	columns: 1;*/

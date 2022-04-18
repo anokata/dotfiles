@@ -1,3 +1,8 @@
 (done, ndw3-without-isw)
 (review, ndw3-without-isw)
 (dev, ndw3-without-isw)
+(dev, ndw2)
+(review, ndw2)
+(done, ndw2)
+Decompose, branching
+Code style, clean, eslint. PR.

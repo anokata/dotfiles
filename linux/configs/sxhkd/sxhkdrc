@@ -124,6 +124,8 @@ ctrl + super + f
     ~/dotfiles/linux/bin/rofi-mpd -f
 ctrl + super shift + p
     ~/dotfiles/linux/bin/rofi-mpd -P
+#,jjjjJKJKJctrl + super + m; ctrl + super + p
+    # ~/dotfiles/linux/bin/rofi-mpd -P
 super + KP_Subtract
     ~/dotfiles/linux/bin/rofi-mpd -l
 
@@ -136,6 +138,8 @@ ctrl + super + shift + {less, greater}
     ~/dotfiles/linux/bin/mpd-command {"seek -00:05:00", "seek +00:05:00"}
     
 ctrl + super + p
+    ~/dotfiles/linux/bin/mpd-open-player
+ctrl + super + m; ctrl + super + m
     ~/dotfiles/linux/bin/mpd-open-player
 
 ctrl + super + s
