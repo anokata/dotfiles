@@ -42,7 +42,6 @@ nnoremap <BS> :RnvimrToggle<CR>
 " UltiSnips
 let g:UltiSnipsSnippetDirectories=["$HOME/.vim/UltiSnips", "UltiSnips"]
 nnoremap <localleader>ue :UltiSnipsEdit<CR>
-
 " ProsessionClean
 " ProsessionDelete
 " SwitchRegion
