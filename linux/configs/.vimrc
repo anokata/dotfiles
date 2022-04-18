@@ -49,8 +49,6 @@ nnoremap <BS> :RnvimrToggle<CR>
 
 " NOTE: not used
 "nmap <leader>f :set foldmethod=indent<CR>
-" nmap <Leader>u ysiw_ysiw_
-" nnoremap <space> za
 " noremap <leader>c yy:@"<CR>
 " noremap <leader><cr> xi<cr><esc>
 " nnoremap <leader>r :%s/\<<C-r><C-w>\>//g<left><left>
