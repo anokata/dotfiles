@@ -5,9 +5,12 @@
 #    search all files names 
 #       / track
 # chg screens
+# from current playlist
+# add all
 
 m() { rofi -dmenu -i "$@" ;}
 mb() { rofi -dmenu -i -kb-custom-1 "Alt+q" "$@" ;}
+mi() { rofi -dmenu -i -format d -kb-custom-1 "Alt+q" "$@" ;}
 
 artist() {
   lines="$(mpc list artist | wc -l)"
@@ -34,6 +37,19 @@ song() {
   mpc list title | sort -f | mb -p "Song" -l 30
 }
 
+lsplaylists() {
+  lines="$(mpc lsplaylists | wc -l)"
+  [ "$lines" -gt 30 ] && lines=30
+  mpc lsplaylists | sort -f | mb -p "Playlists" -l 30
+}
+
+playlist() {
+  playlist="$1"
+  lines="$(mpc playlist "$playlist" | wc -l)"
+  [ "$lines" -gt 30 ] && lines=30
+  mpc playlist "$playlist" | sort -f | mi -p "Song" -l 30
+}
+
 filename() {
   lines="$(mpc listall | wc -l)"
   [ "$lines" -gt 30 ] && lines=30
@@ -45,6 +61,8 @@ case "$1" in
   -A | --album) mode=Album ;;
   -s | --song) mode=Song ;;
   -f | --file) mode=Filename ;;
+  -p | --playlists) mode=Playlists ;;
+  -P | --playlist) mode=Playlist ;;
   -a | --ask)
     MODE=$(printf "Library\nAlbum\nSong" | m -p "Choose mode" -l 3)
     mode=$MODE
@@ -59,6 +77,8 @@ case "$1" in
   -A, --album       album mode
   -s, --song        song mode (select one song)
   -f, --file        filename mode (select one file)
+  -p, --playlists   playlist mode (load playlist)
+  -P, --playlist    playlist mode (select song from playlist)
   -a, --ask         ask for mode
 
   bindings:
@@ -95,6 +115,25 @@ case "$mode" in
     [ "$cod" -eq 10 ] || mpc clear
     mpc search "(filename==\"$filename\")" | mpc add
     mpc play >/dev/null
+    ;;
+  Playlist)
+    playlist=$(lsplaylists)
+    song_index=$(playlist "$playlist")
+    # song_index=$((song_index+1))
+    echo $playlist
+    echo $song_index
+    # cod=$?
+    [ ! "$song_index" ] && exit
+    # [ "$cod" -eq 10 ] || mpc clear
+    mpc load "$playlist"
+    #file=$(mpc search title "$song")
+    #echo $file
+    # mpc searchplay filename "$file"
+    mpc play $song_index
+    ;;
+  Playlists)
+    playlist=$(lsplaylists)
+    echo $playlist
     ;;
   Album)
     album=$(album)

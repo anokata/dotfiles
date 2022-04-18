@@ -15,6 +15,7 @@ Plug 'airblade/vim-rooter'
 
 
 " New try
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-speeddating'
 Plug 'svermeulen/vim-subversive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -24,6 +25,9 @@ Plug 'SidOfc/mkdx'
 Plug 'majutsushi/tagbar'
 " Plug 'tenfyzhong/tagbar-markdown.vim'
 Plug 'shmargum/vim-sass-colors'
+Plug 'SirVer/ultisnips/'
+Plug 'Shougo/deoplete.nvim'
+
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
@@ -59,7 +63,6 @@ Plug 'ap/vim-css-color'
 
 " Old
 Plug 'Raimondi/delimitMate'
-Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'docunext/closetag.vim'
 Plug 'ktonga/vim-follow-my-lead'

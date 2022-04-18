@@ -122,9 +122,14 @@ ctrl + super + l
     ~/dotfiles/linux/bin/rofi-mpd -l
 ctrl + super + f
     ~/dotfiles/linux/bin/rofi-mpd -f
+ctrl + super shift + p
+    ~/dotfiles/linux/bin/rofi-mpd -P
 super + KP_Subtract
     ~/dotfiles/linux/bin/rofi-mpd -l
 
+# lsplaylists 
+# playlist
+# load
 ctrl + super + {comma, period}
     ~/dotfiles/linux/bin/mpd-command {"seek -00:01:00", "seek +00:01:00"}
 ctrl + super + shift + {less, greater}
