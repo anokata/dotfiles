@@ -1,5 +1,7 @@
 " vim: ft=vim
 
+nnoremap <localleader>ue :UltiSnipsEdit<CR>
+
 " === Navigation ===
 nnoremap <C-A-f> :Rg! 
 nnoremap <Tab><Tab> :Windows<CR>

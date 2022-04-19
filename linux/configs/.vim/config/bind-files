@@ -6,7 +6,8 @@ nnoremap <localleader><Esc> :call fzf#run({'source': 'favorite-configs', 'sink':
 
 nnoremap <C-UP> :tc ..<CR>:pwd<CR>
 " favorite sessions 
-nnoremap <C-S-F1> :Prosession $DOTFILES_CONFIGS<CR>
+nnoremap <S-F1> :Prosession $DOTFILES_CONFIGS<CR>
+nnoremap <F25> :Prosession $DOTFILES_CONFIGS<CR>
 nnoremap <C-S-F2> :Prosession $DOTFILES<CR>
 nnoremap <C-S-F3> :Prosession $NOTES_DIR<CR>
 nnoremap <C-S-F4> :Prosession $WORK_DIR_CURRENT<CR>
@@ -30,6 +31,7 @@ nmap <localleader>oc :Files $DOTFILES<CR>
 nmap <localleader>cd :Files $DOTFILES<CR>
 nmap <localleader>ow :Files $WORK_DIR<CR>
 nmap <localleader>on :Files $NOTES_DIR<CR>
+nmap <F3> :Files $NOTES_DIR<CR>
 " nmap <localleader>on :tcd $NOTES_DIR<CR>:FZF<CR>
 
 nmap <localleader>zD :e $DOTFILES<CR>
