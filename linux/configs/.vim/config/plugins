@@ -27,6 +27,7 @@ Plug 'majutsushi/tagbar'
 Plug 'shmargum/vim-sass-colors'
 Plug 'SirVer/ultisnips/'
 Plug 'Shougo/deoplete.nvim'
+Plug 'tpope/vim-eunuch'
 
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'

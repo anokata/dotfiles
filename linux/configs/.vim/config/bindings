@@ -166,9 +166,15 @@ onoremap <silent> F :<C-U>normal! 0f(hviw<CR>
 
 
 " === markdown ===
+fun! MkFileEdit(...)
+  let l:sep = ''
+  let l:fname = expand('./') . strftime("%F-%H%M") . l:sep . join(a:000, '-') . '.md'
+  " echo l:fname
+  exec "tabnew " . l:fname
+endf
+
 " TODO
 fun! MkdxRemap()
-    echo 'remap'
     " check toggle
     nmap <buffer><silent> <space> <Plug>(mkdx-checkbox-prev-n)
     " add checkbox list
@@ -178,6 +184,8 @@ fun! MkdxRemap()
     " promote/demote headings
     nmap <buffer><silent> 11 <leader>[
     nmap <buffer><silent> 22 <leader>]
+    nmap <buffer><silent> <C-n> :call MkFileEdit('')<Left><Left>
+    nmap <buffer><silent> 33 :call MkFileEdit('')<Left><Left>
     " toc 
     " nnoremap <buffer><silent> 
     " <Plug>(mkdx-quickfix-toc) 

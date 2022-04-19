@@ -38,6 +38,10 @@ nnoremap <BS> :RnvimrToggle<CR>
 " :NERDTreeToggleVCS
 " let g:fzf_tags_command = 'ctags -R'
 
+" TODO
+" markdown c-n tabnew edit {datetime}.md
+" file rename
+"
 " https://github.com/Shougo/dein.vim
 " ProsessionClean
 " ProsessionDelete
