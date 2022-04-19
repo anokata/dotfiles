@@ -122,7 +122,7 @@ ctrl + super + l
     ~/dotfiles/linux/bin/rofi-mpd -l
 ctrl + super + f
     ~/dotfiles/linux/bin/rofi-mpd -f
-ctrl + super shift + p
+ctrl + super + shift + o
     ~/dotfiles/linux/bin/rofi-mpd -P
 super + KP_Subtract
     ~/dotfiles/linux/bin/rofi-mpd -l
@@ -173,8 +173,8 @@ super + ctrl + shift + s
 
 # reload polybar
 super + shift + ctrl + p
-    killall polybar ; $HOME/.config/polybar/launch.sh &
-    #notify-send 'Reloading polybar.';\
+    killall polybar;\
+    ~/.config/polybar/launch.sh &
 
 # reload notification system
 super + shift + ctrl + d
