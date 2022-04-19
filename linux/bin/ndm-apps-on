@@ -7,3 +7,7 @@ ndm-ssh-local-default service vpn-server
 ndm-ssh-local-default ip http webdav enable
 ndm-ssh-local-default service cifs
 ndm-ssh-local-default service udpxy
+ndm-ssh-local-default service kabinet
+ndm-ssh-local-default service ipsec
+ndm-ssh-local-default service dlna
+ndm-ssh-local-default ip ssh sftp enable
