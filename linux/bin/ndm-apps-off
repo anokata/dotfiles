@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+ndm-ssh-local-default no service torrent
+ndm-ssh-local-default no service ftp
+ndm-ssh-local-default no service afp
+ndm-ssh-local-default no service sstp-server
+ndm-ssh-local-default no service vpn-server
+ndm-ssh-local-default ip http webdav no enable
+ndm-ssh-local-default no service cifs
+ndm-ssh-local-default no service udpxy
+
