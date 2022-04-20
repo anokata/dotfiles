@@ -5,10 +5,13 @@ setxkbmap -option caps:escape
 dunst &
 [ ! -s ~/.config/mpd/pid ] && mpd
 xrdb "/home/$(whoami)/.Xresources"
-nm-applet &
-dropbox start &
 $HOME/.config/polybar/launch.sh
-pidof kitty >/dev/null & kitty
+nm-applet &
+pidof kitty >/dev/null || kitty
+pidof Telegram >/dev/null || Telegram
+# pidof slack >/dev/null || slack
+run-if-not slack
+dropbox start &
 #pidof st >/dev/null &
 # pidof obsidian >/dev/null || obsidian &
 pidof chrome >/dev/null || google-chrome &
