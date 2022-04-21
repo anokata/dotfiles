@@ -7,6 +7,8 @@ dunst &
 compton &
 [ ! -s ~/.config/mpd/pid ] && mpd
 xrdb "/home/$(whoami)/.Xresources"
+xsetroot -solid "#202020"
+hsetroot -solid "#202020"
 
 ### Config
 bspc monitor HDMI-1 -d 1 2 3 4 5
@@ -19,26 +21,20 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a google-chrome desktop='^1'
-bspc rule -a urxvt desktop='^5'
+bspc rule -a Google-chrome desktop='^1'
 bspc rule -a kitty desktop='^4' state=fullscreen
-bspc rule -a st desktop='^4' state=fullscreen
-bspc rule -a Nautilus desktop='^10' state=fullscreen monitor=DP-3
+bspc rule -a St desktop='^2'
+bspc rule -a Org.gnome.Nautilus desktop='^10' state=fullscreen monitor=DP-3
 bspc rule -a thunar desktop='^2'
 bspc rule -a Code desktop='^2' state=fullscreen
 bspc rule -a Slack desktop='^3' state=fullscreen 
-bspc rule -a Telegram desktop='^8' state=fullscreen
-bspc rule -a obsidian desktop='^8'
-bspc rule -a obs desktop='^8'
+bspc rule -a TelegramDesktop desktop='^8'
+bspc rule -a obsidian desktop='^9'
+bspc rule -a obs desktop='^10'
 bspc rule -a Audacious desktop='^9'
 bspc rule -a Transmission-gtk desktop='^10'
-bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Guake state=floating
-bspc rule -a guake state=floating
-bspc rule -a peek state=floating
 bspc rule -a Peek state=floating
-xsetroot -solid "#202020"
-hsetroot -solid "#202020"
 
 ### Apps
 nm-applet &
@@ -46,8 +42,8 @@ dropbox start &
 $HOME/.config/polybar/launch.sh
 #run-if-not kitty
 #pidof obsidian >/dev/null || obsidian
-pidof kitty >/dev/null || kitty
-pidof Telegram >/dev/null || Telegram
-pidof slack >/dev/null || slack
+pidof kitty >/dev/null || kitty &
 pidof chrome >/dev/null || google-chrome &
+pidof slack >/dev/null || slack &
+pidof Telegram >/dev/null || Telegram &
 

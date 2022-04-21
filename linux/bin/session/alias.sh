@@ -189,6 +189,7 @@ alias vimdoc="$EDITOR $NOTES_DIR"
 
 alias caps-toggle='xdotool key Caps_Lock'
 alias wm-window-name='xprop | grep WM_CLASS'
+alias wm-window-class='xprop | grep WM_CLASS'
 
 # Wm
 alias wm-name="printf '%s' $XDG_CURRENT_DESKTOP"

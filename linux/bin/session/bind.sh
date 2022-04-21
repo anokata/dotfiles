@@ -24,6 +24,7 @@ bind -x '"\e[1;5A":"cd -"' # c-left
 # FM
 bind -x '"\e[15~":"fff"' # F5
 bind -x '"\e[17~":"ranger"' # F6
+bind -x '"\e[18~":"vifm"' # F7
 
 
 # TODO
