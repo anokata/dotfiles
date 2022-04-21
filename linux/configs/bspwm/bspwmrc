@@ -4,10 +4,10 @@
 pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
 setxkbmap -option caps:escape
 dunst &
-compton &
+picom &
 [ ! -s ~/.config/mpd/pid ] && mpd
+
 xrdb "/home/$(whoami)/.Xresources"
-xsetroot -solid "#202020"
 hsetroot -solid "#202020"
 
 ### Config

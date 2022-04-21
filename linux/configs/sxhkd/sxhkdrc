@@ -30,7 +30,7 @@ super + F3
 super + F4
     nautilus
 super + F5
-    keepassx
+    keepassxc
 super + F6
     transmission-gtk
 super + F7
@@ -39,8 +39,8 @@ super + F8
     peek
 super + F9
     audacious
-super + F11
-    obs
+#super + F11
+    #obs
 
 # Bookmarks
 ctrl + super + b
@@ -208,6 +208,7 @@ super + shift + m
 
 alt + `
 	bspc node -f next.local
+    # bspc node -f next.local.window
 
 super + Tab
 	bspc node -f next
@@ -219,6 +220,7 @@ super + ctrl + {1-9}
 #ctrl + space;  {1-9}
 	#bspc desktop -f '^{1-9,9}'
 
+# Switch desktops pairs
 super + 1
 	bspc desktop -f '^6';\
 	bspc desktop -f '^1'
@@ -237,10 +239,12 @@ super + 5
 
 super + {Left, Right}
     bspc monitor --focus {prev,next}
+super + {h, l}
+    bspc monitor --focus {prev,next}
 
 # select the direction
-super + {h,j,k,l}
-	bspc node -s {west,south,north,east}
+#super + {h,j,k,l}
+	#bspc node -s {west,south,north,east}
 
 ####################
 # System shortcuts #
@@ -251,12 +255,11 @@ ctrl + shift + {j,k}
     bspc config window_gap $((`bspc config window_gap` {+,-} 10 ))
 
 # expand a window by moving one of its side outward
-super + shift + {h,j,k,l}
-	bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 20 0}
-
+#super + shift + {h,j,k,l}
+	#bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 20 0}
 # contract a window by moving one of its side inward
-shift + alt + {h,j,k,l}
-	bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
+#shift + alt + {h,j,k,l}
+	#bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
 
 # move a floating window
 super + ctrl + {h,j,k,l}
@@ -288,6 +291,11 @@ super + shift + 0
 # move to other monitor
 super + shift + {Left,Down,Up,Right}
 	dir={west,south,north,east}; \
+	bspc node -s "$dir.local" --follow \
+	    || bspc node -m "$dir" --follow
+
+super + shift + {h,l}
+	dir={west,east}; \
 	bspc node -s "$dir.local" --follow \
 	    || bspc node -m "$dir" --follow
 
