@@ -4,6 +4,7 @@
 pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
 setxkbmap -option caps:escape
 dunst &
+compton &
 [ ! -s ~/.config/mpd/pid ] && mpd
 xrdb "/home/$(whoami)/.Xresources"
 
@@ -37,6 +38,7 @@ bspc rule -a guake state=floating
 bspc rule -a peek state=floating
 bspc rule -a Peek state=floating
 xsetroot -solid "#202020"
+hsetroot -solid "#202020"
 
 ### Apps
 nm-applet &
