@@ -20,7 +20,7 @@ alt + x; m ; l
 alt + Return
     kitty
 ctrl + alt + t
-    gnome-terminal
+    kitty
 super + F1
     google-chrome
 super + F2
@@ -158,13 +158,13 @@ XF86AudioLowerVolume
     amixer -D pulse sset Master 5%- unmute
 XF86AudioRaiseVolume
     amixer -D pulse sset Master 5%+ unmute
-XF86AudioMute
-    amixer set Master toggle
+#XF86AudioMute
+#    amixer set Master toggle
 ctrl + alt + {bracketleft, bracketright}
     amixer -D pulse sset Master 5%{-,+} unmute
 
-XF86AudioMicMute
-    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+#XF86AudioMicMute
+    #pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 #### Configs
 

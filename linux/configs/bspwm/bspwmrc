@@ -40,12 +40,12 @@ xsetroot -solid "#202020"
 nm-applet &
 dropbox start &
 $HOME/.config/polybar/launch.sh
-run-if-not kitty
-run-if-not Telegram
-run-if-not slack
-#pidof kitty >/dev/null || kitty
-#pidof Telegram >/dev/null || Telegram
-#pidof st >/dev/null &
+#run-if-not kitty
+#run-if-not Telegram
+#run-if-not slack
+pidof kitty >/dev/null || kitty
+pidof Telegram >/dev/null || Telegram
+pidof slack >/dev/null || slack
 #run-if-not obsidian
 pidof chrome >/dev/null || google-chrome &
 
