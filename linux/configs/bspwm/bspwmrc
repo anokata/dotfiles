@@ -20,13 +20,13 @@ bspc config gapless_monocle      true
 
 bspc rule -a google-chrome desktop='^1'
 bspc rule -a urxvt desktop='^5'
-bspc rule -a kitty desktop='^4'
-bspc rule -a st desktop='^4'
-bspc rule -a Nautilus desktop='^2'
+bspc rule -a kitty desktop='^4' state=fullscreen
+bspc rule -a st desktop='^4' state=fullscreen
+bspc rule -a Nautilus desktop='^10' state=fullscreen monitor=DP-3
 bspc rule -a thunar desktop='^2'
-bspc rule -a Code desktop='^2'
-bspc rule -a Slack desktop='^3'
-bspc rule -a Telegram desktop='^8'
+bspc rule -a Code desktop='^2' state=fullscreen
+bspc rule -a Slack desktop='^3' state=fullscreen 
+bspc rule -a Telegram desktop='^8' state=fullscreen
 bspc rule -a obsidian desktop='^8'
 bspc rule -a obs desktop='^8'
 bspc rule -a Audacious desktop='^9'
@@ -34,6 +34,8 @@ bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Guake state=floating
 bspc rule -a guake state=floating
+bspc rule -a peek state=floating
+bspc rule -a Peek state=floating
 xsetroot -solid "#202020"
 
 ### Apps
@@ -41,11 +43,9 @@ nm-applet &
 dropbox start &
 $HOME/.config/polybar/launch.sh
 #run-if-not kitty
-#run-if-not Telegram
-#run-if-not slack
+#pidof obsidian >/dev/null || obsidian
 pidof kitty >/dev/null || kitty
 pidof Telegram >/dev/null || Telegram
 pidof slack >/dev/null || slack
-#run-if-not obsidian
 pidof chrome >/dev/null || google-chrome &
 
