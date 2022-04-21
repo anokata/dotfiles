@@ -1,22 +1,13 @@
 #! /bin/sh
 
+### Services
 pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
 setxkbmap -option caps:escape
 dunst &
 [ ! -s ~/.config/mpd/pid ] && mpd
 xrdb "/home/$(whoami)/.Xresources"
-$HOME/.config/polybar/launch.sh
-nm-applet &
-pidof kitty >/dev/null || kitty
-pidof Telegram >/dev/null || Telegram
-# pidof slack >/dev/null || slack
-run-if-not slack
-dropbox start &
-#pidof st >/dev/null &
-# pidof obsidian >/dev/null || obsidian &
-pidof chrome >/dev/null || google-chrome &
-xsetroot -solid "#202020"
 
+### Config
 bspc monitor HDMI-1 -d 1 2 3 4 5
 bspc monitor DP-3 -d 6 7 8 9 10
 
@@ -43,5 +34,18 @@ bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Guake state=floating
 bspc rule -a guake state=floating
+xsetroot -solid "#202020"
 
-#  state=floating follow=on focus=on manage=off
+### Apps
+nm-applet &
+dropbox start &
+$HOME/.config/polybar/launch.sh
+# pidof kitty >/dev/null || kitty
+run-if-not kitty
+run-if-not Telegram
+# pidof Telegram >/dev/null || Telegram
+run-if-not slack
+#pidof st >/dev/null &
+# run-if-not obsidian
+pidof chrome >/dev/null || google-chrome &
+
