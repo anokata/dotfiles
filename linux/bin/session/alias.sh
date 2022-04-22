@@ -41,6 +41,8 @@ alias bat="batcat"
 alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}' --preview-window=right:70%:wrap"
 alias vim="nvim"
 alias notes='vim `fzf`'
+alias ksi-notes="cd $NOTES_DIR && $TERMINAL -e $EDITOR +\":Prosession $NOTES_DIR\""
+alias ksi-config="cd $DOTFILES_LINUX && $TERMINAL -e $EDITOR +\":Prosession $DOTFILES_LINUX\""
 
 # links
 alias lns="ln -s "

@@ -37,10 +37,13 @@ super + F7
     flameshot
 super + F8
     peek
-super + F9
-    audacious
+# super + F9
+    # audacious
 #super + F11
     #obs
+# super + KP_Add
+super + F9
+    st fmui-run
 
 # Bookmarks
 ctrl + super + b
@@ -266,8 +269,11 @@ super + ctrl + {h,j,k,l}
 	bspc node -v {-10 0,0 10,0 -10,10 0}
 
 # rotate desktop
+	# bspc node @/ --rotate {90,-90}
 super + r
-	bspc node @/ --rotate {90,-90}
+    kitty -e vim +":Prosession $DOTFILES_CONFIGS"
+    # bspc rule -r kitty; kitty -e vim
+	# bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
 
 # Circulate the leaves of the tree
 super + {_,shift + }c
