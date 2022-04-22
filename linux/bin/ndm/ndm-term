@@ -1,0 +1,8 @@
+#!/bin/bash
+source $DOTFILES/linux/.env
+source $DOTFILES/linux/bin/session/alias.sh
+source $DOTFILES/linux/bin/session/ndm.sh
+# source $DOTFILES/linux/.bashrc
+#kitty cdn3
+cd $WORK_DIR/ndw3-without-isw
+kitty 
