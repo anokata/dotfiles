@@ -193,7 +193,7 @@ alias mpc-play="mpc play"
 alias mpc-pause="mpc pause"
 alias mpc-next="mpc next"
 alias mpc-prev="mpc prev"
-alias mpc-all="mpc ls | mpc add"
+alias mpc-all="mpc clear && mpc ls | mpc add"
 
 # Org
 alias vimdoc="$EDITOR $NOTES_DIR"

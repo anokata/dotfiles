@@ -32,6 +32,8 @@ source ~/.vim/config/autocmds
 " <-=== Mapping (testing) ===->
 " :NERDTreeToggleVCS
 " let g:fzf_tags_command = 'ctags -R'
+nnoremap <F8> :TagbarToggle<CR>
+nnoremap <C-g> :TagbarToggle<CR>
 
 " TODO
 " markdown c-n tabnew edit {datetime}.md

@@ -17,3 +17,4 @@ w-f2 vim notes
 ## music
 
 # vim
+a-c color
