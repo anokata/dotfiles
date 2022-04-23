@@ -1,6 +1,7 @@
 " vim: ft=vim
 
 nnoremap <localleader>ue :UltiSnipsEdit<CR>
+nnoremap <leader><esc> :FloatermToggle<CR>
 
 " === Navigation ===
 nnoremap <C-A-f> :Rg! 
@@ -68,6 +69,8 @@ nnoremap <leader>; mqA;<ESC>`q
 nnoremap <leader>d :execute "normal! a" . expand("%:p:h")<cr>
 
 " === FM ===
+nnoremap <BS> :LfCurrentFileExistingOrNewTab<CR>
+nnoremap <leader>f :Lflcd<CR>
 nmap <C-b> :NERDTreeToggle<CR>
 nmap <leader>n1 :NERDTree-cd<CR>:pwd<CR>
 nmap <leader>n2 :NERDTree-CD<CR>:pwd<CR>

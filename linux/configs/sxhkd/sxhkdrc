@@ -38,9 +38,7 @@ ctrl + super + F7
 ctrl + super + F8
     peek
 # super + F9
-    # audacious
-#super + F11
-    #obs
+# super + F11
 # super + KP_Add
 super + F9
     st fmui-run

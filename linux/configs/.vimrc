@@ -19,8 +19,6 @@ source ~/.vim/config/autocmds
 " TODO
 " nnoremap <localleader><Esc> :Maps<CR>
 " nnoremap <leader><Tab> :<CR>
-" nnoremap -
-" nnoremap =
 " nnoremap <C-F1>
 " nnoremap <F1>
 " nnoremap <localleader><Tab> :<CR>
@@ -32,10 +30,6 @@ source ~/.vim/config/autocmds
 " nnoremap  :Commands 
 " nnoremap  :Maps 
 " <-=== Mapping (testing) ===->
-nnoremap <BS> :LfCurrentFileExistingOrNewTab<CR>
-nnoremap <leader>f :Lflcd<CR>
-" let g:NERDTreeHijackNetrw = 0
-" let g:ranger_replace_netrw = 1
 " :NERDTreeToggleVCS
 " let g:fzf_tags_command = 'ctags -R'
 
