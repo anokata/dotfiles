@@ -28,6 +28,7 @@ bind -x '"\e[18~":"vifm"' # F7
 
 
 # TODO
+bind '"\C-n":"lfcd\C-m"'
 
 bind -x '"\e[1;5S":"ranger"' # C-F4
 bind -x '"\e[1;6S":"tmux new-window ranger"' # C-S-F4
@@ -37,7 +38,7 @@ bind -x '"\e[15;5~":"fff"' # C-F5
 
 # tmux
 # bind -x '"\C-w":"tmux kill-pane"' # c-w
-bind -x '"\C-n":"tmux new-window"' # c-n
+# bind -x '"\C-n":"tmux new-window"' # c-n
 bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
 
 bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1

@@ -21,7 +21,7 @@ alias c="pushd "
 # Files info
 alias l='ls -CF'
 alias la='ls -A'
-alias lf='ls -lah | less'
+alias lF='ls -lah | less'
 alias lk='ll | grep / | grep " \."'
 alias ll='ls -alFh'
 alias lld='ll -d */'
@@ -43,6 +43,8 @@ alias vim="nvim"
 alias notes='vim `fzf`'
 alias ksi-notes="cd $NOTES_DIR && $TERMINAL -e $EDITOR +\":Prosession $NOTES_DIR\""
 alias ksi-config="cd $DOTFILES_LINUX && $TERMINAL -e $EDITOR +\":Prosession $DOTFILES_LINUX\""
+alias lfc='tmux split -h lf; lf'
+alias lfr='lfrun'
 
 # links
 alias lns="ln -s "

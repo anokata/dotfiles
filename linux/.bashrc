@@ -5,12 +5,14 @@ source ~/dotfiles/linux/.env
 # export TERM=xterm-256color
 
 ### Imports
-source ~/dotfiles/linux/bin/session/alias.sh
-source ~/dotfiles/linux/bin/session/color.sh
-source ~/dotfiles/linux/bin/session/tmux.sh
-source ~/dotfiles/linux/bin/session/bind.sh
-source ~/dotfiles/linux/bin/session/first_run.sh
-source ~/dotfiles/linux/bin/session/ndm.sh #work
+source $DOTFILES_LINUX/bin/session/alias.sh
+source $DOTFILES_LINUX/bin/session/color.sh
+source $DOTFILES_LINUX/bin/session/tmux.sh
+source $DOTFILES_LINUX/bin/session/bind.sh
+source $DOTFILES_LINUX/bin/session/first_run.sh
+source $DOTFILES_LINUX/bin/session/ndm.sh #work
+LFCD="$DOTFILES_CONFIGS/lf/lfcd.sh"
+[ -f "$LFCD" ] && source "$LFCD"
 
 ### Bash config
 set -o vi

@@ -46,6 +46,8 @@ super + F9
     st fmui-run
 super + F1
     st fff
+super + F2
+    st lfrun
 ctrl + super +shift + F1
     st calcurse
 
