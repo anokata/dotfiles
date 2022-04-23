@@ -9,6 +9,9 @@ c-o fzf & vim open NOTES
 
 # wm/sxhkd
 ## apps
+c-s-w-f1 cal
+w-f1 lf
+w-f2 vim notes
 ## wm
 ## rofi
 ## music
