@@ -44,7 +44,7 @@ alias notes='vim `fzf`'
 alias ksi-notes="cd $NOTES_DIR && $TERMINAL -e $EDITOR +\":Prosession $NOTES_DIR\""
 alias ksi-config="cd $DOTFILES_LINUX && $TERMINAL -e $EDITOR +\":Prosession $DOTFILES_LINUX\""
 alias lfc='tmux split -h lf; lf'
-alias lfr='lfrun'
+alias lf='lfrun'
 
 # links
 alias lns="ln -s "
