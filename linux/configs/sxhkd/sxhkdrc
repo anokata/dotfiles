@@ -45,11 +45,15 @@ ctrl + super + F8
 super + F9
     st fmui-run
 super + F1
-    st fff
-super + F2
     st lfrun
+super + F2
+    st fff
 ctrl + super +shift + F1
     st calcurse
+super + F3
+    kitty nvim +":Prosession $DOTFILES_CONFIGS"
+super + F4
+    kitty nvim +":Prosession $NOTES_DIR"
 
 # Bookmarks
 ctrl + super + b
@@ -276,8 +280,6 @@ super + ctrl + {h,j,k,l}
 
 # rotate desktop
 	# bspc node @/ --rotate {90,-90}
-super + r
-    kitty -e vim +":Prosession $DOTFILES_CONFIGS"
     # bspc rule -r kitty; kitty -e vim
 	# bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
 

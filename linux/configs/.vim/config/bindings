@@ -81,7 +81,7 @@ nmap <S-F1> :F<CR>
 nmap tf :FZF!<CR>
 nmap <C-f> :Files<CR>
 nmap <C-A-o> :GFiles<CR>
-nmap <leader>r :Ranger<CR>
+nmap <leader>r :Lf<CR>
 " vim config files open bindings configs
 nmap <localleader>cb :tabnew ~/.vim/config/bindings<CR>
 " nmap <localleader>cc :tabnew<CR>:tcd ~/.vim/config/<CR>:FZF<CR>

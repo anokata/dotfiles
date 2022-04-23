@@ -54,6 +54,7 @@ let g:NERDTreeWinSize = 50
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeIgnore = ['\.pyc$', '\node_modules']
 let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeHijackNetrw = 0
 
 let g:ranger_map_keys = 0
 let g:fff#split = "30vnew"
@@ -70,3 +71,7 @@ let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
                         \ 'fold': { 'enable': 1 } }
 
 let g:UltiSnipsSnippetDirectories=["snips"]
+let g:lf_map_keys = 0
+let g:lf_width=0.9
+let g:lf_height=0.9
+let g:lf_replace_netrw = 1

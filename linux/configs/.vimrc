@@ -32,7 +32,8 @@ source ~/.vim/config/autocmds
 " nnoremap  :Commands 
 " nnoremap  :Maps 
 " <-=== Mapping (testing) ===->
-nnoremap <BS> :RnvimrToggle<CR>
+nnoremap <BS> :LfCurrentFileExistingOrNewTab<CR>
+nnoremap <leader>f :Lflcd<CR>
 " let g:NERDTreeHijackNetrw = 0
 " let g:ranger_replace_netrw = 1
 " :NERDTreeToggleVCS

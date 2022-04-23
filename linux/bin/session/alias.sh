@@ -15,7 +15,10 @@ alias cds="cd $SSD"
 alias cdc="cd $DOTFILES_CONFIGS"
 alias cdl="cd $LINKS_DIR"
 alias cdn="cd $WORK_DIR"
+alias cdref="cd $REF_FORME"
+alias cdscr="cd $SCREENS_DIR"
 alias cdn3="cd $WORK_DIR/ndw3-without-isw/"
+alias cdn2="cd $WORK_DIR/ndw2/"
 alias c="pushd "
 
 # Files info
@@ -26,7 +29,7 @@ alias lk='ll | grep / | grep " \."'
 alias ll='ls -alFh'
 alias lld='ll -d */'
 alias ls='ls --color=auto -XF --group-directories-first'
-alias lz='ls -lah | fzf'
+alias lz='ls | fzf'
 alias dush='du -sh'
 alias dushgm='du -sh | grep M'
 alias dushgg='du -sh | grep G'
@@ -39,6 +42,7 @@ alias files='find | wc -l'
 alias dd='dd status=progress '
 alias bat="batcat"
 alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}' --preview-window=right:70%:wrap"
+alias fzfi="fzf-ueberzogen.sh"
 alias vim="nvim"
 alias notes='vim `fzf`'
 alias ksi-notes="cd $NOTES_DIR && $TERMINAL -e $EDITOR +\":Prosession $NOTES_DIR\""

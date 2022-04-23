@@ -20,3 +20,4 @@ python2 -m pip install --user --upgrade pynvim
 # git clone https://github.com/grwlf/xkb-switch.git
 npm install -g neovim
 nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css
+sudo pip install fzf-ueberzogen

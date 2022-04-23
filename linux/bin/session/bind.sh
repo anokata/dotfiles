@@ -15,6 +15,8 @@ bind -x '"\e[1;5Q":"$EDITOR $DOTFILES_LINUX/.bashrc"' # C-F2
 
 # fzf and vim
 bind -x '"\C-f":"$EDITOR $(fzf)"' # C-e fzf and open in vim
+bind -x '"\C-h":"fzf"' # C- fzf 
+bind -x '"\C-g":"fzf-ueberzogen.sh"' # image preview
 bind -x '"\C-o":"cd $NOTES_DIR; $EDITOR $(fzf)"' # C-e fzf and open in vim
 
 # Move
