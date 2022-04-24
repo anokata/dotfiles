@@ -97,10 +97,12 @@ apps_sys=('vmstat' \
 
 echo -e "Installing apps: cli"
 for app in ${apps_cli[@]}; do
-    # echo $app
-    apti $app
+    echo $app
+    #sudo apt install $app
 done
 echo "done."
+
+sudo apt install fzf fd-find bat gsmartcontrol htop jq libblkid1 mmv ncat ncdu nvme-cli ripgrep calcurse pwgen gsmartcontrol neovim
 
 # need to load
 #obs
