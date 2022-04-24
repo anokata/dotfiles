@@ -1,0 +1,102 @@
+priority -50
+
+############
+#  COMMON  #
+############
+
+# The smart snippets use a global options called
+# "g:ultisnips_javascript.{option}" which can control the format
+# of trailing semicolon, space before function paren, etc.
+#
+# e.g.
+# let g:ultisnips_javascript = {
+#      \ 'keyword-spacing': 'always',
+#      \ 'semi': 'never',
+#      \ 'space-before-function-paren': 'always',
+#      \ }
+
+
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+snippet get "Get Elements"
+getElement${1/(T)|(C)|.*/(?1:s)(?2:s)/}By${1:T}${1/(T)|(I)|(C).*/(?1:agName)(?2:d)(?3:lassName)/}('$2')
+endsnippet
+
+snippet :, "Object Value JS"
+${1:value_name}: ${0:value},
+endsnippet
+
+snippet : "Object key key: 'value'"
+${1:key}: ${2:"${3:value}"}${4:, }
+endsnippet
+
+snippet imp "import"
+import ${2} from ${1}
+endsnippet
+
+# Debugging
+snippet de
+debugger
+endsnippet
+snippet cl "console.log"
+console.log(${0})
+endsnippet
+snippet cd "console.debug"
+console.debug(${0})
+endsnippet
+snippet ce "console.error"
+console.error(${0})
+endsnippet
+snippet cw "console.warn"
+console.warn(${0})
+endsnippet
+snippet ci "console.info"
+console.info(${0})
+endsnippet
+snippet ct "console.trace"
+console.trace(${0:label})
+endsnippet
+snippet ctime "console.time ... console.timeEnd"
+console.time("${1:label}")
+${0:${VISUAL}}
+console.timeEnd("$1")
+endsnippet
+snippet ctimestamp "console.timeStamp"
+console.timeStamp("${1:label}")
+endsnippet
+snippet ca "console.assert"
+console.assert(${1:expression}, ${0:obj})
+endsnippet
+snippet cclear "console.clear"
+console.clear()
+endsnippet
+snippet cdir "console.dir"
+console.dir(${0:obj})
+endsnippet
+snippet cdirx "console.dirxml"
+console.dirxml(${1:object})
+endsnippet
+snippet cgroup "console.group"
+console.group("${1:label}")
+${0:${VISUAL}}
+console.groupEnd()
+endsnippet
+snippet cgroupc "console.groupCollapsed"
+console.groupCollapsed("${1:label}")
+${0:${VISUAL}}
+console.groupEnd()
+endsnippet
+snippet cprof "console.profile"
+console.profile("${1:label}")
+${0:${VISUAL}}
+console.profileEnd()
+endsnippet
+snippet ctable "console.table"
+console.table(${1:"${2:value}"})`!p snip.rv = semi(snip)`
+endsnippet
+snippet clstr "console.log stringified"
+console.log(JSON.stringify(${0}, null, 2))`!p snip.rv = semi(snip)`
+endsnippet
+
+# vim:ft=snippets:
