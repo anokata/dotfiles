@@ -28,6 +28,9 @@ bind -x '"\e[15~":"lfrun"' # F5
 bind -x '"\e[17~":"fff"' # F6
 bind -x '"\e[18~":"~/gits/fmui/fmui"' # F7
 
+# PS
+bind '"\C-k":"pkill "' # F7
+
 
 # TODO
 bind '"\C-n":"lfcd\C-m"'
