@@ -5,6 +5,10 @@ nnoremap <leader><esc> :FloatermToggle<CR>
 
 " === Navigation ===
 nnoremap <C-A-f> :Rg! 
+" search selected (select word ve)
+vnoremap <C-A-f> y:Rg! <C-r>"
+nnoremap <C-A-d> :Rooter<CR>:Rg! <C-r><C-w><CR>
+
 nnoremap <Tab><Tab> :Windows<CR>
 nnoremap <Tab><Esc> :Buffers<CR>
 nnoremap GG GGzz
@@ -83,6 +87,7 @@ nmap <leader>n3 :NERDTreeFind<CR>
 nmap <S-F1> :F<CR>
 nmap tf :FZF!<CR>
 nmap <C-f> :Files<CR>
+nmap <C-p> :Files<CR>
 nmap <C-A-o> :GFiles<CR>
 nmap <leader>r :Lf<CR>
 " vim config files open bindings configs

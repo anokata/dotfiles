@@ -85,8 +85,8 @@ alt + d
 alt + w
   rofi -show window
 
-ctrl + alt + d
-  bash -i -c $(list-alias | rofi -dmenu)
+# ctrl + alt + d
+  # bash -i -c $(list-alias | rofi -dmenu)
 
 ctrl + shift + v
   rofi-snip

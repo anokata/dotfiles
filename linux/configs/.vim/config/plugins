@@ -29,6 +29,12 @@ Plug 'SirVer/ultisnips/'
 Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-eunuch'
 
+" neovim treesitter
+Plug 'haorenW1025/completion-nvim'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/completion-treesitter'
+" Plug 'nvim-treesitter/nvim-treesitter-refactor'
+
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
 Plug 'sbdchd/neoformat'

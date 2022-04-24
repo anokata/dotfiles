@@ -35,6 +35,7 @@ source ~/.vim/config/autocmds
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap <C-g> :TagbarToggle<CR>
 
+
 " TODO
 " markdown c-n tabnew edit {datetime}.md
 " file rename
