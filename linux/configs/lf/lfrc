@@ -1,5 +1,6 @@
 set shell bash
 set info size:time
+set ratios 1:3:2
 
 cmd paste $cp-p --lf-paste $id
 #map <c-d> delete

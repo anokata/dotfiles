@@ -35,6 +35,19 @@ source ~/.vim/config/autocmds
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap <C-g> :TagbarToggle<CR>
 
+" NOTES: for new line with date
+nmap <leader>o o\| date<tab> \| <esc>
+nnoremap ZZ :bd<CR>ZZ
+
+" function s:test(lines)
+"     echo a:lines
+" endfunction
+
+" let g:fzf_action = {
+"   \ 'ctrl-q': function('s:test'),
+"   \ 'ctrl-t': 'tab split',
+"   \ 'ctrl-x': 'split',
+"   \ 'ctrl-v': 'vsplit' }
 
 " TODO
 " markdown c-n tabnew edit {datetime}.md
@@ -42,7 +55,7 @@ nnoremap <C-g> :TagbarToggle<CR>
 "
 " https://github.com/Shougo/dein.vim
 " ProsessionClean
-" ProsessionDelete
+" ProsessionDelete : add to fzf sessions call bind
 imap <C-l> <C-x><C-f>
 " :h key-notation
 

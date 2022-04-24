@@ -16,18 +16,21 @@ Plug 'wakatime/vim-wakatime'
 
 " New try
 Plug 'airblade/vim-gitgutter'
+Plug 'SirVer/ultisnips/'
+Plug 'SidOfc/mkdx'
+Plug 'majutsushi/tagbar'
+Plug 'dhruvasagar/vim-table-mode'
+
 Plug 'tpope/vim-speeddating'
 Plug 'svermeulen/vim-subversive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/npm.nvim'
 Plug 'Shougo/denite.nvim'
-Plug 'SidOfc/mkdx'
-Plug 'majutsushi/tagbar'
 " Plug 'tenfyzhong/tagbar-markdown.vim'
 Plug 'shmargum/vim-sass-colors'
-Plug 'SirVer/ultisnips/'
 Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-eunuch'
+Plug 'leafgarland/typescript-vim'
 
 " neovim treesitter
 Plug 'haorenW1025/completion-nvim'
@@ -51,16 +54,11 @@ Plug 'chamindra/marvim'
 " Plug 'andersevenrud/compe-tmux', { 'branch': 'cmp' }
 " Plug 'dhruvasagar/vim-dotoo'
 "Plug 'tpope/vim-vinegar'
-"Plug 'leafgarland/typescript-vim'
 " Plug 'gorodinskiy/vim-coloresque'
 
 " FM
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'francoiscabrol/ranger.vim'
-" Plug 'rbgrouleff/bclose.vim'
-" Plug 'kevinhwang91/rnvimr'"
-" Plug 'dylanaraps/fff.vim'
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
 
@@ -92,6 +90,10 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'ryanoasis/vim-devicons'
 
 " not used anymore
+" Plug 'francoiscabrol/ranger.vim'
+" Plug 'rbgrouleff/bclose.vim'
+" Plug 'kevinhwang91/rnvimr'"
+" Plug 'dylanaraps/fff.vim'
 " Plug 'vim-ctrlspace/vim-ctrlspace'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
