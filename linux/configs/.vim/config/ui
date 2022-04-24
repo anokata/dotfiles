@@ -25,23 +25,19 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+
+" colorscheme mango
 " colorscheme palenight
-" let g:lightline = { 'colorscheme': 'palenight' }
-" let g:airline_theme = "palenight"
-
-colorscheme one
-" let g:airline_theme='one'
-" let g:lightline = { 'colorscheme': 'onehalfdark' }
-" let g:lightline = { 'colorscheme': 'wombat' }
-
-" good: mango
+" colorscheme one
+" colorscheme nord
 " colorscheme onehalfdark
-" let g:airline_theme='onehalfdark'
+colorscheme minimalist
+colorscheme nova
 
 " === Internal Terminal Theme ===
 let g:terminal_color_0  = '#2e3436'
-let g:terminal_color_1  = '#cc0000'
-let g:terminal_color_2  = '#4e9a06'
+let g:terminal_color_1  = '#c02020'
+let g:terminal_color_2  = '#50a010'
 let g:terminal_color_3  = '#c4a000'
 let g:terminal_color_4  = '#3465a4'
 let g:terminal_color_5  = '#75507b'

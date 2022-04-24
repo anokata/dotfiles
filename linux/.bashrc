@@ -13,6 +13,7 @@ source $DOTFILES_LINUX/bin/session/first_run.sh
 source $DOTFILES_LINUX/bin/session/ndm.sh #work
 LFCD="$DOTFILES_CONFIGS/lf/lfcd.sh"
 [ -f "$LFCD" ] && source "$LFCD"
+eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)
 
 ### Bash config
 set -o vi

@@ -37,8 +37,10 @@ sudo apt install xdotool xmacro xsel hsetroot gpick  bspwm sxhkd polybar nm-appl
 sudo apt install keepassxc transmission imagemagick peek mpv flameshot scrot feh ffmpeg zathura zathura-djvu mpd mpc   -y
 sudo apt install nm-connection-editor tig wavemon aircrack-ng nm-tool -y
 sudo apt install vmstat nmon atop iotop iostat iftop -y
-sudo apt install sshpass wireshark nmap whois arp-scan netdiscover -y
+sudo apt install sshpass nmap whois arp-scan netdiscover -y
 sudo apt install nodejs npm -y
+#wireshark 
+# FIX: nm-* 
 
 
 # need to load

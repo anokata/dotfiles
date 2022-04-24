@@ -30,6 +30,7 @@ Plug 'Shougo/denite.nvim'
 Plug 'shmargum/vim-sass-colors'
 Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-eunuch'
+" Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
 " neovim treesitter
@@ -88,6 +89,9 @@ Plug 'rakr/vim-one'
 Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'arcticicestudio/nord-vim'
+Plug 'dikiaap/minimalist'
+Plug 'trevordmiller/nova-vim'
 
 " not used anymore
 " Plug 'francoiscabrol/ranger.vim'

@@ -11,6 +11,7 @@ mkdir $HOME/.config 2>/dev/null
 echo "done"
 
 echo -e "Copy configs..."
+# :CocInstall coc-tsserver
 # if exist?
 # ln ~/dotfiles/linux/.@(!(.|))  ~/
 # TODO: not dot
