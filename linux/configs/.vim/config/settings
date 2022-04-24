@@ -44,6 +44,7 @@ set wrapmargin=0
 "set omnifunc=syntaxcomplete#Complete
 "set keymap=russian-jcukenwin
 setglobal tags-=./tags tags-=./tags; tags^=./tags;
+set switchbuf=usetab
 
 set numberwidth=4
 
