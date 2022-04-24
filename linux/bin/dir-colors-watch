@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#source $DOTFILES_LINUX/.bashrc
+source $DOTFILES_SESSION/alias.sh
+while true; do
+    eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)
+    ls
+    sleep 1
+done

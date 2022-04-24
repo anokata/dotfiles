@@ -30,9 +30,9 @@ endif
 " colorscheme palenight
 " colorscheme one
 " colorscheme nord
-" colorscheme onehalfdark
-colorscheme minimalist
-colorscheme nova
+colorscheme onehalfdark
+" colorscheme minimalist
+" colorscheme nova
 
 " === Internal Terminal Theme ===
 let g:terminal_color_0  = '#2e3436'

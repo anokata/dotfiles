@@ -72,7 +72,7 @@ CHR 33
 ORPHAN 31
 MISSING 01;37;41
 
-EXEC 01;36
+EXEC 00;32
 
 SETUID 01;01;37
 SETGID 01;01;37
@@ -150,7 +150,7 @@ STICKY 00;37;44
 #+--- Customs ---+
 .3des 01;35
 .aes 01;35
-.gpg 01;35
+.gpg 01;31
 .pgp 01;35
 
 #+--- Documents ---+
@@ -208,8 +208,8 @@ STICKY 00;37;44
 .pbm 32
 .pcx 32
 .pgm 32
-.png 32
-.PNG 32
+.png 33
+.PNG 33
 .ppm 32
 .pps 32
 .ppsx 32
@@ -254,3 +254,5 @@ STICKY 00;37;44
 .vob 32
 .webm 32
 .wmv 32
+
+.part 31
