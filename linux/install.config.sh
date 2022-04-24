@@ -11,8 +11,11 @@ mkdir $HOME/.config 2>/dev/null
 echo "done"
 
 echo -e "Copy configs..."
-cp ~/dotfiles/linux/.@(!(.|))  ~/
-#cp ~/dotfiles/linux/* ~/.config # TODO: not dot
+# if exist?
+# ln ~/dotfiles/linux/.@(!(.|))  ~/
+# TODO: not dot
+#ln ~/dotfiles/linux/* ~/.config
+
 #ln configs: tmux bspcwmrc ...
 # configs/vimsetup
 
