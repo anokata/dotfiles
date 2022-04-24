@@ -104,7 +104,6 @@ alias gclp='git clone $(clipboard-get)'
 alias gbc='git branch --show-current'
 alias gpc='git push origin $(git branch --show-current)'
 alias gpa='git push --all'
-# TODO git push current branch
 
 # Dev
 alias adbstart='sudo adb start-server'
@@ -166,7 +165,6 @@ alias config-kitty="$EDITOR $DOTFILES_CONFIGS/kitty/kitty.conf"
 alias config-rofi="$EDITOR $DOTFILES_CONFIGS/rofi/config.rasi"
 alias config-mpd="$EDITOR $DOTFILES_CONFIGS/mpd/mpd.conf"
 
-
 # sound
 alias audio-devices="pacmd list-sinks | grep name:"
 alias audio-switch-0="pacmd set-default-sink 0"
@@ -199,6 +197,7 @@ alias mpc-all="mpc clear && mpc ls | mpc add"
 alias vimdoc="$EDITOR $NOTES_DIR"
 
 alias caps-toggle='xdotool key Caps_Lock'
+alias caps-escape='setxkbmap -option caps:escape'
 alias wm-window-name='xprop | grep WM_CLASS'
 alias wm-window-class='xprop | grep WM_CLASS'
 
@@ -207,9 +206,5 @@ alias wm-name="printf '%s' $XDG_CURRENT_DESKTOP"
 alias wm-type="wmctrl -m"
 alias wm-is-i3='[ "$(wm-name)" = "i3" ] && echo 1 || echo 0'
 
-if [ ! wm-is-i3 ]; then
-    alias term='xresources-reload; urxvt -e sh -c "sleep 0.1; wmctrl -x -r urxvt -b add,fullscreen; bash"'
-else
-    alias term='xresources-reload; urxvt -e tmux a'
-fi
-
+alias apti="sudo apt install"
+alias apts="apt search"
