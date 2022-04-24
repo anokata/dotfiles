@@ -84,6 +84,7 @@ Plug 'xolox/vim-misc'
 
 " Color and UI
 " Plug 'xolox/vim-colorscheme-switcher'
+" Plug 'lifepillar/vim-colortemplate'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'rakr/vim-one'
 Plug 'morhetz/gruvbox'
@@ -92,6 +93,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'arcticicestudio/nord-vim'
 Plug 'dikiaap/minimalist'
 Plug 'trevordmiller/nova-vim'
+Plug 'jacoborus/tender.vim'
+Plug 'jnurmine/Zenburn'
+Plug 'sainnhe/everforest'
 
 " not used anymore
 " Plug 'francoiscabrol/ranger.vim'
