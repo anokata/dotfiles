@@ -1,7 +1,8 @@
 " vim: ft=vim
 
 nnoremap <localleader>ue :UltiSnipsEdit<CR>
-nnoremap <leader><esc> :FloatermToggle<CR>
+nnoremap <localleader>` :FloatermToggle<CR>
+nnoremap <leader>` :FloatermToggle<CR>
 
 " === Navigation ===
 nnoremap <C-A-f> :Rooter<CR>:Rg!  <C-r><C-w>

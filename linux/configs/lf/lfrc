@@ -162,7 +162,9 @@ cmd trash %set -f; mv $fx ~/.trash
 
 # use '<delete>' key for either 'trash' or 'delete' command
 map <delete> trash
-# map <delete> delete
+# map <c-delete> delete
+map D %rm ~/.trash/*
+map _ delete
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)

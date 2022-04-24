@@ -1,14 +1,14 @@
 #!/bin/bash
 
-echo -e "Installing nb..."
-sudo npm install -g nb.sh
-sudo "$(which nb)" completions install
-sudo "$(which nb)" env install
-echo " done."
+# echo -e "Installing nb..."
+# sudo npm install -g nb.sh
+# sudo "$(which nb)" completions install
+# sudo "$(which nb)" env install
+# echo " done."
 
+echo -e "Intall apps..."
 
-mkdir $HOME/dirs
-mkdir $HOME/Dropbox
+echo "done"
 
 # git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 pip install ueberzug
@@ -21,3 +21,5 @@ python2 -m pip install --user --upgrade pynvim
 npm install -g neovim
 nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css
 sudo pip install fzf-ueberzogen
+#nvim -c :PlugInstall
+#sudo npm install -g prettier-eslint-cli

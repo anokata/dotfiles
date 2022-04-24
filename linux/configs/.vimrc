@@ -37,7 +37,7 @@ nnoremap <C-g> :TagbarToggle<CR>
 
 " NOTES: for new line with date
 nmap <leader>o o\| date<tab> \| <esc>
-nnoremap ZZ :bd<CR>ZZ
+nnoremap ZZ :bd<CR>
 
 " function s:test(lines)
 "     echo a:lines
