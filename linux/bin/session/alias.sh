@@ -209,3 +209,15 @@ alias wm-is-i3='[ "$(wm-name)" = "i3" ] && echo 1 || echo 0'
 alias apti="sudo apt install"
 alias apts="apt search"
 alias dir-colors-update='eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)'
+
+# Curl sites
+alias ip-info="curl ipinfo.io"
+# alias weather="curl wttr.in/Moscow"
+alias weather="finger moscow@graph.no"
+
+function cheat() {
+    curl "cheat.sh/$@"
+}
+function dict() {
+    curl "dict.org/d:$@"
+}
