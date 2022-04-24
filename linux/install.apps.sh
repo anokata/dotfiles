@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source $DOTFILES_SESSION/alias.sh
 # echo -e "Installing nb..."
 # sudo npm install -g nb.sh
 # sudo "$(which nb)" completions install
@@ -34,7 +34,7 @@ apps_cli=('fzf' 'fd' 'bat' \
 'pwgen' \
 'gsmartcontrol' \
 'neovim' \
-\)
+)
 
 apps_wm=('xdotool' \
 'xmacro' \
@@ -49,7 +49,7 @@ apps_wm=('xdotool' \
 'rofi' \
 'lightdm-gtk-greeter' \
 'lightdm' \
-\)
+)
 
 apps_media=('keepassxc' \
 'transmission' \
@@ -63,18 +63,18 @@ apps_media=('keepassxc' \
 'zathura' \
 'zathura-djvu' \
 'mpd mpc  ' \
-\)
+)
 
 apps_net=('nm-connection-editor' \
 'tig' \
 'wavemon' \
 'aircrack-ng' \
 'nm-tool' \
-\)
+)
 
 apps_dev=('nodejs' \
 'npm' \
-\)
+)
 
 apps_network=('sshpass' \
 'wireshark' \
@@ -82,7 +82,7 @@ apps_network=('sshpass' \
 'whois' \
 'arp-scan' \
 'netdiscover' \
-\)
+)
 
 apps_sys=('vmstat' \
 'nmon' \
@@ -90,15 +90,15 @@ apps_sys=('vmstat' \
 'iotop' \
 'iostat' \
 'iftop' \
-\)
+)
 
 # npm install -g neovim
 # nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css
 
 echo -e "Installing apps: cli"
 for app in ${apps_cli[@]}; do
-    echo $app
-    #apti $app
+    # echo $app
+    apti $app
 done
 echo "done."
 
