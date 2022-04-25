@@ -51,7 +51,12 @@ super + F2
 super + F3
     st nvim +":Prosession ~/dotfiles/"
 super + F4
-    st fff
+    st htop
+# TODO
+super + t
+    term-no-tmux
+super + p
+    pavucontrol
 
 # Bookmarks
 ctrl + super + b

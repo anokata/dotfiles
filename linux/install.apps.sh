@@ -41,6 +41,7 @@ sudo apt install tig wavemon aircrack-ng  -y
 sudo apt install sshpass nmap whois arp-scan netdiscover -y
 sudo apt install nodejs npm -y
 sudo apt install kitty -y
+#seahorse
 #wireshark 
 # FIX: nm-* 
 

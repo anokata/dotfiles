@@ -31,6 +31,8 @@ bind -x '"\e[18~":"~/gits/fmui/fmui"' # F7
 # PS
 bind '"\C-k":"pkill "' # F7
 
+# IDE
+bind -x '"\eg":"tig"' # tig by c-s-g
 
 # TODO
 bind '"\C-n":"lfcd\C-m"'
