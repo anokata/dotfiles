@@ -18,5 +18,7 @@ for dir in $DIRS; do
     fi
 done
 
+#npm install -g neovim
 
-# :CocInstall coc-tsserver
+nvim -c :PlugInstall
+nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css

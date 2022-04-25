@@ -14,16 +14,9 @@ source $DOTFILES_SESSION/alias.sh
 #python2 -m pip install --user --upgrade pynvim
 # sudo apt install libxkbfile-dev
 # git clone https://github.com/grwlf/xkb-switch.git
-#npm install -g neovim
-#nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css
 #sudo pip install fzf-ueberzogen
-#nvim -c :PlugInstall
 #sudo npm install -g prettier-eslint-cli
-
-
-
 # npm install -g neovim
-# nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css
 
 echo -e "Installing apps: cli"
 #for app in ${apps_cli[@]}; do
