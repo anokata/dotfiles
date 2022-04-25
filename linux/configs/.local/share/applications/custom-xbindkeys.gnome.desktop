@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=xbindkeys for GNOME
-Comment=run xbindkeys
-Exec=xbindkeys -f /home/sernam/.xbindkeysrc
-Icon=input-keyboard
-X-GNOME-Autostart-enabled=true
-Type=Application
-OnlyShowIn=GNOME
