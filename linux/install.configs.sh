@@ -10,7 +10,6 @@ else
     DOTS='.xbindkeysrc .vifm'
     DIRS='mypaint'
     FILES='configs.list'
-    FILES=$(ls -p | grep -v /)
 fi
 
 cd $DOTFILES_CONFIGS

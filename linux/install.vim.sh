@@ -1,0 +1,2 @@
+
+# :CocInstall coc-tsserver
