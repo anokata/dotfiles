@@ -23,13 +23,12 @@ alias cdg="cd $HOME/gits"
 alias c="pushd "
 
 # Files info
-alias l='ls -CF'
+alias l='ls --color=auto -CXF --group-directories-first'
 alias la='ls -A'
 alias lF='ls -lah | less'
 alias lk='ll | grep / | grep " \."'
 alias ll='ls -alFh'
 alias lld='ll -d */'
-alias ls='ls --color=auto -XF --group-directories-first'
 alias lz='ls | fzf'
 alias dush='du -sh'
 alias dushgm='du -sh | grep M'
