@@ -83,19 +83,40 @@ Plug 'sainnhe/everforest'
 Plug 'xolox/vim-misc'
 
 " Color and UI
+Plug 'ryanoasis/vim-devicons'
 " Plug 'xolox/vim-colorscheme-switcher'
 " Plug 'lifepillar/vim-colortemplate'
+
+" Colorschemes
+Plug 'morhetz/gruvbox'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'rakr/vim-one'
-Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'ryanoasis/vim-devicons'
 Plug 'arcticicestudio/nord-vim'
 Plug 'dikiaap/minimalist'
 Plug 'trevordmiller/nova-vim'
 Plug 'jacoborus/tender.vim'
 Plug 'jnurmine/Zenburn'
 Plug 'sainnhe/everforest'
+Plug 'ayu-theme/ayu-vim'
+Plug 'ajmwagar/vim-deus'
+Plug 'tlhr/anderson.vim'
+Plug 'cocopon/iceberg.vim'
+Plug 'yorickpeterse/happy_hacking.vim'
+Plug 'whatyouhide/vim-gotham'
+Plug 'mhartington/oceanic-next'
+
+" Colorschemes
+" Plug 'junegunn/seoul256.vim'
+" Plug 'rakr/vim-colors-rakr'
+" Plug 'jonathanfilip/vim-lucius'
+" Plug 'nanotech/jellybeans.vim'
+" Plug 'keith/parsec.vim'
+" Plug 'chase/focuspoint-vim'
+" Plug 'challenger-deep-theme/vim'
+" Plug 'tyrannicaltoucan/vim-deep-space'
+" Plug 'AlessandroYorba/Alduin'
+" Plug 'danilo-augusto/vim-afterglow'
 
 " not used anymore
 " Plug 'francoiscabrol/ranger.vim'

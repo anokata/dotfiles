@@ -138,6 +138,8 @@ nnoremap <Up> <C-w><Up>
 nnoremap <Down> <C-w><Down>
 nnoremap <Right> <C-w><Right>
 nnoremap <Left> <C-w><Left>
+" close all buffers except one
+noremap <leader>bd :%bd\|e#\|bd#<cr>\|'"
 
 " === Notes ===
 "command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
