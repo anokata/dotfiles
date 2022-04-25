@@ -33,12 +33,14 @@ echo -e "Installing apps: cli"
 #echo "done."
 
 sudo apt install tmux fzf fd-find bat gsmartcontrol htop jq libblkid1 mmv ncat ncdu nvme-cli ripgrep calcurse pwgen gsmartcontrol neovim -y
-sudo apt install xdotool xmacro xsel hsetroot gpick  bspwm sxhkd polybar nm-applet nmcli rofi lightdm-gtk-greeter lightdm -y
+sudo apt install xdotool xmacro xsel hsetroot gpick  bspwm sxhkd polybar rofi lightdm-gtk-greeter lightdm -y
 sudo apt install keepassxc transmission imagemagick peek mpv flameshot scrot feh ffmpeg zathura zathura-djvu mpd mpc   -y
-sudo apt install nm-connection-editor tig wavemon aircrack-ng nm-tool -y
-sudo apt install vmstat nmon atop iotop iostat iftop -y
+sudo apt install tig wavemon aircrack-ng  -y
+# sudo apt install nm-connection-editor nm-tool nm-applet laiph2Ch network-manager -y
+# sudo apt install vmstat nmon atop iotop iostat iftop -y
 sudo apt install sshpass nmap whois arp-scan netdiscover -y
 sudo apt install nodejs npm -y
+sudo apt install kitty -y
 #wireshark 
 # FIX: nm-* 
 
