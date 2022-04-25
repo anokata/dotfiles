@@ -9,6 +9,7 @@ polybar-msg cmd quit
 # Launch bar1 and bar2
 # echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log ===>
 # polybar bottom -c ~/.config/polybar/config.ini 2>&1 | tee -a /tmp/polybar1.log & disown
+# TODO $MONINTOR1
 polybar bottom-2 -c ~/.config/polybar/config.ini 2>&1 | tee -a /tmp/polybar2.log & disown
 # polybar bottom-tray -c ~/.config/polybar/config.ini 2>&1 | tee -a /tmp/polybar2.log & disown
 

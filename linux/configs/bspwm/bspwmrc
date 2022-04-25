@@ -13,6 +13,7 @@ xrdb "/home/$(whoami)/.Xresources"
 hsetroot -solid "#202020"
 
 ### Config
+# TODO $MONINTOR1
 bspc monitor HDMI-1 -d 1 2 3 4 5
 bspc monitor DP-3 -d 6 7 8 9 10
 

@@ -2,6 +2,9 @@
 PROD=0
 [ "$1" = "-p" ] && PROD=1
 
+cd $DOTFILES_CONFIGS
+CONFIG_DIR="$HOME/.config"
+
 if [ $PROD -eq 1 ]; then
     DOTS=$(ls -d .* | grep -v / | grep '^\.')
     DIRS=$(ls -d */)
@@ -12,8 +15,6 @@ else
     FILES='configs.list'
 fi
 
-cd $DOTFILES_CONFIGS
-CONFIG_DIR="$HOME/.config"
 
 function makeIfNotExists() {
     echo "creating $1"
