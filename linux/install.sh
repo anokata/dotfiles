@@ -1,22 +1,21 @@
 #!/bin/bash
-#./install.config.sh
-#./install.apps.sh
 cd $DOTFILES_CONFIGS
-DOTS=$(ls -d .* | grep -v / | grep '^\.')
+# DOTS=$(ls -d .* | grep -v / | grep '^\.')
+# TODO TEST
+DOTS='.xbindkeysrc .vifm'
 DIRS=$(ls -d */)
 CONFIG_DIR="$HOME/.config"
-# echo $DIRS
-# echo $DOTS
+
 function makeIfNotExists() {
-    echo "creating $file in $HOME"
+    echo "creating $1"
     mkdir "$1" 2>/dev/null
 }
 
 function linkRemovingExisting() {
-    echo "link to $1 in $HOME"
-    ln "$1" $HOME
+    echo "link to $HOME/$1"
     # delete if exist
-    # TODO
+    [ -f "$HOME/$1" ] && rm "$HOME/$1"
+    ln "$1" $HOME
 }
 
 echo "Creating and linking dot files in HOME"
@@ -33,5 +32,12 @@ for file in $DOTS; do
     fi
 done
 
-# each dir create in ~/.config/
-# each dir files ln in  ~/.config/dir
+echo "Creating and linking dot files in .config"
+for dir in $DIRS; do 
+    # each dir create in ~/.config/
+    if [[ -d "$dir" ]]; then
+        makeIfNotExists "$HOME/.config/$dir"
+    fi
+    # each dir files ln in  ~/.config/dir
+    # TODO
+done
