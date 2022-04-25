@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+source $DOTFILES/linux/.env
+sshpass -f $PASSWORD_DEFAULT_OPKG ssh root@192.168.1.1 -p 222 $@
