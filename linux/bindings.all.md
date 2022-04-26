@@ -5,6 +5,9 @@ c-b fzf txt prevew
 c-n lf FM
 c-o fzf & vim open NOTES
 
+# bash
+## inputrc & bashrc bind
+
 ## lf
 
 # wm/sxhkd

@@ -23,26 +23,22 @@ set show-mode-in-prompt on
 set vi-ins-mode-string \1\e[6 q\2
 set vi-cmd-mode-string \1\e[2 q\2
 
-# c-a-l append | less
-"\e\C-l": "\e$a | less\e\C-m"
+# c-a-, append | less
+"\e\C-,": "\e$a | less\e\C-m"
 
 # c-l clear
 "\C-l": "\e0Diclear\e\C-m"
 
-# c-a-d clear cmd
+# c-a-l clear cmd
 "\e\C-l": "\e0D"
 
 # alt-s  prepend with sudo
 "\es": "\e0Isudo \e$"
 
-# alt-s  prepend with echo % >> 
+# alt-e  prepend with echo % >> 
 "\ee": "\e0I'\eA'\e0Iecho \e$a >> \eA"
 
 # c-b to background
 "\e\C-b": "\C-e > /dev/null 2>&1 &\C-m"
 
-# "\e\C-": "\e0Di \C-m"
 # apps
-# c-a-n fff
-"\e\C-n": "\e0Difff\C-m"
-"\C-\eOS": "\e0Difff\C-m"
