@@ -25,6 +25,8 @@ echo -e "Installing apps: cli"
 #done
 #echo "done."
 
+#TODO cli only separate
+
 sudo apt install tmux fzf fd-find bat gsmartcontrol htop jq libblkid1 mmv ncat ncdu nvme-cli ripgrep calcurse pwgen gsmartcontrol neovim -y
 sudo apt install xdotool xmacro xsel hsetroot gpick  bspwm sxhkd polybar rofi lightdm-gtk-greeter lightdm -y
 sudo apt install keepassxc transmission imagemagick peek mpv flameshot scrot feh ffmpeg zathura zathura-djvu mpd mpc   -y
