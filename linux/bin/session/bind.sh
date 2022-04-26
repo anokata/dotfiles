@@ -29,7 +29,8 @@ bind -x '"\e[17~":"fff"' # F6
 bind -x '"\e[18~":"~/gits/fmui/fmui"' # F7
 
 # PS
-bind '"\C-k":"pkill "' # F7
+bind '"\C-k":"pkill "' # 
+bind -x '"\C-y":"htop "' # 
 
 # IDE
 bind -x '"\eg":"tig"' # tig by c-s-g
