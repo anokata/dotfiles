@@ -1,0 +1,8 @@
+#!/bin/bash
+#xrandr --listmonitors | tail -n +2 | cut -d" " -f 6
+i=0
+for monitor in $(xrandr --listmonitors | tail -n +2 | cut -d" " -f 6); do
+    i=$(( i + 1 ))
+    export MONITOR_${i}=$monitor
+done
+export MONITOR_COUNT=$i

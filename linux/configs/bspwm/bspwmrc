@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/bash
 
 ### Services
 # source ~/dotfiles/linux/.bashrc
@@ -7,16 +7,25 @@ pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
 setxkbmap -option caps:escape
 dunst &
 picom &
-guake &
+NO_TMUX=1 guake &
 [ ! -s ~/.config/mpd/pid ] && mpd
 
 xrdb "/home/$(whoami)/.Xresources"
 hsetroot -solid "#202020"
 
 ### Config
-# TODO $MONINTOR1
-bspc monitor HDMI-1 -d 1 2 3 4 5
-bspc monitor DP-3 -d 6 7 8 9 10
+if [ -z $MONITOR_1 ]; then
+    # Default 
+    bspc monitor HDMI-1 -d 1 2 3 4 5
+    bspc monitor DP-3 -d 6 7 8 9 10
+elif [ $MONITOR_COUNT -eq 2 ]
+    bspc monitor $MONITOR_1 -d 1 2 3 4 5
+    bspc monitor $MONITOR_2 -d 6 7 8 9 10
+else
+    notify-send "one monitor"
+    bspc monitor $MONITOR_1 -d 1 2 3 4 5 6 7 8
+fi
+
 
 bspc config border_width         0
 bspc config window_gap           0
