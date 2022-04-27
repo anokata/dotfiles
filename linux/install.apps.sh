@@ -1,7 +1,7 @@
 #!/bin/bash
 source $DOTFILES_SESSION/alias.sh
 function i() {
-    apt install $@ -y
+    sudo apt install $@ -y
 }
 # echo -e "Installing nb..."
 # sudo npm install -g nb.sh
