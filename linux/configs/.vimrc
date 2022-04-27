@@ -35,8 +35,6 @@ source ~/.vim/config/autocmds
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap <C-g> :TagbarToggle<CR>
 
-" NOTES: for new line with date
-nmap <leader>o o\| date<tab> \| <esc>
 nnoremap ZZ :bd<CR>
 
 
