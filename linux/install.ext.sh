@@ -8,7 +8,11 @@ cd $GITS_DIR
 # LF
 # git clone https://github.com/gokcehan/lf.git
 # https://github.com/gokcehan/lf/releases
-# wget https://github.com/gokcehan/lf/releases/download/r27/lf-linux-amd64.tar.gz
+LF_FILE='lf-linux-amd64.tar.gz'
+wget https://github.com/gokcehan/lf/releases/download/r27/$LF_FILE
+tar xf $LF_FILE
+sudo mv lf /usr/bin/lf
+# lfrun lfimg
 # FZF
 # archivemount
 # cp-p
