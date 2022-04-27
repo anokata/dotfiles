@@ -1,6 +1,5 @@
 #!/bin/bash
 source $DOTFILES_LINUX/.env
-source $DOTFILES_LINUX/.bashrc
 cd $GITS_DIR
 TMP_DIR=$(create-temp-ram-dir)
 
