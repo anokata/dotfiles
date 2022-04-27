@@ -2,7 +2,7 @@
 source $DOTFILES_LINUX/.env
 source $DOTFILES_LINUX/.bashrc
 cd $GITS_DIR
-TMP_DIR=$(create-tmp-ram-dir)
+TMP_DIR=$(create-temp-ram-dir)
 
 # LF (https://github.com/gokcehan/lf.git)
 cd $TMP_DIR
