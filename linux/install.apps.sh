@@ -1,5 +1,8 @@
 #!/bin/bash
 source $DOTFILES_SESSION/alias.sh
+function i() {
+    apt install $@ -y
+}
 # echo -e "Installing nb..."
 # sudo npm install -g nb.sh
 # sudo "$(which nb)" completions install
@@ -40,6 +43,7 @@ sudo apt install kitty -y
 sudo apt install xdotool xmacro xsel hsetroot gpick bspwm sxhkd polybar rofi lightdm-gtk-greeter lightdm -y
 sudo apt install keepassxc transmission peek mpv flameshot scrot feh ffmpeg zathura zathura-djvu   -y
 sudo apt install dunst libnotify-bin -y
+i prettyping
 #pavucontrol
 #seahorse
 #wireshark 

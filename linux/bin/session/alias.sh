@@ -22,6 +22,10 @@ alias cdn2="cd $WORK_DIR/ndw2/"
 alias cdg="cd $HOME/gits"
 alias c="pushd "
 
+# color
+alias diff='diff --color=auto'
+alias ip='ip -color=auto'
+
 # Files info
 alias l='ls --color=auto -CXF --group-directories-first'
 alias la='ls -A'
@@ -207,6 +211,7 @@ alias wm-is-i3='[ "$(wm-name)" = "i3" ] && echo 1 || echo 0'
 
 alias apti="sudo apt install"
 alias apts="apt search"
+alias apt-installed='apt list --installed'
 alias dir-colors-update='eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)'
 
 # Curl sites
@@ -220,3 +225,4 @@ function cheat() {
 function dict() {
     curl "dict.org/d:$@"
 }
+
