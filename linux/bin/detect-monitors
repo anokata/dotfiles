@@ -1,5 +1,6 @@
 #!/bin/bash
 #xrandr --listmonitors | tail -n +2 | cut -d" " -f 6
+# export MONITOR_1="Default"
 i=0
 for monitor in $(xrandr --listmonitors | tail -n +2 | cut -d" " -f 6); do
     i=$(( i + 1 ))

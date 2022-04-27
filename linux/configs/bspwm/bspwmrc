@@ -18,7 +18,7 @@ if [ -z $MONITOR_1 ]; then
     # Default 
     bspc monitor HDMI-1 -d 1 2 3 4 5
     bspc monitor DP-3 -d 6 7 8 9 10
-elif [ $MONITOR_COUNT -eq 2 ]
+elif [ "$MONITOR_COUNT" = '2' ]; then
     bspc monitor $MONITOR_1 -d 1 2 3 4 5
     bspc monitor $MONITOR_2 -d 6 7 8 9 10
 else
