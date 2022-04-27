@@ -1,23 +1,26 @@
 #!/bin/bash
-
-# source $DOTFILES_LINUX/bin/session/alias.sh
 source $DOTFILES_LINUX/.env
+source $DOTFILES_LINUX/.bashrc
 cd $GITS_DIR
+TMP_DIR=$(create-tmp-ram-dir)
 
-# gits list:
-# LF
-# git clone https://github.com/gokcehan/lf.git
-# https://github.com/gokcehan/lf/releases
+# LF (https://github.com/gokcehan/lf.git)
+cd $TMP_DIR
 LF_FILE='lf-linux-amd64.tar.gz'
 wget https://github.com/gokcehan/lf/releases/download/r27/$LF_FILE
 tar xf $LF_FILE
 sudo mv lf /usr/bin/lf
-# lfrun lfimg
+rm $LF_FILE
+
+# TODO: lfrun lfimg
+
+cd $GITS_DIR
 # FZF
 # archivemount
 # cp-p
 # lfimg
 
+# gits list:
 
 ## rofi
 ##rofi-keepassx
