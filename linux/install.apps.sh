@@ -40,12 +40,14 @@ sudo apt install kitty -y
 sudo apt install xdotool xmacro xsel hsetroot gpick bspwm sxhkd polybar rofi lightdm-gtk-greeter lightdm -y
 sudo apt install keepassxc transmission peek mpv flameshot scrot feh ffmpeg zathura zathura-djvu   -y
 sudo apt install dunst libnotify-bin -y
+#pavucontrol
 #seahorse
 #wireshark 
 
 # sudo apt install nm-connection-editor nm-tool nm-applet laiph2Ch network-manager -y
 # TODO nm in deb
 # TODO in deb: sudo apt install vmstat nmon atop iotop iostat iftop -y
+# TODO list all apps and select
 
 
 # need to load appimg/flatpack

@@ -30,7 +30,7 @@ bspc rule -a kitty desktop='^1' state=fullscreen
 # bspc rule -a kitty state=floating rectangle=800x600+100+100
 bspc rule -a St state=fullscreen
 bspc rule -a mpv state=fullscreen
-bspc rule -a Org.gnome.Nautilus desktop='^10' state=fullscreen monitor=DP-3
+# bspc rule -a Org.gnome.Nautilus desktop='^10' state=fullscreen monitor=DP-3
 bspc rule -a thunar desktop='^2'
 bspc rule -a Code desktop='^1' state=fullscreen
 bspc rule -a Slack desktop='^3' state=fullscreen 

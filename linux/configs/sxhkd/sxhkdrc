@@ -5,12 +5,6 @@ alt + x; n ; s
     ndm-time-status
 alt + x; n ; t
     ndm-task-names
-alt + x; n ; d
-    ndm-task-status-dev
-alt + x; n ; D
-    ndm-task-status-done
-alt + x; n ; r
-    ndm-task-status-review
 # markdown
 alt + x; m ; l
     markdown-clip-convert-to-url
@@ -26,8 +20,8 @@ ctrl + super + F1
     google-chrome
 ctrl + super + F2
     code
-ctrl + super + F3
-    obsidian
+# ctrl + super + F3
+#     obsidian
 ctrl + super + F4
     nautilus
 ctrl + super + F5
@@ -35,7 +29,7 @@ ctrl + super + F5
 ctrl + super + F6
     transmission-gtk
 ctrl + super + F7
-    flameshot
+    flameshot-gui
 ctrl + super + F8
     peek
 ctrl + super + F9
