@@ -11,13 +11,17 @@ c-o fzf & vim open NOTES
 ## lf
 
 # wm/sxhkd
+
 ## apps
 c-s-w-f1 cal
 w-f1 lf
 w-f2 vim notes
 ## wm
 ## rofi
+a-d
+c-s-v snippets
 ## music
+c-w-f mpd file
 
 # vim
 a-c color

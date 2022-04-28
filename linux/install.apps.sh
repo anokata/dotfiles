@@ -3,23 +3,6 @@ source $DOTFILES_SESSION/alias.sh
 function i() {
     sudo apt install $@ -y
 }
-# echo -e "Installing nb..."
-# sudo npm install -g nb.sh
-# sudo "$(which nb)" completions install
-# sudo "$(which nb)" env install
-# echo " done."
-
-# git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
-#pip install ueberzug
-#pip install pynvim
-#sudo apt install python3-pynvim
-#npm install -g neovim
-#python2 -m pip install --user --upgrade pynvim
-# sudo apt install libxkbfile-dev
-# git clone https://github.com/grwlf/xkb-switch.git
-#sudo pip install fzf-ueberzogen
-#sudo npm install -g prettier-eslint-cli
-# npm install -g neovim
 
 echo -e "Installing apps: cli"
 #for app in ${apps_cli[@]}; do
@@ -56,6 +39,9 @@ sudo pip3 install ueberzug
 #pavucontrol
 #seahorse
 #wireshark 
+#telegram
+#slack
+#TODO: dropbox
 
 # sudo apt install nm-connection-editor nm-tool nm-applet laiph2Ch network-manager -y
 # TODO nm in deb
@@ -66,7 +52,4 @@ sudo pip3 install ueberzug
 # need to load appimg/flatpack
 #obs
 #obsidian
-#telegram
-#slack
-#dropbox
 

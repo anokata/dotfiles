@@ -1,13 +1,11 @@
-# Description tree
-
-**Ordinary dotfiles here**
-
+# Struct file overview
 - `linux` 
     - `bin` - script for automating everyday tasks
     - `configs` - my configs and scripts
+        - `inputrc` - readline key bindings
+        - `.vim` - vim configs
     - `.bashrc` - shell config, will source: bin/session/
     - `.env` - variables
-    - `inputrc` - readline key bindings
 - `mac` - mac os configs
 - `windows` - win configs and scripts
 
@@ -20,16 +18,16 @@
 # Install:
 ```
     clone https://github.com/anokata/dotfiles.git $HOME
-    cd linux
+    cd $HOME/dotfiles/linux
     make install
-```
-
-## Intall config:
-```
-    cd linux && make config
+    make config
 ```
 
 ---
+
+# Info
+
+* Shortkeys: [key bindings](linux/bindings.all.md)
 
 
 

@@ -2,5 +2,8 @@ install:
 	echo 'source ~/dotfiles/linux/.bashrc' >> ~/.bashrc
 	echo 'source ~/dotfiles/linux/.env' >> ~/.profile
 config:
-	./install.config.sh
+	./install.dirs.sh
+	./install.config.sh -p
 	./install.apps.sh
+	./install.ext.sh
+	./install.vim.sh

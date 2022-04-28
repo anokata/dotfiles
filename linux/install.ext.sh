@@ -27,6 +27,17 @@ rm -rf lfimg
 
 # gits list:
 
+#npm install -g neovim
+#pip install pynvim
+#sudo apt install python3-pynvim
+#python2 -m pip install --user --upgrade pynvim
+# sudo apt install libxkbfile-dev
+# git clone https://github.com/grwlf/xkb-switch.git
+#sudo pip install fzf-ueberzogen
+#sudo npm install -g prettier-eslint-cli
+# npm install -g neovim
+
+
 ## rofi
 ##rofi-keepassx
 ##kaomoji-rofi

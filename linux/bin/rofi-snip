@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 current_wid=$(xdo id)
-snippet=$(echo "$(ndm-time-status)" | cat - $(dirname $0)/snippets.txt | rofi -i -dmenu $@ )
+snippet=$(cat $DOTFILES_BIN/snippets.txt | rofi -i -dmenu $@ )
+# snippet=$(echo "$(ndm-time-status)" | cat - $DOTFILES_BIN/snippets.txt | rofi -i -dmenu $@ )
 echo -n "$snippet" | xclip -selection clipboard
 xdotool key --window $current_wid --clearmodifiers ctrl+v
