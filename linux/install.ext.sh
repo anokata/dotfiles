@@ -11,8 +11,6 @@ tar xf $LF_FILE
 sudo mv lf /usr/bin/lf
 rm $LF_FILE
 
-# ueberzug
-sudo pip3 install ueberzug
 
 # TODO: lfrun lfimg
 cd $GITS_DIR
