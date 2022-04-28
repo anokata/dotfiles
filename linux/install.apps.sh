@@ -19,6 +19,8 @@ sudo apt install tig wavemon aircrack-ng  -y
 sudo apt install sshpass nmap whois arp-scan netdiscover -y
 sudo apt install nodejs npm -y
 i prettyping archivemount
+i atop
+#BT: blueman bluez
 
 # X cli
 sudo apt install kitty -y

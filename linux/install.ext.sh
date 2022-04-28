@@ -16,7 +16,7 @@ rm $LF_FILE
 cd $GITS_DIR
 git clone https://github.com/cirala/lfimg.git
 cd lfimg
-sudo make install
+make install
 cd ..
 rm -rf lfimg
 
@@ -27,10 +27,8 @@ sudo make install
 cd ..
 rm -rf cp-p
 
-# gits list:
-
+##rofi-emoji
 
 ##rofi-keepassx
 ##kaomoji-rofi
-##rofi-emoji
 ##npm install -g neovim

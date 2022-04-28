@@ -212,7 +212,10 @@ alias wm-is-i3='[ "$(wm-name)" = "i3" ] && echo 1 || echo 0'
 
 alias apti="sudo apt install"
 alias apts="apt search"
+alias aptr="sudo apt remove"
+alias aptr="sudo apt purge"
 alias apt-installed='apt list --installed'
+alias aptsi="apt-installed | rg"
 alias dir-colors-update='eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)'
 
 # Curl sites
