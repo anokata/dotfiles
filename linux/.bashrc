@@ -1,5 +1,6 @@
 #set -e
 ### PATH/ENV
+set -o vi
 source ~/dotfiles/linux/.env
 # export TERM=screen-256color
 # export TERM=xterm-256color
@@ -16,7 +17,6 @@ LFCD="$DOTFILES_CONFIGS/lf/lfcd.sh"
 eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)
 
 ### Bash config
-set -o vi
 shopt -s histappend
 shopt -s checkwinsize
 shopt -s autocd

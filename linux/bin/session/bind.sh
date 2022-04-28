@@ -1,4 +1,5 @@
 # Bindings
+set -o vi
 bind -m vi-command '"v": abort'
 ## vim
 bind -x '"\e[1;6P":"$EDITOR"' # C-S-F1
