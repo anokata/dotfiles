@@ -21,9 +21,9 @@ cd ..
 rm -rf lfimg
 
 # FZF
+# fzf-euberzug
 # archivemount
 # cp-p
-# lfimg
 
 # gits list:
 

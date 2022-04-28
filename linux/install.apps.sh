@@ -43,6 +43,8 @@ sudo apt install kitty -y
 sudo apt install xdotool xmacro xsel hsetroot gpick bspwm sxhkd polybar rofi lightdm-gtk-greeter lightdm -y
 sudo apt install keepassxc transmission peek mpv flameshot scrot feh ffmpeg zathura zathura-djvu   -y
 sudo apt install dunst libnotify-bin -y
+# TODO repo?
+# i chrome
 
 # cli ext
 i gcc libx11-dev libxext-dev libxres-dev
