@@ -17,6 +17,8 @@ cd $GITS_DIR
 git clone https://github.com/cirala/lfimg.git
 cd lfimg
 make install
+cd ..
+rm -rf lfimg
 
 # FZF
 # archivemount
