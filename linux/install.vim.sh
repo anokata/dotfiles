@@ -22,3 +22,9 @@ done
 
 nvim -c :PlugInstall
 nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css
+
+echo 'remove vim/plugged/*/.git dirs'
+cd $VIM_DIR/plugged
+for dir in `ls -1 | rg /`; do
+    rm -rf $dir/.git
+done
