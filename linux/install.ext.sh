@@ -16,29 +16,21 @@ rm $LF_FILE
 cd $GITS_DIR
 git clone https://github.com/cirala/lfimg.git
 cd lfimg
-make install
+sudo make install
 cd ..
 rm -rf lfimg
 
-# FZF
-# fzf-euberzug
-# archivemount
 # cp-p
+git clone https://github.com/Naheel-Azawy/cp-p.git
+cd cp-p
+sudo make install
+cd ..
+rm -rf cp-p
 
 # gits list:
 
-#npm install -g neovim
-#pip install pynvim
-#sudo apt install python3-pynvim
-#python2 -m pip install --user --upgrade pynvim
-# sudo apt install libxkbfile-dev
-# git clone https://github.com/grwlf/xkb-switch.git
-#sudo pip install fzf-ueberzogen
-#sudo npm install -g prettier-eslint-cli
-# npm install -g neovim
 
-
-## rofi
 ##rofi-keepassx
 ##kaomoji-rofi
 ##rofi-emoji
+##npm install -g neovim

@@ -18,6 +18,7 @@ sudo apt install imagemagick mpd mpc -y
 sudo apt install tig wavemon aircrack-ng  -y
 sudo apt install sshpass nmap whois arp-scan netdiscover -y
 sudo apt install nodejs npm -y
+i prettyping archivemount
 
 # X cli
 sudo apt install kitty -y
@@ -35,10 +36,12 @@ cd $(create-temp-ram-dir)
 # cli ext
 ## ueberzug
 i gcc libx11-dev libxext-dev libxres-dev
-i prettyping
 i python3 python3-pip
 sudo pip3 install ueberzug
 sudo pip3 install fzf-ueberzogen
+sudo apt install python3-pynvim
+sudo pip3 install pynvim
+#sudo npm install -g prettier-eslint-cli
 
 
 i pavucontrol
