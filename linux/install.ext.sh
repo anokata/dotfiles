@@ -11,9 +11,15 @@ tar xf $LF_FILE
 sudo mv lf /usr/bin/lf
 rm $LF_FILE
 
-# TODO: lfrun lfimg
+# ueberzug
+sudo pip3 install ueberzug
 
+# TODO: lfrun lfimg
 cd $GITS_DIR
+git clone https://github.com/cirala/lfimg.git
+cd lfimg
+make install
+
 # FZF
 # archivemount
 # cp-p

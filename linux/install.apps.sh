@@ -44,6 +44,7 @@ sudo apt install xdotool xmacro xsel hsetroot gpick bspwm sxhkd polybar rofi lig
 sudo apt install keepassxc transmission peek mpv flameshot scrot feh ffmpeg zathura zathura-djvu   -y
 sudo apt install dunst libnotify-bin -y
 i prettyping
+i python3 python3-pip
 #pavucontrol
 #seahorse
 #wireshark 
