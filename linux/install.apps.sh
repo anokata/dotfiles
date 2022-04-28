@@ -45,7 +45,7 @@ sudo apt install keepassxc transmission peek mpv flameshot scrot feh ffmpeg zath
 sudo apt install dunst libnotify-bin -y
 
 # cli ext
-i gcc
+i gcc libx11-dev libxext-dev libxres-dev
 i prettyping
 i python3 python3-pip
 # ueberzug
