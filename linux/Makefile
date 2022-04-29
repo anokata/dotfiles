@@ -3,7 +3,7 @@ install:
 	echo 'source ~/dotfiles/linux/.env' >> ~/.profile
 config:
 	./install.dirs.sh
-	./install.config.sh -p
+	./install.configs.sh -p
 	./install.apps.sh
 	./install.ext.sh
 	./install.vim.sh
