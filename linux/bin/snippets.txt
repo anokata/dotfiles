@@ -6,3 +6,4 @@
 (done, ndw2)
 Decompose, branching
 Code style, clean, eslint. PR.
+Fix ESLint warnings. Reorder methods (see ESLint). Remove unused code.
