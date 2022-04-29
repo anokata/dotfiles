@@ -6,4 +6,4 @@ config:
 	./install.configs.sh -p
 	./install.apps.sh
 	./install.ext.sh
-	./install.vim.sh
+	./install.vim.sh -p

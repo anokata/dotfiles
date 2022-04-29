@@ -29,11 +29,7 @@ sudo apt install kitty -y
 sudo apt install xdotool xmacro xsel hsetroot gpick bspwm sxhkd polybar rofi lightdm-gtk-greeter lightdm -y
 sudo apt install keepassxc transmission peek mpv flameshot scrot feh ffmpeg zathura zathura-djvu   -y
 sudo apt install dunst libnotify-bin -y
-# TODO repo?
-# i chrome
 cd $(create-temp-ram-dir)
-# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-# sudo apt install ./google-chrome-stable_current_amd64.deb
 
 # cli ext
 ## ueberzug
@@ -49,9 +45,13 @@ sudo pip3 install pynvim
 i pavucontrol
 i fonts-firacode
 
+# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+# sudo apt install ./google-chrome-stable_current_amd64.deb
+
 #wireshark 
 #telegram
 #slack
+#obs
 #TODO: dropbox
 
 #seahorse
@@ -60,6 +60,5 @@ i fonts-firacode
 # TODO list all apps and select
 
 # need to load appimg/flatpack
-#obs
 #obsidian
 
