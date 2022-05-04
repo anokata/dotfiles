@@ -3,13 +3,16 @@
 source $DOTFILES/linux/.env
 TEMP=$(create-temp-ram-dir)
 DATE="$(date '+%Y-%d-%m')"
+BACKUPS="$HOME/Dropbox/backups"
+BACKUPS_REF="$BACKUPS/refBackup"
 cd $TEMP
 
 # Backup dirs
 
 # Backup to Dropbox
-BACKUPS="$HOME/Dropbox/backups"
-BACKUPS_REF="$BACKUPS/refBackup"
+backup-dir $HOME/.ssh $TEMP
+#gpg -e -r $USER --passphrase-file $PASSWORD_DEFAULT_KSI
+
 backup-dir $DOTFILES $TEMP
 backup-dir $HOME/Dropbox/doc $TEMP
 backup-dir $REF_PHOTO/$(basename $REF_PHOTO).$(date '+%Y') $TEMP $BACKUPS_REF
@@ -28,3 +31,6 @@ ls -lha $BACKUPS
 cp -f ~/kritakeys.shortcuts $DOTFILES_CONFIGS/krita/
 cp -f $HOME/.config/krita* $DOTFILES_CONFIGS/krita/
 #cp $KRITA_DIR $DOTFILES_CONFIGS/krita/
+
+# SSH keys
+
