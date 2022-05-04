@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e 
+set -o pipefail
+
+FILE="$1"
+SHORT=`echo "$FILE-scr" | tr -d " " | tr -d "&"`
+
+echo "Start convert: $FILE to $SHORT"
+mkdir $SHORT
+pv "$FILE" | ffmpeg -i pipe:0 -v error -vf fps=1 -qscale:v 2 "$SHORT/scr-$SHORTscr_b4%04d.jpg"
+7z  a -sdel -bb0 "$SHORT.zip" "$SHORT" 
+rm "$FILE"
+echo "OK: $FILE to $SHORT.zip"

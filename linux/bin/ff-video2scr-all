@@ -1,0 +1,7 @@
+#!/bin/bash
+BEFORE=$(du -sh)
+for file in *.*; do
+    ff-video2scr "$file"
+done
+AFTER=$(du -sh)
+echo "Space: $AFTER / $BEFORE"
