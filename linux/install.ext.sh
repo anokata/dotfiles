@@ -27,6 +27,12 @@ sudo make install
 cd ..
 rm -rf cp-p
 
+# dropbox
+
+cd $TMP_DIR
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+ls -la
+
 ##rofi-emoji
 
 ##rofi-keepassx
