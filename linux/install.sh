@@ -20,3 +20,4 @@ source ~/dotfiles/linux/.env
 ./install.configs.sh -p
 ./install.ext.sh
 ./install.vim.sh -p
+#./install.afterDropBox.sh

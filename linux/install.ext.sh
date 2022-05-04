@@ -29,9 +29,9 @@ rm -rf cp-p
 
 # dropbox
 
-cd $TMP_DIR
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-ls -la
+cd $GITS_DIR
+# echo "Please log in chrome account"
+# cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
 ##rofi-emoji
 
