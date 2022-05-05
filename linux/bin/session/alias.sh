@@ -85,7 +85,8 @@ alias youtube-normal="youtube-dl -f 'bestvideo[height<=720]+bestaudio/best[heigh
 alias youtube-hq="youtube-dl -f 'bestvideo[height>=1080]+bestaudio/best[height>=1080]'"
 alias youtubebe-ok="youtube-dl -f 'bestvideo[height>=720]+bestaudio/best[height>=720]'"
 alias youtube-name="youtube-dl -f 'bestvideo[height>=72]+bestaudio/best[height>=720]' -o '%(title)s.%(ext)s' --restrict-filenames"
-alias youtube-audio-only="yt-dlp -f 'ba'"
+alias yt-audio-only="yt-dlp -f 'ba'"
+alias yt-autio-mp3="yt-dlp -f 'ba' -x --audio-format mp3"
 
 # editors
 alias nano='nano -u -x'
