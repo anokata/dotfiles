@@ -36,6 +36,8 @@ ctrl + super + F9
     krita
 super + F9
     kitty fmui-run
+super + F10
+    kitty ncmpcpp
 super + F1
     kitty lfrun
 ctrl + super +shift + F1

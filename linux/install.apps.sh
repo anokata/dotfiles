@@ -47,6 +47,10 @@ i fonts-firacode
 i exuberant-ctags
 i p7zip-full pv
 
+# fm for dragNdrop
+i thunar 
+# i pcmanfm 
+
 # VSCode
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
