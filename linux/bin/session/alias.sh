@@ -79,12 +79,13 @@ alias fd='fdfind'
 alias fde='fd -e '
 alias fdh='fd -H '
 
-# Video download
-alias youtube="youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'"
-alias youtubehi="youtube-dl -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"
-alias youtubehq="youtube-dl -f 'bestvideo[height>=1080]+bestaudio/best[height>=1080]'"
-alias youtubebest="youtube-dl -f 'bestvideo[height>=720]+bestaudio/best[height>=720]'"
-alias youtuben="youtube-dl -f 'bestvideo[height>=72]+bestaudio/best[height>=720]' -o '%(title)s.%(ext)s' --restrict-filenames"
+# Video/Audio download
+alias youtube-low="youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'"
+alias youtube-normal="youtube-dl -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"
+alias youtube-hq="youtube-dl -f 'bestvideo[height>=1080]+bestaudio/best[height>=1080]'"
+alias youtubebe-ok="youtube-dl -f 'bestvideo[height>=720]+bestaudio/best[height>=720]'"
+alias youtube-name="youtube-dl -f 'bestvideo[height>=72]+bestaudio/best[height>=720]' -o '%(title)s.%(ext)s' --restrict-filenames"
+alias youtube-audio-only="yt-dlp -f 'ba'"
 
 # editors
 alias nano='nano -u -x'
