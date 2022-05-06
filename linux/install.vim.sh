@@ -18,13 +18,16 @@ for dir in $DIRS; do
     fi
 done
 
-#npm install -g neovim
-
 nvim -c :PlugInstall
 nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css
 
-echo 'remove vim/plugged/*/.git dirs'
+echo '>>> Remove vim/plugged/*/.git dirs'
 cd $VIM_DIR/plugged
 for dir in `ls -1 | rg /`; do
     rm -rf $dir/.git
 done
+
+# npm install -g neovim
+# sudo npm install -g prettier-eslint-cli
+
+echo '<<< Vim setup done'

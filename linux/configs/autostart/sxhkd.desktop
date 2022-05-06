@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=sxhkd
-Comment=Simple X hotkey daemon
-Exec=/bin/sh -c 'source /home/sernam/.bashrc && /usr/bin/sxhkd'
-Terminal=false
-Type=Application
-X-GNOME-Autostart-enabled=false
