@@ -5,11 +5,6 @@ function i() {
 }
 
 echo -e "Installing apps: cli"
-#for app in ${apps_cli[@]}; do
-    #echo $app
-    #sudo apt install $app
-#done
-#echo "done."
 
 #cli only
 sudo apt install tmux fzf fd-find bat gsmartcontrol htop jq libblkid1 mmv ncat ncdu nvme-cli ripgrep calcurse pwgen neovim -y
@@ -20,7 +15,10 @@ sudo apt install sshpass nmap whois arp-scan netdiscover -y
 sudo apt install nodejs npm -y
 i prettyping archivemount
 i atop
-#BT: blueman bluez
+i exuberant-ctags
+i p7zip-full pv
+i cpulimit 
+i cmake curl
 
 # X cli
 sudo apt install kitty -y
@@ -29,27 +27,28 @@ sudo apt install kitty -y
 sudo apt install xdotool xmacro xsel hsetroot gpick bspwm sxhkd polybar rofi lightdm-gtk-greeter lightdm -y
 sudo apt install keepassxc transmission peek mpv flameshot scrot feh ffmpeg zathura zathura-djvu   -y
 sudo apt install dunst libnotify-bin -y
-cd $(create-temp-ram-dir)
+i pavucontrol
+i fonts-firacode 
+
+# fm for dragNdrop
+i thunar 
+# i pcmanfm 
+# i seahorse
 
 # cli ext
 ## ueberzug
+cd $(create-temp-ram-dir)
 i gcc libx11-dev libxext-dev libxres-dev
 i python3 python3-pip
 sudo pip3 install ueberzug
 sudo pip3 install fzf-ueberzogen
 sudo apt install python3-pynvim
 sudo pip3 install pynvim
-#sudo npm install -g prettier-eslint-cli
 
+#BT: blueman bluez
+# wireshark 
+# obs
 
-i pavucontrol
-i fonts-firacode 
-i exuberant-ctags
-i p7zip-full pv
-
-# fm for dragNdrop
-i thunar 
-# i pcmanfm 
 
 # VSCode
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -60,22 +59,11 @@ sudo apt install apt-transport-https -y
 sudo apt update -y
 sudo apt install code -y
 
-#i cmake
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb -y
 
-# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-# sudo apt install ./google-chrome-stable_current_amd64.deb -y
-
-#wireshark 
-#telegram
-#slack
-#obs
-#TODO: dropbox
-
-#seahorse
 # sudo apt install nm-connection-editor nm-tool nm-applet laiph2Ch network-manager -y
 # TODO in deb: sudo apt install vmstat nmon atop iotop iostat iftop -y
 # TODO list all apps and select
 
-# need to load appimg/flatpack
-#obsidian
 

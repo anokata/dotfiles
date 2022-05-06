@@ -30,11 +30,18 @@ rm -rf cp-p
 # dropbox
 
 cd $GITS_DIR
+
 # echo "Please log in chrome account"
-# cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+
+# yandex-disk
+#telegram
+# wget https://telegram.org/dl/desktop/linux -O tg.tar.xz
+# tar xf tg.tar.xz
+# ln Telegram $HOME/bin
+#slack
+
 
 ##rofi-emoji
-
 ##rofi-keepassx
 ##kaomoji-rofi
-##npm install -g neovim
