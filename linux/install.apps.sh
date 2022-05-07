@@ -13,7 +13,7 @@ sudo apt install imagemagick mpd mpc -y
 sudo apt install tig wavemon aircrack-ng  -y
 sudo apt install sshpass nmap whois arp-scan netdiscover -y
 sudo apt install nodejs npm -y
-i prettyping archivemount
+i prettyping archivemount exa
 i atop
 i exuberant-ctags
 i p7zip-full pv
@@ -29,6 +29,7 @@ sudo apt install keepassxc transmission peek mpv flameshot scrot feh ffmpeg zath
 sudo apt install dunst libnotify-bin -y
 i pavucontrol
 i fonts-firacode 
+# i guake
 
 # fm for dragNdrop
 i thunar 
@@ -61,6 +62,12 @@ sudo apt install code -y
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
+
+i krita
+i nautilus
+i nethogs
+i ninja-build
+i nnn
 
 # sudo apt install nm-connection-editor nm-tool nm-applet laiph2Ch network-manager -y
 # TODO in deb: sudo apt install vmstat nmon atop iotop iostat iftop -y
