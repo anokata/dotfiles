@@ -34,14 +34,14 @@ cd $GITS_DIR
 # echo "Please log in chrome account"
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
-# yandex-disk
-#telegram
-# wget https://telegram.org/dl/desktop/linux -O tg.tar.xz
-# tar xf tg.tar.xz
+echo "Telegram..."
+wget https://telegram.org/dl/desktop/linux -O tg.tar.xz
+tar xf tg.tar.xz
 # ln Telegram $HOME/bin
-#slack
 
+echo "Slack..."
 
-##rofi-emoji
-##rofi-keepassx
-##kaomoji-rofi
+# yandex-disk
+
+# rofi-emoji / kaomoji-rofi
+# rofi-keepassx
