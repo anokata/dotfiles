@@ -7,7 +7,7 @@ function i() {
 echo -e "Installing apps: cli"
 
 #cli only
-sudo apt install tmux fzf fd-find bat gsmartcontrol htop jq libblkid1 mmv ncat ncdu nvme-cli ripgrep calcurse pwgen neovim -y
+sudo apt install tmux fzf fd-find bat gsmartcontrol htop jq libblkid1 mmv ncat ncdu nvme-cli ripgrep calcurse pwgen neovim rdfind -y
 sudo apt install wget gpg -y
 sudo apt install imagemagick mpd mpc -y
 sudo apt install tig wavemon aircrack-ng  -y
@@ -29,6 +29,7 @@ sudo apt install keepassxc transmission peek mpv flameshot scrot feh ffmpeg zath
 sudo apt install dunst libnotify-bin -y
 i pavucontrol
 i fonts-firacode 
+i sxiv
 # i guake
 
 # fm for dragNdrop
@@ -68,6 +69,10 @@ i nautilus
 i nethogs
 i ninja-build
 i nnn
+i pwgen
+i tcpdump
+# i toilet
+# tree
 
 # sudo apt install nm-connection-editor nm-tool nm-applet laiph2Ch network-manager -y
 # TODO in deb: sudo apt install vmstat nmon atop iotop iostat iftop -y

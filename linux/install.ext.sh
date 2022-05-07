@@ -45,3 +45,4 @@ echo "Slack..."
 
 # rofi-emoji / kaomoji-rofi
 # rofi-keepassx
+# sudo snap set system refresh.retain=2
