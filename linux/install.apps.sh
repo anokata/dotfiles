@@ -73,4 +73,5 @@ i tree
 # i pcmanfm 
 # i seahorse
 
-# nm-connection-editor nm-tool nm-applet laiph2Ch network-manager
+i network-manager network-manager-pptp network-manager-ssh
+i network-manager-gnome network-manager-pptp-gnome network-manager-ssh-gnome

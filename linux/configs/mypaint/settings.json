@@ -39,7 +39,7 @@
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": "deevad/pen",
+  "brushmanager.selected_brush": "CD_concept/Eraser",
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
@@ -88,7 +88,7 @@
             ]
           ],
           "active_page": 4,
-          "w": 236,
+          "w": 235,
           "h": 286
         },
         {
@@ -107,7 +107,7 @@
             ]
           ],
           "active_page": 0,
-          "w": 236,
+          "w": 235,
           "h": 314
         },
         {
@@ -115,8 +115,8 @@
           "active_page": -1
         }
       ],
-      "w": 236,
-      "h": 612
+      "w": 235,
+      "h": 901
     },
     "right_sidebar": {
       "groups": [
@@ -148,7 +148,7 @@
         }
       ],
       "w": 235,
-      "h": 612
+      "h": 901
     },
     "floating": [],
     "position": {},
@@ -187,7 +187,8 @@
     "PenTablet Pen:pen:2": {},
     "PenTablet Pen (Eraser):eraser:2": {},
     "PenTablet Consumer Control:pen:4": {},
-    "COMPANY 2.4G Device Keyboard:mouse:4": {}
+    "COMPANY 2.4G Device Keyboard:mouse:4": {},
+    "PixArt USB Optical Mouse:mouse:4": {}
   },
   "colors.current": "#525252",
   "colors.palette": {
@@ -531,6 +532,5 @@
   "color_chooser.default.selected_adjuster": "HSVSquareTool",
   "brush_chooser.default.selected_group": "Ksi",
   "autorecovery.check_at_startup": true,
-  "command.max_undo_stack_size": 40,
-  "devbrush.last_used": "PenTablet Pen Pen (0)"
+  "command.max_undo_stack_size": 40
 }

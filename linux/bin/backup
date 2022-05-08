@@ -9,30 +9,39 @@ BACKUPS_REF="$BACKUPS/refBackup"
 cd $TEMP
 
 # backup configs
-cp -f ~/kritakeys.shortcuts $DOTFILES_CONFIGS/krita/
-cp -f $HOME/.config/krita* $DOTFILES_CONFIGS/krita/
-#cp $KRITA_DIR $DOTFILES_CONFIGS/krita/
+# cp -f ~/kritakeys.shortcuts $DOTFILES_CONFIGS/krita/
+# cp -f $HOME/.config/krita/* $DOTFILES_CONFIGS/krita/
+# cp $KRITA_DIR $DOTFILES_CONFIGS/krita/
 
 # Backup dirs
 ## Backup to Dropbox
 backup-dir $HOME/.ssh $TEMP
 #gpg -e -r $USER --passphrase-file $PASSWORD_DEFAULT_KSI
 
+rm $BACKUPS/doc.*.tar
+rm $BACKUPS/dotfiles.*.tar
 backup-dir $DOTFILES $TEMP
 backup-dir $HOME/Dropbox/doc $TEMP
+rm $BACKUPS_REF/ref_*.tar
+rm $BACKUPS_YDX/refBackup/ref_*.tar
 backup-dir $REF_PHOTO/$(basename $REF_PHOTO).$(date '+%Y') $TEMP $BACKUPS_REF
 backup-dir $REF_ART/$(basename $REF_ART).$(date '+%Y') $TEMP $BACKUPS_REF
-backup-dir $REF_TOME/$(basename $REF_TOME).$(date '+%Y') $TEMP $BACKUPS_REF
+backup-dir $REF_TOME $TEMP $BACKUPS_REF
+backup-dir $REF_FORME $TEMP $BACKUPS_REF
+rm $BACKUPS_REF/scr*.tar
+rm $BACKUPS_YDX/refBackup/scr*.tar
 backup-dir $SCREENS_DIR $TEMP $BACKUPS_REF
+# TODO
+# ppref refmy; to mega
+backup-dir $MY_DRAW_DIR $TEMP $BACKUPS_YDX
 
 ## Backup pwd db
 cp ~/sdata/db.kdbx $BACKUPS
 
-# TODO
-# ppref refmy draw/my
 # Backup to external hdd
 
 ls -lha $BACKUPS
+ls -lha $BACKUPS_REF
 
 cp -r $BACKUPS/* $BACKUPS_YDX
 
