@@ -23,7 +23,8 @@ ctrl + super + F2
 # ctrl + super + F3
 #     obsidian
 ctrl + super + F4
-    nautilus
+    thunar
+    # nautilus
 ctrl + super + F5
     keepassxc
 ctrl + super + F6

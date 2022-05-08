@@ -34,8 +34,6 @@ i sxiv
 
 # fm for dragNdrop
 i thunar 
-# i pcmanfm 
-# i seahorse
 
 # cli ext
 ## ueberzug
@@ -62,18 +60,17 @@ sudo apt install code -y
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
 
-i krita
-i nautilus
 i nethogs
 i ninja-build meson
 i nnn
 i pwgen
 i tcpdump
+i tree
 # i toilet
-# i tree
 # wireshark 
 # obs
+# i krita
+# i pcmanfm 
+# i seahorse
 
-# sudo apt install nm-connection-editor nm-tool nm-applet laiph2Ch network-manager -y
-# TODO in deb: vmstat nmon iotop iostat iftop
-# load deb, search install add
+# nm-connection-editor nm-tool nm-applet laiph2Ch network-manager
