@@ -34,11 +34,17 @@ cd $GITS_DIR
 # echo "Please log in chrome account"
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
-# TODO:
+cd $GITS_DIR
 # i yandex-disk
-# https://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb
+wget -O yandex.deb https://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb
+sudo apt install yandex.deb
+
+echo "Mega..."
 # i megasync
-# https://mega.nz/linux/repo/Debian_11/
+wget -O megacmd.deb https://mega.nz/linux/repo/Debian_11/amd64/megacmd_1.5.0-10.1_amd64.deb
+wget -O megasync.deb https://mega.nz/linux/repo/Debian_11/amd64/megasync_4.6.6-2.1_amd64.deb
+wget -O megathunar.deb https://mega.nz/linux/repo/Debian_11/amd64/thunar-megasync_4.3.0+4.3_amd64.deb
+sudo apt install megacmd.deb megasync.deb megathunar.deb
 
 
 echo "Telegram..."
