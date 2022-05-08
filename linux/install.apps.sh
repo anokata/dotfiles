@@ -4,7 +4,7 @@ function i() {
     sudo apt install $@ -y
 }
 
-echo -e "Installing apps: cli"
+echo -e "Installing apps: cli tools..."
 
 #cli only
 sudo apt install tmux fzf fd-find bat gsmartcontrol htop jq libblkid1 mmv ncat ncdu nvme-cli ripgrep calcurse pwgen neovim rdfind -y
@@ -48,8 +48,6 @@ sudo apt install python3-pynvim
 sudo pip3 install pynvim
 
 #BT: blueman bluez
-# wireshark 
-# obs
 
 
 # VSCode
@@ -67,15 +65,15 @@ sudo apt install ./google-chrome-stable_current_amd64.deb -y
 i krita
 i nautilus
 i nethogs
-i ninja-build
+i ninja-build meson
 i nnn
 i pwgen
 i tcpdump
 # i toilet
-# tree
+# i tree
+# wireshark 
+# obs
 
 # sudo apt install nm-connection-editor nm-tool nm-applet laiph2Ch network-manager -y
-# TODO in deb: sudo apt install vmstat nmon atop iotop iostat iftop -y
-# TODO list all apps and select
-
-
+# TODO in deb: vmstat nmon iotop iostat iftop
+# load deb, search install add
