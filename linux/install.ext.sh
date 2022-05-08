@@ -37,7 +37,7 @@ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 cd $GITS_DIR
 # i yandex-disk
 wget -O yandex.deb https://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb
-sudo apt install ./yandex.deb
+sudo apt install ./yandex.deb -y
 # TODO auth
 
 echo "Mega..."
@@ -45,7 +45,9 @@ echo "Mega..."
 wget -O megacmd.deb https://mega.nz/linux/repo/Debian_11/amd64/megacmd_1.5.0-10.1_amd64.deb
 wget -O megasync.deb https://mega.nz/linux/repo/Debian_11/amd64/megasync_4.6.6-2.1_amd64.deb
 wget -O megathunar.deb https://mega.nz/linux/repo/Debian_11/amd64/thunar-megasync_4.3.0+4.3_amd64.deb
-sudo apt install ./megacmd.deb ./megasync.deb ./megathunar.deb
+sudo apt install ./megacmd.deb -y
+sudo apt install ./megasync.deb -y
+sudo apt install ./megathunar.deb -y
 # TODO auth
 
 

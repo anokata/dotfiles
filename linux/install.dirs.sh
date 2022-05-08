@@ -9,5 +9,7 @@ mkdir $HOME/dirs 2>/dev/null
 mkdir $GITS_DIR 2>/dev/null
 mkdir $HOME/.vim 2>/dev/null
 mkdir $HOME/.config 2>/dev/null
+mkdir $HOME/ydisk 2>/dev/null
+mkdir $WORK_DIR 2>/dev/null
 echo "done"
 
