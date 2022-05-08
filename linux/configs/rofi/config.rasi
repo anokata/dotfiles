@@ -145,4 +145,4 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
-@import "/usr/share/rofi/themes/glue_pro_blue.rasi"
+@import "/usr/share/rofi/themes/gruvbox-dark.rasi"
