@@ -4,12 +4,17 @@ source $DOTFILES/linux/.env
 TEMP=$(create-temp-ram-dir)
 DATE="$(date '+%Y-%d-%m')"
 BACKUPS="$HOME/Dropbox/backups"
+BACKUPS_YDX="$HOME/ydisk/backups"
 BACKUPS_REF="$BACKUPS/refBackup"
 cd $TEMP
 
-# Backup dirs
+# backup configs
+cp -f ~/kritakeys.shortcuts $DOTFILES_CONFIGS/krita/
+cp -f $HOME/.config/krita* $DOTFILES_CONFIGS/krita/
+#cp $KRITA_DIR $DOTFILES_CONFIGS/krita/
 
-# Backup to Dropbox
+# Backup dirs
+## Backup to Dropbox
 backup-dir $HOME/.ssh $TEMP
 #gpg -e -r $USER --passphrase-file $PASSWORD_DEFAULT_KSI
 
@@ -20,17 +25,15 @@ backup-dir $REF_ART/$(basename $REF_ART).$(date '+%Y') $TEMP $BACKUPS_REF
 backup-dir $REF_TOME/$(basename $REF_TOME).$(date '+%Y') $TEMP $BACKUPS_REF
 backup-dir $SCREENS_DIR $TEMP $BACKUPS_REF
 
+## Backup pwd db
+cp ~/sdata/db.kdbx $BACKUPS
+
 # TODO
 # ppref refmy draw/my
 # Backup to external hdd
 
-
 ls -lha $BACKUPS
 
-# backup configs
-cp -f ~/kritakeys.shortcuts $DOTFILES_CONFIGS/krita/
-cp -f $HOME/.config/krita* $DOTFILES_CONFIGS/krita/
-#cp $KRITA_DIR $DOTFILES_CONFIGS/krita/
+cp -r $BACKUPS/* $BACKUPS_YDX
 
-# SSH keys
 
