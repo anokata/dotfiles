@@ -9,6 +9,8 @@ alt + x; n ; t
 alt + x; m ; l
     markdown-clip-convert-to-url
 
+alt + t
+    notify-send "test $RANDOM"
 # Applications
 #super + t
     #kitty
