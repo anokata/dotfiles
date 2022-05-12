@@ -6,6 +6,7 @@ DATE="$(date '+%Y-%d-%m')"
 BACKUPS="$HOME/Dropbox/backups"
 BACKUPS_YDX="$HOME/ydisk/backups"
 BACKUPS_REF="$BACKUPS/refBackup"
+Y="$(date '+%Y')"
 cd $TEMP
 
 # backup configs
@@ -24,6 +25,8 @@ backup-dir $DOTFILES $TEMP
 backup-dir $HOME/Dropbox/doc $TEMP
 rm $BACKUPS_REF/ref_*.tar
 rm $BACKUPS_YDX/refBackup/ref_*.tar
+rm $BACKUPS_REF/$Y.*.tar
+rm $BACKUPS_YDX/refBackup/$Y.*.tar
 backup-dir $REF_PHOTO/$(basename $REF_PHOTO).$(date '+%Y') $TEMP $BACKUPS_REF
 backup-dir $REF_ART/$(basename $REF_ART).$(date '+%Y') $TEMP $BACKUPS_REF
 backup-dir $REF_TOME $TEMP $BACKUPS_REF
