@@ -16,3 +16,11 @@ function ${1:function_name} (${2:argument}: ${3:argument_type}) {
 	${VISUAL}$0
 }
 endsnippet
+
+
+snippet perf "performance" b
+const t0 = performance.now();
+$0
+const t1 = performance.now();
+console.log(`This took ${t1 - t0} milliseconds.`);
+endsnippet
