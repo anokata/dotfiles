@@ -26,4 +26,5 @@ cmap ч x
 cmap у e
 cmap ф a
 
-let @b="0dt/A (\<ESC>p0x~:s/-/ /g\<CR>"
+let @b='0dt/A (\<ESC>p0x~:s/-/ /g\<CR>'
+let @m='pi[](<Esc>A)<Esc>bbbdt)<Esc>u0po<Esc>pa/<Esc>o(<Esc>pi<Esc>I <Esc>'
