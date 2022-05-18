@@ -1,0 +1,9 @@
+#!/bin/bash
+PROXY="$1"
+
+export {http,https,ftp}_proxy="http://$PROXY"
+echo "Checking proxy: $PROXY"
+
+curl icanhazip.com
+
+export {http,https,ftp}_proxy=""

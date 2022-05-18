@@ -234,3 +234,5 @@ function dict() {
     curl "dict.org/d:$@"
 }
 
+alias my-ip="curl icanhazip.com"
+alias get-ip="wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
