@@ -46,6 +46,7 @@ cp ~/sdata/db.kdbx $BACKUPS
 
 ls -lha $BACKUPS
 ls -lha $BACKUPS_REF
+ls -lha $BACKUPS_YDX/refBackup
 
 cp -r $BACKUPS/* $BACKUPS_YDX
 
