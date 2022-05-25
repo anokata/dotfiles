@@ -170,10 +170,10 @@ alt + x; m; {comma, period}
 XF86AudioMute
     pactl set-sink-mute 0 toggle
 XF86AudioLowerVolume
-    pactl set-sink-volume 0 -5%; pactl set-sink-volume 1 -5%
+    pactl set-sink-volume 0 -5%; pactl set-sink-volume 1 -5%; pactl set-sink-volume 2 -5%
     # amixer -D pulse sset Master 5%- unmute
 XF86AudioRaiseVolume
-    pactl set-sink-volume 0 +5%; pactl set-sink-volume 1 +5%
+    pactl set-sink-volume 0 +5%; pactl set-sink-volume 1 +5%; pactl set-sink-volume 2 +5%
     # amixer -D pulse sset Master 5%+ unmute
 #XF86AudioMute
 #    amixer set Master toggle
