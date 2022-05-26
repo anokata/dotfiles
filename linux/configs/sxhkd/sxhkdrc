@@ -283,6 +283,8 @@ super + ctrl + {h,j,k,l}
 	bspc node -v {-10 0,0 10,0 -10,10 0}
 
 # rotate desktop
+super + ctrl + shift + j
+    bspc node @parent -R 90
 	# bspc node @/ --rotate {90,-90}
     # bspc rule -r kitty; kitty -e vim
 	# bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
