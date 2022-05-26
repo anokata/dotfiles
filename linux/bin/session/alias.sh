@@ -17,8 +17,6 @@ alias cdl="cd $LINKS_DIR"
 alias cdn="cd $WORK_DIR"
 alias cdref="cd $REF_FORME"
 alias cdscr="cd $SCREENS_DIR"
-alias cdn3="cd $WORK_DIR/ndw3-without-isw/"
-alias cdn2="cd $WORK_DIR/ndw2/"
 alias cdg="cd $HOME/gits"
 alias c="pushd "
 

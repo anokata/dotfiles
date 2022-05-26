@@ -1,3 +1,8 @@
+
+alias cdn3="cd $WORK_DIR/ndw3-without-isw/"
+alias cdn2="cd $WORK_DIR/ndw2/"
+alias cdns="cd $WORK_DIR/ndw3-storybook/"
+
 alias ndm-keenetic-telnet='telnet 192.168.1.1'
 alias keenetic-telnet='telnet 192.168.1.1'
 alias keenetic-ssh='ssh admin@192.168.1.1 -p 2022'
