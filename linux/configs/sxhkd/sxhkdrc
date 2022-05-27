@@ -91,6 +91,9 @@ alt + d
 alt + w
   rofi -show window
 
+alt + x; r ; k
+    ~/gits/kaomoji-rofi/kaomoji.sh
+
 # ctrl + alt + d
   # bash -i -c $(list-alias | rofi -dmenu)
 
@@ -266,11 +269,9 @@ super + {h, l}
 ####################
 # System shortcuts #
 ####################
-
 # Change window gap
-ctrl + shift + {j,k}
-    bspc config window_gap $((`bspc config window_gap` {+,-} 10 ))
-
+# ctrl + shift + {j,k}
+#     bspc config window_gap $((`bspc config window_gap` {+,-} 10 ))
 # expand a window by moving one of its side outward
 #super + shift + {h,j,k,l}
 	#bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 20 0}
@@ -286,8 +287,8 @@ super + ctrl + {h,j,k,l}
 super + ctrl + shift + j
     bspc node @parent -R 90
 	# bspc node @/ --rotate {90,-90}
-    # bspc rule -r kitty; kitty -e vim
-	# bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
+
+# bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
 
 # Circulate the leaves of the tree
 super + {_,shift + }c
@@ -324,7 +325,3 @@ super + shift + {h,l}
 #notify-send 'Restarting wifi interface..  *_*';\
 #nmcli radio wifi off ; nmcli radio wifi on
 
-## new rofi
-#ctrl + super + shift + 
-alt + x; r ; k
-    ~/gits/kaomoji-rofi/kaomoji.sh
