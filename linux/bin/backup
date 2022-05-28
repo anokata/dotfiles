@@ -4,6 +4,7 @@ source $DOTFILES/linux/.env
 TEMP=$(create-temp-ram-dir)
 DATE="$(date '+%Y-%d-%m')"
 BACKUPS="$HOME/Dropbox/backups"
+BACKUPS_HDD="$HOME/bdata/backups/"
 BACKUPS_YDX="$HOME/ydisk/backups"
 BACKUPS_REF="$BACKUPS/refBackup"
 Y="$(date '+%Y')"
@@ -55,5 +56,6 @@ ls -lha $BACKUPS_YDX
 ls -lha $BACKUPS_YDX/refBackup
 
 cp -r $BACKUPS/* $BACKUPS_YDX
+cp -r $BACKUPS/* $BACKUPS_HDD
 
 
