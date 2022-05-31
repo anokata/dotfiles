@@ -1,0 +1,6 @@
+#!/bin/bash
+
+CMD="$1"
+
+# get all interfaces
+
