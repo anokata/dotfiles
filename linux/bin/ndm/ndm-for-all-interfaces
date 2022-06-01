@@ -3,4 +3,5 @@
 CMD="$1"
 
 # get all interfaces
+INTERFACES=$(ndm-ssh-local-default )
 
