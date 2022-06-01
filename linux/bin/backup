@@ -29,13 +29,14 @@ backup-dir $DOTFILES $TEMP
 backup-dir $HOME/Dropbox/doc $TEMP
 rm $BACKUPS_REF/ref_*.tar
 rm $BACKUPS_YDX/refBackup/ref_*.tar
+rm $BACKUPS_YDX/refBackup/ppref*.tar
 rm $BACKUPS_REF/$Y.*.tar
 rm $BACKUPS_YDX/refBackup/$Y.*.tar
 backup-dir $REF_PHOTO/$(basename $REF_PHOTO).$(date '+%Y') $TEMP $BACKUPS_REF
 backup-dir $REF_ART/$(basename $REF_ART).$(date '+%Y') $TEMP $BACKUPS_REF
 backup-dir $REF_TOME $TEMP $BACKUPS_REF
 backup-dir $REF_FORME $TEMP $BACKUPS_REF
-backup-dir $REF_PPREF_REAL $TEMP $BACKUPS_REF
+backup-dir $REF_PPREF_REAL $TEMP $BACKUPS_YDX/refBackup/
 backup-dir $REF_ANIME/$(date '+%Y') $TEMP $BACKUPS_YDX/refBackup/
 rm $BACKUPS_REF/scr*.tar
 rm $BACKUPS_YDX/refBackup/scr*.tar
