@@ -15,8 +15,7 @@ cd $TEMP
 # cp -f $HOME/.config/krita/* $DOTFILES_CONFIGS/krita/
 # cp $KRITA_DIR $DOTFILES_CONFIGS/krita/
 
-# Backup dirs
-## Backup to Dropbox
+# Backup to Dropbox
 rm $BACKUPS/.ssh.*.tar
 backup-dir $HOME/.ssh $TEMP
 #gpg -e -r $USER --passphrase-file $PASSWORD_DEFAULT_KSI
@@ -41,15 +40,11 @@ backup-dir $REF_ANIME/$(date '+%Y') $TEMP $BACKUPS_YDX/refBackup/
 rm $BACKUPS_REF/scr*.tar
 rm $BACKUPS_YDX/refBackup/scr*.tar
 backup-dir $SCREENS_DIR $TEMP $BACKUPS_REF
-# TODO
-# ppref refmy; to mega
 rm $BACKUPS_YDX/my.*.tar
 backup-dir $MY_DRAW_DIR $TEMP $BACKUPS_YDX
 
 ## Backup pwd db
 cp ~/sdata/db.kdbx $BACKUPS
-
-# Backup to external hdd
 
 ls -lha $BACKUPS
 ls -lha $BACKUPS_REF
@@ -60,3 +55,6 @@ cp -r $BACKUPS/* $BACKUPS_YDX
 cp -r $BACKUPS/* $BACKUPS_HDD
 
 
+# TODO
+    # Backup to external hdd
+    # ppref refmy; to mega
