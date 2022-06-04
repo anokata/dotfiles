@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ~/Downloads/g/
+./pcsx2-v1.7.2866-linux-AppImage-64bit-wxWidgets.AppImage
