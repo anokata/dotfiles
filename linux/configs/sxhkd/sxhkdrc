@@ -17,7 +17,6 @@ ctrl + super + F1
     google-chrome
 ctrl + super + F2
     code
-# ctrl + super + F3
 ctrl + super + F4
     thunar
     # nautilus
@@ -38,6 +37,8 @@ super + F10
 super + F1
     kitty lfrun
 ctrl + super +shift + F1
+    kitty calcurse
+ctrl + super + F3
     kitty calcurse
 super + F2
     kitty nvim +":Prosession $NOTES_DIR"
