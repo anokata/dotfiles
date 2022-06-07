@@ -82,3 +82,4 @@ i software-properties-common
 # sudo apt-add-repository non-free
 # apt-get update
 
+# screenkey
