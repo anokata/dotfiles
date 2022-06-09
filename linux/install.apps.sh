@@ -83,3 +83,4 @@ i software-properties-common
 # apt-get update
 
 # screenkey
+# duf
