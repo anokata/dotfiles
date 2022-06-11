@@ -1,2 +1,6 @@
+#!/bin/bash
+
 xrandr --output HDMI-1 --auto --output DP-3 --auto --right-of HDMI-1
-xrandr --output HDMI-1 --gamma 0.85:0.85:0.85
+#xrandr --output HDMI-1 --gamma 0.85:0.85:0.85
+#xrandr --output HDMI-1 --mode 1920x1080
+xrandr --output HDMI-1  -r 75
