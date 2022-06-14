@@ -2,5 +2,5 @@
 ID=$(tablet-get-id)
 #W 0 X 0 H Y 0 0 S
 W=0.599
-# xinput set-prop $ID "Coordinate Transformation Matrix" 0.514 0 0 0 1 0 0 0 1
+# W=0.514
 xinput set-prop $ID "Coordinate Transformation Matrix" $W 0 0 0 1 0 0 0 1

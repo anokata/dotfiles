@@ -66,6 +66,9 @@ i nnn
 i pwgen
 i tcpdump
 i tree
+#i screenkey
+#i duf
+
 # i toilet
 # wireshark 
 # obs
@@ -82,5 +85,3 @@ i software-properties-common
 # sudo apt-add-repository non-free
 # apt-get update
 
-# screenkey
-# duf
