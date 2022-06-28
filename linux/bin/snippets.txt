@@ -5,5 +5,5 @@
 (review, ndw2)
 (done, ndw2)
 Decompose, branching
-Check other pages. Code style, clean, eslint. PR.
+Check. Code style, clean, merge, eslint. PR.
 Fix ESLint warnings. Reorder methods (see ESLint). Remove unused code.

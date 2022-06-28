@@ -61,6 +61,7 @@ export PS1="$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
     echo "vscode"
+    nvm use system
 else
     _tmux_run
 fi
