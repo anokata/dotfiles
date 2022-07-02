@@ -109,6 +109,7 @@ alias gclp='git clone $(clipboard-get)'
 alias gbc='git branch --show-current'
 alias gpc='git push origin $(git branch --show-current)'
 alias gpa='git push --all'
+alias git-merge-master='git checkout master && git pull && git checkout - && git merge master && git push'
 
 # Dev
 alias adbstart='sudo adb start-server'
