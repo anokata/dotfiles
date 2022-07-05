@@ -34,6 +34,8 @@ super + F9
     kitty fmui-run
 super + F10
     kitty ncmpcpp
+ctrl + super + F11
+    csp
 super + F1
     kitty lfrun
 ctrl + super +shift + F1
