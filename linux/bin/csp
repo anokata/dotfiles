@@ -1,0 +1,2 @@
+cd "/home/sernam/bdata/progs/ClipStudio/CLIP STUDIO 1.5/CLIP STUDIO PAINT/"
+wine64run "./CLIPStudioPaint.exe"

@@ -62,3 +62,6 @@ pidof Telegram >/dev/null || Telegram &
 
 bspc rule -r kitty
 bspc rule -a kitty state=fullscreen
+
+# ~/dotfiles/linux/bin/monitors-setup
+monitors-setup

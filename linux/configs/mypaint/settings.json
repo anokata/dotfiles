@@ -39,7 +39,7 @@
   "ui.dark_theme_variant": true,
   "ui.rendered_tile_cache_size": 16384,
   "saving.default_format": "openraster",
-  "brushmanager.selected_brush": "CD_concept/Eraser",
+  "brushmanager.selected_brush": "deevad/2B_pencil",
   "brushmanager.selected_groups": [],
   "frame.color_rgba": [
     0.12,
@@ -116,7 +116,7 @@
         }
       ],
       "w": 235,
-      "h": 901
+      "h": 1006
     },
     "right_sidebar": {
       "groups": [
@@ -148,12 +148,12 @@
         }
       ],
       "w": 235,
-      "h": 901
+      "h": 1006
     },
     "floating": [],
     "position": {},
     "autohide": false,
-    "fullscreen": false,
+    "fullscreen": true,
     "maximized": true
   },
   "input.button_mapping": {
