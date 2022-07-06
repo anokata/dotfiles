@@ -1,3 +1,3 @@
 #!/bin/bash
 
-WINEPREFIX=~/.local/share/wineprefixes/wine64/ wine64  $@
+WINEPREFIX=~/.local/share/wineprefixes/draw/ wine64  $@

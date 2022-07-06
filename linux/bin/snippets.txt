@@ -7,3 +7,7 @@
 Decompose, branching
 Check. Code style, clean, eslint, merge master, PR.
 Fix ESLint warnings. Reorder methods (see ESLint). Remove unused code.
+Implement domain
+Implement view
+Implement api
+Inspect API/Domain/Rci/Cli + Docs

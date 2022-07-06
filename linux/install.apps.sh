@@ -85,3 +85,15 @@ i software-properties-common
 # sudo apt-add-repository non-free
 # apt-get update
 
+# WINE
+#env WINEPREFIX=~/.winecsp WINEARCH=win64 wineboot -u
+#sudo winetricks --self-update
+#sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu/ $(lsb_release -sc) main"
+#atmlib corefonts d3dx10 d3dx11_42 d3dx11_43 d3dx9 gdiplus mfc140 msxml3 msxml6 vcrun2010 vcrun2012 vcrun2013 vcrun2015
+#winetricks --optout --force -q msxml6
+#winetricks arch=64 prefix=wine2 -q --force atmlib corefonts d3dx10 d3dx11_42 d3dx11_43 d3dx9 gdiplus mfc140 msxml3 msxml6 vcrun2010 vcrun2012 vcrun2013 vcrun2015
+#winetricks arch=64 prefix=wine2 -q --force allfonts
+# wget -nc https://dl.winehq.org/wine-builds/winehq.key
+# sudo apt-key add winehq.key
+#sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ impish main'
+#sudo apt install --install-recommends winehq-stable

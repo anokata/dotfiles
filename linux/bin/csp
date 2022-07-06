@@ -1,2 +1,7 @@
+#!/bin/bash
+
 cd "/home/sernam/bdata/progs/ClipStudio/CLIP STUDIO 1.5/CLIP STUDIO PAINT/"
-wine64run "./CLIPStudioPaint.exe"
+WINEPREFIX=~/.local/share/wineprefixes/wine2/ wine64  ./CLIPStudioPaint.exe
+# wine64run "./CLIPStudioPaint.exe"
+# WINEPATH=./
+# TODO: pack winepreifx and csp
