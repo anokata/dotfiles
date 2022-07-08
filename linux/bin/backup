@@ -44,7 +44,7 @@ rm $BACKUPS_YDX/my.*.tar
 backup-dir $MY_DRAW_DIR $TEMP $BACKUPS_YDX
 
 ## Backup pwd db
-cp ~/sdata/db.kdbx $BACKUPS
+cp ~/bdata/db.kdbx $BACKUPS
 
 ls -lha $BACKUPS
 ls -lha $BACKUPS_REF

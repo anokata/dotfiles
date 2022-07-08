@@ -42,7 +42,7 @@ alias tdl='tree -dL'
 alias sloc='cat *.c *.h | uniq | wc -l'
 alias wcl='wc -l'
 alias files='find | wc -l'
-alias dd='dd status=progress '
+alias dd='dd status=progress bs=64K conv=noerror,sync '
 alias bat="batcat"
 alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}' --preview-window=right:70%:wrap"
 alias fzfi="fzf-ueberzogen.sh"
