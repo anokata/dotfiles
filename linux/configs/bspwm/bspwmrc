@@ -43,7 +43,6 @@ bspc rule -a Code desktop='^1' state=fullscreen
 bspc rule -a Slack desktop='^3' state=fullscreen 
 bspc rule -a TelegramDesktop desktop='^8'
 bspc rule -a obsidian desktop='^9'
-bspc rule -a obs desktop='^10'
 bspc rule -a Audacious desktop='^9'
 bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Guake state=floating
