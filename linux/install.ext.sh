@@ -61,6 +61,7 @@ echo "Slack..."
 i wine64
 i gnugo
 i gparted
+i ncmpcpp
 # atpi snapd
 # sudo snap install slack
 # sudo snap set system refresh.retain=2
