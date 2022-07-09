@@ -59,6 +59,8 @@ tar xf tg.tar.xz
 echo "Slack..."
 
 i wine64
+i gnugo
+i gparted
 # atpi snapd
 # sudo snap install slack
 # sudo snap set system refresh.retain=2
@@ -68,6 +70,9 @@ i wine64
 cd $GITS_DIR
 wget -O xnviewmp.deb https://download.xnview.com/XnViewMP-linux-x64.deb
 sudo apt install ./xnviewmp.deb -y
+
+# duf
+# https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_amd64.deb
 
 # obs
 sudo apt install v4l2loopback-dkms

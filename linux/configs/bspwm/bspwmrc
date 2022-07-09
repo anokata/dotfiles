@@ -47,7 +47,7 @@ bspc rule -a Audacious desktop='^9'
 bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Guake state=floating
 bspc rule -a Peek state=floating
-bspc rule -a jetbrains-webstorm state=floating
+# bspc rule -a jetbrains-webstorm state=floating
 
 
 ### Apps
