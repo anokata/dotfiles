@@ -58,6 +58,9 @@ tar xf tg.tar.xz
 
 echo "Slack..."
 
+apti wine64
+apti guake
+# atpi snapd
 # rofi-emoji / kaomoji-rofi
 # rofi-keepassx
 # sudo snap set system refresh.retain=2
