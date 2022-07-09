@@ -12,7 +12,7 @@ alt + x; m ; l
 alt + Return
     kitty
 ctrl + alt + t
-    kitty
+    term-no-tmux
 ctrl + super + F1
     google-chrome
 ctrl + super + F2
