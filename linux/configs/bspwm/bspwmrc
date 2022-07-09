@@ -47,13 +47,15 @@ bspc rule -a Audacious desktop='^9'
 bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Guake state=floating
 bspc rule -a Peek state=floating
+bspc rule -a jetbrains-webstorm state=floating
+
 
 ### Apps
 nm-applet &
-dropbox start &
+# dropbox start &
+dropboxd &
 $HOME/.config/polybar/launch.sh
 #run-if-not kitty
-#pidof obsidian >/dev/null || obsidian
 pidof kitty >/dev/null || kitty &
 pidof chrome >/dev/null || google-chrome &
 pidof slack >/dev/null || slack &

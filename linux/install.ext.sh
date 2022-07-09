@@ -58,12 +58,24 @@ tar xf tg.tar.xz
 
 echo "Slack..."
 
-apti wine64
-apti guake
+i wine64
 # atpi snapd
+# sudo snap install slack
+# sudo snap set system refresh.retain=2
+#pureref
+
+# xnview
+cd $GITS_DIR
+wget -O xnviewmp.deb https://download.xnview.com/XnViewMP-linux-x64.deb
+sudo apt install ./xnviewmp.deb -y
+
+# obs
+sudo apt install v4l2loopback-dkms
+sudo apt install obs-studio
+
+# virtualbox
+
 # rofi-emoji / kaomoji-rofi
 # rofi-keepassx
-# sudo snap set system refresh.retain=2
-
 ### 
 # pip3 install instaloader

@@ -1,5 +1,5 @@
 nmap <leader>q :w<CR>
-nmap <leader>n :vsp "/home/sernam/dotfiles/linux/configs/vscode_vimrc"<CR>
+nmap <leader>n :vsp "/home/ksi/dotfiles/linux/configs/vscode_vimrc"<CR>
 nmap <leader>t :tabnew<CR>
 nmap <leader>w :tabclose<CR>
 nmap <leader>, :tabnext<CR>

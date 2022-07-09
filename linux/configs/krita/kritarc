@@ -25,7 +25,7 @@ BackgroundStyleForNewImage=2
 BundleAuthorEmail=
 BundleAuthorName=Ksi
 BundleDescription=
-BundleExportLocation=/home/sernam/Documents
+BundleExportLocation=/home/ksi/Documents
 BundleImage=
 BundleLicense=CC-BY-SA
 BundleName=
@@ -71,8 +71,8 @@ LineSmoothingType=1
 LineSmoothingUseDelayDistance=true
 NumberOfLayersForNewImage=2
 OpenGLFilterMode=1
-ResourceCacheDbDirectory=/home/sernam/.local/share/krita
-ResourceDirectory=/home/sernam/.local/share/krita
+ResourceCacheDbDirectory=/home/ksi/.local/share/krita
+ResourceDirectory=/home/ksi/.local/share/krita
 ShowOutlineWhilePainting=true
 ShowRootLayer=false
 SpecificColorSelector/UsePercentage=false
@@ -296,11 +296,11 @@ active-profile=ksi
 
 [File Dialogs]
 DontUseNativeFileDialog=true
-ExportShortcuts=/home/sernam
-ImportShortcuts=/home/sernam
-OpenDocument=/home/sernam/Dropbox/draw/my/04apr
-SaveAs=/home/sernam/data/photo/0_mi2021-2022/2022.spb/self/best
-SaveCustomShortcuts=/home/sernam
+ExportShortcuts=/home/ksi
+ImportShortcuts=/home/ksi
+OpenDocument=/home/ksi/Dropbox/draw/my/04apr
+SaveAs=/home/ksi/data/photo/0_mi2021-2022/2022.spb/self/best
+SaveCustomShortcuts=/home/ksi
 
 [GradientChooser]
 global/itemSize=medium

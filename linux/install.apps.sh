@@ -30,7 +30,7 @@ sudo apt install dunst libnotify-bin -y
 i pavucontrol
 i fonts-firacode 
 i sxiv
-# i guake
+i guake
 
 # fm for dragNdrop
 i thunar 
