@@ -1,1 +1,1 @@
-ssh cbox.ndm9.net
+sudo -u sernam ssh cbox.ndm9.net

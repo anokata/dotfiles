@@ -38,6 +38,7 @@ i thunar
 # cli ext
 ## ueberzug
 cd $(create-temp-ram-dir)
+i bash-completion
 i gcc libx11-dev libxext-dev libxres-dev
 i python3 python3-pip
 sudo pip3 install ueberzug

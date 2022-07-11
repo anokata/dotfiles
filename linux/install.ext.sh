@@ -76,6 +76,9 @@ cd $GITS_DIR
 wget -O xnviewmp.deb https://download.xnview.com/XnViewMP-linux-x64.deb
 sudo apt install ./xnviewmp.deb -y
 
+# NVM
+# TODO
+
 # duf
 # https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_amd64.deb
 
@@ -89,3 +92,8 @@ sudo apt install obs-studio
 # rofi-keepassx
 ### 
 # pip3 install instaloader
+
+# sudo adduser sernam
+# sudo mkdir -p /home/sernam/.ssh
+# sudo cp ~/.ssh/id_rsa* /home/sernam/.ssh/
+# sudo chown -R sernam:sernam /home/sernam/*
