@@ -1,3 +1,6 @@
+let mapleader=","
+let maplocalleader=";"
+
 nmap <leader>q :w<CR>
 nmap <leader>n :vsp "/home/ksi/dotfiles/linux/configs/vscode_vimrc"<CR>
 nmap <leader>t :tabnew<CR>
