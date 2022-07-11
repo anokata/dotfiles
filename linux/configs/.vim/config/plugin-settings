@@ -50,8 +50,8 @@ let g:CtrlSpaceSaveWorkspaceOnExit = 1
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|env\'
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeWinSize = 50
+let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinSize = 70
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeIgnore = ['\.pyc$', '\node_modules']
 let g:NERDTreeQuitOnOpen = 1

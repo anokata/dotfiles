@@ -5,6 +5,15 @@ nnoremap <localleader><Tab> :call fzf#run({'source': 'favorite-dirs', 'sink': 'F
 nnoremap <localleader><Esc> :call fzf#run({'source': 'favorite-configs', 'sink': 'tabedit'})<CR>
 
 nnoremap <C-UP> :tc ..<CR>:pwd<CR>
+" vim config files open bindings configs
+nmap <localleader>cb :tabnew ~/.vim/config/bindings<CR>
+" nmap <localleader>cc :tabnew<CR>:tcd ~/.vim/config/<CR>:FZF<CR>
+nmap <localleader>cc :Files ~/.vim/config/<CR>
+nmap <localleader>cp :tabnew ~/.vim/config/plugins<CR>
+nmap <localleader>cs :tabnew ~/.vim/config/settings<CR>
+nmap <localleader>cf :tabnew ~/.vim/config/bind-files<CR>
+nmap <localleader>cl :tabnew ~/.vim/config/plugin-settings<CR>
+nmap <localleader>cu :tabnew ~/.vim/config/ui<CR>
 " favorite sessions <c-Fn>
 nnoremap <F25> :Prosession $DOTFILES_CONFIGS<CR>
 nnoremap <F26> :Prosession $DOTFILES<CR>
@@ -30,6 +39,7 @@ nmap <localleader>oc :Files $DOTFILES<CR>
 nmap <localleader>cd :Files $DOTFILES<CR>
 nmap <localleader>ow :Files $WORK_DIR<CR>
 nmap <localleader>on :Files $NOTES_DIR<CR>
+nmap <localleader>ov :Files $VIM_DIR_CONFIGS<CR>
 nmap <F3> :Files $NOTES_DIR<CR>
 " nmap <localleader>on :tcd $NOTES_DIR<CR>:FZF<CR>
 

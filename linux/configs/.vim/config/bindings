@@ -91,15 +91,6 @@ nmap <C-f> :Files<CR>
 nmap <C-p> :Files<CR>
 nmap <C-A-o> :GFiles<CR>
 nmap <leader>r :Lf<CR>
-" vim config files open bindings configs
-nmap <localleader>cb :tabnew ~/.vim/config/bindings<CR>
-" nmap <localleader>cc :tabnew<CR>:tcd ~/.vim/config/<CR>:FZF<CR>
-nmap <localleader>cc :Files ~/.vim/config/<CR>
-nmap <localleader>cp :tabnew ~/.vim/config/plugins<CR>
-nmap <localleader>cs :tabnew ~/.vim/config/settings<CR>
-nmap <localleader>cf :tabnew ~/.vim/config/bind-files<CR>
-nmap <localleader>cl :tabnew ~/.vim/config/plugin-settings<CR>
-nmap <localleader>cu :tabnew ~/.vim/config/ui<CR>
 
 " === Plug package mappings ===
 nmap <localleader>pi ,V:PlugInstall<CR>
