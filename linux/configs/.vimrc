@@ -37,7 +37,6 @@ nnoremap <C-g> :TagbarToggle<CR>
 
 nnoremap ZZ :bd<CR>
 
-
 " function s:test(lines)
 "     echo a:lines
 " endfunction

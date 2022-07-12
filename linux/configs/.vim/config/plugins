@@ -30,7 +30,7 @@ Plug 'Shougo/denite.nvim'
 Plug 'shmargum/vim-sass-colors'
 Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-eunuch'
-" Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
 " neovim treesitter
