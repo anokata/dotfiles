@@ -11,7 +11,7 @@ augroup allAutoCmds
     autocmd FileType markdown setlocal autowriteall
     autocmd FileType c,cpp,java,php,myb,rust,javascript,typescript autocmd BufWritePre <buffer> %s/\s\+$//e
     autocmd FileType markdown,mkdx call MkdxRemap()
-    autocmd FileType javascript,ts,typescript setlocal ts=2 sts=2 sw=2
-    autocmd FileType javascript,ts,typescript set tabstop=2 softtabstop=2 shiftwidth=2
-    autocmd FileType scss,css setlocal ts=2 sts=2 sw=2
+    autocmd FileType javascript,ts,typescript,html,css,scss setlocal ts=2 sts=2 sw=2
+    autocmd FileType javascript,ts,typescript,html,css,scss set tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd FileType html,scss,css setlocal ts=2 sts=2 sw=2
 augroup END

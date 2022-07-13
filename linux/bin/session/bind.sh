@@ -32,7 +32,8 @@ bind -x '"\e[18~":"~/gits/fmui/fmui"' # F7
 # PS
 bind '"\C-k":"pkill "' # 
 bind -x '"\C-y":"htop "' # 
-bind -x '"\e[20~":"htop "' # F
+bind -x '"\e[19~":"tig"' # tig by <F8>
+bind -x '"\e[20~":"htop "' # <F9>
 bind -x '"\C-b":"bashrc-reload "' # 
 
 # IDE
