@@ -39,6 +39,8 @@ Plug 'haorenW1025/completion-nvim'
 " Plug 'nvim-treesitter/completion-treesitter'
 " Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
+" Plug 'tveskag/nvim-blame-line'
+
 " to try
 Plug 'jasoncodes/ctrlp-modified.vim'
 Plug 'sbdchd/neoformat'
