@@ -56,7 +56,8 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/p
 rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https -y
 sudo apt update -y
-sudo apt install code -y
+#sudo apt install code -y
+# sudo apt-get install testdisk
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb -y

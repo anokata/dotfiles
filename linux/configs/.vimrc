@@ -109,6 +109,23 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" Tig
+" open tig with current file
+nnoremap <Leader>gT :TigOpenCurrentFile<CR>
+" open tig with Project root path
+nnoremap <Leader>gt :TigOpenProjectRootDir<CR>
+" open tig grep
+nnoremap <Leader>gg :TigGrep<CR>
+" resume from last grep
+nnoremap <Leader>gr :TigGrepResume<CR>
+" open tig grep with the selected word
+" vnoremap <Leader>g y:TigGrep<Space><C-R>"<CR>
+" open tig grep with the word under the cursor
+nnoremap <Leader>gc :<C-u>:TigGrep<Space><C-R><C-W><CR>
+" open tig blame with current file
+nnoremap <Leader>bb :TigBlame<CR>
+
+
 " TODO
 " :CocInstall coc-css
 " autocmd FileType scss setl iskeyword+=@-@
