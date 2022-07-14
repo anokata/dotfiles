@@ -97,3 +97,5 @@ sudo apt install obs-studio
 # sudo mkdir -p /home/sernam/.ssh
 # sudo cp ~/.ssh/id_rsa* /home/sernam/.ssh/
 # sudo chown -R sernam:sernam /home/sernam/*
+
+#https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb

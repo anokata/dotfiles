@@ -8,9 +8,9 @@
 # from current playlist
 # add all
 
-m() { rofi -dmenu -i "$@" ;}
-mb() { rofi -dmenu -i -kb-custom-1 "Alt+q" "$@" ;}
-mi() { rofi -dmenu -i -format d -kb-custom-1 "Alt+q" "$@" ;}
+m() { rofi -dmenu -matching glob -i "$@" ;}
+mb() { rofi -dmenu -matching glob -i -kb-custom-1 "Alt+q" "$@" ;}
+mi() { rofi -dmenu -matching glob -i -format d -kb-custom-1 "Alt+q" "$@" ;}
 
 artist() {
   lines="$(mpc list artist | wc -l)"

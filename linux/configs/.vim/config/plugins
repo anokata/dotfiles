@@ -35,9 +35,9 @@ Plug 'leafgarland/typescript-vim'
 
 " neovim treesitter
 Plug 'haorenW1025/completion-nvim'
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" Plug 'nvim-treesitter/completion-treesitter'
-" Plug 'nvim-treesitter/nvim-treesitter-refactor'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/completion-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
 " Plug 'tveskag/nvim-blame-line'
 
