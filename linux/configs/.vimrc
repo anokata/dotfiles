@@ -161,8 +161,8 @@ nnoremap <Leader>gp :Git -c push.default=current push
 " ProsessionClean
 " ProsessionDelete : add to fzf sessions call bind
 imap <C-l> <C-x><C-f>
-nnoremap <C-_> gcc
-vnoremap <C-_> gcc
+nmap <C-_> gcc
+vmap <C-_> gcc
 " :h key-notation
 
 " FIX:
@@ -187,4 +187,3 @@ vnoremap <C-_> gcc
 
 " Search by grep with quick-window mappings
 " nnoremap <leader>g :execute "grep! -R " . shellescape(expand("<cWORD>")) . " %"<cr><cr>:cope<cr><c-w><c-w>
-
