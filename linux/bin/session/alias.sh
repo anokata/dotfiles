@@ -110,6 +110,7 @@ alias gbc='git branch --show-current'
 alias gpc='git push origin $(git branch --show-current)'
 alias gpa='git push --all'
 alias git-merge-master='git checkout master && git pull && git checkout - && git merge master && git push'
+alias gch='git checkout $(git branch -a | fzf)'
 
 # Dev
 alias adbstart='sudo adb start-server'
