@@ -12,4 +12,5 @@ let @w='0f(ldt,f)pui, p0f,dw'
 nnoremap <leader>Ms ilet @X=<C-R>q<ESC>
 " branch name -> PR name
 let @b="0dt/A (\<ESC>p0x~:s/-/ /g\<CR>$bhr-"
-
+let @m="[(]let @X=pi()"
+let @s=":s/ /-/g<CR>"

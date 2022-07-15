@@ -19,7 +19,8 @@ for dir in $DIRS; do
 done
 
 nvim -c :PlugInstall
-nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css
+nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css coc-eslint
+#coc-angular
 nvim -c :TSUpdate
 nvim -c :TSInstall typescript javascript
 nvim -c :TSInstall css scss json html

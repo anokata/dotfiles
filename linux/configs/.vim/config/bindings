@@ -10,8 +10,8 @@ nnoremap <C-A-f> :Rooter<CR>:Rg!  <C-r><C-w>
 vnoremap <C-A-f> y:Rg! <C-r>" 
 nnoremap <C-A-d> :Rooter<CR>:Rg! <C-r><C-w><CR>
 
-nnoremap <Tab><Tab> :Windows<CR>
-nnoremap <Tab><Esc> :Buffers<CR>
+nnoremap <Tab><Esc> :Windows<CR>
+nnoremap <Tab><Tab> :Buffers<CR>
 nnoremap GG GGzz
 " navigate to next inner block
 noremap <leader>nb /{[^}]*$<CR>
