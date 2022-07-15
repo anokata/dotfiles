@@ -123,6 +123,7 @@ endfunction
 nnoremap <Leader>gT :TigOpenCurrentFile<CR>
 " open tig with Project root path
 nnoremap <Leader>gt :TigOpenProjectRootDir<CR>
+nnoremap <C-k> :TigOpenProjectRootDir<CR>
 " open tig grep
 nnoremap <Leader>gg :TigGrep<CR>
 " resume from last grep
@@ -133,6 +134,8 @@ nnoremap <Leader>gr :TigGrepResume<CR>
 nnoremap <Leader>gc :<C-u>:TigGrep<Space><C-R><C-W><CR>
 " open tig blame with current file
 nnoremap <Leader>bb :TigBlame<CR>
+nnoremap <Leader>gp :Git -c push.default=current push
+" git push origin $(git branch --show-current)
 
 " TSEnable highlight 
 " TSEnable ident
@@ -158,6 +161,8 @@ nnoremap <Leader>bb :TigBlame<CR>
 " ProsessionClean
 " ProsessionDelete : add to fzf sessions call bind
 imap <C-l> <C-x><C-f>
+nnoremap <C-_> gcc
+vnoremap <C-_> gcc
 " :h key-notation
 
 " FIX:

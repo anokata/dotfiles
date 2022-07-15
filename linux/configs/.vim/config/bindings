@@ -104,7 +104,7 @@ nmap <leader>v :vsp $MYVIMRC<CR>:set foldmethod=marker<cr>
 nmap <leader>V :source $MYVIMRC<CR>
 nmap <leader>n :tabnew $HOME/.vimrc<CR>:set foldmethod=marker<cr>
 nmap <leader>N :source $HOME/.vimrc<CR>
-nmap <C-k> :tabnew $HOME/.vimrc<CR>
+nmap <C-j> :tabnew $HOME/.vimrc<CR>
 nmap <leader>es :source %<CR>
 
 " === Tabs ===
