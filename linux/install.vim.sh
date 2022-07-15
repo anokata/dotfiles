@@ -21,10 +21,8 @@ done
 nvim -c :PlugInstall
 nvim -c :CocInstall coc-tsserver coc-json coc-html coc-css
 nvim -c :TSUpdate
-nvim -c :TSInstall typescript
-nvim -c :TSInstall javascript
-nvim -c :TSInstall html
-nvim -c :TSInstall css scss json
+nvim -c :TSInstall typescript javascript
+nvim -c :TSInstall css scss json html
 nvim -c :TSInstall markdown bash make vim
 
 echo '>>> Remove vim/plugged/*/.git dirs'

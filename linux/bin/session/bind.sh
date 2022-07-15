@@ -6,7 +6,8 @@ bind -x '"\e[1;6P":"$EDITOR"' # C-S-F1
 # sessions
 bind -x '"\eOP":"cd $DOTFILES; $EDITOR"' # F1 - open session: dotfiles
 bind -x '"\eOQ":"cd $NOTES_DIR; $EDITOR"' # F2 - notes
-bind -x '"\eOR":"cd $WORK_DIR_CURRENT; $EDITOR"' # F3 - ndm
+bind -x '"\eOR":"cd $WORK_DIR_CURRENT; $EDITOR"' # F3 - ndm ndw3
+bind -x '"\e[1;2R":"cd $WORK_DIR_CURRENT2; $EDITOR"' # S-F3 - ndw2
 bind -x '"\eOS":"cd $DOTFILES_CONFIGS; $EDITOR"' # F4 - configs
 bind -x '"\e[1;5S":"cd $VIM_DIR_CONFIGS; $EDITOR"' # C-F4 - vim
 

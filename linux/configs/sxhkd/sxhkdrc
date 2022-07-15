@@ -16,7 +16,7 @@ ctrl + alt + t
 ctrl + super + F1
     google-chrome
 ctrl + super + F2
-    code
+    webstorm.sh
 ctrl + super + F4
     thunar
     # nautilus
@@ -45,7 +45,9 @@ ctrl + super + F3
 super + F2
     kitty nvim +":Prosession $NOTES_DIR"
 super + F3
-    kitty nvim +":Prosession ~/dotfiles/"
+    kitty nvim +":Prosession ~/dotfiles"
+shift + super + F2
+    kitty nvim +":Prosession $WORK_DIR_CURRENT"
 super + F4
     kitty htop
 super + shift + F4

@@ -13,17 +13,23 @@ Plug 'dhruvasagar/vim-prosession'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-rooter'
 Plug 'wakatime/vim-wakatime'
-
-" New try
 Plug 'airblade/vim-gitgutter'
 Plug 'SirVer/ultisnips/'
 Plug 'SidOfc/mkdx'
+Plug 'iberianpig/tig-explorer.vim'
+Plug 'rbgrouleff/bclose.vim'
+
+" IDE
+Plug 'haorenW1025/completion-nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" New try
 Plug 'majutsushi/tagbar'
 Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'tpope/vim-speeddating'
 Plug 'svermeulen/vim-subversive'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/npm.nvim'
 Plug 'Shougo/denite.nvim'
 " Plug 'tenfyzhong/tagbar-markdown.vim'
@@ -33,11 +39,6 @@ Plug 'tpope/vim-eunuch'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
-" neovim treesitter
-Plug 'haorenW1025/completion-nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/completion-treesitter'
-Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
 " Plug 'tveskag/nvim-blame-line'
 
@@ -47,11 +48,6 @@ Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-unimpaired'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'chamindra/marvim'
-
-Plug 'iberianpig/tig-explorer.vim'
-Plug 'rbgrouleff/bclose.vim'
-
-
 " Plug 'hrsh7th/nvim-cmp'
 " Plug 'hrsh7th/cmp-nvim-lsp'
 " Plug 'hrsh7th/cmp-buffer'
@@ -68,9 +64,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
 
-" IDE
-
-" CSS
+" CSS and color
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'ap/vim-css-color'
 
