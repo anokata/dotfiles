@@ -25,6 +25,8 @@ nvim -c :TSUpdate
 nvim -c :TSInstall typescript javascript
 nvim -c :TSInstall css scss json html
 nvim -c :TSInstall markdown bash make vim
+nvim -c :TSEnable highlight 
+nvim -c :TSEnable ident
 
 echo '>>> Remove vim/plugged/*/.git dirs'
 cd $VIM_DIR/plugged

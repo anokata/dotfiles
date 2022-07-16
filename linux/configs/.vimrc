@@ -136,6 +136,7 @@ nnoremap <Leader>gc :<C-u>:TigGrep<Space><C-R><C-W><CR>
 nnoremap <Leader>bb :TigBlame<CR>
 nnoremap <Leader>gp :Git -c push.default=current push
 " git push origin $(git branch --show-current)
+"CocRestart
 
 " TSEnable highlight 
 " TSEnable ident

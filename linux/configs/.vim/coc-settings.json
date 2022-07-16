@@ -2,5 +2,7 @@
   "coc.preferences.jumpCommand": "tabe",
   "eslint.autoFixOnSave": false,
   "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-  "prettier.disableSuccessMessage": true
+  "prettier.disableSuccessMessage": true,
+  "tsserver.formatOnType": true,
+  "typescript.format.enabled": true
 }
