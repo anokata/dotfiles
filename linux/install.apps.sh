@@ -78,6 +78,8 @@ i tree
 # i pcmanfm 
 # i seahorse
 i proxycheck
+i bc numlockx
+i attr libncurses-dev gawk libjson-perl subversion
 
 i network-manager network-manager-pptp network-manager-ssh
 i network-manager-gnome network-manager-pptp-gnome network-manager-ssh-gnome

@@ -6,6 +6,7 @@ source ~/dotfiles/linux/.env
 pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
 dunst &
 picom &
+numlockx on
 NO_TMUX=1 guake &
 [ ! -s ~/.config/mpd/pid ] && mpd
 # thunar --daemon &

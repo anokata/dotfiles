@@ -1,0 +1,4 @@
+MEM=$(free -h | tail -n2 | head -n1 | tr -s "[:space:]")
+FREE=$(echo $MEM | cut -d" " -f 4)
+AVAIL=$(echo $MEM | cut -d" " -f 7)
+echo $AVAIL
