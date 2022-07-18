@@ -1,5 +1,5 @@
 {
-  "coc.preferences.jumpCommand": "tabe",
+  "coc.preferences.jumpCommand": "edit", /* tabe edit drop */
   "eslint.autoFixOnSave": false,
   "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "prettier.disableSuccessMessage": true,

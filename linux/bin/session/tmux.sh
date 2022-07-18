@@ -14,6 +14,7 @@ function _tmux_run () {
             tmux new-window -c $DOTFILES_LINUX
             tmux new-window -c $WORK_DIR_CURRENT2
             tmux new-window -c $WORK_DIR_CURRENT
+            tmux new-window -c $WORK_DIR_CURRENT
             # tmux split-window -c ~/sdata/
             # tmux new-window vifm
             # tmux new-window cmus

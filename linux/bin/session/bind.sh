@@ -46,6 +46,7 @@ bind '"\C-n":"lfcd\C-m"'
 bind -x '"\e[1;5S":"ranger"' # C-F4
 bind -x '"\e[1;6S":"tmux new-window ranger"' # C-S-F4
 bind -x '"\e[15;5~":"fff"' # C-F5
+bind -x '"\e[21~":"ncmpcpp"' # F10
 # list
 #bind -x '"\e[15~":"ls"' # a-l 
 
