@@ -11,7 +11,7 @@ function _tmux_run () {
         else
             # create new session
             tmux new -s $TMUX_SESSION_NAME -d
-            tmux new-window -c $DOTFILES_LINUX
+            # tmux new-window -c $DOTFILES_LINUX
             tmux new-window -c $WORK_DIR_CURRENT2
             tmux new-window -c $WORK_DIR_CURRENT
             tmux new-window -c $WORK_DIR_CURRENT

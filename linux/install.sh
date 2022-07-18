@@ -7,6 +7,7 @@ echo 'source ~/dotfiles/linux/.env' >> ~/.profile
 
 git config --global user.name anokata
 git config --global user.email $WORK_EMAIL
+#git config push.default current
 
 cd ~/dotfiles
 git config user.email $KSI_EMAIL

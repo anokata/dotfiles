@@ -235,28 +235,28 @@ super + Tab
 	bspc node -f next
 
 # focus to the given desktop
-super + ctrl + {1-9}
+super + {1-9}
 	bspc desktop -f '^{1-9,9}'
 
 #ctrl + space;  {1-9}
 	#bspc desktop -f '^{1-9,9}'
 
 # Switch desktops pairs
-super + 1
-	bspc desktop -f '^6';\
-	bspc desktop -f '^1'
-super + 2
-	bspc desktop -f '^7';\
-	bspc desktop -f '^2'
-super + 3
-	bspc desktop -f '^8';\
-	bspc desktop -f '^3'
-super + 4
-	bspc desktop -f '^9';\
-	bspc desktop -f '^4'
-super + 5
-	bspc desktop -f '^5';\
-	bspc desktop -f '^10'
+# super + 1
+# 	bspc desktop -f '^1';\
+# 	bspc desktop -f '^6'
+# super + 2
+# 	bspc desktop -f '^2';\
+# 	bspc desktop -f '^7'
+# super + 3
+# 	bspc desktop -f '^3';\
+# 	bspc desktop -f '^8'
+# super + 4
+# 	bspc desktop -f '^4';\
+# 	bspc desktop -f '^9'
+# super + 5
+# 	bspc desktop -f '^5';\
+# 	bspc desktop -f '^10'
 
 super + {Left, Right}
     bspc monitor --focus {prev,next}
