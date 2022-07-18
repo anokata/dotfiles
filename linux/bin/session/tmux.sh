@@ -12,8 +12,8 @@ function _tmux_run () {
             # create new session
             tmux new -s $TMUX_SESSION_NAME -d
             tmux new-window -c $DOTFILES_LINUX
+            tmux new-window -c $WORK_DIR_CURRENT2
             tmux new-window -c $WORK_DIR_CURRENT
-            tmux split-window -c $WORK_DIR_CURRENT2
             # tmux split-window -c ~/sdata/
             # tmux new-window vifm
             # tmux new-window cmus
