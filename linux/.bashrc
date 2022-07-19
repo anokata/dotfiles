@@ -61,7 +61,10 @@ export PS1="$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
     echo "vscode"
-    nvm use system
+    # nvm use system
+elif [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
+    echo "webstorm"
+    # nvm use system
 else
     _tmux_run
 fi
