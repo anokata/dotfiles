@@ -227,12 +227,14 @@ super + shift + q
 super + shift + m
 	bspc desktop -l next
 
-alt + `
-	bspc node -f next.local
-    # bspc node -f next.local.window
+# alt + `
+alt + Tab
+    bspc node -f next.local.window
+	# bspc node -f next.local
 
-super + Tab
-	bspc node -f next
+super + {j, k}
+    bspc node -f {next,prev}.local.window
+	# bspc node -f next
 
 # focus to the given desktop
 super + {1-9}
