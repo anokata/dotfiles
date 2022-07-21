@@ -1,1 +1,9 @@
-mplayer -tv driver=v4l2:gain=1:width=640:height=480:device=/dev/video0:fps=10:outfmt=rgb16 tv:// -vo caca
+#!/bin/bash
+# LIB="caca"
+# LIB="aa"
+LIB="aa:driver=ncurses"
+
+# mplayer -tv driver=v4l2:gain=1:width=1024:height=800:device=/dev/video0:fps=24:outfmt=rgb16 tv:// -vo $LIB:driver=ncurses -monitorpixelaspect 0.5
+# DISPLAY= mplayer -nosub -noautosub -quiet -framedrop -contrast 25 -tv driver=v4l2:gain=1:width=1024:height=800:device=/dev/video0:fps=24:outfmt=rgb16 tv:// -vo $LIB:driver=ncurses -monitorpixelaspect 0.5
+# mpv -vo caca av://v4l2:/dev/video0 
+DISPLAY= mplayer -nosub -noautosub -quiet -framedrop  -tv driver=v4l2:gain=1:width=1024:height=850:device=/dev/video0:fps=24:outfmt=rgb16 tv:// -vo $LIB -monitorpixelaspect 0.35

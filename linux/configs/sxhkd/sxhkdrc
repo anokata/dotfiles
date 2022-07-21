@@ -282,6 +282,13 @@ super + {h, l}
 #shift + alt + {h,j,k,l}
 	#bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
 
+super + d
+    if [ -z "$(bspc query -N -n focused.floating)" ]; then \
+        bspc node focused -t floating; \
+    else \
+        bspc node focused -t tiled; \
+    fi
+
 # move a floating window
 super + ctrl + {h,j,k,l}
 	bspc node -v {-10 0,0 10,0 -10,10 0}
