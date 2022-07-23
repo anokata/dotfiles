@@ -1,0 +1,16 @@
+#!/bin/bash
+
+xsetwacom --set 'PenTablet Pad pad' Button 1 "key f"
+xsetwacom --set 'PenTablet Pad pad' Button 2 "key f"
+xsetwacom --set 'PenTablet Pad pad' Button 3 "key f"
+xsetwacom --set 'PenTablet Pad pad' Button 4 "key f"
+xsetwacom --set 'PenTablet Pad pad' Button 5 "key f"
+xsetwacom --set 'PenTablet Pad pad' Button 6 "key f"
+xsetwacom --set 'PenTablet Pad pad' Button 7 "key f"
+xsetwacom --set 'PenTablet Pad pad' Button 8 "key f"
+# xsetwacom --set 'PenTablet Pad pad' Button 9 ""
+# xsetwacom --set 'PenTablet Pad pad' Button 10 ""
+# xsetwacom --set 'PenTablet Pad pad' Button 11 ""
+# xsetwacom --set 'PenTablet Pad pad' Button 12 ""
+
+#"key p" 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source $DOTFILES_LINUX/bin/fzf-git-checkout
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -110,8 +112,9 @@ alias gbc='git branch --show-current'
 alias gpc='git push origin $(git branch --show-current)'
 alias gpa='git push --all'
 alias git-merge-master='git checkout master && git pull && git checkout - && git merge master && git push'
-alias gch='git checkout $(git branch -a | fzf)'
 alias git-stash-and-drop='git stash && git stash drop'
+# alias gch='git checkout $(git branch -a | fzf)'
+alias gch='_fco_preview'
 
 # Dev
 alias adbstart='sudo adb start-server'

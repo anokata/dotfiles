@@ -279,10 +279,10 @@ super + {h, l}
 #super + shift + {h,j,k,l}
 	#bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 20 0}
 # contract a window by moving one of its side inward
-#shift + alt + {h,j,k,l}
-	#bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
+super + alt + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-super + d
+super + alt + d
     if [ -z "$(bspc query -N -n focused.floating)" ]; then \
         bspc node focused -t floating; \
     else \
