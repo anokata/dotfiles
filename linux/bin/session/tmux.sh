@@ -12,16 +12,11 @@ function _tmux_run () {
             # create new session
             tmux new -s $TMUX_SESSION_NAME -d
             # tmux new-window -c $DOTFILES_LINUX
-            tmux new-window -c $WORK_DIR_CURRENT2
-            tmux new-window -c $WORK_DIR_CURRENT
-            tmux new-window -c $WORK_DIR_CURRENT
-            # tmux split-window -c ~/sdata/
-            # tmux new-window vifm
-            # tmux new-window cmus
-            # fff
-            # tmux new-window ranger
             # tmux new-window vim $NOTES_DIR
-            # tmux select-window -t 1
+            tmux new-window -c $WORK_DIR_CURRENT2 -n ndw2
+            tmux new-window -c $WORK_DIR_CURRENT -n ndw3
+            tmux new-window -c $WORK_DIR_CURRENT -n ndw3
+            tmux select-window -t 1
             tmux attach -t $TMUX_SESSION_NAME
         fi
     #else

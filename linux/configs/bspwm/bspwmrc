@@ -44,6 +44,7 @@ bspc rule -a TelegramDesktop desktop='^3'
 # bspc rule -a obsidian desktop='^9'
 # bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Guake state=floating
+bspc rule -a PureRef state=floating
 bspc rule -a Peek state=floating
 bspc rule -a jetbrains-webstorm desktop='^1'
 
