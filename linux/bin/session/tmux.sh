@@ -13,11 +13,12 @@ function _tmux_run () {
             tmux new -s $TMUX_SESSION_NAME -d
             # tmux new-window -c $DOTFILES_LINUX
             # tmux new-window vim $NOTES_DIR
+            tmux rename-window "dot"
             tmux new-window -c $WORK_DIR_CURRENT2 -n ndw2
             tmux new-window -c $WORK_DIR_CURRENT -n ndw3
             tmux new-window -c $WORK_DIR_CURRENT -n ndw3
             tmux select-window -t 1
-            tmux attach -t $TMUX_SESSION_NAME
+            tmux attach -t $TMUX_SESSION_NAME -c $DOTFILES_LINUX
         fi
     #else
         #tmux a
