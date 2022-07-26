@@ -36,6 +36,7 @@ nnoremap <F8> :TagbarToggle<CR>
 nnoremap <C-g> :TagbarToggle<CR>
 
 nnoremap ZZ :bd<CR>
+nnoremap <S-u> <C-r>
 
 " Coc config
 " https://github.com/neoclide/coc-eslint

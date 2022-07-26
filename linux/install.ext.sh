@@ -86,6 +86,9 @@ sudo apt install ./xnviewmp.deb -y
 sudo apt install v4l2loopback-dkms
 sudo apt install obs-studio
 
+cd $GITS_DIR
+git clone https://github.com/bigH/git-fuzzy.git
+
 # virtualbox
 
 # rofi-emoji / kaomoji-rofi
