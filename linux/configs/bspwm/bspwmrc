@@ -46,6 +46,7 @@ bspc rule -a TelegramDesktop desktop='^3'
 bspc rule -a Guake state=floating
 bspc rule -a PureRef state=floating
 bspc rule -a Peek state=floating
+bspc rule -a clipstudiopaint.exe state=floating
 bspc rule -a jetbrains-webstorm desktop='^1'
 
 
