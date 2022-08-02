@@ -1,4 +1,4 @@
 #!/bin/bash
 
 git add . && git commit -m "$1" 
-git push $o $(git branch --show-current)
+git push $(git remote) $(git branch --show-current)
