@@ -6,6 +6,8 @@
 source ~/.vim/config/plugins
 source ~/.vim/config/settings
 source ~/.vim/config/bindings
+" TODO:
+" source ~/.vim/config/plugin-bindings
 source ~/.vim/config/plugin-settings
 source ~/.vim/config/bind-files
 source ~/.vim/config/dev

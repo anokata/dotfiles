@@ -80,6 +80,7 @@ i tree
 i proxycheck
 i bc numlockx
 i attr libncurses-dev gawk libjson-perl subversion
+i net-tools
 
 i network-manager network-manager-pptp network-manager-ssh
 i network-manager-gnome network-manager-pptp-gnome network-manager-ssh-gnome
