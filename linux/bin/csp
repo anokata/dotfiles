@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd "/home/ksi/bdata/progs/ClipStudio/CLIP STUDIO 1.5/CLIP STUDIO PAINT/"
+# cd "/home/ksi/bdata/progs/ClipStudio/CLIP STUDIO 1.5/CLIP STUDIO PAINT/"
+cd "/home/ksi/bin/ClipStudio/CLIP STUDIO 1.5/CLIP STUDIO PAINT/"
 WINEPREFIX=~/.local/share/wineprefixes/wine2/ wine64  ./CLIPStudioPaint.exe
 # wine64run "./CLIPStudioPaint.exe"
 # WINEPATH=./
