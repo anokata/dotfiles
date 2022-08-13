@@ -92,6 +92,7 @@ i software-properties-common
 # apt-get update
 
 # WINE
+# winetricks -q mdac28
 #env WINEPREFIX=~/.winecsp WINEARCH=win64 wineboot -u
 #sudo winetricks --self-update
 #sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu/ $(lsb_release -sc) main"

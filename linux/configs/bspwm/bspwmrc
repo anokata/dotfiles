@@ -47,7 +47,7 @@ bspc rule -a Guake state=floating
 bspc rule -a PureRef state=floating
 bspc rule -a Peek state=floating
 bspc rule -a clipstudiopaint.exe state=floating
-bspc rule -a jetbrains-webstorm desktop='^1'
+# bspc rule -a jetbrains-webstorm desktop='^1'
 
 
 ### Apps
