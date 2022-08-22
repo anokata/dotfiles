@@ -87,6 +87,8 @@ i network-manager network-manager-pptp network-manager-ssh
 i network-manager-gnome network-manager-pptp-gnome network-manager-ssh-gnome
 
 i software-properties-common
+i dnsutils
+i ntp ntpstat
 # WARN: Only on Debian
 # sudo apt-add-repository non-free
 # apt-get update
