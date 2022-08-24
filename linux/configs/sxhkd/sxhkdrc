@@ -7,6 +7,8 @@ alt + x; n ; t
 # markdown
 alt + x; m ; l
     markdown-clip-convert-to-url
+alt + x; m ; t
+    markdown-url-and-task-text
 
 # Applications
 alt + Return
