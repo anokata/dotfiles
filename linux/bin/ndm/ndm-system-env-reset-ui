@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+ndm-ssh-local-default system env set ndw3_settings
