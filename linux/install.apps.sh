@@ -106,3 +106,6 @@ i ntp ntpstat
 # sudo apt-key add winehq.key
 #sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ impish main'
 #sudo apt install --install-recommends winehq-stable
+
+# cdma 3g modem
+# usb-modeswitch wvdial kppp modemmanager modem-manger-gui
