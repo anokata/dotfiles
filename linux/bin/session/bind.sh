@@ -57,6 +57,7 @@ bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
 
 bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
 
+# bind '^r' fzf-history-widget
 
 # Fav dirs
 # num not num

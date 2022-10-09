@@ -37,6 +37,8 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden --hidde
 if [ -e ~/.work.sig ]; then
     source ~/dotfiles/work/alias.sh
 fi
+source /usr/share/doc/fzf/examples/completion.bash
+source /usr/share/doc/fzf/examples/key-bindings.bash
 
 #if _is_first_run; then
 #fi
@@ -69,6 +71,3 @@ else
     _tmux_run
 fi
 
-# Use bash-completion, if available
-[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
-    . /usr/share/bash-completion/bash_completion
