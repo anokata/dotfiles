@@ -58,11 +58,11 @@ tar xf tg.tar.xz
 
 echo "Slack..."
 
-i wine64
-i gnugo
-i gparted
-i ncmpcpp
-i rsync
+apts wine64
+apts gnugo
+apts gparted
+apts ncmpcpp
+apts rsync
 
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp

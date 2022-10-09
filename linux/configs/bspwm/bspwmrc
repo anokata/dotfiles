@@ -7,8 +7,7 @@ pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
 dunst &
 picom &
 numlockx on
-# NO_TMUX=1 guake &
-guake &
+NO_TMUX=1 guake &
 [ ! -s ~/.config/mpd/pid ] && mpd
 # thunar --daemon &
 
@@ -48,7 +47,7 @@ bspc rule -a Guake state=floating
 bspc rule -a PureRef state=floating
 bspc rule -a Peek state=floating
 bspc rule -a clipstudiopaint.exe state=floating
-# bspc rule -a jetbrains-webstorm desktop='^1'
+bspc rule -a jetbrains-webstorm desktop='^1'
 
 
 ### Apps
