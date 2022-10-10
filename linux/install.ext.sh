@@ -80,7 +80,9 @@ sudo apt install ./xnviewmp.deb -y
 # TODO
 
 # duf
-# https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_amd64.deb
+cd $GITS_DIR
+wget -O duf.deb https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_amd64.deb
+sudo apt install ./duf.deb -y
 
 # obs
 sudo apt install v4l2loopback-dkms
