@@ -5,7 +5,7 @@ polybar-msg cmd quit
 
 # echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log ===>
 source ~/dotfiles/linux/.env
-if [ -z $MONITOR_1 ]; then
+if [ -z $MONITOR_2 ]; then
     polybar bottom-2 -c ~/.config/polybar/config.ini 2>&1 | tee -a /tmp/polybar1.log & disown
     echo 0
 else 

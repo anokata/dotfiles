@@ -89,6 +89,7 @@ i network-manager-gnome network-manager-pptp-gnome network-manager-ssh-gnome
 i software-properties-common
 i dnsutils
 i ntp ntpstat
+i linux-cpupower fancontrol
 # WARN: Only on Debian
 # sudo apt-add-repository non-free
 # apt-get update
