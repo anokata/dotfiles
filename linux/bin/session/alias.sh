@@ -45,6 +45,7 @@ alias sloc='cat *.c *.h | uniq | wc -l'
 alias wcl='wc -l'
 alias files='find | wc -l'
 alias dd='dd status=progress bs=64K conv=noerror,sync '
+alias sudodd='sudo dd status=progress bs=64K conv=noerror,sync '
 alias bat="batcat"
 alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}' --preview-window=right:70%:wrap"
 alias fzfi="fzf-ueberzogen.sh"
@@ -54,6 +55,7 @@ alias ksi-notes="cd $NOTES_DIR && $TERMINAL -e $EDITOR +\":Prosession $NOTES_DIR
 alias ksi-config="cd $DOTFILES_LINUX && $TERMINAL -e $EDITOR +\":Prosession $DOTFILES_LINUX\""
 alias lfc='tmux split -h lf; lf'
 alias lf='lfrun'
+alias tcf='tar cf'
 
 # links
 alias lns="ln -s "

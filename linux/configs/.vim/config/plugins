@@ -27,6 +27,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " New try
 Plug 'majutsushi/tagbar'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'chrisbra/unicode.vim'
 
 Plug 'tpope/vim-speeddating'
 Plug 'svermeulen/vim-subversive'
