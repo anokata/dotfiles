@@ -241,5 +241,6 @@ function dict() {
     curl "dict.org/d:$@"
 }
 
+alias .pmd=".pm 1b9c3114-d62d-43b1-b14a-971f66302007"
 alias my-ip="curl icanhazip.com"
 alias get-ip="wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
