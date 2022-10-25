@@ -59,6 +59,8 @@ super + t
     term-no-tmux
 super + p
     pavucontrol
+super + g
+    gnome-control-center
 
 # Bookmarks
 ctrl + super + b

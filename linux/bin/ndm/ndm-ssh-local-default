@@ -1,3 +1,5 @@
 #!/usr/bin/bash
 source $DOTFILES/linux/.env
-sshpass -f $PASSWORD_DEFAULT ssh admin@192.168.1.1 -p 2022 $@
+IP="$1"
+[ -z "$1" ] && IP="192.168.1.1"
+sshpass -f $PASSWORD_DEFAULT ssh admin@192.168.2.1 -p 2022 $@
