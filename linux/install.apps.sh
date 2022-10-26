@@ -46,7 +46,6 @@ sudo pip3 install fzf-ueberzogen
 sudo apt install python3-pynvim
 sudo pip3 install pynvim
 
-#BT: blueman bluez
 
 
 # VSCode
@@ -110,3 +109,6 @@ i linux-cpupower fancontrol
 
 # cdma 3g modem
 # usb-modeswitch wvdial kppp modemmanager modem-manger-gui
+
+# BT bluetooth: 
+#i libspa-0.2-bluetooth pipewire blueman bluez
