@@ -61,6 +61,8 @@ super + p
     pavucontrol
 super + g
     gnome-control-center
+super + b
+    blueman-manager
 
 # Bookmarks
 ctrl + super + b

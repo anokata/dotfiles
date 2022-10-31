@@ -1,0 +1,33 @@
+let mapleader=","
+let maplocalleader=";"
+
+nmap <leader>q :w<CR>
+nmap <leader>n :vsp "/home/ksi/dotfiles/linux/configs/vscode_vimrc"<CR>
+nmap <leader>t :tabnew<CR>
+nmap <leader>w :tabclose<CR>
+nmap <leader>, :tabnext<CR>
+nmap <leader>. :tabprev<CR>
+nmap tn :tabnew<CR>
+nmap tw :tabclose<CR>
+nmap th :tabnext<CR>
+nmap tl :tabprev<CR>
+nmap <leader>e :q<CR>
+nmap <leader>xb ,t:e $DOTFILES/linux/.bashrc<CR>
+
+nmap ё `
+nmap Ж :
+nmap ш i
+nmap о j
+nmap л k
+nmap ф a
+nmap Ф A
+nmap б ,
+nmap ю .
+cmap ц w
+cmap й q
+cmap ч x
+cmap у e
+cmap ф a
+
+let @b='0dt/A (\<ESC>p0x~:s/-/ /g\<CR>'
+let @m='pi[](<Esc>A)<Esc>bbbdt)<Esc>u0po<Esc>pa/<Esc>o(<Esc>pi<Esc>I <Esc>'

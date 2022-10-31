@@ -38,3 +38,4 @@ done
 # sudo npm install -g prettier-eslint-cli
 
 echo '<<< Vim setup done'
+ln ~/dotfiles/linux/configs/.ideavimrc ~/

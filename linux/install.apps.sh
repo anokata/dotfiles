@@ -112,3 +112,5 @@ i linux-cpupower fancontrol
 
 # BT bluetooth: 
 #i libspa-0.2-bluetooth pipewire blueman bluez
+#pipewire-audio-client-libraries
+#USERHID /etc/bluetooth/input.conf
