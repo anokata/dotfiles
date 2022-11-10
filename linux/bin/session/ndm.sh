@@ -35,3 +35,5 @@ alias ndm-opkg="ssh root@192.168.1.1 -p 222"
 
 alias ndm-git-clone-ndw2="cd $WORK_DIR; git clone $WORK_REPO_NDW2"
 alias ndm-git-clone-ndw3="cd $WORK_DIR; git clone $WORK_REPO_NDW3"
+
+alias ndm-start-local2="npx gulp serve -P 192.168.2.1"

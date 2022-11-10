@@ -2,3 +2,4 @@ BACKLIGHT=$()
 VALUE=0.8
 [ $1 ] && VALUE=0.$1
 xrandr --output HDMI-1 --brightness $VALUE
+xrandr --output $MONITOR_1 --brightness $VALUE
