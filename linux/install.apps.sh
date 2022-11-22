@@ -67,7 +67,7 @@ i nnn
 i pwgen
 i tcpdump
 i tree
-#i screenkey
+i screenkey
 #i duf
 
 # i toilet
