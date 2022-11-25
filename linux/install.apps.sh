@@ -68,6 +68,7 @@ i pwgen
 i tcpdump
 i tree
 i screenkey
+i ifmetric
 #i duf
 
 # i toilet
