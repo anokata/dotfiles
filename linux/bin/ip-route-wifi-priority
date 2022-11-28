@@ -1,1 +1,2 @@
 sudo ifmetric wlp0s20f3 50
+sudo ifmetric usb0 20
