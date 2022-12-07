@@ -90,6 +90,8 @@ i software-properties-common
 i dnsutils
 i ntp ntpstat
 i linux-cpupower fancontrol
+i ufw
+i tftpd-hpa
 # WARN: Only on Debian
 # sudo apt-add-repository non-free
 # apt-get update
