@@ -71,8 +71,13 @@ i screenkey
 i ifmetric
 #i duf
 
-# i toilet
+### Hat:Secure
 # wireshark 
+# tor
+#curl wget gnupg2
+#netcat
+
+# i toilet
 # obs
 # i krita
 # i pcmanfm 
