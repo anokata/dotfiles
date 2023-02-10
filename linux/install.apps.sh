@@ -76,6 +76,7 @@ i ifmetric
 # tor
 #curl wget gnupg2
 #netcat
+#xprobe fping
 
 # i toilet
 # obs
