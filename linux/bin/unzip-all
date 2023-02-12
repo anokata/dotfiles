@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#find . -name "*.zip" | while read filename; do unzip -o -d "`dirname "$filename"`" "$filename"; done;
+for z in *.zip; do 
+    bn="$(basename "$z" .zip)"
+    mkdir "$bn"
+    cd "$bn"
+    unzip "../$z"; 
+    cd ..
+done
