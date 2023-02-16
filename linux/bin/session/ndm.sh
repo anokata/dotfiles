@@ -13,6 +13,9 @@ alias ndm-keenetic-show-arp='ndm-ssh-local show ip arp'
 alias ndm-keenetic-show-route='ndm-ssh-local show ip route'
 
 alias ndm-start-local="npm start $KEENETIC_IP"
+alias ndm-start-local2="npx gulp serve -P $KEENETIC_IP"
+alias ndm-start-local-npx="npx gulp serve -P $KEENETIC_IP"
+alias ndm-start-local-on-ndw2-l10n="npm start 127.0.0.1:3000"
 alias ndm-start-mobile="npm start 192.168.22.14"
 alias ndm-test="npm run kn-test"
 alias ndm-add-vland="ndm-ssh-local-default interface GigabitEthernet0/Vlan5"
@@ -35,4 +38,3 @@ alias ndm-opkg="ssh root@$KEENETIC_IP -p 222"
 alias ndm-git-clone-ndw2="cd $WORK_DIR; git clone $WORK_REPO_NDW2"
 alias ndm-git-clone-ndw3="cd $WORK_DIR; git clone $WORK_REPO_NDW3"
 
-alias ndm-start-local2="npx gulp serve -P $KEENETIC_IP"
