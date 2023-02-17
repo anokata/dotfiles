@@ -1,5 +1,5 @@
 # Bindings
-# to get key code: 
+# to get key code: press ctrl-v and key; replace ^[ to \e
 set -o vi
 bind -m vi-command '"v": abort'
 ## vim
