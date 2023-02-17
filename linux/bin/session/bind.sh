@@ -1,4 +1,5 @@
 # Bindings
+# to get key code: 
 set -o vi
 bind -m vi-command '"v": abort'
 ## vim
@@ -7,6 +8,7 @@ bind -x '"\e[1;6P":"$EDITOR"' # C-S-F1
 bind -x '"\eOP":"cd $DOTFILES; $EDITOR"' # F1 - open session: dotfiles
 bind -x '"\eOQ":"cd $NOTES_DIR; $EDITOR"' # F2 - notes
 bind -x '"\eOR":"cd $WORK_DIR_CURRENT; $EDITOR"' # F3 - ndm ndw3
+bind -x '"\e[17~":"cd $WORK_DIR_CURRENT_TRY; $EDITOR"' # F6 - ndm ndw3 try
 bind -x '"\e[1;2R":"cd $WORK_DIR_CURRENT2; $EDITOR"' # S-F3 - ndw2
 bind -x '"\eOS":"cd $DOTFILES_CONFIGS; $EDITOR"' # F4 - configs
 bind -x '"\e[1;5S":"cd $VIM_DIR_CONFIGS; $EDITOR"' # C-F4 - vim
@@ -27,7 +29,7 @@ bind -x '"\e[1;5A":"cd -"' # c-left
 
 # FM
 bind -x '"\e[15~":"lfrun"' # F5
-bind -x '"\e[17~":"fff"' # F6
+#bind -x '"\e[17~":"fff"' # F6
 bind -x '"\e[18~":"~/gits/fmui/fmui"' # F7
 
 # PS
