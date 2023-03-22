@@ -44,6 +44,7 @@ Plug 'leafgarland/typescript-vim'
 " Plug 'tveskag/nvim-blame-line'
 
 " to try
+Plug 'jessfraz/openai.vim'
 Plug 'jasoncodes/ctrlp-modified.vim'
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-unimpaired'
