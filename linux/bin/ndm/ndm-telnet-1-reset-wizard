@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+source $DOTFILES/linux/.env
+IP="$1"
+[ -z "$1" ] && IP="192.168.1.1"
+
+( sleep 2
+ echo "eula accept"
+ sleep 2
+ echo "easyconfig disable"
+ sleep 2
+ echo "exit" ) | telnet ${IP}
+

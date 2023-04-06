@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+ndm-telnet-and-run "system no country"

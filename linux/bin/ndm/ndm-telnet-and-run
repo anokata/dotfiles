@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+source $DOTFILES/linux/.env
+IP="$2"
+CMD="$1"
+TIME=1.5
+[ -z "$2" ] && IP="192.168.1.1"
+
+( sleep $TIME 
+ echo "${CMD}"
+ sleep $TIME 
+ echo "exit" ) | telnet ${IP}
+
