@@ -60,6 +60,19 @@ function git_dirty {
 # export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 export PS1="$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 
+_nvmrc_hook() {
+  if [[ $PWD == $PREV_PWD ]]; then
+    return
+  fi
+  
+  PREV_PWD=$PWD
+  [[ -f ".nvmrc" ]] && nvm use
+}
+
+if ! [[ "${PROMPT_COMMAND:-}" =~ _nvmrc_hook ]]; then
+  PROMPT_COMMAND="_nvmrc_hook${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
+fi
+
 
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
     echo "vscode"
