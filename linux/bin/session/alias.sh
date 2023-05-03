@@ -118,6 +118,8 @@ alias git-merge-master='git checkout master && git pull && git checkout - && git
 alias git-stash-and-drop='git stash && git stash drop'
 # alias gch='git checkout $(git branch -a | fzf)'
 alias gch='_fco_preview'
+alias ghpr='gh pr create --web'
+alias ghd='gh dash'
 
 # Dev
 alias adbstart='sudo adb start-server'
