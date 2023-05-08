@@ -200,6 +200,7 @@ alias ranger='. ranger'
 alias xkitty='kitty --start-as fullscreen'
 alias icat="kitty +kitten icat"
 alias st="st -g 180x50 tmux a"
+alias tmuxa="tmux a"
 alias mpd-restart="mpd --kill || mpd"
 alias mpd-update="mpc update"
 alias mpc="mpc -p $MPD_PORT"

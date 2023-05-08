@@ -53,6 +53,7 @@ bind -x '"\e[21~":"ncmpcpp"' # F10
 #bind -x '"\e[15~":"ls"' # a-l 
 
 # tmux
+bind '"\C-a":"tmux a\C-m"'
 # bind -x '"\C-w":"tmux kill-pane"' # c-w
 # bind -x '"\C-n":"tmux new-window"' # c-n
 bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
