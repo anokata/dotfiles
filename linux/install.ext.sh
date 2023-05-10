@@ -94,6 +94,7 @@ git clone https://github.com/bigH/git-fuzzy.git
 # virtualbox
 
 # rofi-emoji / kaomoji-rofi
+pip install --user rofimoji
 # rofi-keepassx
 ### 
 # pip3 install instaloader

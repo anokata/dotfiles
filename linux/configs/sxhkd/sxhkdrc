@@ -68,7 +68,8 @@ super + b
 ctrl + super + b
     rofi-books
 ctrl + super + e
-    rofi -show emoji -modi emoji
+    rofimoji
+    #rofi -show emoji -modi emoji
 
 # scripts
 ctrl + shift + F12
