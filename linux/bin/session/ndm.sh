@@ -1,5 +1,6 @@
 alias cdn3="cd $WORK_DIR/ndw3-without-isw/"
 alias cdn2="cd $WORK_DIR/ndw2/"
+alias cdn4="cd $WORK_DIR/ndw4/"
 alias cdns="cd $WORK_DIR/ndw3-storybook/"
 
 alias ndm-keenetic-telnet="telnet $KEENETIC_IP"
