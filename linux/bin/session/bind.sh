@@ -38,6 +38,9 @@ bind -x '"\C-y":"htop "' #
 bind -x '"\e[19~":"tig"' # tig by <F8>
 bind -x '"\e[20~":"htop "' # <F9>
 bind -x '"\C-b":"bashrc-reload "' # 
+bind -x '"\C-x":"gcom "' # 
+bind -x '"\C-e":"gco - "' # 
+bind -x '"\C-u":"gu "' # 
 
 # IDE
 bind -x '"\eg":"tig"' # tig by c-s-g

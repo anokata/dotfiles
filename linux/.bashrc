@@ -57,8 +57,12 @@ function git_dirty {
     if [[ $status != "" ]]; then echo -e "*"; fi
 }
 
+function git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 # export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
-export PS1="$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
+export PS1="$GREY\w$B \$(git_branch)$R\$(git_dirty)$GRAY\$ $GRAY$RESET"
 
 _nvmrc_hook() {
   if [[ $PWD == $PREV_PWD ]]; then
