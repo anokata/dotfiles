@@ -105,3 +105,6 @@ pip install --user rofimoji
 # sudo chown -R sernam:sernam /home/sernam/*
 
 #https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb
+#sudo apt install ibus-chewing
+#fcitx5
+#	noto-fonts-cjk

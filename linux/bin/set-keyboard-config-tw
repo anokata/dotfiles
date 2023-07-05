@@ -1,0 +1,10 @@
+#!/bin/bash
+
+setxkbmap -option caps:escape
+setxkbmap -layout us,tw -option "grp:alt_shift_toggle,grp:ctrl_rctrl_toggle" &
+#setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" &
+#grp:rctrl_toggle
+#setxkbmap -layout us,ru -option "grp:ctrl_rctrl_toggle"
+#setxkbmap -layout us,ko -option "grp:rshift_toggle, korean:ralt_rctrl"
+#setxkbmap -layout us,ko -option "grp:rshift_toggle"
+#setxkbmap -layout us,ge -option "grp:shift_rshift_toggle"
