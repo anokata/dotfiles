@@ -1,7 +1,8 @@
 #!/bin/bash
 # Ex: Статус за 2022-03-17 (четверг):
 # En: echo "Status for $(date '+%Y-%m-%d') ($(date '+%A'))"
-STATUS="Статус за $(date '+%Y-%m-%d') ($(LC_TIME="ru_RU.UTF-8" date '+%A' | sed 's/[[:upper:]]*/\L&/')):"
+# STATUS="Статус за $(date '+%Y-%m-%d') ($(LC_TIME="ru_RU.UTF-8" date '+%A' | sed 's/[[:upper:]]*/\L&/')):"
+STATUS="Status for $(date '+%Y-%m-%d') ($(LC_TIME="en_EN.UTF-8" date '+%A' | sed 's/[[:upper:]]*/\L&/')):"
 echo $STATUS | xclip
 echo $STATUS | xclip -sel c
 echo $STATUS
