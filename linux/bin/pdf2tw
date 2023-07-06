@@ -1,0 +1,10 @@
+#!/bin/bash
+
+filename=$(basename -- "$1")
+extension="${filename##*.}"
+filename="${filename%.*}"
+input="$filename.$extension"
+output="$filename.txt"
+
+pdftotext "$input"
+cn-to-tw "$output"

@@ -108,3 +108,5 @@ pip install --user rofimoji
 #sudo apt install ibus-chewing
 #fcitx5
 #	noto-fonts-cjk
+# poppler-utils # pdftotext
+# opencc

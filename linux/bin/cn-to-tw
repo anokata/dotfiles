@@ -1,0 +1,10 @@
+#!/bin/bash
+
+filename=$(basename -- "$1")
+extension="${filename##*.}"
+filename="${filename%.*}"
+input="$filename.$extension"
+output="$filename.tw.$extension"
+#https://github.com/BYVoid/OpenCC
+
+opencc -i "$input" -o "$output" -c s2tw.json
