@@ -110,3 +110,5 @@ pip install --user rofimoji
 #	noto-fonts-cjk
 # poppler-utils # pdftotext
 # opencc
+# stardict
+# sdcv
