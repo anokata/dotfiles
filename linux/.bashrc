@@ -64,6 +64,8 @@ function git_branch() {
 # export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 export PS1="$GREY\w$B \$(git_branch)$R\$(git_dirty)$GRAY\$ $GRAY$RESET"
 
+caps-escape
+
 _nvmrc_hook() {
   if [[ $PWD == $PREV_PWD ]]; then
     return

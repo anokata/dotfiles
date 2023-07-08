@@ -112,3 +112,4 @@ pip install --user rofimoji
 # opencc
 # stardict
 # sdcv
+# dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
