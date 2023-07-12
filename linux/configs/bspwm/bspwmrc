@@ -13,7 +13,7 @@ NO_TMUX=1 guake &
 
 xrdb "/home/$(whoami)/.Xresources"
 hsetroot -solid "#202020"
-setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" &
+#setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" &
 setxkbmap -option caps:escape
 
 ### Config

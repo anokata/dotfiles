@@ -113,3 +113,4 @@ pip install --user rofimoji
 # stardict
 # sdcv
 # dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
+#apt install printer-driver-all cups
