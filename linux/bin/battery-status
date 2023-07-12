@@ -6,7 +6,8 @@ trim() {
     var="${var#"${var%%[![:space:]]*}"}"
     # remove trailing whitespace characters
     var="${var%"${var##*[![:space:]]}"}"
-    printf '%s' "$var"
+    # and then add one leading space :D
+    printf ' %s' "$var"
 }
 
 POWER=`upower -i $(upower -e | grep BAT) | grep --color=never -E "percentage" | cut -d":" -f 2`
