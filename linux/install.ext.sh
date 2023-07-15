@@ -114,3 +114,6 @@ pip install --user rofimoji
 # sdcv
 # dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 #apt install printer-driver-all cups
+#Power
+#sudo apt remove power-profiles-daemon
+#sudo powertop --auto-tune
