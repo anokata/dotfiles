@@ -96,7 +96,7 @@ ctrl + super + F11
 alt + d
   rofi-with-aliases
 
-alt + w
+ctrl + alt + w
   rofi -show window
 
 alt + x; r ; k
