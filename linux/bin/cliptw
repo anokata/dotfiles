@@ -1,4 +1,4 @@
 #!/bin/bash
-X=`xclip -o | opencc `
+X=`xclip -o | opencc -c s2tw.json`
 echo $X | xclip
 echo $X | xclip -sel c
