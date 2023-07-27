@@ -4,6 +4,8 @@ alt + x; n ; s
     ndm-time-status
 alt + x; n ; t
     ndm-task-names
+super + t # chinese to traditional
+    cliptw
 # markdown
 alt + x; m ; l
     markdown-clip-convert-to-url
@@ -55,8 +57,8 @@ super + F4
 super + shift + F4
     kitty htop
 # TODO
-super + t
-    term-no-tmux
+# super + t
+    # term-no-tmux
 super + p
     pavucontrol
 super + g

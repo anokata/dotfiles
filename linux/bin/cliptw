@@ -1,0 +1,4 @@
+#!/bin/bash
+X=`xclip -o | opencc `
+echo $X | xclip
+echo $X | xclip -sel c

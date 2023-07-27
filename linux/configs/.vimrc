@@ -37,6 +37,9 @@ source ~/.vim/config/autocmds
 nnoremap <F8> :TagbarToggle<CR>
 nnoremap <C-g> :TagbarToggle<CR>
 
+nnoremap <F5> :!cliptw<CR>
+
+
 nnoremap ZZ :bd<CR>
 nnoremap <S-u> <C-r>
 
