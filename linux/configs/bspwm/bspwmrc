@@ -13,7 +13,8 @@ guake &
 # thunar --daemon &
 
 xrdb "/home/$(whoami)/.Xresources"
-hsetroot -solid "#202020"
+# hsetroot -solid "#202020"
+hsetroot -solid "#000"
 #setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" &
 setxkbmap -option caps:escape
 
