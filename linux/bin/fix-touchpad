@@ -1,0 +1,7 @@
+#!/bin/bash
+# sudo modprobe -r usbhid 
+# sudo modprobe -r psmouse
+# sudo modprobe usbhid 
+# sudo modprobe psmouse
+xinput disable 12
+xinput enable 12
