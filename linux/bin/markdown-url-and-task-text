@@ -3,6 +3,6 @@ LINK=$(xclip -o)
 TASK=$(echo $LINK | rev | cut -d'/' -f 1 | rev)
 FULL_LINK="[$TASK]($LINK)"
 RESULT="$FULL_LINK
-$TASK-fix-
+$TASK-
  ($TASK)"
 clipboard-set "$RESULT"
