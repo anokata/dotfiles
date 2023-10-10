@@ -196,7 +196,7 @@ fun! MkdxRemap()
     nmap <buffer><silent> <C-n> :call MkFileEdit('')<Left><Left>
     nmap <buffer><silent> 33 :call MkFileEdit('')<Left><Left>
     " NOTES: for new line with date (x+1?)
-    nmap <leader>o :TableModeEnable<CR>o\| date<tab> \|\|\|\|\|\|\|\|\|<esc>
+    nmap <leader>o :TableModeEnable<CR>o\| date<tab> \|\|\|<esc>
     " toc 
     " nnoremap <buffer><silent> 
     " <Plug>(mkdx-quickfix-toc) 
