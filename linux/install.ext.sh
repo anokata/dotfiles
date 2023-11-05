@@ -118,3 +118,4 @@ pip install --user rofimoji
 #sudo apt remove power-profiles-daemon
 #sudo powertop --auto-tune
 #network-manager-pptp-gnome
+#localepurge
