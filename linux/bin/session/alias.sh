@@ -70,7 +70,7 @@ alias psa='ps aux'
 alias psg='ps aux | grep '
 alias psm='ps -ef | less'
 alias psf='ps -ef | fzf'
-alias pping='prettyping'
+alias pping='prettyping --nolegend'
 alias p='pping a.cc'
 alias sys-ram='sudo dmidecode -t 17'
 
