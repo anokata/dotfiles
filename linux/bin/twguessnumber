@@ -10,9 +10,9 @@ number=$((1 + $RANDOM % $limit))
 trans -b -p :zh "$number" > /dev/null
 read -p "Enter guess number: " guess
 if [ "$guess" -eq "$number" ]; then
-    echo "You right it is: $number"
+    echo "✅ You right it is: $number"
 else
-    echo "Wrong! was: $number not $guess"
+    echo "❌ Wrong! was: $number not $guess"
 fi
 
 done
