@@ -1,0 +1,18 @@
+#!/bin/bash
+
+limit=100
+read -p "Enter number limit: " limit
+
+while true; do
+
+number=$((1 + $RANDOM % $limit))
+# twstrans "$NUMBER" > /dev/null
+trans -b -p :zh "$number" > /dev/null
+read -p "Enter guess number: " guess
+if [ "$guess" -eq "$number" ]; then
+    echo "You right it is: $number"
+else
+    echo "Wrong! was: $number not $guess"
+fi
+
+done

@@ -119,3 +119,4 @@ pip install --user rofimoji
 #sudo powertop --auto-tune
 #network-manager-pptp-gnome
 #localepurge
+#translate-shell
