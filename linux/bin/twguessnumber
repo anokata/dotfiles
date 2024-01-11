@@ -1,11 +1,13 @@
 #!/bin/bash
 
-limit=100
-read -p "Enter number limit: " limit
+begin=${1:-1}
+limit=${2:-100}
+max=$(($limit - $begin))
+echo "[$begin;$limit] /$max"
 
 while true; do
 
-number=$((1 + $RANDOM % $limit))
+number=$(( $begin + $RANDOM % $max))
 # twstrans "$NUMBER" > /dev/null
 trans -b -p :zh "$number" > /dev/null
 read -p "Enter guess number: " guess
