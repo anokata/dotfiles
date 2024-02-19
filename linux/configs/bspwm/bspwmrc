@@ -42,12 +42,13 @@ bspc rule -a mpv state=fullscreen
 bspc rule -a thunar desktop='^2'
 bspc rule -a Code desktop='^1' state=fullscreen
 bspc rule -a Slack desktop='^3' state=fullscreen 
-bspc rule -a TelegramDesktop desktop='^3'
+bspc rule -a TelegramDesktop desktop='^5'
 # bspc rule -a obsidian desktop='^9'
 # bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Guake state=floating
 bspc rule -a PureRef state=floating
 bspc rule -a Peek state=floating
+bspc rule -a Zathura state=tiled
 bspc rule -a clipstudiopaint.exe state=floating
 bspc rule -a jetbrains-webstorm desktop='^1'
 
