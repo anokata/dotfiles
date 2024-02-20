@@ -120,3 +120,6 @@ pip install --user rofimoji
 #network-manager-pptp-gnome
 #localepurge
 #translate-shell
+sudo apt install ibus-libzhuyin
+sudo apt install wireguard
+
