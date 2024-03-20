@@ -17,4 +17,19 @@ cmap у e
 cmap ф a
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-" ,ㄇㄖㄏㄎㄍㄑㄕㄘㄛㄨㄜㄠㄩㄙㄟㄣㄆㄐㄋㄔㄧㄒㄊㄌㄗㄈ;abcdefghijklmnopqrstuvwxyz
+"ㄇㄖㄏㄎㄍㄑㄕㄘㄛㄨㄜㄠㄩㄙㄟㄣㄆㄐㄋㄔㄧㄒㄊㄌㄗㄈ;abcdefghijklmnopqrstuvwxyz
+"
+" map zhuyin
+" moving normal in zhwn
+nmap ㄤ :
+nmap ㄛ i
+nmap ㄨ j
+nmap ㄜ k
+nmap ㄇ a
+nmap 【 A
+nmap ㄝ ,
+nmap ㄡ .
+cmap ㄊ w
+cmap ㄆ q
+cmap ㄌ x
+cmap ㄍ e
