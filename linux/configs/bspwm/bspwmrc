@@ -39,7 +39,7 @@ bspc rule -a Google-chrome desktop='^2'
 bspc rule -a kitty desktop='^1' state=fullscreen
 bspc rule -a St state=fullscreen
 bspc rule -a mpv state=fullscreen
-bspc rule -a thunar desktop='^2'
+# bspc rule -a Thunar desktop='^4'
 bspc rule -a Code desktop='^1' state=fullscreen
 bspc rule -a Slack desktop='^3' state=fullscreen 
 bspc rule -a TelegramDesktop desktop='^5'
@@ -59,9 +59,10 @@ nm-applet &
 dropboxd &
 $HOME/.config/polybar/launch.sh
 #run-if-not kitty
-pidof kitty >/dev/null || kitty &
+# pidof kitty >/dev/null || kitty &
 pidof chrome >/dev/null || google-chrome &
-pidof slack >/dev/null || slack &
+# pidof slack >/dev/null || slack &
+# pidof thunar >/dev/null || thunar &
 pidof Telegram >/dev/null || Telegram &
 
 bspc rule -r kitty
