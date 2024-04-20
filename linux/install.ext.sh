@@ -122,4 +122,4 @@ pip install --user rofimoji
 #translate-shell
 sudo apt install ibus-libzhuyin
 sudo apt install wireguard
-
+apti ibus-typing-booster
