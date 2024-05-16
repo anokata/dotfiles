@@ -1,4 +1,8 @@
 ### chain keys
+alt + j
+    xdotool sleep 0.2 getwindowfocus key --window %@ Down
+# alt + k
+#     xdotool sleep 0.2 getwindowfocus key --window %@ Up
 # ndm
 alt + x; n ; s
     ndm-time-status
