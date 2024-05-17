@@ -63,7 +63,7 @@ $HOME/.config/polybar/launch.sh
 pidof chrome >/dev/null || google-chrome &
 # pidof slack >/dev/null || slack &
 # pidof thunar >/dev/null || thunar &
-pidof Telegram >/dev/null || Telegram &
+# pidof Telegram >/dev/null || Telegram &
 
 bspc rule -r kitty
 bspc rule -a kitty state=fullscreen
