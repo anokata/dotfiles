@@ -8,6 +8,8 @@ alt + x; n ; s
     ndm-time-status
 alt + x; n ; t
     ndm-task-names
+alt + x; n ; p
+    clipboard-set "$(zh-dict-pretty.js)"
 super + t # chinese to traditional
     cliptw
 # markdown
