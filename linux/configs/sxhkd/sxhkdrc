@@ -113,8 +113,8 @@ alt + x; r ; k
 # ctrl + alt + d
   # bash -i -c $(list-alias | rofi -dmenu)
 
-ctrl + shift + v
-  rofi-snip
+# ctrl + shift + v
+#   rofi-snip
 
 ##### sound
 super + ctrl + 9
