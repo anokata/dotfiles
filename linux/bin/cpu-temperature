@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e `sensors | grep Core | cut -d+ -f 2 | cut -d" " -f 1 | tr "\n" " " | cut -d" " -f 1 | tr -d C`
+echo -e `sensors | grep CPU | cut -d+ -f 2 | cut -d" " -f 1 | tr "\n" " " | cut -d" " -f 1 | tr -d C`
