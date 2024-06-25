@@ -36,8 +36,8 @@ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
 cd $GITS_DIR
 # i yandex-disk
-wget -O yandex.deb https://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb
-sudo apt install ./yandex.deb -y
+# wget  -O yandex.deb https://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb
+# sudo apt install ./yandex.deb -y
 # TODO auth
 
 echo "Mega..."
