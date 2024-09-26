@@ -3,6 +3,7 @@ alias cdn4="cd $WORK_DIR/ndw4/"
 alias cdnisw="cd $WORK_DIR/isw/"
 alias cdnw="cd $WORK_DIR/isw/"
 alias cdns="cd $WORK_DIR/ndw3-storybook/"
+alias cdnq="cd $WORK_DIR/qemu/"
 
 alias ndm-keenetic-telnet="telnet $KEENETIC_IP"
 alias keenetic-telnet="telnet $KEENETIC_IP"
