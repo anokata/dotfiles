@@ -1,5 +1,6 @@
 alias cdn2="cd $WORK_DIR/ndw2/"
 alias cdn4="cd $WORK_DIR/ndw4/"
+alias cdn5="cd $WORK_DIR/ndw5/"
 alias cdnisw="cd $WORK_DIR/isw/"
 alias cdnw="cd $WORK_DIR/isw/"
 alias cdns="cd $WORK_DIR/ndw3-storybook/"
