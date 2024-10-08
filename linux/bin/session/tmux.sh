@@ -14,7 +14,7 @@ function _tmux_run () {
             # tmux new-window -c $DOTFILES_LINUX
             # tmux new-window vim $NOTES_DIR
             tmux rename-window "dot"
-            tmux new-window -c $WORK_DIR_CURRENT2 -n ndw5
+            tmux new-window -c $WORK_DIR_CURRENT5 -n ndw5
             # tmux split-window -c $WORK_DIR_CURRENT2
             tmux new-window -c $WORK_DIR_CURRENT -n ndw4
             tmux split-window -c $WORK_DIR_CURRENT
