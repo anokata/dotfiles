@@ -41,6 +41,7 @@ bind -x '"\C-b":"bashrc-reload "' #
 bind -x '"\C-x":"gcom "' # 
 bind -x '"\C-e":"gco - "' # 
 bind -x '"\C-u":"gu "' # 
+# bind -x '"\C-w":"arp -a "' # arp -a
 
 # IDE
 bind -x '"\eg":"tig"' # tig by c-s-g
