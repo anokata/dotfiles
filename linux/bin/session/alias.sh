@@ -20,6 +20,8 @@ alias cdn="cd $WORK_DIR"
 alias cdref="cd $REF_FORME"
 alias cdscr="cd $SCREENS_DIR"
 alias cdg="cd $HOME/gits"
+alias cdp="cd $HOME/pwn"
+alias cdw="cd $HOME/pwn"
 alias c="pushd "
 
 # color
