@@ -1,0 +1,9 @@
+#!/bin/bash
+SSID="KeeneticOffice-5G"
+PASS=$(cat ~/.wifi-office)
+
+sudo nmcli device wifi connect $SSID password $PASS
+sudo ip route del default via 192.168.2.1
+sudo ip route add default via 192.168.2.1 dev wlan0 metric 100
+sudo ip route del default via 192.168.24.1
+sudo ip route add default via 192.168.24.1 dev eth0 metric 500

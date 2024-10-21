@@ -25,8 +25,8 @@ ctrl + alt + t
     term-no-tmux
 ctrl + super + F1
     google-chrome
-ctrl + super + F2
-    webstorm.sh
+# ctrl + super + F2
+    # webstorm.sh
 ctrl + super + F4
     thunar
     # nautilus
@@ -52,6 +52,8 @@ ctrl + super +shift + F1
     kitty calcurse
 ctrl + super + F3
     kitty calcurse
+ctrl + super + F2
+    kitty nmtui
 super + F2
     kitty nvim +":Prosession $NOTES_DIR"
 super + F3
