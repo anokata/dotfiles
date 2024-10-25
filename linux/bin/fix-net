@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo rfkill unblock all
+sudo dhclient
+# sudo ifdown eth0 && sudo ifup eth0
