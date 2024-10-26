@@ -1,0 +1,9 @@
+#!/bin/bash
+
+PASS=$(sudo cat ~/.sstp2)
+USER="sttp2"
+SERVER="tw-ksi-viva.keenetic.pro"
+echo "got password"
+echo "connecting to $USER@$SERVER"
+sudo sstpc --user $USER --password $PASS $SERVER --log-level 4 usepeerdns require-mschap-v2 nomppe noauth defaultroute
+
