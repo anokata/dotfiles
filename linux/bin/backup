@@ -57,6 +57,8 @@ ls -lha $BACKUPS_YDX
 cp -r $BACKUPS/* $BACKUPS_YDX
 cp -r $BACKUPS/* $BACKUPS_HDD
 
+# ~/.steam/steam/steamapps/compatdata/4265787326/pfx/drive_c/users/steamuser/AppData/Roaming/Nippon Ichi Software, Inc/Disgaea 7
+
 
 # TODO
     # Backup to external hdd
