@@ -7,16 +7,18 @@ alias cdnq="cd $WORK_DIR/qemu/"
 alias wireguard-test="sudo wg-quick up wg-test"
 alias cdnisw="cd $WORK_DIR/isw/"
 
+export SSH_PORT=22
 alias ndm-keenetic-telnet="telnet $KEENETIC_IP"
 alias keenetic-telnet="telnet $KEENETIC_IP"
-alias keenetic-ssh="ssh admin@$KEENETIC_IP -p 2022"
+alias keenetic-ssh="ssh admin@$KEENETIC_IP -p $SSH_PORT"
 alias ndm-cbox="ssh sernam@cbox.ndm9.net"
-alias ndm-ssh-local="ssh admin@$KEENETIC_IP -p 2022"
-# TODO: Add read password from file
-alias ndm-keenetic-ssh-local="ssh admin@$KEENETIC_IP -p 2022"
+alias ndm-ssh-local="ssh admin@$KEENETIC_IP -p $SSH_PORT"
+alias ndm-keenetic-ssh-local="ssh admin@$KEENETIC_IP -p $SSH_PORT"
 alias ndm-keenetic-show-arp='ndm-ssh-local show ip arp'
 alias ndm-keenetic-show-route='ndm-ssh-local show ip route'
-#alias ndm-ssh-local-default='sshpass -f $PASSWORD_DEFAULT ssh admin@$KEENETIC_IP -p 2022'
+# TODO: Add read password from file
+#alias kssh="ssh admin@$KEENETIC_IP -p 22"
+#alias ndm-ssh-local-default='sshpass -f $PASSWORD_DEFAULT ssh admin@$KEENETIC_IP -p $SSH_PORT'
 
 alias ndm-start-local="npm start $KEENETIC_IP"
 alias ndm-start-local2="npx gulp serve -P $KEENETIC_IP"

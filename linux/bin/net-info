@@ -1,0 +1,8 @@
+#!/bin/bash
+curl icanhazip.com
+echo
+ip r | grep default
+echo
+arp -a #| tail -n +2
+echo
+ip n

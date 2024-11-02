@@ -1,6 +1,6 @@
 #!/bin/bash
 SSID="KeeneticOffice-5G"
-PASS=$(cat ~/.wifi-office)
+PASS=$(cat ~/.secrets/.wifi-office)
 
 sudo nmcli device wifi connect $SSID password $PASS
 sudo ip route del default via 192.168.2.1
