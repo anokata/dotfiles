@@ -2,4 +2,4 @@
 source $DOTFILES/linux/.env
 IP="$1"
 [ -z "$1" ] && IP="192.168.1.1"
-sshpass -f $PASSWORD_DEFAULT ssh admin@$KEENETIC_IP -p 2022 $@
+sshpass -f $PASSWORD_DEFAULT ssh adminssh@$KEENETIC_IP -p $SSH_PORT $@

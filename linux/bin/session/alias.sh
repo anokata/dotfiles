@@ -13,7 +13,6 @@ alias ....='cd ../../..'
 alias cdd="cd $DOTFILES"
 alias cda="cd $HDD1"
 alias cdb="cd $HDD2"
-alias cds="cd $SSD"
 alias cdc="cd $DOTFILES_CONFIGS"
 alias cdl="cd $LINKS_DIR"
 alias cdn="cd $WORK_DIR"
