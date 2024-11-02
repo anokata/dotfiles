@@ -1,2 +1,0 @@
-PowerShell.exe -windowstyle hidden Invoke-WebRequest http://www.yr.no/place/Russia/Yaroslavl/Rybinsk/avansert_meteogram.png -OutFile c:\avansert_meteogram.png
-start /min d:\progs\iview454_x64\i_view64.exe c:\avansert_meteogram.png

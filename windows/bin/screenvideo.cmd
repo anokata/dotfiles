@@ -1,1 +1,0 @@
-D:\progs\ffmpeg-2020-09-27-git-a3a6b56200-full_build\bin\ffmpeg.exe -i ".mp4" -vf fps=1 smnt%%02d.jpg

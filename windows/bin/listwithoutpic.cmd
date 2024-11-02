@@ -1,1 +1,0 @@
-dir /s /b | findstr /v /i "\.jpg$" | findstr /v /i "\.png$" > filedir.txt

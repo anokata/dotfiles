@@ -1,1 +1,0 @@
-ffmpeg -y -i %1 -filter:v "setpts=1.3*PTS" "%~n1_slow%~x1"

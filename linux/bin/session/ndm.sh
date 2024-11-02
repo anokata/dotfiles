@@ -1,21 +1,22 @@
+# most used
 alias cdn2="cd $WORK_DIR/ndw2/"
 alias cdn4="cd $WORK_DIR/ndw4/"
 alias cdn5="cd $WORK_DIR/ndw5/"
-alias cdnisw="cd $WORK_DIR/isw/"
 alias cdnw="cd $WORK_DIR/wireguard/"
-alias cdns="cd $WORK_DIR/ndw3-storybook/"
 alias cdnq="cd $WORK_DIR/qemu/"
 alias wireguard-test="sudo wg-quick up wg-test"
+alias cdnisw="cd $WORK_DIR/isw/"
 
 alias ndm-keenetic-telnet="telnet $KEENETIC_IP"
 alias keenetic-telnet="telnet $KEENETIC_IP"
 alias keenetic-ssh="ssh admin@$KEENETIC_IP -p 2022"
 alias ndm-cbox="ssh sernam@cbox.ndm9.net"
 alias ndm-ssh-local="ssh admin@$KEENETIC_IP -p 2022"
-#alias ndm-ssh-local-default='sshpass -f $PASSWORD_DEFAULT ssh admin@$KEENETIC_IP -p 2022'
+# TODO: Add read password from file
 alias ndm-keenetic-ssh-local="ssh admin@$KEENETIC_IP -p 2022"
 alias ndm-keenetic-show-arp='ndm-ssh-local show ip arp'
 alias ndm-keenetic-show-route='ndm-ssh-local show ip route'
+#alias ndm-ssh-local-default='sshpass -f $PASSWORD_DEFAULT ssh admin@$KEENETIC_IP -p 2022'
 
 alias ndm-start-local="npm start $KEENETIC_IP"
 alias ndm-start-local2="npx gulp serve -P $KEENETIC_IP"

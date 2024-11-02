@@ -6,8 +6,6 @@
         - `.vim` - vim configs
     - `.bashrc` - shell config, will source: bin/session/
     - `.env` - variables
-- `mac` - mac os configs
-- `windows` - win configs and scripts
 
 `configs`: all than should be in $HOME or $HOME/.config
     - `.vim` - vim configs + `.vimrc`
