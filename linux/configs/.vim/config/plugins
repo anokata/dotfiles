@@ -40,6 +40,9 @@ Plug 'tpope/vim-eunuch'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
+Plug 'chentoast/marks.nvim'
+" Plug 'MattesGroeger/vim-bookmarks'
+
 
 " Plug 'tveskag/nvim-blame-line'
 
@@ -59,7 +62,7 @@ Plug 'chamindra/marvim'
 " Plug 'dhruvasagar/vim-dotoo'
 "Plug 'tpope/vim-vinegar'
 " Plug 'gorodinskiy/vim-coloresque'
-
+" Plug 'Yilin-Yang/vim-markbar'
 " FM
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'

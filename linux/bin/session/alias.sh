@@ -51,12 +51,14 @@ alias bat="batcat"
 alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}' --preview-window=right:70%:wrap"
 alias fzfi="fzf-ueberzogen.sh"
 alias vim="nvim"
-alias notes='vim `fzf`'
-alias ksi-notes="cd $NOTES_DIR && $TERMINAL -e $EDITOR +\":Prosession $NOTES_DIR\""
-alias ksi-config="cd $DOTFILES_LINUX && $TERMINAL -e $EDITOR +\":Prosession $DOTFILES_LINUX\""
 alias lfc='tmux split -h lf; lf'
 alias lf='lfrun'
 alias tcf='tar cf'
+
+# [Notes]
+alias notes='vim `fzf`'
+alias ksi-notes="cd $NOTES_DIR && $TERMINAL -e $EDITOR +\":Prosession $NOTES_DIR\""
+alias ksi-config="cd $DOTFILES_LINUX && $TERMINAL -e $EDITOR +\":Prosession $DOTFILES_LINUX\""
 
 # links
 alias lns="ln -s "
@@ -124,12 +126,15 @@ alias git-stash-and-drop='git stash && git stash drop'
 alias gch='_fco_preview'
 alias ghpr='gh pr create --web'
 alias ghd='gh dash'
+alias ghs='gh pr status'
 
 # Dev
 alias adbstart='sudo adb start-server'
 alias adbs='sudo adb start-server'
 alias lognge='sudo tail -f /var/log/nginx/error.log'
 alias lognga='sudo tail -f /var/log/nginx/access.log'
+alias syslog="sudo tail -f /var/log/syslog"
+alias dmesg="dmesg -w"
 
 alias pdfone='pdfunite *.pdf one.pdf'
 alias djvu-txt='djvutxt $1 | less'
@@ -137,7 +142,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias watchtime="watch -tc -n0.1 date +%T.%2N"
 alias watchtm="watch -tc -n0.1 timed"
-alias update="sudo pacman -Syu"
+# alias update="sudo pacman -Syu"
 alias end='systemctl poweroff'
 alias clr='clear'
 
@@ -153,12 +158,6 @@ alias ref-me="cd $REF_TOME; fer"
 alias ref-art="cd $REF_ART; fer"
 alias ref-paint="cd $REF_PAINT; fer"
 alias ref-photo="cd $REF_PHOTO; fer"
-alias ref-prn="cd $REF_PRN; fer"
-alias ref-still="cd $REF_STILL; fer"
-alias ref-study="cd $REF_STUDY; fer"
-alias ref-forme="cd $REF_FORME; fer"
-alias ref-manga="cd $REF_MANGA; fer"
-alias ref-ppref="cd $REF_PPREF; fer"
 
 # sys config
 alias xresources-reload='xrdb ~/.Xresources'

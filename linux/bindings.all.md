@@ -25,3 +25,12 @@ c-w-f mpd file
 
 # vim
 a-c color
+
+
+# Alias
+- [ ] use more, alias
+    gch
+    ghd
+    tig
+    config-*
+    config-vim
