@@ -45,7 +45,6 @@ bspc rule -a Anki desktop='^3'
 bspc rule -a Code desktop='^1' state=fullscreen
 bspc rule -a Slack desktop='^3' state=fullscreen 
 bspc rule -a TelegramDesktop desktop='^5'
-# bspc rule -a obsidian desktop='^9'
 # bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Guake state=floating
 bspc rule -a PureRef state=floating
@@ -63,6 +62,7 @@ $HOME/.config/polybar/launch.sh
 #run-if-not kitty
 # pidof kitty >/dev/null || kitty &
 pidof chrome >/dev/null || google-chrome &
+pidof anki >/dev/null || anki &
 # pidof slack >/dev/null || slack &
 # pidof thunar >/dev/null || thunar &
 # pidof Telegram >/dev/null || Telegram &
