@@ -46,3 +46,4 @@ alias ndm-opkg="ssh root@$KEENETIC_IP -p 222"
 alias ndm-git-clone-ndw2="cd $WORK_DIR; git clone $WORK_REPO_NDW2"
 alias ndm-git-clone-ndw3="cd $WORK_DIR; git clone $WORK_REPO_NDW3"
 
+alias ndm-yas="yarn start --addr"

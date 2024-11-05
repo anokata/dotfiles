@@ -74,7 +74,7 @@ alias psg='ps aux | grep '
 alias psm='ps -ef | less'
 alias psf='ps -ef | fzf'
 alias pping='prettyping --nolegend'
-alias p='pping a.cc'
+alias p='pping 8.8.8.8'
 alias sys-ram='sudo dmidecode -t 17'
 
 # Finding
