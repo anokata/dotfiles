@@ -217,16 +217,18 @@ alias mpc-all="mpc clear && mpc ls | mpc add"
 # Org
 alias vimdoc="$EDITOR $NOTES_DIR"
 
+# kbd/input
 alias caps-toggle='xdotool key Caps_Lock'
 alias caps-escape='setxkbmap -option caps:escape'
-alias wm-window-name='xprop | grep WM_CLASS'
-alias wm-window-class='xprop | grep WM_CLASS'
 
 # Wm
+alias wm-window-name='xprop | grep WM_CLASS'
+alias wm-window-class='xprop | grep WM_CLASS'
 alias wm-name="printf '%s' $XDG_CURRENT_DESKTOP"
 alias wm-type="wmctrl -m"
 alias wm-is-i3='[ "$(wm-name)" = "i3" ] && echo 1 || echo 0'
 
+### APT
 alias apti="sudo apt install"
 alias apts="apt search"
 alias aptr="sudo apt remove"
@@ -236,13 +238,15 @@ alias aptg="sudo apt upgrade"
 alias apt-installed='apt list --installed'
 alias aptsi="apt-installed | rg"
 alias aptc="sudo apt autoremove && sudo apt clean"
-alias clean="sudo apt autoremove && sudo apt clean; journalctl --vacuum-time=2d; sudo rm -rf /var/lib/snapd/cache/*"
+alias sysclean="sudo apt autoremove && sudo apt clean; journalctl --vacuum-time=2d; sudo rm -rf /var/lib/snapd/cache/*"
 alias dir-colors-update='eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)'
 
-# Curl sites
+# NET/Curl.sites
 alias ip-info="curl ipinfo.io"
-# alias weather="curl wttr.in/Moscow"
-alias weather="finger moscow@graph.no"
+alias my-ip="curl icanhazip.com"
+alias get-ip="wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
+alias weather0="curl wttr.in/Taipei"
+alias weather="finger taipei@graph.no"
 
 function cheat() {
     curl "cheat.sh/$@"
@@ -252,8 +256,6 @@ function dict() {
 }
 
 alias .pmd=".pm 1b9c3114-d62d-43b1-b14a-971f66302007"
-alias my-ip="curl icanhazip.com"
-alias get-ip="wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 
 alias net-ports="netstat -tunlp"
 

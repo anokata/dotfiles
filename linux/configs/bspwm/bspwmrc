@@ -60,11 +60,8 @@ nm-applet &
 dropboxd &
 $HOME/.config/polybar/launch.sh
 #run-if-not kitty
-# pidof kitty >/dev/null || kitty &
 pidof chrome >/dev/null || google-chrome &
 pidof anki >/dev/null || anki &
-# pidof slack >/dev/null || slack &
-# pidof thunar >/dev/null || thunar &
 # pidof Telegram >/dev/null || Telegram &
 
 bspc rule -r kitty
