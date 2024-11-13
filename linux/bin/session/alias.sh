@@ -233,12 +233,13 @@ alias wm-is-i3='[ "$(wm-name)" = "i3" ] && echo 1 || echo 0'
 alias apti="sudo apt install"
 alias apts="apt search"
 alias aptr="sudo apt remove"
-alias aptr="sudo apt purge"
+alias aptpr="sudo apt purge"
 alias aptu="sudo apt update"
 alias aptg="sudo apt upgrade"
 alias apt-installed='apt list --installed'
 alias aptsi="apt-installed | rg"
 alias aptc="sudo apt autoremove && sudo apt clean"
+
 alias sysclean="sudo apt autoremove && sudo apt clean; journalctl --vacuum-time=2d; sudo rm -rf /var/lib/snapd/cache/*"
 alias dir-colors-update='eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)'
 
@@ -258,9 +259,9 @@ function dict() {
 
 alias .pmd=".pm 1b9c3114-d62d-43b1-b14a-971f66302007"
 
+# NETWORK
 alias net-ports="netstat -tunlp"
-
-# enumeration
+# Pentest/enumeration
 alias nmapsvsc="nmap -sV -sC"
 alias enum-nmap="nmap -sV -sC"
 
