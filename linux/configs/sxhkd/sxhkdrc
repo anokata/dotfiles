@@ -117,9 +117,6 @@ alt + x; r ; k
 # ctrl + alt + d
   # bash -i -c $(list-alias | rofi -dmenu)
 
-# ctrl + shift + v
-#   rofi-snip
-
 ##### sound
 super + ctrl + 9
   pacmd set-default-sink 0
@@ -353,4 +350,7 @@ super + shift + {h,l}
 #super + alt + space 
 #notify-send 'Restarting wifi interface..  *_*';\
 #nmcli radio wifi off ; nmcli radio wifi on
+
+# ctrl + shift + v
+#   rofi-snip
 

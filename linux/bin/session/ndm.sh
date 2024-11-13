@@ -37,13 +37,12 @@ alias ndm-del-modem="ndm-ssh-local no interface UsbModem2"
 alias ndm-add-modem-cdc="ndm-ssh-local interface CdcEthernet8"
 alias ndm-del-modem-cdc="ndm-ssh-local no interface CdcEthernet8"
 
-alias ndm-task-status-done="echo '(done, ndw3-without-isw)' | xclip -sel c"
 alias ndm-task-status-review="echo '(review, ndw3-without-isw)' | xclip -sel c"
 alias ndm-task-status-dev="echo '(dev, ndw3-without-isw)' | xclip -sel c"
 alias ndm-test-domain="npm run ng-test src/domain/pages/"
-alias ndm-opkg="ssh root@$KEENETIC_IP -p 222"
+alias ndm-opkg="ssh root@$KEENETIC_IP -p $SSH_PORT"
 
 alias ndm-git-clone-ndw2="cd $WORK_DIR; git clone $WORK_REPO_NDW2"
-alias ndm-git-clone-ndw3="cd $WORK_DIR; git clone $WORK_REPO_NDW3"
+alias ndm-git-clone-ndw4="cd $WORK_DIR; git clone $WORK_REPO_NDW4"
 
 alias ndm-yas="yarn start --addr"
