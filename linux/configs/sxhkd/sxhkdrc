@@ -1,17 +1,16 @@
+##TODO
+#open googlemaps
 ### chain keys
 alt + j
     xdotool sleep 0.2 getwindowfocus key --window %@ Down
 # alt + k
 #     xdotool sleep 0.2 getwindowfocus key --window %@ Up
-# ndm
+
+# Work/ndm
 alt + x; n ; s
     ndm-time-status
 alt + x; n ; t
     ndm-task-names
-alt + x; n ; p
-    clipboard-set "$(zh-dict-pretty.js)"
-super + t # chinese to traditional
-    cliptw
 # markdown
 alt + x; m ; l
     markdown-clip-convert-to-url
@@ -21,12 +20,8 @@ alt + x; m ; t
 # Applications
 alt + Return
     kitty
-ctrl + alt + t
-    term-no-tmux
 ctrl + super + F1
     google-chrome
-# ctrl + super + F2
-    # webstorm.sh
 ctrl + super + F4
     thunar
     # nautilus
@@ -38,10 +33,7 @@ ctrl + super + F7
     flameshot-gui
 ctrl + super + F8
     peek
-ctrl + super + F9
-    krita
-super + F9
-    kitty fmui-run
+# TODO: FIX
 super + F10
     kitty ncmpcpp
 ctrl + super + F11
@@ -354,3 +346,13 @@ super + shift + {h,l}
 # ctrl + shift + v
 #   rofi-snip
 
+# CN ZH TW
+#alt + x; n ; p
+    #clipboard-set "$(zh-dict-pretty.js)"
+super + t # chinese to traditional
+    cliptw
+
+# ctrl + alt + t
+#     term-no-tmux
+# ctrl + super + F2
+    # webstorm.sh

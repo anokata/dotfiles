@@ -1,0 +1,31 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# systemd generates mount units based on this file, see systemd.mount(5).
+# Please run 'systemctl daemon-reload' after making changes here.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/nvme0n1p2 during installation
+UUID=3707e0b8-f77b-43cb-9787-6a95784707b2 /               ext4    errors=remount-ro 0       1
+# /boot/efi was on /dev/nvme0n1p1 during installation
+UUID=6FCD-0EE8  /boot/efi       vfat    umask=0077      0       1
+# swap was on /dev/nvme0n1p3 during installation
+UUID=8c3c4270-f4cb-49fe-9380-7bf6a4cf3304 none            swap    sw              0       0
+
+# ssd 480G
+UUID=a8b4be5f-22f9-43bc-abc7-d96646f649d8 /media/ksi/bdata ext4 noauto,nofail,noatime,rw,user 0 0
+# hdd 1T
+UUID=005AD8142222C6B9 /media/ksi/data ntfs noauto,nofail,noatime,rw,user 0 0
+# hdd 250G
+UUID=da5ebe2f-55b1-4780-8812-6ac0bec6a73d /media/ksi/cdata ext4 noauto,nofail,noatime,rw,user 0 0
+# ssd 240G
+# ,x-systemd.device-timeout=1
+UUID=78faf4f6-d8f4-4892-ae16-a0f1ee6c7682 /media/ksi/ddata ext4 noauto,nofail,noatime,rw,user,exec 0 0
+# ssd 1Tb /dev/nvme0n1p1
+UUID=00610c64-34c1-4cc9-acfe-5b2752f486fa /media/ksi/adata ext4 auto,nofail,noatime,rw,user,exec 0 0
+
+# swap
+/swapfile none swap defaults,discard 0 0

@@ -15,9 +15,19 @@ c-o fzf & vim open NOTES
 
 # wm/sxhkd
 ## apps
-c-s-w-f1 cal
-w-f1 lf
-w-f2 vim notes
+| key               | app              |
+|-------------------|------------------|
+| alt + Return      | kitty            |
+| ctrl + super + F1 | google-chrome    |
+| ctrl + super + F4 | thunar           |
+| ctrl + super + F5 | keepassxc        |
+| ctrl + super + F6 | transmission-gtk |
+| ctrl + super + F7 | flameshot-gui    |
+| ctrl + super + F8 | peek             |
+| ctrl-shift-win-f1 | cal              |
+| win-f1            | lf               |
+| win-f2            | vim notes        |
+
 
 ## lf
 
@@ -33,4 +43,8 @@ c-w-f mpd file
 # vim
 a-c color
 
-
+# WORK
+alt + x; n ; s
+alt + x; n ; t
+alt + x; m ; l
+alt + x; m ; t
