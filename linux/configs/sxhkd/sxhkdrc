@@ -36,12 +36,10 @@ ctrl + super + F8
 # TODO: FIX
 super + F10
     kitty ncmpcpp
-ctrl + super + F11
-    csp
 super + F1
     kitty lfrun
 super + F5
-    kitty lfrun "/home/ksi/Dropbox/doc/renew/"
+    kitty lfrun "/home/ksi/Dropbox/doc/"
 ctrl + super +shift + F1
     kitty calcurse
 ctrl + super + F3
@@ -356,3 +354,5 @@ super + t # chinese to traditional
 #     term-no-tmux
 # ctrl + super + F2
     # webstorm.sh
+#ctrl + super + F11
+#    csp # clip studio draw

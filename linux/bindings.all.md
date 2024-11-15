@@ -17,6 +17,8 @@ c-o fzf & vim open NOTES
 ## apps
 | key               | app              |
 |-------------------|------------------|
+| super + F1        | kitty lfrun      |
+| super + F5        | kitty lfrun doc  |
 | alt + Return      | kitty            |
 | ctrl + super + F1 | google-chrome    |
 | ctrl + super + F4 | thunar           |
