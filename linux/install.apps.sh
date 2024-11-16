@@ -1,4 +1,5 @@
 #!/bin/bash
+echo 'Start install apps...'
 source $DOTFILES_SESSION/alias.sh
 function i() {
     sudo apt install $@ -y
@@ -123,3 +124,4 @@ i tftpd-hpa
 #i libspa-0.2-bluetooth pipewire blueman bluez
 #pipewire-audio-client-libraries
 #USERHID /etc/bluetooth/input.conf
+echo 'apps installed [ok]'
