@@ -21,6 +21,8 @@ c-o fzf & vim open NOTES
 | super + F5        | kitty lfrun doc  |
 | alt + Return      | kitty            |
 | ctrl + super + F1 | google-chrome    |
+| ctrl + super + F3 | kitty calcurse   |
+| ctrl + super + F2 | kitty nmtui      |
 | ctrl + super + F4 | thunar           |
 | ctrl + super + F5 | keepassxc        |
 | ctrl + super + F6 | transmission-gtk |

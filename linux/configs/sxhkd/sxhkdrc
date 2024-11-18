@@ -22,6 +22,10 @@ alt + Return
     kitty
 ctrl + super + F1
     google-chrome
+ctrl + super + F2
+    kitty nmtui
+ctrl + super + F3
+    kitty calcurse
 ctrl + super + F4
     thunar
     # nautilus
@@ -40,20 +44,14 @@ super + F1
     kitty lfrun
 super + F5
     kitty lfrun "/home/ksi/Dropbox/doc/"
-ctrl + super +shift + F1
-    kitty calcurse
-ctrl + super + F3
-    kitty calcurse
-ctrl + super + F2
-    kitty nmtui
 super + F2
     kitty nvim +":Prosession $NOTES_DIR"
 super + F3
     kitty nvim +":Prosession ~/dotfiles"
-shift + super + F2
-    kitty nvim +":Prosession $WORK_DIR_CURRENT"
 super + F4
     kitty htop
+shift + F5
+    kitty nvim +":Prosession $WORK_DIR_CURRENT"
 super + shift + F4
     kitty htop
 # TODO
