@@ -1,6 +1,8 @@
 ##TODO
 #open googlemaps
-### chain keys
+# FIX
+# super + F10
+#     kitty ncmpcpp
 alt + j
     xdotool sleep 0.2 getwindowfocus key --window %@ Down
 # alt + k
@@ -37,26 +39,20 @@ ctrl + super + F7
     flameshot-gui
 ctrl + super + F8
     peek
-# TODO: FIX
-super + F10
-    kitty ncmpcpp
 super + F1
     kitty lfrun
-super + F5
-    kitty lfrun "/home/ksi/Dropbox/doc/"
 super + F2
     kitty nvim +":Prosession $NOTES_DIR"
 super + F3
     kitty nvim +":Prosession ~/dotfiles"
 super + F4
     kitty htop
-shift + F5
+super + F5
+    kitty lfrun "/home/ksi/Dropbox/doc/"
+shift + F6
     kitty nvim +":Prosession $WORK_DIR_CURRENT"
-super + shift + F4
-    kitty htop
-# TODO
-# super + t
-    # term-no-tmux
+super + t
+    term-no-tmux
 super + p
     pavucontrol
 super + g
@@ -345,11 +341,8 @@ super + shift + {h,l}
 # CN ZH TW
 #alt + x; n ; p
     #clipboard-set "$(zh-dict-pretty.js)"
-super + t # chinese to traditional
-    cliptw
-
-# ctrl + alt + t
-#     term-no-tmux
+# super + t # chinese to traditional
+#     cliptw
 # ctrl + super + F2
     # webstorm.sh
 #ctrl + super + F11
