@@ -17,6 +17,14 @@ c-o fzf & vim open NOTES
 ## apps
  | key                        | app                  |
  |----------------------------|----------------------|
+ | alt + d                    | rofi-with-aliases    |
+ | alt + Return               | kitty                |
+ | super + 1-9                | bspc desktop 1-9     |
+ | super + j/k                | bspc next node       |
+ | super + t                  | term-no-tmux         |
+ | super + p                  | pavucontrol          |
+ | super + g                  | gnome-control-center |
+ | super + x                  | xkill                |
  | super + F1                 | kitty lfrun          |
  | super + F2                 | notes                |
  | super + F3                 | dotfiles             |
@@ -31,15 +39,8 @@ c-o fzf & vim open NOTES
  | ctrl + super + F6          | transmission-gtk     |
  | ctrl + super + F7          | flameshot-gui        |
  | ctrl + super + F8          | peek                 |
- | ctrl-shift-win-f1          | cal                  |
- | alt + Return               | kitty                |
- | super + t                  | term-no-tmux         |
- | super + p                  | pavucontrol          |
- | super + g                  | gnome-control-center |
- | super + x                  | xkill                |
  | ctrl + shift + F12         | timer                |
  | ctrl + super + b           | rofi-books           |
- | alt + d                    | rofi-with-aliases    |
  | ctrl + alt + w             | rofi -show window    |
  | ctrl + alt + [ / ]         | sound -/+ 5%         |
  | super + shift + ctrl + s   | Reload sxhkd         |
@@ -47,7 +48,12 @@ c-o fzf & vim open NOTES
  | super + shift + ctrl + d   | Reload notify        |
  | super + shift + ctrl + x   | Reload xresources    |
  | super + shift + ctrl + q/r | Restart bspwm        |
+ | super + shift + e          | bspc quit            |
+ | super + shift + q          | bspc close node      |
+ | super + shift + m          | bspc layout          |
 
+
+## VIM
 
 ## lf
 

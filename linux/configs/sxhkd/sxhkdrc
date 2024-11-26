@@ -203,7 +203,6 @@ super + shift + q
 super + shift + m
 	bspc desktop -l next
 
-# alt + `
 alt + Tab
     bspc node -f next.local.window
 	# bspc node -f next.local
@@ -215,9 +214,6 @@ super + {j, k}
 # focus to the given desktop
 super + {1-9}
 	bspc desktop -f '^{1-9,9}'
-
-#ctrl + space;  {1-9}
-	#bspc desktop -f '^{1-9,9}'
 
 super + {Left, Right}
     bspc monitor --focus {prev,next}
