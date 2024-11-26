@@ -1,0 +1,20 @@
+#!/bin/bash
+
+messages=(
+    "Get distracted from the damn screen, you peace of bones!"
+    "Get up and make pushups!"
+    "Enjoy the environment around you!"
+    "Realize the moment and don't give a fuck!"
+    "Take a break and quite to have fun, do some meaningless shit"
+    "Stop staring at the screen and move your body!"
+    "Take a walk outside!"
+    "Make situps!"
+)
+
+randomIndex=$((RANDOM % ${#messages[@]}))
+randomMessage="${messages[$randomIndex]}"
+
+notify-send "HeyMe" "$randomMessage"
+
+# crontab -e
+#0 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) /home/ksi/dotfiles/linux/bin/notify-hourly
