@@ -15,27 +15,31 @@ c-o fzf & vim open NOTES
 
 # wm/sxhkd
 ## apps
- | key               | app                  |
- |-------------------|----------------------|
- | super + F1        | kitty lfrun          |
- | super + F2        | notes                |
- | super + F3        | dotfiles             |
- | super + F4        | htop                 |
- | super + F5        | lf doc               |
- | shift + F6        | work                 |
- | ctrl + super + F1 | google-chrome        |
- | ctrl + super + F2 | kitty nmtui          |
- | ctrl + super + F3 | kitty calcurse       |
- | ctrl + super + F4 | thunar               |
- | ctrl + super + F5 | keepassxc            |
- | ctrl + super + F6 | transmission-gtk     |
- | ctrl + super + F7 | flameshot-gui        |
- | ctrl + super + F8 | peek                 |
- | ctrl-shift-win-f1 | cal                  |
- | alt + Return      | kitty                |
- | super + t         | term-no-tmux         |
- | super + p         | pavucontrol          |
- | super + g         | gnome-control-center |
+ | key                | app                  |
+ |--------------------|----------------------|
+ | super + F1         | kitty lfrun          |
+ | super + F2         | notes                |
+ | super + F3         | dotfiles             |
+ | super + F4         | htop                 |
+ | super + F5         | lf doc               |
+ | shift + F6         | work                 |
+ | ctrl + super + F1  | google-chrome        |
+ | ctrl + super + F2  | kitty nmtui          |
+ | ctrl + super + F3  | kitty calcurse       |
+ | ctrl + super + F4  | thunar               |
+ | ctrl + super + F5  | keepassxc            |
+ | ctrl + super + F6  | transmission-gtk     |
+ | ctrl + super + F7  | flameshot-gui        |
+ | ctrl + super + F8  | peek                 |
+ | ctrl-shift-win-f1  | cal                  |
+ | alt + Return       | kitty                |
+ | super + t          | term-no-tmux         |
+ | super + p          | pavucontrol          |
+ | super + g          | gnome-control-center |
+ | super + x          | xkill                |
+ | ctrl + shift + F12 | timer                |
+ | ctrl + super + b   | rofi-books           |
+ | alt + d            | rofi-with-aliases    |
 
 
 ## lf

@@ -3,6 +3,11 @@
 # FIX
 # super + F10
 #     kitty ncmpcpp
+# ctrl + super + e
+#     rofimoji
+#     rofi -show emoji -modi emoji
+#ctrl + shift + F11
+  #~/dotfiles/linux/bin/timer-interval
 alt + j
     xdotool sleep 0.2 getwindowfocus key --window %@ Down
 # alt + k
@@ -59,47 +64,17 @@ super + g
     gnome-control-center
 super + b
     blueman-manager
+super + x
+    xkill
 
+##### Rofi
 # Bookmarks
 ctrl + super + b
     rofi-books
-ctrl + super + e
-    rofimoji
-    #rofi -show emoji -modi emoji
-
-# scripts
-ctrl + shift + F12
-  ~/dotfiles/linux/bin/timer
-
-# TODO
-#ctrl + shift + F11
-  #~/dotfiles/linux/bin/timer-interval
-
-ctrl + F12
-  ~/dotfiles/linux/bin/screenshot-area
-
-alt + F12
-  screenshot-all
-
-super + F12
-    screenshot-all-media
-
-ctrl + super + F11
-    clipboard-path-load-image
-
-##### Rofi
-#super + d
 alt + d
   rofi-with-aliases
-
 ctrl + alt + w
   rofi -show window
-
-alt + x; r ; k
-    ~/gits/kaomoji-rofi/kaomoji.sh
-
-# ctrl + alt + d
-  # bash -i -c $(list-alias | rofi -dmenu)
 
 ##### sound
 super + ctrl + 9
@@ -347,3 +322,15 @@ super + shift + {h,l}
     # webstorm.sh
 #ctrl + super + F11
 #    csp # clip studio draw
+# Unused
+# scripts screens
+# ctrl + shift + F12
+#   ~/dotfiles/linux/bin/timer
+# ctrl + F12
+#   ~/dotfiles/linux/bin/screenshot-area
+# alt + F12
+#   screenshot-all
+# super + F12
+#     screenshot-all-media
+# ctrl + super + F11
+#     clipboard-path-load-image

@@ -16,13 +16,13 @@ function _tmux_run () {
             tmux rename-window "dot"
             # tmux split-window
             tmux new-window -c $WORK_DIR_CURRENT5 -n ndw5
-            tmux split-window -c $WORK_DIR_CURRENT5
+            # tmux split-window -c $WORK_DIR_CURRENT5
             tmux new-window -c $WORK_DIR_CURRENT -n ndw4
             tmux split-window -c $WORK_DIR_CURRENT
             tmux new-window -c ~/gits -n gits
-            tmux new-window -c ~/pwn -n pwn
-            tmux split-window -c ~/pwn
-            tmux new-window -c ~/Downloads -n dwl
+            # tmux new-window -c ~/pwn -n pwn
+            # tmux split-window -c ~/pwn
+            # tmux new-window -c ~/Downloads -n dwl
             tmux select-window -t 1
             tmux attach -t $TMUX_SESSION_NAME -c $DOTFILES_LINUX
         fi
