@@ -1,4 +1,10 @@
 ##TODO
+# Restart wifi . on off wifi
+#super + alt + space 
+#notify-send 'Restarting wifi interface..  *_*';\
+#nmcli radio wifi off ; nmcli radio wifi on
+#restart fix-net
+
 #open googlemaps
 # FIX
 # super + F10
@@ -77,7 +83,7 @@ ctrl + alt + w
   rofi -show window
 
 ##### sound
-super + ctrl + 9
+ctrl + super + 9
   pacmd set-default-sink 0
 
 ctrl + super + 0
@@ -124,7 +130,6 @@ super + KP_Subtract
     ~/dotfiles/linux/bin/rofi-mpd -l
 
 # lsplaylists 
-# playlist
 # load
 ctrl + super + {comma, period}
     ~/dotfiles/linux/bin/mpd-command {"seek -00:01:00", "seek +00:01:00"}
@@ -158,17 +163,14 @@ XF86AudioRaiseVolume
 #    amixer set Master toggle
 ctrl + alt + {bracketleft, bracketright}
     amixer -D pulse sset Master 5%{-,+} unmute
-
 #XF86AudioMicMute
     #pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 #### Configs
-
 # make sxhkd reload its configuration files:
-super + ctrl + shift + s
+super + shift + ctrl + s
     notify-send 'Reloading sxhkd configuration.';\
     pkill -USR1 -x sxhkd
-
 # reload polybar
 super + shift + ctrl + p
     killall polybar;\
@@ -185,9 +187,8 @@ super + shift + ctrl + x
     xrdb "/home/$(whoami)/.Xresources"
 
 ### bspwm hotkeys
-
 # quit/restart bspwm
-super + ctrl + shift + {q,r}
+super + shift + ctrl + {q,r}
 	notify-send 'Restarting bspwm.';\
 	bspc {quit,wm -r}
 
@@ -218,6 +219,11 @@ super + {1-9}
 #ctrl + space;  {1-9}
 	#bspc desktop -f '^{1-9,9}'
 
+super + {Left, Right}
+    bspc monitor --focus {prev,next}
+super + {h, l}
+    bspc monitor --focus {prev,next}
+
 # Switch desktops pairs
 # super + 1
 # 	bspc desktop -f '^1';\
@@ -234,11 +240,6 @@ super + {1-9}
 # super + 5
 # 	bspc desktop -f '^5';\
 # 	bspc desktop -f '^10'
-
-super + {Left, Right}
-    bspc monitor --focus {prev,next}
-super + {h, l}
-    bspc monitor --focus {prev,next}
 
 # select the direction
 #super + {h,j,k,l}
@@ -304,11 +305,6 @@ super + shift + {h,l}
 	dir={west,east}; \
 	bspc node -s "$dir.local" --follow \
 	    || bspc node -m "$dir" --follow
-
-# Restart wifi 
-#super + alt + space 
-#notify-send 'Restarting wifi interface..  *_*';\
-#nmcli radio wifi off ; nmcli radio wifi on
 
 # ctrl + shift + v
 #   rofi-snip
