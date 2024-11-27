@@ -39,8 +39,8 @@ c-o fzf & vim open NOTES
  | ctrl + super + F6          | transmission-gtk     |
  | ctrl + super + F7          | flameshot-gui        |
  | ctrl + super + F8          | peek                 |
- | ctrl + shift + F12         | timer                |
  | ctrl + super + b           | rofi-books           |
+ | ctrl + shift + F12         | timer                |
  | ctrl + alt + w             | rofi -show window    |
  | ctrl + alt + [ / ]         | sound -/+ 5%         |
  | super + shift + ctrl + s   | Reload sxhkd         |

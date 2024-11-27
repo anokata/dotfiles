@@ -16,6 +16,8 @@
   #~/dotfiles/linux/bin/timer-interval
 alt + j
     xdotool sleep 0.2 getwindowfocus key --window %@ Down
+ctrl + shift + F12
+  ~/dotfiles/linux/bin/timer
 # alt + k
 #     xdotool sleep 0.2 getwindowfocus key --window %@ Up
 
@@ -316,8 +318,6 @@ super + shift + {h,l}
 #    csp # clip studio draw
 # Unused
 # scripts screens
-# ctrl + shift + F12
-#   ~/dotfiles/linux/bin/timer
 # ctrl + F12
 #   ~/dotfiles/linux/bin/screenshot-area
 # alt + F12
