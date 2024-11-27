@@ -9,8 +9,8 @@ echo -e "Installing apps: cli only tools..."
 sudo apt install tmux fzf fd-find bat gsmartcontrol htop jq libblkid1 mmv ncat ncdu nvme-cli ripgrep calcurse pwgen neovim rdfind -y
 sudo apt install wget gpg -y
 sudo apt install imagemagick mpd mpc -y
-sudo apt install tig wavemon aircrack-ng  -y
-sudo apt install sshpass nmap whois arp-scan netdiscover -y
+sudo apt install tig  -y
+sudo apt install sshpass nmap whois -y
 sudo apt install nodejs npm -y
 i prettyping archivemount exa
 i atop
@@ -53,7 +53,6 @@ i duf
 i pwgen
 i tree
 
-i nethogs
 i ninja-build meson
 i tcpdump
 i screenkey
@@ -81,6 +80,8 @@ apti wireguard
 apti fcitx5
 apti v4l2loopback-dkms
 apti obs-studio
+
+apti wavemon aircrack-ng arp-scan netdiscover nethogs
 
 echo 'Apps installed [done]'
 
