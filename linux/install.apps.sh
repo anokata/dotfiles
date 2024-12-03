@@ -12,6 +12,7 @@ sudo apt install imagemagick mpd mpc -y
 sudo apt install tig  -y
 sudo apt install sshpass nmap whois -y
 sudo apt install nodejs npm -y
+# --
 i prettyping archivemount exa
 i atop
 i exuberant-ctags
