@@ -52,6 +52,9 @@ ctrl + super + F7
     flameshot-gui
 ctrl + super + F8
     peek
+ctrl + super + F9
+    wifi-toggle;\
+    notify-send "wifi radio is $(nmcli radio wifi)"
 super + F1
     kitty lfrun
 super + F2
