@@ -10,3 +10,7 @@ ibus-chewing
 # todo
 # anki
 powertop
+alsautils
+xclip
+gh
+gobuster

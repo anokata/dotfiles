@@ -63,6 +63,7 @@ function git_branch() {
 
 # export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 export PS1="$GREY\w$B \$(git_branch)$R\$(git_dirty)$GRAY\$ $GRAY$RESET"
+# export PS1="\[\033[1;32m\]\342\224\200\[\[\033[1;37m\]\u\[\033[01;32m\]@\[\033[01;34m\]\h\[\033[1;32m\]]\342\224\200[\[\033[1;37m\]\w\[\033[1;32m\]]\n\[\033[1;32m\]\342\224\224\342\224\200\342\224\200\342\225\274 [\[\e[01;33m\]$(date +%D-%r)\[\e[01;32m\]]\\$ \[\e[0m\]"
 
 caps-escape
 
