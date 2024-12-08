@@ -14,3 +14,6 @@ alsautils
 xclip
 gh
 gobuster
+zenity
+gnome-font-viewer
+
