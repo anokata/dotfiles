@@ -60,7 +60,7 @@ nm-applet &
 dropboxd &
 $HOME/.config/polybar/launch.sh
 #run-if-not kitty
-pidof chrome >/dev/null || google-chrome &
+pidof chrome >/dev/null || google-chrome-2x &
 pidof anki >/dev/null || anki &
 # pidof Telegram >/dev/null || Telegram &
 

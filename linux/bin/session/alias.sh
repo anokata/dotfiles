@@ -76,6 +76,7 @@ alias psm='ps -ef | less'
 alias psf='ps -ef | fzf'
 alias pping='prettyping --nolegend'
 alias p='pping 8.8.8.8'
+alias pp='pping google.com'
 alias sys-ram='sudo dmidecode -t 17'
 
 # Finding

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export DISPLAY=:0
+/opt/google/chrome/google-chrome --force-device-scale-factor=1.50

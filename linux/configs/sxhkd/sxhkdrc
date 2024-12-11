@@ -36,7 +36,7 @@ alt + x; m ; t
 alt + Return
     kitty
 ctrl + super + F1
-    google-chrome
+    ~/dotfiles/linux/bin/google-chrome-2x
 ctrl + super + F2
     kitty nmtui
 ctrl + super + F3
