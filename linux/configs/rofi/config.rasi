@@ -5,6 +5,7 @@ configuration {
 	show-icons: true;
 	hide-scrollbar: true;
     matching: "fuzzy";
+    font: "Hack 24";
 /* width: 150; */
 /*	lines: 15;*/
 /*	columns: 1;*/
