@@ -64,7 +64,9 @@ super + F3
 super + F4
     kitty htop
 super + F5
-    kitty lfrun "~/Dropbox/doc/"
+    kitty lfrun "$HOME/Dropbox/doc/"
+super + F6
+    kitty s-tui
 shift + F6
     kitty nvim +":Prosession $WORK_DIR_CURRENT"
 super + t
