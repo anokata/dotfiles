@@ -8,5 +8,6 @@ echo 'Start install apps...'
 i tmux fzf fd-find bat gsmartcontrol htop jq libblkid1 mmv ncat ncdu nvme-cli ripgrep calcurse pwgen neovim rdfind
 i wget gpg imagemagick mpd mpc tig sudo apt install sshpass nmap whois sudo apt install nodejs npm
 
+# hcxtools
 
 echo 'Apps installed [done]'
