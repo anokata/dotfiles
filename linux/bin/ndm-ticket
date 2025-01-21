@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Get input from clipboard
+input=$(xclip -o -selection clipboard)
+
+# Remove empty lines at the beginning and normalize input
+cleaned_input=$(echo "$input" | sed '/^[[:space:]]*$/d')
+
+# Extract the ticket ID (first line)
+ticket_id=$(echo "$cleaned_input" | head -n 1 | tr -d ' ')
+
+# Extract the title (remaining lines), remove 'NDW4: ' prefix if it exists, and format it
+title=$(echo "$cleaned_input" | tail -n +2 | sed 's/^NDW4: //' | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g' | sed 's/[[:space:]]*$//')
+
+# Create slug from title
+slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/-\+/-/g' | sed 's/^-//' | sed 's/-$//')
+
+# Create the output
+output="${ticket_id}-${slug}
+[${ticket_id}](https://ndm.atlassian.net/browse/${ticket_id})
+${title} (${ticket_id})"
+
+# Copy to clipboard
+echo -n "$output" | xclip -selection clipboard
+
+# Notify the user
+echo "Processed and copied to clipboard:"
+echo "$output"
+

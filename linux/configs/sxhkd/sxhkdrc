@@ -30,7 +30,10 @@ alt + x; n ; t
 alt + x; m ; l
     markdown-clip-convert-to-url
 alt + x; m ; t
-    markdown-url-and-task-text
+    ndm-ticket
+    #markdown-url-and-task-text
+alt + x; m ; n
+    markdown-url-task-name
 
 # Applications
 alt + Return

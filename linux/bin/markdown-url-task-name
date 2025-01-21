@@ -1,0 +1,9 @@
+#!/bin/bash
+NAME=$(xclip -o)
+BRANCH_NAME=$(echo "$NAME" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+
+RESULT="$BRANCH_NAME
+
+$NAME
+"
+clipboard-set "$RESULT"
