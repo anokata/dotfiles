@@ -1,0 +1,3 @@
+#!/bin/bash
+MAX=$(pkexec xfpm-power-backlight-helper --get-max-brightness)
+pkexec xfpm-power-backlight-helper --set-brightness $MAX
