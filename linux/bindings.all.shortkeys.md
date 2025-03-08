@@ -51,6 +51,7 @@ c-o fzf & vim open NOTES
  | super + shift + e          | bspc quit            |
  | super + shift + q          | bspc close node      |
  | super + shift + m          | bspc layout          |
+ |                            | redshift -x          |
 
 
 ## VIM
