@@ -12,7 +12,7 @@ source $DOTFILES_LINUX/bin/session/tmux.sh
 source $DOTFILES_LINUX/bin/session/bind.sh
 source $DOTFILES_LINUX/bin/session/first_run.sh
 source $DOTFILES_LINUX/bin/session/ndm.sh #work
-#source $DOTFILES_LINUX/bin/session/
+source $DOTFILES_LINUX/bin/session/sec.sh
 LFCD="$DOTFILES_CONFIGS/lf/lfcd.sh"
 [ -f "$LFCD" ] && source "$LFCD"
 eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)
