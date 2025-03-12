@@ -312,6 +312,11 @@ super + shift + {h,l}
 	bspc node -s "$dir.local" --follow \
 	    || bspc node -m "$dir" --follow
 
+ctrl + super + bracketleft
+    redshift -x
+ctrl + super + bracketright
+    redshift -P -O 2500
+
 # ctrl + shift + v
 #   rofi-snip
 

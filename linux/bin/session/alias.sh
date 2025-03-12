@@ -268,3 +268,5 @@ alias net-ports="netstat -tunlp"
 alias nmapsvsc="nmap -sV -sC"
 alias enum-nmap="nmap -sV -sC"
 
+alias toggle-night="redshift -P -O 2500"
+alias toggle-night-reset="redshift -x"
