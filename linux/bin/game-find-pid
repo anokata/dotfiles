@@ -1,0 +1,9 @@
+#!/bin/bash
+
+executable_name="$1"
+cpu_threshold=80
+memory_threshold=1048576 # 1GB in kilobytes (RSS is in KB)
+
+ps aux | awk -v part="$executable_part" -v cpu_threshold="$cpu_threshold" -v memory_threshold="$memory_threshold" '$11 ~ part && $3 > cpu_threshold && $6 > memory_threshold {print $2}'
+# or pgrep -f $executable_name
+
