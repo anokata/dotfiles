@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+source $DOTFILES/linux/.env
+source $DOTFILES/linux/bin/session/ndm.sh
+IP="$1"
+PASSWORD=$(cat $PASSWORD_DEFAULT_KSI)
+echo "Connecting to $IP:$SSH_PORT as $SSH_USER by $SSH_PORT with $PASSWORD_DEFAULT_KSI"
+
+sshpass -p $PASSWORD ssh $SSH_USER@$IP -p $SSH_PORT

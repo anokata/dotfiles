@@ -8,14 +8,17 @@ alias wireguard-test="cdnw; sudo wg-quick up wg-test"
 alias cdnisw="cd $WORK_DIR/isw/"
 
 export SSH_PORT=22
+export SSH_USER=admin
 alias ndm-keenetic-telnet="telnet $KEENETIC_IP"
 alias keenetic-telnet="telnet $KEENETIC_IP"
 alias keenetic-ssh="ssh admin@$KEENETIC_IP -p $SSH_PORT"
 alias ndm-cbox="ssh sernam@cbox.ndm9.net"
 alias ndm-ssh-local="ssh admin@$KEENETIC_IP -p $SSH_PORT"
-alias ndm-keenetic-ssh-local="ssh admin@$KEENETIC_IP -p $SSH_PORT"
+alias ndm-keenetic-ssh-local="ssh $SSH_USER@$KEENETIC_IP -p $SSH_PORT"
+alias ndm-keenetic-ssh-viva="ndm-ssh-default $KEENETIC_IP_VIVA"
 alias ndm-keenetic-show-arp='ndm-ssh-local show ip arp'
 alias ndm-keenetic-show-route='ndm-ssh-local show ip route'
+# TODO: QEMU
 # TODO: Add read password from file
 #alias kssh="ssh admin@$KEENETIC_IP -p 22"
 #alias ndm-ssh-local-default='sshpass -f $PASSWORD_DEFAULT ssh admin@$KEENETIC_IP -p $SSH_PORT'
