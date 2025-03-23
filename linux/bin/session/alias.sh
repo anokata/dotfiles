@@ -132,6 +132,8 @@ alias gch='_fco_preview'
 alias ghpr='gh pr create --web'
 alias ghd='gh dash'
 alias ghs='gh pr status'
+# Git ai
+alias gaic='openrouter-commit -run' # git AI commit
 
 # Dev
 alias adbstart='sudo adb start-server'
