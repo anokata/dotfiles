@@ -1,3 +1,4 @@
 #!/bin/bash
 RESPONSE=$(gemini-request "$1")
 echo $RESPONSE | jq -r '.candidates[].content.parts[].text'
+
