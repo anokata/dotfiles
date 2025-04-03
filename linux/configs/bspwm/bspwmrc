@@ -60,7 +60,8 @@ nm-applet &
 dropboxd &
 $HOME/.config/polybar/launch.sh
 #run-if-not kitty
-pidof chrome >/dev/null || google-chrome-2x &
+#pidof chrome >/dev/null || google-chrome-2x &
+pidof chrome >/dev/null || google-chrome &
 pidof anki >/dev/null || anki &
 # pidof Telegram >/dev/null || Telegram &
 
@@ -69,3 +70,4 @@ bspc rule -a kitty state=fullscreen
 
 # ~/dotfiles/linux/bin/monitors-setup
 monitors-setup
+xset dpms 1800 1800 1800
