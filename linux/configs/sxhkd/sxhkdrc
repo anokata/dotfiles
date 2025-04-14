@@ -316,6 +316,8 @@ ctrl + super + bracketleft
     redshift -x
 ctrl + super + bracketright
     redshift -P -O 2500
+# ctrl + super + p
+#     redshift -P -O 3300
 
 # ctrl + shift + v
 #   rofi-snip
