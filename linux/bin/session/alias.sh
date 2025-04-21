@@ -11,6 +11,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cdd="cd $DOTFILES"
+alias cdD="cd ~/Downloads"
 alias cda="cd $HDD1"
 alias cdc="cd $DOTFILES_CONFIGS"
 alias cdo="cd $DOC"

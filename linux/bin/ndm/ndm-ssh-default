@@ -5,4 +5,4 @@ IP="$1"
 PASSWORD=$(cat $PASSWORD_DEFAULT_KSI)
 echo "Connecting to $IP:$SSH_PORT as $SSH_USER by $SSH_PORT with $PASSWORD_DEFAULT_KSI"
 
-sshpass -p $PASSWORD ssh $SSH_USER@$IP -p $SSH_PORT
+sshpass -v -p $PASSWORD ssh $SSH_USER@$IP -p $SSH_PORT
