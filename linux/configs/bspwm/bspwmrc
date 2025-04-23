@@ -40,7 +40,7 @@ bspc rule -a Google-chrome desktop='^2'
 bspc rule -a kitty desktop='^1' state=fullscreen
 bspc rule -a St state=fullscreen
 bspc rule -a mpv state=fullscreen
-bspc rule -a Anki desktop='^3'
+# bspc rule -a Anki desktop='^3'
 # bspc rule -a Thunar desktop='^4'
 bspc rule -a Code desktop='^1' state=fullscreen
 bspc rule -a Slack desktop='^3' state=fullscreen 
@@ -62,7 +62,7 @@ $HOME/.config/polybar/launch.sh
 #run-if-not kitty
 #pidof chrome >/dev/null || google-chrome-2x &
 pidof chrome >/dev/null || google-chrome &
-pidof anki >/dev/null || anki &
+# pidof anki >/dev/null || anki &
 # pidof Telegram >/dev/null || Telegram &
 
 bspc rule -r kitty
