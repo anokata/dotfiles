@@ -1,7 +1,8 @@
 # most used
+export NODE_VERSION=22
 alias cdn2="cd $WORK_DIR/ndw2/"
-alias cdn4="cd $WORK_DIR/ndw4/; nvm use 18"
-alias cdn5="cd $WORK_DIR/ndw5/; nvm use 18"
+alias cdn4="cd $WORK_DIR/ndw4/; nvm use ${NODE_VERSION}"
+alias cdn5="cd $WORK_DIR/ndw5/; nvm use ${NODE_VERSION}"
 alias cdnw="cd $WORK_DIR/wireguard/"
 alias cdnq="cd $WORK_DIR/qemu/"
 alias wireguard-test="cdnw; sudo wg-quick up wg-test"
