@@ -274,3 +274,4 @@ alias enum-nmap="nmap -sV -sC"
 
 alias toggle-night="redshift -P -O 2500"
 alias toggle-night-reset="redshift -x"
+alias gnome-control="env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"

@@ -49,8 +49,8 @@ ctrl + super + F4
     # nautilus
 ctrl + super + F5
     keepassxc
-ctrl + super + F6
-    transmission-gtk
+# ctrl + super + F6
+#     transmission-gtk
 ctrl + super + F7
     flameshot-gui
 ctrl + super + F8
