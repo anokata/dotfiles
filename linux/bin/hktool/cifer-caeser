@@ -1,0 +1,39 @@
+#!/bin/bash
+function decode() {
+    echo "decoding: $1"
+    echo "$1" | tr '[X-ZA-Wx-za-w]' '[A-Za-z]'
+}
+
+function encode() {
+    echo "encoding... $1"
+    echo "$1" | tr '[A-Za-z]' '[X-ZA-Wx-za-w]'
+}
+
+function encodeRot13() {
+    echo "$1" | tr '[A-Z]' '[N-ZA-M]'
+}
+
+function decodeRot13() {
+    echo "$1" | tr '[N-ZA-M]' '[A-Z]'
+}
+
+function decoder() {
+    for char in {B..Z}; do
+        ascii_value=$(printf "%d" "'${char}")
+        new_ascii_value=$((ascii_value - 1))
+        prevChar=$(printf "\\$(printf '%03o' "$new_ascii_value")")
+        # echo "$char $prevChar"
+        echo "$1" | tr "[${char}-ZA-${prevChar}]" '[A-Za-z]'
+    done
+}
+
+while getopts "e:d:r:p:a:" opt; do
+  case $opt in
+    d) decode "$OPTARG" ;;
+    e) encode "$OPTARG" ;;
+    r) decodeRot13 "$OPTARG" ;;
+    p) encodeRot13 "$OPTARG" ;;
+    a) decoder "$OPTARG" ;;
+	\?) echo "Invalid option: -$OPTARG" ;;
+  esac
+done
