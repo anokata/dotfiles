@@ -198,9 +198,13 @@ super + shift + ctrl + x
 
 ### bspwm hotkeys
 # quit/restart bspwm
-super + shift + ctrl + {q,r}
+super + shift + ctrl + {q}
 	notify-send 'Restarting bspwm.';\
 	bspc {quit,wm -r}
+
+super + shift + ctrl + {r}
+	notify-send 'Reloading bspwm.';\
+	bspc {wm -r}
 
 super + shift + e
     bspc quit 1
@@ -221,14 +225,14 @@ super + {j, k}
     bspc node -f {next,prev}.local.window
 	# bspc node -f next
 
-# focus to the given desktop
-super + {1-9}
-	bspc desktop -f '^{1-9,9}'
-
 super + {Left, Right}
     bspc monitor --focus {prev,next}
 super + {h, l}
     bspc monitor --focus {prev,next}
+
+# focus to the given desktop
+super + {1-9}
+	bspc desktop -f '^{1-9,9}'
 
 # Switch desktops pairs
 # super + 1

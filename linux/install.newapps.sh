@@ -17,3 +17,5 @@ gobuster
 zenity
 gnome-font-viewer
 
+
+autorandr

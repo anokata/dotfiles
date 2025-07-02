@@ -5,6 +5,6 @@ detect-monitors
 # xrandr --output eDp --mode 1920x1080 -r 75
 #xrandr --output HDMI-1 --gamma 0.85:0.85:0.85
 
-xrandr --output DisplayPort-2 --mode 3840x2160 --right-of eDP
-xrandr --output $MONITOR_2 --mode 3840x2160 --right-of eDP
+#xrandr --output DisplayPort-2 --mode 3840x2160 --right-of eDP
+#xrandr --output $MONITOR_2 --mode 3840x2160 --right-of eDP
 # --scale-from

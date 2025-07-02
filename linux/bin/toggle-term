@@ -1,0 +1,18 @@
+#!/bin/bash
+
+WIN_ID=$(xdotool search --name "dropdown-term" | head -n 1)
+echo $WIN_ID
+
+if [ -z "$WIN_ID" ]; then
+    kitty --title dropdown-term &
+    exit
+fi
+
+IS_HIDDEN=$(bspc query -N -n .hidden.window)
+
+if [[ "$IS_HIDDEN" == "$WIN_ID" ]]; then
+    bspc node "$WIN_ID" --flag hidden=off
+    bspc node -f "$WIN_ID"
+else
+    bspc node "$WIN_ID" --flag hidden=on
+fi
