@@ -19,6 +19,8 @@ hsetroot -solid "#000"
 setxkbmap -option caps:escape
 ibus-daemon -drx
 
+
+bspc config remove_unplugged_monitors true
 ### Config
 if [ -z $MONITOR_1 ]; then
     bspc monitor -d 1 2 3 4 5 6 7 8 

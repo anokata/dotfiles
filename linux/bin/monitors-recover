@@ -1,0 +1,7 @@
+#!/bin/bash
+
+detect-monitors
+xrandr --output "$MONITOR_1" --primary --mode 2880x1920
+xrandr --output DisplayPort-8 --off
+xrandr --output DisplayPort-9 --off
+bspc config remove_unplugged_monitors true

@@ -8,3 +8,4 @@ detect-monitors
 #xrandr --output DisplayPort-2 --mode 3840x2160 --right-of eDP
 #xrandr --output $MONITOR_2 --mode 3840x2160 --right-of eDP
 # --scale-from
+#!!! TODO: --same-as
