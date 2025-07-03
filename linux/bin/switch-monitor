@@ -56,4 +56,8 @@ setup_external_only() {
     notify-send "Monitor Switched" "All content moved to $EXTERNAL_MONITOR, $LAPTOP_MONITOR turned off."
 }
 
-setup_laptop_only
+# setup_laptop_only
+# just use autorandr ?
+# - [ ] enable service
+# - [ ] update script
+

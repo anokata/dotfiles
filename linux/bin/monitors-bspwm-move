@@ -1,0 +1,18 @@
+#!/bin/bash
+
+detect-monitors
+
+LAPTOP_MONITOR="$MONITOR_1"
+EXTERNAL_MONITOR="$MONITOR_2"
+
+
+xrandr --output "$EXTERNAL_MONITOR" --auto --same-as eDP
+
+for desktop in $(bspc query -D -m "$LAPTOP_MONITOR" --names); do
+    bspc desktop "$desktop" --to-monitor "$EXTERNAL_MONITOR"
+done
+
+xrandr --output "$LAPTOP_MONITOR" --off
+
+bspc monitor "$EXTERNAL_MONITOR" -d 1 2 3 4 5 6 7 8
+bspc config remove_unplugged_monitors true
