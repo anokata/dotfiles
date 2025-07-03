@@ -25,8 +25,8 @@ bspc config remove_unplugged_monitors true
 if [ -z $MONITOR_1 ]; then
     bspc monitor -d 1 2 3 4 5 6 7 8 
 elif [ "$MONITOR_COUNT" = '2' ]; then
-    bspc monitor $MONITOR_1 -d 1 2 3 4 5
-    bspc monitor $MONITOR_2 -d 6 7 8 9 10
+    bspc monitor $MONITOR_1 -d 1 2 3 4
+    bspc monitor $MONITOR_2 -d 5 6 7 8 
 else
     bspc monitor $MONITOR_1 -d 1 2 3 4 5 6 7 8 
 fi

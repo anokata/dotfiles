@@ -4,60 +4,47 @@ detect-monitors
 LAPTOP_MONITOR="$MONITOR_1"
 EXTERNAL_MONITOR="$MONITOR_2"
 
-setup_laptop_only() {
-    notify-send "Switching to Laptop Only Mode..."
-
-    # 1. Enable laptop, disable external
-    xrandr --output "$LAPTOP_MONITOR" --primary --mode 2880x1920
+setup_monitor() {
+    notify-send "Switching to $1 from $2 ..."
 
     # 2. Move all desktops to the laptop monitor
     for desktop in $(bspc query -D --names); do
-        bspc desktop "$desktop" --to-monitor "$LAPTOP_MONITOR"
+        bspc desktop "$desktop" --to-monitor "$1"
     done
 
+    bspc desktop 1 --focus
+
+    # 2. Turn off the external monitor
+    xrandr --output "$2" --off
+
     # 3. Reconfigure bspwm monitors for only the laptop
-    bspc monitor "$LAPTOP_MONITOR" -d 1 2 3 4 5 6 7 8 9 10
+    bspc monitor "$1" -d 1 2 3 4 5 6 7 8
     bspc config remove_unplugged_monitors true
 
     # Restart Polybar
     killall polybar; ~/.config/polybar/launch.sh &
 
-    notify-send "Monitor Switched" "All content moved to $LAPTOP_MONITOR."
+    notify-send "Switched to $1"
+}
+
+setup_laptop_only() {
+    # 1. Enable laptop, disable external
+    xrandr --output "$LAPTOP_MONITOR" --primary --auto
+
+    setup_monitor "$LAPTOP_MONITOR" "$EXTERNAL_MONITOR"
 }
 
 setup_external_only() {
-    notify-send "Switching to External Only Mode..."
-
     # Check if the external monitor is actually connected
     if ! xrandr | grep -q "$EXTERNAL_MONITOR connected"; then
         notify-send "Error" "External monitor ($EXTERNAL_MONITOR) is not connected. Cannot switch."
         exit 1
     fi
 
-    # 1. Enable external
-    xrandr --output "$EXTERNAL_MONITOR" --primary --mode 3840x2160
-
-    # 1. Move all desktops from the laptop monitor to the external monitor
-    for desktop in $(bspc query -D -m "$LAPTOP_MONITOR" --names); do
-        bspc desktop "$desktop" --to-monitor "$EXTERNAL_MONITOR"
-    done
-
-    bspc desktop 1 --focus
-
-    # 2. Turn off the laptop monitor
-    xrandr --output "$LAPTOP_MONITOR" --off
-
-    # 3. Reconfigure bspwm monitors to only have the external one
-    bspc monitor "$EXTERNAL_MONITOR" -d 1 2 3 4 5 6 7 8 9 10
-    bspc config remove_unplugged_monitors true
-
-    killall polybar; ~/.config/polybar/launch.sh &
-
-    notify-send "Monitor Switched" "All content moved to $EXTERNAL_MONITOR, $LAPTOP_MONITOR turned off."
+    setup_monitor "$EXTERNAL_MONITOR" "$LAPTOP_MONITOR"
 }
 
-# setup_laptop_only
+setup_laptop_only
 # just use autorandr ?
-# - [ ] enable service
-# - [ ] update script
+# - [ ] run htis script when autorandr switch? or by hotkey?
 
