@@ -1,0 +1,8 @@
+#!/bin/bash
+
+WIN_ID=$(bspc query -N -n focused)
+
+bspc node "$WIN_ID" --flag sticky=on
+bspc node "$WIN_ID" --state floating
+bspc node "$WIN_ID" --layer below
+# bspc node "$WIN_ID" --flag locked=on
