@@ -23,6 +23,7 @@ alias cdscr="cd $SCREENS_DIR"
 alias cdg="cd $HOME/gits"
 alias cdp="cd $HOME/pwn"
 alias cdw="cd $HOME/pwn"
+alias cdV="cd $HOME/Videos/work"
 alias cdsteam="cd $HOME/.steam/steam/steamapps/compatdata"
 alias c="pushd "
 
