@@ -1,2 +1,2 @@
 #!/bin/bash
-ffmpeg -i "$1" -c copy -an "VA-$1"
+ffmpeg -i "$1" -c copy -an "VA-$1" && rm "$1"
