@@ -53,7 +53,7 @@ bspc rule -a PureRef state=floating
 bspc rule -a Peek state=floating
 bspc rule -a Zathura state=tiled
 bspc rule -a clipstudiopaint.exe state=floating
-bspc rule -a jetbrains-webstorm desktop='^1'
+#bspc rule -a jetbrains-webstorm desktop='^1'
 bspc rule -a kitty:dropdown-term state=floating sticky=on hidden=on center=on follow=on
 
 
