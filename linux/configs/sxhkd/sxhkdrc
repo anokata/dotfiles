@@ -91,6 +91,8 @@ alt + d
   rofi-with-aliases
 ctrl + alt + w
   rofi -show window
+ctrl + shift + d
+    rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' 
 
 ##### sound
 ctrl + super + 9
