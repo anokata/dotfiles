@@ -2,10 +2,10 @@
 ### TMUX
 TMUX_SESSION_NAME=base
 function _tmux_run () {
+    # echo "tmux run $TMUX __ $NO_TMUX __ session: $TMUX_SESSION_NAME"
     if [ -z $TMUX ]; then
         # tmux not runned
         [ $NO_TMUX ] && return
-        echo "tmux run $TMUX __ $NO_TMUX __ session: $TMUX_SESSION_NAME"
         if tmux has-session -t $TMUX_SESSION_NAME 3>/dev/null; then
             # attach to exist session
             tmux attach -t $TMUX_SESSION_NAME

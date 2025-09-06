@@ -90,6 +90,7 @@ alias egrep='egrep --color=auto'
 alias fd='fdfind'
 alias fde='fd -e '
 alias fdh='fd -H '
+alias rg='rg --hidden'
 
 # Video/Audio download
 alias youtube-low="youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'"
