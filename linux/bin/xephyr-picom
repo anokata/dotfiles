@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# DISPLAY=:1 picom --no-use-damage --window-shader-fg ~/gits/picom-shaders/Artistic/OldCRT.glsl &
+DISPLAY=:1 picom --config /home/barrinator/dotfiles/linux/configs/crt-picom.cfg &
