@@ -139,6 +139,7 @@ alias ghs='gh pr status'
 # Git ai
 # alias gaic='openrouter-commit -run' # git AI commit
 alias gaic='npx openrouter-commit -run' # git AI commit
+alias git-history='git log -S ' # git log -S "string to search" -- file/path
 
 # Dev
 alias adbstart='sudo adb start-server'
