@@ -174,13 +174,7 @@ alias fehs="feh -D30 -z ."
 alias feh='feh -FYr --action1 ";save-file-copy %F" --action2 ";clipboard-set %F"'
 alias fef='feh -f '
 alias fer="feh -f $DEFAULT_REFLIST"
-alias ref-anime="cd $REF_ANIME; fer"
 alias ref-scr="cd $SCREENS_BASE; fer"
-alias ref-scr2022="cd $SCREENS_DIR; fer"
-alias ref-me="cd $REF_TOME; fer"
-alias ref-art="cd $REF_ART; fer"
-alias ref-paint="cd $REF_PAINT; fer"
-alias ref-photo="cd $REF_PHOTO; fer"
 
 # sys config
 alias xresources-reload='xrdb ~/.Xresources'

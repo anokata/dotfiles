@@ -1,4 +1,5 @@
 # most used
+export KEENETIC_IP_SKIPPER="192.168.25.1"
 export NODE_VERSION=22
 alias cdn2="cd $WORK_DIR/ndw2/"
 alias cdn4="cd $WORK_DIR/ndw4/; nvm use ${NODE_VERSION}"
