@@ -10,7 +10,7 @@ source $DOTFILES_LINUX/bin/session/alias.sh
 source $DOTFILES_LINUX/bin/session/color.sh
 source $DOTFILES_LINUX/bin/session/tmux.sh
 source $DOTFILES_LINUX/bin/session/bind.sh
-source $DOTFILES_LINUX/bin/session/ndm.sh #work
+source $DOTFILES_LINUX/bin/session/ndm.sh # work related aliases and variables
 source $DOTFILES_LINUX/bin/session/sec.sh
 LFCD="$DOTFILES_CONFIGS/lf/lfcd.sh"
 [ -f "$LFCD" ] && source "$LFCD"
