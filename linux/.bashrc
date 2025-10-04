@@ -1,5 +1,3 @@
-#set -e
-### PATH/ENV
 set -o vi
 source ~/dotfiles/linux/.env
 # export TERM=screen-256color
@@ -28,22 +26,23 @@ shopt -s cdspell
 stty -ixon # for not stop draw at C-s (C-q restore)
 HISTCONTROL=ignoreboth
 
-### Plug
+### Plugins
+#### FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden --hidden -g "!{node_modules/,.git/}"'
+[ -f  /usr/share/doc/fzf/examples/completion.bash ] && source /usr/share/doc/fzf/examples/completion.bash
+[ -f  /usr/share/doc/fzf/examples/key-bindings.bash ] && source /usr/share/doc/fzf/examples/key-bindings.bash
+#### Completion
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 [ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 [ -f /usr/share/git/completion/git-completion.bash ] && source /usr/share/git/completion/git-completion.bash
-if [ -e ~/.work.sig ]; then
-    source ~/dotfiles/work/alias.sh
-fi
-[ -f  /usr/share/doc/fzf/examples/completion.bash ] && source /usr/share/doc/fzf/examples/completion.bash
-[ -f  /usr/share/doc/fzf/examples/key-bindings.bash ] && source /usr/share/doc/fzf/examples/key-bindings.bash
 
+# pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown) # wm (bspwm) run sxhkd, no?
 
-pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
-setxkbmap -option caps:escape
+# setxkbmap -option caps:escape # make caps = escape
+caps-escape # make caps = escape
 
+# Create link to ram directory in home
 function _ram() {
     mkdir /run/user/$(id -u)/ram 2>/dev/null || true
     rmdir ~/ram 2>/dev/null || true
@@ -59,12 +58,10 @@ function git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-# export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
 export PS1="$GREY\w$B \$(git_branch)$R\$(git_dirty)$GRAY\$ $GRAY$RESET"
-# export PS1="\[\033[1;32m\]\342\224\200\[\[\033[1;37m\]\u\[\033[01;32m\]@\[\033[01;34m\]\h\[\033[1;32m\]]\342\224\200[\[\033[1;37m\]\w\[\033[1;32m\]]\n\[\033[1;32m\]\342\224\224\342\224\200\342\224\200\342\225\274 [\[\e[01;33m\]$(date +%D-%r)\[\e[01;32m\]]\\$ \[\e[0m\]"
 
-caps-escape
 
+# ? use nvmrc from current directory on change directory
 _nvmrc_hook() {
   if [[ $PWD == $PREV_PWD ]]; then
     return
@@ -79,6 +76,7 @@ if ! [[ "${PROMPT_COMMAND:-}" =~ _nvmrc_hook ]]; then
 fi
 
 
+# Avoid running tmux session in vscode and webstorm
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
     echo "vscode"
     # nvm use system
