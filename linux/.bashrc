@@ -10,7 +10,6 @@ source $DOTFILES_LINUX/bin/session/alias.sh
 source $DOTFILES_LINUX/bin/session/color.sh
 source $DOTFILES_LINUX/bin/session/tmux.sh
 source $DOTFILES_LINUX/bin/session/bind.sh
-source $DOTFILES_LINUX/bin/session/first_run.sh
 source $DOTFILES_LINUX/bin/session/ndm.sh #work
 source $DOTFILES_LINUX/bin/session/sec.sh
 LFCD="$DOTFILES_CONFIGS/lf/lfcd.sh"
@@ -41,8 +40,6 @@ fi
 [ -f  /usr/share/doc/fzf/examples/completion.bash ] && source /usr/share/doc/fzf/examples/completion.bash
 [ -f  /usr/share/doc/fzf/examples/key-bindings.bash ] && source /usr/share/doc/fzf/examples/key-bindings.bash
 
-#if _is_first_run; then
-#fi
 
 pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown)
 setxkbmap -option caps:escape

@@ -1,6 +1,7 @@
 #!/bin/bash
 # vim: filetype=sh
 
+# TODO: why i need this?
 if [ -e /run/user/$(id -u) ]; then
     FIRST_LOCK=/run/user/$(id -u)/first
     FIRST_CON_LOCK=/run/user/$(id -u)/first_tty
