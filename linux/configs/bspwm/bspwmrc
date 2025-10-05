@@ -14,7 +14,6 @@ guake &
 # greenclip daemon &
 
 xrdb "/home/$(whoami)/.Xresources"
-# hsetroot -solid "#202020"
 hsetroot -solid "#000"
 #setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" &
 setxkbmap -option caps:escape
@@ -44,11 +43,9 @@ bspc rule -a kitty desktop='^1' state=fullscreen
 bspc rule -a St state=fullscreen
 bspc rule -a mpv state=fullscreen
 # bspc rule -a Anki desktop='^3'
-# bspc rule -a Thunar desktop='^4'
 bspc rule -a Code desktop='^1' state=fullscreen
 bspc rule -a Slack desktop='^3' state=fullscreen 
 bspc rule -a TelegramDesktop desktop='^5'
-# bspc rule -a Transmission-gtk desktop='^10'
 bspc rule -a Guake state=floating
 bspc rule -a PureRef state=floating
 bspc rule -a Peek state=floating
@@ -56,22 +53,20 @@ bspc rule -a Zathura state=tiled
 bspc rule -a clipstudiopaint.exe state=floating
 #bspc rule -a jetbrains-webstorm desktop='^1'
 bspc rule -a kitty:dropdown-term state=floating sticky=on hidden=on center=on follow=on
+bspc rule -r kitty
+bspc rule -a kitty state=fullscreen
 
 
-### Apps
+### Auto run apps
 nm-applet &
-# dropbox start &
 dropboxd &
 $HOME/.config/polybar/launch.sh
+kitty btop
 #run-if-not kitty
-#pidof chrome >/dev/null || google-chrome-2x &
 pidof chrome >/dev/null || google-chrome &
 # pidof anki >/dev/null || anki &
 # pidof Telegram >/dev/null || Telegram &
 
-bspc rule -r kitty
-bspc rule -a kitty state=fullscreen
-
-# ~/dotfiles/linux/bin/monitors-setup
 monitors-setup
-xset dpms 1800 1800 1800
+# Display to enter DPMS (Display Power Management Signaling) states after 30 minutes of inactivity
+xset dpms 1800 1800 1800 # Standby, Suspend, Off

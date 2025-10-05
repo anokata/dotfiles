@@ -1,0 +1,48 @@
+
+"Plug 'wakatime/vim-wakatime'
+" Plug 'tenfyzhong/tagbar-markdown.vim'
+" Plug 'MattesGroeger/vim-bookmarks'
+" Plug 'tveskag/nvim-blame-line'
+
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-buffer'
+" Plug 'hrsh7th/cmp-path'
+" Plug 'hrsh7th/cmp-calc'
+" Plug 'andersevenrud/compe-tmux', { 'branch': 'cmp' }
+" Plug 'dhruvasagar/vim-dotoo'
+"Plug 'tpope/vim-vinegar'
+" Plug 'gorodinskiy/vim-coloresque'
+" Plug 'Yilin-Yang/vim-markbar'
+
+" Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'docunext/closetag.vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'valloric/matchtagalways'
+" Plug 'vim-scripts/taglist.vim'
+" Plug 'vim-scripts/utf8-math'
+" Plug 'vim-scripts/utl.vim'
+
+" Plug 'xolox/vim-colorscheme-switcher'
+" Plug 'lifepillar/vim-colortemplate'
+
+" Colorschemes
+" Plug 'junegunn/seoul256.vim'
+" Plug 'rakr/vim-colors-rakr'
+" Plug 'jonathanfilip/vim-lucius'
+" Plug 'nanotech/jellybeans.vim'
+" Plug 'keith/parsec.vim'
+" Plug 'chase/focuspoint-vim'
+" Plug 'challenger-deep-theme/vim'
+" Plug 'tyrannicaltoucan/vim-deep-space'
+" Plug 'AlessandroYorba/Alduin'
+" Plug 'danilo-augusto/vim-afterglow'
+
+" not used anymore
+" Plug 'francoiscabrol/ranger.vim'
+" Plug 'rbgrouleff/bclose.vim'
+" Plug 'kevinhwang91/rnvimr'"
+" Plug 'dylanaraps/fff.vim'
+" Plug 'vim-ctrlspace/vim-ctrlspace'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
