@@ -287,3 +287,5 @@ alias xrandr-reset="xrandr --output eDP --mode 2880x1920"
 alias redshift="redshift -m randr "
 alias redshift-temp="redshift -m randr -P -O "
 alias redshift-reset="redshift -m randr -x "
+
+alias qemu-opt="qemu-system-x86_64 -enable-kvm -m 12G  -object memory-backend-memfd,id=mem1,size=12G -machine memory-backend=mem1 -smp 4 -boot d -vga virtio -display gtk,gl=on -cpu host,migratable=off -cdrom "

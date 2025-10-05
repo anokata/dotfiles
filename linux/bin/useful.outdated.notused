@@ -8,3 +8,18 @@ function username_filtered() {
 
 # export PS1="\[\033[1;32m\]\342\224\200\[\[\033[1;37m\]\u\[\033[01;32m\]@\[\033[01;34m\]\h\[\033[1;32m\]]\342\224\200[\[\033[1;37m\]\w\[\033[1;32m\]]\n\[\033[1;32m\]\342\224\224\342\224\200\342\224\200\342\225\274 [\[\e[01;33m\]$(date +%D-%r)\[\e[01;32m\]]\\$ \[\e[0m\]"
 # export PS1="$GREY\u$GRAY@$GREY\w$R\$(git_dirty)$GRAY\$ $RESET"
+#
+# Art References TODO: outdated
+export DEFAULT_REFLIST="reflist.list"
+# export SCREENS_BASE="$HDD1/screens/"
+# export MY_DRAW_DIR="$HOME/Dropbox/draw/my"
+# export MYPAINT_BRUSHES="$HOME/.local/share/mypaint/brushes/"
+# export MYPAINT="$HOME/.config/mypaint/"
+# export KRITA_DIR="$HOME/.local/share/krita/"
+#
+## fff TODO: outdated?
+export FFF_CD_ON_EXIT=1
+export EDITOR="nvim"
+export FFF_FAV1=~/dotfiles
+export FFF_FAV2=~/
+
