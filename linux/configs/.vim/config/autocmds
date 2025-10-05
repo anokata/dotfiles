@@ -15,6 +15,6 @@ augroup allAutoCmds
     autocmd FileType javascript,ts,typescript,html,css,scss set tabstop=2 softtabstop=2 shiftwidth=2
     autocmd FileType javascript,ts,typescript,html,css,scss TSEnable highlight
     autocmd FileType html,scss,css setlocal ts=2 sts=2 sw=2
-    autocmd VimEnter * TSEnable highlight
-    autocmd FileType * TSEnable highlight 
+    " autocmd VimEnter * TSEnable highlight
+    " autocmd FileType * TSEnable highlight 
 augroup END

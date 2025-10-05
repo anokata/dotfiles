@@ -23,6 +23,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'haorenW1025/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'klen/python-mode'
 
 " New try
 Plug 'majutsushi/tagbar'
