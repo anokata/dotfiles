@@ -1,0 +1,9 @@
+# Equivalents
+# export DOTFILES="$HOME/dotfiles"
+# set -gx DOTFILES $HOME/dotfiles
+# set list
+#set PATH /usr/local/bin /usr/sbin $PATH
+#alias is abbr
+#abbr -a gco git checkout
+#
+#~/.config/fish/conf.d/myabbrs.fish
