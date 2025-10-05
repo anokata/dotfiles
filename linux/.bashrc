@@ -87,3 +87,5 @@ else
     _tmux_run
 fi
 
+# wayland caps esc ?
+export XKB_DEFAULT_OPTIONS=caps:escape

@@ -7,3 +7,7 @@
 #abbr -a gco git checkout
 #
 #~/.config/fish/conf.d/myabbrs.fish
+#
+#fix
+#WARNING: Running setxkbmap against an Xwayland server
+#set caps to esc in wayland
