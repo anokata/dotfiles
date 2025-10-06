@@ -2,14 +2,27 @@
 # to get key code: press ctrl-v and key; replace ^[ to \e
 set -o vi
 bind -m vi-command '"v": abort'
-## vim
+# F keys codes: 
+# F1	\eOP	\e[11~
+# F2	\eOQ	\e[12~
+# F3	\eOR	\e[13~
+# F4	\eOS	\e[14~
+# F5	\e[15~	\e[15~
+# F6	\e[17~	\e[17~
+# F7	\e[18~	\e[18~
+# F8	\e[19~	\e[19~
+# F9	\e[20~	\e[20~
+# F10	\e[21~	\e[21~
+# F11	\e[23~	\e[23~
+# F12	\e[24~	\e[24~
+#
 # bind -x '"\e[1;6P":"$EDITOR"' # C-S-F1
-# sessions
+# vim sessions
 bind -x '"\eOP":"cd $DOTFILES; $EDITOR"' # F1 - open session: dotfiles
 bind -x '"\eOQ":"cd $NOTES_DIR; $EDITOR"' # F2 - notes
-bind -x '"\eOR":"cd $WORK_DIR_CURRENT; $EDITOR"' # F3 - ndm ndw3
-bind -x '"\e[17~":"cd $WORK_DIR_CURRENT_TRY; $EDITOR"' # F6 - ndm ndw3 try
-bind -x '"\e[1;2R":"cd $WORK_DIR_CURRENT2; $EDITOR"' # S-F3 - ndw2
+# bind -x '"\eOR":"cd $WORK_DIR_CURRENT; $EDITOR"' # F3 - ndm ndw3
+# bind -x '"\e[17~":"cd $WORK_DIR_CURRENT_TRY; $EDITOR"' # F6 - ndm ndw3 try
+# bind -x '"\e[1;2R":"cd $WORK_DIR_CURRENT2; $EDITOR"' # S-F3 - ndw2
 bind -x '"\eOS":"cd $DOTFILES_CONFIGS; $EDITOR"' # F4 - configs
 bind -x '"\e[1;5S":"cd $VIM_DIR_CONFIGS; $EDITOR"' # C-F4 - vim
 
@@ -28,9 +41,9 @@ bind -x '"\e[1;5A":"cd .."' # c-up
 bind -x '"\e[1;5A":"cd -"' # c-left
 
 # FM
-bind -x '"\e[15~":"lfrun"' # F5
+# bind -x '"\e[15~":"lfrun"' # F5
 #bind -x '"\e[17~":"fff"' # F6
-bind -x '"\e[18~":"~/gits/fmui/fmui"' # F7
+# bind -x '"\e[18~":"~/gits/fmui/fmui"' # F7
 
 # PS
 bind '"\C-k":"pkill "' # 
@@ -45,7 +58,6 @@ bind -x '"\C-u":"gu "' #
 # IDE
 bind -x '"\eg":"tig"' # tig by c-s-g
 
-# TODO
 bind '"\C-n":"lfcd\C-m"'
 
 bind -x '"\e[1;5S":"ranger"' # C-F4
