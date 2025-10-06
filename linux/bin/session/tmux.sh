@@ -1,5 +1,4 @@
 #!/bin/bash
-### TMUX
 TMUX_SESSION_NAME=base
 function _tmux_run () {
     # echo "tmux run $TMUX __ $NO_TMUX __ session: $TMUX_SESSION_NAME"
@@ -13,12 +12,12 @@ function _tmux_run () {
             # create new session
             tmux new -s $TMUX_SESSION_NAME -d
             tmux rename-window "dot" # 1
-            tmux new-window -c $WORK_DIR_CURRENT5 -n ndw5
+            # tmux new-window -c $WORK_DIR_CURRENT5 -n ndw5
             tmux new-window -c $WORK_DIR_CURRENT4 -n ndw4
             # tmux split-window -c $WORK_DIR_CURRENT5
             tmux new-window -c ~/gits -n gits # 6-7
             # tmux new-window -c ~/pwn -n pwn
-            tmux new-window -c ~/Downloads_ -n dwl
+            # tmux new-window -c ~/Downloads_ -n dwl
             tmux select-window -t 1
             tmux attach -t $TMUX_SESSION_NAME -c $DOTFILES_LINUX
         fi
