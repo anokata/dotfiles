@@ -152,12 +152,12 @@ alias dmesg="dmesg -w"
 
 alias pdfone='pdfunite *.pdf one.pdf'
 alias djvu-txt='djvutxt $1 | less'
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 alias watchtime="watch -tc -n0.1 date +%T.%2N"
 alias watchtm="watch -tc -n0.1 timed"
-# alias update="sudo pacman -Syu"
-alias end='systemctl poweroff'
+# alias update="sudo pacman -Syu" # TODO depend on OS
+# alias end='systemctl poweroff'  # end is reserved in fish
+alias halt='systemctl poweroff'
 alias clr='clear'
 
 # feh image view and refs
@@ -252,7 +252,6 @@ alias dir-colors-update='eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)'
 # NET/Curl.sites
 alias ip-info="curl ipinfo.io"
 alias my-ip="curl icanhazip.com"
-alias get-ip="wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
 alias weather0="curl wttr.in/Taipei"
 alias weather="finger taipei@graph.no"
 
