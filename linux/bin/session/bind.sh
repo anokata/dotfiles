@@ -41,7 +41,6 @@ bind -x '"\C-b":"bashrc-reload "' #
 bind -x '"\C-x":"gcom "' # 
 bind -x '"\C-e":"gco - "' # 
 bind -x '"\C-u":"gu "' # 
-# bind -x '"\C-w":"arp -a "' # arp -a
 
 # IDE
 bind -x '"\eg":"tig"' # tig by c-s-g
@@ -53,8 +52,6 @@ bind -x '"\e[1;5S":"ranger"' # C-F4
 bind -x '"\e[1;6S":"tmux new-window ranger"' # C-S-F4
 bind -x '"\e[15;5~":"fff"' # C-F5
 bind -x '"\e[21~":"ncmpcpp"' # F10
-# list
-#bind -x '"\e[15~":"ls"' # a-l 
 
 # tmux
 bind '"\C-a":"tmux a\C-m"'
@@ -63,25 +60,4 @@ bind '"\C-a":"tmux a\C-m"'
 bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
 
 bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
-
-# bind '^r' fzf-history-widget
-
-# Fav dirs
-# num not num
-#bind '"\e[1;5F":"cd $HDD1\C-m"' # C-num-1
-#bind '"\e[2;5~":"cd $HDD2\C-m"' # C-num-0
-#bind '"\e[1;5B":"cd $SSD\C-m"' # C-num-2
-#bind '"\e[6;5~":"cd $DOTFILES\C-m"' # C-num-3
-#bind '"\C-i":"cd $NOTES_DIR\C-m$EDITOR $(fzf)\C-m"' # c-i
-#bind '"\e[1;5D":"cd $NOTES_DIR\C-m$EDITOR $(fzf)\C-m"' # C-left
-
-# bind '"\e[1;":"cd $DOTFILES_LINUX\C-m"' # C-num-0
-# bind '"\e[1;":"cd $DOTFILES_BIN\C-m"' # C-num-0
-# bind '"\e[1;":"cd $DOTFILES_CONFIGS\C-m"' # C-num-0
-# bind '"\e[1;":"cd $WORK_DIR\C-m"' # C-num-0
-# bind '"\e[1;":"cd $BACKUPS\C-m"' # C-num-0
-# bind '"\e[1;":"cd $LINKS_DIR\C-m"' # C-num-0
-# bind '"\e[1;":"cd $DRAW_DIR\C-m"' # C-num-0
-# bind '"\e[1;":"cd $SCREENS_BASE\C-m"' # C-num-0
-# bind '"\e[1;":"cd $REF_BASE\C-m"' # C-num-0
 

@@ -15,6 +15,8 @@ source $DOTFILES_LINUX/bin/session/bind.sh
 source $DOTFILES_LINUX/bin/session/ndm.sh # work related aliases and variables
 source $DOTFILES_LINUX/bin/session/sec.sh
 
+source $DOTFILES_BIN/session/net_names
+
 # Enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
