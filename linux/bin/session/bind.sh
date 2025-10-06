@@ -3,7 +3,7 @@
 set -o vi
 bind -m vi-command '"v": abort'
 ## vim
-bind -x '"\e[1;6P":"$EDITOR"' # C-S-F1
+# bind -x '"\e[1;6P":"$EDITOR"' # C-S-F1
 # sessions
 bind -x '"\eOP":"cd $DOTFILES; $EDITOR"' # F1 - open session: dotfiles
 bind -x '"\eOQ":"cd $NOTES_DIR; $EDITOR"' # F2 - notes
