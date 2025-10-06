@@ -1,7 +1,8 @@
 
 "Plug 'wakatime/vim-wakatime'
-" Plug 'tenfyzhong/tagbar-markdown.vim'
+    " Plug 'tenfyzhong/tagbar-markdown.vim'
 " Plug 'MattesGroeger/vim-bookmarks'
+" Plug 'Yilin-Yang/vim-markbar'
 " Plug 'tveskag/nvim-blame-line'
 
 " Plug 'hrsh7th/nvim-cmp'
@@ -13,7 +14,6 @@
 " Plug 'dhruvasagar/vim-dotoo'
 "Plug 'tpope/vim-vinegar'
 " Plug 'gorodinskiy/vim-coloresque'
-" Plug 'Yilin-Yang/vim-markbar'
 
 " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'docunext/closetag.vim'

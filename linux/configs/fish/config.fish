@@ -11,6 +11,9 @@ source ~/dotfiles/linux/bin/session/tmux.fish
 # alt-s Prepends sudo to the current commandline
 # ctrl-n accepts the autosuggestion.
 
+bind ctrl-n lf
+bind --mode insert ctrl-n lf
 
+# fish_key_reader
 
 _tmux_run

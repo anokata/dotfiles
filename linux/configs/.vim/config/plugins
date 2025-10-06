@@ -40,6 +40,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
 Plug 'chentoast/marks.nvim'
+Plug 'kshenoy/vim-signature'
 
 " to try
 Plug 'jessfraz/openai.vim'
