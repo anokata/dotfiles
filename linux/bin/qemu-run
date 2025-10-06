@@ -1,0 +1,1 @@
+qemu-system-x86_64 -enable-kvm -m 12G  -object memory-backend-memfd,id=mem1,size=12G -machine memory-backend=mem1 -smp 4 -boot d -vga virtio -display gtk,gl=on -cpu host,migratable=off -drive file=~/Downloads/my_vm_disk.qcow2,format=qcow2,if=virtio -cdrom 

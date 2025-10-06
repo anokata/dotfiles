@@ -4,15 +4,37 @@ source ~/dotfiles/linux/.env
 # export TERM=xterm-256color
 
 ### Imports
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 source $DOTFILES_LINUX/bin/session/alias.sh
 source $DOTFILES_LINUX/bin/session/color.sh
 source $DOTFILES_LINUX/bin/session/tmux.sh
 source $DOTFILES_LINUX/bin/session/bind.sh
 source $DOTFILES_LINUX/bin/session/ndm.sh # work related aliases and variables
 source $DOTFILES_LINUX/bin/session/sec.sh
+
+# Enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
+### Monitors
+# TODO MONITORS MONINTOR1 xrandr get mon names and count
+source $DOTFILES_LINUX/bin/detect-monitors
+
 LFCD="$DOTFILES_CONFIGS/lf/lfcd.sh"
 [ -f "$LFCD" ] && source "$LFCD"
 eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)
+
+function cheat() {
+    curl "cheat.sh/$@"
+}
+function dict() {
+    curl "dict.org/d:$@"
+}
+
 
 ### Bash config
 shopt -s histappend
@@ -28,6 +50,8 @@ HISTCONTROL=ignoreboth
 
 ### Plugins
 #### FZF
+source $DOTFILES_LINUX/bin/fzf-git-checkout
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden --hidden -g "!{node_modules/,.git/}"'
 [ -f  /usr/share/doc/fzf/examples/completion.bash ] && source /usr/share/doc/fzf/examples/completion.bash
