@@ -75,7 +75,7 @@ Plug 'rakr/vim-one'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'arcticicestudio/nord-vim'
 Plug 'dikiaap/minimalist'
-Plug 'trevordmiller/nova-vim'
+" Plug 'trevordmiller/nova-vim'
 Plug 'jacoborus/tender.vim'
 Plug 'jnurmine/Zenburn'
 Plug 'sainnhe/everforest'
@@ -86,5 +86,7 @@ Plug 'cocopon/iceberg.vim'
 Plug 'yorickpeterse/happy_hacking.vim'
 Plug 'whatyouhide/vim-gotham'
 Plug 'mhartington/oceanic-next'
+
+Plug 'wakatime/vim-wakatime'
 
 call plug#end()
