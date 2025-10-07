@@ -11,8 +11,8 @@
 # File Managment: LF
 # bind ctrl-n lf
 # bind --mode insert ctrl-n lf
-bind \e\[15~ lf # F5
-bind -M insert \e\[15~ lf # F5
+bind \eOR lf # F3 TODO: lfcd
+bind -M insert \e\OR lf # F3
 
 # F1 - open session: dotfiles
 bind -k f1 'cd $DOTFILES; $EDITOR'
@@ -33,29 +33,49 @@ bind -M insert \e\[1\;5Q '$EDITOR $DOTFILES_LINUX/configs/fish/config.fish'
 
 # TODO
 # fzf and vim
-# bind -x '"\C-f":"$EDITOR $(fzf)"' # C-e fzf and open in vim
-# bind -x '"\C-g":"fzf-ueberzogen.sh"' # image preview
-# bind -x '"\C-o":"cd $NOTES_DIR; $EDITOR $(fzf)"' # C-e fzf and open in vim
+bind ctrl-f '$EDITOR $(fzf)'
+bind -M insert ctrl-f '$EDITOR $(fzf)'
 
-# PS
-# bind '"\C-k":"pkill "' # 
-# bind '"\C-k":"pkill "' # prepand pkill ; alt-k
-# bind -x '"\C-y":"htop "' # 
-# bind -x '"\e[20~":"htop "' # <F9>
-# TODO btop s-tui 
+bind alt-h 'fzf-ueberzogen.sh'
+bind -M insert alt-h 'fzf-ueberzogen.sh'
+
+bind ctrl-o 'cd $NOTES_DIR; $EDITOR $(fzf)'
+bind -M insert ctrl-o 'cd $NOTES_DIR; $EDITOR $(fzf)'
+
+# alt-k: Prepends command with pkill
+bind alt-k 'commandline -r "pkill "(commandline) ; and commandline -C 6'
+bind -M insert alt-k 'commandline -r "pkill "(commandline) ; and commandline -C 6'
+
+# System Monitors
+bind ctrl-y 'htop'
+bind -M insert ctrl-y 'htop'
+
+bind ctrl-p 'btop'
+bind -M insert ctrl-p 'btop'
+
+# F9: s-tui cpu monitor
+bind \e\[20~ 's-tui'
+bind -M insert \e\[20~ 's-tui'
+
+## Git
 # TODO bind to 'git status'  and git status; git diff --shortstat master  AND git pull
+bind ctrl-g 'git status'
+bind alt-t 'git status; git diff --shortstat master'
+# bind alt-p ''
 
-# IDE
-# bind -x '"\eg":"tig"' # tig by c-s-g
-# bind -x '"\e[19~":"tig"' # tig by <F8>
-
-# TODO: lfcd (adapt script and bind)
+## IDE
+# F5: tig
+bind \e\[15~ 'tig'
+bind -M insert \e\[15~ 'tig'
 
 bind ctrl-b fish-config-reload
 bind --mode insert ctrl-b fish-config-reload
 
+# Navigation
 bind \e\[1\;5A 'cd ..' execute # ctrl-up
 bind -M insert \e\[1\;5A 'cd ..' execute # ctrl-up
 
 bind \e\[1\;5D 'cd -' execute # ctrl-left
 bind -M insert \e\[1\;5D 'cd -' execute # ctrl-left
+
+# F4	\eOS	\e[14~
