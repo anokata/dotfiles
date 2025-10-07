@@ -53,9 +53,9 @@ bspc rule -a Zathura state=tiled
 bspc rule -a clipstudiopaint.exe state=floating
 #bspc rule -a jetbrains-webstorm desktop='^1'
 bspc rule -a kitty:dropdown-term state=floating sticky=on hidden=on center=on follow=on
-bspc rule -r kitty
+# bspc rule -r kitty
 bspc rule -a kitty state=fullscreen
-bspc rule -a kitty:btop desktop='^3'
+# bspc rule -a kitty:btop desktop='^3'
 
 
 ### Auto run apps

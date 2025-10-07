@@ -6,6 +6,7 @@ source ~/dotfiles/linux/.env.fish
 source ~/dotfiles/linux/bin/session/alias.sh
 source ~/dotfiles/linux/bin/session/tmux.fish
 source ~/dotfiles/linux/bin/session/bind.fish
+source ~/dotfiles/linux/bin/session/ndm.fish
 
 # source ~/dotfiles/linux/configs/lf/lfcd.fish
 

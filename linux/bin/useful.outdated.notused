@@ -77,3 +77,46 @@ export FFF_FAV2=~/
 # bind -x '"\C-x":"gcom "' # 
 # bind -x '"\C-e":"gco - "' # 
 # bind -x '"\C-u":"gu "' # 
+#
+# sxhkd
+# FIX
+# super + F10
+#     kitty ncmpcpp
+# ctrl + super + e
+#     rofimoji
+#     rofi -show emoji -modi emoji
+#ctrl + shift + F11
+  #~/dotfiles/linux/bin/timer-interval
+# Change window gap
+# ctrl + shift + {j,k}
+#     bspc config window_gap $((`bspc config window_gap` {+,-} 10 ))
+# expand a window by moving one of its side outward
+#super + shift + {h,j,k,l}
+	#bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 20 0}
+
+# bspc node -z {right -10 0,top 0 10,bottom 0 -10,left 10 0}
+
+# ctrl + super + F2
+    # webstorm.sh
+#ctrl + super + F11
+#    csp # clip studio draw
+# Unused
+# scripts screens
+# ctrl + F12
+#   ~/dotfiles/linux/bin/screenshot-area
+# alt + F12
+#   screenshot-all
+# super + F12
+#     screenshot-all-media
+#
+
+# ctrl + shift + v
+#   rofi-snip
+
+# CN ZH TW
+#alt + x; n ; p
+    #clipboard-set "$(zh-dict-pretty.js)"
+# super + t # chinese to traditional
+#     cliptw
+# ctrl + super + F11
+#     clipboard-path-load-image
