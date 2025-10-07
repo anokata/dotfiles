@@ -170,6 +170,7 @@ alias ref-scr="cd $SCREENS_BASE; fer"
 # sys config
 alias xresources-reload='xrdb ~/.Xresources'
 alias config-bash="$EDITOR $DOTFILES/linux/.bashrc"
+alias config-fish="$EDITOR $DOTFILES/linux/config.fish"
 alias config-alias="$EDITOR $DOTFILES_BIN/session/alias.sh && bashrc-reload"
 alias config-tmux="$EDITOR $DOTFILES_CONFIGS/.tmux.conf"
 alias config-bspwm="$EDITOR $DOTFILES_CONFIGS/bspwm/bspwmrc"

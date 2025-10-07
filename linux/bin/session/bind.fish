@@ -12,3 +12,8 @@ bind \eOQ 'cd $NOTES_DIR; $EDITOR'
 bind --mode insert \eOQ 'cd $NOTES_DIR; $EDITOR' # F2 - open notes
 
 
+# TODO
+# bind -x '"\C-b":"bashrc-reload "' # 
+# bind  cd ..
+# bind  cd -
+# bind '"\C-k":"pkill "' # prepand pkill ; alt-k

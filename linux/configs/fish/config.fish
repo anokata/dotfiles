@@ -12,4 +12,7 @@ source ~/dotfiles/linux/bin/session/bind.fish
 # alt-s Prepends sudo to the current commandline
 # ctrl-n accepts the autosuggestion.
 
+
+# fish_key_reader
+
 _tmux_run

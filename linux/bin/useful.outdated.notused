@@ -48,3 +48,32 @@ export FFF_FAV2=~/
 # bind '"\e[1;":"cd $SCREENS_BASE\C-m"' # C-num-0
 # bind '"\e[1;":"cd $REF_BASE\C-m"' # C-num-0
 
+# bind -x '"\C-w":"tmux kill-pane"' # c-w
+# bind -x '"\C-n":"tmux new-window"' # c-n
+# bind -x '"\e[20;6~":"tmux new-window cmus"' # C-S-F9
+
+# bind -x '"\e[1;3P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # alt-F1
+
+# FM
+# bind -x '"\e[15~":"lfrun"' # F5
+#bind -x '"\e[17~":"fff"' # F6
+# bind -x '"\e[18~":"~/gits/fmui/fmui"' # F7
+
+# bind -x '"\e[1;5S":"ranger"' # C-F4
+# bind -x '"\e[1;6S":"tmux new-window ranger"' # C-S-F4
+# bind -x '"\e[15;5~":"fff"' # C-F5
+# bind -x '"\e[21~":"ncmpcpp"' # F10
+
+# bind -x '"\C-h":"fzf"' # C- fzf 
+# bind -x '"\e[1;6P":"$EDITOR"' # C-S-F1
+# bind -x '"\eOR":"cd $WORK_DIR_CURRENT; $EDITOR"' # F3 - ndm ndw3
+# bind -x '"\e[17~":"cd $WORK_DIR_CURRENT_TRY; $EDITOR"' # F6 - ndm ndw3 try
+# bind -x '"\e[1;2R":"cd $WORK_DIR_CURRENT2; $EDITOR"' # S-F3 - ndw2
+#
+# Move
+# bind -x '"\e[1;5A":"cd .."' # c-up
+# bind -x '"\e[1;5A":"cd -"' # c-left
+# Git
+# bind -x '"\C-x":"gcom "' # 
+# bind -x '"\C-e":"gco - "' # 
+# bind -x '"\C-u":"gu "' # 
