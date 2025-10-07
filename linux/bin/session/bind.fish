@@ -18,18 +18,20 @@ bind -M insert \e\[15~ lf # F5
 bind -k f1 'cd $DOTFILES; $EDITOR'
 bind --mode insert -k f1 'cd $DOTFILES; $EDITOR'
 
+# F2 - open notes
 bind \eOQ 'cd $NOTES_DIR; $EDITOR'
-bind --mode insert \eOQ 'cd $NOTES_DIR; $EDITOR' # F2 - open notes
+bind --mode insert \eOQ 'cd $NOTES_DIR; $EDITOR' 
+
+# Configs
+# Ctrl-F1 vimrc config
+bind  \e\[1\;5P '$EDITOR $DOTFILES_CONFIGS/.vimrc'
+bind -M insert \e\[1\;5P '$EDITOR $DOTFILES_CONFIGS/.vimrc'
+
+# Ctrl-F2 fishrc config
+bind \e\[1\;5Q '$EDITOR $DOTFILES_LINUX/configs/fish/config.fish'
+bind -M insert \e\[1\;5Q '$EDITOR $DOTFILES_LINUX/configs/fish/config.fish'
 
 # TODO
-# vim sessions
-# bind -x '"\eOP":"cd $DOTFILES; $EDITOR"' # F1 - open session: dotfiles
-# bind -x '"\eOQ":"cd $NOTES_DIR; $EDITOR"' # F2 - notes
-
-# configs
-# bind -x '"\e[1;5P":"$EDITOR $DOTFILES_CONFIGS/.vimrc"' # Ctrl-F1
-# bind -x '"\e[1;5Q":"$EDITOR $DOTFILES_LINUX/.bashrc"' # Ctrl-F2
-
 # fzf and vim
 # bind -x '"\C-f":"$EDITOR $(fzf)"' # C-e fzf and open in vim
 # bind -x '"\C-g":"fzf-ueberzogen.sh"' # image preview
@@ -47,11 +49,13 @@ bind --mode insert \eOQ 'cd $NOTES_DIR; $EDITOR' # F2 - open notes
 # bind -x '"\eg":"tig"' # tig by c-s-g
 # bind -x '"\e[19~":"tig"' # tig by <F8>
 
-# lfcd
+# TODO: lfcd (adapt script and bind)
 
 bind ctrl-b fish-config-reload
 bind --mode insert ctrl-b fish-config-reload
 
+bind \e\[1\;5A 'cd ..' execute # ctrl-up
 bind -M insert \e\[1\;5A 'cd ..' execute # ctrl-up
 
+bind \e\[1\;5D 'cd -' execute # ctrl-left
 bind -M insert \e\[1\;5D 'cd -' execute # ctrl-left
