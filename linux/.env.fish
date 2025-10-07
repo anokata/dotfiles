@@ -79,3 +79,8 @@ set -gx GEMINI_API_KEY (cat ~/.secrets/.gemini.key)
 set -gx OPENROUTER_API_KEY (cat ~/.secrets/.openrouter.key)
 set -gx OPENROUTER_MODEL deepseek/deepseek-r1
 
+# NDM
+set -gx KEENETIC_IP_SKIPPER "192.168.25.1"
+set -gx NODE_VERSION 22
+set -gx SSH_PORT 22
+set -gx SSH_USER admin
