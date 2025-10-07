@@ -11,8 +11,8 @@
 # File Managment: LF
 # bind ctrl-n lf
 # bind --mode insert ctrl-n lf
-bind \eOR lf # F3 TODO: lfcd
-bind -M insert \e\OR lf # F3
+bind \eOR lfcd execute # F3 
+bind -M insert \e\OR lfcd execute # F3
 
 # F1 - open session: dotfiles
 bind -k f1 'cd $DOTFILES; $EDITOR'

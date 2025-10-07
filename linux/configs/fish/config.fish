@@ -7,6 +7,6 @@ source ~/dotfiles/linux/bin/session/alias.sh
 source ~/dotfiles/linux/bin/session/tmux.fish
 source ~/dotfiles/linux/bin/session/bind.fish
 
-# TODO: lfcd (adapt script and bind)
+# source ~/dotfiles/linux/configs/lf/lfcd.fish
 
 _tmux_run
