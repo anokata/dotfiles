@@ -10,7 +10,4 @@ i wget gpg imagemagick mpd mpc tig sudo apt install sshpass nmap whois sudo apt 
 
 # hcxtools
 
-# Fish
-#fisher install PatrickF1/fzf.fish
-
 echo 'Apps installed [done]'

@@ -88,3 +88,5 @@ set -gx SSH_USER admin
 ### Sec
 set -gx WORDLIST "/usr/share/wordlists/dirbuster/"
 set -gx SECLIST "~/pwn/SecLists/"
+
+set -gx XKB_DEFAULT_OPTIONS caps:escape

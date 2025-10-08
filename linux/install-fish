@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Fish
+#fisher install PatrickF1/fzf.fish
+#ln config/fish/functions/* ~/.config/fish/functions/

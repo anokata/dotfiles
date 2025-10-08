@@ -22,6 +22,10 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
+alias get-ip="wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
 ### Monitors
 # TODO MONITORS MONINTOR1 xrandr get mon names and count
 source $DOTFILES_LINUX/bin/detect-monitors
@@ -37,11 +41,6 @@ function dict() {
     curl "dict.org/d:$@"
 }
 
-# unsuported by fish TODO: rewrite if need
-alias get-ip="wget -q -O - checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//'"
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-
 ### Bash config
 shopt -s histappend
 shopt -s checkwinsize
@@ -49,7 +48,6 @@ shopt -s autocd
 shopt -s extglob
 shopt -s cmdhist 
 shopt -s dotglob     
-shopt -s histappend
 shopt -s cdspell
 stty -ixon # for not stop draw at C-s (C-q restore)
 HISTCONTROL=ignoreboth
@@ -67,10 +65,9 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden --hidde
 [ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 [ -f /usr/share/git/completion/git-completion.bash ] && source /usr/share/git/completion/git-completion.bash
 
-# pidof sxhkd >/dev/null || (nohup sxhkd >/dev/null 2>&1 & disown) # wm (bspwm) run sxhkd, no?
-
-# setxkbmap -option caps:escape # make caps = escape
 caps-escape # make caps = escape
+export XKB_DEFAULT_OPTIONS=caps:escape
+# wayland caps esc ?
 
 # Create link to ram directory in home
 function _ram() {
@@ -116,6 +113,3 @@ elif [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
 else
     _tmux_run
 fi
-
-# wayland caps esc ?
-export XKB_DEFAULT_OPTIONS=caps:escape
