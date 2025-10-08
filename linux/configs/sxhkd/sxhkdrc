@@ -12,7 +12,7 @@ ctrl + shift + F12
 # alt + k
 #     xdotool sleep 0.2 getwindowfocus key --window %@ Up
 
-# Work/ndm
+##### Work/ndm #####
 alt + x; n ; s
     ndm-time-status
 alt + x; n ; t
@@ -69,13 +69,18 @@ super + t
 super + p
     pavucontrol
 super + g
-    gnome-control-center
+    gnome-control
 super + b
     blueman-manager
 super + x
     xkill
+# Redshift
+ctrl + super + bracketright
+    redshift -x
+ctrl + super + bracketleft
+    redshift -P -O 2500 -b 0.9
 
-##### Rofi
+##### Rofi #####
 # Bookmarks
 ctrl + super + b
     rofi-books
@@ -86,39 +91,43 @@ ctrl + alt + w
 ctrl + shift + d
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' 
 
-##### sound
+##### Sound: Volume Control
 ctrl + super + 9
   pacmd set-default-sink 0
-
 ctrl + super + 0
   pacmd set-default-sink 1
-
 ctrl + super + 8
   pacmd set-default-sink 2
-
 ctrl + super + 7
   pacmd set-default-sink 3
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
+XF86AudioLowerVolume
+    volumectl -5%
+    # amixer -D pulse sset Master 5%- unmute
+    # pactl set-sink-volume 0 -5%
+XF86AudioRaiseVolume
+    volumectl +5%
+#XF86AudioMute
+#    amixer set Master toggle
+ctrl + alt + {bracketleft, bracketright}
+    amixer -D pulse sset Master 5%{-,+} unmute
+#XF86AudioMicMute
+    #pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+###### MPD #####
+#super + KP_{Divide,Multiply,Subtract,Add,Decimal,Enter,Separator}
 #ctrl + super + m; x - music prefix
 ctrl + super + c
     ~/dotfiles/linux/bin/mpd-command toggle
-
 ctrl + super + m; c
     ~/dotfiles/linux/bin/mpd-command toggle
-
-#super + KP_{Divide,Multiply,Subtract,Add,Decimal,Enter,Separator}
-super + KP_Enter
-    ~/dotfiles/linux/bin/mpd-command toggle
-
 ctrl + super + m; v
     ~/dotfiles/linux/bin/mpd-command next
-
 ctrl + super + m; x
     ~/dotfiles/linux/bin/mpd-command prev
-
 ctrl + super + m; s
     ~/dotfiles/linux/bin/rofi-mpd -s
-
 ctrl + super + m; n # show name
     notify-send "$(~/dotfiles/linux/bin/mpd-command current)"
 
@@ -134,7 +143,6 @@ super + KP_Subtract
     ~/dotfiles/linux/bin/rofi-mpd -l
 
 # lsplaylists 
-# load
 ctrl + super + {comma, period}
     ~/dotfiles/linux/bin/mpd-command {"seek -00:01:00", "seek +00:01:00"}
 ctrl + super + shift + {less, greater}
@@ -148,25 +156,9 @@ ctrl + super + m; ctrl + super + m
 ctrl + super + s
     ~/dotfiles/linux/bin/rofi-mpd -s
 
-# Navigate mpd playlist
+##### Navigate mpd playlist #####
 alt + x; m; {comma, period}
     mpc -q {prev, next}
-
-##### Volume Control
-XF86AudioMute
-    pactl set-sink-mute 0 toggle
-XF86AudioLowerVolume
-    volumectl -5%
-    # amixer -D pulse sset Master 5%- unmute
-    # pactl set-sink-volume 0 -5%
-XF86AudioRaiseVolume
-    volumectl +5%
-#XF86AudioMute
-#    amixer set Master toggle
-ctrl + alt + {bracketleft, bracketright}
-    amixer -D pulse sset Master 5%{-,+} unmute
-#XF86AudioMicMute
-    #pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 #### Configs
 # Reload sxhkd configuration files
@@ -227,28 +219,7 @@ super + {h, l}
 super + {1-9}
 	bspc desktop -f '^{1-9,9}'
 
-# Switch desktops pairs
-# super + 1
-# 	bspc desktop -f '^1';\
-# 	bspc desktop -f '^6'
-# super + 2
-# 	bspc desktop -f '^2';\
-# 	bspc desktop -f '^7'
-# super + 3
-# 	bspc desktop -f '^3';\
-# 	bspc desktop -f '^8'
-# super + 4
-# 	bspc desktop -f '^4';\
-# 	bspc desktop -f '^9'
-# super + 5
-# 	bspc desktop -f '^5';\
-# 	bspc desktop -f '^10'
-
-# select the direction
-#super + {h,j,k,l}
-	#bspc node -s {west,south,north,east}
-
-# System shortcuts #
+##### System shortcuts #####
 # contract a window by moving one of its side inward
 super + alt + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
@@ -298,8 +269,3 @@ super + shift + {h,l}
 	dir={west,east}; \
 	bspc node -s "$dir.local" --follow \
 	    || bspc node -m "$dir" --follow
-
-ctrl + super + bracketright
-    redshift -x
-ctrl + super + bracketleft
-    redshift -P -O 2500 -b 0.9

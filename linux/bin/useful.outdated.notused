@@ -120,3 +120,25 @@ export FFF_FAV2=~/
 #     cliptw
 # ctrl + super + F11
 #     clipboard-path-load-image
+#
+# Switch desktops pairs
+# super + 1
+# 	bspc desktop -f '^1';\
+# 	bspc desktop -f '^6'
+# super + 2
+# 	bspc desktop -f '^2';\
+# 	bspc desktop -f '^7'
+# super + 3
+# 	bspc desktop -f '^3';\
+# 	bspc desktop -f '^8'
+# super + 4
+# 	bspc desktop -f '^4';\
+# 	bspc desktop -f '^9'
+# super + 5
+# 	bspc desktop -f '^5';\
+# 	bspc desktop -f '^10'
+
+# select the direction
+#super + {h,j,k,l}
+	#bspc node -s {west,south,north,east}
+

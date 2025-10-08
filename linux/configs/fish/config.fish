@@ -8,6 +8,4 @@ source ~/dotfiles/linux/bin/session/tmux.fish
 source ~/dotfiles/linux/bin/session/bind.fish
 source ~/dotfiles/linux/bin/session/ndm.sh
 
-# source ~/dotfiles/linux/configs/lf/lfcd.fish
-
 _tmux_run
