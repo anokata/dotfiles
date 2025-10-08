@@ -11,7 +11,7 @@ numlockx on
 guake &
 [ ! -s ~/.config/mpd/pid ] && mpd
 # thunar --daemon &
-# greenclip daemon &
+greenclip daemon &
 
 xrdb "/home/$(whoami)/.Xresources"
 hsetroot -solid "#000"
