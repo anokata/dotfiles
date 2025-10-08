@@ -19,6 +19,3 @@ alias wifi-stop="sudo airmon-ng stop $WIFI_MONITOR"
 
 alias wifi-start-wlan1mon="sudo nmcli device set wlan1 managed no; sudo airmon-ng start wlan1; "
 
-### Sec
-export WORDLIST="/usr/share/wordlists/dirbuster/"
-export SECLIST="~/pwn/SecLists/"
