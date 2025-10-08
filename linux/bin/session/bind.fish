@@ -7,10 +7,11 @@
 # alt-w prints a short description of the command under the cursor
 # alt-s Prepends sudo to the current commandline
 # ctrl-n accepts the autosuggestion.
+# F4	\eOS	\e[14~
 
 # File Managment: LF
-# bind ctrl-n lf
-# bind --mode insert ctrl-n lf
+bind ctrl-n lf
+bind --mode insert ctrl-n lf
 bind \eOR lfcd execute # F3 
 bind -M insert \e\OR lfcd execute # F3
 
@@ -78,4 +79,9 @@ bind -M insert \e\[1\;5A 'cd ..' execute # ctrl-up
 bind \e\[1\;5D 'cd -' execute # ctrl-left
 bind -M insert \e\[1\;5D 'cd -' execute # ctrl-left
 
-# F4	\eOS	\e[14~
+# ctrl-j accept autosuggestion
+bind --preset -M insert -e ctrl-j
+bind --preset -e ctrl-j
+bind -M insert ctrl-j accept-autosuggestion
+bind ctrl-j accept-autosuggestion
+

@@ -276,3 +276,5 @@ alias redshift-reset="redshift -m randr -x "
 alias qemu-opt="qemu-system-x86_64 -enable-kvm -m 12G  -object memory-backend-memfd,id=mem1,size=12G -machine memory-backend=mem1 -smp 4 -boot d -vga virtio -display gtk,gl=on -cpu host,migratable=off -cdrom "
 
 alias ipv6-disable="sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1"
+
+alias sddm-test="sddm-greeter-qt6 --test-mode --theme "
