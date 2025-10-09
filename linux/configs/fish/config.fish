@@ -9,6 +9,8 @@ source ~/dotfiles/linux/bin/session/bind.fish
 source ~/dotfiles/linux/bin/session/ndm.sh
 
 source ~/dotfiles/linux/configs/fish/functions/detect-monitors.fish && detect_monitors
+# source ~/dotfiles/linux/configs/fish/functions/detect-monitors.fish# && detect_monitors
+source ~/dotfiles/linux/bin/fzf-git-checkout.fish
 
 # TODO: condition run tmux: not in ide terms
 _tmux_run

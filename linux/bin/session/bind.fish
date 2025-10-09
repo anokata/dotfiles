@@ -10,8 +10,8 @@
 # F4	\eOS	\e[14~
 
 # File Managment: LF
-bind ctrl-n lf
-bind --mode insert ctrl-n lf
+bind ctrl-n lfcd execute
+bind --mode insert ctrl-n lfcd execute
 bind \eOR lfcd execute # F3 
 bind -M insert \e\OR lfcd execute # F3
 
@@ -37,8 +37,9 @@ bind -M insert \e\[1\;5Q '$EDITOR $DOTFILES_LINUX/configs/fish/config.fish'
 bind ctrl-f '$EDITOR $(fzf)'
 bind -M insert ctrl-f '$EDITOR $(fzf)'
 
-bind alt-h 'fzf-ueberzogen.sh'
-bind -M insert alt-h 'fzf-ueberzogen.sh'
+# find other key
+# bind alt-h 'fzf-ueberzogen.sh'
+# bind -M insert alt-h 'fzf-ueberzogen.sh'
 
 bind ctrl-o 'cd $NOTES_DIR; $EDITOR $(fzf)'
 bind -M insert ctrl-o 'cd $NOTES_DIR; $EDITOR $(fzf)'
