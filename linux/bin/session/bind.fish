@@ -8,6 +8,13 @@
 # alt-s Prepends sudo to the current commandline
 # ctrl-n accepts the autosuggestion.
 # F4	\eOS	\e[14~
+# FZF bindings
+# Search Directory   |  Ctrl+Alt+F (F for file)
+# Search Git Log     |  Ctrl+Alt+L (L for log)
+# Search Git Status  |  Ctrl+Alt+S (S for status)
+# Search History     |  Ctrl+R     (R for reverse)
+# Search Processes   |  Ctrl+Alt+P (P for process)
+# Search Variables   |  Ctrl+V     (V for variable)
 
 # File Managment: LF
 bind ctrl-n lfcd execute
