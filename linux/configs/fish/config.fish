@@ -12,5 +12,15 @@ source ~/dotfiles/linux/configs/fish/functions/detect-monitors.fish && detect_mo
 # source ~/dotfiles/linux/configs/fish/functions/detect-monitors.fish# && detect_monitors
 source ~/dotfiles/linux/bin/fzf-git-checkout.fish
 
-# TODO: condition run tmux: not in ide terms
-_tmux_run
+# Avoid running tmux session in vscode and webstorm
+if test "$TERM_PROGRAM" = "vscode"
+    echo "vscode"
+    # nvm use system
+else if test "$TERMINAL_EMULATOR" = "JetBrains-JediTerm"
+    echo "webstorm"
+    # nvm use system
+else
+    _tmux_run
+end
+
+caps-escape # make caps = escape
