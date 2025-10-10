@@ -273,9 +273,14 @@ alias xrandr-reset="xrandr --output eDP --mode 2880x1920"
 alias redshift="redshift -m randr "
 alias redshift-temp="redshift -m randr -P -O "
 alias redshift-reset="redshift -m randr -x "
+alias redshift-evening="redshift -P -O 2800 -b 0.9"
 
 alias qemu-opt="qemu-system-x86_64 -enable-kvm -m 12G  -object memory-backend-memfd,id=mem1,size=12G -machine memory-backend=mem1 -smp 4 -boot d -vga virtio -display gtk,gl=on -cpu host,migratable=off -cdrom "
 
 alias ipv6-disable="sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1"
 
 alias sddm-test="sddm-greeter-qt6 --test-mode --theme "
+alias clipboard-get="xclip -o"
+alias cpulow="sudo cpupower frequency-set -g powersave"
+alias cpuhigh="sudo cpupower frequency-set -g performance"
+alias sdd-health="sudo nvme smart-log /dev/nvme0n1"

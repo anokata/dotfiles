@@ -1,3 +1,2 @@
 #!/bin/bash
-PROXY=$(clipboard-get)
-proxy-check "$PROXY"
+proxy-check "$(clipboard-get)"
