@@ -5,6 +5,7 @@ alias cdn4="cd $WORK_DIR/ndw4/"
 alias cdn5="cd $WORK_DIR/ndw5/"
 alias cdnw="cd $WORK_DIR/wireguard/"
 alias cdnq="cd $WORK_DIR/qemu/"
+alias cdnf="cd $WORK_DIR/firmware/"
 alias wireguard-test="cdnw; sudo wg-quick up wg-test"
 alias cdnisw="cd $WORK_DIR/isw/"
 

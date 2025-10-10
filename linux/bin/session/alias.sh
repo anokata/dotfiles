@@ -247,6 +247,7 @@ alias aptg="sudo apt upgrade"
 alias apt-installed='apt list --installed'
 alias aptsi="apt-installed | rg"
 alias aptc="sudo apt autoremove && sudo apt clean"
+alias apt-clean="sudo apt autoremove -y && sudo apt clean"
 
 alias sysclean="sudo apt autoremove && sudo apt clean; journalctl --vacuum-time=2d; sudo rm -rf /var/lib/snapd/cache/*"
 alias dir-colors-update='eval $(dircolors $DOTFILES_CONFIGS/.dir_colors)'
