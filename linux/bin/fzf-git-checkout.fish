@@ -1,16 +1,26 @@
 
 function _fco_preview
     set -l branches tags target target_ref
-    
     set branches (
-        git --no-pager branch --all \
-            --format="%(if)%(HEAD)%(then)%(else)%(if:equals=HEAD)%(refname:strip=3)%(then)%(else)\x1b[0;34;1mbranch\t\x1b[m%(refname:short)%(end)%(end)" \
-        | string replace -r '^\s*$' '' # Filter out empty lines (equivalent to sed '/^$/d')
+        git --no-pager branch --all --no-color \
+        | awk '
+            /^\* / { next } 
+
+            /HEAD ->/ { next } 
+            
+            {
+                branch_name = $NF
+                print "\x1b[0;34;1mbranch\x1b[m\t" branch_name
+            }
+        ' \
+        | string split \n -- \
     )
+    # echo $status # TODO fix status 1
+    
     # Check if branches command failed
-    if test $status -ne 0
-        return
-    end
+    # if test $status -ne 0
+    #     return
+    # end
 
     # 2. Capture tags: Pipe git tag output directly to awk for color/formatting
     set tags (
@@ -22,13 +32,14 @@ function _fco_preview
         return
     end
 
-    # echo -e (string join \n $branches $tags)
     # 3. Combine branches and tags and pipe to fzf
     # Note: We use 'printf' and 'string join \n' to safely pass list content to fzf.
     set target (
-        echo -e (string join \n $branches $tags) \
+        printf '%s\n' $branches $tags \
         | fzf --no-hscroll --no-multi -n 2 \
-            --ansi --preview="git --no-pager log -150 --pretty=format:%s '..{2}'"
+          --delimiter='\t' \
+          --ansi \
+          --preview="git --no-pager log -150 --pretty=format:%s '{2}'"
     )
 
     

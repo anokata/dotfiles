@@ -68,8 +68,10 @@ bind -M insert \e\[20~ 's-tui'
 
 ## Git
 # TODO bind to 'git status'  and git status; git diff --shortstat master  AND git pull
-bind ctrl-g 'git status'
-bind alt-t 'git status; git diff --shortstat master'
+bind ctrl-g 'git status -sb' execute
+bind -M insert ctrl-g 'git status -sb' execute
+bind alt-t 'git status; git diff --shortstat master' execute
+bind -M insert alt-t 'git status; git diff --shortstat master' execute
 # bind alt-p ''
 
 ## IDE
@@ -93,3 +95,5 @@ bind --preset -e ctrl-j
 bind -M insert ctrl-j accept-autosuggestion
 bind ctrl-j accept-autosuggestion
 
+bind alt-o _fco_preview
+bind -M insert alt-o _fco_preview
