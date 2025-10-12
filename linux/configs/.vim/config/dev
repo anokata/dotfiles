@@ -3,14 +3,12 @@
 "==== DEV ==== {{{
 " run current line by vim
 noremap <c-c> yy:@"<CR>
-" run paragraph
-" noremap <c-a-x> {V}kyy:@"<CR>}
 
-" TODO node, makefiles, npm
 map <F5> :w<CR>:!make '%:t:r'<CR>
 map <C-F9> :!python3 -i '%:t'<CR>
 map <F9> :w<CR>:!./%<CR>
 map <F10> :w<CR>:!python '%:t'<CR>
 map <F11> :w<CR>:source %<CR>
+" TODO node, makefiles, npm
 "map <C-F8> :!dot -Tpng % -o%.png && feh %.png<CR>
 " }}}
