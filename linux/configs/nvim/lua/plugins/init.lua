@@ -1,12 +1,23 @@
 return {
     -- { 'tpope/vim-surround', lazy = false }
+    'tpope/vim-speeddating',
+    'tpope/vim-eunuch',
+    'tpope/vim-unimpaired',
+    'tpope/vim-repeat',
+    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, },
     { 'nvim-mini/mini.surround', version = false },
+    { 
+        'nvim-mini/mini.icons', 
+        version = false ,
+          -- Icon style: 'glyph' or 'ascii'
+          style = 'ascii',
+    },
+    { "nvim-tree/nvim-web-devicons", opts = {} },
     {
         'numToStr/Comment.nvim',
         lazy = false,
         opts = {},
     },
-    'tpope/vim-repeat',
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.8',
@@ -99,6 +110,8 @@ return {
     },
     config = function()
         require('mason-lspconfig').setup()
+      vim.lsp.config.tsserver = {} 
+      vim.lsp.enable({ 'tsserver' })
       -- Example: Setup default keymaps for LSP functions
       local lsp_keys = vim.keymap.set
       lsp_keys('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition' })
@@ -132,6 +145,107 @@ return {
           { name = 'path' },    -- From file paths
         })
       })
+    end
+  },
+
+  {
+    'nvim-tree/nvim-tree.lua',
+    cmd = 'NvimTreeToggle', -- Lazy load on command
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    keys = { { '<leader>e', '<cmd>NvimTreeToggle<cr>', desc = 'Toggle NvimTree' } },
+    opts = {
+      view = {
+        side = 'left',
+        width = 30,
+      },
+      filters = {
+        dotfiles = false,
+      },
+    },
+  },
+  -- { TODO find alternative wihotu set termguicolors in lua
+  --   'norcalli/nvim-colorizer.lua',
+  --   -- event = 'BufReadPost',
+  --   config = function()
+  --     require('colorizer').setup()
+  --   end,
+  -- },
+    {
+      "folke/which-key.nvim",
+      event = "VeryLazy",
+      opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      },
+      keys = {
+        {
+          "<leader>?",
+          function()
+            require("which-key").show({ global = false })
+          end,
+          desc = "Buffer Local Keymaps (which-key)",
+        },
+      },
+    },
+
+    {
+      "folke/trouble.nvim",
+      opts = {}, -- for default options, refer to the configuration section for custom setup.
+      cmd = "Trouble",
+      keys = {
+        {
+          "<leader>xx",
+          "<cmd>Trouble diagnostics toggle<cr>",
+          desc = "Diagnostics (Trouble)",
+        },
+        {
+          "<leader>xX",
+          "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+          desc = "Buffer Diagnostics (Trouble)",
+        },
+        {
+          "<leader>cs",
+          "<cmd>Trouble symbols toggle focus=false<cr>",
+          desc = "Symbols (Trouble)",
+        },
+        {
+          "<leader>cl",
+          "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+          desc = "LSP Definitions / references / ... (Trouble)",
+        },
+        {
+          "<leader>xL",
+          "<cmd>Trouble loclist toggle<cr>",
+          desc = "Location List (Trouble)",
+        },
+        {
+          "<leader>xQ",
+          "<cmd>Trouble qflist toggle<cr>",
+          desc = "Quickfix List (Trouble)",
+        },
+      },
+    },
+
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
+        opts = {},
+        scope = {
+            enabled = false, -- Treesitter handles scope better
+        },
+    },
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter', -- Only load when entering insert mode
+    opts = {
+      fast_wrap = {},
+      disable_filetype = { 'TelescopePrompt', 'vim' },
+    },
+    config = function()
+      require('nvim-autopairs').setup()
     end
   },
 }
