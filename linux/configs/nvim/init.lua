@@ -4,9 +4,9 @@
 vim.opt.termguicolors = true
 -- test color #002233 #ABC #AA0000
 require("config.lazy")
+require("config.options")
+require("config.keymaps")
 
-vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
 -- require('core.keymaps')
 -- TODO not use vimrc but ?
 -- TODO use other plugin manager
