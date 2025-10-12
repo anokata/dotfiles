@@ -129,23 +129,10 @@ vim.keymap.set(
     "<cmd>NvimTreeToggle<CR>",
     { desc = "Toggle File Tree (NvimTree)", silent = true, noremap = true }
 )
--- Removed <leader>n1 and <leader>n2 (obsolete NERDTree commands)
-vim.keymap.set(
-    "n",
-    "<C-F1>",
-    "<cmd>NvimTreeFindFile<CR>",
-    { desc = "Find Current File in Tree", silent = true, noremap = true }
-)
 vim.keymap.set(
     "n",
     "<F1>",
-    "<cmd>NvimTreeFindFile<CR>",
-    { desc = "Find Current File in Tree", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<leader>n3",
-    "<cmd>NvimTreeFindFile<CR>",
+    "<cmd>NvimTreeToggle<CR>",
     { desc = "Find Current File in Tree", silent = true, noremap = true }
 )
 
@@ -302,3 +289,207 @@ vim.keymap.set("o", "F", "0f(hviw", { desc = "Select Function Name", silent = tr
 
 -- Operate on text inside parentheses
 vim.keymap.set("o", "p", "i(", { desc = "Operate Inner Parentheses", silent = true, noremap = true })
+
+-- 1. File Management & Fuzzy Finding (Telescope Replacements)
+-- =================================================================
+
+-- Replace fzf#run with Telescope calls for directory and config search
+vim.keymap.set(
+    "n",
+    "<localleader><Tab>",
+    "<cmd>Telescope projects<CR>",
+    { desc = "Telescope: Favorite Dirs/Projects", silent = true, noremap = true }
+)
+
+-- Simple directory change
+vim.keymap.set("n", "<C-Up>", "<cmd>tcd ..<CR><cmd>pwd<CR>", { desc = "Change Dir Up", silent = true, noremap = true })
+
+-- Replace :Files calls with Telescope
+local telescope_dir_files = function(dir_var)
+    return function()
+        vim.cmd("Telescope find_files cwd=" .. vim.fn.expand(dir_var))
+    end
+end
+
+vim.keymap.set(
+    "n",
+    "<localleader>od",
+    telescope_dir_files("$DOTFILES"),
+    { desc = "Telescope: DOTFILES", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>oc",
+    telescope_dir_files("$DOTFILES"),
+    { desc = "Telescope: DOTFILES", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>cd",
+    telescope_dir_files("$DOTFILES"),
+    { desc = "Telescope: DOTFILES", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>ow",
+    telescope_dir_files("$WORK_DIR"),
+    { desc = "Telescope: WORK_DIR", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>on",
+    telescope_dir_files("$NOTES_DIR"),
+    { desc = "Telescope: NOTES_DIR", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>ov",
+    telescope_dir_files("$VIM_DIR_CONFIGS"),
+    { desc = "Telescope: VIM_CONFIGS", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<F3>",
+    telescope_dir_files("$NOTES_DIR"),
+    { desc = "Telescope: NOTES_DIR", silent = true, noremap = true }
+)
+
+-- =================================================================
+-- 2. Open Config Files (Static Paths)
+-- =================================================================
+
+local config_dir = vim.fn.stdpath("config")
+local open_tab_config = function(path)
+    return function()
+        vim.cmd("tabnew " .. config_dir .. path)
+        vim.cmd("setl foldmethod=marker")
+    end
+end
+local open_tab_file = function(path)
+    return function()
+        vim.cmd("tabedit " .. vim.fn.expand(path))
+    end
+end
+
+-- Open Nvim config files (Obsolete paths replaced with Lua file names)
+vim.keymap.set(
+    "n",
+    "<localleader>cb",
+    open_tab_config("/config/keymaps.lua"),
+    { desc = "Open: Keymaps Config", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>cc",
+    "<cmd>Telescope find_files cwd=" .. config_dir .. "<CR>",
+    { desc = "Telescope: Find Config Files", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>cp",
+    open_tab_config("/plugins/init.lua"),
+    { desc = "Open: Plugins Config", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>cs",
+    open_tab_config("/config/options.lua"),
+    { desc = "Open: Settings Config", silent = true, noremap = true }
+)
+-- Removed cf, cl, cu as they pointed to non-standard or obsolete files.
+
+-- Mirroring Configs (Alt/Shift is replaced by 't:e' to open in a new tab)
+vim.keymap.set("n", "<localleader>eb", open_tab_file("$DOTFILES/linux/.bashrc"), { desc = "Edit: .bashrc" })
+vim.keymap.set("n", "<localleader>xa", open_tab_file("$DOTFILES_BIN/session/alias.sh"), { desc = "Edit: alias.sh" })
+vim.keymap.set("n", "<localleader>xt", open_tab_file("$DOTFILES_CONFIGS/.tmux.conf"), { desc = "Edit: .tmux.conf" })
+vim.keymap.set("n", "<localleader>xb", open_tab_file("$DOTFILES_CONFIGS/bspwm/bspwmrc"), { desc = "Edit: bspwmrc" })
+vim.keymap.set("n", "<localleader>xs", open_tab_file("$DOTFILES_CONFIGS/sxhkd/sxhkdrc"), { desc = "Edit: sxhkdrc" })
+vim.keymap.set("n", "<localleader>xx", open_tab_file("$DOTFILES_CONFIGS/.Xresources"), { desc = "Edit: .Xresources" })
+vim.keymap.set("n", "<localleader>xi", open_tab_file("$DOTFILES_LINUX/.inputrc"), { desc = "Edit: .inputrc" })
+vim.keymap.set("n", "<localleader>xe", open_tab_file("$DOTFILES_LINUX/.env"), { desc = "Edit: .env" })
+vim.keymap.set(
+    "n",
+    "<localleader>xk",
+    open_tab_file("$DOTFILES_CONFIGS/kitty/kitty.conf"),
+    { desc = "Edit: kitty.conf" }
+)
+
+-- 3. Quick Directory Editing
+local edit_dir = function(path)
+    return function()
+        vim.cmd("e " .. vim.fn.expand(path))
+    end
+end
+vim.keymap.set(
+    "n",
+    "<localleader>zD",
+    edit_dir("$DOTFILES"),
+    { desc = "Edit: DOTFILES Dir", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>zl",
+    edit_dir("$DOTFILES_LINUX"),
+    { desc = "Edit: DOTFILES_LINUX Dir", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>zb",
+    edit_dir("$DOTFILES_BIN"),
+    { desc = "Edit: DOTFILES_BIN Dir", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>zc",
+    edit_dir("$DOTFILES_CONFIGS"),
+    { desc = "Edit: DOTFILES_CONFIGS Dir", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>zn",
+    edit_dir("$NOTES_DIR"),
+    { desc = "Edit: NOTES_DIR Dir", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<localleader>zw",
+    edit_dir("$WORK_DIR"),
+    { desc = "Edit: WORK_DIR Dir", silent = true, noremap = true }
+)
+
+-- 4. Favorite Sessions (AutoSession Replacements)
+local restore_session = function(path)
+    return function()
+        require("auto-session").restore_session({ filename = vim.fn.expand(path) })
+    end
+end
+vim.keymap.set(
+    "n",
+    "<F25>",
+    restore_session("$DOTFILES_CONFIGS"),
+    { desc = "Session: DOTFILES_CONFIGS", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<F26>",
+    restore_session("$DOTFILES"),
+    { desc = "Session: DOTFILES", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<F27>",
+    restore_session("$NOTES_DIR"),
+    { desc = "Session: NOTES_DIR", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<F28>",
+    restore_session("$WORK_DIR_CURRENT"),
+    { desc = "Session: WORK_DIR_CURRENT", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<F29>",
+    restore_session("$VIM_DIR_CONFIGS"),
+    { desc = "Session: VIM_CONFIGS", silent = true, noremap = true }
+)

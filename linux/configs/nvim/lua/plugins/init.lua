@@ -60,6 +60,19 @@ return {
             -- <leader>fh <cmd>Telescope help_tags<cr>
         },
         opts = {},
+        require("telescope").setup({
+            pickers = {
+                find_files = {
+                    -- This ensures dotfiles are included in the results
+                    hidden = true,
+                },
+                live_grep = {
+                    additional_args = function(opts)
+                        return { "--hidden" }
+                    end,
+                },
+            },
+        }),
     },
     {
         "nvim-lualine/lualine.nvim",
