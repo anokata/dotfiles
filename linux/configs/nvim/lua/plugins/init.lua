@@ -13,8 +13,8 @@ return {
         lazy = false, -- Must load immediately to prevent screen flash
         priority = 1000, -- Highest priority to load before everything else
     },
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    { "EdenEast/nightfox.nvim" },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
+    { "EdenEast/nightfox.nvim", lazy = false, priority = 1000 },
     {
         "folke/tokyonight.nvim",
         lazy = false, -- Load immediately
