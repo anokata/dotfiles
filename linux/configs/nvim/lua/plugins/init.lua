@@ -335,10 +335,6 @@ return {
                 enable = true, -- Automatically replaces nerdtree-git-plugin
                 ignore = false,
             },
-            view = {
-                side = "right",
-                width = 50,
-            },
             actions = {
                 open_file = {
                     quit_on_open = true, -- Close tree when opening a file
@@ -355,6 +351,33 @@ return {
                 },
             },
         },
+        config = function()
+            local function on_attach(bufnr)
+                local api = require("nvim-tree.api")
+
+                local function opts(desc)
+                    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+                end
+
+                api.config.mappings.default_on_attach(bufnr)
+
+                -- set nvim-tree to open in current dir
+                vim.keymap.set("n", "C", api.tree.change_root_to_node, opts("CD"))
+            end
+
+            require("nvim-tree").setup({
+                on_attach = on_attach,
+                sync_root_with_cwd = true, -- important to follow current dir
+                update_focused_file = {
+                    enable = true,
+                    update_root = true,
+                },
+                view = {
+                    width = 42,
+                    side = "right",
+                },
+            })
+        end,
     },
     {
         "wakatime/vim-wakatime",
@@ -367,4 +390,29 @@ return {
     --     require('colorizer').setup()
     --   end,
     -- },
+    {
+        "roodolv/markdown-toggle.nvim",
+        ft = { "markdown", "mkd", "mkdx" }, -- Only load for Markdown files
+        opts = {
+            use_default_keymaps = false, -- We will set our own keymaps
+            -- Optional: Set to false if you want the checkbox to appear AFTER the list marker
+            list_before_box = false,
+        },
+        config = function(_, opts)
+            require("markdown-toggle").setup(opts)
+
+            -- Define Keymaps only for Markdown filetypes
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = { "markdown", "md" },
+                callback = function()
+                    local toggle = require("markdown-toggle")
+                    local opts = { silent = true, noremap = true, buffer = true }
+
+                    -- Example keymaps: Use <leader>tx to Toggle Checkbox
+                    vim.keymap.set("n", "<leader>tx", toggle.checkbox_dot, opts)
+                    vim.keymap.set("v", "<leader>tx", toggle.checkbox, opts)
+                end,
+            })
+        end,
+    },
 }

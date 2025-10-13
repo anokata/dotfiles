@@ -514,3 +514,5 @@ end)
 vim.keymap.set("n", "<leader>qd", function()
     require("persistence").stop()
 end)
+
+-- vim.keymap.set("n", "<C-t>", api.tree.change_root_to_parent, opts("Up"))
