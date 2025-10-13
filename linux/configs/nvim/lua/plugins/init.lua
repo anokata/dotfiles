@@ -1,4 +1,9 @@
 return {
+    -- {
+    --   'iamcco/markdown-preview.nvim',
+    --   ft = 'markdown', -- Only load when editing markdown files
+    --   build = 'cd app && npm install',
+    -- },
     "tpope/vim-speeddating",
     "tpope/vim-eunuch",
     "tpope/vim-unimpaired",
@@ -147,11 +152,6 @@ return {
         "lewis6991/gitsigns.nvim",
         event = { "BufReadPre", "BufNewFile" }, -- Load when a file is opened
     },
-    -- {
-    --   'iamcco/markdown-preview.nvim',
-    --   ft = 'markdown', -- Only load when editing markdown files
-    --   build = 'cd app && npm install',
-    -- },
     {
         "akinsho/toggleterm.nvim",
         lazy = true, -- Only load when opening a terminal
