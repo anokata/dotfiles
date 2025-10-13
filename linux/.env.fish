@@ -90,3 +90,5 @@ set -gx WORDLIST "/usr/share/wordlists/dirbuster/"
 set -gx SECLIST "~/pwn/SecLists/"
 
 set -gx XKB_DEFAULT_OPTIONS caps:escape
+
+set -U fish_color_cwd white

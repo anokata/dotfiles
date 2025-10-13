@@ -1,5 +1,4 @@
 return {
-    -- { 'tpope/vim-surround', lazy = false }
     "tpope/vim-speeddating",
     "tpope/vim-eunuch",
     "tpope/vim-unimpaired",
@@ -57,7 +56,7 @@ return {
             { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
             { "<c-p>", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
             { "<leader>fb", "<cmd>Telescope buffers<cr>" },
-            -- <leader>fh <cmd>Telescope help_tags<cr>
+            { "<leader>fh", "<cmd>Telescope help_tags<cr>" },
         },
         opts = {},
         require("telescope").setup({
@@ -89,13 +88,47 @@ return {
         },
     },
 
+    -- {
+    --     "rmagatti/auto-session",
+    --     lazy = false, -- Needs to be active on startup
+    --     opts = {
+    --         log_level = "error",
+    --         auto_restore_enabled = true,
+    --         auto_save_enabled = true,
+    --         auto_create = true,
+    --         cwd_change_handling = true,
+    --     },
+    --     config = function(_, opts)
+    --         require("auto-session").setup(opts)
+    --
+    --         -- CRITICAL: Explicitly ensure the restore autocmd is set.
+    --         -- This forces the restoration logic to run on startup.
+    --         vim.api.nvim_create_autocmd("VimEnter", {
+    --             once = true,
+    --             callback = function()
+    --                 require("auto-session").auto_restore_session()
+    --             end,
+    --         })
+    --     end,
+    -- },
+    -- Lua
     {
-        "rmagatti/auto-session",
-        lazy = false, -- Needs to be active on startup
+        "folke/persistence.nvim",
+        event = "BufReadPre", -- load before reading buffer
         opts = {
-            log_level = "error",
-            auto_restore_enabled = true,
+            dir = vim.fn.stdpath("state") .. "/sessions/", -- default
+            options = { "buffers", "curdir", "tabpages", "winsize" },
         },
+        config = function(_, opts)
+            require("persistence").setup(opts)
+
+            -- Auto-save when leaving Neovim
+            vim.api.nvim_create_autocmd("VimLeavePre", {
+                callback = function()
+                    require("persistence").save()
+                end,
+            })
+        end,
     },
     {
         "tpope/vim-fugitive",
@@ -343,6 +376,5 @@ return {
     {
         "wakatime/vim-wakatime",
         lazy = false, -- Must load immediately to begin tracking time upon startup
-        -- vim.g.wakatime_cli_path = '/usr/local/bin/wakatime-cli'
     },
 }

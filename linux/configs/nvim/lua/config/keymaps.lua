@@ -1,3 +1,4 @@
+--
 local term_toggle = require("toggleterm").toggle
 vim.keymap.set("n", "<leader>tt", term_toggle, { desc = "Toggle Terminal", noremap = true, silent = true })
 
