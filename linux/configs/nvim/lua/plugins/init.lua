@@ -63,13 +63,23 @@ return {
             pickers = {
                 find_files = {
                     -- This ensures dotfiles are included in the results
-                    hidden = true,
+                    -- hidden = true,
+                    find_command = {
+                        "rg",
+                        "--files", -- Only list files, not content
+                        "--hidden", -- Include hidden files (like .dotfiles)
+
+                        -- 2. CRITICAL: Use the glob pattern to ignore .git/
+                        "-g",
+                        "!{.git,node_modules}/*",
+                        ".", -- Start the search from the current directory (or project root)
+                    },
                 },
-                live_grep = {
-                    additional_args = function(opts)
-                        return { "--hidden" }
-                    end,
-                },
+                -- live_grep = {
+                --     additional_args = function(opts)
+                --         return { "--hidden" }
+                --     end,
+                -- },
             },
         }),
     },
@@ -87,31 +97,30 @@ return {
             },
         },
     },
+    {
+        "ahmedkhalf/project.nvim",
+        -- Load immediately or when you open a file/enter Neovim
+        event = "VimEnter",
+        opts = {
+            -- Enable manual mode only if you want to skip automatic root detection
+            manual_mode = false,
 
-    -- {
-    --     "rmagatti/auto-session",
-    --     lazy = false, -- Needs to be active on startup
-    --     opts = {
-    --         log_level = "error",
-    --         auto_restore_enabled = true,
-    --         auto_save_enabled = true,
-    --         auto_create = true,
-    --         cwd_change_handling = true,
-    --     },
-    --     config = function(_, opts)
-    --         require("auto-session").setup(opts)
-    --
-    --         -- CRITICAL: Explicitly ensure the restore autocmd is set.
-    --         -- This forces the restoration logic to run on startup.
-    --         vim.api.nvim_create_autocmd("VimEnter", {
-    --             once = true,
-    --             callback = function()
-    --                 require("auto-session").auto_restore_session()
-    --             end,
-    --         })
-    --     end,
-    -- },
-    -- Lua
+            -- When a file is opened, it searches upward for these.
+            -- detection_methods = { "lsp", "pattern" },
+            detection_methods = { "pattern" },
+            patterns = {
+                ".git",
+                "Makefile",
+                "package.json",
+                "README.md",
+                -- Add common dotfiles root markers here if needed (e.g., '.config')
+                -- This helps when opening files inside the project structure
+            },
+        },
+        config = function(_, opts)
+            require("project_nvim").setup(opts)
+        end,
+    },
     {
         "folke/persistence.nvim",
         event = "BufReadPre", -- load before reading buffer
@@ -139,17 +148,6 @@ return {
         "lewis6991/gitsigns.nvim",
         event = { "BufReadPre", "BufNewFile" }, -- Load when a file is opened
     },
-
-    -- {
-    --   'ahmedkhalf/project.nvim',
-    --   event = 'VimEnter',
-    --   opts = {
-    --     manual_mode = false,
-    --     detection_methods = { 'lsp', 'pattern' }, -- Auto-detect by LSP root or git/svn/etc.
-    --     patterns = { '.git', 'lua', 'src', '.hg', '.svn', '.project', 'Makefile', 'package.json' },
-    --   },
-    -- },
-
     -- {
     --   'iamcco/markdown-preview.nvim',
     --   ft = 'markdown', -- Only load when editing markdown files
@@ -239,13 +237,6 @@ return {
         end,
     },
 
-    -- { TODO find alternative wihotu set termguicolors in lua
-    --   'norcalli/nvim-colorizer.lua',
-    --   -- event = 'BufReadPost',
-    --   config = function()
-    --     require('colorizer').setup()
-    --   end,
-    -- },
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -377,4 +368,11 @@ return {
         "wakatime/vim-wakatime",
         lazy = false, -- Must load immediately to begin tracking time upon startup
     },
+    -- { TODO find alternative wihotu set termguicolors in lua
+    --   'norcalli/nvim-colorizer.lua',
+    --   -- event = 'BufReadPost',
+    --   config = function()
+    --     require('colorizer').setup()
+    --   end,
+    -- },
 }
