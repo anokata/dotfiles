@@ -269,3 +269,7 @@ super + shift + {h,l}
 	dir={west,east}; \
 	bspc node -s "$dir.local" --follow \
 	    || bspc node -m "$dir" --follow
+
+
+alt + F2
+    ~/dotfiles/linux/bin/toggle-kitty
