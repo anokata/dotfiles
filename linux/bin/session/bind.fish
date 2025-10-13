@@ -78,6 +78,9 @@ bind -M insert alt-t 'git status; git diff --shortstat master' execute
 # F5: tig
 bind \e\[15~ 'tig'
 bind -M insert \e\[15~ 'tig'
+# F6: lazygit
+bind \e\[17~ 'lazygit'
+bind -M insert \e\[17~ 'lazygit'
 
 bind ctrl-b fish-config-reload
 bind --mode insert ctrl-b fish-config-reload

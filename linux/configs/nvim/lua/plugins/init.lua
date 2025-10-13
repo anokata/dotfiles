@@ -392,27 +392,14 @@ return {
     -- },
     {
         "roodolv/markdown-toggle.nvim",
-        ft = { "markdown", "mkd", "mkdx" }, -- Only load for Markdown files
-        opts = {
-            use_default_keymaps = false, -- We will set our own keymaps
-            -- Optional: Set to false if you want the checkbox to appear AFTER the list marker
-            list_before_box = false,
-        },
         config = function(_, opts)
             require("markdown-toggle").setup(opts)
-
-            -- Define Keymaps only for Markdown filetypes
-            vim.api.nvim_create_autocmd("FileType", {
-                pattern = { "markdown", "md" },
-                callback = function()
-                    local toggle = require("markdown-toggle")
-                    local opts = { silent = true, noremap = true, buffer = true }
-
-                    -- Example keymaps: Use <leader>tx to Toggle Checkbox
-                    vim.keymap.set("n", "<leader>tx", toggle.checkbox_dot, opts)
-                    vim.keymap.set("v", "<leader>tx", toggle.checkbox, opts)
-                end,
-            })
         end,
+    },
+    {
+        "bullets-vim/bullets.vim",
+        ft = { "markdown", "text", "typst", "gitcommit" },
+
+        config = function() end,
     },
 }
