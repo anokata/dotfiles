@@ -28,7 +28,6 @@ return {
             },
         },
         config = function()
-            -- Set the colorscheme right after it loads
             vim.cmd.colorscheme("tokyonight")
         end,
     },
@@ -62,8 +61,8 @@ return {
         require("telescope").setup({
             pickers = {
                 find_files = {
-                    -- This ensures dotfiles are included in the results
                     -- hidden = true,
+                    -- This ensures dotfiles are included in the results but not gitfiles
                     find_command = {
                         "rg",
                         "--files", -- Only list files, not content
@@ -110,11 +109,11 @@ return {
             detection_methods = { "pattern" },
             patterns = {
                 ".git",
-                "Makefile",
                 "package.json",
                 "README.md",
                 -- Add common dotfiles root markers here if needed (e.g., '.config')
                 -- This helps when opening files inside the project structure
+                -- "Makefile",
             },
         },
         config = function(_, opts)
@@ -240,11 +239,7 @@ return {
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        },
+        opts = {},
         keys = {
             {
                 "<leader>?",
@@ -297,8 +292,6 @@ return {
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
-        ---@module "ibl"
-        ---@type ibl.config
         opts = {},
         scope = {
             enabled = false, -- Treesitter handles scope better
@@ -320,7 +313,6 @@ return {
         event = { "BufWritePre" }, -- Load just before writing a buffer
         cmd = { "ConformInfo" },
         opts = {
-            -- Example formatter setup (install formatters like 'black', 'prettier' via :Mason)
             formatters_by_ft = {
                 lua = { "stylua" },
                 python = { "black" },
