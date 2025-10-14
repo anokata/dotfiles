@@ -1,7 +1,55 @@
 return {
     {
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        lazy = false, -- Needs to load early to draw the bar
+        opts = {
+            options = {
+                icons_enabled = true,
+                -- theme = "gruvbox",
+                theme = "iceberg_dark",
+                component_separators = { left = "", right = "" },
+                section_separators = { left = "", right = "" },
+            },
+        },
+    },
+    {
+        "nvim-mini/mini.icons",
+        version = false,
+        -- Icon style: 'glyph' or 'ascii'
+        style = "ascii",
+    },
+    { "nvim-tree/nvim-web-devicons", opts = {} },
+    -- Colorschemes
+    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
+    "drewtempelmeyer/palenight.vim",
+    {
+        "sainnhe/sonokai",
+        lazy = false, -- Must load immediately to prevent screen flash
+        priority = 1000, -- Highest priority to load before everything else
+    },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
+    { "EdenEast/nightfox.nvim", lazy = false, priority = 1000 },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false, -- Load immediately
+        priority = 1000, -- Load first to prevent screen flash
+        opts = {
+            style = "moon", -- Choose a style: 'night', 'day', 'moon'
+            transparent = false,
+            terminal_colors = true,
+            styles = {
+                comments = { italic = true },
+                keywords = { italic = true },
+            },
+        },
+        config = function()
+            vim.cmd.colorscheme("tokyonight")
+        end,
+    },
+    {
+        -- Tabs line
         "akinsho/bufferline.nvim",
-        -- Load bufferline when Neovim starts
         lazy = false,
         -- Requires nvim-web-devicons for icons
         dependencies = { "nvim-tree/nvim-web-devicons" },

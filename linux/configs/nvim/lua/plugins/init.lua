@@ -9,42 +9,7 @@ return {
     "tpope/vim-unimpaired",
     "tpope/vim-repeat",
     "kshenoy/vim-signature",
-    -- Colorschemes
-    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
-    "drewtempelmeyer/palenight.vim",
-    {
-        "sainnhe/sonokai",
-        lazy = false, -- Must load immediately to prevent screen flash
-        priority = 1000, -- Highest priority to load before everything else
-    },
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
-    { "EdenEast/nightfox.nvim", lazy = false, priority = 1000 },
-    {
-        "folke/tokyonight.nvim",
-        lazy = false, -- Load immediately
-        priority = 1000, -- Load first to prevent screen flash
-        opts = {
-            style = "moon", -- Choose a style: 'night', 'day', 'moon'
-            transparent = false,
-            terminal_colors = true,
-            styles = {
-                comments = { italic = true },
-                keywords = { italic = true },
-            },
-        },
-        config = function()
-            vim.cmd.colorscheme("tokyonight")
-        end,
-    },
-
     { "nvim-mini/mini.surround", version = false },
-    {
-        "nvim-mini/mini.icons",
-        version = false,
-        -- Icon style: 'glyph' or 'ascii'
-        style = "ascii",
-    },
-    { "nvim-tree/nvim-web-devicons", opts = {} },
     {
         "numToStr/Comment.nvim",
         lazy = false,
@@ -86,20 +51,6 @@ return {
                 -- },
             },
         }),
-    },
-    {
-        "nvim-lualine/lualine.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        lazy = false, -- Needs to load early to draw the bar
-        opts = {
-            options = {
-                icons_enabled = true,
-                -- theme = "gruvbox",
-                theme = "iceberg_dark",
-                component_separators = { left = "", right = "" },
-                section_separators = { left = "", right = "" },
-            },
-        },
     },
     {
         "ahmedkhalf/project.nvim",
@@ -144,15 +95,6 @@ return {
         end,
     },
     {
-        "tpope/vim-fugitive",
-        cmd = "Git", -- Lazy load on command
-    },
-
-    {
-        "lewis6991/gitsigns.nvim",
-        event = { "BufReadPre", "BufNewFile" }, -- Load when a file is opened
-    },
-    {
         "akinsho/toggleterm.nvim",
         lazy = true, -- Only load when opening a terminal
         cmd = "ToggleTerm",
@@ -168,7 +110,6 @@ return {
             require("toggleterm").setup(opts)
         end,
     },
-
     {
         "nvim-treesitter/nvim-treesitter",
         branch = "master",
@@ -189,53 +130,6 @@ return {
         cmd = "Mason",
         config = true,
     },
-    {
-        "neovim/nvim-lspconfig",
-        event = { "BufReadPre", "BufNewFile" },
-        dependencies = {
-            "williamboman/mason-lspconfig.nvim", -- Bridges Mason and LSPConfig
-            "hrsh7th/cmp-nvim-lsp", -- Completion source for LSP
-        },
-        config = function()
-            require("mason-lspconfig").setup()
-            vim.lsp.config.tsserver = {}
-            vim.lsp.enable({ "tsserver" })
-            -- Example: Setup default keymaps for LSP functions
-            local lsp_keys = vim.keymap.set
-            lsp_keys("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-            lsp_keys("n", "K", vim.lsp.buf.hover, { desc = "Hover information" })
-            vim.lsp.enable({ "lua_ls" })
-        end,
-    },
-    {
-        "hrsh7th/nvim-cmp",
-        event = "InsertEnter", -- Only load when entering insert mode
-        dependencies = {
-            "hrsh7th/cmp-buffer",
-            "hrsh7th/cmp-path",
-        },
-        config = function()
-            local cmp = require("cmp")
-            local mapping = cmp.mapping
-
-            cmp.setup({
-                -- Setup keybindings for navigation and selection
-                mapping = mapping.preset.insert({
-                    ["<C-b>"] = mapping.scroll_docs(-4),
-                    ["<C-f>"] = mapping.scroll_docs(4),
-                    ["<C-Space>"] = mapping.complete(),
-                    ["<CR>"] = mapping.confirm({ select = true }),
-                }),
-                -- Setup completion sources
-                sources = cmp.config.sources({
-                    { name = "nvim_lsp" }, -- From the LSP server
-                    { name = "buffer" }, -- From open buffers
-                    { name = "path" }, -- From file paths
-                }),
-            })
-        end,
-    },
-
     {
         "folke/which-key.nvim",
         event = "VeryLazy",

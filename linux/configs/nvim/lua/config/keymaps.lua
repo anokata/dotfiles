@@ -194,11 +194,24 @@ vim.keymap.set(
     "<cmd>Telescope find_files<CR>",
     { desc = "Fuzzy Find Files", silent = true, noremap = true }
 )
+vim.keymap.set("n", "<leader>gB", function()
+    require("gitsigns").toggle_current_line_blame()
+end, { desc = "Git: Toggle Line Blame", silent = true, noremap = true })
+vim.keymap.set(
+    "n",
+    "<leader>gb",
+    "<cmd>Gitsigns blame<CR>",
+    { desc = "Git: Toggle Blame", silent = true, noremap = true }
+)
+-- vim.keymap.set("n", "<leader>gb", function()
+--     require("gitsigns").blame_line({ full = true })
+-- end, { desc = "Git: Show Full Buffer Blame", silent = true, noremap = true })
 
 -- =================================================================
 -- Plug Package Mappings
 vim.keymap.set("n", "<localleader>pi", "<cmd>Lazy install<CR>", { silent = true, noremap = true })
 vim.keymap.set("n", "<localleader>pc", "<cmd>Lazy clean<CR>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Lazy", noremap = true })
 
 local config_file = vim.fn.stdpath("config") .. "/init.lua"
 
@@ -215,7 +228,7 @@ vim.keymap.set(
     "<cmd>source " .. config_file .. "<CR>",
     { desc = "Source Main Config", silent = true, noremap = true }
 )
-vim.keymap.set("n", "<leader>es", "<cmd>source %<CR>", { desc = "Source Current File", silent = true, noremap = true })
+vim.keymap.set("n", "<leader>S", "<cmd>source %<CR>", { desc = "Source Current File", silent = true, noremap = true })
 
 -- =================================================================
 -- Tabs
