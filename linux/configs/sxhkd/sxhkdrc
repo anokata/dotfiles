@@ -271,5 +271,5 @@ super + shift + {h,l}
 	    || bspc node -m "$dir" --follow
 
 
-alt + F2
+alt + F1
     ~/dotfiles/linux/bin/toggle-kitty

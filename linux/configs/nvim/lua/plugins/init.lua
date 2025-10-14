@@ -4,17 +4,19 @@ return {
     --   ft = 'markdown', -- Only load when editing markdown files
     --   build = 'cd app && npm install',
     -- },
+    -- { TODO find alternative wihotu set termguicolors in lua
+    --   'norcalli/nvim-colorizer.lua',
+    --   -- event = 'BufReadPost',
+    --   config = function()
+    --     require('colorizer').setup()
+    --   end,
+    -- },
     "tpope/vim-speeddating",
     "tpope/vim-eunuch",
     "tpope/vim-unimpaired",
     "tpope/vim-repeat",
     "kshenoy/vim-signature",
     { "nvim-mini/mini.surround", version = false },
-    {
-        "numToStr/Comment.nvim",
-        lazy = false,
-        opts = {},
-    },
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.8",
@@ -111,21 +113,6 @@ return {
         end,
     },
     {
-        "nvim-treesitter/nvim-treesitter",
-        branch = "master",
-        lazy = false,
-        build = ":TSUpdate", -- Run this command on installation/update
-        event = { "BufReadPre", "BufNewFile" }, -- Load early for all files
-        opts = {
-            highlight = { enable = true },
-            indent = { enable = true },
-            ensure_installed = { "lua", "vimdoc", "vim", "markdown", "typescript", "javascript", "python", "fish" }, -- Add languages you use
-        },
-        config = function(_, opts)
-            require("nvim-treesitter.configs").setup(opts)
-        end,
-    },
-    {
         "williamboman/mason.nvim",
         cmd = "Mason",
         config = true,
@@ -133,7 +120,10 @@ return {
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
-        opts = {},
+        -- grouping
+        opts = {
+            preset = "classic",
+        },
         keys = {
             {
                 "<leader>?",
@@ -142,53 +132,6 @@ return {
                 end,
                 desc = "Buffer Local Keymaps (which-key)",
             },
-        },
-    },
-
-    {
-        "folke/trouble.nvim",
-        opts = {}, -- for default options, refer to the configuration section for custom setup.
-        cmd = "Trouble",
-        keys = {
-            {
-                "<leader>xx",
-                "<cmd>Trouble diagnostics toggle<cr>",
-                desc = "Diagnostics (Trouble)",
-            },
-            {
-                "<leader>xX",
-                "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-                desc = "Buffer Diagnostics (Trouble)",
-            },
-            {
-                "<leader>cs",
-                "<cmd>Trouble symbols toggle focus=false<cr>",
-                desc = "Symbols (Trouble)",
-            },
-            {
-                "<leader>cl",
-                "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
-                desc = "LSP Definitions / references / ... (Trouble)",
-            },
-            {
-                "<leader>xL",
-                "<cmd>Trouble loclist toggle<cr>",
-                desc = "Location List (Trouble)",
-            },
-            {
-                "<leader>xQ",
-                "<cmd>Trouble qflist toggle<cr>",
-                desc = "Quickfix List (Trouble)",
-            },
-        },
-    },
-
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        opts = {},
-        scope = {
-            enabled = false, -- Treesitter handles scope better
         },
     },
     {
@@ -202,20 +145,6 @@ return {
             require("nvim-autopairs").setup()
         end,
     },
-    {
-        "stevearc/conform.nvim",
-        event = { "BufWritePre" }, -- Load just before writing a buffer
-        cmd = { "ConformInfo" },
-        opts = {
-            formatters_by_ft = {
-                lua = { "stylua" },
-                python = { "black" },
-                markdown = { "prettier" },
-            },
-            format_on_save = { timeout_ms = 500, lsp_fallback = false },
-        },
-    },
-
     {
         "nvim-tree/nvim-tree.lua",
         cmd = "NvimTreeToggle", -- Lazy load on command
@@ -277,13 +206,6 @@ return {
         "wakatime/vim-wakatime",
         lazy = false, -- Must load immediately to begin tracking time upon startup
     },
-    -- { TODO find alternative wihotu set termguicolors in lua
-    --   'norcalli/nvim-colorizer.lua',
-    --   -- event = 'BufReadPost',
-    --   config = function()
-    --     require('colorizer').setup()
-    --   end,
-    -- },
     {
         "roodolv/markdown-toggle.nvim",
         config = function(_, opts)
