@@ -17,12 +17,13 @@ if [ -n "$WID" ]; then
     
     # If the window is now visible, give it focus
     if bspc query -N -n "$WID" -d focused | grep -q "$WID"; then
-        bspc node "$WID" -f
+        # bspc node "$WID" -f
+        bspc node "$WID" -f -t state=fullscreen
     fi
 else
     # Window does NOT exist: Launch Kitty with specific title
-    kitty --title "$KITTY_TITLE" --class "GuakeKitty" --start-as=fullscreen &
-    # kitty --title "$KITTY_TITLE" --class "GuakeKitty" --hold --detach --start-as=fullscreen &
+    # kitty --title "$KITTY_TITLE" --class "GuakeKitty" --start-as=fullscreen &
+    kitty --title "$KITTY_TITLE" --class "GuakeKitty" --hold --detach --start-as=fullscreen &
 
     # Wait briefly for Kitty to launch before moving/sizing it (optional, but safer)
     sleep 0.2
