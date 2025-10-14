@@ -91,4 +91,5 @@ set -gx SECLIST "~/pwn/SecLists/"
 
 set -gx XKB_DEFAULT_OPTIONS caps:escape
 
-set -U fish_color_cwd white
+set -g fish_color_cwd white
+set -g __fish_git_prompt_color_branch blue

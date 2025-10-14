@@ -55,7 +55,7 @@ bspc rule -a clipstudiopaint.exe state=floating
 bspc rule -a kitty:dropdown-term state=floating sticky=on hidden=on center=on follow=on
 bspc rule -a kitty state=fullscreen
 # bspc rule -a kitty:btop desktop='^3'
-bspc rule -a GuakeKitty state=floating sticky=true rectangle=900x400+250+0
+# bspc rule -a GuakeKitty state=floating sticky=true rectangle=2880x1920+0+0
 
 
 ### Auto run apps
