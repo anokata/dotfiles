@@ -48,5 +48,6 @@ bind -x '"\e[20~":"htop "' # <F9>
 # IDE
 bind -x '"\eg":"tig"' # tig by c-s-g
 bind -x '"\e[19~":"tig"' # tig by <F8>
+bind -x '"\e[17~":"lazygit"' # lazygit by <F6>
 
 # bind '"\C-a":"tmux a\C-m"' # ??? tmux

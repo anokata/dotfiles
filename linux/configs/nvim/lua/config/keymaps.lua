@@ -9,6 +9,7 @@ end
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "Ctrl-S Save", noremap = true })
 
 vim.keymap.set("n", "<C-a>r", ":%s/", { desc = "Global Substitute Start" })
+-- TODO: better bind
 vim.keymap.set("n", "<C-a>f", "<cmd>Telescope grep_string<CR>", { desc = "Search Word (Telescope)" })
 vim.keymap.set("v", "<C-a>f", "y<cmd>Telescope grep_string<CR>", { desc = "Search Selection (Telescope)" })
 vim.keymap.set("n", "<Tab><Esc>", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Buffer Symbols/Lines" })
@@ -109,6 +110,10 @@ vim.keymap.set("n", "<F12>", ":w<CR>:source %<CR>", { desc = "Save and Source Fi
 
 -- =================================================================
 -- FM: File & Project Management (Telescope/Nvim-Tree Replacements)
+
+vim.keymap.set("n", "<leader>gs", function()
+    require("telescope.builtin").live_grep()
+end, { desc = "Telescope: Live Grep (Project Search)", silent = true, noremap = true })
 
 vim.keymap.set(
     "n",

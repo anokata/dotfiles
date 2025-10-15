@@ -1,3 +1,6 @@
+# VIM
+<leader>gs find in all files
+
 # Alias
 - [ ] use more, alias
     gch
