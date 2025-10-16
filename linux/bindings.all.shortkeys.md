@@ -1,5 +1,13 @@
 # VIM
 <leader>gs find in all files
+<leader>S Symbols (Trouble)
+<leader>o  Outline
+<leader>Q quickfix
+<localleader>q LSP Quick Fix
+K - hover info
+<leader>L Lazy (pack man)
+<localleader>pi Lazy install
+<localleader>pc Lazy clean<
 
 # Alias
 - [ ] use more, alias

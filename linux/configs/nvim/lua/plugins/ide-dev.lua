@@ -74,7 +74,7 @@ return {
                 desc = "Buffer Diagnostics (Trouble)",
             },
             {
-                "<leader>cs",
+                "<leader>S",
                 "<cmd>Trouble symbols toggle focus=false<cr>",
                 desc = "Symbols (Trouble)",
             },
@@ -90,6 +90,11 @@ return {
             },
             {
                 "<leader>xQ",
+                "<cmd>Trouble qflist toggle<cr>",
+                desc = "Quickfix List (Trouble)",
+            },
+            {
+                "<leader>Q",
                 "<cmd>Trouble qflist toggle<cr>",
                 desc = "Quickfix List (Trouble)",
             },

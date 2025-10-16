@@ -9,16 +9,7 @@ end
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "Ctrl-S Save", noremap = true })
 
 vim.keymap.set("n", "<C-a>r", ":%s/", { desc = "Global Substitute Start" })
--- TODO: better bind
-vim.keymap.set("n", "<C-a>f", "<cmd>Telescope grep_string<CR>", { desc = "Search Word (Telescope)" })
-vim.keymap.set("v", "<C-a>f", "y<cmd>Telescope grep_string<CR>", { desc = "Search Selection (Telescope)" })
-vim.keymap.set("n", "<Tab><Esc>", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Buffer Symbols/Lines" })
-vim.keymap.set("n", "<Tab><Tab>", "<cmd>Telescope buffers<CR>", { desc = "List Buffers" })
-vim.keymap.set("n", "<leader>nb", "/{[^}]*$<CR>", { desc = "Next Inner Block", noremap = true })
-vim.keymap.set("n", "gF", ":tabnew <C-r><C-f><CR>", { desc = "Open File in New Tab" })
-vim.keymap.set("n", "<localleader>hh", ":noh<CR>", { desc = "Clear Search Highlight" })
-vim.keymap.set("n", "<localleader>n", "<cmd>cnext<CR>", { desc = "Next Quickfix Item" })
-vim.keymap.set("n", "<localleader>l", "<cmd>cclose<CR>", { desc = "Close Quickfix List" })
+
 vim.keymap.set("n", "<leader>q", "<cmd>w<CR>", { desc = "Quick Save" })
 vim.keymap.set("n", "<leader>e", "<cmd>q<CR>", { desc = "Quick Quit" })
 vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { desc = "Make Executable" })
@@ -109,24 +100,6 @@ vim.keymap.set("n", "<F10>", ':w<CR>:!python "%:t"<CR>', { desc = "Execute Pytho
 vim.keymap.set("n", "<F12>", ":w<CR>:source %<CR>", { desc = "Save and Source File", noremap = true })
 
 -- =================================================================
--- FM: File & Project Management (Telescope/Nvim-Tree Replacements)
-
-vim.keymap.set("n", "<leader>gs", function()
-    require("telescope.builtin").live_grep()
-end, { desc = "Telescope: Live Grep (Project Search)", silent = true, noremap = true })
-
-vim.keymap.set(
-    "n",
-    "<BS>",
-    "<cmd>Telescope find_files<CR>",
-    { desc = "Fuzzy Find Files (Telescope)", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<leader>f",
-    "<cmd>Telescope find_files<CR>",
-    { desc = "Fuzzy Find Files (Telescope)", silent = true, noremap = true }
-)
 
 -- Nvim-Tree (NERDTree Replacement)
 vim.keymap.set(
@@ -142,63 +115,6 @@ vim.keymap.set(
     { desc = "Find Current File in Tree", silent = true, noremap = true }
 )
 
--- Outline / Symbols (Tlist/Tagbar Replacements)
-vim.keymap.set(
-    "n",
-    "<leader>c",
-    "<cmd>Telescope lsp_document_symbols<CR>",
-    { desc = "LSP Document Symbols (Outline)", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<leader>x",
-    "<cmd>Telescope lsp_document_symbols<CR>",
-    { desc = "LSP Document Symbols (Outline)", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<leader>l",
-    "<cmd>Telescope lsp_document_symbols<CR>",
-    { desc = "LSP Document Symbols (Outline)", silent = true, noremap = true }
-)
-
--- Project/Search (FZF/Rg Replacements)
-vim.keymap.set(
-    "n",
-    "<S-F1>",
-    "<cmd>Telescope live_grep<CR>",
-    { desc = "Project Search (live_grep)", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "tf",
-    "<cmd>Telescope live_grep<CR>",
-    { desc = "Telescope Live Grep", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<C-f>",
-    "<cmd>Telescope find_files<CR>",
-    { desc = "Fuzzy Find Files", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<C-p>",
-    "<cmd>Telescope find_files<CR>",
-    { desc = "Fuzzy Find Files", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<C-a>o",
-    "<cmd>Telescope git_files<CR>",
-    { desc = "Fuzzy Find Git Files", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<leader>r",
-    "<cmd>Telescope find_files<CR>",
-    { desc = "Fuzzy Find Files", silent = true, noremap = true }
-)
 vim.keymap.set("n", "<leader>gB", function()
     require("gitsigns").toggle_current_line_blame()
 end, { desc = "Git: Toggle Line Blame", silent = true, noremap = true })
@@ -277,7 +193,7 @@ vim.keymap.set(
 
 -- LSP
 vim.keymap.set("n", "<leader>ac", vim.lsp.buf.code_action, { desc = "Code Action", silent = true })
-vim.keymap.set("n", "<localleader>qf", vim.lsp.buf.code_action, { desc = "LSP Quick Fix", silent = true })
+vim.keymap.set("n", "<localleader>q", vim.lsp.buf.code_action, { desc = "LSP Quick Fix", silent = true })
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition", silent = true })
 vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, { desc = "Go to Type Definition", silent = true })
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to Implementation", silent = true })
@@ -534,3 +450,88 @@ vim.keymap.set("n", "<leader>qd", function()
 end)
 
 -- vim.keymap.set("n", "<C-t>", api.tree.change_root_to_parent, opts("Up"))
+-- TODO: better bind
+vim.keymap.set("n", "<C-a>f", "<cmd>Telescope grep_string<CR>", { desc = "Search Word (Telescope)" })
+vim.keymap.set("v", "<C-a>f", "y<cmd>Telescope grep_string<CR>", { desc = "Search Selection (Telescope)" })
+vim.keymap.set("n", "<Tab><Esc>", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Buffer Symbols/Lines" })
+vim.keymap.set("n", "<Tab><Tab>", "<cmd>Telescope buffers<CR>", { desc = "List Buffers" })
+vim.keymap.set("n", "<leader>nb", "/{[^}]*$<CR>", { desc = "Next Inner Block", noremap = true })
+vim.keymap.set("n", "gF", ":tabnew <C-r><C-f><CR>", { desc = "Open File in New Tab" })
+vim.keymap.set("n", "<localleader>hh", ":noh<CR>", { desc = "Clear Search Highlight" })
+vim.keymap.set("n", "<localleader>n", "<cmd>cnext<CR>", { desc = "Next Quickfix Item" })
+vim.keymap.set("n", "<localleader>l", "<cmd>cclose<CR>", { desc = "Close Quickfix List" })
+-- FM: File & Project Management (Telescope/Nvim-Tree Replacements)
+
+vim.keymap.set("n", "<leader>gs", function()
+    require("telescope.builtin").live_grep()
+end, { desc = "Telescope: Live Grep (Project Search)", silent = true, noremap = true })
+
+vim.keymap.set(
+    "n",
+    "<BS>",
+    "<cmd>Telescope find_files<CR>",
+    { desc = "Fuzzy Find Files (Telescope)", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<leader>f",
+    "<cmd>Telescope find_files<CR>",
+    { desc = "Fuzzy Find Files (Telescope)", silent = true, noremap = true }
+)
+-- Outline / Symbols (Tlist/Tagbar Replacements)
+vim.keymap.set(
+    "n",
+    "<leader>c",
+    "<cmd>Telescope lsp_document_symbols<CR>",
+    { desc = "LSP Document Symbols (Outline)", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<leader>x",
+    "<cmd>Telescope lsp_document_symbols<CR>",
+    { desc = "LSP Document Symbols (Outline)", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<leader>l",
+    "<cmd>Telescope lsp_document_symbols<CR>",
+    { desc = "LSP Document Symbols (Outline)", silent = true, noremap = true }
+)
+
+-- Project/Search (FZF/Rg Replacements)
+vim.keymap.set(
+    "n",
+    "<S-F1>",
+    "<cmd>Telescope live_grep<CR>",
+    { desc = "Project Search (live_grep)", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "tf",
+    "<cmd>Telescope live_grep<CR>",
+    { desc = "Telescope Live Grep", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<C-f>",
+    "<cmd>Telescope find_files<CR>",
+    { desc = "Fuzzy Find Files", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<C-p>",
+    "<cmd>Telescope find_files<CR>",
+    { desc = "Fuzzy Find Files", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<C-a>o",
+    "<cmd>Telescope git_files<CR>",
+    { desc = "Fuzzy Find Git Files", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<leader>r",
+    "<cmd>Telescope find_files<CR>",
+    { desc = "Fuzzy Find Files", silent = true, noremap = true }
+)
