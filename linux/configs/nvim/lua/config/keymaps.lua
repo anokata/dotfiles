@@ -518,3 +518,21 @@ map("n", "<leader>qo", "<cmd>copen<CR>", vim.tbl_extend("force", opts, { desc = 
 map("n", "<leader>qc", "<cmd>cclose<CR>", vim.tbl_extend("force", opts, { desc = "Close Quickfix" }))
 
 -- vim.keymap.set("n", "<C-t>", api.tree.change_root_to_parent, opts("Up"))
+--
+-- Diagnostic Display
+vim.keymap.set(
+    "n",
+    "<leader>de",
+    "<cmd>lua vim.diagnostic.open_float()<CR>",
+    { desc = "Diagnostic: Show Float", silent = true, noremap = true }
+)
+vim.keymap.set(
+    "n",
+    "<leader>dl",
+    "<cmd>lua vim.diagnostic.setloclist()<CR>",
+    { desc = "Diagnostic: To Location List", silent = true, noremap = true }
+)
+
+-- Diagnostic Navigation
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Diagnostic: Previous", silent = true, noremap = true })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Diagnostic: Next", silent = true, noremap = true })

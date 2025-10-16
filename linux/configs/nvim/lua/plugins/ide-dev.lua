@@ -31,6 +31,7 @@ return {
                 "typescript",
                 "javascript",
                 "python",
+                "bash",
                 "fish",
                 "scss",
                 "css",
@@ -119,9 +120,27 @@ return {
             "hrsh7th/cmp-nvim-lsp", -- Completion source for LSP
         },
         config = function()
-            require("mason-lspconfig").setup()
+            local on_attach = function(client, bufnr)
+                -- This ensures omnicompletion works
+                -- vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+                vim.opt_local.omnifunc = "v:lua.vim.lsp.omnifunc"
+
+                -- Ensure hover is enabled
+                vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr, desc = "LSP Hover/Docs" })
+            end
+            require("mason-lspconfig").setup({
+                handlers = {
+                    -- This handler applies 'on_attach' to every server Mason installs
+                    function(server_name)
+                        require("lspconfig")[server_name].setup({
+                            on_attach = on_attach,
+                        })
+                    end,
+                },
+            })
             vim.lsp.config.tsserver = {}
             vim.lsp.enable({ "tsserver" })
+
             -- Example: Setup default keymaps for LSP functions
             local lsp_keys = vim.keymap.set
             lsp_keys("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
