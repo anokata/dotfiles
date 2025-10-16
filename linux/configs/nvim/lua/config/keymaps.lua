@@ -449,89 +449,72 @@ vim.keymap.set("n", "<leader>qd", function()
     require("persistence").stop()
 end)
 
+-- Telescope: search & files
+local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+-- FILE & PROJECT SEARCH
+map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", vim.tbl_extend("force", opts, { desc = "Find Files" }))
+map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", vim.tbl_extend("force", opts, { desc = "Grep in Project" }))
+map("n", "<localleader>g", "<cmd>Telescope live_grep<CR>", vim.tbl_extend("force", opts, { desc = "Grep in Project" }))
+map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", vim.tbl_extend("force", opts, { desc = "Find Buffers" }))
+map("n", "<leader>fR", "<cmd>Telescope oldfiles<CR>", vim.tbl_extend("force", opts, { desc = "Recent Files" }))
+map("n", "<leader>fr", "<cmd>Telescope lsp_references<CR>", vim.tbl_extend("force", opts, { desc = "References" }))
+map(
+    "n",
+    "<leader>fs",
+    "<cmd>Telescope current_buffer_fuzzy_find<CR>",
+    vim.tbl_extend("force", opts, { desc = "Search in Buffer" })
+)
+map("n", "<leader>fp", "<cmd>Telescope git_files<CR>", vim.tbl_extend("force", opts, { desc = "Find Git Files" }))
+
+-- SYMBOLS / LSP OUTLINE
+map(
+    "n",
+    "<leader>cs",
+    "<cmd>Telescope lsp_document_symbols<CR>",
+    vim.tbl_extend("force", opts, { desc = "Document Symbols" })
+)
+map(
+    "n",
+    "<leader>cw",
+    "<cmd>Telescope lsp_workspace_symbols<CR>",
+    vim.tbl_extend("force", opts, { desc = "Workspace Symbols" })
+)
+
+-- TROUBLE: diagnostics, quickfix, etc.
+map(
+    "n",
+    "<leader>xx",
+    "<cmd>Trouble diagnostics toggle<cr>",
+    vim.tbl_extend("force", opts, { desc = "Diagnostics (All)" })
+)
+map(
+    "n",
+    "<leader>xb",
+    "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+    vim.tbl_extend("force", opts, { desc = "Buffer Diagnostics" })
+)
+map(
+    "n",
+    "<leader>xs",
+    "<cmd>Trouble symbols toggle focus=false<cr>",
+    vim.tbl_extend("force", opts, { desc = "Symbols Outline" })
+)
+map("n", "<leader>xl", "<cmd>Trouble loclist toggle<cr>", vim.tbl_extend("force", opts, { desc = "Location List" }))
+map("n", "<leader>xq", "<cmd>Trouble qflist toggle<cr>", vim.tbl_extend("force", opts, { desc = "Quickfix List" }))
+map("n", "<localleader>q", "<cmd>Trouble qflist toggle<cr>", vim.tbl_extend("force", opts, { desc = "Quickfix List" }))
+map(
+    "n",
+    "<leader>xr",
+    "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+    vim.tbl_extend("force", opts, { desc = "LSP References/Defs" })
+)
+
+-- QUICKFIX DIRECT CONTROL (fallback if not using Trouble)
+map("n", "]q", "<cmd>cnext<CR>", vim.tbl_extend("force", opts, { desc = "Next Quickfix" }))
+map("n", "[q", "<cmd>cprev<CR>", vim.tbl_extend("force", opts, { desc = "Prev Quickfix" }))
+map("n", "<leader>qo", "<cmd>copen<CR>", vim.tbl_extend("force", opts, { desc = "Open Quickfix" }))
+map("n", "<leader>qc", "<cmd>cclose<CR>", vim.tbl_extend("force", opts, { desc = "Close Quickfix" }))
+
 -- vim.keymap.set("n", "<C-t>", api.tree.change_root_to_parent, opts("Up"))
--- TODO: better bind
-vim.keymap.set("n", "<C-a>f", "<cmd>Telescope grep_string<CR>", { desc = "Search Word (Telescope)" })
-vim.keymap.set("v", "<C-a>f", "y<cmd>Telescope grep_string<CR>", { desc = "Search Selection (Telescope)" })
-vim.keymap.set("n", "<Tab><Esc>", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Buffer Symbols/Lines" })
-vim.keymap.set("n", "<Tab><Tab>", "<cmd>Telescope buffers<CR>", { desc = "List Buffers" })
-vim.keymap.set("n", "<leader>nb", "/{[^}]*$<CR>", { desc = "Next Inner Block", noremap = true })
-vim.keymap.set("n", "gF", ":tabnew <C-r><C-f><CR>", { desc = "Open File in New Tab" })
-vim.keymap.set("n", "<localleader>hh", ":noh<CR>", { desc = "Clear Search Highlight" })
-vim.keymap.set("n", "<localleader>n", "<cmd>cnext<CR>", { desc = "Next Quickfix Item" })
-vim.keymap.set("n", "<localleader>l", "<cmd>cclose<CR>", { desc = "Close Quickfix List" })
--- FM: File & Project Management (Telescope/Nvim-Tree Replacements)
-
-vim.keymap.set("n", "<leader>gs", function()
-    require("telescope.builtin").live_grep()
-end, { desc = "Telescope: Live Grep (Project Search)", silent = true, noremap = true })
-
-vim.keymap.set(
-    "n",
-    "<BS>",
-    "<cmd>Telescope find_files<CR>",
-    { desc = "Fuzzy Find Files (Telescope)", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<leader>f",
-    "<cmd>Telescope find_files<CR>",
-    { desc = "Fuzzy Find Files (Telescope)", silent = true, noremap = true }
-)
--- Outline / Symbols (Tlist/Tagbar Replacements)
-vim.keymap.set(
-    "n",
-    "<leader>c",
-    "<cmd>Telescope lsp_document_symbols<CR>",
-    { desc = "LSP Document Symbols (Outline)", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<leader>x",
-    "<cmd>Telescope lsp_document_symbols<CR>",
-    { desc = "LSP Document Symbols (Outline)", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<leader>l",
-    "<cmd>Telescope lsp_document_symbols<CR>",
-    { desc = "LSP Document Symbols (Outline)", silent = true, noremap = true }
-)
-
--- Project/Search (FZF/Rg Replacements)
-vim.keymap.set(
-    "n",
-    "<S-F1>",
-    "<cmd>Telescope live_grep<CR>",
-    { desc = "Project Search (live_grep)", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "tf",
-    "<cmd>Telescope live_grep<CR>",
-    { desc = "Telescope Live Grep", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<C-f>",
-    "<cmd>Telescope find_files<CR>",
-    { desc = "Fuzzy Find Files", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<C-p>",
-    "<cmd>Telescope find_files<CR>",
-    { desc = "Fuzzy Find Files", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<C-a>o",
-    "<cmd>Telescope git_files<CR>",
-    { desc = "Fuzzy Find Git Files", silent = true, noremap = true }
-)
-vim.keymap.set(
-    "n",
-    "<leader>r",
-    "<cmd>Telescope find_files<CR>",
-    { desc = "Fuzzy Find Files", silent = true, noremap = true }
-)

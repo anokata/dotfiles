@@ -46,6 +46,16 @@ return {
                         ".", -- Start the search from the current directory (or project root)
                     },
                 },
+                defaults = {
+                    layout_strategy = "horizontal",
+                    layout_config = { width = 0.9 },
+                    sorting_strategy = "ascending",
+                    winblend = 5,
+                },
+                pickers = {
+                    find_files = { theme = "dropdown" },
+                    live_grep = { theme = "dropdown" },
+                },
                 -- live_grep = {
                 --     additional_args = function(opts)
                 --         return { "--hidden" }
