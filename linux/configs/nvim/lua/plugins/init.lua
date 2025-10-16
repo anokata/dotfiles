@@ -1,16 +1,4 @@
 return {
-    -- {
-    --   'iamcco/markdown-preview.nvim',
-    --   ft = 'markdown', -- Only load when editing markdown files
-    --   build = 'cd app && npm install',
-    -- },
-    -- { TODO find alternative wihotu set termguicolors in lua
-    --   'norcalli/nvim-colorizer.lua',
-    --   -- event = 'BufReadPost',
-    --   config = function()
-    --     require('colorizer').setup()
-    --   end,
-    -- },
     "tpope/vim-speeddating",
     "tpope/vim-eunuch",
     "tpope/vim-unimpaired",
@@ -39,8 +27,7 @@ return {
                         "rg",
                         "--files", -- Only list files, not content
                         "--hidden", -- Include hidden files (like .dotfiles)
-
-                        -- 2. CRITICAL: Use the glob pattern to ignore .git/
+                        -- Use the glob pattern to ignore .git/
                         "-g",
                         "!{.git,node_modules}/*",
                         ".", -- Start the search from the current directory (or project root)
@@ -66,8 +53,7 @@ return {
     },
     {
         "ahmedkhalf/project.nvim",
-        -- Load immediately or when you open a file/enter Neovim
-        event = "VimEnter",
+        event = "VimEnter", -- Load immediately or when open a file
         opts = {
             -- Enable manual mode only if you want to skip automatic root detection
             manual_mode = false,
@@ -79,8 +65,7 @@ return {
                 ".git",
                 "package.json",
                 "README.md",
-                -- Add common dotfiles root markers here if needed (e.g., '.config')
-                -- This helps when opening files inside the project structure
+                -- .config'
                 -- "Makefile",
             },
         },

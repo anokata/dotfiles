@@ -9,6 +9,11 @@ K - hover info
 <localleader>pi Lazy install
 <localleader>pc Lazy clean<
 
+## telescope (popup)
+<C-x>	both	open in horizontal split
+<C-v>	both	open in vertical split
+<C-t>	both	open in new tab
+
 # Alias
 - [ ] use more, alias
     gch

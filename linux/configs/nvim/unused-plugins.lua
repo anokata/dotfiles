@@ -1,0 +1,13 @@
+
+-- {
+--   'iamcco/markdown-preview.nvim',
+--   ft = 'markdown', -- Only load when editing markdown files
+--   build = 'cd app && npm install',
+-- },
+-- { TODO find alternative wihotu set termguicolors in lua
+--   'norcalli/nvim-colorizer.lua',
+--   -- event = 'BufReadPost',
+--   config = function()
+--     require('colorizer').setup()
+--   end,
+-- },
