@@ -8,6 +8,7 @@ K - hover info
 <leader>L Lazy (pack man)
 <localleader>pi Lazy install
 <localleader>pc Lazy clean<
+F2/<leader>xb Trouble diagnostics toggle
 
 ## telescope (popup)
 <C-x>	both	open in horizontal split

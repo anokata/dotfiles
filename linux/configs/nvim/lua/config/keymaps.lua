@@ -497,6 +497,12 @@ map(
 )
 map(
     "n",
+    "<F2>",
+    "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+    vim.tbl_extend("force", opts, { desc = "Buffer Diagnostics" })
+)
+map(
+    "n",
     "<leader>xs",
     "<cmd>Trouble symbols toggle focus=false<cr>",
     vim.tbl_extend("force", opts, { desc = "Symbols Outline" })
@@ -504,6 +510,7 @@ map(
 map("n", "<leader>xl", "<cmd>Trouble loclist toggle<cr>", vim.tbl_extend("force", opts, { desc = "Location List" }))
 map("n", "<leader>xq", "<cmd>Trouble qflist toggle<cr>", vim.tbl_extend("force", opts, { desc = "Quickfix List" }))
 map("n", "<localleader>q", "<cmd>Trouble qflist toggle<cr>", vim.tbl_extend("force", opts, { desc = "Quickfix List" }))
+map("n", "<F3>", "<cmd>Trouble qflist toggle<cr>", vim.tbl_extend("force", opts, { desc = "Quickfix List" }))
 map(
     "n",
     "<leader>xr",
