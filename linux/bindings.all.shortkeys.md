@@ -9,6 +9,8 @@ K - hover info
 <localleader>pi Lazy install
 <localleader>pc Lazy clean<
 F2/<leader>xb Trouble diagnostics toggle
+<C-w>gf open file under curson in tab
+<C-w> --- window commands
 
 ## telescope (popup)
 <C-x>	both	open in horizontal split

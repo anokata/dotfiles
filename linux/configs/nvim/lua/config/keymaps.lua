@@ -543,3 +543,5 @@ vim.keymap.set(
 -- Diagnostic Navigation
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Diagnostic: Previous", silent = true, noremap = true })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Diagnostic: Next", silent = true, noremap = true })
+
+vim.keymap.set('n', 'gF', ':tabnew <C-r><C-f><CR>', { desc = 'Go to File in New Tab (Ex)', silent = true, noremap = true })

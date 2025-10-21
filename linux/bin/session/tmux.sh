@@ -16,7 +16,7 @@ function _tmux_run () {
             tmux new-window -c $WORK_DIR_CURRENT4 -n N
             # tmux split-window -c $WORK_DIR_CURRENT5
             tmux new-window -c ~/gits -n G # 6-7
-            tmux new-window -c ~/pwn -n H
+            # tmux new-window -c ~/pwn -n pwn
             # tmux new-window -c ~/Downloads_ -n dwl
             tmux select-window -t 1
             tmux attach -t $TMUX_SESSION_NAME -c $DOTFILES_LINUX
