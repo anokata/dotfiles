@@ -124,6 +124,14 @@ vim.keymap.set(
     "<cmd>Gitsigns blame<CR>",
     { desc = "Git: Toggle Blame", silent = true, noremap = true }
 )
+
+vim.keymap.set(
+    "n",
+    "<leader>ghp",
+    "<cmd>Gitsigns preview_hunk<CR>",
+    { desc = "diff preview", silent = true, noremap = true }
+)
+vim.keymap.set("n", "<leader>ghd", "<cmd>Gitsigns diffthis<CR>", { desc = "diff file", silent = true, noremap = true })
 -- vim.keymap.set("n", "<leader>gb", function()
 --     require("gitsigns").blame_line({ full = true })
 -- end, { desc = "Git: Show Full Buffer Blame", silent = true, noremap = true })
@@ -544,4 +552,9 @@ vim.keymap.set(
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Diagnostic: Previous", silent = true, noremap = true })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Diagnostic: Next", silent = true, noremap = true })
 
-vim.keymap.set('n', 'gF', ':tabnew <C-r><C-f><CR>', { desc = 'Go to File in New Tab (Ex)', silent = true, noremap = true })
+vim.keymap.set(
+    "n",
+    "gF",
+    ":tabnew <C-r><C-f><CR>",
+    { desc = "Go to File in New Tab (Ex)", silent = true, noremap = true }
+)
