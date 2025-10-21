@@ -73,8 +73,9 @@ vim.opt.switchbuf = "usetab" -- When jumping, prefer switching to an existing ta
 
 -- Line Wrap
 vim.opt.textwidth = 0 -- No auto line wrapping/breaking
-vim.opt.wrap = false -- Do not soft-wrap lines visually
-vim.opt.wrapmargin = 0 -- Disable wrap margin
+vim.opt.wrap = true
+vim.opt.wrapmargin = 0
+vim.opt.linebreak = true
 
 -- Command Line
 vim.opt.wildmenu = true -- Show command line completion as a menu
