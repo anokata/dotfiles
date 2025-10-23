@@ -273,3 +273,6 @@ super + shift + {h,l}
 
 alt + F2
     ~/dotfiles/linux/bin/toggle-kitty
+
+ctrl + shift + alt + w
+    ~/dotfiles/linux/bin/life/wake

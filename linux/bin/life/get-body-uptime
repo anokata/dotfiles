@@ -1,0 +1,19 @@
+#!/bin/bash
+WAKE_FILE="/tmp/body_uptime_start"
+
+if [ ! -f "$WAKE_FILE" ]; then
+    echo "Awake?"  # Output if the file doesn't exist
+    exit 0
+fi
+
+START_TIME=$(cat "$WAKE_FILE")
+CURRENT_TIME=$(date +%s)
+ELAPSED=$((CURRENT_TIME - START_TIME))
+
+# Format the time (Hours:Minutes:Seconds)
+H=$((ELAPSED / 3600))
+M=$(((ELAPSED % 3600) / 60))
+S=$((ELAPSED % 60))
+
+# Use printf for nice, two-digit formatting
+printf "Awake: %02d:%02d:%02d\n" $H $M $S
