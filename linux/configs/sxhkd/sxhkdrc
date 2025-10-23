@@ -78,7 +78,7 @@ super + x
 ctrl + super + bracketright
     redshift -x
 ctrl + super + bracketleft
-    redshift -P -O 2500 -b 0.9
+    redshift -P -O 2300 -b 0.8
 
 ##### Rofi #####
 # Bookmarks
