@@ -1,5 +1,5 @@
 #!/bin/bash
-WAKE_FILE="/tmp/body_uptime_start"
+WAKE_FILE="$HOME/body_uptime_start"
 
 if [ ! -f "$WAKE_FILE" ]; then
     echo "Awake?"  # Output if the file doesn't exist

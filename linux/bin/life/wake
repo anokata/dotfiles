@@ -1,5 +1,5 @@
 #!/bin/bash
-WAKE_FILE="/tmp/body_uptime_start"
+WAKE_FILE="$HOME/body_uptime_start"
 
 # Record the current time (Unix timestamp in seconds)
 date +%s > "$WAKE_FILE"
