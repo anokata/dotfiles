@@ -35,6 +35,7 @@ return {
                 "fish",
                 "scss",
                 "css",
+                "html",
             }, -- Add languages you use
         },
         config = function(_, opts)
