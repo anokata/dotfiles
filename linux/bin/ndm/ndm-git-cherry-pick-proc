@@ -1,9 +1,6 @@
 #!/bin/bash
 BRANCH_NAME="$1"
-CHERRY_PICK_BRANCH="4.3.x"
-
-# git checkout $BRANCH_NAME
-# git pull
+CHERRY_PICK_BRANCH="5.0.x"
 
 git checkout master
 git pull
