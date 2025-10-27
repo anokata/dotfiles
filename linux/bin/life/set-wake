@@ -1,0 +1,22 @@
+#!/bin/bash
+WAKE_FILE="$HOME/body_uptime_start"
+
+# Check for input argument
+if [ -z "$1" ]; then
+    echo "Usage: $0 HH:MM (e.g., 07:45)"
+    exit 1
+fi
+
+
+# Attempt to convert the provided time (HH:MM) to a Unix timestamp.
+# We use today's date and the provided time.
+NEW_TIMESTAMP=$(date -d "today $1" +%s)
+
+# Check if the conversion was successful (date command returns 0 on success)
+if [ -n "$NEW_TIMESTAMP" ]; then
+    echo "$NEW_TIMESTAMP" > "$WAKE_FILE"
+    echo "Body Uptime manually set to $1 (Timestamp: $NEW_TIMESTAMP)."
+else
+    echo "Error: Invalid time format or date command failed. Use HH:MM." >&2
+    exit 1
+fi
