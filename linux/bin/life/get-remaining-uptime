@@ -1,0 +1,44 @@
+#!/bin/bash
+
+WAKE_FILE="$HOME/body_uptime_start"
+# Total budget is 16 hours * 3600 seconds + 30 minutes * 60 seconds
+TOTAL_BUDGET_SECONDS=59400
+
+if [ ! -f "$WAKE_FILE" ]; then
+    # Output if the wake time hasn't been set yet
+    echo "😴 No Uptime Clock"
+    exit 0
+fi
+
+START_TIME=$(cat "$WAKE_FILE")
+CURRENT_TIME=$(date +%s)
+
+# 1. Calculate the elapsed time (seconds awake)
+ELAPSED_SECONDS=$((CURRENT_TIME - START_TIME))
+
+# 2. Calculate the remaining time
+REMAINING_SECONDS=$((TOTAL_BUDGET_SECONDS - ELAPSED_SECONDS))
+
+# --- Formatting and Output ---
+
+if [ "$REMAINING_SECONDS" -le 0 ]; then
+    # CASE: Over Budget
+    # Calculate how much time has been exceeded
+    OVER_SECONDS=$((REMAINING_SECONDS * -1))
+    
+    H=$((OVER_SECONDS / 3600))
+    M=$(((OVER_SECONDS % 3600) / 60))
+    # S=$((OVER_SECONDS % 60))
+    
+    # Output clearly showing time over budget
+    printf "Overtime: %02d:%02d\n" $H $M
+    
+else
+    # CASE: Time Remaining
+    H=$((REMAINING_SECONDS / 3600))
+    M=$(((REMAINING_SECONDS % 3600) / 60))
+    # S=$((REMAINING_SECONDS % 60))
+    
+    # Output time remaining
+    printf "Left: %02d:%02d\n" $H $M
+fi
