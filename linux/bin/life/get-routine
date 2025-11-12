@@ -1,0 +1,57 @@
+#!/bin/bash
+
+WAKE_FILE="$HOME/body_uptime_start"
+ROUTINE_FILE="$HOME/dotfiles/linux/bin/life/routine.txt"
+DEFAULT_ACTIVITY="[Routine not set or past end time]"
+
+if [ ! -f "$WAKE_FILE" ] || [ ! -f "$ROUTINE_FILE" ]; then
+    echo "😴 Clock or Routine missing"
+    exit 0
+fi
+
+START_TIME=$(cat "$WAKE_FILE")
+CURRENT_TIME=$(date +%s)
+ELAPSED_SECONDS=$((CURRENT_TIME - START_TIME))
+ELAPSED_MINUTES=$((ELAPSED_SECONDS / 60))
+
+# --- Use AWK for Reverse Lookup ---
+# AWK steps:
+# 1. Skip comments and blank lines.
+# 2. Extract the time (Field 1) and the description (rest of the line).
+# 3. If the current elapsed time is >= the routine time, store the description.
+# 4. The last matching line will be the current activity.
+# 5. Finally, print the stored description.
+
+ACTIVITY=$(
+    awk -v current_minutes="$ELAPSED_MINUTES" '
+        # Skip lines that are comments or empty
+        /^\s*#|^$/ { next }
+        
+        {
+            # Split the line by the pipe (|) separator
+            split($0, parts, "|");
+            
+            # The routine time in minutes is the first part
+            split(parts[1], time_parts, ":")
+            routine_minutes = (time_parts[1] * 60) + time_parts[2] + 0
+            # routine_minutes = parts[1] + 0; # +0 forces numeric conversion
+            
+            # The activity description is the rest of the line, trimmed
+            activity_desc = parts[2];
+            
+            # Check if current time is >= the routine starting time
+            if (current_minutes >= routine_minutes) {
+                # Store this as the current activity
+                current_activity = activity_desc;
+            }
+        }
+        
+        END {
+            # Print the last activity found before the current time
+            print current_activity;
+        }
+    ' "$ROUTINE_FILE"
+)
+
+# Output the activity, falling back to a default message if AWK failed
+echo "▶ $ACTIVITY"

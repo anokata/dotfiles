@@ -1,0 +1,13 @@
+# Schedule entries must be sorted by time (HH:MM)
+# 0:00 = Wake Up Time
+
+0:00  | 🔆 WAKE UP, Water, & Sunlight Exposure
+0:10  | 🧘 15-Minute Mobility/Stretching Session
+0:30  | ☕ Morning Focus Block (Coffee, Plan, Deep Work)
+3:00  | 🥪 First Meal & Mental Break (3 hours awake)
+4:00  | 💻 Work Block 2: Meetings and Communication
+6:00  | 🏃 Afternoon Movement & Second Meal (6 hours awake)
+9:00  | 🎮 Relaxation & Personal Time
+11:00 | 📚 Evening Reading & Winding Down
+15:00 | 🛌 Prepare for Bed (15 hours awake)
+16:30 | 💤 Target Sleep Time (16.5 hours awake)
