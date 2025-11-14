@@ -40,5 +40,5 @@ else
     # S=$((REMAINING_SECONDS % 60))
     
     # Output time remaining
-    printf "Left: %02d:%02d\n" $H $M
+    printf "left: %02d:%02d\n" $H $M
 fi

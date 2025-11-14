@@ -16,4 +16,4 @@ M=$(((ELAPSED % 3600) / 60))
 S=$((ELAPSED % 60))
 
 # Use printf for nice, two-digit formatting
-printf "Awake: %02d:%02d\n" $H $M
+printf "awake: %02dh %02dm\n" $H $M
