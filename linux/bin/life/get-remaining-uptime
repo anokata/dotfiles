@@ -2,7 +2,9 @@
 
 WAKE_FILE="$HOME/body_uptime_start"
 # Total budget is 16 hours * 3600 seconds + 30 minutes * 60 seconds
-TOTAL_BUDGET_SECONDS=59400
+# TOTAL_BUDGET_SECONDS=59400
+# Total budget is 17 hours * 3600 seconds
+TOTAL_BUDGET_SECONDS=61200
 
 if [ ! -f "$WAKE_FILE" ]; then
     # Output if the wake time hasn't been set yet
