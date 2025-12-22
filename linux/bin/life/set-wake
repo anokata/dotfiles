@@ -7,10 +7,22 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
+# 2. Extract the hour from the input (HH:MM)
+# We use cut to get everything before the colon
+INPUT_HOUR=$(echo "$1" | cut -d':' -f1)
+
+# 3. Determine if this hour refers to yesterday
+# Logic: If you set a time between 19:00 and 23:59, it's assumed to be yesterday.
+DATE_REF="today"
+if [[ "$INPUT_HOUR" -ge 19 ]]; then
+    DATE_REF="yesterday"
+fi
+
 
 # Attempt to convert the provided time (HH:MM) to a Unix timestamp.
 # We use today's date and the provided time.
-NEW_TIMESTAMP=$(date -d "today $1" +%s)
+# NEW_TIMESTAMP=$(date -d "today $1" +%s)
+NEW_TIMESTAMP=$(date -d "$DATE_REF $1" +%s 2>/dev/null)
 
 # Check if the conversion was successful (date command returns 0 on success)
 if [ -n "$NEW_TIMESTAMP" ]; then
