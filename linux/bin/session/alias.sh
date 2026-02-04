@@ -285,3 +285,5 @@ alias cpulow="sudo cpupower frequency-set -g powersave"
 alias cpuhigh="sudo cpupower frequency-set -g performance"
 alias sdd-health="sudo nvme smart-log /dev/nvme0n1"
 # alias xbindkeys-reload="pkill xbindkeys && xbindkeys&"
+alias xrandr-default-edp-framework2k120hz="xrandr --output eDP --mode 2880x1920 --rate 120"
+
