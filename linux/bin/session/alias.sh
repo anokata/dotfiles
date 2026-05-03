@@ -148,7 +148,7 @@ alias adbs='sudo adb start-server'
 alias lognge='sudo tail -f /var/log/nginx/error.log'
 alias lognga='sudo tail -f /var/log/nginx/access.log'
 alias syslog="sudo tail -f /var/log/syslog"
-alias dmesg="dmesg -w"
+alias dmes="dmesg -w"
 
 alias pdfone='pdfunite *.pdf one.pdf'
 alias djvu-txt='djvutxt $1 | less'
