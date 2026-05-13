@@ -1,0 +1,15 @@
+#!/bin/bash
+BRANCH_NAME="$1"
+CHERRY_PICK_BRANCH="5.1.x"
+
+git checkout master
+git pull
+HASH=$(git log -1 --format="%H")
+
+git checkout $CHERRY_PICK_BRANCH
+git pull
+git checkout -b "$1-$CHERRY_PICK_BRANCH"
+git cherry-pick $HASH
+git push origin "$1-$CHERRY_PICK_BRANCH"
+gh pr create --web
+git checkout master
