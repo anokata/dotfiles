@@ -1,0 +1,3 @@
+sudo mkdir /run/dhcp-server
+cd ~/ndm/qemu/qe-0003
+sudo ./qemu-br.sh -o usb0
