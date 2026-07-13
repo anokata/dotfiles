@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# xrandr --output "$MONITOR_1" --primary --mode 1600x1200 --rate 60
+xrandr --output "$MONITOR_1" --primary --mode 1680x1050 --rate 60
