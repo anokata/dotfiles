@@ -1,14 +1,16 @@
 #!/bin/bash
 
 WAKE_FILE="$HOME/body_uptime_start"
-# Total budget is 16 hours * 3600 seconds + 30 minutes * 60 seconds
-# TOTAL_BUDGET_SECONDS=59400
+# Total budget is 16 hours * 3600 seconds / 8h sleep
+# TOTAL_BUDGET_SECONDS=57600 # 16h
+# Total budget is 16 hours * 3600 seconds + 30 minutes * 60 seconds / 7.5h sleep
+# TOTAL_BUDGET_SECONDS=59400 # 16.5h
 # Total budget is 17 hours * 3600 seconds / 7h sleep
-TOTAL_BUDGET_SECONDS=61200
-# Total budget is 17.5 hours * 3600 seconds
-# TOTAL_BUDGET_SECONDS=63000
+TOTAL_BUDGET_SECONDS=61200 # 17h
+# Total budget is 17.5 hours * 3600 seconds / 6.5h sleep
+# TOTAL_BUDGET_SECONDS=63000 # 17.5h
 # Total budget is 18 hours * 3600 seconds /= 64800 / 6h sleep
-# TOTAL_BUDGET_SECONDS=64800
+# TOTAL_BUDGET_SECONDS=64800 # 18h
 
 if [ ! -f "$WAKE_FILE" ]; then
     # Output if the wake time hasn't been set yet
