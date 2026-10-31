@@ -7,7 +7,7 @@ alias cdnr="cd $WORK_DIR/ndw-review/"
 alias cdnw="cd $WORK_DIR/wireguard/"
 alias cdnq="cd $WORK_DIR/qemu/"
 alias cdnf="cd $WORK_DIR/firmware/"
-alias wireguard-test="cdnw; sudo wg-quick up wg-test"
+alias wireguard-test="cdnw; sudo wg-quick up wg-4"
 alias cdnisw="cd $WORK_DIR/isw/"
 
 alias ndm-keenetic-telnet="telnet $KEENETIC_IP"
